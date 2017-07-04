@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Know your chart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
+          media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
+</head>
+<body>
+<nav id="topBar" class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand waves-effect waves-dark" href="/"><i class="large material-icons">insert_chart</i>
+            <strong>Charts</strong></a>
+
+    </div>
+</nav>
+
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Name that chart
+            <small> Try it</small>
+        </h1>
+
+    </div>
+    <div id="page-inner">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-action" id="pres">
+                        <img id="disp" src="{{ url_for('static', filename='assets/img/36.jpg') }}"/>
+                    </div>
+                    <div class="card-content" id="pres">
+                        <button style="margin: 25px;" id="0"
+                                class="waves-effect waves-light btn" name="Pie Chart">Pie Chart
+                        </button>
+                        <button style="margin: 25px;" id="1"
+                                class="waves-effect waves-light btn" name="Scatter Plot"> Scatter Plot
+                        </button>
+                        <button style="margin: 25px;" id="2"
+                                class="waves-effect waves-light btn" name="Line Chart">Line Chart
+                        </button>
+                        <button style="margin: 25px;" id="3"
+                                class="waves-effect waves-light btn" name="Bar chart">Bar chart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer><p>Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
+
+    <!-- /. PAGE INNER  -->
+</div>
+
+<!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<!-- Metis Menu Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
+
+
+
+
+
+</div>
+
+</body>
+
+</html>

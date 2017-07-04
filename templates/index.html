@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Know your chart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
+          media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
+</head>
+<body>
+    <nav id="topBar" class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand waves-effect waves-dark" href="/"><i class="large material-icons">insert_chart</i>
+                <strong>Charts</strong></a>
+
+        </div>
+    </nav>
+
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Name that chart
+            <small> Try it</small>
+        </h1>
+
+    </div>
+    <div id="page-inner">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-action">
+                        Description
+                    </div>
+                    <div class="card-content"  >
+                        <p style="padding: 50px ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus, libero et scelerisque porttitor, felis tortor fermentum tellus, vel maximus est leo sed turpis. Aliquam erat volutpat. Sed vehicula vitae enim eget posuere. Sed ut ipsum quis magna tincidunt efficitur in vitae nisl. Quisque ultrices molestie risus, sed hendrerit diam mollis vitae. Pellentesque at nibh ut nulla commodo blandit. In laoreet cursus metus eu ultricies. Cras tempor sagittis metus vel sodales. Donec fermentum laoreet magna vel posuere. Aenean vulputate feugiat sollicitudin. Nunc id nibh vel nisl interdum bibendum at a odio. In sit amet aliquam ligula. Aenean vel ligula ac turpis fermentum pellentesque.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus, libero et scelerisque porttitor, felis tortor fermentum tellus, vel maximus est leo sed turpis. Aliquam erat volutpat. Sed vehicula vitae enim eget posuere. Sed ut ipsum quis magna tincidunt efficitur in vitae nisl. Quisque ultrices molestie risus, sed hendrerit diam mollis vitae. Pellentesque at nibh ut nulla commodo blandit. In laoreet cursus metus eu ultricies. Cras tempor sagittis metus vel sodales. Donec fermentum laoreet magna vel posuere. Aenean vulputate feugiat sollicitudin. Nunc id nibh vel nisl interdum bibendum at a odio. In sit amet aliquam ligula. Aenean vel ligula ac turpis fermentum pellentesque.</p>
+                        <div class="clearBoth" style="text-align: center"><br/>
+                            <a style="margin-bottom: 150px;margin-top: 150px"id="transition" class="waves-effect waves-light btn" href="temp">Get Started</a>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer><p>Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
+
+    <!-- /. PAGE INNER  -->
+</div>
+
+<!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<!-- Metis Menu Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(2000);
+
+    $("#transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(1000, redirectPage);
+    });
+
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+</script>
+
+</div>
+
+</body>
+
+</html>
