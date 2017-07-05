@@ -33,7 +33,7 @@
                 <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
             </div>
         </li>
-                <li>
+        <li>
             <div class="navbar-header" style="width: 30%">
                 <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
             </div>
@@ -59,21 +59,36 @@
                     <div class="card-action">
                         Description
                     </div>
-                    <div class="card-content"  >
-                        <p style="padding: 50px ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus, libero et scelerisque porttitor, felis tortor fermentum tellus, vel maximus est leo sed turpis. Aliquam erat volutpat. Sed vehicula vitae enim eget posuere. Sed ut ipsum quis magna tincidunt efficitur in vitae nisl. Quisque ultrices molestie risus, sed hendrerit diam mollis vitae. Pellentesque at nibh ut nulla commodo blandit. In laoreet cursus metus eu ultricies. Cras tempor sagittis metus vel sodales. Donec fermentum laoreet magna vel posuere. Aenean vulputate feugiat sollicitudin. Nunc id nibh vel nisl interdum bibendum at a odio. In sit amet aliquam ligula. Aenean vel ligula ac turpis fermentum pellentesque.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus, libero et scelerisque porttitor, felis tortor fermentum tellus, vel maximus est leo sed turpis. Aliquam erat volutpat. Sed vehicula vitae enim eget posuere. Sed ut ipsum quis magna tincidunt efficitur in vitae nisl. Quisque ultrices molestie risus, sed hendrerit diam mollis vitae. Pellentesque at nibh ut nulla commodo blandit. In laoreet cursus metus eu ultricies. Cras tempor sagittis metus vel sodales. Donec fermentum laoreet magna vel posuere. Aenean vulputate feugiat sollicitudin. Nunc id nibh vel nisl interdum bibendum at a odio. In sit amet aliquam ligula. Aenean vel ligula ac turpis fermentum pellentesque.</p>
+                    <div class="card-content">
+                        <p style="padding: 50px ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus,
+                            libero et scelerisque porttitor, felis tortor fermentum tellus, vel maximus est leo sed
+                            turpis. Aliquam erat volutpat. Sed vehicula vitae enim eget posuere. Sed ut ipsum quis magna
+                            tincidunt efficitur in vitae nisl. Quisque ultrices molestie risus, sed hendrerit diam
+                            mollis vitae. Pellentesque at nibh ut nulla commodo blandit. In laoreet cursus metus eu
+                            ultricies. Cras tempor sagittis metus vel sodales. Donec fermentum laoreet magna vel
+                            posuere. Aenean vulputate feugiat sollicitudin. Nunc id nibh vel nisl interdum bibendum at a
+                            odio. In sit amet aliquam ligula. Aenean vel ligula ac turpis fermentum pellentesque.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus, libero et scelerisque
+                            porttitor, felis tortor fermentum tellus, vel maximus est leo sed turpis. Aliquam erat
+                            volutpat. Sed vehicula vitae enim eget posuere. Sed ut ipsum quis magna tincidunt efficitur
+                            in vitae nisl. Quisque ultrices molestie risus, sed hendrerit diam mollis vitae.
+                            Pellentesque at nibh ut nulla commodo blandit. In laoreet cursus metus eu ultricies. Cras
+                            tempor sagittis metus vel sodales. Donec fermentum laoreet magna vel posuere. Aenean
+                            vulputate feugiat sollicitudin. Nunc id nibh vel nisl interdum bibendum at a odio. In sit
+                            amet aliquam ligula. Aenean vel ligula ac turpis fermentum pellentesque.</p>
                         <div class="clearBoth" style="text-align: center"><br/>
-                            <a style="margin-bottom: 150px;margin-top: 150px"id="transition" class="waves-effect waves-light btn" href="multiple">Get Started</a>
+                            <a style="margin-bottom: 150px;margin-top: 150px" id="transition"
+                               class="waves-effect waves-light btn" href="multiple">Get Started</a>
                         </div>
 
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- /. PAGE INNER  -->
     </div>
-    <!-- /. PAGE INNER  -->
-</div>
 
-<!-- /. PAGE WRAPPER  -->
+    <!-- /. PAGE WRAPPER  -->
 </div>
 <!-- /. WRAPPER  -->
 <!-- JS Scripts-->
@@ -89,21 +104,21 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
 
 <script type="text/javascript">
-$(document).ready(function() {
-    $("body").css("display", "none");
+    $(document).ready(function () {
+        $("body").css("display", "none");
 
-    $("body").fadeIn(2000);
+        $("body").fadeIn(2000);
 
-    $("#transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $("body").fadeOut(1000, redirectPage);
+        $("#transition").click(function (event) {
+            event.preventDefault();
+            linkLocation = this.href;
+            $("body").fadeOut(1000, redirectPage);
+        });
+
+        function redirectPage() {
+            window.location = linkLocation;
+        }
     });
-
-    function redirectPage() {
-        window.location = linkLocation;
-    }
-});
 </script>
 
 </div>
