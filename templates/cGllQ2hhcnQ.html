@@ -62,7 +62,7 @@
     var bob = {};
     $.ajax({
         type: "GET",
-        url: "./getrandomint",
+        url: "../getrandomint",
 
         success: function (data) {
             bob = JSON.parse(data);
@@ -77,8 +77,6 @@
                     .data(pie(datas))
                     .enter().append("g")
                     .attr("class", "arc");
-
-          var  sub = color;
 
             arc.append("path")
                     .attr("d", path)

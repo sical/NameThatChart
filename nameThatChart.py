@@ -30,14 +30,14 @@ def temp():
     return render_template('multiple.html')
 
 
-@app.route('/pie')
-def pie():
-    return render_template('pietest.html')
-
-
 @app.route('/textual')
 def textual():
     return render_template('textual.html')
+
+
+@app.route('/textual/<chart>')
+def generic(chart):
+    return render_template(chart + '.html')
 
 
 @app.route('/savemultiple', methods=['POST'])
@@ -88,6 +88,17 @@ def getimg():
     return data
 
 
+@app.route('/getnext')
+def getnext():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT url FROM type WHERE url IS NOT NULL ORDER BY RAND() LIMIT 1")
+    data = cursor.fetchone()
+    cursor.close()
+    con.close()
+    return data
+
+
 @app.route('/savetext', methods=['POST'])
 def savetext():
     result = request.files['local']
@@ -98,17 +109,22 @@ def savetext():
     bg.paste(img, img)
     path = "assets/img/datasets/" + str(len(pics.getimgs("./static/assets/img/datasets/")) + 1) + ".jpg"
     bg.save("./static/" + path)
+
     con = mysql.connect()
     cursor = con.cursor()
+
     cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
     con.commit()
+
     cursor.execute("SELECT idimage FROM image WHERE imagepath = '" + path + "'")
     idim = cursor.fetchone()[0]
     idu = getid(request.environ['REMOTE_ADDR'])[0]
     idt = gettype(name)[0]
+
     query = "INSERT INTO textvote VALUES(" + str(idu) + "," + str(idim) + "," + str(idt) + ")"
     print(query)
     cursor.execute(query)
+    con.commit()
 
     cursor.close()
     con.close()
@@ -155,6 +171,7 @@ def getid(ip):
         cursor = con.cursor()
         cursor.execute("SELECT iduser FROM user WHERE userip ='" + ip + "'")
         data = cursor.fetchone()
+        cursor.close()
         con.close()
         return data
     else:
@@ -166,11 +183,11 @@ def getid(ip):
 
 
 def getrandomdataint():
-    nbclasse = randint(3, 13)
+    nbclasse = randint(3, 16)
     result = {}
     result['res'] = []
     for i in range(0, nbclasse):
-        result['res'].append({"key": randint(3, 5000), "name": "foo" + str(i)})
+        result['res'].append({"key": randint(3, 8000), "name": "foo" + str(i)})
     return json.dumps(result)
 
 
@@ -181,7 +198,6 @@ def gettype(typename):
     if " " in typename:
         typename = typename.replace(" ", "_")
     q = "SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename + "%'"
-    print(q)
     cursor.execute(q)
     data = cursor.fetchone()
     if data is None:
@@ -189,26 +205,23 @@ def gettype(typename):
         if "chart" in typename:
             if "_" in typename or "-" in typename or "." in typename:
                 typename = typename.replace("_", "")
+                typename = typename.replace("-", "")
+                typename = typename.replace(".", "")
             else:
                 typename = typename.replace("chart", "_chart")
+            q = "SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename + "%'"
         cursor.execute(q)
         data = cursor.fetchone()
         if data is None:
             query = "INSERT INTO type (label) VALUES ('" + typename.replace("_", " ") + "')"
-            print(query)
             cursor.execute(query)
             con.commit()
-            cursor.execute(
-                """SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename.replace("_", " ") + """%'""")
+            cursor.execute("SELECT idtype FROM type WHERE lower(label) LIKE '%" + typename.replace("_", " ") + "%'")
             data = cursor.fetchone()
-
+            cursor.close()
+            con.close()
     return data
 
-
-"""" json_data = json.dumps(result)
- total = {"total": [json_data]}
- print(total)
- return json.dumps(total)"""
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

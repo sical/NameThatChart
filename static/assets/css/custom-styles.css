@@ -12,6 +12,18 @@ body {
     background: #ececec;
 }
 
+
+#dire {
+    color: #fff;
+    text-align: left;
+    height: 60px;
+    width: auto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    background: #26a69a;
+}
+
 #wrapper {
     width: 100%;
 }
@@ -30,8 +42,8 @@ body {
 }
 
 #disp {
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
 }
 
 #pres {
@@ -510,7 +522,7 @@ footer p {
     MENU STYLES    
 ------------------------------------------------*/
 div#sideNav:hover {
-    color: #30cc7b;
+    color: #1E88E5;
 }
 
 .user-image {
@@ -534,11 +546,11 @@ div#sideNav:hover {
     font-size: 24px;
     font-weight: 700; /* text-transform: uppercase; */
     line-height: 30px;
-    background: #30cc7b;
+    background: #26a69a;
 }
 
 .navbar-brand b {
-    color: #4BD28C;
+    color: #1E88E5;
 }
 
 .top-navbar .nav > li {
@@ -601,7 +613,7 @@ div#sideNav:hover {
 }
 
 .active-menu i {
-    color: #30cc7b !important;
+    color: #296acc !important;
 }
 
 .arrow {
@@ -671,6 +683,7 @@ ul.nav.nav-second-level.collapse.in {
 .top-navbar {
     background: #ffffff;
     border-bottom: none;
+
 }
 
 .top-navbar .nav > li > a > i {
@@ -679,7 +692,7 @@ ul.nav.nav-second-level.collapse.in {
 
 .top-navbar .navbar-brand:hover {
     color: #FFFFFF;
-    background-color: #2ec376;
+    background-color: #1E88E5;
 }
 
 .dropdown-user li {
@@ -766,9 +779,12 @@ ul.dropdown-menu.dropdown-messages li a div {
 
 @media (min-width: 768px) {
     #page-wrapper {
-        margin: 0 0 0 260px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0;
         min-height: 1200px;
+        max-width: 1000px;
     }
 
     .navbar-side {
@@ -887,10 +903,12 @@ ul.dropdown-menu.dropdown-messages li a div {
     font-size: 14px;
     margin-right: 0px;
     color: #717171;
+
 }
 
 .header .breadcrumb li a {
     font-size: 13px;
+    text-decoration: underline;
     font-size: 13px;
     text-decoration: none;
     color: #717171;

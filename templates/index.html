@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Name That Chart<</title>
+    <title>Name That Chart</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
           media="screen,projection"/>
@@ -21,13 +21,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
 </head>
 <body>
-    <nav id="topBar" class="navbar navbar-default top-navbar" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand waves-effect waves-dark" href="/"><i class="large material-icons">insert_chart</i>
-                <strong>Charts</strong></a>
+<nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand waves-effect waves-dark" href="/"><i
+                class="large material-icons">insert_chart</i> <strong>NameThatChart</strong></a>
 
-        </div>
-    </nav>
+    </div>
+    <ul class="nav navbar-top-links navbar-left" style="margin-left: 30%">
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
+            </div>
+        </li>
+                <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
+            </div>
+        </li>
+    </ul>
+</nav>
 
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
@@ -58,10 +70,6 @@
             </div>
         </div>
     </div>
-
-
-    <footer><p>Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
-
     <!-- /. PAGE INNER  -->
 </div>
 

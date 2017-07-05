@@ -21,12 +21,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
 </head>
 <body>
-<nav id="topBar" class="navbar navbar-default top-navbar" role="navigation">
+<nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
-        <a class="navbar-brand waves-effect waves-dark" href="/"><i class="large material-icons">insert_chart</i>
-            <strong>Charts</strong></a>
+        <a class="navbar-brand waves-effect waves-dark" href="/"><i
+                class="large material-icons">insert_chart</i> <strong>NameThatChart</strong></a>
 
     </div>
+    <ul class="nav navbar-top-links navbar-left" style="margin-left: 30%">
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
+            </div>
+        </li>
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
+            </div>
+        </li>
+    </ul>
 </nav>
 
 <!-- /. NAV SIDE  -->
@@ -50,9 +62,9 @@
                     <div class="card-content" id="pres">
                         <input id="value" type="text" name="type" placeholder="What is this chart ?" maxlength="25"/>
                         <br/>
-                        <button id="skip" class="waves-effect waves-light btn" >SKIP
+                        <button id="skip" class="waves-effect waves-light btn">SKIP
                         </button>
-                        <button  id="save" class="waves-effect waves-light btn">
+                        <button id="save" class="waves-effect waves-light btn">
                             save
                         </button>
                     </div>
@@ -61,8 +73,6 @@
         </div>
     </div>
     <canvas id="canvas" width="620" height="350" style="display: none"></canvas>
-
-    <footer><p>Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
 
     <!-- /. PAGE INNER  -->
 </div>
@@ -89,7 +99,19 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script async type="text/javascript">
     $(document).ready(function () {
-        $("#dispres").load("/pie");
+
+        $.ajax({
+            type: "GET",
+            url: "../getnext",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+
+                $("#dispres").empty();
+                $("#dispres").load("./textual/" + data);
+                $("#fade").fadeIn(500)
+            }
+        });
 
     })
 
@@ -98,10 +120,10 @@
 <script>
     $("#save").click(function (event) {
         var text = $("#value").val();
-        $("#value").val('')
-        $("#fade").fadeOut(2000)
+        $("#value").val('');
+        $("#fade").fadeOut(2000);
         var canvas = document.getElementById('canvas');
-        canvg('canvas', $("#svg").html())
+        canvg('canvas', $("#svg").html());
         var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         var blob = dataURLtoBlob(img);
         var form = new FormData();
@@ -113,7 +135,6 @@
         form.append("name", text);
 
 
-
         $.ajax({
             type: "POST",
             url: "./savetext",
@@ -122,15 +143,23 @@
             contentType: false,
             data: form,
             success: function (data) {
+                $.ajax({
+                    type: "GET",
+                    url: "../getnext",
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
 
-                $("#dispres").empty()
-                $("#dispres").load("/pie");
+                        $("#dispres").empty();
+                        $("#dispres").load("./textual/" + data);
+                        $("#fade").fadeIn(500)
+                    }
+                });
                 $("#fade").fadeIn(500)
             }
         });
 
     });
-
 
 
     function dataURLtoBlob(dataurl) {
@@ -144,7 +173,6 @@
 
 
 </script>
-</div>
 
 </body>
 
