@@ -19,22 +19,32 @@ body {
 #transition {
     text-align: center;
 }
+
 #disp {
     width: 40%;
     height: 40%;
 
-
 }
+
 #pres {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#dispres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
     background: #ececec;
+    margin-left: 1;
 }
 
 #page-inner {

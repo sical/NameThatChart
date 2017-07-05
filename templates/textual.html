@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Know your chart</title>
+    <title>Name That Chart</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
           media="screen,projection"/>
@@ -23,12 +23,6 @@
 <body>
 <nav id="topBar" class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
         <a class="navbar-brand waves-effect waves-dark" href="/"><i class="large material-icons">insert_chart</i>
             <strong>Charts</strong></a>
 
@@ -50,29 +44,22 @@
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-action" id="pres">
-                        <img id="disp" src="{{ url_for('static', filename='assets/img/36.jpg') }}"/>
+                    <div class="card-action" id="dispres">
+
                     </div>
                     <div class="card-content" id="pres">
-                        <button style="margin: 25px;" id="0"
-                                class="waves-effect waves-light btn" name="Pie Chart">Pie Chart
+                        <input id="value" type="text" name="type" placeholder="What is this chart ?" maxlength="25"/>
+                        <button class="waves-effect waves-light btn" style="margin: 25px;margin-left: 180px;">SKIP
                         </button>
-                        <button style="margin: 25px;" id="1"
-                                class="waves-effect waves-light btn" name="Scatter Plot"> Scatter Plot
-                        </button>
-                        <button style="margin: 25px;" id="2"
-                                class="waves-effect waves-light btn" name="Line Chart">Line Chart
-                        </button>
-                        <button style="margin: 25px;" id="3"
-                                class="waves-effect waves-light btn" name="Bar chart">Bar chart
+                        <button id="save" class="waves-effect waves-light btn" style="margin: 25px;margin-left: 180px;">
+                            save
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
+    <canvas id="canvas" width="620" height="350" style="display: none"></canvas>
 
     <footer><p>Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
 
@@ -94,13 +81,57 @@
 <!-- Metis Menu Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
 
+<script type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
+<script type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
+<script type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
 
-<script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script async type="text/javascript">
+    $(document).ready(function () {
+        $("#dispres").load("/pie");
+
+    })
+
+</script>
+
+<script>
+    $("#save").click(function (event) {
+        var text = $("#value").text();
+        var canvas = document.getElementById('canvas');
+        canvg('canvas', $("#svg").html())
+        var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        var blob = dataURLtoBlob(img);
+        var form = new FormData();
+        form.append("local", blob);
+        form.append("name",text);
+
+        $.ajax({
+            type: "POST",
+            url: "./savetext",
+            enctype: 'mulipart/form-data',
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+
+            }
+        });
+        $("#disp").fadeOut(1000, redirectPage);
+    });
+
+
+    function dataURLtoBlob(dataurl) {
+        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+                bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return new Blob([u8arr], {type: mime});
+    }
 
 
 
-
-
+</script>
 </div>
 
 </body>

@@ -1,7 +1,10 @@
+import csv
+import json
 import os, binascii
 from flask import Flask, request, session, render_template, send_file
 from flaskext.mysql import MySQL
 import imagePrep as pics
+from PIL import Image
 from random import randint
 
 app = Flask(__name__)
@@ -22,9 +25,19 @@ def hello_world():
     return render_template('index.html')
 
 
-@app.route('/temp')
+@app.route('/multiple')
 def temp():
-    return render_template('temp.html')
+    return render_template('multiple.html')
+
+
+@app.route('/pie')
+def pie():
+    return render_template('pietest.html')
+
+
+@app.route('/textual')
+def textual():
+    return render_template('textual.html')
 
 
 @app.route('/savemultiple', methods=['POST'])
@@ -45,14 +58,16 @@ def savemultiple():
     idt = cursor.fetchone()
     idu = getid(request.environ['REMOTE_ADDR'])
 
-    cursor.execute("select iduser from multiplevote where iduser="+str(idu[0])+" and idimage ="+str(idm[0])+"")
+    cursor.execute("SELECT iduser FROM multiplevote WHERE iduser=" + str(idu[0]) + " AND idimage =" + str(idm[0]) + "")
     data = cursor.fetchone()
 
     if data is None:
-        final = "INSERT INTO multiplevote (iduser,idimage,idtype) VALUES (" + str(idu[0]) + "," + str(idm[0]) + "," + str(
-        idt[0]) + ")"
+        final = "INSERT INTO multiplevote (iduser,idimage,idtype) VALUES (" + str(idu[0]) + "," + str(
+            idm[0]) + "," + str(
+            idt[0]) + ")"
     else:
-        final = "update multiplevote set idtype ="+str(idt[0])+" where iduser="+str(idu[0])+" and idimage ="+str(idm[0])
+        final = "UPDATE multiplevote SET idtype =" + str(idt[0]) + " WHERE iduser=" + str(
+            idu[0]) + " AND idimage =" + str(idm[0])
     print(final)
     cursor.execute(final)
     cursor.close()
@@ -71,6 +86,36 @@ def getimg():
     con.close()
 
     return data
+
+
+@app.route('/savetext', methods=['POST'])
+def savetext():
+    result = request.files['local']
+    print(result.filename)
+    img = Image.open(result)
+    bg = Image.new("RGB", img.size, (255, 255, 255))
+    bg.paste(img, img)
+    path = "assets/img/datasets/" + str(len(pics.getimgs("./static/assets/img/datasets/")) + 1) + ".jpg"
+    bg.save("./static/" + path)
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
+    con.commit()
+    cursor.execute("SELECT idimage FROM image WHERE imagepath = '" + path + "'")
+    idim = cursor.fetchone()
+    idu = getid(request.environ['REMOTE_ADDR'])
+
+    cursor.execute("INSERT INTO textvote VALUES(" + idu + "," + idim[0] + ")")
+
+    cursor.close()
+    con.close()
+
+    return data
+
+
+@app.route('/getrandomint')
+def getrandomintjson():
+    return getrandomdataint()
 
 
 @app.route('/maj')
@@ -116,6 +161,31 @@ def getid(ip):
         con.close()
         return data
 
+
+def getrandomdataint():
+    nbclasse = randint(3, 13)
+    result = {}
+    result['res'] = []
+    for i in range(0, nbclasse):
+        result['res'].append({"key": randint(3, 5000), "name": "foo" + str(i)})
+    return json.dumps(result)
+
+
+def gettype(typename):
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename + """%""")
+
+    if " " in typename:
+
+
+    return
+
+"""" json_data = json.dumps(result)
+ total = {"total": [json_data]}
+ print(total)
+ return json.dumps(total)"""
 
 if __name__ == '__main__':
     app.run()

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Know your chart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
+          media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
+</head>
+<style>
+
+    .arc text {
+        font: 10px sans-serif;
+        text-anchor: middle;
+    }
+
+    .arc path {
+        stroke: #fff;
+    }
+
+</style>
+<div id="dispres">
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<svg id="svg" width="620" height="350"></svg>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+    var svg = d3.select("svg"),
+            width = +svg.attr("width"),
+            height = +svg.attr("height"),
+            radius = Math.min(width, height) / 2,
+            g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    var color = d3.scaleOrdinal(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00","#fafbb7","#e3f9a4","#facbfb","#ff7070","#cdf5f9"]);
+
+    var pie = d3.pie()
+            .sort(null)
+            .value(function (d) {
+                return d.key;
+            });
+
+    var path = d3.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(0);
+
+    var label = d3.arc()
+            .outerRadius(radius - 40)
+            .innerRadius(radius - 40);
+    var bob = {};
+    $.ajax({
+        type: "GET",
+        url: "./getrandomint",
+
+        success: function (data) {
+            bob = JSON.parse(data);
+            var datas = bob.res;
+            var temp = [];
+            console.log(datas)
+            for (var i = 0; i < datas.size; i++) {
+                temp.push(datas[i].key)
+            }
+            console.log(datas)
+            var arc = g.selectAll(".arc")
+                    .data(pie(datas))
+                    .enter().append("g")
+                    .attr("class", "arc");
+
+          var  sub = color;
+
+            arc.append("path")
+                    .attr("d", path)
+                    .attr("fill", function (d) {
+                        console.log(d)
+                        return color(d.data.name);
+                    });
+
+            arc.append("text")
+                    .attr("transform", function (d) {
+                        return "translate(" + label.centroid(d) + ")";
+                    })
+                    .attr("dy", "0.35em")
+                    .text(function (d) {
+                        return d.name;
+                    });
+        }
+    });
+
+</script>
+

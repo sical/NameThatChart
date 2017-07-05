@@ -14,8 +14,6 @@ function redirectPage() {
     $("#disp").fadeIn(2000);
 }
 
-
-
 function getimg(){
     $.ajax({
         type: "GET",
@@ -84,7 +82,7 @@ $("#2").click(function (event) {
 $("#3").click(function (event) {
     event.preventDefault();
     var text = $("#3").text().split(' ').join('_');
-    ;
+
     $.ajax({
         type: "POST",
         url: "./savemultiple",
