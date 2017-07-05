@@ -1,12 +1,11 @@
 import csv
 import json
 import os, binascii
-from flask import Flask, request, session, render_template, send_file
+from flask import Flask, request, session, render_template
 from flaskext.mysql import MySQL
 import imagePrep as pics
 from PIL import Image
 from random import randint
-import re
 
 app = Flask(__name__)
 mysql = MySQL()
@@ -92,6 +91,7 @@ def getimg():
 @app.route('/savetext', methods=['POST'])
 def savetext():
     result = request.files['local']
+    name = request.form["name"]
     print(result.filename)
     img = Image.open(result)
     bg = Image.new("RGB", img.size, (255, 255, 255))
@@ -103,15 +103,17 @@ def savetext():
     cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
     con.commit()
     cursor.execute("SELECT idimage FROM image WHERE imagepath = '" + path + "'")
-    idim = cursor.fetchone()
-    idu = getid(request.environ['REMOTE_ADDR'])
-    idt = gettype(request.form["name"])
-    cursor.execute("INSERT INTO textvote VALUES(" + idu + "," + idim[0] + ","+idt[0]+")")
+    idim = cursor.fetchone()[0]
+    idu = getid(request.environ['REMOTE_ADDR'])[0]
+    idt = gettype(name)[0]
+    query = "INSERT INTO textvote VALUES(" + str(idu) + "," + str(idim) + "," + str(idt) + ")"
+    print(query)
+    cursor.execute(query)
 
     cursor.close()
     con.close()
 
-    return
+    return 'ok'
 
 
 @app.route('/getrandomint')
@@ -178,22 +180,26 @@ def gettype(typename):
     typename = typename.lower()
     if " " in typename:
         typename = typename.replace(" ", "_")
-
-    cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename + """%""")
+    q = "SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename + "%'"
+    print(q)
+    cursor.execute(q)
     data = cursor.fetchone()
     if data is None:
 
         if "chart" in typename:
-            if "_" in typename:
+            if "_" in typename or "-" in typename or "." in typename:
                 typename = typename.replace("_", "")
             else:
                 typename = typename.replace("chart", "_chart")
-        cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename + """%""")
+        cursor.execute(q)
         data = cursor.fetchone()
         if data is None:
-            cursor.execute("insert into type (label) VALUE ("+typename.replace("_"," ")+")")
+            query = "INSERT INTO type (label) VALUES ('" + typename.replace("_", " ") + "')"
+            print(query)
+            cursor.execute(query)
             con.commit()
-            cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename.replace("_"," ") + """%""")
+            cursor.execute(
+                """SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename.replace("_", " ") + """%'""")
             data = cursor.fetchone()
 
     return data

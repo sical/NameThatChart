@@ -40,7 +40,7 @@
     </div>
     <div id="page-inner">
 
-        <div class="row">
+        <div class="row" id="fade">
 
             <div class="col-md-12">
                 <div class="card">
@@ -49,9 +49,10 @@
                     </div>
                     <div class="card-content" id="pres">
                         <input id="value" type="text" name="type" placeholder="What is this chart ?" maxlength="25"/>
-                        <button class="waves-effect waves-light btn" style="margin: 25px;margin-left: 180px;">SKIP
+                        <br/>
+                        <button id="skip" class="waves-effect waves-light btn" >SKIP
                         </button>
-                        <button id="save" class="waves-effect waves-light btn" style="margin: 25px;margin-left: 180px;">
+                        <button  id="save" class="waves-effect waves-light btn">
                             save
                         </button>
                     </div>
@@ -96,14 +97,22 @@
 
 <script>
     $("#save").click(function (event) {
-        var text = $("#value").text();
+        var text = $("#value").val();
+        $("#value").val('')
+        $("#fade").fadeOut(2000)
         var canvas = document.getElementById('canvas');
         canvg('canvas', $("#svg").html())
         var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         var blob = dataURLtoBlob(img);
         var form = new FormData();
+
+        var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&><@]*/ig;
+        text = text.replace(reg, "")
         form.append("local", blob);
-        form.append("name",text);
+        console.log(text)
+        form.append("name", text);
+
+
 
         $.ajax({
             type: "POST",
@@ -114,10 +123,14 @@
             data: form,
             success: function (data) {
 
+                $("#dispres").empty()
+                $("#dispres").load("/pie");
+                $("#fade").fadeIn(500)
             }
         });
-        $("#disp").fadeOut(1000, redirectPage);
+
     });
+
 
 
     function dataURLtoBlob(dataurl) {
@@ -128,7 +141,6 @@
         }
         return new Blob([u8arr], {type: mime});
     }
-
 
 
 </script>
