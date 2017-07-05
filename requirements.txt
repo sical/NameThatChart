@@ -9,8 +9,8 @@ flask
 # ----------------------
 requests
 
+flask-mysql
 
 Pillow
 
 
-flaskext.mysql
