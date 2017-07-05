@@ -12,11 +12,12 @@ app = Flask(__name__)
 mysql = MySQL()
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'admin'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'admin'
-app.config['MYSQL_DATABASE_DB'] = 'NameThatChart'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_USER'] = 'bb4f44ef9e9757'
+app.config['MYSQL_DATABASE_PASSWORD'] = '0cf02e4a'
+app.config['MYSQL_DATABASE_DB'] = 'heroku_fe2750702799a19'
+app.config['MYSQL_DATABASE_HOST'] = 'eu-cdbr-west-01.cleardb.com'
 mysql.init_app(app)
+
 
 app.secret_key = binascii.hexlify(os.urandom(24))
 
