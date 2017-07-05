@@ -18,7 +18,6 @@ app.config['MYSQL_DATABASE_DB'] = 'heroku_fe2750702799a19'
 app.config['MYSQL_DATABASE_HOST'] = 'eu-cdbr-west-01.cleardb.com'
 mysql.init_app(app)
 
-
 app.secret_key = binascii.hexlify(os.urandom(24))
 
 
@@ -106,8 +105,8 @@ def savetext():
     cursor.execute("SELECT idimage FROM image WHERE imagepath = '" + path + "'")
     idim = cursor.fetchone()
     idu = getid(request.environ['REMOTE_ADDR'])
-
-    cursor.execute("INSERT INTO textvote VALUES(" + idu + "," + idim[0] + ")")
+    idt = gettype(request.form["name"])
+    cursor.execute("INSERT INTO textvote VALUES(" + idu + "," + idim[0] + ","+idt[0]+")")
 
     cursor.close()
     con.close()
@@ -122,7 +121,6 @@ def getrandomintjson():
 
 @app.route('/maj')
 def maj():
-
     imgs = pics.getimgs("./static/assets/img/datasets/")
     con = mysql.connect()
     cursor = con.cursor()
@@ -177,13 +175,29 @@ def getrandomdataint():
 def gettype(typename):
     con = mysql.connect()
     cursor = con.cursor()
+    typename = typename.lower()
+    if " " in typename:
+        typename = typename.replace(" ", "_")
 
     cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename + """%""")
+    data = cursor.fetchone()
+    if data is None:
 
-    if " " in typename:
+        if "chart" in typename:
+            if "_" in typename:
+                typename = typename.replace("_", "")
+            else:
+                typename = typename.replace("chart", "_chart")
+        cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename + """%""")
+        data = cursor.fetchone()
+        if data is None:
+            cursor.execute("insert into type (label) VALUE ("+typename.replace("_"," ")+")")
+            con.commit()
+            cursor.execute("""SELECT idtype FROM type WHERE lower(label) LIKE %""" + typename.replace("_"," ") + """%""")
+            data = cursor.fetchone()
 
+    return data
 
-        return
 
 """" json_data = json.dumps(result)
  total = {"total": [json_data]}
