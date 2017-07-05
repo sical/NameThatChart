@@ -128,7 +128,7 @@ def maj():
     cursor = con.cursor()
 
     for i in range(0, len(imgs)):
-        path = imgs[i].replace("/static/", "")
+        path = imgs[i].replace("./static/", "")
         cursor.execute("SELECT * FROM image WHERE imagepath LIKE '%" + path + "%' LIMIT 1")
         data = cursor.fetchone()
 
