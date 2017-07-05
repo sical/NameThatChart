@@ -6,6 +6,7 @@ from flaskext.mysql import MySQL
 import imagePrep as pics
 from PIL import Image
 from random import randint
+import re
 
 app = Flask(__name__)
 mysql = MySQL()
@@ -120,12 +121,13 @@ def getrandomintjson():
 
 @app.route('/maj')
 def maj():
-    imgs = pics.getimgs("/home/theo/PycharmProjects/NameThatChart/static/assets/img/datasets/")
+
+    imgs = pics.getimgs("./static/assets/img/datasets/")
     con = mysql.connect()
     cursor = con.cursor()
 
     for i in range(0, len(imgs)):
-        path = imgs[i].replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
+        path = imgs[i].replace("/static/", "")
         cursor.execute("SELECT * FROM image WHERE imagepath LIKE '%" + path + "%' LIMIT 1")
         data = cursor.fetchone()
 
