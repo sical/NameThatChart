@@ -110,7 +110,7 @@ def savetext():
     cursor.close()
     con.close()
 
-    return data
+    return
 
 
 @app.route('/getrandomint')
@@ -180,7 +180,7 @@ def gettype(typename):
     if " " in typename:
 
 
-    return
+        return
 
 """" json_data = json.dumps(result)
  total = {"total": [json_data]}
