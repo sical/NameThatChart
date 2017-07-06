@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
+          media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
+</head>
+<body>
+<nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand waves-effect waves-dark" style="width: 330px" href="/"><strong> <i
+                class="large material-icons">insert_chart</i>NameThatChart</strong></a>
+
+    </div>
+    <ul class="nav navbar-top-links navbar-left" style="margin-left: 30%">
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
+            </div>
+        </li>
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Administration
+            <small>Upload</small>
+        </h1>
+
+    </div>
+    <div id="page-inner">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-action">
+                        Raw Features
+                    </div>
+                    <div class="card-content" id="features">
+                        <form id="canardlocal" style="margin-bottom:76px ">
+                            Features
+
+                            <p>
+                                <input name="g" type="radio" value="1" id="test1"/>
+                                <label for="test1">1D (number and categories)</label>
+                            </p>
+                            <p>
+                                <input name="g" value="2" type="radio" id="test2"/>
+                                <label for="test2">2D (two column of numbers)</label>
+                            </p>
+                            <p>
+                                <input name="group1" value="2" type="radio" id="test2"/>
+                                <label for="test2">3D (two column of numbers and one of categories)</label>
+                            </p>
+                            <input type="text" name="type" placeholder="Type of visualisation (bar chart,etc ...)">
+
+                        </form>
+
+                        <button class="waves-effect waves-light btn" id="send"> Submit</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-action">
+                        File Upload
+                    </div>
+                    <div class="card-content" id="uploade">
+                        <strong> Add the file (d3js v4 + simple html in the same file)</strong>
+                        <label for="imgInp" class="waves-effect waves-light btn" tabindex="0">Upload </label>
+                        <input style="display: none" type='file' id="imgInp" name="imgInp"/>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+
+
+    </div>
+    <!-- /. PAGE WRAPPER  -->
+</div>
+
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<!-- Metis Menu Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
+
+<script type="text/javascript">
+    var fileri;
+
+    $("#send").click(function (event) {
+        event.preventDefault();
+
+        form = $("#canardlocal").serialize();
+        upload(form)
+
+    });
+    $(document).ready(function () {
+        $("body").css("display", "none");
+
+        $("body").fadeIn(2000);
+
+        $("#transition").click(function (event) {
+            event.preventDefault();
+            linkLocation = this.href;
+            $("body").fadeOut(1000, redirectPage);
+        });
+
+        function redirectPage() {
+            window.location = linkLocation;
+        }
+
+        var haut = $('#features').height();
+        var e1 = document.getElementById("uploade");
+        e1.style.height = haut;
+    });
+
+
+    $(document).on('dragenter', '#drag', function () {
+        $(this).css('border', '3px dashed red');
+        return false;
+    });
+
+    $(document).on('dragover', '#drag', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).css('border', '3px dashed red');
+        return false;
+    });
+
+    $(document).on('dragleave', '#drag', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).css('border', '3px dashed green');
+        return false;
+    });
+
+    $(document).on('drop', '#drag', function (e) {
+        if (e.originalEvent.dataTransfer) {
+            if (e.originalEvent.dataTransfer.files.length) {
+                // Stop the propagation of the event
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).css('border', '3px dashed green');
+                // Main function to upload
+                fileri = e.originalEvent.dataTransfer.files
+            }
+        }
+        else {
+            $(this).css('border', '3px dashed #BBBBBB');
+        }
+        return false;
+    });
+
+    function upload(form) {
+
+        if (form['imgInp'] == undefined || fileri == undefined) {
+            alert("no file uploaded");
+        } else {
+
+
+            //console.log($('#imgInp').val());
+            $.ajax({
+                type: "POST",
+                url: "./tensorflowlocal",
+                enctype: 'mulipart/form-data',
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                }
+            });
+        }
+
+        return false;
+    }
+</script>
+
+</div>
+
+</body>
+
+</html>

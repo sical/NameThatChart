@@ -34,6 +34,13 @@ def temp():
 def textual():
     return render_template('textual.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
+@app.route('/upload')
+def upload():
+    return render_template('upload.html')
 
 @app.route('/textual/<chart>')
 def generic(chart):
@@ -137,6 +144,18 @@ def getrandomintjson():
     return getrandomdataint()
 
 
+@app.route('/getrandom2d')
+def getrandom2djson():
+    nbclasse = randint(3, 180)
+    result = {'res': []}
+    pred = 0
+    for i in range(0, nbclasse):
+        value = pred + randint(3, 200)
+        pred=value
+        result['res'].append({"val1": value, "val2": randint(3, 160000)})
+    return json.dumps(result)
+
+
 @app.route('/maj')
 def maj():
     imgs = pics.getimgs("./static/assets/img/datasets/")
@@ -184,8 +203,7 @@ def getid(ip):
 
 def getrandomdataint():
     nbclasse = randint(3, 16)
-    result = {}
-    result['res'] = []
+    result = {'res': []}
     for i in range(0, nbclasse):
         result['res'].append({"key": randint(3, 8000), "name": "foo" + str(i)})
     return json.dumps(result)
