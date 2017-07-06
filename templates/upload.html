@@ -61,21 +61,8 @@
                     </div>
                     <div class="card-content" id="features">
                         <form id="canardlocal" style="margin-bottom:76px ">
-                            Features
-
-                            <p>
-                                <input name="g" type="radio" value="1" id="test1"/>
-                                <label for="test1">1D (number and categories)</label>
-                            </p>
-                            <p>
-                                <input name="g" value="2" type="radio" id="test2"/>
-                                <label for="test2">2D (two column of numbers)</label>
-                            </p>
-                            <p>
-                                <input name="group1" value="2" type="radio" id="test2"/>
-                                <label for="test2">3D (two column of numbers and one of categories)</label>
-                            </p>
-                            <input type="text" name="type" placeholder="Type of visualisation (bar chart,etc ...)">
+                            Type of visualization :
+                            <input type="text" name="type" id="epyt" placeholder="Type of visualisation (bar chart,etc ...)">
 
                         </form>
 
@@ -84,16 +71,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="drag">
                 <div class="card">
                     <div class="card-action">
                         File Upload
                     </div>
                     <div class="card-content" id="uploade">
-                        <strong> Add the file (d3js v4 + simple html in the same file)</strong>
-                        <label for="imgInp" class="waves-effect waves-light btn" tabindex="0">Upload </label>
-                        <input style="display: none" type='file' id="imgInp" name="imgInp"/>
-
+                        <form>
+                            <strong> Add the file (d3js v4 + simple html in the same file ext : html)</strong>
+                            <label for="imgInp" class="waves-effect waves-light btn" tabindex="0">Upload </label>
+                            <input style="display: none" type='file' id="imgInp" name="imgInp"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -123,8 +111,9 @@
 
     $("#send").click(function (event) {
         event.preventDefault();
-
-        form = $("#canardlocal").serialize();
+        var form = new FormData();
+        form.append("local", $("#imgInp")[0].files[0]);
+        form.append("type",$("#epyt"));
         upload(form)
 
     });
@@ -187,7 +176,8 @@
 
     function upload(form) {
 
-        if (form['imgInp'] == undefined || fileri == undefined) {
+        console.log(form);
+        if (form.get('local') == undefined && fileri == undefined) {
             alert("no file uploaded");
         } else {
 
@@ -195,12 +185,13 @@
             //console.log($('#imgInp').val());
             $.ajax({
                 type: "POST",
-                url: "./tensorflowlocal",
+                url: "../presaveviz",
                 enctype: 'mulipart/form-data',
                 processData: false,
                 contentType: false,
                 data: form,
                 success: function (data) {
+                    window.location = data;
                 }
             });
         }

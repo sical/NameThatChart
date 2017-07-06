@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
+          media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
+</head>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand waves-effect waves-dark" style="width: 330px" href="/"><strong> <i
+                class="large material-icons">insert_chart</i>NameThatChart</strong></a>
+
+    </div>
+
+    <ul class="nav navbar-top-links navbar-left" style="margin-left: 30%">
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
+            </div>
+        </li>
+        <li>
+            <div class="navbar-header" style="width: 30%">
+                <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Name that chart
+            <small> Preview</small>
+        </h1>
+
+    </div>
+    <div id="page-inner">
+
+        <div class="row" id="fade">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-action" id="dispres">
+
+                    </div>
+                    <div class="card-content" id="pres">
+                        <input id="value" type="text" name="type" placeholder="What is this chart ?" maxlength="25"/>
+                        <br/>
+                        <button id="skip" class="waves-effect waves-light btn">SKIP
+                        </button>
+                        <button id="save" class="waves-effect waves-light btn">
+                            save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-action">
+                    If you see your Chart up there, it means the import is complete, to save it click on the button down
+                    bellow .
+                </div>
+                <div class="card-content" id="pres">
+                    <button id="save" class="waves-effect waves-light btn">
+                        save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<canvas id="canvas" width="620" height="350" style="display: none"></canvas>
+
+<!-- /. PAGE INNER  -->
+</div>
+
+<!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<!-- Metis Menu Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
+
+<script type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
+<script type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
+<script type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "GET",
+            url: "./getinfo",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                $("#dispres").empty();
+                $("#dispres").load("./preview/" + data);
+                $("#fade").fadeIn(500)
+            }
+        });
+
+    });
+
+    $("#save").click(function () {
+        $.ajax({
+            type: "GET",
+            url: "./finalize",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+
+            }
+        });
+
+    })
+
+</script>
+
+</body>
+
+</html>

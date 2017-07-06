@@ -34,17 +34,67 @@ def temp():
 def textual():
     return render_template('textual.html')
 
+
 @app.route('/admin')
 def admin():
     return render_template('admin.html')
+
 
 @app.route('/upload')
 def upload():
     return render_template('upload.html')
 
+
+@app.route('/preview')
+def preview():
+    return render_template('preview.html')
+
+
 @app.route('/textual/<chart>')
 def generic(chart):
     return render_template(chart + '.html')
+
+
+@app.route('/preview/<chart>')
+def genericprev(chart):
+    return render_template("preview/" + chart + '.html')
+
+
+@app.route('/getinfo')
+def getinf():
+    return session.get('filename')
+
+@app.route('/preview/finalize')
+def prevfin():
+    con = mysql.connect()
+    cursor = con.cursor()
+    q= "insert into type "
+    cursor.execute(q)
+    con.commit()
+    cursor.close()
+    con.close()
+
+
+@app.route('/presaveviz', methods=['POST'])
+def presaveviz():
+    file = request.files['local']
+    print(file.filename)
+    name = request.form['type']
+    id = getid(request.environ['REMOTE_ADDR'])[0]
+    nb = getposted(id) + 1
+    session['type'] = name
+    session['nb'] = nb
+    session['filename'] = str(id) + "_" + str(nb)
+    file.save("./templates/preview/" + str(id) + "_" + str(nb) + ".html")
+
+    con = mysql.connect()
+    cursor = con.cursor()
+    q= "UPDATE user SET posted = " + str(nb) + " where iduser = " + str(id)
+    cursor.execute(q)
+    con.commit()
+    cursor.close()
+    con.close()
+    return "../preview"
 
 
 @app.route('/savemultiple', methods=['POST'])
@@ -106,11 +156,20 @@ def getnext():
     return data
 
 
+def getposted(id):
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT posted FROM user WHERE iduser = " + str(id) + " LIMIT 1")
+    data = cursor.fetchone()
+    cursor.close()
+    con.close()
+    return data[0]
+
+
 @app.route('/savetext', methods=['POST'])
 def savetext():
     result = request.files['local']
     name = request.form["name"]
-    print(result.filename)
     img = Image.open(result)
     bg = Image.new("RGB", img.size, (255, 255, 255))
     bg.paste(img, img)
@@ -139,19 +198,19 @@ def savetext():
     return 'ok'
 
 
-@app.route('/getrandomint')
+@app.route('/1data')
 def getrandomintjson():
     return getrandomdataint()
 
 
-@app.route('/getrandom2d')
+@app.route('/2data')
 def getrandom2djson():
     nbclasse = randint(3, 180)
     result = {'res': []}
     pred = 0
     for i in range(0, nbclasse):
         value = pred + randint(3, 200)
-        pred=value
+        pred = value
         result['res'].append({"val1": value, "val2": randint(3, 160000)})
     return json.dumps(result)
 
@@ -215,7 +274,7 @@ def gettype(typename):
     typename = typename.lower()
     if " " in typename:
         typename = typename.replace(" ", "_")
-    q = "SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename + "%'"
+    q = "SELECT idtype FROM type WHERE lower(label) = '""" + typename + "'"
     cursor.execute(q)
     data = cursor.fetchone()
     if data is None:
@@ -227,14 +286,14 @@ def gettype(typename):
                 typename = typename.replace(".", "")
             else:
                 typename = typename.replace("chart", "_chart")
-            q = "SELECT idtype FROM type WHERE lower(label) LIKE '%""" + typename + "%'"
+            q = "SELECT idtype FROM type WHERE lower(label) LIKE '""" + typename + "'"
         cursor.execute(q)
         data = cursor.fetchone()
         if data is None:
             query = "INSERT INTO type (label) VALUES ('" + typename.replace("_", " ") + "')"
             cursor.execute(query)
             con.commit()
-            cursor.execute("SELECT idtype FROM type WHERE lower(label) LIKE '%" + typename.replace("_", " ") + "%'")
+            cursor.execute("SELECT idtype FROM type WHERE lower(label) LIKE '" + typename.replace("_", " ") + "'")
             data = cursor.fetchone()
             cursor.close()
             con.close()

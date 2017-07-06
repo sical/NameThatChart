@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
 <style> /* set the CSS */
 
 .line {
@@ -11,19 +9,12 @@
 </style>
 <body>
 <svg> </svg>
-
-<!-- load the d3.js library -->
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 <script>
 
     // set the dimensions and margins of the graph
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
             width = 620 - margin.left - margin.right,
             height = 350 - margin.top - margin.bottom;
-
-    // parse the date / time
-    var parseTime = d3.timeParse("%d-%b-%y");
 
     // set the ranges
     var x = d3.scaleTime().range([0, width]);
@@ -48,27 +39,25 @@
             .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
-    var bob = {};
     $.ajax({
         type: "GET",
-        url: "../getrandom2d",
+        url: "../2data",
 
         success: function (data) {
-            bob = JSON.parse(data);
-            var datas = bob.res;
+            var dataset = JSON.parse(data).res;
 
             // Scale the range of the data
-            x.domain(d3.extent(datas, function (d) {
+            x.domain(d3.extent(dataset, function (d) {
                 return d.val1;
             }));
-            y.domain([0, d3.max(datas, function (d) {
+            y.domain([0, d3.max(dataset, function (d) {
                 return d.val2;
             })]);
 
 
             // Add the scatterplot
             svg.selectAll("dot")
-                    .data(datas)
+                    .data(dataset)
                     .enter().append("circle")
                     .attr("r", 5)
                     .attr("style","fill : "+getRandomColor())
