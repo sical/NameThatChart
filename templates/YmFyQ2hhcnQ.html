@@ -4,8 +4,7 @@
         text-anchor: middle;
     }
 </style>
-<body>
-<svg id="svg" width="620" height="350"></svg>
+<svg id="svg" width="620" height="350" viewBox="0 0 620 350" ></svg>
 <script>
     //produce random colors
     function getRandomColor() {
@@ -33,11 +32,12 @@
     // append a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
     var svg = d3.select("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("width", width - margin.left - margin.right)
+            .attr("height", height - margin.top - margin.bottom)
             .append("g")
             .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
+
 
     // get the data
     $.ajax({
@@ -85,5 +85,5 @@
                     .call(d3.axisLeft(y));
         }
     });
+
 </script>
-</body>

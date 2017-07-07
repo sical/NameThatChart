@@ -12,13 +12,10 @@
     <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
     <!-- FontAwesome Styles-->
     <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
-    <!-- Morris Chart Styles-->
-    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
     <!-- Custom Styles-->
     <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
 </head>
 <body>
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -50,7 +47,6 @@
             Name that chart
             <small> Preview</small>
         </h1>
-
     </div>
     <div id="page-inner">
 
@@ -88,8 +84,6 @@
         </div>
     </div>
 </div>
-<canvas id="canvas" width="620" height="350" style="display: none"></canvas>
-
 <!-- /. PAGE INNER  -->
 </div>
 
@@ -105,12 +99,6 @@
 
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
-<!-- Metis Menu Js -->
-<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
-
-<script type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
-<script type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
-<script type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -128,19 +116,6 @@
         });
 
     });
-
-    $("#save").click(function () {
-        $.ajax({
-            type: "GET",
-            url: "./finalize",
-            processData: false,
-            contentType: false,
-            success: function (data) {
-
-            }
-        });
-
-    })
 
 </script>
 

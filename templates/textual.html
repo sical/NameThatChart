@@ -5,49 +5,46 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Name That Chart</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link async href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
           media="screen,projection"/>
     <!-- Bootstrap Styles-->
     <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
     <!-- FontAwesome Styles-->
-    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
-    <!-- Morris Chart Styles-->
-    <link href="{{ url_for('static', filename='assets/js/morris/morris-0.4.3.min.css') }}" rel="stylesheet"/>
+    <link async href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
     <!-- Custom Styles-->
     <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
     <!-- Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/js/Lightweight-Chart/cssCharts.css') }}">
+    <link async href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
 <body>
 <nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
-        <a class="navbar-brand waves-effect waves-dark" style="width: 330px" href="/"><strong> <i
-                class="large material-icons">insert_chart</i>NameThatChart</strong></a>
+        <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
+                class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
+        <ul class="nav navbar-top-links navbar-left">
+            <li>
+                <div class="navbar-header" style="width: 30%">
+                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
+                </div>
+            </li>
+            <li>
+                <div class="navbar-header" style="width: 30%">
+                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
+                </div>
+            </li>
+        </ul>
 
     </div>
 
-    <ul class="nav navbar-top-links navbar-left" style="margin-left: 30%">
-        <li>
-            <div class="navbar-header" style="width: 30%">
-                <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
-            </div>
-        </li>
-        <li>
-            <div class="navbar-header" style="width: 30%">
-                <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
-            </div>
-        </li>
-    </ul>
+
 </nav>
 
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
     <div class="header">
-        <h1 class="page-header">
-            Name that chart
-            <small> Try it</small>
+        <h1 class="page-header" id="brand">
+            Describe this chart with your own words
         </h1>
 
     </div>
@@ -57,25 +54,44 @@
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-action" id="dispres">
-
+                    <div class="card-content" id="hide">
+                        <p> LAAAAAAAAAAAAAAAAAAA</p>
                     </div>
-                    <div class="card-content" id="pres">
-                        <input id="value" type="text" name="type" placeholder="What is this chart ?" maxlength="25"/>
-                        <br/>
-                        <button id="skip" class="waves-effect waves-light btn">SKIP
-                        </button>
-                        <button id="save" class="waves-effect waves-light btn">
-                            save
-                        </button>
+                    <div class="card-content" id="dispres">
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <canvas id="canvas" width="620" height="350" style="display: none"></canvas>
+        <div class="row" id="fade">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content" id="pres">
+                        <div id="fom">
+                            <input id="value" type="text" name="type" placeholder="What is this chart ?"
+                                   maxlength="50"/>
+                        </div>
+                        <br/>
+                        <div id="boutons">
+                            <button id="skip" class="waves-effect waves-light btn">skip
+                            </button>
+                            <button id="save" class="waves-effect waves-light btn">
+                                save
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- /. PAGE INNER  -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearBoth" style="text-align: center"><br/>
+
+</div>
+<canvas id="canvas" width="620" height="350" style="display: none"></canvas>
+
+<!-- /. PAGE INNER  -->
 </div>
 
 <!-- /. PAGE WRAPPER  -->
@@ -90,12 +106,10 @@
 
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
-<!-- Metis Menu Js -->
-<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
 
-<script type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
-<script type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
-<script type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
+<script async type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
+<script async type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
+<script async type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -112,12 +126,16 @@
                 $("#fade").fadeIn(500)
             }
         });
+        updateImageSize();
+        $(window).resize(function () {
+            updateImageSize();
+        })
 
     })
 
 </script>
 
-<script>
+<script async>
     $("#save").click(function (event) {
         var text = $("#value").val();
         $("#value").val('');
@@ -161,6 +179,21 @@
 
     });
 
+    $("#skip").click(function () {
+        $.ajax({
+            type: "GET",
+            url: "../getnext",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+
+                $("#dispres").empty();
+                $("#dispres").load("./textual/" + data);
+                $("#fade").fadeIn(500)
+            }
+        });
+        $("#fade").fadeIn(500)
+    });
 
     function dataURLtoBlob(dataurl) {
         var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
@@ -169,6 +202,21 @@
             u8arr[n] = bstr.charCodeAt(n);
         }
         return new Blob([u8arr], {type: mime});
+    }
+
+
+    function updateImageSize() {
+        $("svg").each(function () {
+            var ratio_cont = jQuery(this).width() / jQuery(this).height();
+            var $img = jQuery(this).find("svg");
+            var ratio_img = $img.width() / $img.height();
+            if (ratio_cont > ratio_img) {
+                $img.css({"width": "100%", "height": "auto"});
+            }
+            else if (ratio_cont < ratio_img) {
+                $img.css({"width": "auto", "height": "100%"});
+            }
+        }); //missing )
     }
 
 

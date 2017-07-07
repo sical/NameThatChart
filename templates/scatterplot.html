@@ -8,8 +8,9 @@
 
 </style>
 <body>
-<svg> </svg>
+<svg viewBox="0 0 620 350"></svg>
 <script>
+
 
     // set the dimensions and margins of the graph
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
@@ -33,11 +34,13 @@
     // appends a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
     var svg = d3.select("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("width", width - margin.left - margin.right)
+            .attr("height", height - margin.top - margin.bottom)
+            .attr('preserveAspectRatio', 'xMinYMin')
             .append("g")
             .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
+
 
     $.ajax({
         type: "GET",
@@ -60,7 +63,7 @@
                     .data(dataset)
                     .enter().append("circle")
                     .attr("r", 5)
-                    .attr("style","fill : "+getRandomColor())
+                    .attr("style", "fill : " + getRandomColor())
                     .attr("cx", function (d) {
                         return x(d.val1);
                     })
@@ -80,7 +83,7 @@
         }
     });
 
-        function getRandomColor() {
+    function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
         for (var i = 0; i < 6; i++) {
