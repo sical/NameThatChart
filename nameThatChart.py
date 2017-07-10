@@ -1,11 +1,15 @@
-import csv
+import binascii
 import json
-import os, binascii
-from flask import Flask, request, session, render_template
-from flaskext.mysql import MySQL
-import imagePrep as pics
-from PIL import Image
+import os
 from random import randint
+import csv
+import io
+
+from PIL import Image
+from flask import Flask, request, session, render_template, send_file
+from flaskext.mysql import MySQL
+
+import imagePrep as pics
 
 app = Flask(__name__)
 mysql = MySQL()
@@ -199,6 +203,42 @@ def savetext():
     return 'ok'
 
 
+@app.route('/db2csv')
+def db2csv():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT image,label FROM textvote INNER JOIN type ON type=idtype")
+    data = cursor.fetchall()
+    res = "["
+    for i in range(0, len(data)):
+        stra = "[ "
+        for y in range(0, len(data[0])):
+            stra += "'" + str(data[i][y])+"'"
+            if y != len(data[0])-1:
+                 stra+= ","
+
+        stra+="]"
+        if i != len(data) - 1:
+            stra += ","
+        res += stra
+    res += " ]"
+    cursor.close()
+    con.close()
+    print(json.dumps(res))
+    return res
+
+
+@app.route('/savepreview/<data>')
+def savepreview(data):
+    os.rename("./template/preview/" + data, "./template/" + data)
+    idt = gettype(session['type'])
+
+    # update type
+
+
+    return 'ok'
+
+
 @app.route('/1data')
 def getrandomintjson():
     return getrandomdataint()
@@ -208,7 +248,8 @@ def getrandomintjson():
 def getfirstrow():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT type.idtype,type.label,count(type.idtype) as nb from type,textvote where type.idtype = textvote.type group by type.idtype,type.label order by  nb  desc LIMIT 4;")
+    cursor.execute(
+        "SELECT type.idtype,type.label,count(type.idtype) AS nb FROM type,textvote WHERE type.idtype = textvote.type GROUP BY type.idtype,type.label ORDER BY  nb  DESC LIMIT 4;")
     data = cursor.fetchall()
     cursor.close()
     con.close()

@@ -18,7 +18,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-<body>
 <nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
         <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
@@ -63,28 +62,7 @@
                         Description
                     </div>
                     <div class="card-content">
-                        <p style="padding: 50px "><strong>With this application you can : </strong>
-                        <ul>
-                            <li>-Classify randomly generated Pie Chart and Bar Chart (Textual button).</li>
-                            <br/>
-                            <li>-Please notice that this text is "small typo proof" like typing piechart when pie chart
-                                is
-                                in database.
-                            </li>
-                            <br/>
-                            <li>- Evaluate thoose classifications with as a choices the 4 most voted choices for this
-                                picture.
-                            </li>
-                            <br/>
-                            <li>-Each operations are stocked in the database with your IP.</li>
-                            <br/>
-                            <li>-The textual classification upload an store the picture classified and can create new
-                                categories.
-                            </li>
-                            <br/>
-                            <li>- unmapped "/maj" allow us update the image database with files stored on the server.
-                            </li>
-                        </ul>
+                        <p style="padding: 50px "><strong>Help us now ! </strong>
 
 
                         </p>
@@ -112,23 +90,6 @@
 
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("body").css("display", "none");
-
-        $("body").fadeIn(2000);
-
-        $("#transition").click(function (event) {
-            event.preventDefault();
-            linkLocation = this.href;
-            $("body").fadeOut(1000, redirectPage);
-        });
-
-        function redirectPage() {
-            window.location = linkLocation;
-        }
-    });
-</script>
 
 </div>
 

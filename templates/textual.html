@@ -55,7 +55,7 @@
     </div>
     <div id="page-inner">
 
-        <div class="row" id="fade">
+        <div class="row">
 
             <div class="col-md-12">
                 <div class="card">
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="fade">
+        <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-content" id="pres">
@@ -125,7 +125,6 @@
 
                 $("#dispres").empty();
                 $("#dispres").load("./textual/" + data);
-                $("#fade").fadeIn(500)
             }
         });
         updateImageSize();
@@ -148,7 +147,7 @@
         var form = new FormData();
 
         var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
-        text = text.replace(reg, "")
+        text = text.replace(reg, "");
         form.append("local", blob);
         console.log(text)
         form.append("name", text);
@@ -171,10 +170,8 @@
 
                         $("#dispres").empty();
                         $("#dispres").load("./textual/" + data);
-                        $("#fade").fadeIn(500)
                     }
                 });
-                $("#fade").fadeIn(500)
             }
         });
 
@@ -190,10 +187,8 @@
 
                 $("#dispres").empty();
                 $("#dispres").load("./textual/" + data);
-                $("#fade").fadeIn(500)
             }
         });
-        $("#fade").fadeIn(500)
     });
 
     function dataURLtoBlob(dataurl) {

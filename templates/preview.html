@@ -19,7 +19,6 @@
 </head>
 <body>
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<body>
 <nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
         <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
@@ -55,7 +54,7 @@
     </div>
     <div id="page-inner">
 
-        <div class="row" id="fade">
+        <div class="row">
 
             <div class="col-md-12">
                 <div class="card">
@@ -107,8 +106,8 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-
         $.ajax({
+
             type: "GET",
             url: "./getinfo",
             processData: false,
@@ -116,11 +115,25 @@
             success: function (data) {
                 $("#dispres").empty();
                 $("#dispres").load("./preview/" + data);
-                $("#fade").fadeIn(500)
             }
         });
 
     });
+
+    $("#save").click(function () {
+        var form = new FormData();
+
+        $.ajax({
+            type: "GET",
+            url: "./savepreview"+name,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+            }
+        });
+
+    });
+
 
 </script>
 

@@ -3,16 +3,9 @@
  */
 
 $(document).ready(function () {
-    $("body").css("display", "none");
-    getimg()
-    $("body").fadeIn(2000);
-
+    getimg();
 });
 
-function redirectPage() {
-   getimg()
-    $("#disp").fadeIn(2000);
-}
 
 function getimg(){
     $.ajax({
@@ -41,7 +34,6 @@ $("#0").click(function (event) {
             console.log(data)
         }
     });
-    $("#disp").fadeOut(1000, redirectPage);
 });
 
 $("#1").click(function (event) {
@@ -59,7 +51,6 @@ $("#1").click(function (event) {
             console.log(data)
         }
     });
-    $("#disp").fadeOut(1000, redirectPage);
 });
 
 $("#2").click(function (event) {
@@ -76,7 +67,6 @@ $("#2").click(function (event) {
             console.log(data)
         }
     });
-    $("#disp").fadeOut(1000, redirectPage);
 });
 
 $("#3").click(function (event) {
@@ -95,5 +85,4 @@ $("#3").click(function (event) {
             console.log(data)
         }
     });
-    $("#disp").fadeOut(1000, redirectPage);
 });

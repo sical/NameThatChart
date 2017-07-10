@@ -50,90 +50,59 @@
             Administration
             <small>Statistics</small>
         </h1>
-        <div class="card horizontal cardIcon waves-effect waves-dark">
-            <div class="card-image orange">
-                <i class="fa fa-cog fa-5x"></i>
-            </div>
-            <div class="card-stacked">
-                <div class="card-content">
-                    <h3>Upload</h3>
-                </div>
-                <div class="card-action">
-                    <strong> Visualization</strong>
-                </div>
-            </div>
-        </div>
     </div>
     <div id="page-inner">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-6">
 
-                <div class="card horizontal cardIcon waves-effect waves-dark">
-                    <div class="card-image blue">
-                        <i class="fa fa-download fa-5x"></i>
+                <div class="card horizontal cardIcon">
+                    <div class="card-image blue waves-effect waves-dark" id="up">
+                        <i class="fa fa-upload fa-5x "></i>
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h3 id="first-value"></h3>
+                            <h3>Upload </h3>
                         </div>
                         <div class="card-action">
-                            <strong id="first-text"> </strong>
+                            <div class="switch">
+                                <label>
+                                    D3js
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Image
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-6">
 
-                <div class="card horizontal cardIcon waves-effect waves-dark">
-                    <div class="card-image blue">
+                <div class="card horizontal cardIcon ">
+                    <div class="card-image blue waves-effect waves-dark" id="down">
                         <i class="fa fa-download fa-5x"></i>
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h3 id="second-value"></h3>
+                            <h3>Download</h3>
                         </div>
                         <div class="card-action">
-                            <strong id="second-text"> </strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-
-                <div class="card horizontal cardIcon waves-effect waves-dark">
-                    <div class="card-image blue">
-                        <i class="fa fa-download fa-5x"></i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h3 id="third-value"></h3>
-                        </div>
-                        <div class="card-action">
-                            <strong id="third-text"></strong>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-
-                <div class="card horizontal cardIcon waves-effect waves-dark">
-                    <div class="card-image blue">
-                        <i class="fa fa-download fa-5x"></i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h3 id="fourth-value"></h3>
-                        </div>
-                        <div class="card-action">
-                            <strong id="fourth-text"></strong>
+                            <div class="switch">
+                                <label>
+                                    CSV
+                                    <input type="checkbox" id="tp">
+                                    <span class="lever"></span>
+                                    JSON
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
+
 
         <div class="row">
 
@@ -205,9 +174,6 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $("body").css("display", "none");
-
-        $("body").fadeIn(2000);
 
         $.ajax({
             type: "GET",
@@ -229,19 +195,66 @@
             }
         });
 
-        $("#transition").click(function (event) {
-            event.preventDefault();
-            linkLocation = this.href;
-            $("body").fadeOut(1000, redirectPage);
-        });
+    });
 
-        function redirectPage() {
-            window.location = linkLocation;
+    $("#up").click(function () {
+
+        window.location = "../upload"
+
+    })
+
+    $("#down").click(function () {
+        var type = $("#tp").val();
+        console.log(type);
+        if( type=="on") {
+            $.ajax({
+                type: "GET",
+                url: "../db2csv",
+                success: function (data) {
+                    var test_array = eval("[" + data + "]");
+                    var csvContent = "data:text/csv;charset=utf-8,";
+                    test_array.forEach(function (infoArray, index) {
+                        infoArray.forEach(function (dato) {
+                            dataString = dato.join();
+                            csvContent += index < infoArray.length ? dataString + "\n" : dataString;
+                        });
+                    });
+                    var encodedUri = encodeURI(csvContent);
+                    saveAs(encodedUri, "data.csv")
+                }
+
+            })
+
+        }else {
+
         }
     });
+
+    function saveAs(uri, filename) {
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+            document.body.appendChild(link); // Firefox requires the link to be in the body
+            link.download = filename;
+            link.href = uri;
+            link.click();
+            document.body.removeChild(link); // remove the link when done
+        } else {
+            location.replace(uri);
+        }
+    }
+
+    $('#tp').change(function () {
+        if ($(this).attr('checked')) {
+            $(this).val('on');
+        } else {
+            $(this).val('off');
+        }
+    });
+
 </script>
 
 </div>
+
 
 </body>
 
