@@ -18,6 +18,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
 <body>
+<body>
 <nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
         <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
@@ -33,12 +34,16 @@
                     <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
                 </div>
             </li>
+            <li>
+                <div class="navbar-header" style="width: 30%">
+                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="admin">Admin</a>
+                </div>
+            </li>
         </ul>
 
     </div>
-
-
 </nav>
+
 
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
@@ -61,7 +66,8 @@
                     <div class="card-content" id="features">
                         <form id="canardlocal" style="margin-bottom:76px ">
                             Type of visualization :
-                            <input type="text" name="type" id="epyt" placeholder="Type of visualisation (bar chart,etc ...)">
+                            <input type="text" name="type" id="epyt"
+                                   placeholder="Type of visualisation (bar chart,etc ...)">
 
                         </form>
 
@@ -109,7 +115,7 @@
         event.preventDefault();
         var form = new FormData();
         form.append("local", $("#imgInp")[0].files[0]);
-        form.append("type",$("#epyt"));
+        form.append("type", $("#epyt"));
         upload(form)
 
     });

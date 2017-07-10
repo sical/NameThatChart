@@ -5,18 +5,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Name That Chart</title>
-    <link  href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
           media="screen,projection"/>
     <!-- Bootstrap Styles-->
-    <link  href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
     <!-- FontAwesome Styles-->
-    <link  href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
     <!-- Custom Styles-->
     <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
     <!-- Google Fonts-->
-    <link  href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
+<body>
 <body>
 <nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
@@ -33,12 +34,16 @@
                     <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
                 </div>
             </li>
+            <li>
+                <div class="navbar-header" style="width: 30%">
+                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="admin">Admin</a>
+                </div>
+            </li>
         </ul>
 
     </div>
-
-
 </nav>
+
 
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
@@ -54,9 +59,6 @@
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-content" id="hide">
-                        <p> LAAAAAAAAAAAAAAAAAAA</p>
-                    </div>
                     <div class="card-content" id="dispres">
 
                     </div>
@@ -72,11 +74,11 @@
                                    maxlength="50"/>
                         </div>
                         <br/>
-                            <button id="skip" class="waves-effect waves-light btn">skip
-                            </button>
-                            <button id="save" class="waves-effect waves-light btn">
-                                save
-                            </button>
+                        <button id="skip" class="waves-effect waves-light btn">skip
+                        </button>
+                        <button id="save" class="waves-effect waves-light btn">
+                            save
+                        </button>
                     </div>
                 </div>
 
@@ -87,6 +89,8 @@
 <div class="clearBoth" style="text-align: center"><br/>
 
 </div>
+
+
 <canvas id="canvas" width="620" height="350" style="display: none"></canvas>
 
 <!-- /. PAGE INNER  -->
@@ -100,7 +104,7 @@
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 
 <!-- Bootstrap Js -->
-<script  async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
 <script async src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
@@ -108,7 +112,7 @@
 <script async type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
 <script async type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
 <script async type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
-<script  async  src="https://d3js.org/d3.v4.min.js"></script>
+<script async src="https://d3js.org/d3.v4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -137,14 +141,13 @@
     $("#save").click(function (event) {
         var text = $("#value").val();
         $("#value").val('');
-        $("#fade").fadeOut(2000);
         var canvas = document.getElementById('canvas');
         canvg('canvas', $("#svg").html());
         var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         var blob = dataURLtoBlob(img);
         var form = new FormData();
 
-        var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&><@]*/ig;
+        var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
         text = text.replace(reg, "")
         form.append("local", blob);
         console.log(text)

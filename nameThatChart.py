@@ -64,11 +64,12 @@ def genericprev(chart):
 def getinf():
     return session.get('filename')
 
+
 @app.route('/preview/finalize')
 def prevfin():
     con = mysql.connect()
     cursor = con.cursor()
-    q= "insert into type "
+    q = "INSERT INTO type "
     cursor.execute(q)
     con.commit()
     cursor.close()
@@ -89,7 +90,7 @@ def presaveviz():
 
     con = mysql.connect()
     cursor = con.cursor()
-    q= "UPDATE user SET posted = " + str(nb) + " where iduser = " + str(id)
+    q = "UPDATE user SET posted = " + str(nb) + " WHERE iduser = " + str(id)
     cursor.execute(q)
     con.commit()
     cursor.close()
@@ -200,6 +201,19 @@ def savetext():
 
 @app.route('/1data')
 def getrandomintjson():
+    return getrandomdataint()
+
+
+@app.route('/firstrow')
+def getfirstrow():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT type.idtype,type.label,count(type.idtype) as nb from type,textvote where type.idtype = textvote.type group by type.idtype,type.label order by  nb  desc LIMIT 4;")
+    data = cursor.fetchall()
+    cursor.close()
+    con.close()
+    return json.dumps(data)
+
     return getrandomdataint()
 
 
