@@ -64,9 +64,9 @@
                     <div class="card-content" id="pres">
                         <input id="value" type="text" name="type" placeholder="What is this chart ?" maxlength="25"/>
                         <br/>
-                        <button id="skip" class="waves-effect waves-light btn">SKIP
+                        <button class="waves-effect waves-light btn">SKIP
                         </button>
-                        <button id="save" class="waves-effect waves-light btn">
+                        <button  class="waves-effect waves-light btn">
                             save
                         </button>
                     </div>
@@ -106,6 +106,8 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+
+
         $.ajax({
 
             type: "GET",
@@ -122,10 +124,10 @@
 
     $("#save").click(function () {
         var form = new FormData();
-
+        console.log("lalaalalalla");
         $.ajax({
             type: "GET",
-            url: "./savepreview"+name,
+            url: "../savepreview",
             processData: false,
             contentType: false,
             success: function (data) {

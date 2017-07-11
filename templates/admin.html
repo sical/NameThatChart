@@ -206,7 +206,7 @@
     $("#down").click(function () {
         var type = $("#tp").val();
         console.log(type);
-        if( type=="on") {
+        if (type == "on") {
             $.ajax({
                 type: "GET",
                 url: "../db2csv",
@@ -222,13 +222,37 @@
                     var encodedUri = encodeURI(csvContent);
                     saveAs(encodedUri, "data.csv")
                 }
-
             })
 
-        }else {
+        } else {
+            $.ajax({
+                type: "GET",
+                url: "../db2csv",
+                success: function (data) {
+                    var test_array = eval("[" + data + "]");
+                    var csvContent = "data:text/json;charset=utf-8,{classification : [\n";
+                    test_array.forEach(function (infoArray, index) {
+                        infoArray.forEach(function (dato) {
+
+                            csvContent += "\t{ image: " + dato[0] + " , " + " type : " + dato[1] + " },\n"
+                        });
+                    });
+                    var res = setCharAt(csvContent, csvContent.length - 1, "");
+                    res = setCharAt(csvContent, csvContent.length - 1, "");
+                    res += " \n] }";
+                    var encodedUri = encodeURI(res);
+                    saveAs(encodedUri, "data.json")
+                }
+            })
 
         }
     });
+
+
+    function setCharAt(str, index, chr) {
+        if (index > str.length - 1) return str;
+        return str.substr(0, index) + chr + str.substr(index + 1);
+    }
 
     function saveAs(uri, filename) {
         var link = document.createElement('a');
@@ -244,11 +268,13 @@
     }
 
     $('#tp').change(function () {
-        if ($(this).attr('checked')) {
-            $(this).val('on');
-        } else {
+
+        if ($(this).val() == 'on') {
             $(this).val('off');
+        } else {
+            $(this).val('on');
         }
+        console.log($(this).val());
     });
 
 </script>

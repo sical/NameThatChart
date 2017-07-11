@@ -115,7 +115,7 @@
         event.preventDefault();
         var form = new FormData();
         form.append("local", $("#imgInp")[0].files[0]);
-        form.append("type", $("#epyt"));
+        form.append("type", $("#epyt").val());
         upload(form)
 
     });

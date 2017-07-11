@@ -2,11 +2,9 @@ import binascii
 import json
 import os
 from random import randint
-import csv
-import io
-
 from PIL import Image
-from flask import Flask, request, session, render_template, send_file
+from flask import Flask, request, session, render_template
+
 from flaskext.mysql import MySQL
 
 import imagePrep as pics
@@ -69,17 +67,6 @@ def getinf():
     return session.get('filename')
 
 
-@app.route('/preview/finalize')
-def prevfin():
-    con = mysql.connect()
-    cursor = con.cursor()
-    q = "INSERT INTO type "
-    cursor.execute(q)
-    con.commit()
-    cursor.close()
-    con.close()
-
-
 @app.route('/presaveviz', methods=['POST'])
 def presaveviz():
     file = request.files['local']
@@ -87,6 +74,7 @@ def presaveviz():
     name = request.form['type']
     id = getid(request.environ['REMOTE_ADDR'])[0]
     nb = getposted(id) + 1
+    print(name)
     session['type'] = name
     session['nb'] = nb
     session['filename'] = str(id) + "_" + str(nb)
@@ -178,7 +166,7 @@ def savetext():
     img = Image.open(result)
     bg = Image.new("RGB", img.size, (255, 255, 255))
     bg.paste(img, img)
-    path = "assets/img/datasets/" + str(len(pics.getimgs("./static/assets/img/datasets/")) + 1) + ".jpg"
+    path = "assets/img/datasets/" + str(len(pics.getimgs("./static/assets/img/datasets/")) + 2) + ".jpg"
     bg.save("./static/" + path)
 
     con = mysql.connect()
@@ -186,7 +174,7 @@ def savetext():
 
     cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
     con.commit()
-
+    print(session.get('id'))
     cursor.execute("SELECT idimage FROM image WHERE imagepath = '" + path + "'")
     idim = cursor.fetchone()[0]
     idu = getid(request.environ['REMOTE_ADDR'])[0]
@@ -207,17 +195,17 @@ def savetext():
 def db2csv():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT image,label FROM textvote INNER JOIN type ON type=idtype")
+    cursor.execute("SELECT image,label FROM textvote INNER JOIN type ON type=idtype ORDER BY image")
     data = cursor.fetchall()
     res = "["
     for i in range(0, len(data)):
         stra = "[ "
         for y in range(0, len(data[0])):
-            stra += "'" + str(data[i][y])+"'"
-            if y != len(data[0])-1:
-                 stra+= ","
+            stra += "'" + str(data[i][y]) + "'"
+            if y != len(data[0]) - 1:
+                stra += ","
 
-        stra+="]"
+        stra += "]"
         if i != len(data) - 1:
             stra += ","
         res += stra
@@ -228,13 +216,23 @@ def db2csv():
     return res
 
 
-@app.route('/savepreview/<data>')
-def savepreview(data):
-    os.rename("./template/preview/" + data, "./template/" + data)
-    idt = gettype(session['type'])
+@app.route('/savepreview')
+def savepreview():
+    name = session.get('filename') + ".html"
+    os.rename(os.path.join(os.getcwd(), "templates/preview/" + name), os.path.join(os.getcwd(), "templates/" + name))
+    print(session.get('type'))
+    idt = gettype(session.get('type'))[0]
+    idu = getid(request.environ['REMOTE_ADDR'])[0]
 
-    # update type
+    con = mysql.connect()
+    cursor = con.cursor()
+    q ="INSERT INTO user_type values ("+ str(idu) + "," + str(idt) + ",'" + str(name) + "')"
+    print(q)
+    cursor.execute(q)
 
+    cursor.close()
+    con.commit()
+    con.close()
 
     return 'ok'
 
