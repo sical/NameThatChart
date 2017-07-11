@@ -54,7 +54,7 @@ def preview():
 
 @app.route('/textual/<chart>')
 def generic(chart):
-    return render_template(chart + '.html')
+    return render_template(chart)
 
 
 @app.route('/preview/<chart>')
@@ -142,7 +142,7 @@ def getimg():
 def getnext():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT url FROM type WHERE url IS NOT NULL ORDER BY RAND() LIMIT 1")
+    cursor.execute("SELECT url FROM user_type  ORDER BY RAND() LIMIT 1")
     data = cursor.fetchone()
     cursor.close()
     con.close()
@@ -190,7 +190,7 @@ def savetext():
 
     return 'ok'
 
-
+#Export database
 @app.route('/db2csv')
 def db2csv():
     con = mysql.connect()
@@ -226,7 +226,7 @@ def savepreview():
 
     con = mysql.connect()
     cursor = con.cursor()
-    q ="INSERT INTO user_type values ("+ str(idu) + "," + str(idt) + ",'" + str(name) + "')"
+    q = "INSERT INTO user_type VALUES (" + str(idu) + "," + str(idt) + ",'" + str(name) + "')"
     print(q)
     cursor.execute(q)
 
@@ -237,11 +237,7 @@ def savepreview():
     return 'ok'
 
 
-@app.route('/1data')
-def getrandomintjson():
-    return getrandomdataint()
-
-
+# admin textual stat
 @app.route('/firstrow')
 def getfirstrow():
     con = mysql.connect()
@@ -253,6 +249,11 @@ def getfirstrow():
     con.close()
     return json.dumps(data)
 
+    return getrandomdataint()
+
+
+@app.route('/1data')
+def getrandomintjson():
     return getrandomdataint()
 
 
@@ -268,6 +269,7 @@ def getrandom2djson():
     return json.dumps(result)
 
 
+# fill database from "/static/assets/img/datasets/"
 @app.route('/maj')
 def maj():
     imgs = pics.getimgs("./static/assets/img/datasets/")
@@ -325,21 +327,24 @@ def gettype(typename):
     con = mysql.connect()
     cursor = con.cursor()
     typename = typename.lower()
+
     if " " in typename:
         typename = typename.replace(" ", "_")
-    q = "SELECT idtype FROM type WHERE lower(label) = '""" + typename + "'"
+
+    q = "SELECT idtype FROM type WHERE lower(label) LIKE '" + typename + "'"
+    print(q)
     cursor.execute(q)
     data = cursor.fetchone()
     if data is None:
 
         if "chart" in typename:
-            if "_" in typename or "-" in typename or "." in typename:
-                typename = typename.replace("_", "")
-                typename = typename.replace("-", "")
-                typename = typename.replace(".", "")
+            if "_chart" in typename or "-chart" in typename or ".chart" in typename:
+                typename = typename.replace("_", "chart")
+                typename = typename.replace("-", "chart")
+                typename = typename.replace(".", "chart")
             else:
                 typename = typename.replace("chart", "_chart")
-            q = "SELECT idtype FROM type WHERE lower(label) LIKE '""" + typename + "'"
+            q = "SELECT idtype FROM type WHERE lower(label) LIKE '" + typename + "'"
         cursor.execute(q)
         data = cursor.fetchone()
         if data is None:
