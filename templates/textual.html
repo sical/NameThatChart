@@ -31,11 +31,6 @@
             </li>
             <li>
                 <div class="navbar-header" style="width: 30%">
-                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="multiple">Multiple</a>
-                </div>
-            </li>
-            <li>
-                <div class="navbar-header" style="width: 30%">
                     <a class="navbar-brand waves-effect waves-dark" id="dire" href="admin">Admin</a>
                 </div>
             </li>
@@ -47,14 +42,20 @@
 
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
+
     <div class="header">
         <h1 class="page-header" id="brand">
             Describe this chart with your own words
         </h1>
 
     </div>
+    <div class="row">
+        <div id="pop" class="alert" style="display: none">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Success, it is saved
+        </div>
+    </div>
     <div id="page-inner">
-
         <div class="row">
 
             <div class="col-md-12">
@@ -137,9 +138,10 @@
 </script>
 
 <script async>
-    $("#save").click(function (event) {
+    $("#save").click(function () {
         var text = $("#value").val();
         $("#value").val('');
+        $("#pop").show();
         var canvas = document.getElementById('canvas');
         canvg('canvas', $("#svg").html());
         var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
@@ -149,7 +151,6 @@
         var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
         text = text.replace(reg, "");
         form.append("local", blob);
-        console.log(text)
         form.append("name", text);
 
 
@@ -212,7 +213,7 @@
             else if (ratio_cont < ratio_img) {
                 $img.css({"width": "auto", "height": "100%"});
             }
-        }); //missing )
+        });
     }
 
 

@@ -19,7 +19,7 @@ body {
     }
 }
 
-@media  only screen and (max-device-width: 550px) {
+@media only screen and (max-device-width: 550px) {
 
     .top-navbar .navbar-brand {
         color: #fff;
@@ -65,7 +65,7 @@ body {
 
 }
 
-@media  only screen and (max-device-width: 390px) {
+@media only screen and (max-device-width: 390px) {
     #skip {
         width: 60px;
         margin-bottom: 5px;
@@ -151,12 +151,46 @@ body {
         background: #26a69a;
         margin: 2px;
     }
+
     #boutons {
         display: inline;
     }
 }
 
-@media  only screen and (min-device-width: 769px) {
+/* The alert message box */
+.alert {
+    float: right;
+    padding: 20px;
+    background-color: lightgreen; /* Red */
+    color: white;
+    margin-bottom: 5px;
+    position: fixed;
+    width: 30%;
+    z-index: 300;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+@media only screen and (min-device-width: 769px) {
 
     .top-navbar .navbar-brand {
         color: #fff;
@@ -168,9 +202,11 @@ body {
         line-height: 30px;
         background: #409ea6;
     }
+
     #menu {
         margin-left: 500px;
     }
+
     #value {
 
         width: 20%;
@@ -190,6 +226,7 @@ body {
         line-height: 30px;
         background: #26a69a;
     }
+
     .navbar-header {
         width: inherit;
     }
@@ -198,22 +235,27 @@ body {
         width: auto;
         height: 500px;
     }
+
     .header {
         width: 400px;
     }
+
     #value {
         float: left;
         width: 280px;
         font-size: 20px;
-        box-shadow: lightgrey 2px 2px 1px ;
+        box-shadow: lightgrey 2px 2px 1px;
     }
+
     #fom {
         width: 250px;
     }
+
     #save {
         width: auto;
         height: 55px;
     }
+
     #skip {
         display: inline;
         width: auto;
