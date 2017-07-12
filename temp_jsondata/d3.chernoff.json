@@ -1,0 +1,29 @@
+{
+  "api": "d3.chernoff",
+  "blocks": {
+    "a28e61eaea2e2ac2567b": {
+      "userId": "emeeks",
+      "description": "The greatest scatterplot",
+      "count": 3,
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/a28e61eaea2e2ac2567b/raw/91d20fd07cde110d74bbe69b8981ea7bcbb288e5/thumbnail.png"
+    }
+  },
+  "count": 1,
+  "coocurance": {
+    "d3.keys": 1,
+    "d3.functor": 1,
+    "d3.svg": 1,
+    "d3.svg.line": 1,
+    "d3.svg.symbol": 1,
+    "d3.superformula": 1,
+    "d3.select": 1,
+    "d3.selectAll": 1,
+    "d3.min": 1,
+    "d3.range": 1,
+    "d3.scale": 1,
+    "d3.scale.linear": 1,
+    "d3.scale.quantile": 1,
+    "d3.scale.category": 1,
+    "d3.svg.axis": 1
+  }
+}

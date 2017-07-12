@@ -1,0 +1,26 @@
+{
+  "api": "d3.time.wednesday",
+  "blocks": {
+    "0fe7b82d7c188c2d26a3": {
+      "userId": "1wheel",
+      "description": "Classic Cubs",
+      "count": 1,
+      "thumbnail": ""
+    }
+  },
+  "count": 1,
+  "coocurance": {
+    "d3.select": 1,
+    "d3.nest": 1,
+    "d3.csv": 1,
+    "d3.svg": 1,
+    "d3.svg.line": 1,
+    "d3.svg.axis": 1,
+    "d3.time": 1,
+    "d3.time.format": 1,
+    "d3.time.scale": 1,
+    "d3.time.day": 1,
+    "d3.time.days": 1,
+    "d3.time.wednesdays": 1
+  }
+}

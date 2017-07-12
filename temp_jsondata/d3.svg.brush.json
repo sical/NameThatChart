@@ -1,0 +1,1608 @@
+{
+  "api": "d3.svg.brush",
+  "blocks": {
+    "1341021": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1341021/raw/6e78575c190f99d9b0726272d12948f4d63ae136/thumbnail.png"
+    },
+    "1341281": {
+      "userId": "jasondavies",
+      "count": 1,
+      "description": "Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/jasondavies/1341281/raw/6e78575c190f99d9b0726272d12948f4d63ae136/thumbnail.png"
+    },
+    "1558011": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Cost of Living - Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1558011/raw/3ad1be6024088ea04971d9ee872cd05b8aeee755/thumbnail.png"
+    },
+    "1595803": {
+      "userId": "zjonsson",
+      "count": 116,
+      "description": "Internalizing chart variables (mod)",
+      "thumbnail": ""
+    },
+    "1667367": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Focus+Context via Brushing",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1667367/raw/9b1031ca53bbadcdfad590800d4f636d7079f682/thumbnail.png"
+    },
+    "2313155": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Parallel Coordinates Coloring",
+      "thumbnail": ""
+    },
+    "2409451": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Canvas Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "2411910": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Canvas Parallel Coordinates - 7637 Rows",
+      "thumbnail": ""
+    },
+    "2417758": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Canvas Parallel Coordinates - getImageData caching",
+      "thumbnail": ""
+    },
+    "2420080": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Canvas Parallel Coordinates - Shuffled Rendering",
+      "thumbnail": ""
+    },
+    "2499006": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Cycled Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "2499356": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Flat-edged Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "2505588": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Parallel Coordinates with Inverted Axis",
+      "thumbnail": ""
+    },
+    "2514902": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Hipparcos Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "2584519": {
+      "userId": "syntagmatic",
+      "count": 2,
+      "description": "Galactic Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "3096638": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Parallel Coordinates Intersections",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/3096638/raw/174b2885f320c2418b48747e8b749ea6cd58287d/thumbnail.png"
+    },
+    "3135763": {
+      "userId": "syntagmatic",
+      "count": 3,
+      "description": "Improved Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "3136001": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Parallel Coordinates with Invertible Axes",
+      "thumbnail": ""
+    },
+    "3150058": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Parallel Coordinates with Invertible Axes",
+      "thumbnail": ""
+    },
+    "3150059": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Nutrient Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/3150059/raw/897946aaf3e7b9b9094bd27b3daec9bcebaf33dd/thumbnail.png"
+    },
+    "3156751": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Parallel Coordinates CSV Upload",
+      "thumbnail": ""
+    },
+    "3267951": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Nutrient Parallel Coordinates, 60 Dimensions",
+      "thumbnail": ""
+    },
+    "3279883": {
+      "userId": "syntagmatic",
+      "count": 7,
+      "description": "Miso CSV Upload",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/3279883/raw/d5ab40a7998ac00899f18c353ff6eaec5e04f087/thumbnail.png"
+    },
+    "3290263": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Fisheye Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "3290313": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Fisheye Nutrient Parallel Coordinates",
+      "thumbnail": ""
+    },
+    "3290392": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "Fisheye Nutrient Parallel Coordinates, 146 Dimensions",
+      "thumbnail": ""
+    },
+    "3306234": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "d3.time.format localization",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3306234/raw/526e384fbdb1ae9f6c94184bd61f71e3f194a505/thumbnail.png"
+    },
+    "3743077": {
+      "userId": "jasondavies",
+      "count": 1,
+      "description": "Changing Zoom Domain",
+      "thumbnail": ""
+    },
+    "3791303": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "3791522": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "3882999": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "3883018": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "3984401": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "3998749": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "4063663": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Scatterplot Matrix Brushing",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4063663/raw/13ced70c2a3f0c23d22be47d7afb2f5bcd5cec19/thumbnail.png"
+    },
+    "4150164": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "calendar",
+      "thumbnail": ""
+    },
+    "4215939": {
+      "userId": "vlandham",
+      "count": 1,
+      "description": "Focus+Context via Brushing",
+      "thumbnail": "https://gist.githubusercontent.com/vlandham/4215939/raw/9b1031ca53bbadcdfad590800d4f636d7079f682/thumbnail.png"
+    },
+    "4248862": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Null Values - Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/4248862/raw/3ad1be6024088ea04971d9ee872cd05b8aeee755/thumbnail.png"
+    },
+    "4343214": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Quadtree",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4343214/raw/50ff76f693819cd2e49e983ef50d5f0b34be2998/thumbnail.png"
+    },
+    "4349509": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Ordinal Brushing",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4349509/raw/9de291f8c1a34228b2d86dfa8e82046759d79d19/thumbnail.png"
+    },
+    "4349545": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brush Handles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4349545/raw/a17acfe0ce9dd8a66e9ae33c79534f4e1036f00a/thumbnail.png"
+    },
+    "4414107": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Parallel Coordinates wired to a map of routes from ORBIS",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/4414107/raw/06762a85c5949be5d0125657c404394ed8550ead/thumbnail.png"
+    },
+    "4497604": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Yearly Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/4497604/raw/4a5ae566daeb9492927648fdc1ea3b059ed29dfa/thumbnail.png"
+    },
+    "4513760": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Projected Geodata with a Bounding Box Brush",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/4513760/raw/6cb4ce72af3b6af76bbba3a754748453357932b7/thumbnail.png"
+    },
+    "4513986": {
+      "userId": "vlandham",
+      "description": null,
+      "count": 1,
+      "thumbnail": "https://gist.githubusercontent.com/vlandham/4513986/raw/9de291f8c1a34228b2d86dfa8e82046759d79d19/thumbnail.png"
+    },
+    "4560481": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brushable Network",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4560481/raw/e4ccf79ccf2a35e683d240a062b1111cc34c5156/thumbnail.png"
+    },
+    "4565798": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brushable Network, II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4565798/raw/0e3ef645fa34a66a9e892f8ac747adcae11e6e5e/thumbnail.png"
+    },
+    "4566102": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Draggable Network, II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4566102/raw/d54841891938f990014a2b421298407ac8e72bed/thumbnail.png"
+    },
+    "4614246": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "Pimp my Tribe (update4 - redux)",
+      "thumbnail": ""
+    },
+    "4617766": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "saveable graph layout",
+      "thumbnail": ""
+    },
+    "4618198": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "crossfilter racetrack",
+      "thumbnail": ""
+    },
+    "4624730": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "crossfilter racetrack",
+      "thumbnail": ""
+    },
+    "4639189": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "crossfilter racetrack",
+      "thumbnail": ""
+    },
+    "5023284": {
+      "userId": "syntagmatic",
+      "count": 5,
+      "description": "WebGL-2d Parallel Coordinates Test",
+      "thumbnail": ""
+    },
+    "5050837": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "EPSG:2163 Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5050837/raw/72bd3f859fbc0e8ba796db459e7a0e7ceb5685cf/thumbnail.png"
+    },
+    "5061827": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "crossfilter racetrack",
+      "thumbnail": ""
+    },
+    "5068952": {
+      "userId": "zjonsson",
+      "count": 1,
+      "description": "",
+      "thumbnail": "https://gist.githubusercontent.com/ZJONSSON/5068952/raw/50ff76f693819cd2e49e983ef50d5f0b34be2998/thumbnail.png"
+    },
+    "5072003": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "crossfilter racetrack",
+      "thumbnail": ""
+    },
+    "5091037": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "Adapt Mike Bostock's brushable handle example to work with a resizable and draggable jquery ui box.",
+      "thumbnail": ""
+    },
+    "5240519": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "dexvis map experiment",
+      "thumbnail": ""
+    },
+    "5255022": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5267175": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "map with parcoord forked from http://dexvis.wordpress.com",
+      "thumbnail": ""
+    },
+    "5342495": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "",
+      "thumbnail": "https://gist.githubusercontent.com/ramnathv/5342495/raw/13ced70c2a3f0c23d22be47d7afb2f5bcd5cec19/thumbnail.png"
+    },
+    "5431762": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "verlet-js editable + brushable",
+      "thumbnail": ""
+    },
+    "5479601": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5479605": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5480231": {
+      "userId": "milroc",
+      "count": 7,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5518052": {
+      "userId": "milroc",
+      "count": 2,
+      "description": "bar + sum: vanilla d3.js",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/5518052/raw/63029392be10651980b0e4b1f3f05a71f1a300c5/thumbnail.png"
+    },
+    "5519642": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "bar + sum: reusable d3.js",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/5519642/raw/63029392be10651980b0e4b1f3f05a71f1a300c5/thumbnail.png"
+    },
+    "5519819": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "bar + sum: d3.js & angular.js",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/5519819/raw/63029392be10651980b0e4b1f3f05a71f1a300c5/thumbnail.png"
+    },
+    "5520449": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "bar + sum: d3.js & ember.js ",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/5520449/raw/63029392be10651980b0e4b1f3f05a71f1a300c5/thumbnail.png"
+    },
+    "5522467": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "bar + sum: d3.js & backbone.js",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/5522467/raw/63029392be10651980b0e4b1f3f05a71f1a300c5/thumbnail.png"
+    },
+    "5553051": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "    ",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/5553051/raw/23ef021c7603a86af53a44028b8346ed20356b66/thumbnail.png"
+    },
+    "5609750": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5612571": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "Tributary inlet",
+      "thumbnail": ""
+    },
+    "5676160": {
+      "userId": "espinielli",
+      "count": 7,
+      "description": "Flattened icosahedron world map.\r\n",
+      "thumbnail": ""
+    },
+    "5684941": {
+      "userId": "michalskop",
+      "count": 116,
+      "description": "Kernel density estimation",
+      "thumbnail": "https://gist.githubusercontent.com/michalskop/5684941/raw/6fded20522514e13df47b1d88b06676cc6a7d65e/thumbnail.png"
+    },
+    "5689783": {
+      "userId": "espinielli",
+      "count": 7,
+      "description": "Cahill-Keyes map projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/5689783/raw/9ff5e27a18d9b65fc65c32b329dc3bd14d68ee5b/thumbnail.png"
+    },
+    "5851838": {
+      "userId": "devgru",
+      "count": 1,
+      "description": "",
+      "thumbnail": "https://gist.githubusercontent.com/devgru/5851838/raw/9b1031ca53bbadcdfad590800d4f636d7079f682/thumbnail.png"
+    },
+    "5987481": {
+      "userId": "poezn",
+      "count": 1,
+      "description": "temp legend",
+      "thumbnail": ""
+    },
+    "6005974": {
+      "userId": "madelfio",
+      "count": 1,
+      "description": "Loose Quadtree Illustration",
+      "thumbnail": "https://gist.githubusercontent.com/madelfio/6005974/raw/38366aa229c29330933d2a323cfcbd83a6f753a1/thumbnail.png"
+    },
+    "6077996": {
+      "userId": "d3noob",
+      "count": 7,
+      "description": "Earthquake Data Discovery using dc.js, crossfilter, d3.js and bootstrap",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6077996/raw/965be655e8a73446ef5a46255731a417e8bcd628/thumbnail.png"
+    },
+    "6216724": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brush Transitions",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6216724/raw/76fc7085c6c69edf0d77460388889a8f7c6f8dd8/thumbnail.png"
+    },
+    "6232537": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brush Snapping",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6232537/raw/6d19169101a80c3fef1407b7d782c6da1a024c7e/thumbnail.png"
+    },
+    "6232620": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brush Snapping II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6232620/raw/6d19169101a80c3fef1407b7d782c6da1a024c7e/thumbnail.png"
+    },
+    "6316349": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "    ",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/6316349/raw/47c7c1fd2c9c05689a9e4f15454c59c114e1c957/thumbnail.png"
+    },
+    "6452972": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brush as Slider",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6452972/raw/71b5cb2ed52f7ab3aa3022a85bf70d10c9605590/thumbnail.png"
+    },
+    "6498000": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Click-to-Recenter Brush",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6498000/raw/a17acfe0ce9dd8a66e9ae33c79534f4e1036f00a/thumbnail.png"
+    },
+    "6498580": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Click-to-Recenter Brush II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6498580/raw/a17acfe0ce9dd8a66e9ae33c79534f4e1036f00a/thumbnail.png"
+    },
+    "6499018": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Smooth Slider",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6499018/raw/71b5cb2ed52f7ab3aa3022a85bf70d10c9605590/thumbnail.png"
+    },
+    "6548197": {
+      "userId": "arrayjam",
+      "count": 7,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/6548197/raw/2b9ed54821308e0032e66957dcec8a107751b4b8/thumbnail.png"
+    },
+    "6584483": {
+      "userId": "d3noob",
+      "count": 7,
+      "description": "dc.js chart examples",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6584483/raw/4ce7e61dece3cf04dfed4f61c02db057422ba82b/thumbnail.png"
+    },
+    "6604999": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "reddit r/pics 2",
+      "thumbnail": ""
+    },
+    "6605026": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "reddit r/pics 3",
+      "thumbnail": ""
+    },
+    "6605284": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "reddit r/pics 4",
+      "thumbnail": ""
+    },
+    "6623377": {
+      "userId": "tomgp",
+      "count": 1,
+      "description": "Growth chart",
+      "thumbnail": "https://gist.githubusercontent.com/tomgp/6623377/raw/b93a71495fedcae17d5e918efe74a657a54eb245/thumbnail.png"
+    },
+    "6640200": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "reddit brush",
+      "thumbnail": ""
+    },
+    "6640391": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "reddit brush",
+      "thumbnail": ""
+    },
+    "6641917": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "d3 workshop",
+      "thumbnail": ""
+    },
+    "6719986": {
+      "userId": "tomgp",
+      "count": 1,
+      "description": "Discrete Gaussian distribution",
+      "thumbnail": "https://gist.githubusercontent.com/tomgp/6719986/raw/ed4473988618c4928e29faee9f4595ce223e1210/thumbnail.png"
+    },
+    "6914083": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "traffic control",
+      "thumbnail": ""
+    },
+    "7113747": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "html5devconf time brush",
+      "thumbnail": ""
+    },
+    "7123788": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "html5devconf time",
+      "thumbnail": ""
+    },
+    "7149418": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "html5devconf intermediate d3.js workshop",
+      "thumbnail": ""
+    },
+    "7156298": {
+      "userId": "timelyportfolio",
+      "count": 2,
+      "description": "Backtest Overfitting | Translated in R",
+      "thumbnail": ""
+    },
+    "7159797": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "scatterplot",
+      "thumbnail": ""
+    },
+    "7162280": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "html5devconf project",
+      "thumbnail": ""
+    },
+    "7586334": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/7586334/raw/80fc380a81ed3556e184836631d4d6da0129e37e/thumbnail.png"
+    },
+    "8463137": {
+      "userId": "bollwyvl",
+      "count": 6,
+      "description": "",
+      "thumbnail": ""
+    },
+    "8981451": {
+      "userId": "milroc",
+      "count": 1,
+      "description": " ",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/8981451/raw/da0aa8e767b28f6e50f0c6152d33cc3fa5278317/thumbnail.png"
+    },
+    "9124021": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/9124021/raw/c3f260b551ddbf73e3e0a3162a1acd99e6efe728/thumbnail.png"
+    },
+    "9172603": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "9172608": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "9357131": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "GEXF D3 Complex Example",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/9357131/raw/8e51c9c2d9ac579b71c1bee8bc3eaab2e76681c9/thumbnail.png"
+    },
+    "9357371": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "GEXF D3 Simple Example",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/9357371/raw/678c637f5fd02edf74d5bfc957529ccfe6cc76c4/thumbnail.png"
+    },
+    "9537081": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "9561309": {
+      "userId": "1wheel",
+      "count": 7,
+      "description": "",
+      "thumbnail": ""
+    },
+    "9820337": {
+      "userId": "milroc",
+      "count": 2,
+      "description": "bars",
+      "thumbnail": ""
+    },
+    "9834127": {
+      "userId": "danharr",
+      "count": 1,
+      "description": "Swimlanes for media plans",
+      "thumbnail": "https://gist.githubusercontent.com/danharr/9834127/raw/ce996adf6d2f4e4cd91a9e8705b45a8b92c463d3/thumbnail.png"
+    },
+    "9841989": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/9841989/raw/9b1031ca53bbadcdfad590800d4f636d7079f682/thumbnail.png"
+    },
+    "9852608": {
+      "userId": "seemantk",
+      "count": 1,
+      "description": "Gentoo Galaxy Visualization",
+      "thumbnail": "https://gist.githubusercontent.com/seemantk/9852608/raw/7c29a56a469bf5c842656ebc70fb674c707374ea/thumbnail.png"
+    },
+    "9972460": {
+      "userId": "sumbera",
+      "count": 1,
+      "description": "Another brushing with d3",
+      "thumbnail": ""
+    },
+    "10033259": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "A Lonely Brush",
+      "thumbnail": ""
+    },
+    "10054222": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "Coordinating a brush and a donut",
+      "thumbnail": ""
+    },
+    "10133941": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "Using a brush to update a donut chart",
+      "thumbnail": ""
+    },
+    "10146562": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "11305766": {
+      "userId": "tomshanley",
+      "count": 1,
+      "description": "Linked charts - service journeys",
+      "thumbnail": "https://gist.githubusercontent.com/tomshanley/11305766/raw/f3dbfab86f7c27eea4faf265fe465658886d08ac/thumbnail.png"
+    },
+    "1ced118a51b49dadd4ea": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "IPv4 Axis",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/1ced118a51b49dadd4ea/raw/a4bcc3201d66f4b1ddce51bd10099b48086cf3e5/thumbnail.png"
+    },
+    "c9fb69e425a3c07cfbd09169941fbf46": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Nutrient Parallel Coordinates III",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/c9fb69e425a3c07cfbd09169941fbf46/raw/9710e6976b76c5e47c5dbd7e89f00d4c81045a2a/thumbnail.png"
+    },
+    "0d1635533f6fb5ac4da3": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Nutrient Parallel Coordinates II",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/0d1635533f6fb5ac4da3/raw/ed6440742a633f764afda3f6a935be53704b3a4f/thumbnail.png"
+    },
+    "94be812f8b410ae29ee2": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Mining Accidents",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/94be812f8b410ae29ee2/raw/b3499a6554b3f74087bfec7b13be45e232db98da/thumbnail.png"
+    },
+    "4446b31c6cd746eedaeb": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Space Stations",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/4446b31c6cd746eedaeb/raw/42a0813393a1c922f0aa3f91f13ca18312661431/thumbnail.png"
+    },
+    "0d4f736796ab7b465020": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Abalone",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/0d4f736796ab7b465020/raw/26c2c692e6466a1e3d1d37ce23bb94c0e37c03c3/thumbnail.png"
+    },
+    "8ff691209324f1814257": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "Infant Deaths",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/8ff691209324f1814257/raw/adcd32370871abc34144e637d93298dcd66cafbe/thumbnail.png"
+    },
+    "42d5b54c5cfe002e7dd8": {
+      "userId": "syntagmatic",
+      "count": 1,
+      "description": "EcoEngine Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/42d5b54c5cfe002e7dd8/raw/9a88cebcfa8dce9270538d0c17e598002bd793a3/thumbnail.png"
+    },
+    "f84111e34edc6d594216": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "10K points line chart with progressive rendering",
+      "thumbnail": ""
+    },
+    "58675e9b609295707b9a": {
+      "userId": "emeeks",
+      "count": 2,
+      "description": "Ch. 12, Fig. 11 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/58675e9b609295707b9a/raw/fc80d33ecddb59ee8c677262aa9796d1868573a9/thumbnail.png"
+    },
+    "306e64e0d687a4374bcd": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Ch. 11, Fig. 14 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/306e64e0d687a4374bcd/raw/abc142a066a642075d83fc5234af8125eb38c56c/thumbnail.png"
+    },
+    "0c6c30853cfd29e5c2bd": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Ch. 11, Fig. 12 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/0c6c30853cfd29e5c2bd/raw/d73d2b2a186593651a8916e05bb15f19ff2390d8/thumbnail.png"
+    },
+    "c478e0aac6373a6a4ec8": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Ch. 9, Fig. 13 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/c478e0aac6373a6a4ec8/raw/95b7f2436336324060602113fa391b4824b97903/thumbnail.png"
+    },
+    "5127b8b3d3d9090dafc1": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Ch. 9, Fig. 10 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/5127b8b3d3d9090dafc1/raw/890ea614b7ac3f8a3bb6c6c09f9b9b4a7d5f0829/thumbnail.png"
+    },
+    "8899a3e8c31d4c5e7cfd": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Brush Snapping",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/8899a3e8c31d4c5e7cfd/raw/573c474738fa947ad03b129610768b2fda258eaf/thumbnail.png"
+    },
+    "5f5237a49147e712eb7c": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Sketchy Network",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/5f5237a49147e712eb7c/raw/d291afe176849ca55e33e5166ab86c19b008df28/thumbnail.png"
+    },
+    "6038a697b1d80ff628c9": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "GEXFD3 with Canvas",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/6038a697b1d80ff628c9/raw/3b90716a0c4eb7fb458d6aeaab5bc96e9aeb4f29/thumbnail.png"
+    },
+    "4e80576b894730d5cb6b": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Sketchy Charts with D3",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/4e80576b894730d5cb6b/raw/8798da421e857732e4dcbc01c784180776135f1d/thumbnail.png"
+    },
+    "c7cc15d6c6e2652144fe": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Gnarly Chart Upgrade",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/c7cc15d6c6e2652144fe/raw/2f0ead469297ffd110bb77467e3eaf88e57afc90/thumbnail.png"
+    },
+    "836e8dd3d9b62b5e6831": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "Scatterplot Matrix",
+      "thumbnail": ""
+    },
+    "1ad2332c58ff4b8ccf80": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "Scatterplot Matrix",
+      "thumbnail": ""
+    },
+    "a56f0d2180a302e8906f": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "Tributary inlet",
+      "thumbnail": ""
+    },
+    "d0cfb84da5be3d702b0f": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "Tributary inlet",
+      "thumbnail": ""
+    },
+    "d22bbf92231876505e5d": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "bar + sum: d3.js, react.js, & Flux",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/d22bbf92231876505e5d/raw/63029392be10651980b0e4b1f3f05a71f1a300c5/thumbnail.png"
+    },
+    "fe88df78ff6982c11cb92002b7410d84": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "town population changes",
+      "thumbnail": "https://gist.githubusercontent.com/enjalot/fe88df78ff6982c11cb92002b7410d84/raw/9e052657db6b447ca76e3a2faeded49d3e6182de/thumbnail.png"
+    },
+    "d0c8b275a5a4fc4d3751": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "spherical coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/enjalot/d0c8b275a5a4fc4d3751/raw/1385aee4a3b72c856f752a3df8b3235055e4146a/thumbnail.png"
+    },
+    "7d537deb5b3f6b0c2072": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "R.I.P. YOU WERE",
+      "thumbnail": "https://gist.githubusercontent.com/enjalot/7d537deb5b3f6b0c2072/raw/e69d4a8efb37d4ac7e220820c6c0c615ff61c89e/thumbnail.png"
+    },
+    "cc1d2e0411af6851e628": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "MY FIRST LOVE",
+      "thumbnail": "https://gist.githubusercontent.com/enjalot/cc1d2e0411af6851e628/raw/e69d4a8efb37d4ac7e220820c6c0c615ff61c89e/thumbnail.png"
+    },
+    "7579334b640eec66cb5c": {
+      "userId": "enjalot",
+      "count": 2,
+      "description": "1d overlap",
+      "thumbnail": ""
+    },
+    "f3a47e9af6de3149d8c7": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "19ec57a6935ca580d00e": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "Yield Curve Animation with a d3.js brush as slider",
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/19ec57a6935ca580d00e/raw/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391/thumbnail.png"
+    },
+    "58f8fe3e167ef47145d0": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "R + d3.js Parallel Coordinates of partykit ver 2 with interactive querying",
+      "thumbnail": ""
+    },
+    "5c136de85de1c2abb6fc": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "demo programmatic control of a d3 brush",
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/5c136de85de1c2abb6fc/raw/9b1031ca53bbadcdfad590800d4f636d7079f682/thumbnail.png"
+    },
+    "40c3e561beec61224356": {
+      "userId": "timelyportfolio",
+      "count": 7,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/40c3e561beec61224356/raw/cac2cb22e30f75fde8b52c67cb20b6d60ee01928/thumbnail.png"
+    },
+    "7ede42303b973902e202": {
+      "userId": "seemantk",
+      "count": 1,
+      "description": "Global Bilateral Migration",
+      "thumbnail": "https://gist.githubusercontent.com/seemantk/7ede42303b973902e202/raw/8e73bde14e4d378d9a53c93ab1c229dab024c9e2/thumbnail.png"
+    },
+    "3112c37d079d6fdce4be": {
+      "userId": "seemantk",
+      "count": 1,
+      "description": "D3 Based Real Time Chart",
+      "thumbnail": "https://gist.githubusercontent.com/seemantk/3112c37d079d6fdce4be/raw/3d05837597f08b32e0996ab5687d4fa4603fc5f3/thumbnail.png"
+    },
+    "3457137af8ae125e5b64": {
+      "userId": "seemantk",
+      "count": 7,
+      "description": "The Euro Debt Crisis",
+      "thumbnail": ""
+    },
+    "e80684642c7aadb188ba": {
+      "userId": "danharr",
+      "count": 1,
+      "description": "Radian | Angular | d3",
+      "thumbnail": ""
+    },
+    "a28fe9fff8eda0eefc56": {
+      "userId": "danharr",
+      "count": 1,
+      "description": "scatter matrix training",
+      "thumbnail": ""
+    },
+    "6a459b0638d41e587f09": {
+      "userId": "thlorenz",
+      "count": 7,
+      "description": "requirebin sketch",
+      "thumbnail": ""
+    },
+    "53e64cdafba38461943b": {
+      "userId": "bollwyvl",
+      "count": 7,
+      "description": "A hacked mermaid.js that never reuses ids and accepts node-like things as a second input to init",
+      "thumbnail": ""
+    },
+    "6b1945104c8fdaedd82c": {
+      "userId": "bollwyvl",
+      "count": 7,
+      "description": "dagre-d3 vs require.js in the IPython Notebook ",
+      "thumbnail": ""
+    },
+    "4cecc09cf1047aa27e46": {
+      "userId": "bollwyvl",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "4f48f63c66ae6ee67864": {
+      "userId": "saraquigley",
+      "count": 1,
+      "description": "major migration #4",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/4f48f63c66ae6ee67864/raw/24c7a3007b7fef06580de42f224b2a6488c39f84/thumbnail.png"
+    },
+    "81807cb241cb4bbbaa6b": {
+      "userId": "saraquigley",
+      "count": 1,
+      "description": "Student Census (work in progress)",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/81807cb241cb4bbbaa6b/raw/584ecd2730bf228a2b43922eb928c1ed17a4d335/thumbnail.png"
+    },
+    "f6bd5201f92536ef5337": {
+      "userId": "madelfio",
+      "count": 7,
+      "description": "Itineraries",
+      "thumbnail": "https://gist.githubusercontent.com/madelfio/f6bd5201f92536ef5337/raw/9ebee92cbe7375b59166c024457e49e02ebdd977/thumbnail.png"
+    },
+    "1a2514440351ec22f176": {
+      "userId": "eesur",
+      "count": 1,
+      "description": "d3 | Parallel Coordinates",
+      "thumbnail": "https://gist.githubusercontent.com/eesur/1a2514440351ec22f176/raw/f3beca07fe27d0455978762754c7cb333ea0a63f/thumbnail.png"
+    },
+    "8a87b89f3600a7175f27": {
+      "userId": "wboykinm",
+      "count": 7,
+      "description": "D3 Globe",
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/8a87b89f3600a7175f27/raw/50c2a0c9d3136562b90c820a4cee2d609799e4c0/thumbnail.png"
+    },
+    "56da040e1ce55a130dc3": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/56da040e1ce55a130dc3/raw/71b5cb2ed52f7ab3aa3022a85bf70d10c9605590/thumbnail.png"
+    },
+    "1a2806d828cb3fa64c4d": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "One-handled #d3js brush, as magnitude selector on a data distribution",
+      "thumbnail": ""
+    },
+    "1202cb7829dc818a2105": {
+      "userId": "sathomas",
+      "count": 1,
+      "description": "Visualizing Differential Equations, I",
+      "thumbnail": "https://gist.githubusercontent.com/sathomas/1202cb7829dc818a2105/raw/34d861aafed40d2ea5c913cb179b135843e08cdd/thumbnail.png"
+    },
+    "884bb566c84775d92b3d": {
+      "userId": "zanarmstrong",
+      "count": 1,
+      "description": "Focus+Context via Brushing",
+      "thumbnail": ""
+    },
+    "b9a80e6cebd1eb81e9e5": {
+      "userId": "zanarmstrong",
+      "count": 1,
+      "description": "Select a picture of the day",
+      "thumbnail": "https://gist.githubusercontent.com/zanarmstrong/b9a80e6cebd1eb81e9e5/raw/2b19c5dd3d3b11f9a83494c6bc999dba144ef998/thumbnail.png"
+    },
+    "c9bb2842647140265d57": {
+      "userId": "zanarmstrong",
+      "count": 1,
+      "description": "adding waves",
+      "thumbnail": "https://gist.githubusercontent.com/zanarmstrong/c9bb2842647140265d57/raw/32b913e6b5575601304426ce02a382d9fd1bfa70/thumbnail.png"
+    },
+    "ddff7cd0b1220bc68a58": {
+      "userId": "zanarmstrong",
+      "count": 1,
+      "description": "slider: days of the year",
+      "thumbnail": "https://gist.githubusercontent.com/zanarmstrong/ddff7cd0b1220bc68a58/raw/299032dcf0c659f3f3aec98ac586e824b5b0ba3a/thumbnail.png"
+    },
+    "7ccf1fa1b635294b85b9": {
+      "userId": "zanarmstrong",
+      "count": 1,
+      "description": "billion second bday",
+      "thumbnail": "https://gist.githubusercontent.com/zanarmstrong/7ccf1fa1b635294b85b9/raw/48679f5d78a4f133e59076d57f57ac403816cec7/thumbnail.png"
+    },
+    "7db0d637e178e7204c0a": {
+      "userId": "martynjones87",
+      "count": 2,
+      "description": "Grouped Bar Chart With Panning And Zooming Via Brushing",
+      "thumbnail": ""
+    },
+    "fc952001a976ad8e03c3": {
+      "userId": "proclamo",
+      "count": 1,
+      "description": "Crossmap, an experiment with crossfilter.js and d3.js maps ",
+      "thumbnail": "https://gist.githubusercontent.com/proclamo/fc952001a976ad8e03c3/raw/6cfeed3cde651d9410ea39fa7c454598cbb73137/thumbnail.png"
+    },
+    "8b23c764fab877c342fd": {
+      "userId": "hugolpz",
+      "count": 1,
+      "description": "WikiAtlas_query_UI_1",
+      "thumbnail": "https://gist.githubusercontent.com/hugolpz/8b23c764fab877c342fd/raw/c59ceb88a7138152975c97dfe85f4571cef356ff/thumbnail.png"
+    },
+    "f5a288dd551fee470617": {
+      "userId": "hugolpz",
+      "count": 1,
+      "description": "Friendly geo-area selection",
+      "thumbnail": "https://gist.githubusercontent.com/hugolpz/f5a288dd551fee470617/raw/c59ceb88a7138152975c97dfe85f4571cef356ff/thumbnail.png"
+    },
+    "5bb1c90a82c8485d3dc3": {
+      "userId": "rfrankel",
+      "count": 1,
+      "description": "Visualization of Quicksort (parallel)",
+      "thumbnail": "https://gist.githubusercontent.com/rfrankel/5bb1c90a82c8485d3dc3/raw/3d6a6ebd543624cee4960f66e96f58cdfbc2620b/thumbnail.png"
+    },
+    "444dd92ee2b64cbaabbf": {
+      "userId": "rfrankel",
+      "count": 1,
+      "description": "Visualization of Quicksort (sequential)",
+      "thumbnail": "https://gist.githubusercontent.com/rfrankel/444dd92ee2b64cbaabbf/raw/39fff59d0e345dfa2bd5a126cc8a03b469d98be0/thumbnail.png"
+    },
+    "b1fbcc0ff00abe8893a087d85fc8005b": {
+      "userId": "nbremer",
+      "count": 1,
+      "description": "Abrupt gradients - Dynamically updating gradient",
+      "thumbnail": "https://gist.githubusercontent.com/nbremer/b1fbcc0ff00abe8893a087d85fc8005b/raw/7fd4380a55f3e2bd6bd0d1847cd6cd03b3cd881d/thumbnail.png"
+    },
+    "91f7435e72f6aa60b004": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "Grouped Bar Chart",
+      "thumbnail": ""
+    },
+    "b98177c0d7b2d7334846": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "Histogram",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/b98177c0d7b2d7334846/raw/7f96c04783f580d856282e8c1713bf7e0bbe330a/thumbnail.png"
+    },
+    "0849fbc99a6e277a6ed4": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "Pie / Donut",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0849fbc99a6e277a6ed4/raw/0d243bf40e84665365e1d606055b9ee8fd826605/thumbnail.png"
+    },
+    "0fe2938e9921ed9533ce": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "BarChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0fe2938e9921ed9533ce/raw/ce82761b963fdd826bb68b136542423088a41e56/thumbnail.png"
+    },
+    "8eee33d561868441240d": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "Treemap",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/8eee33d561868441240d/raw/bceb351f95b65e967532e5fe322d8374c2f472c2/thumbnail.png"
+    },
+    "ca9c408a63d47ccbdca3": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "BubbleChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/ca9c408a63d47ccbdca3/raw/6c8db230dfff31f67fda43a9683ee77a9efead4f/thumbnail.png"
+    },
+    "e4c5e56432bf1bd5447a": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "LineChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e4c5e56432bf1bd5447a/raw/ded750e7c6e7c079a34c9f9dfe6e6526d992cdb3/thumbnail.png"
+    },
+    "e02da414ffd3f14e193a": {
+      "userId": "ninjapixel",
+      "count": 7,
+      "description": "A simple example of using a basic chart created within the ninjaPixel.js framework",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e02da414ffd3f14e193a/raw/64501467cb648bfe87b0c87ac01c9d09cf524b7d/thumbnail.png"
+    },
+    "3cda05ca68cba260cb81": {
+      "userId": "micahstubbs",
+      "count": 1,
+      "description": "programmatic control of a d3 brush - specify zoom",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/3cda05ca68cba260cb81/raw/82616b8840abed7d2229c228e579a41ae044694b/thumbnail.png"
+    },
+    "8172488984f877569956": {
+      "userId": "micahstubbs",
+      "count": 1,
+      "description": "Focus + Context Scatter Plots",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/8172488984f877569956/raw/99ebcba08154eb88335dc3d20486d4fa58b7358a/thumbnail.png"
+    },
+    "222939d7c74c5de09387": {
+      "userId": "nivas8292",
+      "count": 1,
+      "description": "Zoom and Brush in d3",
+      "thumbnail": "https://gist.githubusercontent.com/nivas8292/222939d7c74c5de09387/raw/bfb47fa2cbfc33a0a4011694d3b81c92f9af550c/thumbnail.png"
+    },
+    "1e86c34932980874eb5f": {
+      "userId": "1wheel",
+      "count": 7,
+      "description": "",
+      "thumbnail": ""
+    },
+    "822cf24522a52078a03f": {
+      "userId": "1wheel",
+      "count": 7,
+      "description": "",
+      "thumbnail": ""
+    },
+    "67b47524ed8ed829d021": {
+      "userId": "1wheel",
+      "count": 7,
+      "description": "",
+      "thumbnail": ""
+    },
+    "2b4aaa88d469ede56c62": {
+      "userId": "sxywu",
+      "count": 1,
+      "description": "visfest block visualization 4",
+      "thumbnail": ""
+    },
+    "4d221a4492f1377d32ce": {
+      "userId": "sxywu",
+      "count": 1,
+      "description": "visfest block visualization 3",
+      "thumbnail": "https://gist.githubusercontent.com/sxywu/4d221a4492f1377d32ce/raw/745678568f924f43b463350093bc61ec3e76bec3/thumbnail.png"
+    },
+    "64ddc06422ca86453cc7": {
+      "userId": "erohinaelena",
+      "count": 7,
+      "description": "Skill octopus",
+      "thumbnail": ""
+    },
+    "9819c297a3ce7a2e9145": {
+      "userId": "erohinaelena",
+      "count": 1,
+      "description": "From sunset to sunrise",
+      "thumbnail": "https://gist.githubusercontent.com/erohinaelena/9819c297a3ce7a2e9145/raw/70f5d76bfa0f06efdfa60d2b53f99bb94aaf7e01/thumbnail.png"
+    },
+    "e1cc47701b3d005f6327": {
+      "userId": "erohinaelena",
+      "count": 7,
+      "description": "",
+      "thumbnail": ""
+    },
+    "504b42e8bccb87e055f1": {
+      "userId": "devgru",
+      "count": 7,
+      "description": "Skill Octopus",
+      "thumbnail": ""
+    },
+    "d86cfe81bf2873335929": {
+      "userId": "arrayjam",
+      "count": 7,
+      "description": "Voro-swirl",
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/d86cfe81bf2873335929/raw/c33f78b03c830a0e1f7f3648a81093ea12c1cbbd/thumbnail.png"
+    },
+    "8e8ea9b4854b2c4738fa": {
+      "userId": "jkutianski",
+      "count": 1,
+      "description": "Solution for hepplerj’s Brush Removal with Button",
+      "thumbnail": "https://gist.githubusercontent.com/jkutianski/8e8ea9b4854b2c4738fa/raw/573c474738fa947ad03b129610768b2fda258eaf/thumbnail.png"
+    },
+    "41541cb3e0a273960132": {
+      "userId": "jay-oh-en",
+      "count": 1,
+      "description": "Hands-on Data Visualization with D3.js: Parallel Coordinates (Part 2)",
+      "thumbnail": "https://gist.githubusercontent.com/Jay-Oh-eN/41541cb3e0a273960132/raw/b4df535d038d5a759574932fdf63f151da672778/thumbnail.png"
+    },
+    "1d7908cc876b58f70c194b29712bfbc6": {
+      "userId": "srinivashavanur",
+      "count": 1,
+      "description": "Visual Implementation 10",
+      "thumbnail": ""
+    },
+    "59c67178982d192c79ddacff46388995": {
+      "userId": "srinivashavanur",
+      "count": 1,
+      "description": "Visual Implementation 10 (Scatterplot matrix with Linked Highlighting)",
+      "thumbnail": ""
+    },
+    "bbbe7947d1def3303f20": {
+      "userId": "veltman",
+      "count": 1,
+      "description": "Configurable hexbins",
+      "thumbnail": ""
+    },
+    "b800db97f69506752a58": {
+      "userId": "tomshanley",
+      "count": 1,
+      "description": "Brush scatterplot, three by one matrix",
+      "thumbnail": "https://gist.githubusercontent.com/tomshanley/b800db97f69506752a58/raw/af81bf83e84033b55aa887ca57456edf575833d2/thumbnail.png"
+    },
+    "12152907c745fdf070a7": {
+      "userId": "tomshanley",
+      "count": 1,
+      "description": "Customer Experience Mapping with transitions",
+      "thumbnail": "https://gist.githubusercontent.com/tomshanley/12152907c745fdf070a7/raw/3d7dd46d25947d3c67c5a7e1585f8f3050760320/thumbnail.png"
+    },
+    "bf9c070d0fa6bab79d6a": {
+      "userId": "fabiovalse",
+      "count": 1,
+      "description": "Non-overlapping circles through collision detection",
+      "thumbnail": "https://gist.githubusercontent.com/fabiovalse/bf9c070d0fa6bab79d6a/raw/3d0e1f2eb4ecb0379e4593060e4c9ca0a7b2eeb2/thumbnail.png"
+    },
+    "e1e4f9429aa386de6214": {
+      "userId": "espinielli",
+      "count": 7,
+      "description": "Rotating Cahill-Keyes projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/e1e4f9429aa386de6214/raw/4a6107dd872248453d10a97a12d749b8959ec5a5/thumbnail.png"
+    },
+    "b6e2f37814a19dc461f8": {
+      "userId": "espinielli",
+      "count": 7,
+      "description": "Cahill-Keyes blues",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/b6e2f37814a19dc461f8/raw/457471a8b7bf99d8f29dc49da93abcca88c9d5aa/thumbnail.png"
+    },
+    "78d0290c80b4f7b8b146d0d657086f21": {
+      "userId": "jay-oh-en",
+      "count": 1,
+      "description": "Brushable Linked Charts",
+      "thumbnail": ""
+    }
+  },
+  "count": 222,
+  "coocurance": {
+    "d3.select": 288,
+    "d3.event": 142,
+    "d3.scale": 260,
+    "d3.scale.ordinal": 140,
+    "d3.svg": 245,
+    "d3.svg.symbol": 47,
+    "d3.svg.symbolTypes": 40,
+    "d3.svg.axis": 192,
+    "d3.max": 116,
+    "d3.extent": 149,
+    "d3.csv": 333,
+    "d3.scale.linear": 227,
+    "d3.svg.area": 60,
+    "d3.svg.brush": 226,
+    "d3.time": 128,
+    "d3.time.format": 91,
+    "d3.time.scale": 100,
+    "d3.min": 110,
+    "d3.range": 102,
+    "d3.tsv": 88,
+    "d3.tsv.format": 9,
+    "d3.functor": 64,
+    "d3.selectAll": 116,
+    "d3.shuffle": 37,
+    "d3.scale.sqrt": 46,
+    "d3.keys": 91,
+    "d3.set": 41,
+    "d3.dsv": 32,
+    "d3.svg.line": 105,
+    "d3.mouse": 78,
+    "d3.timer": 62,
+    "d3.ascending": 54,
+    "d3.map": 45,
+    "d3.rebind": 73,
+    "d3.dispatch": 62,
+    "d3.behavior": 79,
+    "d3.behavior.drag": 65,
+    "d3.json": 83,
+    "d3.csv.format": 8,
+    "d3.hsl": 44,
+    "d3.scale.identity": 52,
+    "d3.fisheye": 9,
+    "d3.csv.parse": 3,
+    "d3.selection": 45,
+    "d3.event.keyCode": 45,
+    "d3.touch": 37,
+    "d3.touches": 37,
+    "d3.transition": 41,
+    "d3.ease": 39,
+    "d3.timer.flush": 43,
+    "d3.interpolate": 62,
+    "d3.interpolateNumber": 44,
+    "d3.interpolateRound": 38,
+    "d3.interpolateString": 38,
+    "d3.interpolateRgb": 40,
+    "d3.interpolateHsl": 42,
+    "d3.interpolateArray": 39,
+    "d3.interpolateObject": 38,
+    "d3.interpolateTransform": 38,
+    "d3.interpolators": 38,
+    "d3.descending": 43,
+    "d3.sum": 47,
+    "d3.mean": 40,
+    "d3.median": 39,
+    "d3.quantile": 42,
+    "d3.bisect": 42,
+    "d3.bisectRight": 38,
+    "d3.bisectLeft": 38,
+    "d3.bisector": 38,
+    "d3.permute": 39,
+    "d3.zip": 41,
+    "d3.transpose": 38,
+    "d3.values": 41,
+    "d3.entries": 41,
+    "d3.merge": 48,
+    "d3.nest": 53,
+    "d3.transform": 38,
+    "d3.xhr": 39,
+    "d3.text": 38,
+    "d3.html": 40,
+    "d3.xml": 38,
+    "d3.format": 71,
+    "d3.formatPrefix": 38,
+    "d3.requote": 38,
+    "d3.round": 44,
+    "d3.csv.parseRows": 2,
+    "d3.rgb": 47,
+    "d3.ns": 38,
+    "d3.ns.prefix": 38,
+    "d3.ns.qualify": 38,
+    "d3.scale.pow": 41,
+    "d3.scale.log": 42,
+    "d3.scale.quantize": 51,
+    "d3.scale.quantile": 39,
+    "d3.scale.category": 340,
+    "d3.svg.line.radial": 38,
+    "d3.svg.area.radial": 38,
+    "d3.svg.arc": 59,
+    "d3.svg.chord": 40,
+    "d3.svg.diagonal": 40,
+    "d3.svg.diagonal.radial": 38,
+    "d3.time.format.utc": 42,
+    "d3.time.format.iso": 39,
+    "d3.time.interval": 33,
+    "d3.time.day": 47,
+    "d3.time.days": 45,
+    "d3.time.dayOfYear": 36,
+    "d3.time.hour": 48,
+    "d3.time.hours": 44,
+    "d3.time.minute": 38,
+    "d3.time.minutes": 38,
+    "d3.time.month": 44,
+    "d3.time.months": 41,
+    "d3.time.second": 37,
+    "d3.time.seconds": 37,
+    "d3.time.sunday": 36,
+    "d3.time.sundayOfYear": 36,
+    "d3.time.monday": 36,
+    "d3.time.mondayOfYear": 36,
+    "d3.time.week": 37,
+    "d3.time.weeks": 37,
+    "d3.time.weekOfYear": 36,
+    "d3.time.year": 41,
+    "d3.time.years": 41,
+    "d3.layout": 74,
+    "d3.layout.bundle": 37,
+    "d3.layout.chord": 39,
+    "d3.layout.cluster": 37,
+    "d3.layout.force": 50,
+    "d3.layout.hierarchy": 37,
+    "d3.layout.histogram": 40,
+    "d3.layout.pack": 42,
+    "d3.layout.partition": 37,
+    "d3.layout.pie": 46,
+    "d3.layout.stack": 45,
+    "d3.layout.tree": 41,
+    "d3.layout.treemap": 37,
+    "d3.geo": 87,
+    "d3.geo.path": 59,
+    "d3.geo.greatArc": 36,
+    "d3.geo.circle": 41,
+    "d3.geo.bounds": 39,
+    "d3.geo.albers": 74,
+    "d3.geo.albersUsa": 36,
+    "d3.geo.equirectangular": 84,
+    "d3.geo.mercator": 76,
+    "d3.geom": 52,
+    "d3.geom.voronoi": 40,
+    "d3.geom.delaunay": 36,
+    "d3.geom.quadtree": 47,
+    "d3.geom.polygon": 38,
+    "d3.geom.hull": 37,
+    "d3.behavior.zoom": 49,
+    "d3.geom.contour": 5,
+    "d3.geo.bonne": 10,
+    "d3.interpolateLab": 39,
+    "d3.interpolateHcl": 40,
+    "d3.random.normal": 39,
+    "d3.lab": 34,
+    "d3.hcl": 34,
+    "d3.scale.threshold": 34,
+    "d3.geo.graticule": 41,
+    "d3.geo.azimuthalEqualArea": 74,
+    "d3.geo.projection": 51,
+    "d3.geo.aitoff": 6,
+    "d3.geo.satellite": 6,
+    "d3.hexbin": 3,
+    "d3.box": 3,
+    "d3.geo.orthographic": 64,
+    "d3.chart": 10,
+    "d3.interpolateZoom": 44,
+    "d3.pairs": 22,
+    "d3.random.irwinHall": 19,
+    "d3.locale": 18,
+    "d3.time.format.multi": 19,
+    "d3.geo.area": 31,
+    "d3.geo.centroid": 40,
+    "d3.geo.distance": 30,
+    "d3.geo.interpolate": 39,
+    "d3.geo.length": 29,
+    "d3.geo.rotation": 36,
+    "d3.geo.projectionMutator": 36,
+    "d3.geo.azimuthalEquidistant": 74,
+    "d3.geo.conicConformal": 60,
+    "d3.geo.conicEquidistant": 58,
+    "d3.geo.conicEqualArea": 29,
+    "d3.geo.gnomonic": 80,
+    "d3.geo.stereographic": 62,
+    "d3.geo.stream": 36,
+    "d3.geo.transform": 22,
+    "d3.geo.clipExtent": 22,
+    "d3.geo.transverseMercator": 29,
+    "d3.graph": 1,
+    "d3.variance": 13,
+    "d3.deviation": 13,
+    "d3.geo.azimuthalEqualArea.raw": 5,
+    "d3.geo.azimuthalEquidistant.raw": 5,
+    "d3.geo.gnomonic.raw": 5,
+    "d3.geo.airy": 5,
+    "d3.geo.armadillo": 5,
+    "d3.geo.august": 5,
+    "d3.geo.baker": 5,
+    "d3.geo.berghaus": 5,
+    "d3.geo.boggs": 5,
+    "d3.geo.bromley": 5,
+    "d3.geo.chamberlin": 5,
+    "d3.geo.collignon": 5,
+    "d3.geo.craig": 5,
+    "d3.geo.craster": 5,
+    "d3.geo.cylindricalEqualArea": 5,
+    "d3.geo.cylindricalStereographic": 4,
+    "d3.geo.eckert1": 5,
+    "d3.geo.eckert2": 5,
+    "d3.geo.eckert3": 5,
+    "d3.geo.eckert4": 5,
+    "d3.geo.eckert5": 5,
+    "d3.geo.eckert6": 5,
+    "d3.geo.eisenlohr": 5,
+    "d3.geo.fahey": 5,
+    "d3.geo.foucaut": 4,
+    "d3.geo.gilbert": 4,
+    "d3.geo.ginzburg4": 5,
+    "d3.geo.ginzburg5": 5,
+    "d3.geo.ginzburg6": 5,
+    "d3.geo.ginzburg8": 5,
+    "d3.geo.ginzburg9": 5,
+    "d3.geo.gringorten": 5,
+    "d3.geo.guyou": 5,
+    "d3.geo.hammer": 5,
+    "d3.geo.hammerRetroazimuthal": 5,
+    "d3.geo.healpix": 5,
+    "d3.geo.hill": 5,
+    "d3.geo.homolosine": 5,
+    "d3.geo.kavrayskiy7": 5,
+    "d3.geo.lagrange": 5,
+    "d3.geo.larrivee": 5,
+    "d3.geo.laskowski": 5,
+    "d3.geo.littrow": 5,
+    "d3.geo.loximuthal": 5,
+    "d3.geo.miller": 5,
+    "d3.geo.modifiedStereographic": 5,
+    "d3.geo.mollweide": 5,
+    "d3.geo.mtFlatPolarParabolic": 5,
+    "d3.geo.mtFlatPolarQuartic": 5,
+    "d3.geo.mtFlatPolarSinusoidal": 5,
+    "d3.geo.naturalEarth": 5,
+    "d3.geo.nellHammer": 5,
+    "d3.geo.peirceQuincuncial": 5,
+    "d3.geo.polyconic": 5,
+    "d3.geo.rectangularPolyconic": 5,
+    "d3.geo.robinson": 5,
+    "d3.geo.sinusoidal": 5,
+    "d3.geo.sinuMollweide": 5,
+    "d3.geo.times": 5,
+    "d3.geo.twoPointAzimuthal": 5,
+    "d3.geo.twoPointEquidistant": 5,
+    "d3.geo.vanDerGrinten": 5,
+    "d3.geo.vanDerGrinten2": 5,
+    "d3.geo.vanDerGrinten3": 5,
+    "d3.geo.vanDerGrinten4": 5,
+    "d3.geo.wagner4": 5,
+    "d3.geo.wagner6": 5,
+    "d3.geo.wagner7": 5,
+    "d3.geo.wiechel": 5,
+    "d3.geo.winkel3": 5,
+    "d3.geo.polyhedron": 9,
+    "d3.geo.polyhedron.butterfly": 3,
+    "d3.geo.polyhedron.waterman": 3
+  }
+}

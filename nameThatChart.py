@@ -4,6 +4,8 @@ import os
 from random import randint
 from PIL import Image
 from flask import Flask, request, session, render_template
+from possibleview import View
+import d3jsdownload as dl
 
 from flaskext.mysql import MySQL
 
@@ -19,7 +21,25 @@ app.config['MYSQL_DATABASE_DB'] = 'heroku_fe2750702799a19'
 app.config['MYSQL_DATABASE_HOST'] = 'eu-cdbr-west-01.cleardb.com'
 mysql.init_app(app)
 
+#hash key
 app.secret_key = binascii.hexlify(os.urandom(24))
+
+@app.route('/gethemall')
+def gethemall():
+    views = dl.parsej()
+    con = mysql.connect()
+    cursor = con.cursor()
+    for view in views:
+        idt = gettype(view.description)[0]
+        q= "insert into user_type values ("+str(4)+","+str(idt)+",'"+view.getlocation()+"','"+view.name+"')"
+        print(q)
+        cursor.execute(q)
+        con.commit()
+    cursor.close()
+    con.close()
+    return '<h3> done to:' + str(len(views)) + "visualizations </h3>"
+
+
 
 
 @app.route('/')

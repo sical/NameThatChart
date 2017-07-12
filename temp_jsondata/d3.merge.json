@@ -1,0 +1,908 @@
+{
+  "api": "d3.merge",
+  "blocks": {
+    "1117287": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Segmented Lines",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1117287/raw/069b57e781bc6ef372964b4d2bb7245d3a802cc2/thumbnail.png"
+    },
+    "1199811": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Force Layout from Adjacency List",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1199811/raw/04ad7dec9143c8dd4bf84d8ef79e6add6ef355bd/thumbnail.png"
+    },
+    "1595803": {
+      "userId": "zjonsson",
+      "count": 1,
+      "description": "Internalizing chart variables (mod)",
+      "thumbnail": ""
+    },
+    "2932721": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Squares ↔ Hexagons",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/2932721/raw/53896eb3476f4ea0d9b414075b4c7001b6c60383/thumbnail.png"
+    },
+    "2975320": {
+      "userId": "zjonsson",
+      "count": 2,
+      "description": "barStack - stacking with negative values",
+      "thumbnail": ""
+    },
+    "2979974": {
+      "userId": "zjonsson",
+      "count": 2,
+      "description": "barStack (flex layout)",
+      "thumbnail": ""
+    },
+    "2991587": {
+      "userId": "milroc",
+      "count": 2,
+      "description": "axes as whitespace",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/2991587/raw/d52c4789460c9573928850c77dd5101fd0f5cf25/thumbnail.png"
+    },
+    "3057239": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Geodesic Rainbow",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3057239/raw/2653540d1a6f916b276664d1da0aea30b199801f/thumbnail.png"
+    },
+    "3058685": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Geodesic Grid",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3058685/raw/6071a5aef78fa1011b2c49abf12ef666aabc0675/thumbnail.png"
+    },
+    "3061181": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Icosahedron",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3061181/raw/1e96d476dec97b4e315e8f3a3300c7924254b60d/thumbnail.png"
+    },
+    "3132496": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "Icosahedron",
+      "thumbnail": ""
+    },
+    "3183403": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Scatterplot with Multiple Series",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3183403/raw/de2b21f900ab8ff939ba9c341d8253f86c1859e4/thumbnail.png"
+    },
+    "3279883": {
+      "userId": "syntagmatic",
+      "count": 2,
+      "description": "Miso CSV Upload",
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/3279883/raw/d5ab40a7998ac00899f18c353ff6eaec5e04f087/thumbnail.png"
+    },
+    "3306234": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "d3.time.format localization",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3306234/raw/526e384fbdb1ae9f6c94184bd61f71e3f194a505/thumbnail.png"
+    },
+    "3743077": {
+      "userId": "jasondavies",
+      "count": 2,
+      "description": "Changing Zoom Domain",
+      "thumbnail": ""
+    },
+    "3879898": {
+      "userId": "vlandham",
+      "description": "Geodesic Grid",
+      "count": 1,
+      "thumbnail": "https://gist.githubusercontent.com/vlandham/3879898/raw/6071a5aef78fa1011b2c49abf12ef666aabc0675/thumbnail.png"
+    },
+    "4109792": {
+      "userId": "phoebebright",
+      "count": 1,
+      "description": "sizing ladder",
+      "thumbnail": ""
+    },
+    "4186300": {
+      "userId": "davo",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "4348024": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "Basic Reusable Slopegraph",
+      "thumbnail": ""
+    },
+    "4541355": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "New Gallery for D3.js",
+      "thumbnail": ""
+    },
+    "4560034": {
+      "userId": "biovisualize",
+      "count": 2,
+      "description": "Simple multi-line chart",
+      "thumbnail": ""
+    },
+    "5240519": {
+      "userId": "timelyportfolio",
+      "count": 14,
+      "description": "dexvis map experiment",
+      "thumbnail": ""
+    },
+    "5369188": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "Simple Binary Tree",
+      "thumbnail": ""
+    },
+    "5438143": {
+      "userId": "timelyportfolio",
+      "count": 3,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5467720": {
+      "userId": "herrstucki",
+      "count": 1,
+      "description": "Indented tree layout",
+      "thumbnail": "https://gist.githubusercontent.com/herrstucki/5467720/raw/cefce71ace511623e31650d0ca26f797dc8a2f7b/thumbnail.png"
+    },
+    "5471344": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5480231": {
+      "userId": "milroc",
+      "count": 2,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5628479": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Tissot’s Indicatrix",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5628479/raw/2fe42dcb24b370c4816c347bcabc8af8654206bc/thumbnail.png"
+    },
+    "5676160": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Flattened icosahedron world map.\r\n",
+      "thumbnail": ""
+    },
+    "5684941": {
+      "userId": "michalskop",
+      "count": 1,
+      "description": "Kernel density estimation",
+      "thumbnail": "https://gist.githubusercontent.com/michalskop/5684941/raw/6fded20522514e13df47b1d88b06676cc6a7d65e/thumbnail.png"
+    },
+    "5689783": {
+      "userId": "espinielli",
+      "count": 4,
+      "description": "Cahill-Keyes map projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/5689783/raw/9ff5e27a18d9b65fc65c32b329dc3bd14d68ee5b/thumbnail.png"
+    },
+    "5801758": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "dag layout",
+      "thumbnail": ""
+    },
+    "6077996": {
+      "userId": "d3noob",
+      "count": 3,
+      "description": "Earthquake Data Discovery using dc.js, crossfilter, d3.js and bootstrap",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6077996/raw/965be655e8a73446ef5a46255731a417e8bcd628/thumbnail.png"
+    },
+    "6408735": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Ring Extraction",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6408735/raw/176862272ac89571e54b77a295a583990ff1c7b8/thumbnail.png"
+    },
+    "6409668": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Ring Cutting",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6409668/raw/171cb4abf9d3692fed8e9f7598d36f3f2b477d44/thumbnail.png"
+    },
+    "6548197": {
+      "userId": "arrayjam",
+      "count": 4,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/6548197/raw/2b9ed54821308e0032e66957dcec8a107751b4b8/thumbnail.png"
+    },
+    "6584483": {
+      "userId": "d3noob",
+      "count": 4,
+      "description": "dc.js chart examples",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6584483/raw/4ce7e61dece3cf04dfed4f61c02db057422ba82b/thumbnail.png"
+    },
+    "7156298": {
+      "userId": "timelyportfolio",
+      "count": 13,
+      "description": "Backtest Overfitting | Translated in R",
+      "thumbnail": ""
+    },
+    "8033015": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Multi-Line Voronoi",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/8033015/raw/c587fa05cb0617d8369d9b48d992ba09e940a8c6/thumbnail.png"
+    },
+    "8463137": {
+      "userId": "bollwyvl",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "9095481": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "9165567": {
+      "userId": "milroc",
+      "count": 2,
+      "description": "urban data hacking",
+      "thumbnail": ""
+    },
+    "9561309": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "9744098": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "County Topology",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/9744098/raw/ad656665d10e68190f21370ffe424c06a736ffff/thumbnail.png"
+    },
+    "9755247": {
+      "userId": "dougdowson",
+      "count": 2,
+      "description": "Stacked Bar Chart",
+      "thumbnail": "https://gist.githubusercontent.com/dougdowson/9755247/raw/3e7baf8f50ceafaa59a68da049369f5503ef3269/thumbnail.png"
+    },
+    "9978356": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Congressional District Topology",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/9978356/raw/e3f630ac565bc05fd34a702fe8a0060f9905c2fb/thumbnail.png"
+    },
+    "10520338": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Interrupting Chained Transitions",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/10520338/raw/847f7717d5397839261a6ef1ad228d1d2c4c302f/thumbnail.png"
+    },
+    "10606529": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "d3.dispatch + reusable components",
+      "thumbnail": ""
+    },
+    "d4021aa4dccfd65edffd": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Patterson Cylindrical",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/d4021aa4dccfd65edffd/raw/0ba979531b5fdacc369530e9f844c974d86ef148/thumbnail.png"
+    },
+    "aff9e559c5c9968b7ac6": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Arc Corners",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/aff9e559c5c9968b7ac6/raw/c814ff723c7f8a67ad5a6358a1654406a19590ac/thumbnail.png"
+    },
+    "5cfd3a46562461d7f2db": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Line Segment Intersection",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5cfd3a46562461d7f2db/raw/11ddc6203e7ec1d8864a6e6db179a324ff23ff49/thumbnail.png"
+    },
+    "a76006c5bc2a95695c6f": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Closest Line Segment",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/a76006c5bc2a95695c6f/raw/11ad8b2a743c9166a7584dfd98cdd539ea6eb91e/thumbnail.png"
+    },
+    "6dcc9a177065881b1bc4": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Quicksort V",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6dcc9a177065881b1bc4/raw/a102d61e329280bb23afd24603c12f7df7836782/thumbnail.png"
+    },
+    "31eb70a0880f66262cda": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "Simple GitHub Calendar",
+      "thumbnail": ""
+    },
+    "ad7f1a572b526af1e068": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "streaming streamgraph",
+      "thumbnail": ""
+    },
+    "09c70f0c7d51f0fc8906": {
+      "userId": "biovisualize",
+      "count": 3,
+      "description": "visualization pipeline library (light theme)",
+      "thumbnail": ""
+    },
+    "eaa17e4f9b72c3cc6145": {
+      "userId": "biovisualize",
+      "count": 3,
+      "description": "visualization pipeline library",
+      "thumbnail": ""
+    },
+    "8dc2d874f578c6fe94ef": {
+      "userId": "emeeks",
+      "count": 2,
+      "description": "Networks - Graphs 4",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/8dc2d874f578c6fe94ef/raw/2345d75b017cbd3988f2f930a681b984393c5fdf/thumbnail.png"
+    },
+    "9392270377ba1fa1ce3f": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "Circular Grid Chart",
+      "thumbnail": ""
+    },
+    "6ce03d4324634feba4a9": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "ggplot and textures.js",
+      "thumbnail": ""
+    },
+    "a2c97fbf90aebe591d94": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "waffle + rcdimple version of fig10.3 from r-graph-catalog",
+      "thumbnail": ""
+    },
+    "88d61a118bb7948e13ac": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "dimple d3.js meets seaborn in  R",
+      "thumbnail": ""
+    },
+    "40c3e561beec61224356": {
+      "userId": "timelyportfolio",
+      "count": 4,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/40c3e561beec61224356/raw/cac2cb22e30f75fde8b52c67cb20b6d60ee01928/thumbnail.png"
+    },
+    "6a5ec3049bd7eda1e943": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "3457137af8ae125e5b64": {
+      "userId": "seemantk",
+      "count": 4,
+      "description": "The Euro Debt Crisis",
+      "thumbnail": ""
+    },
+    "6216155e73d119b05c17": {
+      "userId": "danharr",
+      "count": 1,
+      "description": "lightning",
+      "thumbnail": ""
+    },
+    "e80684642c7aadb188ba": {
+      "userId": "danharr",
+      "count": 2,
+      "description": "Radian | Angular | d3",
+      "thumbnail": ""
+    },
+    "6a459b0638d41e587f09": {
+      "userId": "thlorenz",
+      "count": 4,
+      "description": "requirebin sketch",
+      "thumbnail": ""
+    },
+    "172e330701978a831074": {
+      "userId": "bollwyvl",
+      "count": 2,
+      "description": null,
+      "thumbnail": ""
+    },
+    "53e64cdafba38461943b": {
+      "userId": "bollwyvl",
+      "count": 4,
+      "description": "A hacked mermaid.js that never reuses ids and accepts node-like things as a second input to init",
+      "thumbnail": ""
+    },
+    "6b1945104c8fdaedd82c": {
+      "userId": "bollwyvl",
+      "count": 4,
+      "description": "dagre-d3 vs require.js in the IPython Notebook ",
+      "thumbnail": ""
+    },
+    "4f48f63c66ae6ee67864": {
+      "userId": "saraquigley",
+      "count": 3,
+      "description": "major migration #4",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/4f48f63c66ae6ee67864/raw/24c7a3007b7fef06580de42f224b2a6488c39f84/thumbnail.png"
+    },
+    "f6bd5201f92536ef5337": {
+      "userId": "madelfio",
+      "count": 4,
+      "description": "Itineraries",
+      "thumbnail": "https://gist.githubusercontent.com/madelfio/f6bd5201f92536ef5337/raw/9ebee92cbe7375b59166c024457e49e02ebdd977/thumbnail.png"
+    },
+    "84daba49b95b5b48eb85": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "8a87b89f3600a7175f27": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "D3 Globe",
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/8a87b89f3600a7175f27/raw/50c2a0c9d3136562b90c820a4cee2d609799e4c0/thumbnail.png"
+    },
+    "d53d33af6ffb1366e187": {
+      "userId": "hugolpz",
+      "count": 1,
+      "description": "Minimal D3js line smoothing",
+      "thumbnail": "https://gist.githubusercontent.com/hugolpz/d53d33af6ffb1366e187/raw/debb62915b1521368fae6b34027b144e35f76266/thumbnail.png"
+    },
+    "8b23c764fab877c342fd": {
+      "userId": "hugolpz",
+      "count": 1,
+      "description": "WikiAtlas_query_UI_1",
+      "thumbnail": "https://gist.githubusercontent.com/hugolpz/8b23c764fab877c342fd/raw/c59ceb88a7138152975c97dfe85f4571cef356ff/thumbnail.png"
+    },
+    "f5a288dd551fee470617": {
+      "userId": "hugolpz",
+      "count": 1,
+      "description": "Friendly geo-area selection",
+      "thumbnail": "https://gist.githubusercontent.com/hugolpz/f5a288dd551fee470617/raw/c59ceb88a7138152975c97dfe85f4571cef356ff/thumbnail.png"
+    },
+    "d920008a82f67ef2722d": {
+      "userId": "pnavarrc",
+      "count": 1,
+      "description": "D3 Geo Projection Plugin",
+      "thumbnail": "https://gist.githubusercontent.com/pnavarrc/d920008a82f67ef2722d/raw/267062e0ee126b1aa4edb769b1022ca8887ebe40/thumbnail.png"
+    },
+    "91f7435e72f6aa60b004": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Grouped Bar Chart",
+      "thumbnail": ""
+    },
+    "b98177c0d7b2d7334846": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Histogram",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/b98177c0d7b2d7334846/raw/7f96c04783f580d856282e8c1713bf7e0bbe330a/thumbnail.png"
+    },
+    "0849fbc99a6e277a6ed4": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Pie / Donut",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0849fbc99a6e277a6ed4/raw/0d243bf40e84665365e1d606055b9ee8fd826605/thumbnail.png"
+    },
+    "0fe2938e9921ed9533ce": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "BarChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0fe2938e9921ed9533ce/raw/ce82761b963fdd826bb68b136542423088a41e56/thumbnail.png"
+    },
+    "8eee33d561868441240d": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Treemap",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/8eee33d561868441240d/raw/bceb351f95b65e967532e5fe322d8374c2f472c2/thumbnail.png"
+    },
+    "ca9c408a63d47ccbdca3": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "BubbleChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/ca9c408a63d47ccbdca3/raw/6c8db230dfff31f67fda43a9683ee77a9efead4f/thumbnail.png"
+    },
+    "e4c5e56432bf1bd5447a": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "LineChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e4c5e56432bf1bd5447a/raw/ded750e7c6e7c079a34c9f9dfe6e6526d992cdb3/thumbnail.png"
+    },
+    "e02da414ffd3f14e193a": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "A simple example of using a basic chart created within the ninjaPixel.js framework",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e02da414ffd3f14e193a/raw/64501467cb648bfe87b0c87ac01c9d09cf524b7d/thumbnail.png"
+    },
+    "51621b3d35705b1a942a": {
+      "userId": "rpgove",
+      "count": 1,
+      "description": "Heatmap with 2D Kernel Density Estimation of Force Layout",
+      "thumbnail": "https://gist.githubusercontent.com/rpgove/51621b3d35705b1a942a/raw/dd42177c92c6895b1367983fcda981cf1141f8c8/thumbnail.png"
+    },
+    "6eed3b92121facaf489f": {
+      "userId": "micahstubbs",
+      "count": 1,
+      "description": "treemap2",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/6eed3b92121facaf489f/raw/e4f62655a6bb20e2217a2fbba9740fad9315617e/thumbnail.png"
+    },
+    "f48e9f6fbe15cb9d8bf3": {
+      "userId": "micahstubbs",
+      "count": 2,
+      "description": "stacking with a trendline and tooltips",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/f48e9f6fbe15cb9d8bf3/raw/c72a33b5f58f4548bad3bc8e7e6ba05839d6e1de/thumbnail.png"
+    },
+    "a40254b6cb914018ff81": {
+      "userId": "micahstubbs",
+      "count": 2,
+      "description": "stacking with negative values",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/a40254b6cb914018ff81/raw/0045e88f39a350181ce13d6f65715834730ce88b/thumbnail.png"
+    },
+    "1e86c34932980874eb5f": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "822cf24522a52078a03f": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "62a22a8204ee4e6d06df": {
+      "userId": "1wheel",
+      "count": 2,
+      "description": "static-transition",
+      "thumbnail": ""
+    },
+    "a5e20295a7ddf2191150": {
+      "userId": "1wheel",
+      "count": 2,
+      "description": "",
+      "thumbnail": ""
+    },
+    "2af41f436119558c97bd": {
+      "userId": "1wheel",
+      "count": 2,
+      "description": "path transitions",
+      "thumbnail": ""
+    },
+    "5f6c31f938f654c7656b": {
+      "userId": "1wheel",
+      "count": 1,
+      "description": "blur-transition",
+      "thumbnail": ""
+    },
+    "67b47524ed8ed829d021": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "13a116651b27062dc32b": {
+      "userId": "bmershon",
+      "count": 1,
+      "description": "D2 Shape Distribution",
+      "thumbnail": "https://gist.githubusercontent.com/bmershon/13a116651b27062dc32b/raw/c2f4412855adc18056b2b482ef844a7a407be872/thumbnail.png"
+    },
+    "64ddc06422ca86453cc7": {
+      "userId": "erohinaelena",
+      "count": 4,
+      "description": "Skill octopus",
+      "thumbnail": ""
+    },
+    "e1cc47701b3d005f6327": {
+      "userId": "erohinaelena",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "504b42e8bccb87e055f1": {
+      "userId": "devgru",
+      "count": 4,
+      "description": "Skill Octopus",
+      "thumbnail": ""
+    },
+    "a5266efa3b6302de9569": {
+      "userId": "fil",
+      "count": 1,
+      "description": "Tissot’s Indicatrix for Bottomley",
+      "thumbnail": ""
+    },
+    "d86cfe81bf2873335929": {
+      "userId": "arrayjam",
+      "count": 4,
+      "description": "Voro-swirl",
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/d86cfe81bf2873335929/raw/c33f78b03c830a0e1f7f3648a81093ea12c1cbbd/thumbnail.png"
+    },
+    "e1e4f9429aa386de6214": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Rotating Cahill-Keyes projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/e1e4f9429aa386de6214/raw/4a6107dd872248453d10a97a12d749b8959ec5a5/thumbnail.png"
+    },
+    "b6e2f37814a19dc461f8": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Cahill-Keyes blues",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/b6e2f37814a19dc461f8/raw/457471a8b7bf99d8f29dc49da93abcca88c9d5aa/thumbnail.png"
+    }
+  },
+  "count": 106,
+  "coocurance": {
+    "d3.select": 150,
+    "d3.timer": 52,
+    "d3.time": 64,
+    "d3.geo": 93,
+    "d3.geo.path": 62,
+    "d3.geodesic": 9,
+    "d3.values": 48,
+    "d3.round": 45,
+    "d3.range": 89,
+    "d3.selectAll": 50,
+    "d3.selection": 41,
+    "d3.event": 52,
+    "d3.event.keyCode": 39,
+    "d3.mouse": 52,
+    "d3.touch": 36,
+    "d3.touches": 36,
+    "d3.transition": 43,
+    "d3.ease": 38,
+    "d3.timer.flush": 40,
+    "d3.interpolate": 48,
+    "d3.interpolateNumber": 38,
+    "d3.interpolateRound": 38,
+    "d3.interpolateString": 38,
+    "d3.interpolateRgb": 39,
+    "d3.interpolateHsl": 40,
+    "d3.interpolateArray": 39,
+    "d3.interpolateObject": 38,
+    "d3.interpolateTransform": 38,
+    "d3.interpolators": 38,
+    "d3.ascending": 44,
+    "d3.descending": 41,
+    "d3.min": 58,
+    "d3.max": 64,
+    "d3.extent": 67,
+    "d3.sum": 47,
+    "d3.mean": 41,
+    "d3.median": 40,
+    "d3.quantile": 41,
+    "d3.bisect": 43,
+    "d3.bisectRight": 38,
+    "d3.bisectLeft": 38,
+    "d3.bisector": 38,
+    "d3.permute": 40,
+    "d3.zip": 40,
+    "d3.transpose": 40,
+    "d3.keys": 44,
+    "d3.entries": 43,
+    "d3.merge": 111,
+    "d3.nest": 50,
+    "d3.map": 38,
+    "d3.transform": 38,
+    "d3.xhr": 39,
+    "d3.text": 39,
+    "d3.json": 64,
+    "d3.html": 40,
+    "d3.xml": 38,
+    "d3.csv": 147,
+    "d3.format": 52,
+    "d3.formatPrefix": 38,
+    "d3.requote": 38,
+    "d3.csv.parse": 2,
+    "d3.csv.parseRows": 2,
+    "d3.csv.format": 2,
+    "d3.rgb": 43,
+    "d3.hsl": 42,
+    "d3.ns": 38,
+    "d3.ns.prefix": 38,
+    "d3.ns.qualify": 38,
+    "d3.functor": 47,
+    "d3.rebind": 49,
+    "d3.dispatch": 48,
+    "d3.scale": 106,
+    "d3.scale.linear": 86,
+    "d3.scale.sqrt": 39,
+    "d3.scale.pow": 41,
+    "d3.scale.log": 40,
+    "d3.scale.quantize": 39,
+    "d3.scale.quantile": 38,
+    "d3.scale.identity": 36,
+    "d3.scale.ordinal": 66,
+    "d3.scale.category": 276,
+    "d3.svg": 86,
+    "d3.svg.line": 66,
+    "d3.svg.line.radial": 39,
+    "d3.svg.area": 45,
+    "d3.svg.area.radial": 38,
+    "d3.svg.arc": 47,
+    "d3.svg.symbol": 42,
+    "d3.svg.symbolTypes": 39,
+    "d3.svg.chord": 40,
+    "d3.svg.diagonal": 38,
+    "d3.svg.diagonal.radial": 38,
+    "d3.svg.axis": 65,
+    "d3.svg.brush": 46,
+    "d3.time.format": 48,
+    "d3.time.format.utc": 36,
+    "d3.time.format.iso": 37,
+    "d3.time.scale": 43,
+    "d3.time.interval": 33,
+    "d3.time.day": 38,
+    "d3.time.days": 38,
+    "d3.time.dayOfYear": 36,
+    "d3.time.hour": 39,
+    "d3.time.hours": 37,
+    "d3.time.minute": 37,
+    "d3.time.minutes": 37,
+    "d3.time.month": 39,
+    "d3.time.months": 37,
+    "d3.time.second": 37,
+    "d3.time.seconds": 37,
+    "d3.time.sunday": 36,
+    "d3.time.sundayOfYear": 36,
+    "d3.time.monday": 36,
+    "d3.time.mondayOfYear": 36,
+    "d3.time.week": 38,
+    "d3.time.weeks": 38,
+    "d3.time.weekOfYear": 36,
+    "d3.time.year": 37,
+    "d3.time.years": 37,
+    "d3.layout": 67,
+    "d3.layout.bundle": 38,
+    "d3.layout.chord": 40,
+    "d3.layout.cluster": 38,
+    "d3.layout.force": 43,
+    "d3.layout.hierarchy": 42,
+    "d3.layout.histogram": 40,
+    "d3.layout.pack": 38,
+    "d3.layout.partition": 40,
+    "d3.layout.pie": 43,
+    "d3.layout.stack": 42,
+    "d3.layout.tree": 43,
+    "d3.layout.treemap": 40,
+    "d3.geo.greatArc": 36,
+    "d3.geo.circle": 48,
+    "d3.geo.bounds": 38,
+    "d3.geo.albers": 78,
+    "d3.geo.albersUsa": 38,
+    "d3.geo.equirectangular": 92,
+    "d3.geo.mercator": 74,
+    "d3.geom": 48,
+    "d3.geom.voronoi": 44,
+    "d3.geom.delaunay": 36,
+    "d3.geom.quadtree": 38,
+    "d3.geom.polygon": 39,
+    "d3.geom.hull": 37,
+    "d3.behavior": 49,
+    "d3.behavior.drag": 45,
+    "d3.behavior.zoom": 41,
+    "d3.geom.contour": 5,
+    "d3.geo.bonne": 14,
+    "d3.interpolateLab": 36,
+    "d3.interpolateHcl": 36,
+    "d3.random.normal": 34,
+    "d3.tsv": 72,
+    "d3.lab": 34,
+    "d3.hcl": 34,
+    "d3.scale.threshold": 35,
+    "d3.geo.centroid": 44,
+    "d3.geo.interpolate": 43,
+    "d3.geo.rotation": 40,
+    "d3.geo.projection": 54,
+    "d3.geo.projectionMutator": 40,
+    "d3.geo.azimuthalEqualArea": 80,
+    "d3.geo.azimuthalEquidistant": 80,
+    "d3.geo.gnomonic": 88,
+    "d3.geo.azimuthalEqualArea.raw": 9,
+    "d3.geo.azimuthalEquidistant.raw": 9,
+    "d3.geo.gnomonic.raw": 9,
+    "d3.geo.stream": 40,
+    "d3.geo.aitoff": 9,
+    "d3.geo.airy": 9,
+    "d3.geo.armadillo": 9,
+    "d3.geo.august": 9,
+    "d3.geo.baker": 9,
+    "d3.geo.berghaus": 9,
+    "d3.geo.boggs": 9,
+    "d3.geo.bromley": 9,
+    "d3.geo.chamberlin": 9,
+    "d3.geo.collignon": 9,
+    "d3.geo.craig": 9,
+    "d3.geo.craster": 9,
+    "d3.geo.cylindricalEqualArea": 9,
+    "d3.geo.cylindricalStereographic": 8,
+    "d3.geo.eckert1": 9,
+    "d3.geo.eckert2": 9,
+    "d3.geo.eckert3": 9,
+    "d3.geo.eckert4": 9,
+    "d3.geo.eckert5": 9,
+    "d3.geo.eckert6": 9,
+    "d3.geo.eisenlohr": 9,
+    "d3.geo.fahey": 9,
+    "d3.geo.foucaut": 8,
+    "d3.geo.gilbert": 8,
+    "d3.geo.ginzburg4": 9,
+    "d3.geo.ginzburg5": 9,
+    "d3.geo.ginzburg6": 9,
+    "d3.geo.ginzburg8": 9,
+    "d3.geo.ginzburg9": 9,
+    "d3.geo.gringorten": 9,
+    "d3.geo.guyou": 9,
+    "d3.geo.hammer": 10,
+    "d3.geo.hammerRetroazimuthal": 9,
+    "d3.geo.healpix": 9,
+    "d3.geo.hill": 9,
+    "d3.geo.homolosine": 9,
+    "d3.geo.kavrayskiy7": 9,
+    "d3.geo.lagrange": 9,
+    "d3.geo.larrivee": 9,
+    "d3.geo.laskowski": 9,
+    "d3.geo.littrow": 9,
+    "d3.geo.loximuthal": 9,
+    "d3.geo.miller": 9,
+    "d3.geo.modifiedStereographic": 9,
+    "d3.geo.mollweide": 9,
+    "d3.geo.mtFlatPolarParabolic": 9,
+    "d3.geo.mtFlatPolarQuartic": 9,
+    "d3.geo.mtFlatPolarSinusoidal": 9,
+    "d3.geo.naturalEarth": 9,
+    "d3.geo.nellHammer": 9,
+    "d3.geo.peirceQuincuncial": 9,
+    "d3.geo.polyconic": 9,
+    "d3.geo.rectangularPolyconic": 9,
+    "d3.geo.robinson": 9,
+    "d3.geo.satellite": 10,
+    "d3.geo.sinusoidal": 9,
+    "d3.geo.sinuMollweide": 9,
+    "d3.geo.times": 9,
+    "d3.geo.twoPointAzimuthal": 9,
+    "d3.geo.twoPointEquidistant": 9,
+    "d3.geo.vanDerGrinten": 9,
+    "d3.geo.vanDerGrinten2": 9,
+    "d3.geo.vanDerGrinten3": 9,
+    "d3.geo.vanDerGrinten4": 9,
+    "d3.geo.wagner4": 9,
+    "d3.geo.wagner6": 9,
+    "d3.geo.wagner7": 9,
+    "d3.geo.wiechel": 9,
+    "d3.geo.winkel3": 9,
+    "d3.geo.graticule": 41,
+    "d3.pairs": 25,
+    "d3.shuffle": 32,
+    "d3.geo.orthographic": 70,
+    "d3.dsv": 31,
+    "d3.set": 34,
+    "d3.interpolateZoom": 44,
+    "d3.random.irwinHall": 19,
+    "d3.locale": 18,
+    "d3.time.format.multi": 19,
+    "d3.geo.area": 31,
+    "d3.geo.distance": 30,
+    "d3.geo.length": 29,
+    "d3.geo.conicConformal": 58,
+    "d3.geo.conicEquidistant": 58,
+    "d3.geo.conicEqualArea": 29,
+    "d3.geo.stereographic": 62,
+    "d3.geo.transform": 22,
+    "d3.geo.clipExtent": 22,
+    "d3.geo.transverseMercator": 29,
+    "d3.fisheye": 2,
+    "d3.variance": 13,
+    "d3.deviation": 14,
+    "d3.geo.polyhedron": 9,
+    "d3.geo.polyhedron.butterfly": 3,
+    "d3.geo.polyhedron.waterman": 3
+  }
+}

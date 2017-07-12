@@ -1,0 +1,134 @@
+{
+  "api": "d3.box",
+  "blocks": {
+    "4061502": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Box Plots",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4061502/raw/751219107de72b67547eab84b7e95b2d5151c8cc/thumbnail.png"
+    },
+    "6506155": {
+      "userId": "couchand",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/couchand/6506155/raw/751219107de72b67547eab84b7e95b2d5151c8cc/thumbnail.png"
+    },
+    "6543694": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/6543694/raw/751219107de72b67547eab84b7e95b2d5151c8cc/thumbnail.png"
+    },
+    "8981451": {
+      "userId": "milroc",
+      "count": 2,
+      "description": " ",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/8981451/raw/da0aa8e767b28f6e50f0c6152d33cc3fa5278317/thumbnail.png"
+    },
+    "9532826": {
+      "userId": "vlandham",
+      "description": "",
+      "count": 2,
+      "thumbnail": ""
+    },
+    "11305766": {
+      "userId": "tomshanley",
+      "count": 2,
+      "description": "Linked charts - service journeys",
+      "thumbnail": "https://gist.githubusercontent.com/tomshanley/11305766/raw/f3dbfab86f7c27eea4faf265fe465658886d08ac/thumbnail.png"
+    },
+    "f3892e7e248c91f823e0": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "81807cb241cb4bbbaa6b": {
+      "userId": "saraquigley",
+      "count": 2,
+      "description": "Student Census (work in progress)",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/81807cb241cb4bbbaa6b/raw/584ecd2730bf228a2b43922eb928c1ed17a4d335/thumbnail.png"
+    },
+    "51c8120ac8c194ecb629": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/51c8120ac8c194ecb629/raw/751219107de72b67547eab84b7e95b2d5151c8cc/thumbnail.png"
+    },
+    "31a028685cc1f16e23a1": {
+      "userId": "michalskop",
+      "count": 2,
+      "description": "Distances in VAAs",
+      "thumbnail": "https://gist.githubusercontent.com/michalskop/31a028685cc1f16e23a1/raw/4269edfac9d57b09d4dd4cb7fecb989a78222080/thumbnail.png"
+    }
+  },
+  "count": 10,
+  "coocurance": {
+    "d3.select": 19,
+    "d3.max": 8,
+    "d3.csv": 21,
+    "d3.box": 14,
+    "d3.timer": 8,
+    "d3.timer.flush": 7,
+    "d3.ascending": 9,
+    "d3.quantile": 7,
+    "d3.range": 8,
+    "d3.functor": 9,
+    "d3.scale": 10,
+    "d3.scale.linear": 10,
+    "d3.time": 9,
+    "d3.event": 3,
+    "d3.set": 4,
+    "d3.format": 5,
+    "d3.rgb": 1,
+    "d3.rebind": 2,
+    "d3.scale.sqrt": 1,
+    "d3.scale.ordinal": 4,
+    "d3.scale.category": 20,
+    "d3.svg": 5,
+    "d3.svg.axis": 5,
+    "d3.svg.brush": 4,
+    "d3.layout": 4,
+    "d3.layout.force": 1,
+    "d3.geo": 4,
+    "d3.geom": 1,
+    "d3.geom.quadtree": 1,
+    "d3.values": 1,
+    "d3.hexbin": 2,
+    "d3.selectAll": 6,
+    "d3.mouse": 4,
+    "d3.interpolate": 5,
+    "d3.shuffle": 1,
+    "d3.time.hour": 1,
+    "d3.interpolateNumber": 4,
+    "d3.interpolateHcl": 3,
+    "d3.min": 4,
+    "d3.extent": 3,
+    "d3.sum": 3,
+    "d3.nest": 3,
+    "d3.scale.quantize": 3,
+    "d3.svg.line": 4,
+    "d3.svg.area": 3,
+    "d3.svg.arc": 3,
+    "d3.time.format": 4,
+    "d3.layout.pie": 3,
+    "d3.layout.stack": 3,
+    "d3.geo.path": 3,
+    "d3.behavior": 3,
+    "d3.behavior.zoom": 3,
+    "d3.event.keyCode": 1,
+    "d3.dispatch": 1,
+    "d3.map": 1,
+    "d3.time.scale": 3,
+    "d3.time.year": 3,
+    "d3.time.years": 3,
+    "d3.selection": 2,
+    "d3.descending": 2,
+    "d3.svg.symbol": 2,
+    "d3.time.day": 2,
+    "d3.time.days": 2,
+    "d3.time.month": 2,
+    "d3.time.months": 2,
+    "d3.geo.projection": 2
+  }
+}

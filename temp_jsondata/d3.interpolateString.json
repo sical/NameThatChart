@@ -1,0 +1,642 @@
+{
+  "api": "d3.interpolateString",
+  "blocks": {
+    "1096355": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Polar Clock",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1096355/raw/99e7d82c5d2f685d1ea44c3cddace045ffb8cd1e/thumbnail.png"
+    },
+    "1595803": {
+      "userId": "zjonsson",
+      "count": 3,
+      "description": "Internalizing chart variables (mod)",
+      "thumbnail": ""
+    },
+    "3279883": {
+      "userId": "syntagmatic",
+      "description": "Miso CSV Upload",
+      "count": 2,
+      "thumbnail": "https://gist.githubusercontent.com/syntagmatic/3279883/raw/d5ab40a7998ac00899f18c353ff6eaec5e04f087/thumbnail.png"
+    },
+    "3290752": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Rainbows are Harmful",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3290752/raw/b397d74bff9bc4d99feabc15d9ef5001e6a87f2b/thumbnail.png"
+    },
+    "3305854": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Custom Tweens",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3305854/raw/b0cfe68e2b8784aeee82acb8e6d07fbd672883df/thumbnail.png"
+    },
+    "3306234": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "d3.time.format localization",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3306234/raw/526e384fbdb1ae9f6c94184bd61f71e3f194a505/thumbnail.png"
+    },
+    "3743077": {
+      "userId": "jasondavies",
+      "count": 2,
+      "description": "Changing Zoom Domain",
+      "thumbnail": ""
+    },
+    "4330339": {
+      "userId": "davo",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/davo/4330339/raw/99e7d82c5d2f685d1ea44c3cddace045ffb8cd1e/thumbnail.png"
+    },
+    "4524367": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Polar clock",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/4524367/raw/99e7d82c5d2f685d1ea44c3cddace045ffb8cd1e/thumbnail.png"
+    },
+    "5061925": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "Tributary inlet",
+      "thumbnail": ""
+    },
+    "5348789": {
+      "userId": "mbostock",
+      "count": 3,
+      "description": "Concurrent Transitions",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5348789/raw/0abe96bfb6199032a6c0718f3118c03582117b0d/thumbnail.png"
+    },
+    "5480231": {
+      "userId": "milroc",
+      "count": 2,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5649592": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Stroke Dash Interpolation",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5649592/raw/13feed59f4b7e8443b33cb259d889a909b549f47/thumbnail.png"
+    },
+    "5676160": {
+      "userId": "espinielli",
+      "count": 4,
+      "description": "Flattened icosahedron world map.\r\n",
+      "thumbnail": ""
+    },
+    "5684941": {
+      "userId": "michalskop",
+      "count": 3,
+      "description": "Kernel density estimation",
+      "thumbnail": "https://gist.githubusercontent.com/michalskop/5684941/raw/6fded20522514e13df47b1d88b06676cc6a7d65e/thumbnail.png"
+    },
+    "5689783": {
+      "userId": "espinielli",
+      "count": 4,
+      "description": "Cahill-Keyes map projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/5689783/raw/9ff5e27a18d9b65fc65c32b329dc3bd14d68ee5b/thumbnail.png"
+    },
+    "5790309": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "papa face",
+      "thumbnail": ""
+    },
+    "5799677": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "css transform transition",
+      "thumbnail": ""
+    },
+    "6077996": {
+      "userId": "d3noob",
+      "count": 2,
+      "description": "Earthquake Data Discovery using dc.js, crossfilter, d3.js and bootstrap",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6077996/raw/965be655e8a73446ef5a46255731a417e8bcd628/thumbnail.png"
+    },
+    "6081914": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Concurrent Transitions II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6081914/raw/0abe96bfb6199032a6c0718f3118c03582117b0d/thumbnail.png"
+    },
+    "6548197": {
+      "userId": "arrayjam",
+      "count": 4,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/6548197/raw/2b9ed54821308e0032e66957dcec8a107751b4b8/thumbnail.png"
+    },
+    "6584483": {
+      "userId": "d3noob",
+      "count": 4,
+      "description": "dc.js chart examples",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6584483/raw/4ce7e61dece3cf04dfed4f61c02db057422ba82b/thumbnail.png"
+    },
+    "9061986": {
+      "userId": "hobbes7878",
+      "count": 1,
+      "description": "Stadium Chart",
+      "thumbnail": "https://gist.githubusercontent.com/hobbes7878/9061986/raw/856d8ba4c5685d797e9639282e97762a9a8cad22/thumbnail.png"
+    },
+    "9561309": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "5d8039fb983a29e2ad49": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Named Transitions",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5d8039fb983a29e2ad49/raw/fb74b31a483a17d416c04271bca82ac252d83003/thumbnail.png"
+    },
+    "c42968993536f921a5c8": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Sketchy World",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/c42968993536f921a5c8/raw/306e61f19338f7a65905c4c17b62c1ccfdcc9d5b/thumbnail.png"
+    },
+    "40c3e561beec61224356": {
+      "userId": "timelyportfolio",
+      "count": 4,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/40c3e561beec61224356/raw/cac2cb22e30f75fde8b52c67cb20b6d60ee01928/thumbnail.png"
+    },
+    "3457137af8ae125e5b64": {
+      "userId": "seemantk",
+      "count": 4,
+      "description": "The Euro Debt Crisis",
+      "thumbnail": ""
+    },
+    "1bd26eadfff200a3ea50": {
+      "userId": "mpmckenna8",
+      "count": 2,
+      "description": "Color wheeling w/ Chroma.js and d3",
+      "thumbnail": ""
+    },
+    "e970c58310dec1965283": {
+      "userId": "mpmckenna8",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "6a459b0638d41e587f09": {
+      "userId": "thlorenz",
+      "count": 4,
+      "description": "requirebin sketch",
+      "thumbnail": ""
+    },
+    "53e64cdafba38461943b": {
+      "userId": "bollwyvl",
+      "count": 4,
+      "description": "A hacked mermaid.js that never reuses ids and accepts node-like things as a second input to init",
+      "thumbnail": ""
+    },
+    "6b1945104c8fdaedd82c": {
+      "userId": "bollwyvl",
+      "count": 4,
+      "description": "dagre-d3 vs require.js in the IPython Notebook ",
+      "thumbnail": ""
+    },
+    "8dd258e91d44c9ed637d": {
+      "userId": "dougdowson",
+      "count": 1,
+      "description": "Scatterplot: Labor Force Participation",
+      "thumbnail": "https://gist.githubusercontent.com/dougdowson/8dd258e91d44c9ed637d/raw/3a5a4079c6d14c42cfe1d7b647ee30f0cdb5cc01/thumbnail.png"
+    },
+    "c169c74342fa705305c4": {
+      "userId": "dougdowson",
+      "count": 1,
+      "description": "Line Chart: Prime-Age Workers",
+      "thumbnail": "https://gist.githubusercontent.com/dougdowson/c169c74342fa705305c4/raw/439607fa18f37c5af24a9cda0f7e90296678824d/thumbnail.png"
+    },
+    "77ea48d0ea0793bb0b0f": {
+      "userId": "dougdowson",
+      "count": 1,
+      "description": "Line Chart: Brazilian Real",
+      "thumbnail": "https://gist.githubusercontent.com/dougdowson/77ea48d0ea0793bb0b0f/raw/ddbeedef1d07d16bb2519d13df15db02faee42da/thumbnail.png"
+    },
+    "4f48f63c66ae6ee67864": {
+      "userId": "saraquigley",
+      "count": 2,
+      "description": "major migration #4",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/4f48f63c66ae6ee67864/raw/24c7a3007b7fef06580de42f224b2a6488c39f84/thumbnail.png"
+    },
+    "1f9abcf9b0617b7c6fce": {
+      "userId": "madelfio",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "f6bd5201f92536ef5337": {
+      "userId": "madelfio",
+      "count": 4,
+      "description": "Itineraries",
+      "thumbnail": "https://gist.githubusercontent.com/madelfio/f6bd5201f92536ef5337/raw/9ebee92cbe7375b59166c024457e49e02ebdd977/thumbnail.png"
+    },
+    "81b9be3f39026a0f3f1f": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": "Sketchy Continental USA",
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/81b9be3f39026a0f3f1f/raw/56380d6efa0eeeaea6d844ffe7862468837e9dd2/thumbnail.png"
+    },
+    "8a87b89f3600a7175f27": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "D3 Globe",
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/8a87b89f3600a7175f27/raw/50c2a0c9d3136562b90c820a4cee2d609799e4c0/thumbnail.png"
+    },
+    "647310cb65466a31761f": {
+      "userId": "zanarmstrong",
+      "count": 1,
+      "description": "Stroke Dash Interpolation",
+      "thumbnail": ""
+    },
+    "91f7435e72f6aa60b004": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Grouped Bar Chart",
+      "thumbnail": ""
+    },
+    "b98177c0d7b2d7334846": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Histogram",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/b98177c0d7b2d7334846/raw/7f96c04783f580d856282e8c1713bf7e0bbe330a/thumbnail.png"
+    },
+    "0849fbc99a6e277a6ed4": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Pie / Donut",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0849fbc99a6e277a6ed4/raw/0d243bf40e84665365e1d606055b9ee8fd826605/thumbnail.png"
+    },
+    "0fe2938e9921ed9533ce": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "BarChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0fe2938e9921ed9533ce/raw/ce82761b963fdd826bb68b136542423088a41e56/thumbnail.png"
+    },
+    "8eee33d561868441240d": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "Treemap",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/8eee33d561868441240d/raw/bceb351f95b65e967532e5fe322d8374c2f472c2/thumbnail.png"
+    },
+    "ca9c408a63d47ccbdca3": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "BubbleChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/ca9c408a63d47ccbdca3/raw/6c8db230dfff31f67fda43a9683ee77a9efead4f/thumbnail.png"
+    },
+    "e4c5e56432bf1bd5447a": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "LineChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e4c5e56432bf1bd5447a/raw/ded750e7c6e7c079a34c9f9dfe6e6526d992cdb3/thumbnail.png"
+    },
+    "e02da414ffd3f14e193a": {
+      "userId": "ninjapixel",
+      "count": 4,
+      "description": "A simple example of using a basic chart created within the ninjaPixel.js framework",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e02da414ffd3f14e193a/raw/64501467cb648bfe87b0c87ac01c9d09cf524b7d/thumbnail.png"
+    },
+    "1e86c34932980874eb5f": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "822cf24522a52078a03f": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "67b47524ed8ed829d021": {
+      "userId": "1wheel",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "1bc8659b52b35b8a320f3fefb7275ef5": {
+      "userId": "bmershon",
+      "count": 2,
+      "description": "Equidecomposition I",
+      "thumbnail": "https://gist.githubusercontent.com/bmershon/1bc8659b52b35b8a320f3fefb7275ef5/raw/c91205ca897d4cb475eaac4af256bbd43c1239be/thumbnail.png"
+    },
+    "64ddc06422ca86453cc7": {
+      "userId": "erohinaelena",
+      "count": 4,
+      "description": "Skill octopus",
+      "thumbnail": ""
+    },
+    "e1cc47701b3d005f6327": {
+      "userId": "erohinaelena",
+      "count": 4,
+      "description": "",
+      "thumbnail": ""
+    },
+    "504b42e8bccb87e055f1": {
+      "userId": "devgru",
+      "count": 4,
+      "description": "Skill Octopus",
+      "thumbnail": ""
+    },
+    "d86cfe81bf2873335929": {
+      "userId": "arrayjam",
+      "count": 4,
+      "description": "Voro-swirl",
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/d86cfe81bf2873335929/raw/c33f78b03c830a0e1f7f3648a81093ea12c1cbbd/thumbnail.png"
+    },
+    "94a6ddbb5c4a23ebae34": {
+      "userId": "veltman",
+      "count": 1,
+      "description": "Jumping to the end of a transition",
+      "thumbnail": ""
+    },
+    "cf64372672d297d326e0": {
+      "userId": "kcnarf",
+      "count": 1,
+      "description": "wheels on wheels on wheels",
+      "thumbnail": "https://gist.githubusercontent.com/Kcnarf/cf64372672d297d326e0/raw/cec553d22c07a4cef59552c7fb623673a4caaf13/thumbnail.png"
+    },
+    "e1e4f9429aa386de6214": {
+      "userId": "espinielli",
+      "count": 4,
+      "description": "Rotating Cahill-Keyes projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/e1e4f9429aa386de6214/raw/4a6107dd872248453d10a97a12d749b8959ec5a5/thumbnail.png"
+    },
+    "b6e2f37814a19dc461f8": {
+      "userId": "espinielli",
+      "count": 4,
+      "description": "Cahill-Keyes blues",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/b6e2f37814a19dc461f8/raw/457471a8b7bf99d8f29dc49da93abcca88c9d5aa/thumbnail.png"
+    }
+  },
+  "count": 62,
+  "coocurance": {
+    "d3.select": 98,
+    "d3.range": 54,
+    "d3.selectAll": 47,
+    "d3.selection": 41,
+    "d3.event": 45,
+    "d3.event.keyCode": 38,
+    "d3.mouse": 41,
+    "d3.touch": 36,
+    "d3.touches": 36,
+    "d3.transition": 40,
+    "d3.ease": 38,
+    "d3.timer": 46,
+    "d3.timer.flush": 41,
+    "d3.interpolate": 66,
+    "d3.interpolateNumber": 39,
+    "d3.interpolateRound": 38,
+    "d3.interpolateRgb": 38,
+    "d3.interpolateHsl": 38,
+    "d3.interpolateArray": 38,
+    "d3.interpolateObject": 38,
+    "d3.interpolateTransform": 38,
+    "d3.interpolators": 38,
+    "d3.ascending": 42,
+    "d3.descending": 39,
+    "d3.min": 49,
+    "d3.max": 49,
+    "d3.extent": 39,
+    "d3.sum": 41,
+    "d3.mean": 38,
+    "d3.median": 38,
+    "d3.quantile": 38,
+    "d3.bisect": 39,
+    "d3.bisectRight": 38,
+    "d3.bisectLeft": 38,
+    "d3.bisector": 36,
+    "d3.permute": 39,
+    "d3.zip": 38,
+    "d3.transpose": 38,
+    "d3.keys": 38,
+    "d3.values": 39,
+    "d3.entries": 39,
+    "d3.merge": 42,
+    "d3.nest": 41,
+    "d3.map": 37,
+    "d3.transform": 38,
+    "d3.xhr": 39,
+    "d3.text": 38,
+    "d3.json": 52,
+    "d3.html": 38,
+    "d3.xml": 38,
+    "d3.csv": 133,
+    "d3.format": 45,
+    "d3.formatPrefix": 38,
+    "d3.requote": 38,
+    "d3.round": 40,
+    "d3.csv.parse": 2,
+    "d3.csv.parseRows": 2,
+    "d3.csv.format": 2,
+    "d3.rgb": 41,
+    "d3.hsl": 41,
+    "d3.ns": 38,
+    "d3.ns.prefix": 38,
+    "d3.ns.qualify": 38,
+    "d3.functor": 40,
+    "d3.rebind": 39,
+    "d3.dispatch": 39,
+    "d3.scale": 69,
+    "d3.scale.linear": 58,
+    "d3.scale.sqrt": 38,
+    "d3.scale.pow": 39,
+    "d3.scale.log": 39,
+    "d3.scale.quantize": 39,
+    "d3.scale.quantile": 38,
+    "d3.scale.identity": 36,
+    "d3.scale.ordinal": 48,
+    "d3.scale.category": 189,
+    "d3.svg": 66,
+    "d3.svg.line": 53,
+    "d3.svg.line.radial": 38,
+    "d3.svg.area": 41,
+    "d3.svg.area.radial": 38,
+    "d3.svg.arc": 47,
+    "d3.svg.symbol": 42,
+    "d3.svg.symbolTypes": 38,
+    "d3.svg.chord": 40,
+    "d3.svg.diagonal": 38,
+    "d3.svg.diagonal.radial": 38,
+    "d3.svg.axis": 46,
+    "d3.svg.brush": 40,
+    "d3.time": 53,
+    "d3.time.format": 48,
+    "d3.time.format.utc": 36,
+    "d3.time.format.iso": 36,
+    "d3.time.scale": 41,
+    "d3.time.interval": 33,
+    "d3.time.day": 36,
+    "d3.time.days": 36,
+    "d3.time.dayOfYear": 36,
+    "d3.time.hour": 38,
+    "d3.time.hours": 36,
+    "d3.time.minute": 36,
+    "d3.time.minutes": 36,
+    "d3.time.month": 36,
+    "d3.time.months": 36,
+    "d3.time.second": 36,
+    "d3.time.seconds": 36,
+    "d3.time.sunday": 36,
+    "d3.time.sundayOfYear": 36,
+    "d3.time.monday": 36,
+    "d3.time.mondayOfYear": 36,
+    "d3.time.week": 36,
+    "d3.time.weeks": 36,
+    "d3.time.weekOfYear": 36,
+    "d3.time.year": 36,
+    "d3.time.years": 36,
+    "d3.layout": 46,
+    "d3.layout.bundle": 37,
+    "d3.layout.chord": 39,
+    "d3.layout.cluster": 37,
+    "d3.layout.force": 38,
+    "d3.layout.hierarchy": 37,
+    "d3.layout.histogram": 38,
+    "d3.layout.pack": 37,
+    "d3.layout.partition": 37,
+    "d3.layout.pie": 41,
+    "d3.layout.stack": 38,
+    "d3.layout.tree": 37,
+    "d3.layout.treemap": 37,
+    "d3.geo": 59,
+    "d3.geo.path": 48,
+    "d3.geo.greatArc": 36,
+    "d3.geo.circle": 39,
+    "d3.geo.bounds": 38,
+    "d3.geo.albers": 77,
+    "d3.geo.albersUsa": 37,
+    "d3.geo.equirectangular": 75,
+    "d3.geo.mercator": 71,
+    "d3.geom": 40,
+    "d3.geom.voronoi": 38,
+    "d3.geom.delaunay": 36,
+    "d3.geom.quadtree": 37,
+    "d3.geom.polygon": 36,
+    "d3.geom.hull": 37,
+    "d3.behavior": 44,
+    "d3.behavior.drag": 40,
+    "d3.behavior.zoom": 41,
+    "d3.geom.contour": 5,
+    "d3.geo.bonne": 8,
+    "d3.interpolateString": 62,
+    "d3.interpolateLab": 35,
+    "d3.interpolateHcl": 34,
+    "d3.random.normal": 34,
+    "d3.tsv": 68,
+    "d3.lab": 34,
+    "d3.hcl": 34,
+    "d3.scale.threshold": 34,
+    "d3.geo.projection": 44,
+    "d3.geo.armadillo": 4,
+    "d3.dsv": 31,
+    "d3.interpolateZoom": 44,
+    "d3.shuffle": 31,
+    "d3.pairs": 22,
+    "d3.set": 30,
+    "d3.random.irwinHall": 19,
+    "d3.locale": 18,
+    "d3.time.format.multi": 19,
+    "d3.geo.graticule": 36,
+    "d3.geo.area": 31,
+    "d3.geo.centroid": 38,
+    "d3.geo.distance": 30,
+    "d3.geo.interpolate": 37,
+    "d3.geo.length": 29,
+    "d3.geo.rotation": 34,
+    "d3.geo.projectionMutator": 34,
+    "d3.geo.azimuthalEqualArea": 68,
+    "d3.geo.azimuthalEquidistant": 68,
+    "d3.geo.conicConformal": 58,
+    "d3.geo.conicEquidistant": 58,
+    "d3.geo.conicEqualArea": 29,
+    "d3.geo.gnomonic": 76,
+    "d3.geo.orthographic": 62,
+    "d3.geo.stereographic": 62,
+    "d3.geo.stream": 34,
+    "d3.geo.transform": 23,
+    "d3.geo.clipExtent": 22,
+    "d3.geo.transverseMercator": 29,
+    "d3.variance": 13,
+    "d3.deviation": 13,
+    "d3.geo.polyhedron": 9,
+    "d3.geo.polyhedron.butterfly": 3,
+    "d3.geo.polyhedron.waterman": 3,
+    "d3.geo.azimuthalEqualArea.raw": 3,
+    "d3.geo.azimuthalEquidistant.raw": 3,
+    "d3.geo.gnomonic.raw": 3,
+    "d3.geo.aitoff": 3,
+    "d3.geo.airy": 3,
+    "d3.geo.august": 3,
+    "d3.geo.baker": 3,
+    "d3.geo.berghaus": 3,
+    "d3.geo.boggs": 3,
+    "d3.geo.bromley": 3,
+    "d3.geo.chamberlin": 3,
+    "d3.geo.collignon": 3,
+    "d3.geo.craig": 3,
+    "d3.geo.craster": 3,
+    "d3.geo.cylindricalEqualArea": 3,
+    "d3.geo.cylindricalStereographic": 2,
+    "d3.geo.eckert1": 3,
+    "d3.geo.eckert2": 3,
+    "d3.geo.eckert3": 3,
+    "d3.geo.eckert4": 3,
+    "d3.geo.eckert5": 3,
+    "d3.geo.eckert6": 3,
+    "d3.geo.eisenlohr": 3,
+    "d3.geo.fahey": 3,
+    "d3.geo.foucaut": 2,
+    "d3.geo.gilbert": 2,
+    "d3.geo.ginzburg4": 3,
+    "d3.geo.ginzburg5": 3,
+    "d3.geo.ginzburg6": 3,
+    "d3.geo.ginzburg8": 3,
+    "d3.geo.ginzburg9": 3,
+    "d3.geo.gringorten": 3,
+    "d3.geo.guyou": 3,
+    "d3.geo.hammer": 3,
+    "d3.geo.hammerRetroazimuthal": 3,
+    "d3.geo.healpix": 3,
+    "d3.geo.hill": 3,
+    "d3.geo.homolosine": 3,
+    "d3.geo.kavrayskiy7": 3,
+    "d3.geo.lagrange": 3,
+    "d3.geo.larrivee": 3,
+    "d3.geo.laskowski": 3,
+    "d3.geo.littrow": 3,
+    "d3.geo.loximuthal": 3,
+    "d3.geo.miller": 3,
+    "d3.geo.modifiedStereographic": 3,
+    "d3.geo.mollweide": 3,
+    "d3.geo.mtFlatPolarParabolic": 3,
+    "d3.geo.mtFlatPolarQuartic": 3,
+    "d3.geo.mtFlatPolarSinusoidal": 3,
+    "d3.geo.naturalEarth": 3,
+    "d3.geo.nellHammer": 3,
+    "d3.geo.peirceQuincuncial": 3,
+    "d3.geo.polyconic": 3,
+    "d3.geo.rectangularPolyconic": 3,
+    "d3.geo.robinson": 3,
+    "d3.geo.satellite": 3,
+    "d3.geo.sinusoidal": 3,
+    "d3.geo.sinuMollweide": 3,
+    "d3.geo.times": 3,
+    "d3.geo.twoPointAzimuthal": 3,
+    "d3.geo.twoPointEquidistant": 3,
+    "d3.geo.vanDerGrinten": 3,
+    "d3.geo.vanDerGrinten2": 3,
+    "d3.geo.vanDerGrinten3": 3,
+    "d3.geo.vanDerGrinten4": 3,
+    "d3.geo.wagner4": 3,
+    "d3.geo.wagner6": 3,
+    "d3.geo.wagner7": 3,
+    "d3.geo.wiechel": 3,
+    "d3.geo.winkel3": 3
+  }
+}

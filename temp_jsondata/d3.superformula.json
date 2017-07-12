@@ -1,0 +1,92 @@
+{
+  "api": "d3.superformula",
+  "blocks": {
+    "1020902": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Superformula Tweening",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1020902/raw/fdf2f5bd355b0beb20cece54ff5503b0b94a9705/thumbnail.png"
+    },
+    "1021103": {
+      "userId": "mbostock",
+      "description": "Superformula Explorer",
+      "count": 1,
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1021103/raw/792d9fdd80d77ae1ae97ef20051c59b974a7d998/thumbnail.png"
+    },
+    "3903358": {
+      "userId": "enjalot",
+      "count": 2,
+      "description": "just another inlet to tributary",
+      "thumbnail": ""
+    },
+    "6338550": {
+      "userId": "enjalot",
+      "count": 3,
+      "description": "don't be a",
+      "thumbnail": ""
+    },
+    "6628958": {
+      "userId": "saraquigley",
+      "count": 1,
+      "description": "Strategic Dilemmas",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/6628958/raw/d0c8e0009c39099f6a6c92fcc9328e65a0e30860/thumbnail.png"
+    },
+    "6631328": {
+      "userId": "saraquigley",
+      "count": 3,
+      "description": "Strategy Spaces",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/6631328/raw/9f49f3cc7e007b155db4d78c04f3419daa6495ab/thumbnail.png"
+    },
+    "55656a891aa027a06f23": {
+      "userId": "emeeks",
+      "count": 4,
+      "description": "Superformula Fireworks Scatterplot",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/55656a891aa027a06f23/raw/babc919e84e5a70f84d8849e549f2d65e6bb74fc/thumbnail.png"
+    },
+    "a28e61eaea2e2ac2567b": {
+      "userId": "emeeks",
+      "count": 2,
+      "description": "The greatest scatterplot",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/a28e61eaea2e2ac2567b/raw/91d20fd07cde110d74bbe69b8981ea7bcbb288e5/thumbnail.png"
+    }
+  },
+  "count": 8,
+  "coocurance": {
+    "d3.select": 12,
+    "d3.entries": 1,
+    "d3.format": 4,
+    "d3.scale": 9,
+    "d3.scale.linear": 8,
+    "d3.keys": 6,
+    "d3.functor": 6,
+    "d3.svg": 10,
+    "d3.svg.line": 7,
+    "d3.svg.symbol": 6,
+    "d3.superformula": 12,
+    "d3.scale.ordinal": 1,
+    "d3.min": 4,
+    "d3.range": 2,
+    "d3.svg.axis": 3,
+    "d3.chernoff": 2,
+    "d3.selectAll": 3,
+    "d3.scale.quantile": 1,
+    "d3.scale.category": 8,
+    "d3.timer": 2,
+    "d3.timer.flush": 2,
+    "d3.descending": 2,
+    "d3.extent": 2,
+    "d3.time": 2,
+    "d3.json": 2,
+    "d3.rgb": 1,
+    "d3.dispatch": 2,
+    "d3.geo": 1,
+    "d3.geom": 1,
+    "d3.geom.voronoi": 1,
+    "d3.geom.polygon": 1,
+    "d3.event": 1,
+    "d3.interpolate": 1,
+    "d3.rebind": 1,
+    "d3.behavior": 1,
+    "d3.behavior.drag": 1
+  }
+}

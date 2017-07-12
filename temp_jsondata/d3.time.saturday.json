@@ -1,0 +1,33 @@
+{
+  "api": "d3.time.saturday",
+  "blocks": {
+    "6199145": {
+      "userId": "oluckyman",
+      "description": "Time axis with centered labels and sticky month names.",
+      "count": 1,
+      "thumbnail": "https://gist.githubusercontent.com/oluckyman/6199145/raw/e8645cff61fc3ce72726cb9b993148b50e7e1ab4/thumbnail.png"
+    }
+  },
+  "count": 1,
+  "coocurance": {
+    "d3.select": 1,
+    "d3.entries": 1,
+    "d3.svg": 1,
+    "d3.svg.axis": 1,
+    "d3.time": 1,
+    "d3.time.format": 1,
+    "d3.time.day": 1,
+    "d3.time.days": 1,
+    "d3.time.month": 1,
+    "d3.time.months": 1,
+    "d3.time.monday": 1,
+    "d3.time.mondays": 1,
+    "d3.transition": 1,
+    "d3.time.scale": 1,
+    "d3.event": 1,
+    "d3.mouse": 1,
+    "d3.behavior": 1,
+    "d3.behavior.zoom": 1,
+    "d3.min": 1
+  }
+}

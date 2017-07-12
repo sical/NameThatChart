@@ -1,0 +1,781 @@
+{
+  "api": "d3.random.normal",
+  "blocks": {
+    "1584697": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Sortable Bar Chart",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1584697/raw/0418e7d595a61074e019c7a0e977c50bdb0227e2/thumbnail.png"
+    },
+    "1642874": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Line Transition",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1642874/raw/b3858c418cf20e1ceb408b1160cead8ad5b35f6f/thumbnail.png"
+    },
+    "1642989": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Spline Transition",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1642989/raw/589a1e75cb3be94a1e016b93dfa2e458c379b2ff/thumbnail.png"
+    },
+    "1643051": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Line Transition (Broken)",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/1643051/raw/7cf0a92c19b762e3aefbadaaec5b4fb25b33c5d7/thumbnail.png"
+    },
+    "1691430": {
+      "userId": "zjonsson",
+      "count": 2,
+      "description": "Automatic floating labels using d3 force-layout",
+      "thumbnail": "https://gist.githubusercontent.com/ZJONSSON/1691430/raw/04ad983124c3a31487413e59ce19543b35358d8f/thumbnail.png"
+    },
+    "3056952": {
+      "userId": "milroc",
+      "count": 1,
+      "description": "Minimum Viable Chart Junk (Updating Line Chart)",
+      "thumbnail": "https://gist.githubusercontent.com/milroc/3056952/raw/d7d45808329ec1f50c9c3ba8d869f64092d8cdb3/thumbnail.png"
+    },
+    "3306234": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "d3.time.format localization",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3306234/raw/526e384fbdb1ae9f6c94184bd61f71e3f194a505/thumbnail.png"
+    },
+    "3680957": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "SVG Semantic Zooming",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3680957/raw/d4571630e67960ce869c9023f3fee629f3e2a59f/thumbnail.png"
+    },
+    "3680958": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Canvas Geometric Zooming",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3680958/raw/cc58165e29323486c3c3ffd6124fb9e3519a45a8/thumbnail.png"
+    },
+    "3680999": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "SVG Geometric Zooming",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3680999/raw/03ba9136f4ce089c430819e9a68aac3edefe88cc/thumbnail.png"
+    },
+    "3681006": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Canvas Semantic Zooming",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/3681006/raw/4268b140b53e675622cffc3a7d961b10b885f189/thumbnail.png"
+    },
+    "3743077": {
+      "userId": "jasondavies",
+      "count": 1,
+      "description": "Changing Zoom Domain",
+      "thumbnail": ""
+    },
+    "4248145": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Hexagonal Binning",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4248145/raw/6d1f16bc8b796af51424c85bec6f641cbf6a768d/thumbnail.png"
+    },
+    "4248146": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Hexagonal Binning (Area)",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4248146/raw/0ca4d4a5b797e4c70da478f974f343e0e1b06c0b/thumbnail.png"
+    },
+    "4341699": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Convex Hull",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4341699/raw/aa3ca4c0c1c3a68464b65bc15b7ad787b280b52c/thumbnail.png"
+    },
+    "4349545": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Brush Handles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4349545/raw/a17acfe0ce9dd8a66e9ae33c79534f4e1036f00a/thumbnail.png"
+    },
+    "5091037": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": "Adapt Mike Bostock's brushable handle example to work with a resizable and draggable jquery ui box.",
+      "thumbnail": ""
+    },
+    "5480231": {
+      "userId": "milroc",
+      "count": 1,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5676160": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Flattened icosahedron world map.\r\n",
+      "thumbnail": ""
+    },
+    "5689783": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Cahill-Keyes map projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/5689783/raw/9ff5e27a18d9b65fc65c32b329dc3bd14d68ee5b/thumbnail.png"
+    },
+    "6077996": {
+      "userId": "d3noob",
+      "count": 1,
+      "description": "Earthquake Data Discovery using dc.js, crossfilter, d3.js and bootstrap",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6077996/raw/965be655e8a73446ef5a46255731a417e8bcd628/thumbnail.png"
+    },
+    "6135698": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": "line for tty56",
+      "thumbnail": ""
+    },
+    "6238040": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Zoom Transitions",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6238040/raw/c15a50be2d60a20516d6855076e341eeeddd6400/thumbnail.png"
+    },
+    "6498000": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Click-to-Recenter Brush",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6498000/raw/a17acfe0ce9dd8a66e9ae33c79534f4e1036f00a/thumbnail.png"
+    },
+    "6498580": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Click-to-Recenter Brush II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6498580/raw/a17acfe0ce9dd8a66e9ae33c79534f4e1036f00a/thumbnail.png"
+    },
+    "6548197": {
+      "userId": "arrayjam",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/6548197/raw/2b9ed54821308e0032e66957dcec8a107751b4b8/thumbnail.png"
+    },
+    "6584483": {
+      "userId": "d3noob",
+      "count": 1,
+      "description": "dc.js chart examples",
+      "thumbnail": "https://gist.githubusercontent.com/d3noob/6584483/raw/4ce7e61dece3cf04dfed4f61c02db057422ba82b/thumbnail.png"
+    },
+    "6909318": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Voronoi Labels",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6909318/raw/bebdcadcff52064055babe2b6a652de093033cce/thumbnail.png"
+    },
+    "7606141": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Infinite Queue",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/7606141/raw/1b0f7feacafca1ac69e1a1cdb576aa24e89ed8da/thumbnail.png"
+    },
+    "7833311": {
+      "userId": "mbostock",
+      "count": 4,
+      "description": "Dynamic Hexbin",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/7833311/raw/9e0021914504e28e489a9ca783776d59431640f6/thumbnail.png"
+    },
+    "9116395": {
+      "userId": "mpmckenna8",
+      "count": 2,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/mpmckenna8/9116395/raw/bebdcadcff52064055babe2b6a652de093033cce/thumbnail.png"
+    },
+    "9561309": {
+      "userId": "1wheel",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "f5922ed4d0ac1ac2161f": {
+      "userId": "jasondavies",
+      "description": "Rotated hexbin",
+      "count": 4,
+      "thumbnail": "https://gist.githubusercontent.com/jasondavies/f5922ed4d0ac1ac2161f/raw/a829f8d035ad305b3d7edbd1a59b8a0d8df9c57b/thumbnail.png"
+    },
+    "6f14f7b7f267a85f7cdc": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Convex Hull",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/6f14f7b7f267a85f7cdc/raw/889b26ea68ffb278d0c7268ecb59b3977fe5ffa0/thumbnail.png"
+    },
+    "e2a20d86124693ef0f93": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Pencil Sketch",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/e2a20d86124693ef0f93/raw/163933c58c0fed1a5b9a7f8757c6139959c2a345/thumbnail.png"
+    },
+    "456231b87e1c2fca8bfb": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "Minimal stem-and-leaf plot",
+      "thumbnail": ""
+    },
+    "1c0c7ad51d3d28481cea": {
+      "userId": "biovisualize",
+      "count": 1,
+      "description": "1-D Random Walk",
+      "thumbnail": ""
+    },
+    "d2b58be8b31a26914991": {
+      "userId": "ramnathv",
+      "count": 2,
+      "description": "Tributary inlet",
+      "thumbnail": ""
+    },
+    "ad34a4c372926cfb29c3": {
+      "userId": "ramnathv",
+      "count": 1,
+      "description": "Tributary inlet",
+      "thumbnail": ""
+    },
+    "7e38e7a39fb399aee8fa": {
+      "userId": "enjalot",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/enjalot/7e38e7a39fb399aee8fa/raw/b3858c418cf20e1ceb408b1160cead8ad5b35f6f/thumbnail.png"
+    },
+    "40c3e561beec61224356": {
+      "userId": "timelyportfolio",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/timelyportfolio/40c3e561beec61224356/raw/cac2cb22e30f75fde8b52c67cb20b6d60ee01928/thumbnail.png"
+    },
+    "3112c37d079d6fdce4be": {
+      "userId": "seemantk",
+      "count": 1,
+      "description": "D3 Based Real Time Chart",
+      "thumbnail": "https://gist.githubusercontent.com/seemantk/3112c37d079d6fdce4be/raw/3d05837597f08b32e0996ab5687d4fa4603fc5f3/thumbnail.png"
+    },
+    "3457137af8ae125e5b64": {
+      "userId": "seemantk",
+      "count": 1,
+      "description": "The Euro Debt Crisis",
+      "thumbnail": ""
+    },
+    "429a8eb651ce35a252da": {
+      "userId": "mpmckenna8",
+      "count": 2,
+      "description": "Automatic floating labels using d3 force-layout",
+      "thumbnail": "https://gist.githubusercontent.com/mpmckenna8/429a8eb651ce35a252da/raw/04ad983124c3a31487413e59ce19543b35358d8f/thumbnail.png"
+    },
+    "b226253275b248c04a61": {
+      "userId": "herrstucki",
+      "count": 1,
+      "description": "React-D3 Components",
+      "thumbnail": ""
+    },
+    "6a459b0638d41e587f09": {
+      "userId": "thlorenz",
+      "count": 1,
+      "description": "requirebin sketch",
+      "thumbnail": ""
+    },
+    "53e64cdafba38461943b": {
+      "userId": "bollwyvl",
+      "count": 1,
+      "description": "A hacked mermaid.js that never reuses ids and accepts node-like things as a second input to init",
+      "thumbnail": ""
+    },
+    "6b1945104c8fdaedd82c": {
+      "userId": "bollwyvl",
+      "count": 1,
+      "description": "dagre-d3 vs require.js in the IPython Notebook ",
+      "thumbnail": ""
+    },
+    "4f48f63c66ae6ee67864": {
+      "userId": "saraquigley",
+      "count": 1,
+      "description": "major migration #4",
+      "thumbnail": "https://gist.githubusercontent.com/saraquigley/4f48f63c66ae6ee67864/raw/24c7a3007b7fef06580de42f224b2a6488c39f84/thumbnail.png"
+    },
+    "f6bd5201f92536ef5337": {
+      "userId": "madelfio",
+      "count": 1,
+      "description": "Itineraries",
+      "thumbnail": "https://gist.githubusercontent.com/madelfio/f6bd5201f92536ef5337/raw/9ebee92cbe7375b59166c024457e49e02ebdd977/thumbnail.png"
+    },
+    "002b77ea237231567e28": {
+      "userId": "wboykinm",
+      "count": 1,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/002b77ea237231567e28/raw/163933c58c0fed1a5b9a7f8757c6139959c2a345/thumbnail.png"
+    },
+    "7f14a531dec565ca0884": {
+      "userId": "vicapow",
+      "count": 1,
+      "description": "WebGL + d3.layout.force",
+      "thumbnail": ""
+    },
+    "91f7435e72f6aa60b004": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "Grouped Bar Chart",
+      "thumbnail": ""
+    },
+    "b98177c0d7b2d7334846": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "Histogram",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/b98177c0d7b2d7334846/raw/7f96c04783f580d856282e8c1713bf7e0bbe330a/thumbnail.png"
+    },
+    "0849fbc99a6e277a6ed4": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "Pie / Donut",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0849fbc99a6e277a6ed4/raw/0d243bf40e84665365e1d606055b9ee8fd826605/thumbnail.png"
+    },
+    "0fe2938e9921ed9533ce": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "BarChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/0fe2938e9921ed9533ce/raw/ce82761b963fdd826bb68b136542423088a41e56/thumbnail.png"
+    },
+    "8eee33d561868441240d": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "Treemap",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/8eee33d561868441240d/raw/bceb351f95b65e967532e5fe322d8374c2f472c2/thumbnail.png"
+    },
+    "ca9c408a63d47ccbdca3": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "BubbleChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/ca9c408a63d47ccbdca3/raw/6c8db230dfff31f67fda43a9683ee77a9efead4f/thumbnail.png"
+    },
+    "e4c5e56432bf1bd5447a": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "LineChart",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e4c5e56432bf1bd5447a/raw/ded750e7c6e7c079a34c9f9dfe6e6526d992cdb3/thumbnail.png"
+    },
+    "e02da414ffd3f14e193a": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "A simple example of using a basic chart created within the ninjaPixel.js framework",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/e02da414ffd3f14e193a/raw/64501467cb648bfe87b0c87ac01c9d09cf524b7d/thumbnail.png"
+    },
+    "747e4c0c002ce2caf342": {
+      "userId": "ninjapixel",
+      "count": 1,
+      "description": "histogram test",
+      "thumbnail": ""
+    },
+    "b956ee7215b7b50bc78a": {
+      "userId": "xaranke",
+      "count": 2,
+      "description": "d3-hexbin demo",
+      "thumbnail": "https://gist.githubusercontent.com/xaranke/b956ee7215b7b50bc78a/raw/5be3d696bc474cd18c7545131b237053aa852c6f/thumbnail.png"
+    },
+    "c94e43b2db73f23ed8d1": {
+      "userId": "bricedev",
+      "count": 2,
+      "description": "Voronoi triggering II",
+      "thumbnail": "https://gist.githubusercontent.com/bricedev/c94e43b2db73f23ed8d1/raw/1330e15f39a6d3ceee82509600201c72410985c0/thumbnail.png"
+    },
+    "4255cc933222d6efbacd": {
+      "userId": "bricedev",
+      "count": 2,
+      "description": "Quadtree triggering",
+      "thumbnail": "https://gist.githubusercontent.com/bricedev/4255cc933222d6efbacd/raw/fdefb84cf7349e016b0be7626d680d6871b20c94/thumbnail.png"
+    },
+    "341d26c96aba771a57e5": {
+      "userId": "bricedev",
+      "count": 2,
+      "description": "Voronoi triggering",
+      "thumbnail": "https://gist.githubusercontent.com/bricedev/341d26c96aba771a57e5/raw/efb568e0df9bc783cab111f124154d5dba2d14d8/thumbnail.png"
+    },
+    "4f068e1a8833a7d2f2fb": {
+      "userId": "micahstubbs",
+      "count": 2,
+      "description": "tiny hexbin plot",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/4f068e1a8833a7d2f2fb/raw/d8151655a92d8700363bae23e25e0301f2145bef/thumbnail.png"
+    },
+    "4ee4c58c9dfc2a41ed26": {
+      "userId": "micahstubbs",
+      "count": 2,
+      "description": "hexbin with no axes",
+      "thumbnail": "https://gist.githubusercontent.com/micahstubbs/4ee4c58c9dfc2a41ed26/raw/7ec44d843e90cbef3595cf4000abb6ff8da97426/thumbnail.png"
+    },
+    "1e86c34932980874eb5f": {
+      "userId": "1wheel",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "822cf24522a52078a03f": {
+      "userId": "1wheel",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "67b47524ed8ed829d021": {
+      "userId": "1wheel",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "41bc67cfedf95f7d196d": {
+      "userId": "bmershon",
+      "count": 1,
+      "description": "Vietoris-Rips Complex (simplicial complex)",
+      "thumbnail": "https://gist.githubusercontent.com/bmershon/41bc67cfedf95f7d196d/raw/632c5a6b6510917bfae76377b197393c54588ea8/thumbnail.png"
+    },
+    "64ddc06422ca86453cc7": {
+      "userId": "erohinaelena",
+      "count": 1,
+      "description": "Skill octopus",
+      "thumbnail": ""
+    },
+    "e1cc47701b3d005f6327": {
+      "userId": "erohinaelena",
+      "count": 1,
+      "description": "",
+      "thumbnail": ""
+    },
+    "504b42e8bccb87e055f1": {
+      "userId": "devgru",
+      "count": 1,
+      "description": "Skill Octopus",
+      "thumbnail": ""
+    },
+    "d86cfe81bf2873335929": {
+      "userId": "arrayjam",
+      "count": 1,
+      "description": "Voro-swirl",
+      "thumbnail": "https://gist.githubusercontent.com/arrayjam/d86cfe81bf2873335929/raw/c33f78b03c830a0e1f7f3648a81093ea12c1cbbd/thumbnail.png"
+    },
+    "64ffc3bd8fc76c5657719a842e39c4e3": {
+      "userId": "armollica",
+      "count": 1,
+      "description": "K-D Tree Nearest Neighbor",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/64ffc3bd8fc76c5657719a842e39c4e3/raw/52d8839e6969c12bcfc2fa47970d487ab1712c4a/thumbnail.png"
+    },
+    "1593f53c0c8346d067491f39255d0b84": {
+      "userId": "armollica",
+      "count": 1,
+      "description": "K-D Tree Nearest Neighbors (k-NN)",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/1593f53c0c8346d067491f39255d0b84/raw/822f8b4f403cbfd82a2179ba999fcf98a5c2b88d/thumbnail.png"
+    },
+    "dcfa9c27db140183bd87f3fc90efaf10": {
+      "userId": "armollica",
+      "count": 2,
+      "description": "Triangular Binning II",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/dcfa9c27db140183bd87f3fc90efaf10/raw/4edc3f19811c5e0b7e4b0231b52600708eed14c5/thumbnail.png"
+    },
+    "82c136720d31633bc79f1ea121a422e2": {
+      "userId": "armollica",
+      "count": 1,
+      "description": "K-Nearest Neighbors",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/82c136720d31633bc79f1ea121a422e2/raw/30a601b7f97854894303c774f762f82d2fa75a7c/thumbnail.png"
+    },
+    "7c0bd51dab6b9665a315fef06c436f27": {
+      "userId": "armollica",
+      "count": 2,
+      "description": "Triangular Binning I",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/7c0bd51dab6b9665a315fef06c436f27/raw/aa8e65ff2812de086af491655b555c6085271faf/thumbnail.png"
+    },
+    "a6b26f0f0abad5505e08": {
+      "userId": "armollica",
+      "count": 2,
+      "description": "2D/3D Scatterplot",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/a6b26f0f0abad5505e08/raw/c553cf85cb11791ecb7626c208266878e73de5d0/thumbnail.png"
+    },
+    "d221d7d9d7a8fd4a7838": {
+      "userId": "armollica",
+      "count": 2,
+      "description": "Scatterplot with Tufte Axes",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/d221d7d9d7a8fd4a7838/raw/4c36020a0a4472a26a95949f1b9683c8b875a37d/thumbnail.png"
+    },
+    "e8e241115c907aa67b39": {
+      "userId": "darrenjaworski",
+      "count": 2,
+      "description": "OK Earthquakes X",
+      "thumbnail": ""
+    },
+    "e1e4f9429aa386de6214": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Rotating Cahill-Keyes projection",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/e1e4f9429aa386de6214/raw/4a6107dd872248453d10a97a12d749b8959ec5a5/thumbnail.png"
+    },
+    "b6e2f37814a19dc461f8": {
+      "userId": "espinielli",
+      "count": 1,
+      "description": "Cahill-Keyes blues",
+      "thumbnail": "https://gist.githubusercontent.com/espinielli/b6e2f37814a19dc461f8/raw/457471a8b7bf99d8f29dc49da93abcca88c9d5aa/thumbnail.png"
+    }
+  },
+  "count": 85,
+  "coocurance": {
+    "d3.select": 116,
+    "d3.timer": 43,
+    "d3.interpolate": 48,
+    "d3.interpolateLab": 45,
+    "d3.range": 97,
+    "d3.scale": 88,
+    "d3.scale.linear": 78,
+    "d3.time": 51,
+    "d3.hexbin": 15,
+    "d3.svg": 70,
+    "d3.svg.axis": 61,
+    "d3.behavior": 44,
+    "d3.behavior.zoom": 42,
+    "d3.selectAll": 40,
+    "d3.selection": 36,
+    "d3.event": 45,
+    "d3.event.keyCode": 34,
+    "d3.mouse": 45,
+    "d3.touch": 34,
+    "d3.touches": 34,
+    "d3.transition": 35,
+    "d3.ease": 34,
+    "d3.timer.flush": 34,
+    "d3.interpolateNumber": 34,
+    "d3.interpolateRound": 34,
+    "d3.interpolateString": 34,
+    "d3.interpolateRgb": 34,
+    "d3.interpolateHsl": 34,
+    "d3.interpolateHcl": 34,
+    "d3.interpolateArray": 34,
+    "d3.interpolateObject": 34,
+    "d3.interpolateTransform": 34,
+    "d3.interpolators": 34,
+    "d3.ascending": 38,
+    "d3.descending": 35,
+    "d3.min": 43,
+    "d3.max": 43,
+    "d3.extent": 39,
+    "d3.sum": 36,
+    "d3.mean": 34,
+    "d3.median": 34,
+    "d3.quantile": 34,
+    "d3.bisect": 34,
+    "d3.bisectRight": 34,
+    "d3.bisectLeft": 34,
+    "d3.bisector": 34,
+    "d3.permute": 34,
+    "d3.zip": 34,
+    "d3.transpose": 34,
+    "d3.keys": 35,
+    "d3.values": 40,
+    "d3.entries": 34,
+    "d3.merge": 37,
+    "d3.nest": 37,
+    "d3.map": 35,
+    "d3.random.normal": 85,
+    "d3.transform": 34,
+    "d3.xhr": 35,
+    "d3.text": 34,
+    "d3.json": 44,
+    "d3.html": 34,
+    "d3.xml": 34,
+    "d3.csv": 120,
+    "d3.tsv": 70,
+    "d3.format": 42,
+    "d3.formatPrefix": 34,
+    "d3.requote": 34,
+    "d3.round": 37,
+    "d3.rgb": 36,
+    "d3.hsl": 34,
+    "d3.lab": 34,
+    "d3.hcl": 34,
+    "d3.ns": 34,
+    "d3.ns.prefix": 34,
+    "d3.ns.qualify": 34,
+    "d3.functor": 35,
+    "d3.rebind": 34,
+    "d3.dispatch": 34,
+    "d3.scale.sqrt": 36,
+    "d3.scale.pow": 35,
+    "d3.scale.log": 35,
+    "d3.scale.quantize": 35,
+    "d3.scale.threshold": 34,
+    "d3.scale.quantile": 34,
+    "d3.scale.identity": 42,
+    "d3.scale.ordinal": 45,
+    "d3.scale.category": 168,
+    "d3.svg.line": 52,
+    "d3.svg.line.radial": 34,
+    "d3.svg.area": 37,
+    "d3.svg.area.radial": 34,
+    "d3.svg.arc": 42,
+    "d3.svg.symbol": 34,
+    "d3.svg.symbolTypes": 34,
+    "d3.svg.chord": 36,
+    "d3.svg.diagonal": 34,
+    "d3.svg.diagonal.radial": 34,
+    "d3.svg.brush": 41,
+    "d3.time.format": 40,
+    "d3.time.format.utc": 34,
+    "d3.time.format.iso": 34,
+    "d3.time.scale": 38,
+    "d3.time.day": 34,
+    "d3.time.days": 34,
+    "d3.time.dayOfYear": 34,
+    "d3.time.hour": 36,
+    "d3.time.hours": 34,
+    "d3.time.minute": 34,
+    "d3.time.minutes": 34,
+    "d3.time.month": 34,
+    "d3.time.months": 34,
+    "d3.time.second": 34,
+    "d3.time.seconds": 34,
+    "d3.time.sunday": 34,
+    "d3.time.sundayOfYear": 34,
+    "d3.time.monday": 34,
+    "d3.time.mondayOfYear": 34,
+    "d3.time.week": 34,
+    "d3.time.weeks": 34,
+    "d3.time.weekOfYear": 34,
+    "d3.time.year": 34,
+    "d3.time.years": 34,
+    "d3.layout": 43,
+    "d3.layout.bundle": 34,
+    "d3.layout.chord": 36,
+    "d3.layout.cluster": 34,
+    "d3.layout.force": 38,
+    "d3.layout.hierarchy": 34,
+    "d3.layout.histogram": 35,
+    "d3.layout.pack": 34,
+    "d3.layout.partition": 34,
+    "d3.layout.pie": 36,
+    "d3.layout.stack": 35,
+    "d3.layout.tree": 34,
+    "d3.layout.treemap": 34,
+    "d3.geo": 63,
+    "d3.geo.path": 41,
+    "d3.geo.greatArc": 34,
+    "d3.geo.circle": 37,
+    "d3.geo.bounds": 36,
+    "d3.geo.albers": 70,
+    "d3.geo.albersUsa": 34,
+    "d3.geo.equirectangular": 72,
+    "d3.geo.mercator": 68,
+    "d3.geom": 49,
+    "d3.geom.voronoi": 41,
+    "d3.geom.delaunay": 35,
+    "d3.geom.quadtree": 36,
+    "d3.geom.polygon": 36,
+    "d3.geom.hull": 37,
+    "d3.behavior.drag": 36,
+    "d3.geom.contour": 3,
+    "d3.geo.bonne": 6,
+    "d3.geo.orthographic": 66,
+    "d3.dsv": 31,
+    "d3.time.interval": 31,
+    "d3.interpolateZoom": 44,
+    "d3.shuffle": 31,
+    "d3.pairs": 22,
+    "d3.set": 30,
+    "d3.random.irwinHall": 19,
+    "d3.locale": 18,
+    "d3.time.format.multi": 19,
+    "d3.geo.graticule": 35,
+    "d3.geo.area": 31,
+    "d3.geo.centroid": 38,
+    "d3.geo.distance": 30,
+    "d3.geo.interpolate": 37,
+    "d3.geo.length": 29,
+    "d3.geo.rotation": 34,
+    "d3.geo.projection": 41,
+    "d3.geo.projectionMutator": 34,
+    "d3.geo.azimuthalEqualArea": 68,
+    "d3.geo.azimuthalEquidistant": 68,
+    "d3.geo.conicConformal": 58,
+    "d3.geo.conicEquidistant": 58,
+    "d3.geo.conicEqualArea": 29,
+    "d3.geo.gnomonic": 76,
+    "d3.geo.stereographic": 62,
+    "d3.geo.stream": 34,
+    "d3.geo.transform": 22,
+    "d3.geo.clipExtent": 22,
+    "d3.geo.transverseMercator": 29,
+    "d3.graph": 1,
+    "d3.chart": 1,
+    "d3.variance": 13,
+    "d3.deviation": 13,
+    "d3.force_labels": 4,
+    "d3.geo.polyhedron": 9,
+    "d3.geo.polyhedron.butterfly": 3,
+    "d3.geo.polyhedron.waterman": 3,
+    "d3.geo.azimuthalEqualArea.raw": 3,
+    "d3.geo.azimuthalEquidistant.raw": 3,
+    "d3.geo.gnomonic.raw": 3,
+    "d3.geo.aitoff": 3,
+    "d3.geo.airy": 3,
+    "d3.geo.armadillo": 3,
+    "d3.geo.august": 3,
+    "d3.geo.baker": 3,
+    "d3.geo.berghaus": 3,
+    "d3.geo.boggs": 3,
+    "d3.geo.bromley": 3,
+    "d3.geo.chamberlin": 3,
+    "d3.geo.collignon": 3,
+    "d3.geo.craig": 3,
+    "d3.geo.craster": 3,
+    "d3.geo.cylindricalEqualArea": 3,
+    "d3.geo.cylindricalStereographic": 2,
+    "d3.geo.eckert1": 3,
+    "d3.geo.eckert2": 3,
+    "d3.geo.eckert3": 3,
+    "d3.geo.eckert4": 3,
+    "d3.geo.eckert5": 3,
+    "d3.geo.eckert6": 3,
+    "d3.geo.eisenlohr": 3,
+    "d3.geo.fahey": 3,
+    "d3.geo.foucaut": 2,
+    "d3.geo.gilbert": 2,
+    "d3.geo.ginzburg4": 3,
+    "d3.geo.ginzburg5": 3,
+    "d3.geo.ginzburg6": 3,
+    "d3.geo.ginzburg8": 3,
+    "d3.geo.ginzburg9": 3,
+    "d3.geo.gringorten": 3,
+    "d3.geo.guyou": 3,
+    "d3.geo.hammer": 3,
+    "d3.geo.hammerRetroazimuthal": 3,
+    "d3.geo.healpix": 3,
+    "d3.geo.hill": 3,
+    "d3.geo.homolosine": 3,
+    "d3.geo.kavrayskiy7": 3,
+    "d3.geo.lagrange": 3,
+    "d3.geo.larrivee": 3,
+    "d3.geo.laskowski": 3,
+    "d3.geo.littrow": 3,
+    "d3.geo.loximuthal": 3,
+    "d3.geo.miller": 3,
+    "d3.geo.modifiedStereographic": 3,
+    "d3.geo.mollweide": 3,
+    "d3.geo.mtFlatPolarParabolic": 3,
+    "d3.geo.mtFlatPolarQuartic": 3,
+    "d3.geo.mtFlatPolarSinusoidal": 3,
+    "d3.geo.naturalEarth": 3,
+    "d3.geo.nellHammer": 3,
+    "d3.geo.peirceQuincuncial": 3,
+    "d3.geo.polyconic": 3,
+    "d3.geo.rectangularPolyconic": 3,
+    "d3.geo.robinson": 3,
+    "d3.geo.satellite": 3,
+    "d3.geo.sinusoidal": 3,
+    "d3.geo.sinuMollweide": 3,
+    "d3.geo.times": 3,
+    "d3.geo.twoPointAzimuthal": 3,
+    "d3.geo.twoPointEquidistant": 3,
+    "d3.geo.vanDerGrinten": 3,
+    "d3.geo.vanDerGrinten2": 3,
+    "d3.geo.vanDerGrinten3": 3,
+    "d3.geo.vanDerGrinten4": 3,
+    "d3.geo.wagner4": 3,
+    "d3.geo.wagner6": 3,
+    "d3.geo.wagner7": 3,
+    "d3.geo.wiechel": 3,
+    "d3.geo.winkel3": 3
+  }
+}

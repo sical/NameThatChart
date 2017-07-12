@@ -1,0 +1,253 @@
+{
+  "api": "d3.geo.tile",
+  "blocks": {
+    "900050": {
+      "userId": "mbostock",
+      "count": 3,
+      "description": "d3.geo.tiler",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/900050/raw/85580e153318488cae6d341efb97146828d24cc0/thumbnail.png"
+    },
+    "3589712": {
+      "userId": "nelsonminar",
+      "count": 6,
+      "description": "windhistory.com D3 code",
+      "thumbnail": ""
+    },
+    "4132797": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Zoomable Map Tiles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4132797/raw/e130b876f353a1bce9b745160ba96f34ad8ea0d1/thumbnail.png"
+    },
+    "4150951": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Clipped Map Tiles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/4150951/raw/3b787bb300a073964bd269b76b3dc23a671d1df2/thumbnail.png"
+    },
+    "4716561": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "Fiddling with D3 Finder params",
+      "thumbnail": ""
+    },
+    "4988766": {
+      "userId": "jeremybuis",
+      "count": 2,
+      "description": null,
+      "thumbnail": ""
+    },
+    "5342063": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Raster & Vector II",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5342063/raw/c01da236c945063529c981619b6f369d209bc3ff/thumbnail.png"
+    },
+    "5373842": {
+      "userId": "vlandham",
+      "description": null,
+      "count": 2,
+      "thumbnail": "https://gist.githubusercontent.com/vlandham/5373842/raw/c01da236c945063529c981619b6f369d209bc3ff/thumbnail.png"
+    },
+    "5593150": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Vector Tiles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5593150/raw/20b9047b78ba96c26ded83aaa5fa88090af72bff/thumbnail.png"
+    },
+    "5601557": {
+      "userId": "nelsonminar",
+      "count": 2,
+      "description": "Vector slippy map of rivers built entirely in D3, no other mapping library.",
+      "thumbnail": "https://gist.githubusercontent.com/NelsonMinar/5601557/raw/a45895f51dabfcf488cd90a7cb4d398bcf8ac8a7/thumbnail.png"
+    },
+    "5616813": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Vector Tiles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5616813/raw/84ba72a5f3d8d6d699c1b731d6ce6fe015b60b84/thumbnail.png"
+    },
+    "5798635": {
+      "userId": "darrenjaworski",
+      "count": 2,
+      "description": "Two vector tile layers (OSP)",
+      "thumbnail": ""
+    },
+    "5798874": {
+      "userId": "mbostock",
+      "count": 2,
+      "description": "Vector Tiles",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5798874/raw/c894e43d7c9e7ce3aea27c7d55d90e7d2c3c668b/thumbnail.png"
+    },
+    "5914438": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Raster & Vector III",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/5914438/raw/c01da236c945063529c981619b6f369d209bc3ff/thumbnail.png"
+    },
+    "6147081": {
+      "userId": "emeeks",
+      "count": 2,
+      "description": "TopoJSON, geo.tile() and zoom",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/6147081/raw/32d79410acd2af41e2330293de20f0a9afee425b/thumbnail.png"
+    },
+    "6240826": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "",
+      "thumbnail": ""
+    },
+    "7388233": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "Vector Tiles in D3, darkened",
+      "thumbnail": ""
+    },
+    "7570402": {
+      "userId": "jeremybuis",
+      "count": 2,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/jeremybuis/7570402/raw/c01da236c945063529c981619b6f369d209bc3ff/thumbnail.png"
+    },
+    "7946721": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/wboykinm/7946721/raw/3b787bb300a073964bd269b76b3dc23a671d1df2/thumbnail.png"
+    },
+    "7952148": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "Clipping multiple tilesets by country polygons",
+      "thumbnail": ""
+    },
+    "7955347": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "Tour de Stamen in D3",
+      "thumbnail": ""
+    },
+    "8008417": {
+      "userId": "wboykinm",
+      "count": 2,
+      "description": "D3 Tileset Clipping by Country",
+      "thumbnail": ""
+    },
+    "9535021": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Raster & Vector IV",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/9535021/raw/0b8ecb617cc6c2af375fc395eef9f8fe88092472/thumbnail.png"
+    },
+    "11051379": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "D3 Tile Map with Hand-Drawn Polygon",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/11051379/raw/04c515adce05b026e3145f51eb981612bd89a9b2/thumbnail.png"
+    },
+    "0051a06829e72b423ba9": {
+      "userId": "jasondavies",
+      "count": 1,
+      "description": "Wrapped d3.geo.tile",
+      "thumbnail": "https://gist.githubusercontent.com/jasondavies/0051a06829e72b423ba9/raw/e130b876f353a1bce9b745160ba96f34ad8ea0d1/thumbnail.png"
+    },
+    "f9f91fd9148bdc5aa6db": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Tile Viewer",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/f9f91fd9148bdc5aa6db/raw/469ce76f0a649ce18a8a5fdaffec369abe3e30aa/thumbnail.png"
+    },
+    "94b9fd26e12c586f342d": {
+      "userId": "mbostock",
+      "count": 1,
+      "description": "Raster & Vector I",
+      "thumbnail": "https://gist.githubusercontent.com/mbostock/94b9fd26e12c586f342d/raw/137eef3e2a4b0c7a469bb1a273b14bc417eec0f6/thumbnail.png"
+    },
+    "27b334407c6aa894a236": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Ch. 7, Fig. 20 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/27b334407c6aa894a236/raw/c62839070b2b7fda4d791cc8b361b671f7c0221e/thumbnail.png"
+    },
+    "04d3c26054be96cd5ebf": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Ch. 7, Fig. 2 - D3.js in Action",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/04d3c26054be96cd5ebf/raw/7d16c76aaf55e42255230174f73a076d88c3082b/thumbnail.png"
+    },
+    "f3105fda25ff785dc5ed": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Loading Tile Layers in d3.carto.map",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/f3105fda25ff785dc5ed/raw/3b327644211329a14bbd2979af53991a3c289c1b/thumbnail.png"
+    },
+    "2d4513153f4896dad944": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Canvas Transform 2",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/2d4513153f4896dad944/raw/35c21db39fdf23ff23c1de076d92c9742a084e0c/thumbnail.png"
+    },
+    "298486b15217b1d4ee5c": {
+      "userId": "emeeks",
+      "count": 1,
+      "description": "Canvas Transform",
+      "thumbnail": "https://gist.githubusercontent.com/emeeks/298486b15217b1d4ee5c/raw/cc89f039f736f86d216214ae8de4da67c55b7f84/thumbnail.png"
+    },
+    "3e3303343f4f9f78b1e1": {
+      "userId": "mpmckenna8",
+      "count": 2,
+      "description": null,
+      "thumbnail": "https://gist.githubusercontent.com/mpmckenna8/3e3303343f4f9f78b1e1/raw/20b9047b78ba96c26ded83aaa5fa88090af72bff/thumbnail.png"
+    },
+    "55557f2cc06ae603f242": {
+      "userId": "mpmckenna8",
+      "count": 1,
+      "description": "Mapbox tiles on a d3.globe, oh gosh",
+      "thumbnail": ""
+    },
+    "7f244063ca7171fc9a67": {
+      "userId": "ninjapixel",
+      "count": 2,
+      "description": "Multi Layer OpenStreetMap data with d3.js",
+      "thumbnail": "https://gist.githubusercontent.com/ninjaPixel/7f244063ca7171fc9a67/raw/1ea541baa4b767f9d8827805b9fa4c1cae3ca867/thumbnail.png"
+    },
+    "97ed2acaada685157bfd": {
+      "userId": "armollica",
+      "count": 1,
+      "description": "Transparency Gradient Border",
+      "thumbnail": "https://gist.githubusercontent.com/armollica/97ed2acaada685157bfd/raw/c1b31192783832ebbcfb747be9fcc4d7164a1445/thumbnail.png"
+    }
+  },
+  "count": 36,
+  "coocurance": {
+    "d3.select": 38,
+    "d3.json": 28,
+    "d3.geo": 58,
+    "d3.geo.path": 31,
+    "d3.geo.mercator": 67,
+    "d3.behavior": 22,
+    "d3.behavior.zoom": 22,
+    "d3.mouse": 10,
+    "d3.format": 10,
+    "d3.geo.tile": 53,
+    "d3.range": 21,
+    "d3.csv": 9,
+    "d3.entries": 2,
+    "d3.hsl": 1,
+    "d3.selectAll": 7,
+    "d3.min": 2,
+    "d3.extent": 1,
+    "d3.scale": 3,
+    "d3.scale.quantize": 1,
+    "d3.geo.projection": 4,
+    "d3.rebind": 2,
+    "d3.dispatch": 2,
+    "d3.scale.linear": 2,
+    "d3.interpolate": 1,
+    "d3.interpolateHsl": 1,
+    "d3.svg": 1,
+    "d3.svg.arc": 1,
+    "d3.geo.graticule": 3,
+    "d3.geo.orthographic": 6
+  }
+}
