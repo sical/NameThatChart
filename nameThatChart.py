@@ -408,7 +408,6 @@ def getimgbytype():
         "SELECT imagepath FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
             action) + "%'")
     data = cursor.fetchall()
-    print("lllllaaaa")
     for i in range(0, len(data)):
         result.append("static/" + str(data[i][0]))
 

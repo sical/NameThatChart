@@ -18,25 +18,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-<nav class="navbar navbar-default top-navbar" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
-                class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
-        <ul class="nav navbar-top-links navbar-left" id="menu">
-            <li>
-                <div class="navbar-header" style="width: 30%">
-                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
-                </div>
-            </li>
-            <li>
-                <div class="navbar-header" style="width: 30%">
-                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="admin">Admin</a>
-                </div>
-            </li>
-        </ul>
-
-    </div>
-</nav>
+{% include 'nav.html' %}
 
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
@@ -86,7 +68,7 @@
                     console.log(test_array);
                     for (i = 0; i < test_array.length; i++) {
                         $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[i] + ">")
-                        
+
                     }
                 }
             })
