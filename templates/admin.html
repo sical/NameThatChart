@@ -191,12 +191,6 @@
                 var i = 0;
                 var numbers = ['first', 'second', 'third', 'fourth'];
                 console.log(data[0]);
-                for (i; i < 4; i++) {
-                    console.log("#" + numbers[i] + "-text");
-                    console.log(data[i][1]);
-                    $("#" + numbers[i] + "-text").text(data[i][1]);
-                    $("#" + numbers[i] + "-value").text(data[i][2]);
-                }
 
                 Morris.Donut({
                     element: 'morris-donut-chart',
@@ -210,10 +204,10 @@
                         label: data[2][1],
                         value: data[2][2]
                     },
-                    {
-                        label: data[3][1],
-                        value: data[3][2]
-                    }
+                        {
+                            label: data[3][1],
+                            value: data[3][2]
+                        }
                     ],
                     colors: [
                         '#2a4d69', '#4b86b4',
@@ -245,7 +239,7 @@
                 url: "../db2csv",
                 success: function (data) {
                     var test_array = eval("[" + data + "]");
-                    var csvContent = "data:text/csv;charset=utf-8,";
+                    var csvContent = "data:text/csv;charset=utf-8,LogID,UserID,UserIP,Timestamp,DateTime,Event,ImageID,Type\n";
                     test_array.forEach(function (infoArray, index) {
                         infoArray.forEach(function (dato) {
                             dataString = dato.join();
@@ -267,7 +261,9 @@
                     test_array.forEach(function (infoArray, index) {
                         infoArray.forEach(function (dato) {
 
-                            csvContent += "\t{ image: " + dato[0] + " , " + " type : " + dato[1] + " },\n"
+                            csvContent += "\t{ LogID: " + dato[0] + " , " + " UserID : " + dato[1] + " , " + " UserIP : '" + dato[2] +
+                                    " ', " + " Timestamp : '" + dato[3] + "' , " + " DateTime : '" + dato[4] + " ', " + " Event :' " + dato[5] +
+                                    "' , " + " ImageID : " + dato[6] + " , " + " Type : " + dato[7] + " },\n"
                         });
                     });
                     var res = setCharAt(csvContent, csvContent.length - 1, "");

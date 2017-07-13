@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<body>
+<style>
+    body {
+        font-family: Georgia;
+        font-size: 14px;
+        color: #333;
+    }
+
+    #container {
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid #eee;
+        background-color: #f2f2f2;
+    }
+
+    #inner-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #header {
+        width: 350px;
+        line-height: 1.6em;
+        font-size: 18px;
+    }
+
+    #header h1 {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 12px;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .axis .domain { 
+        display: none;
+    }
+
+    .axis.x line {
+        shape-rendering: crispEdges;
+        stroke: #333;
+        stroke-width: 2;
+    }
+
+    .axis.x.minor line {
+        stroke: #ccc;
+        stroke-width: 1;
+    }
+
+    .line {
+        fill-opacity: 0;
+        stroke-width: 4;
+        stroke: #C10000;
+    }
+</style>
+<div id="container">
+    <div id="inner-container">
+        <div id="header">
+           <h1>United States postage rate</h1>
+           In 1991, it cost 29 cents to mail a letter that weighed one ounce or less via the United States Postal Service. The postage rate went up to 37 cents in 2001, and has increased four times since then.
+        </div>
+        <div id="footer">
+            Source: United States Statistical Abstract | Nathan Yau
+        </div>
+    </div>
+</div>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+    var width = 700,
+        height = 500,
+        margin = { top: 60, right: 30, bottom: 90, left: 30},
+        padding = { top: 0, right: 10, bottom: 30, left: 10 };
+
+    // Width/height of the chart without margin and padding
+    var chartWidth = width - margin.left - margin.right - padding.left - padding.right;
+    var chartHeight = height - margin.top - margin.bottom - padding.top - padding.bottom;
+
+    var xValue = function(d) { return d.year; },
+        xScale = d3.scale.linear().range([0, chartWidth]),
+        xMap = function(d) { return xScale(xValue(d)); },
+        xAxis = d3.svg.axis()
+            .scale(xScale)
+            .tickSize(10)
+            .tickFormat((function() {
+                var first = true;
+
+                return function(d) {
+                    if (first) {
+                        first = false;
+                        return d;
+                    } else {
+                        return "'" + ("" + d).substring(2);
+                    }
+                };
+
+            })())
+            .orient('bottom'),
+        xAxisMinor = d3.svg.axis()
+            .scale(xScale)
+            .tickSize(10)
+            .tickFormat(function() { return; })
+            .orient('bottom')
+
+    var yValue = function(d) { return d.price; },
+        yScale = d3.scale.linear().range([chartHeight, 0]),
+        yMap = function(d) { return yScale(yValue(d)); };
+
+    var svg = d3.select('#container').append('svg')
+        .attr('width', width)
+        .attr('height', height);
+
+    var chart = svg.append('g')
+        .attr('class', 'chart')
+        .attr('transform', 'translate(' + (margin.left + padding.left) + ', ' + (margin.top + padding.top) + ')');
+
+    var csvfile = 'us-postage.csv';
+    d3.csv(csvfile, function(d) {
+            return {
+                year: +d.Year,
+                price: +d.Price
+            };
+        }, function(error, data) {
+            // Set the domain based on the data
+            xScale.domain(d3.extent(data, xValue));
+            yScale.domain(d3.extent(data, yValue));
+
+            // Render the X axis 
+            var years = data.map(function(d) { return d.year; })
+            xAxisMinor.ticks(d3.range(d3.min(years), d3.max(years)).length) // We want a minor tick for all the years between the first and last year
+            chart.append('g')
+                .attr('class', 'axis x minor')
+                .attr('transform', 'translate(0, ' + (chartHeight + padding.bottom) + ')')
+                .call(xAxisMinor)
+
+            xAxis.tickValues(years.slice(0, -1)) // Remove the last element (as 2010 is only in the dataset to have a horizontal line after 2009 
+            chart.append('g')
+                .attr('class', 'axis x')
+                .attr('transform', 'translate(0, ' + (chartHeight + padding.bottom) + ')')
+                .call(xAxis)
+
+
+            // Render the line
+            chart.append('path')
+                .datum(data)
+                .attr('class', 'line')
+                .attr('d', d3.svg.line()
+                    .interpolate('step-after')
+                    .x(xMap)
+                    .y(yMap));
+
+            // Render the amounts
+            chart.selectAll('amount')
+                .data(data.slice(0, -1))
+                .enter()
+                    .append('text')
+                    .attr('class', 'amount')
+                    .attr('x', xMap)
+                    .attr('y', yMap)
+                    .attr('dy', -10)
+                    .text((function() {
+                        var first = true;
+                        return function(d) {
+                            var amount = Math.round(yValue(d) * 100);
+
+                            if (first) {
+                                amount += ' cents';
+                                first = false;
+                            }
+
+                            return amount;
+                        }
+                    })())
+        });
+
+</script>
+</body>

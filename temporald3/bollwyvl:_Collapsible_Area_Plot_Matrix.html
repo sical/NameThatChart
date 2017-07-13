@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <style>
+    html, body{
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+    path.line{
+      stroke-width: 2;
+      fill: transparent;
+    }
+    path.area{
+      fill-opacity: 0.2;
+    }
+    #controls{
+      position:fixed;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <button id="collapse_cols">Collapse Columns</button>
+      <button id="collapse_rows">Collapse Rows</button>
+      <button id="makedata">New Data</button>
+    </div>
+    <!-- Firefox doesn't assume the SVG is as big as its contents -->
+    <svg width="100%" height="100%"></svg>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script.js"></script>
+  </body>
+</html>

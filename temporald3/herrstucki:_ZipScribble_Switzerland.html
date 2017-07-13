@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  background: #222;
+}
+#input {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+path {
+  fill: none;
+}
+</style>
+<body>
+<input autofocus id="input" type="text" placeholder="Type a Postal Code" maxlength="4" />
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+
+var width = 960,
+    height = 500;
+
+var projection = d3.geo.albers()
+  .rotate([0, 0])
+  .center([8.23, 46.8])
+  .scale(13000);
+
+var color = d3.scale.category10();
+
+var path = d3.svg.line()
+  .x(function(d) { return d.x; })
+  .y(function(d) { return d.y; });
+
+var vis = d3.select("body").append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+d3.tsv("ch.tsv", function(error, postalCodes) {
+  postalCodes.forEach(function(d) {
+    var coords = projection([d.longitude, d.latitude]);
+    d.x = Math.round(coords[0]);
+    d.y = Math.round(coords[1]);
+  })
+
+  groupedCodes = d3.nest()
+    .key(function(d) { return d.postalCode.substr(0, 1); })
+    .sortKeys(d3.ascending)
+    .key(function(d) { return d.postalCode.substr(0, 2); })
+    .sortKeys(d3.ascending)
+    .key(function(d) { return d.postalCode.substr(0, 3); })
+    .sortKeys(d3.ascending)
+    .entries(postalCodes);
+
+  var l1 = vis.selectAll(".l1")
+    .data(groupedCodes);
+  l1.enter().append("g")
+    .attr("class", "l1")
+    .style("stroke", function(d) { return color(d.key); });
+
+  // L2 placeholder. Stroke coloring could also be done here.
+  var l2 = l1.selectAll(".l2")
+    .data(function(d) { return d.values; })
+  l2.enter().append("g")
+    .attr("class", "l2");
+
+  var l3 = l2.selectAll(".l3")
+    .data(function(d) { return d.values; })
+  l3.enter().append("path")
+    .attr("class", "l3")
+    .attr("d", function(d) { return path(d.values); });
+
+  d3.select("#input")
+    .on("keyup", function() {
+      var inputCode = this.value;
+      l3.transition().duration(600)
+        .style("stroke", function(d) {
+          return d.key.indexOf(inputCode) === 0 ? null : "#000";
+        });
+    });
+});
+</script>

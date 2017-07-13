@@ -113,21 +113,60 @@
 <script async type="text/javascript" src="http://canvg.github.io/canvg/rgbcolor.js"></script>
 <script async type="text/javascript" src="http://canvg.github.io/canvg/StackBlur.js"></script>
 <script async type="text/javascript" src="http://canvg.github.io/canvg/canvg.js"></script>
-<script async src="https://d3js.org/d3.v4.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
+<script src="https://d3js.org/d3.v4.min.js"></script>
 
+<script type="text/javascript">
+    var started = true;
+
+    function upload() {
+        ferm = new FormData();
+        var canvus = document.getElementById('canvas');
+        canvg('canvas', $("#svg").html());
+        var imgu = canvus.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        var blobu = dataURLtoBlob(imgu);
+        var ferm = new FormData();
+        started = true;
+        ferm.append("local", blobu);
+        $.ajax({
+            type: "POST",
+            url: "../saveimg",
+            processData: false,
+            contentType: false,
+            data: ferm,
+            success: function () {
+                furm = new FormData();
+                furm.append("action", "page loaded");
+                $.ajax({
+                    type: "POST",
+                    url: "../logaction",
+                    processData: false,
+                    contentType: false,
+                    data: furm
+                });
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        var url;
         $.ajax({
             type: "GET",
             url: "../getnext",
             processData: false,
             contentType: false,
             success: function (data) {
-
+                url = data;
+                console.log(url);
                 $("#dispres").empty();
                 $("#dispres").load("./textual/" + data);
+
+
+                /* */
+
             }
         });
+
+
         updateImageSize();
         $(window).resize(function () {
             updateImageSize();
@@ -142,15 +181,10 @@
         var text = $("#value").val();
         $("#value").val('');
         $("#pop").show();
-        var canvas = document.getElementById('canvas');
-        canvg('canvas', $("#svg").html());
-        var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        var blob = dataURLtoBlob(img);
         var form = new FormData();
 
         var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
         text = text.replace(reg, "");
-        form.append("local", blob);
         form.append("name", text);
 
 
@@ -161,7 +195,7 @@
             processData: false,
             contentType: false,
             data: form,
-            success: function (data) {
+            success: function () {
                 $.ajax({
                     type: "GET",
                     url: "../getnext",
@@ -179,6 +213,16 @@
     });
 
     $("#skip").click(function () {
+        firm = new FormData();
+        firm.append("action", "skip");
+        $.ajax({
+            type: "POST",
+            url: "../logaction",
+            processData: false,
+            contentType: false,
+            data: firm
+        });
+
         $.ajax({
             type: "GET",
             url: "../getnext",
@@ -191,6 +235,24 @@
             }
         });
     });
+
+    $("#value").on('input', function () {
+        if ($("#value").val() != undefined) {
+            if ($("#value").val().length == 1 && started) {
+                started = false;
+            firm = new FormData();
+            firm.append("action", "started typing");
+            $.ajax({
+                type: "POST",
+                url: "../logaction",
+                processData: false,
+                contentType: false,
+                data: firm
+            });
+        }
+        }
+    })
+
 
     function dataURLtoBlob(dataurl) {
         var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+<script type="text/javascript" src="multiplot.js"></script>
+</head>
+<body></body>
+    
+<script type="text/javascript">
+
+
+Array.prototype.unique = function() {
+    var o = {}, i, l = this.length, r = [];
+    for(i=0; i<l;i+=1) o[this[i]] = this[i];
+    for(i in o) r.push(o[i]);
+    return r;
+};
+
+// Simplified version of calculating contours based on triangular mesh between each set of 4 points.
+// Contour segments are "unconnected" and therefore not suitable for filling (yet)
+// Based on CONREC by Paul Bourke http://paulbourke.net/papers/conrec/
+
+function contour(data,level) {
+    var lines = [],x=0,y=0;
+    
+    function checkTriangle(c,x0,y0,z0,x1,y1,z1,x2,y2,z2) {
+        var points = []
+    
+        function checkLine(c,x0,y0,z0,x1,y1,z1) {
+            if (z0==z1 && z1==c) { lines.push([[x0,y0],[x1,y1]]) }  // if flat add line directly
+            else if ((c>=Math.min(z0,z1)) && (c<= Math.max(z0,z1))) {
+                var fraction=(c-z0)/(z1-z0)
+                points.push([x0+fraction*(x1-x0),y0+fraction*(y1-y0)])
+            }
+        }
+        
+        if ((c>=Math.min(z0,z1,z2)) && (c<= Math.max(z0,z1,z2)) ) {
+            checkLine(c,x0,y0,z0,x1,y1,z1)
+            checkLine(c,x0,y0,z0,x2,y2,z2)
+            checkLine(c,x1,y1,z1,x2,y2,z2)
+        }
+        if (points.unique().length ==2) lines.push(points.unique())           
+    }
+            
+    for(x=0;x<data.length-1;x++) {
+        for (y=0;y<data[0].length-1;y++) {
+            var middle = (data[x][y]+data[x+1][y]+data[x][y+1]+data[x+1][y+1])/4
+            checkTriangle(level,x,y,data[x][y],x+1,y,data[x+1][y],x+0.5,y+0.5,middle)
+            checkTriangle(level,x+1,y,data[x+1][y],x+1,y+1,data[x+1][y+1],x+0.5,y+0.5,middle)
+            checkTriangle(level,x,y+1,data[x][y+1],x+1,y+1,data[x+1][y+1],x+0.5,y+0.5,middle)
+            checkTriangle(level,x,y,data[x][y],x,y+1,data[x][y+1],x+0.5,y+0.5,middle)
+        }
+    }
+   return lines.unique()
+  
+}
+
+
+// Lets take it for a spin
+
+
+xs = d3.range(0, data[0].length),
+ys = d3.range(0, data.length),
+w = 500, h = 500;
+x=d3.scale.linear().range([0,w]).domain([0,data[0].length]),
+yy=d3.scale.linear().range([0,h]).domain([0,data.length]),         
+
+svg=d3.select("body").append("svg:svg")
+    .attr("width",w)
+    .attr("height",h)
+
+
+var current=-0,step=0.1;
+setInterval(plotContour,50)
+
+function plotContour() {
+    if (current > 1) {step = -0.1} 
+    if (current <-3.5) {step = 0.1};
+    current +=step
+    svg.selectAll("path").remove()
+    path = svg.selectAll("path").data(contour(data,current))
+    
+    path.exit().remove()
+    path.enter()
+        .append("svg:path")
+            .style("fill","black")
+            .style("stroke","black")                            
+    path.attr("d",d3.svg.line()
+            .x(function(d) { return x(d[0])})
+            .y(function(d) { return yy(d[1])})
+            )    
+}
+          
+</SCRIPT>
+</html>
