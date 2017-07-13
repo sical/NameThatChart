@@ -132,6 +132,11 @@ def genericprev(chart):
     return render_template("preview/" + chart + '.html')
 
 
+@app.route('/display_image')
+def display_image():
+    return render_template('display_image.html')
+
+
 #     <------------------ Dataset generator ------------------>
 
 
@@ -290,7 +295,7 @@ def db2csv():
     cursor = con.cursor()
     cursor.execute(
         "SELECT idtextvote,user.iduser,ipuser,time,date,event,image.idimage,label FROM textvote INNER JOIN image ON "
-        +"image.idimage = textvote.idimage INNER JOIN user ON textvote.iduser=user.iduser LEFT JOIN type ON textvote.idtype=type.idtype")
+        + "image.idimage = textvote.idimage INNER JOIN user ON textvote.iduser=user.iduser LEFT JOIN type ON textvote.idtype=type.idtype")
     data = cursor.fetchall()
     res = "["
     for i in range(0, len(data)):
@@ -370,6 +375,46 @@ def logaction():
     return 'ok'
 
     # <------------------ Unmapped Get ------------------>
+
+
+#     <------------------ Image tools ------------------>
+
+@app.route('/getimgbyid', methods=['POST'])
+def getimgbyid():
+    action = request.form['action']
+    result = []
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute("SELECT imagepath FROM image WHERE idimage =" + str(action))
+    data = cursor.fetchall()
+    print("lllllaaaa")
+    for i in range(0, len(data)):
+        result.append("static/" + str(data[i][0]))
+
+    cursor.close()
+    con.close()
+    return json.dumps(result)
+
+
+@app.route('/getimgbytype', methods=['POST'])
+def getimgbytype():
+    action = request.form['action']
+    result = []
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute(
+        "SELECT imagepath FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
+            action) + "%'")
+    data = cursor.fetchall()
+    print("lllllaaaa")
+    for i in range(0, len(data)):
+        result.append("static/" + str(data[i][0]))
+
+    cursor.close()
+    con.close()
+    return json.dumps(result)
 
 
 def getposted(id):

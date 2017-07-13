@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
+          media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
+                class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
+        <ul class="nav navbar-top-links navbar-left" id="menu">
+            <li>
+                <div class="navbar-header" style="width: 30%">
+                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="textual">Textual</a>
+                </div>
+            </li>
+            <li>
+                <div class="navbar-header" style="width: 30%">
+                    <a class="navbar-brand waves-effect waves-dark" id="dire" href="admin">Admin</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+
+        <input id="sh" type="text" placeholder="Type Image ID or type">
+
+    </div>
+    <div id="page-inner">
+
+        <div id="fill">
+
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+
+    <!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<script type="text/javascript">
+    $("#sh").on('input', function () {
+
+        $("#fill").empty();
+        if (!isNaN(parseInt($(this).val()))) {
+            var idimage = $(this).val();
+            var form = new FormData();
+
+
+            form.append("action", "" + idimage);
+            $.ajax({
+                type: "POST",
+                url: "../getimgbyid",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    var test_array = eval("[" + data + "]");
+                    console.log(test_array);
+                    for (i = 0; i < test_array.length; i++) {
+                        $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[i] + ">")
+                        
+                    }
+                }
+            })
+        }
+        else {
+            var idimage = $(this).val();
+            var form = new FormData();
+            form.append("action", "" + idimage);
+            $.ajax({
+                type: "POST",
+                url: "../getimgbytype",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    var test_array = eval("[" + data + "]");
+                    console.log("LAAAAAAAAAA");
+                    console.log(test_array[0].length);
+
+                    for (i = 0; i < test_array[0].length; i++) {
+                        $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")
+
+
+                    }
+                }
+            })
+        }
+    });
+
+
+</script>
+
+</div>
+
+</body>
+
+</html>
