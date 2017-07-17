@@ -1,17 +1,15 @@
 import binascii
+import datetime
 import json
 import os
+import time
 from random import randint
 
 from PIL import Image
 from flask import Flask, request, session, render_template
-
-import d3jsdownload as dl
-import datetime
-import time
-
 from flaskext.mysql import MySQL
 
+import d3jsdownload as dl
 import imagePrep as pics
 
 app = Flask(__name__)
@@ -109,6 +107,10 @@ def admin():
 @app.route('/upload')
 def upload():
     return render_template('upload.html')
+
+@app.route('/uploadimg')
+def uploadimg():
+    return render_template('uploadimg.html')
 
 
 @app.route('/hum')
@@ -320,8 +322,9 @@ def getskip():
         else:
             skipa = 0
 
-        res.append({'id': us[2],'posted':us[3], 'skipped': us[0], 'submitted': sub[i][0], 'averageSub': "{0:.2f}".format(suba), 'averageSkip': "{0:.2f}".format(skipa)})
-        i = i+1
+        res.append({'id': us[2], 'posted': us[3], 'skipped': us[0], 'submitted': sub[i][0],
+                    'averageSub': "{0:.2f}".format(suba), 'averageSkip': "{0:.2f}".format(skipa)})
+        i = i + 1
     cursor.close()
     con.close()
     return json.dumps(res)
@@ -439,10 +442,11 @@ def getnext():
 
         cursor.execute("SELECT url,idtype FROM user_type ORDER BY RAND() LIMIT 1")
     else:
-        cursor.execute("SELECT url,idtype FROM user_type where not idtype='"+str(session.get('last'))+"' ORDER BY RAND() LIMIT 1")
+        cursor.execute("SELECT url,idtype FROM user_type WHERE NOT idtype='" + str(
+            session.get('last')) + "' ORDER BY RAND() LIMIT 1")
     data = cursor.fetchone()
 
-    session['last']=data[1]
+    session['last'] = data[1]
     cursor.close()
     con.close()
     return data[0]
@@ -523,6 +527,7 @@ def getimgbytype():
         "SELECT imagepath FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
             action) + "%'")
     data = cursor.fetchall()
+
     for i in range(0, len(data)):
         result.append("static/" + str(data[i][0]))
 
@@ -530,6 +535,18 @@ def getimgbytype():
     con.close()
     return json.dumps(result)
 
+
+@app.route('/getnextpic')
+def getnextpic():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT imgpath FROM image  WHERE `from` ='json' ORDER BY RAND() LIMIT 1")
+
+    data = cursor.fetchone()
+
+    cursor.close()
+    con.close()
+    return data[0]
 
 def getposted(id):
     con = mysql.connect()
