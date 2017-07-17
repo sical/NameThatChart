@@ -5,7 +5,7 @@ from random import randint
 
 from PIL import Image
 from flask import Flask, request, session, render_template
-from possibleview import View
+
 import d3jsdownload as dl
 import datetime
 import time
@@ -40,7 +40,6 @@ def gethemall():
         idt = gettype(view.description)[0]
         q = "INSERT INTO user_type VALUES (" + str(4) + "," + str(
             idt) + ",'" + view.getlocation() + "','" + view.name + "')"
-        print(q)
         cursor.execute(q)
         con.commit()
     cursor.close()
@@ -140,13 +139,13 @@ def display_image():
 #     <------------------ Dataset generator ------------------>
 
 
-# get data like "a" 45
+# get data like {"a": 45}
 @app.route('/1data')
 def getrandomintjson():
     return getrandomdataint()
 
 
-# get data like val1:5 val2:45
+# get data like {'val1':5 'val2':45}
 @app.route('/2data')
 def getrandom2djson():
     nbclasse = randint(3, 180)
@@ -189,7 +188,6 @@ def savemultiple():
     else:
         final = "UPDATE multiplevote SET idtype =" + str(idt[0]) + " WHERE iduser=" + str(
             idu[0]) + " AND idimage =" + str(idm[0])
-    print(final)
     cursor.execute(final)
     cursor.close()
     con.commit()
@@ -232,11 +230,9 @@ def getinf():
 @app.route('/presaveviz', methods=['POST'])
 def presaveviz():
     file = request.files['local']
-    print(file.filename)
     name = request.form['type']
     id = getid(request.environ['REMOTE_ADDR'])[0]
     nb = getposted(id) + 1
-    print(name)
     session['type'] = name
     session['nb'] = nb
     session['filename'] = str(id) + "_" + str(nb)
@@ -256,14 +252,12 @@ def presaveviz():
 def savepreview():
     name = session.get('filename') + ".html"
     os.rename(os.path.join(os.getcwd(), "templates/preview/" + name), os.path.join(os.getcwd(), "templates/" + name))
-    print(session.get('type'))
     idt = gettype(session.get('type'))[0]
     idu = getid(request.environ['REMOTE_ADDR'])[0]
 
     con = mysql.connect()
     cursor = con.cursor()
     q = "INSERT INTO user_type (iduser,idtype,url) VALUES (" + str(idu) + "," + str(idt) + ",'" + str(name) + "')"
-    print(q)
     cursor.execute(q)
 
     cursor.close()
@@ -285,7 +279,52 @@ def getfirstrow():
     con.close()
     return json.dumps(data)
 
-    return getrandomdataint()
+
+@app.route('/userstats')
+def getskip():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute(
+        "SELECT count(user.iduser),event,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='skip'GROUP BY user.iduser ORDER BY posted DESC,iduser ASC")
+    skip = cursor.fetchall()
+
+    cursor.execute(
+        "SELECT count(user.iduser),event,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='submitted' GROUP BY user.iduser ORDER BY posted DESC,iduser ASC")
+    sub = cursor.fetchall()
+
+    cursor.execute(
+        "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='page loaded' ORDER BY posted DESC,iduser,idimage ASC")
+    pl = cursor.fetchall()
+
+    cursor.execute(
+        "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='skip' ORDER BY posted DESC,iduser,idimage ASC")
+    skipd = cursor.fetchall()
+
+    cursor.execute(
+        "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='submitted' ORDER BY posted DESC,iduser,idimage ASC")
+    subd = cursor.fetchall()
+    a, b = getavg(pl, skipd, subd)
+
+    res = []
+    i = 0
+
+    for us in skip:
+
+        if i < len(a):
+            suba = a[i]
+        else:
+            suba = 0
+
+        if i < len(b):
+            skipa = b[i]
+        else:
+            skipa = 0
+
+        res.append({'id': us[2],'posted':us[3], 'skipped': us[0], 'submitted': sub[i][0], 'averageSub': "{0:.2f}".format(suba), 'averageSkip': "{0:.2f}".format(skipa)})
+        i = i+1
+    cursor.close()
+    con.close()
+    return json.dumps(res)
 
 
 # Export database
@@ -312,22 +351,101 @@ def db2csv():
     res += " ]"
     cursor.close()
     con.close()
-    print(json.dumps(res))
     return res
 
 
-#     <------------------ Textual tools ------------------>
+def getavg(page, skip, sub):
+    old = None
+    skiptot = 0
+    subtot = 0
+    subresult = []
+    skipresult = []
+    skipi = 0
+    subi = 0
+    nbsk = 0
+    nbsb = 0
+
+    for val in page:
+        if old is None:
+            old = val[2]
+
+        if old == val[2]:
+            if val[0] == sub[subi][0]:
+                subtot += (
+                              datetime.datetime.strptime(sub[subi][1],
+                                                         "%Y-%m-%d %H:%M:%S.%f") - datetime.datetime.strptime(
+                                  val[1],
+                                  "%Y-%m-%d %H:%M:%S.%f")).total_seconds() * 1000
+                if (subi + 1 < len(sub)):
+                    subi = subi + 1
+                nbsb = nbsb + 1
+
+            elif val[0] == skip[skipi][0]:
+                skiptot += (
+                               datetime.datetime.strptime(skip[skipi][1],
+                                                          "%Y-%m-%d %H:%M:%S.%f") - datetime.datetime.strptime(
+                                   val[1],
+                                   "%Y-%m-%d %H:%M:%S.%f")).total_seconds() * 1000
+
+                if (skipi + 1 < len(sub)):
+                    skipi = skipi + 1
+                nbsk = nbsk + 1
+        else:
+
+            if nbsb > 0:
+                subresult.append(subtot / nbsb)
+
+            if nbsk > 0:
+                skipresult.append(skiptot / nbsk)
+
+            skiptot = 0
+            subtot = 0
+
+            nbsk = 0
+            nbsb = 0
+
+            if val[0] == sub[subi][0]:
+                subtot += (
+                              datetime.datetime.strptime(sub[subi][1],
+                                                         "%Y-%m-%d %H:%M:%S.%f") - datetime.datetime.strptime(
+                                  val[1],
+                                  "%Y-%m-%d %H:%M:%S.%f")).total_seconds() * 1000
+                if (subi + 1 < len(sub)):
+                    subi = subi + 1
+                nbsb = 1
+
+
+            elif val[0] == skip[skipi]:
+                skiptot += (
+                               datetime.datetime.strptime(skip[skipi][1],
+                                                          "%Y-%m-%d %H:%M:%S.%f") - datetime.datetime.strptime(
+                                   val[1],
+                                   "%Y-%m-%d %H:%M:%S.%f")).total_seconds() * 1000
+                if (skipi + 1 < len(sub)):
+                    skipi = skipi + 1
+                nbsk = 1
+
+    return subresult, skipresult
+
+
+# <------------------ Textual tools ------------------>
 
 
 @app.route('/getnext')
 def getnext():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT url FROM user_type  ORDER BY RAND() LIMIT 1")
+    if (session.get('last') is None):
+
+        cursor.execute("SELECT url,idtype FROM user_type ORDER BY RAND() LIMIT 1")
+    else:
+        cursor.execute("SELECT url,idtype FROM user_type where not idtype='"+str(session.get('last'))+"' ORDER BY RAND() LIMIT 1")
     data = cursor.fetchone()
+
+    session['last']=data[1]
     cursor.close()
     con.close()
-    return data
+    return data[0]
 
 
 @app.route('/saveimg', methods=['POST'])
@@ -338,7 +456,6 @@ def saveimg():
     bg.paste(img, img)
     nb = len(pics.getimgs("./static/assets/img/datasets/textualsaved/")) + 2
     path = "assets/img/datasets/textualsaved/" + str(nb) + ".jpg"
-    print(path)
     bg.save("./static/" + path)
 
     con = mysql.connect()
@@ -347,7 +464,6 @@ def saveimg():
     cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
     con.commit()
     query = "SELECT idimage FROM image WHERE imagepath = '" + path + "'"
-    print(query)
     cursor.execute(query)
     session['idimg'] = cursor.fetchone()[0]
 
@@ -388,7 +504,6 @@ def getimgbyid():
 
     cursor.execute("SELECT imagepath FROM image WHERE idimage =" + str(action))
     data = cursor.fetchall()
-    print("lllllaaaa")
     for i in range(0, len(data)):
         result.append("static/" + str(data[i][0]))
 
@@ -444,7 +559,6 @@ def getid(ip):
         con.close()
         return data
     else:
-        print("LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         query = "SELECT iduser FROM user WHERE ipuser ='" + ip + "'"
         cursor.execute(query)
         data = cursor.fetchone()
@@ -469,7 +583,6 @@ def gettype(typename):
         typename = typename.replace(" ", "_")
 
     q = "SELECT idtype FROM type WHERE lower(label) LIKE '" + typename + "'"
-    print(q)
     cursor.execute(q)
     data = cursor.fetchone()
     if data is None:

@@ -48,6 +48,32 @@
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
 <script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var form = new FormData();
+        form.append("action", "");
+        $.ajax({
+            type: "POST",
+            url: "../getimgbytype",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                var test_array = eval("[" + data + "]");
+
+                for (i = 0; i < test_array[0].length; i++) {
+                    $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")
+
+
+                }
+            }
+        })
+
+
+    });
+
+
     $("#sh").on('input', function () {
 
         $("#fill").empty();
@@ -65,7 +91,6 @@
                 data: form,
                 success: function (data) {
                     var test_array = eval("[" + data + "]");
-                    console.log(test_array);
                     for (i = 0; i < test_array.length; i++) {
                         $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[i] + ">")
 
@@ -85,8 +110,6 @@
                 data: form,
                 success: function (data) {
                     var test_array = eval("[" + data + "]");
-                    console.log("LAAAAAAAAAA");
-                    console.log(test_array[0].length);
 
                     for (i = 0; i < test_array[0].length; i++) {
                         $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")

@@ -142,13 +142,11 @@
 
     function upload(form) {
 
-        console.log(form);
         if (form.get('local') == undefined && fileri == undefined) {
             alert("no file uploaded");
         } else {
 
 
-            //console.log($('#imgInp').val());
             $.ajax({
                 type: "POST",
                 url: "../presaveviz",
