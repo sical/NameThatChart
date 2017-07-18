@@ -44,7 +44,7 @@
                             <div class="switch">
                                 <label>
                                     D3js html
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="dj">
                                     <span class="lever"></span>
                                     JSON Image
                                 </label>
@@ -52,8 +52,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
             <div class="col-xs-12 col-sm-6 col-md-6">
 
                 <div class="card horizontal cardIcon ">
@@ -78,6 +78,7 @@
                 </div>
 
             </div>
+
         </div>
 
 
@@ -96,8 +97,6 @@
             </div>
 
 
-        <div class="row">
-
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-action">
@@ -115,23 +114,29 @@
                                             aria-label="Rendering engine: activate to sort column ascending"
                                             style="width: 276px;"><strong>#</strong>
                                         </th>
-                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1"
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                            rowspan="1"
                                             colspan="1" aria-label="Browser: activate to sort column ascending"
                                             style="width: 399px;">Number of Post
                                         </th>
-                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1"
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                            rowspan="1"
                                             colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                             style="width: 369px;">Number of Skip
                                         </th>
-                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1"
-                                            colspan="1" aria-label="Engine version: activate to sort column ascending"
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Engine version: activate to sort column ascending"
                                             style="width: 237px;">Number of submit
                                         </th>
-                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1"
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                            rowspan="1"
                                             colspan="1" aria-label="CSS grade: activate to sort column ascending"
                                             style="width: 173px;">Average submit time (ms)
                                         </th>
-                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1"
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                            rowspan="1"
                                             colspan="1" aria-label="CSS grade: activate to sort column ascending"
                                             style="width: 173px;">Average skip time (ms)
                                         </th>
@@ -147,7 +152,9 @@
                     </div>
                 </div>
             </div>
-                        <div class="col-md-6">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-action">
                         Multiple stats
@@ -158,7 +165,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-action">
@@ -170,10 +177,11 @@
                 </div>
             </div>
         </div>
-        <!-- /. PAGE INNER  -->
     </div>
+    <!-- /. PAGE INNER  -->
+</div>
 
-    <!-- /. PAGE WRAPPER  -->
+<!-- /. PAGE WRAPPER  -->
 </div>
 <!-- /. WRAPPER  -->
 <!-- JS Scripts-->
@@ -198,7 +206,7 @@
 
 <script src="{{ url_for('static', filename='assets/js/Lightweight-Chart/jquery.chart.js') }}"></script>
 
-<script src="{{ url_for('static',filename='assets/js/dataTables/jquery.dataTables.js')}}"></script>
+<script src="{{ url_for('static',filename='assets/js/dataTables/jquery.dataTables.js') }}"></script>
 
 
 <script type="text/javascript">
@@ -277,9 +285,13 @@
     $('.donut-chart').cssCharts({type: "donut"}).trigger('show-donut-chart');
 
     $("#up").click(function () {
-
-        window.location = "../upload"
-
+        var type = $("#dj").val();
+        console.log(type);
+        if (type == "on") {
+            window.location = "../upload"
+        } else {
+            window.location = "../uploadimg"
+        }
     });
 
     $("#down").click(function () {
@@ -356,6 +368,14 @@
         }
     });
 
+    $('#dj').change(function () {
+
+        if ($(this).val() == 'on') {
+            $(this).val('off');
+        } else {
+            $(this).val('on');
+        }
+    });
 
 </script>
 

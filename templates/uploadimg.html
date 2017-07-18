@@ -18,7 +18,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-<script type="text/javascript" src="https://github.com/seiyria/bootstrap-slider/blob/master/dist/bootstrap-slider.js"></script>
 {% include 'nav.html' %}
 
 
@@ -42,27 +41,18 @@
                         image Features form
                     </div>
                     <div class="card-content" id="features">
-                        <form id="canardlocal" style="margin-bottom:76px ">
+                        <form id="form" style="margin-bottom:76px ">
                             Type of visualization :
-                            <input type="text" name="name" id="epyt"
+                            <input type="text" name="name" id="name"
                                    placeholder="Title of the visualization">
-                            <input type="text" name="url" id="epyt"
+                            <input type="text" name="url" id="url"
                                    placeholder="URL of the picture">
-                            <select class="form-control" id="sel1">
+                            <select class="form-control" name="cat" id="sel">
                                 <option>None</option>
                                 <option>Standard</option>
                                 <option>Complex</option>
                                 <option>Historical</option>
                             </select>
-                            <label>difficulty</label>
-
-                            <input id="ex21" type="range"
-                                   max="3"
-                                   min="0"
-                                   step="1"
-                                   value="0"
-                                   />
-
                         </form>
 
                         <button class="waves-effect waves-light btn" id="send"> Submit</button>
@@ -102,6 +92,89 @@
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
 <script type="text/javascript">
+
+</script>
+
+<script type="text/javascript">
+    $("#send").click(function () {
+        var form = new FormData();
+        form.append("name", $("#name").val());
+        form.append("url", $("#url").val());
+        form.append("cat", $("#sel").val());
+
+        $.ajax({
+            type: "POST",
+            url: "../saveupimg",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function () {
+                window.location = "../admin"
+            }
+
+
+        });
+    });
+
+    $("#imgInp").change(function () {
+        console.log(this.files[0]);
+        upload(this.files[0]);
+    });
+
+    $(document).on('dragenter', '#drag', function () {
+        $(this).css('border', '3px dashed red');
+        return false;
+    });
+
+    $(document).on('dragover', '#drag', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).css('border', '3px dashed red');
+        return false;
+    });
+
+    $(document).on('dragleave', '#drag', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).css('border', '3px dashed green');
+        return false;
+    });
+
+    $(document).on('drop', '#drag', function (e) {
+        if (e.originalEvent.dataTransfer) {
+            if (e.originalEvent.dataTransfer.files.length) {
+                // Stop the propagation of the event
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).css('border', '3px dashed green');
+                // Main function to upload
+                fileri = e.originalEvent.dataTransfer.files
+            }
+        }
+        else {
+            $(this).css('border', '3px dashed #BBBBBB');
+        }
+        return false;
+    });
+
+    function upload(f) {
+        console.log(f.name);
+        var form = new FormData();
+         form.append("local", f);
+        $.ajax({
+            type: "POST",
+            url: "../upjsonimg",
+            enctype: 'mulipart/form-data',
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                console.log("ok")
+            }
+        });
+
+        return false;
+    }
 
 </script>
 

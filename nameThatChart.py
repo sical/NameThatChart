@@ -11,6 +11,7 @@ from flaskext.mysql import MySQL
 
 import d3jsdownload as dl
 import imagePrep as pics
+import wget
 
 app = Flask(__name__)
 mysql = MySQL()
@@ -94,6 +95,11 @@ def textual():
     return render_template('textual.html')
 
 
+@app.route('/textualimg')
+def textualimg():
+    return render_template('textualimg.html')
+
+
 @app.route('/test')
 def test():
     return render_template('biovisualize:_Simple_Binary_Tree.html')
@@ -104,9 +110,19 @@ def admin():
     return render_template('admin.html')
 
 
+@app.route('/hybrid')
+def hybrid():
+    a = randint(0, 100)
+    if a > 50:
+        return render_template("textual.html")
+    else:
+        return render_template('textualimg.html')
+
+
 @app.route('/upload')
 def upload():
     return render_template('upload.html')
+
 
 @app.route('/uploadimg')
 def uploadimg():
@@ -282,6 +298,19 @@ def getfirstrow():
     return json.dumps(data)
 
 
+@app.route('/getnextimg')
+def getnextimg():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT imagepath,idimage FROM image WHERE `from` ='json' ORDER BY rand() LIMIT 1")
+    data = cursor.fetchone()
+    cursor.close()
+    con.close()
+    session['idimg'] = data[1]
+    print(data[0])
+    return "static/" + str(data[0])
+
+
 @app.route('/userstats')
 def getskip():
     con = mysql.connect()
@@ -306,7 +335,6 @@ def getskip():
         "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='submitted' ORDER BY posted DESC,iduser,idimage ASC")
     subd = cursor.fetchall()
     a, b = getavg(pl, skipd, subd)
-
     res = []
     i = 0
 
@@ -328,6 +356,77 @@ def getskip():
     cursor.close()
     con.close()
     return json.dumps(res)
+
+
+@app.route('/saveupimg', methods=['POST'])
+def saveupimg():
+    title = request.form['name']
+    url = request.form['url']
+    cat = request.form['cat']
+    nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+
+    name = wget.detect_filename(url)
+    temp = name.split('.')
+
+    ext = str(temp[len(temp) - 1])
+
+    title = title.replace(" ", "_")
+    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "_" + title + "." + ext)
+
+    wget.download(url, q)
+    q = q.replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
+    con = mysql.connect()
+    cursor = con.cursor()
+    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','json','" + title + "','" + cat + "')"
+    print(query)
+    cursor.execute(query)
+    con.commit()
+    cursor.close()
+    con.close()
+
+    return 'ok'
+
+
+@app.route("/upjsonimg", methods=['POST'])
+def upjonimg():
+    file = request.files['local']
+    filestring = ""
+    for line in file:
+        filestring += str(line)[2:][:-3]
+
+    data = json.loads(filestring)
+
+    nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+
+    name = wget.detect_filename(data['url'])
+    temp = name.split('.')
+
+    ext = str(temp[len(temp) - 1])
+
+    title = data["title"].replace(" ", "_")
+    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "_" + title + "." + ext)
+
+    wget.download(data['url'], q)
+    q = q.replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
+    con = mysql.connect()
+    cursor = con.cursor()
+    if data['category'] is not None:
+        if data['dificulty'] is not None:
+            query = "INSERT INTO image (imagepath,`from`,title,category,dificulty) VALUES ('" + q + "','json','" + title + "','" + \
+                    data['category'] + "','" + data["dificulty"] + "')"
+        else:
+            query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','json','" + title + "','" + \
+                    data['category'] + "')"
+    else:
+        query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + q + "','json','" + title + "')"
+
+    print(query)
+    cursor.execute(query)
+    con.commit()
+    cursor.close()
+    con.close()
+
+    return 'ok'
 
 
 # Export database
@@ -390,11 +489,11 @@ def getavg(page, skip, sub):
                                    val[1],
                                    "%Y-%m-%d %H:%M:%S.%f")).total_seconds() * 1000
 
-                if (skipi + 1 < len(sub)):
+                if (skipi + 1 < len(skip)):
                     skipi = skipi + 1
                 nbsk = nbsk + 1
         else:
-
+            print(nbsb)
             if nbsb > 0:
                 subresult.append(subtot / nbsb)
 
@@ -424,9 +523,15 @@ def getavg(page, skip, sub):
                                                           "%Y-%m-%d %H:%M:%S.%f") - datetime.datetime.strptime(
                                    val[1],
                                    "%Y-%m-%d %H:%M:%S.%f")).total_seconds() * 1000
-                if (skipi + 1 < len(sub)):
+                if (skipi + 1 < len(skip)):
                     skipi = skipi + 1
                 nbsk = 1
+        if len(subresult) == 0:
+            if nbsb > 0:
+                subresult.append(subtot / nbsb)
+
+        if nbsk > 0:
+            skipresult.append(skiptot / nbsk)
 
     return subresult, skipresult
 
@@ -458,12 +563,12 @@ def saveimg():
     img = Image.open(result)
     bg = Image.new("RGB", img.size, (255, 255, 255))
     bg.paste(img, img)
-    nb = len(pics.getimgs("./static/assets/img/datasets/textualsaved/")) + 2
-    path = "assets/img/datasets/textualsaved/" + str(nb) + ".jpg"
-    bg.save("./static/" + path)
-
     con = mysql.connect()
     cursor = con.cursor()
+    nb = len(pics.getimgs("./static/assets/img/datasets/textualsaved/")) + 2
+    path = "assets/img/datasets/textualsaved/" + str(nb) + ".jpg"
+    print(path)
+    bg.save("./static/" + path)
 
     cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
     con.commit()
@@ -547,6 +652,7 @@ def getnextpic():
     cursor.close()
     con.close()
     return data[0]
+
 
 def getposted(id):
     con = mysql.connect()
