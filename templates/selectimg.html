@@ -2,7 +2,7 @@
 
 <div id="page-wrapper" style="padding-top: 0%">
     <div style="margin-top: -0%" class="header">
-        <h1 id="title" class="page-header" id="brand">
+        <h1 class="page-header" id="brand">
             Select the picture which best describe :
         </h1>
 
@@ -59,7 +59,7 @@
             data:form,
             success: function (data) {
                 $("#fill").empty();
-                $("#title").text(" Select the picture which best describe : ");
+                $("#brand").text(" Select the picture which best describe : ");
                 fillthem();
 
             }
@@ -77,7 +77,7 @@
             success: function (data) {
                 info = JSON.parse(data);
                 console.log(info.imgs);
-                $("#title").append(info.name);
+                $("#brand").append(info.name);
                 type = info.idtype;
                 info.imgs.forEach(function (img) {
                     console.log('lalalala');
