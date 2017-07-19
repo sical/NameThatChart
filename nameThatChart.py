@@ -94,6 +94,9 @@ def temp():
 def textual():
     return render_template('textual.html')
 
+@app.route('/swipes')
+def swipes():
+    return render_template('swipes.html')
 
 @app.route('/textualimg')
 def textualimg():
