@@ -1,30 +1,65 @@
-﻿
-{% include 'nav.html' %}
+﻿{% include 'nav.html' %}
 
 <div id="page-wrapper" style="padding-top: 0%">
     <div style="margin-top: -0%" class="header">
-        <h1 style="font-size: 26px;margin-top: -15%" class="page-header">
-            Name that chart
+        <h1 id="title" style="font-size: 26px;margin-top: -15%" class="page-header">
+            Does this belongs in :
         </h1>
 
     </div>
 
     <div id="page-inner">
 
-        <div class="row">
-
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-content">
-
-                    </div>
+        <div class="card-content" id="container">
+            <div class="wrap">
+                <div id="tinderslide">
+                    <ul>
+                        <li class="pane1"
+                            style=" background-position:center;background-repeat: no-repeat;background-size:cover;width:100%;height: 60%;position: absolute;z-index: 20">
+                            <div class="img"></div>
+                            <div id="1_txt"></div>
+                            <div class="like"></div>
+                            <div class="dislike"></div>
+                        </li>
+                        <li class="pane2"
+                            style=" background-position:center;background-repeat: no-repeat;background-size:cover;width:100%;height: 60%;position: absolute;z-index: 25">
+                            <div class="img"></div>
+                            <div id="2_txt"></div>
+                            <div class="like"></div>
+                            <div class="dislike"></div>
+                        </li>
+                        <li class="pane3"
+                            style=" background-position:center;background-repeat: no-repeat;background-size:cover;width:100%;height: 60%;position: absolute;z-index: 30">
+                            <div class="img"></div>
+                            <div id="3_txt"></div>
+                            <div class="like"></div>
+                            <div class="dislike"></div>
+                        </li>
+                        <li class="pane4"
+                            style=" background-position:center;background-repeat: no-repeat;background-size:cover;width:100%;height: 60%;position: absolute;z-index: 35">
+                            <div class="img"></div>
+                            <div id="4_txt"></div>
+                            <div class="like"></div>
+                            <div class="dislike"></div>
+                        </li>
+                        <li class="pane5"
+                            style="  background-position:center;background-repeat: no-repeat;background-size:cover;width:100%;height: 60%;position: absolute;z-index: 40">
+                            <div class="img"></div>
+                            <div id="5_txt"></div>
+                            <div class="like"></div>
+                            <div class="dislike"></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- /. PAGE INNER  -->
     </div>
+</div>
+</div>
+<!-- /. PAGE INNER  -->
+</div>
 
-    <!-- /. PAGE WRAPPER  -->
+<!-- /. PAGE WRAPPER  -->
 </div>
 <!-- /. WRAPPER  -->
 
@@ -37,8 +72,67 @@
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
 
-</div>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<!-- transform2d lib -->
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.transform2d.js') }}"></script>
 
+<!-- jTinder lib -->
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.jTinder.js') }}"></script>
+
+
+<script type="text/javascript">
+    var cat = ["reaching ..."];
+    var nb = 5;
+    var info = []
+
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "GET",
+            url: "../getfive",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                info = JSON.parse(data);
+                var i = 1;
+                info.forEach(function (img) {
+                    cat.push(img.label);
+                    $(".pane" + i).css("background-image", 'url("' + img.path + '")');
+                    $(".pane" + i).attr("value", img.idimage);
+                    $("#" + i + "_txt").text(img.label);
+                    $("#title").text("Does this belongs in " + cat[nb] + " category");
+                    i++;
+                })
+
+            }
+        });
+
+
+    });
+
+    $("#tinderslide").jTinder({
+
+        onDislike: function (item) {
+            $("#title").text("Does this belongs in " + cat[nb - 1] + " category");
+            nb = nb - 1;
+            info[item.index()].idimage
+        },
+
+        onLike: function (item) {
+            nb = nb - 1;
+            $("#title").text("Does this belongs in " + cat[nb - 1] + " category");
+            $('#status').html('Like image ' + (item.index() + 1));
+        },
+        animationRevertSpeed: 200,
+        animationSpeed: 400,
+        threshold: 1,
+        likeSelector: '.like',
+        dislikeSelector: '.dislike'
+    });
+
+
+</script>
 </body>
+
 
 </html>

@@ -90,13 +90,20 @@ def temp():
     return render_template('multiple.html')
 
 
+@app.route('/temporary')
+def temporary():
+    return render_template('temporary.html')
+
+
 @app.route('/textual')
 def textual():
     return render_template('textual.html')
 
+
 @app.route('/swipes')
 def swipes():
     return render_template('swipes.html')
+
 
 @app.route('/textualimg')
 def textualimg():
@@ -557,12 +564,14 @@ def saveselect():
     idimg = request.form['idimage']
 
     print(str(idtype) + " TYPE")
-    print(str(idimg)+ "IMAGE")
+    print(str(idimg) + "IMAGE")
 
     con = mysql.connect()
     cursor = con.cursor()
 
-    cursor.execute("INSERT INTO selection (idimage,idtype,iduser) VALUES (" + str(idimg) + "," + str(idtype) + "," + str(iduser) + ")")
+    cursor.execute(
+        "INSERT INTO selection (idimage,idtype,iduser) VALUES (" + str(idimg) + "," + str(idtype) + "," + str(
+            iduser) + ")")
 
     cursor.close()
     con.commit()
@@ -687,6 +696,33 @@ def getimgbyid():
     con.close()
     return json.dumps(result)
 
+
+@app.route('/getfive', )
+def getfive():
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute("SELECT imagepath,idimage,max(number),idtype  "
+                   "FROM (SELECT image.idimage,imagepath ,count(idtype) AS number,idtype FROM selection INNER JOIN image ON image.idimage = selection.idimage "
+                   "GROUP BY image.idimage, idtype) AS temp GROUP BY idimage ORDER BY rand() LIMIT 5")
+    data = cursor.fetchall()
+
+    result = "[ "
+
+    for i in range(0, len(data)):
+        cursor.execute("SELECT label FROM type WHERE idtype =" + str(data[i][3]))
+        temp = cursor.fetchone()[0]
+        result += '{' \
+                  '"path" : "static/' + str(data[i][0]) + '",' \
+                                                          '"label" : "' + temp + '",' \
+                                                                                 '"idimage": ' + str(data[i][1]) + ',' \
+                                                                                 '"idimage": ' + str(data[i][3]) + '' \
+                                                                                                                   '},'
+    result = result[:-1]
+    result+=" ]"
+    cursor.close()
+    con.close()
+    return result
 
 @app.route('/getimgbytype', methods=['POST'])
 def getimgbytype():
