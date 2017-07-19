@@ -134,6 +134,11 @@ def hum():
     return render_template('preview/1_7.html')
 
 
+@app.route('/selectimg')
+def selectimg():
+    return render_template('selectimg.html')
+
+
 @app.route('/preview')
 def preview():
     return render_template('preview.html')
@@ -196,16 +201,16 @@ def savemultiple():
     idt = cursor.fetchone()
     idu = getid(request.environ['REMOTE_ADDR'])
 
-    cursor.execute("SELECT iduser FROM multiplevote WHERE iduser=" + str(idu[0]) + " AND idimage =" + str(idm[0]) + "")
+    cursor.execute("SELECT iduser FROM multiplevote WHERE iduser=" + str(idu) + " AND idimage =" + str(idm[0]) + "")
     data = cursor.fetchone()
 
     if data is None:
-        final = "INSERT INTO multiplevote (iduser,idimage,idtype) VALUES (" + str(idu[0]) + "," + str(
+        final = "INSERT INTO multiplevote (iduser,idimage,idtype) VALUES (" + str(idu) + "," + str(
             idm[0]) + "," + str(
             idt[0]) + ")"
     else:
         final = "UPDATE multiplevote SET idtype =" + str(idt[0]) + " WHERE iduser=" + str(
-            idu[0]) + " AND idimage =" + str(idm[0])
+            idu) + " AND idimage =" + str(idm[0])
     cursor.execute(final)
     cursor.close()
     con.commit()
@@ -223,7 +228,7 @@ def savetext():
     cursor = con.cursor()
 
     idim = session.get('idimg')
-    idu = getid(request.environ['REMOTE_ADDR'])[0]
+    idu = getid(request.environ['REMOTE_ADDR'])
     idt = gettype(name)[0]
 
     query = "INSERT INTO textvote (iduser,time,date,event,idtype,idimage) VALUES(" + str(idu) + ",'" + str(
@@ -249,7 +254,7 @@ def getinf():
 def presaveviz():
     file = request.files['local']
     name = request.form['type']
-    id = getid(request.environ['REMOTE_ADDR'])[0]
+    id = getid(request.environ['REMOTE_ADDR'])
     nb = getposted(id) + 1
     session['type'] = name
     session['nb'] = nb
@@ -271,7 +276,7 @@ def savepreview():
     name = session.get('filename') + ".html"
     os.rename(os.path.join(os.getcwd(), "templates/preview/" + name), os.path.join(os.getcwd(), "templates/" + name))
     idt = gettype(session.get('type'))[0]
-    idu = getid(request.environ['REMOTE_ADDR'])[0]
+    idu = getid(request.environ['REMOTE_ADDR'])
 
     con = mysql.connect()
     cursor = con.cursor()
@@ -392,36 +397,42 @@ def upjonimg():
     file = request.files['local']
     filestring = ""
     for line in file:
+        print(str(line)[2:][:-3])
         filestring += str(line)[2:][:-3]
 
     data = json.loads(filestring)
-
-    nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
-
-    name = wget.detect_filename(data['url'])
-    temp = name.split('.')
-
-    ext = str(temp[len(temp) - 1])
-
-    title = data["title"].replace(" ", "_")
-    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "_" + title + "." + ext)
-
-    wget.download(data['url'], q)
-    q = q.replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
     con = mysql.connect()
     cursor = con.cursor()
-    if data['category'] is not None:
-        if data['dificulty'] is not None:
-            query = "INSERT INTO image (imagepath,`from`,title,category,dificulty) VALUES ('" + q + "','json','" + title + "','" + \
-                    data['category'] + "','" + data["dificulty"] + "')"
-        else:
-            query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','json','" + title + "','" + \
-                    data['category'] + "')"
-    else:
-        query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + q + "','json','" + title + "')"
+    for obj in data:
+        print(obj["url"])
+        if "url" in obj:
 
-    print(query)
-    cursor.execute(query)
+            nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+
+            name = wget.detect_filename(obj['url'])
+            temp = name.split('.')
+
+            ext = str(temp[len(temp) - 1])
+            if "title" in obj:
+                title = obj["title"].replace(" ", "_")
+                q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "_" + title + "." + ext)
+            else:
+                title = ""
+                q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "." + ext)
+            wget.download(obj['url'], q)
+            q = q.replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
+
+            if 'category' in obj:
+                if 'dificulty' in obj:
+                    query = "INSERT INTO image (imagepath,`from`,title,category,dificulty) VALUES ('" + q + "','json','" + title + "','" + \
+                            obj['category'] + "','" + obj["dificulty"] + "')"
+                else:
+                    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','json','" + title + "','" + \
+                            obj['category'] + "')"
+            else:
+                query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + q + "','json','" + title + "')"
+
+            cursor.execute(query)
     con.commit()
     cursor.close()
     con.close()
@@ -536,6 +547,59 @@ def getavg(page, skip, sub):
     return subresult, skipresult
 
 
+@app.route('/saveselect', methods=['POST'])
+def saveselect():
+    iduser = getid(request.environ['REMOTE_ADDR'])
+    idtype = request.form['idtype']
+    idimg = request.form['idimage']
+
+    print(str(idtype) + " TYPE")
+    print(str(idimg)+ "IMAGE")
+
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute("INSERT INTO selection (idimage,idtype,iduser) VALUES (" + str(idimg) + "," + str(idtype) + "," + str(iduser) + ")")
+
+    cursor.close()
+    con.commit()
+    con.close()
+
+    return 'ok'
+
+
+@app.route('/getselect')
+def getselect():
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute(
+        "SELECT type.idtype,label FROM sql11185116.textvote INNER JOIN type ON type.idtype = textvote.idtype WHERE type.idtype IS NOT NULL GROUP BY type.idtype,label HAVING count(type.idtype) > 3 ORDER BY rand() LIMIT 1")
+    idtype = cursor.fetchone()
+
+    cursor.execute(
+        "SELECT imagepath,image.idimage FROM textvote INNER JOIN image ON image.idimage = textvote.idimage WHERE idtype = " + str(
+            idtype[0]) + " ORDER BY rand() LIMIT 9")
+
+    imgs = cursor.fetchall()
+    cursor.close()
+    con.close()
+    result = '{' \
+             '"name":"' + idtype[1] + '", ' \
+                                      '"idtype":"' + str(idtype[0]) + '", ' \
+                                                                      '"imgs": ['
+
+    for row in imgs:
+        result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + '},'
+
+    result = result[:-1]
+    result += ']' \
+              '}'
+    print(result)
+
+    return result
+
+
 # <------------------ Textual tools ------------------>
 
 
@@ -588,7 +652,7 @@ def logaction():
     con = mysql.connect()
     cursor = con.cursor()
     idim = session.get('idimg')
-    idu = getid(request.environ['REMOTE_ADDR'])[0]
+    idu = getid(request.environ['REMOTE_ADDR'])
 
     q = "INSERT INTO textvote (iduser,time,date,event,idimage) VALUES (" + str(idu) + ",'" + str(
         timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ")"
@@ -686,7 +750,7 @@ def getid(ip):
         cursor.execute(query)
         data = cursor.fetchone()
         con.close()
-        return data
+        return data[0]
 
 
 def getrandomdataint():

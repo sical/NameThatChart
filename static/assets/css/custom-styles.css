@@ -56,12 +56,28 @@ svg {
 
 @media only screen and (max-device-width: 550px) {
 
+    #title {
+        font-size: 16px;
+        margin-top: -20%;
+        margin-bottom: -10%;
+    }
+
     #fom {
         margin-top: 12%;
     }
 
     .card-content {
         max-width: 350px;
+    }
+
+    #imgdisp {
+        width: 40%;
+        height: auto;
+    }
+
+    #imgsel {
+        margin: 2px;
+        width: 45%;
     }
 
     .top-navbar .navbar-brand {
@@ -72,7 +88,7 @@ svg {
     }
 
     #dire {
-        margin: 0px 2px 2px 2px;
+        margin: 0 2px 2px 2px;
     }
 
     svg {
@@ -114,6 +130,22 @@ svg {
 
     }
 
+    #title {
+        font-size: 13px;
+        margin-top: -25%;
+        margin-bottom: -5%;
+    }
+
+    #imgsel {
+        width: 40%;
+        margin: 3px;
+    }
+
+    #imgdisp {
+        width: 50%;
+        height: auto;
+    }
+
     #save {
         width: 60px;
     }
@@ -134,6 +166,7 @@ svg {
         margin-left: -27%;
         width: 150%;
         margin-top: -8%;
+        text-align: center;
     }
 
     .header {
@@ -247,6 +280,21 @@ svg {
 
 @media only screen and (min-device-width: 769px) {
 
+    #imgdisp {
+        width: 30%;
+        height: auto;
+    }
+
+    #imgsel {
+        width: 30%;
+        margin: 5px;
+    }
+
+    #title {
+        font-size: 12px;
+        margin-top: -15%;
+    }
+
     .top-navbar .navbar-brand {
         color: #fff;
         width: 260px;
@@ -283,7 +331,8 @@ svg {
     .navbar-header {
         width: inherit;
     }
-    #btn{
+
+    #btn {
         display: inline-block;
     }
 
@@ -312,6 +361,11 @@ svg {
         width: auto;
         height: 55px;
     }
+}
+
+.selec {
+    border: solid 2px lightgreen;
+
 }
 
 #brand {

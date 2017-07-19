@@ -1,0 +1,101 @@
+﻿{% include 'nav.html' %}
+
+<div id="page-wrapper" style="padding-top: 0%">
+    <div style="margin-top: -0%" class="header">
+        <h1 id="title" class="page-header">
+            Select the picture which best describe :
+        </h1>
+
+    </div>
+
+    <h1 class="page-header" id="brand">
+        Describe this chart with your own words
+    </h1>
+
+    <div id="page-inner">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content" id="fill">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+
+    <!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<script type="text/javascript">
+    var type;
+    $(document).ready(function () {
+        fillthem();
+    });
+
+
+    $('body').on('click', 'img', function () {
+        console.log("LAAAAAAAAA");
+        $('.selec').removeClass('selec');
+        $(this).addClass('selec');
+
+        var form = new FormData();
+        form.append("idimage", $(this).attr("value"));
+        form.append("idtype", type);
+
+        $.ajax({
+            type: "POST",
+            url: "../saveselect",
+            processData: false,
+            contentType: false,
+            data:form,
+            success: function (data) {
+                $("#fill").empty();
+                $("#title").text(" Select the picture which best describe : ");
+                fillthem();
+
+            }
+        })
+
+    });
+
+
+    function fillthem() {
+        $.ajax({
+            type: "GET",
+            url: "../getselect",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                info = JSON.parse(data);
+                console.log(info.imgs);
+                $("#title").append(info.name);
+                type = info.idtype;
+                info.imgs.forEach(function (img) {
+                    console.log('lalalala');
+                    $("#fill").append("<img id='imgsel' value='" + img.id + "' src='static/" + img.path + "' />")
+                })
+
+            }
+        });
+    }
+</script>
+
+
+</div>
+
+</body>
+
+</html>

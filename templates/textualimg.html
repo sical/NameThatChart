@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Name That Chart</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/materialize/css/materialize.min.css') }}"
-          media="screen,projection"/>
-    <!-- Bootstrap Styles-->
-    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
-    <!-- FontAwesome Styles-->
-    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
-    <!-- Custom Styles-->
-    <link href="{{ url_for('static', filename='assets/css/custom-styles.css') }}" rel="stylesheet"/>
-    <!-- Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-</head>
-<body>
 {% include 'nav.html' %}
 
 <!-- /. NAV SIDE  -->
@@ -39,7 +19,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-content" style="padding-bottom:5%">
-                        <img style="width: 20%;height: auto" id="dispres" src=""/>
+                        <img id="imgdisp" src=""/>
                         <div class="row">
 
 
@@ -47,29 +27,31 @@
                                 <input id="value" type="text" name="type" placeholder="What is this chart ?"
                                        maxlength="50"/>
                                 <div id="btn">
-                                <button id="skip" class="waves-effect waves-light btn grey">skip
-                                </button>
-                                <button id="save" class="waves-effect waves-light btn ">
-                                    save
-                                </button>
+                                    <button id="skip" class="waves-effect waves-light btn grey">skip
+                                    </button>
+                                    <button id="save" class="waves-effect waves-light btn ">
+                                        save
+                                    </button>
                                     <div>
+                                    </div>
+
+
+                                </div>
                             </div>
-
-
                         </div>
+
                     </div>
+
+
                 </div>
 
+
+                <!-- /. PAGE INNER  -->
             </div>
 
-
+            <!-- /. PAGE WRAPPER  -->
         </div>
-
-
-        <!-- /. PAGE INNER  -->
     </div>
-
-    <!-- /. PAGE WRAPPER  -->
 </div>
 <!-- /. WRAPPER  -->
 <!-- JS Scripts-->
@@ -92,7 +74,7 @@
             processData: false,
             success: function (data) {
 
-                $("#dispres").attr("src", data);
+                $("#imgdisp").attr("src", data);
                 furm = new FormData();
                 furm.append("action", "page loaded");
                 $.ajax({
@@ -138,7 +120,7 @@
                         success: function (data) {
 
 
-                            $("#dispres").attr("src", data);
+                            $("#imgdisp").attr("src", data);
                         }
                     });
                 }
@@ -169,7 +151,7 @@
                 success: function (data) {
 
 
-                    $("#dispres").attr("src", data);
+                    $("#imgdisp").attr("src", data);
                 }
             });
         }
