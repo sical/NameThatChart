@@ -140,6 +140,11 @@ def upload():
     return render_template('upload.html')
 
 
+@app.route('/whatismyid')
+def whatismyid():
+    return str(getid(request.environ["REMOTE_ADDR"]))
+
+
 @app.route('/uploadimg')
 def uploadimg():
     return render_template('uploadimg.html')
