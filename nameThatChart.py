@@ -670,6 +670,7 @@ def logaction():
     con = mysql.connect()
     cursor = con.cursor()
     idim = session.get('idimg')
+    print(request.environ['REMOTE_ADDR'])
     idu = getid(request.environ['REMOTE_ADDR'])
 
     q = "INSERT INTO textvote (iduser,time,date,event,idimage) VALUES (" + str(idu) + ",'" + str(

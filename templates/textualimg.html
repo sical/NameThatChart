@@ -93,7 +93,10 @@
 
         var text = $("#value").val();
         $("#value").val('');
+
         $("#pop").show();
+        $("#pop").delay(4300).fadeOut(500);
+
         var form = new FormData();
 
         var reg = /[\(,\)\\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
@@ -175,6 +178,13 @@
             }
         }
     });
+
+    window.onkeydown = function (e) {
+        var code = e.keyCode ? e.keyCode : e.which;
+        if (code === 13) { //up key
+            $("#save").click()
+        }
+    };
 </script>
 
 </body>
