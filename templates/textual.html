@@ -151,6 +151,8 @@
         if (text != "") {
             $("#value").val('');
             $("#pop").show();
+
+            $("#pop").delay(4300).fadeOut(500);
             var form = new FormData();
 
             var reg = /[\(,\)\'\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;

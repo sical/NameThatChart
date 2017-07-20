@@ -7,11 +7,13 @@ from random import randint
 
 from PIL import Image
 from flask import Flask, request, session, render_template
+from flask import url_for
 from flaskext.mysql import MySQL
 
 import d3jsdownload as dl
 import imagePrep as pics
 import wget
+from flask import send_from_directory
 
 app = Flask(__name__)
 mysql = MySQL()
@@ -84,6 +86,10 @@ def maj():
 def hello_world():
     return render_template('index.html')
 
+
+@app.route('/nav')
+def na():
+    return render_template('nav.html')
 
 @app.route('/multiple')
 def temp():
@@ -716,13 +722,34 @@ def getfive():
                   '"path" : "static/' + str(data[i][0]) + '",' \
                                                           '"label" : "' + temp + '",' \
                                                                                  '"idimage": ' + str(data[i][1]) + ',' \
-                                                                                 '"idimage": ' + str(data[i][3]) + '' \
-                                                                                                                   '},'
+                                                                                                                   '"idtype": ' + str(
+            data[i][3]) + '' \
+                          '},'
     result = result[:-1]
-    result+=" ]"
+    result += " ]"
     cursor.close()
     con.close()
     return result
+
+
+@app.route('/saveswipe', methods=['POST'])
+def saveswipe():
+    idimage = request.form["idimage"]
+    vote = request.form["vote"]
+    idtype = request.form["idtype"]
+    iduser = getid(request.environ['REMOTE_ADDR'])
+
+
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute("insert into swipe (idimage,idtype,iduser,vote) values ("+str(idimage)+","+str(idtype)+","+str(iduser)+","+str(to_bool(vote))+")")
+
+    cursor.close()
+    con.commit()
+    con.close()
+    return 'ok'
+
 
 @app.route('/getimgbytype', methods=['POST'])
 def getimgbytype():
@@ -833,6 +860,9 @@ def gettype(typename):
             con.close()
     return data
 
+
+def to_bool(s):
+    return 1 if s == 'true' else 0
 
 def gettimes():
     now = datetime.datetime.now()
