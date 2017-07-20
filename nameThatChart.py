@@ -91,6 +91,7 @@ def hello_world():
 def na():
     return render_template('nav.html')
 
+
 @app.route('/multiple')
 def temp():
     return render_template('multiple.html')
@@ -116,6 +117,47 @@ def textualimg():
     return render_template('textualimg.html')
 
 
+@app.route('/quizz')
+def quizz():
+    temp = ['swipes', 'textualimg', 'multiple', 'selectimg']
+
+    if session.get("page") is None:
+        session['page'] = 0
+        session['note'] = 0
+        session['id'] = getid(request.environ["REMOTE_ADDR"])
+    else:
+        session['page'] += 1
+    nb = session.get("page")
+
+    return render_template(temp[nb] + ".html")
+
+
+@app.route('/savenote', methods=['POST'])
+def savenote():
+    session['note'] = int(request.form["note"]) + int(session.get("note"))
+    print(session.get("page"))
+    if (session['page'] == 3):
+
+        note = session['note']
+        lvl = 0
+        if note > 11:
+            lvl = 2
+        elif note > 5:
+            lvl = 1
+        con = mysql.connect()
+        cursor = con.cursor()
+
+        cursor.execute(" UPDATE  `user` SET lvl ='" + str(lvl) + "', taskforce ='0' WHERE iduser =" + str(session.get('id')))
+        cursor.close()
+
+        session["lvl"] = str(lvl)
+        session["task"] = str(int(50 * lvl))
+        con.commit()
+        con.close()
+
+    return 'ok'
+
+
 @app.route('/test')
 def test():
     return render_template('biovisualize:_Simple_Binary_Tree.html')
@@ -133,6 +175,42 @@ def hybrid():
         return render_template("textual.html")
     else:
         return render_template('textualimg.html')
+
+
+@app.route('/mainraw')
+def mainraw():
+    a = randint(0, 300)
+    if a < 100:
+        if randint(0, 100) < 50:
+            return render_template("textual.html")
+        else:
+            return render_template('textualimg.html')
+    elif a < 200:
+        return render_template('selectimg.html')
+    else:
+        return render_template('swipes.html')
+
+
+@app.route('/main')
+def main():
+
+    print(session.get("task"))
+    print(session.get("lvl"))
+    if int(session.get("task")) > 80 and int(session.get("lvl")) > 0:
+        session['task'] = getcost(0,int(session.get("lvl")))
+        if randint(0, 100) < 50:
+            return render_template("textual.html")
+        else:
+            return render_template('textualimg.html')
+    elif int(session.get("task")) > 50 and int(session.get("lvl")) > 0:
+        session['task'] = getcost(1, int(session.get("lvl")))
+        return render_template('selectimg.html')
+    elif int(session.get("task")) > 50 and int(session.get("lvl")) == 0:
+        session['task'] = getcost(1, int(session.get("lvl")))
+        return render_template('selectimg.html')
+    else:
+        session['task'] = getcost(2, int(session.get("lvl")))
+        return render_template('swipes.html')
 
 
 @app.route('/upload')
@@ -745,11 +823,12 @@ def saveswipe():
     idtype = request.form["idtype"]
     iduser = getid(request.environ['REMOTE_ADDR'])
 
-
     con = mysql.connect()
     cursor = con.cursor()
 
-    cursor.execute("insert into swipe (idimage,idtype,iduser,vote) values ("+str(idimage)+","+str(idtype)+","+str(iduser)+","+str(to_bool(vote))+")")
+    cursor.execute(
+        "INSERT INTO swipe (idimage,idtype,iduser,vote) VALUES (" + str(idimage) + "," + str(idtype) + "," + str(
+            iduser) + "," + str(to_bool(vote)) + ")")
 
     cursor.close()
     con.commit()
@@ -870,10 +949,38 @@ def gettype(typename):
 def to_bool(s):
     return 1 if s == 'true' else 0
 
+
 def gettimes():
     now = datetime.datetime.now()
     timestamp = str(time.mktime(now.timetuple())).replace(".0", "")
     return str(now)[:-3], timestamp
+
+
+def getcost(task, lvl):
+    cost = 0
+    if lvl == 2:
+        if task == 0:
+            cost = -10
+        elif task == 1:
+            cost = -5
+        else:
+            cost = + 30
+    elif lvl == 2:
+        if task == 0:
+            cost = -15
+        elif task == 1:
+            cost = -10
+        else:
+            cost = + 20
+    else:
+        if task == 0:
+            cost = -50
+        elif task == 1:
+            cost = -20
+        else:
+            cost = +6
+
+    return cost
 
 
 if __name__ == '__main__':

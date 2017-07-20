@@ -66,71 +66,98 @@
 <script type="text/javascript">
     var started = true;
     $(document).ready(function () {
-        console.log(window.location.href);
+                if (window.location.href.indexOf('quizz') !== -1) {
+                    $("#imgdisp").attr("src", "static/assets/img/datasets/json/11.JPG");
+                    $("#skip").hide();
+                } else {
 
-        $.ajax({
-            type: "GET",
-            url: "../getnextimg",
-            processData: false,
-            success: function (data) {
+                    $.ajax({
+                        type: "GET",
+                        url: "../getnextimg",
+                        processData: false,
+                        success: function (data) {
 
-                $("#imgdisp").attr("src", data);
-                furm = new FormData();
-                furm.append("action", "page loaded");
-                $.ajax({
-                    type: "POST",
-                    url: "../logaction",
-                    processData: false,
-                    contentType: false,
-                    data: furm
-                });
+                            $("#imgdisp").attr("src", data);
+                            furm = new FormData();
+                            furm.append("action", "page loaded");
+                            $.ajax({
+                                type: "POST",
+                                url: "../logaction",
+                                processData: false,
+                                contentType: false,
+                                data: furm
+                            });
+                        }
+                    });
+                }
             }
-        });
-    });
+    );
 
 
     $("#save").click(function () {
 
         var text = $("#value").val();
         $("#value").val('');
-
-        $("#pop").show();
-        $("#pop").delay(4300).fadeOut(500);
-
-        var form = new FormData();
-
-        var reg = /[\(,\)\\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
-        text = text.replace(reg, "");
-        form.append("name", text);
-
-
-        $.ajax({
-            type: "POST",
-            url: "./savetext",
-            enctype: 'mulipart/form-data',
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function () {
-                if (window.location.href.indexOf('hybrid') !== -1) {
-                    window.location = "../hybrid"
-                } else {
-                    $.ajax({
-                        type: "GET",
-                        url: "../getnextimg",
-                        processData: false,
-                        contentType: false,
-                        success: function (data) {
-
-
-                            $("#imgdisp").attr("src", data);
-                        }
-                    });
-                }
+        if (window.location.href.indexOf('quizz') !== -1) {
+            if(text == 'tree map'){
+                note = 4
             }
-        });
+            else {
+                note = 0
+            }
+
+            var form = new FormData();
+            form.append("note", note);
+            $.ajax({
+                type: "POST",
+                url: "../savenote",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    window.location = "../quizz"
+                }
+            })
+        } else {
 
 
+            $("#pop").show();
+            $("#pop").delay(4300).fadeOut(500);
+
+            var form = new FormData();
+
+            var reg = /[\(,\)\\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
+            text = text.replace(reg, "");
+            form.append("name", text);
+
+
+            $.ajax({
+                type: "POST",
+                url: "./savetext",
+                enctype: 'mulipart/form-data',
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function () {
+                    if (window.location.href.indexOf('hybrid') !== -1) {
+                        window.location = "../hybrid"
+                    } else {
+                        $.ajax({
+                            type: "GET",
+                            url: "../getnextimg",
+                            processData: false,
+                            contentType: false,
+                            success: function (data) {
+
+
+                                $("#imgdisp").attr("src", data);
+                            }
+                        });
+                    }
+                }
+            });
+
+        }
     });
 
     $("#skip").click(function () {
@@ -163,20 +190,25 @@
 
 
     $("#value").on('input', function () {
-        if ($("#value").val() != undefined) {
-            if ($("#value").val().length == 1 && started) {
-                started = false;
-                firm = new FormData();
-                firm.append("action", "started typing");
-                $.ajax({
-                    type: "POST",
-                    url: "../logaction",
-                    processData: false,
-                    contentType: false,
-                    data: firm
-                });
-            }
-        }
+
+         if (window.location.href.indexOf('quizz') !== -1) {
+
+         }else {
+             if ($("#value").val() != undefined) {
+                 if ($("#value").val().length == 1 && started) {
+                     started = false;
+                     firm = new FormData();
+                     firm.append("action", "started typing");
+                     $.ajax({
+                         type: "POST",
+                         url: "../logaction",
+                         processData: false,
+                         contentType: false,
+                         data: firm
+                     });
+                 }
+             }
+         }
     });
 
     window.onkeydown = function (e) {

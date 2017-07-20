@@ -38,33 +38,54 @@
 <script type="text/javascript">
     var type;
     $(document).ready(function () {
-        fillthem();
+        if (window.location.href.indexOf('quizz') !== -1) {
+            fillthem2();
+        } else {
+            fillthem();
+        }
     });
 
 
     $('body').on('click', 'img', function () {
-        console.log("LAAAAAAAAA");
         $('.selec').removeClass('selec');
         $(this).addClass('selec');
 
-        var form = new FormData();
-        form.append("idimage", $(this).attr("value"));
-        form.append("idtype", type);
-
-        $.ajax({
-            type: "POST",
-            url: "../saveselect",
-            processData: false,
-            contentType: false,
-            data:form,
-            success: function (data) {
-                $("#fill").empty();
-                $("#brand").text(" Select the picture which best describe : ");
-                fillthem();
-
+        if (window.location.href.indexOf('quizz') !== -1) {
+            var note = 0;
+            if ($(this).attr("value") == 2) {
+                note = 4
             }
-        })
+            var form = new FormData();
+            form.append("note", note);
+            $.ajax({
+                type: "POST",
+                url: "../savenote",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    window.location = "../main"
+                }
+            })
+        } else {
+            var form = new FormData();
+            form.append("idimage", $(this).attr("value"));
+            form.append("idtype", type);
 
+            $.ajax({
+                type: "POST",
+                url: "../saveselect",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    $("#fill").empty();
+                    $("#brand").text(" Select the picture which best describe : ");
+                    fillthem();
+
+                }
+            })
+        }
     });
 
 
@@ -86,6 +107,19 @@
 
             }
         });
+    }
+
+    function fillthem2() {
+
+        var imgues = ["static/assets/img/datasets/textualsaved/4.jpg", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "static/assets/img/datasets/textualsaved/10.jpg", "static/assets/img/datasets/quizz/3.png", "static/assets/img/datasets/textualsaved/211.jpg"];
+
+        $("#brand").append("Histogram");
+        var i = 0;
+        imgues.forEach(function (img) {
+            console.log('lalalala');
+            $("#fill").append("<img id='imgsel' value='" + i + "' src=" + img + " />")
+        })
+
     }
 </script>
 

@@ -128,91 +128,164 @@
     var info = [];
     var width = screen.width;
     var height = screen.height;
+    var note =0;
     $(document).ready(function () {
 
-        $.ajax({
-            type: "GET",
-            url: "../getfive",
-            processData: false,
-            contentType: false,
-            success: function (data) {
-                info = JSON.parse(data);
-                var i = 1;
-                info.forEach(function (img) {
-                    cat.push(img.label);
-                    var temp = $('.pane' + i);
+        if (window.location.href.indexOf('quizz') !== -1) {
+            var path = ["static/assets/img/datasets/json/4_diagram_of_the_cause_of_mortality.png", "static/assets/img/datasets/textualsaved/136.jpg", "static/assets/img/datasets/textualsaved/123.jpg", "static/assets/img/datasets/textualsaved/178.jpg", "static/assets/img/datasets/textualsaved/170.jpg"];
+            cat = ["pie chart", "line chart", "scatter plot", "bar chart", "polar area diagram"];
+            for (var i = 0; i < 5; i++) {
+                console.log(i + 1);
+                var temp = $('.pane' + (i + 1));
 
-                    if (width > 1024) {
+                if (width > 1024) {
+                    temp.css("width", "100%");
+                    temp.css("height", "60%");
+                } else {
+                    if (width > 700) {
                         temp.css("width", "100%");
-                        temp.css("height", "60%");
+                        temp.css("height", "41%");
                     } else {
-                        if (width > 700) {
-                            temp.css("width", "100%");
-                            temp.css("height", "41%");
+                        if (width > 400) {
+                            temp.css("width", "70%");
+                            temp.css("height", "30%");
                         } else {
-                            if (width > 400) {
-                                temp.css("width", "70%");
-                                temp.css("height", "30%");
-                            } else {
-                                temp.css("width", "55%");
-                                temp.css("height", "23%");
-                            }
-
+                            temp.css("width", "55%");
+                            temp.css("height", "23%");
                         }
+
                     }
-                    temp.css("background-image", 'url("' + img.path + '")');
-                    temp.attr("value", img.idimage);
-                    $("#" + i + "_txt").text(img.label);
-                    $("#brand").text("Does this belongs in " + cat[nb] + " category");
-                    i++;
-                })
-
+                }
+                temp.css("background-image", 'url("' + path[i] + '")');
+                $("#" + i + "_txt").text("");
+                $("#brand").text("Does this belongs in " + cat[4] + " category");
             }
-        });
 
+
+        } else {
+            $.ajax({
+                type: "GET",
+                url: "../getfive",
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    info = JSON.parse(data);
+                    var i = 1;
+                    info.forEach(function (img) {
+                        cat.push(img.label);
+                        var temp = $('.pane' + i);
+
+                        if (width > 1024) {
+                            temp.css("width", "100%");
+                            temp.css("height", "60%");
+                        } else {
+                            if (width > 700) {
+                                temp.css("width", "100%");
+                                temp.css("height", "41%");
+                            } else {
+                                if (width > 400) {
+                                    temp.css("width", "70%");
+                                    temp.css("height", "30%");
+                                } else {
+                                    temp.css("width", "55%");
+                                    temp.css("height", "23%");
+                                }
+                            }
+                        }
+                        temp.css("background-image", 'url("' + img.path + '")');
+                        temp.attr("value", img.idimage);
+                        $("#" + i + "_txt").text(img.label);
+                        $("#brand").text("Does this belongs in " + cat[nb] + " category");
+                        i++;
+                    })
+
+                }
+            });
+        }
 
     });
 
     $("#tinderslide").jTinder({
 
         onDislike: function (item) {
-            $("#brand").text("Does this belongs in " + cat[nb - 1] + " category");
-            nb = nb - 1;
-            // TODO
-            var form = new FormData();
-            form.append("vote", false);
-            form.append("idimage", info[item.index()].idimage);
-            form.append("idtype", info[item.index()].idtype);
-            $.ajax({
-                type: "POST",
-                url: "../saveswipe",
-                processData: false,
-                contentType: false,
-                data: form
-            })
+            console.log(item.index());
+
+            if (window.location.href.indexOf('quizz') !== -1) {
+                $("#brand").text("Does this belongs in " + cat[nb - 2] + " category");
+                nb -= 1;
+                if (item.index() < 1 || item.index() > 3) {
+                    note += 1
+                }
+                if (item.index() == 0) {
+                    done(note);
+                }
+            } else {
+                nb = nb - 1;
+                var form = new FormData();
+                form.append("vote", false);
+                form.append("idimage", info[item.index()].idimage);
+                form.append("idtype", info[item.index()].idtype);
+                $.ajax({
+                    type: "POST",
+                    url: "../saveswipe",
+                    processData: false,
+                    contentType: false,
+                    data: form
+                })
+            }
         },
 
         onLike: function (item) {
             $("#brand").text("Does this belongs in " + cat[nb - 1] + " category");
-            nb = nb - 1;
-            var form = new FormData();
-            form.append("vote", true);
-            form.append("idimage", info[item.index()].idimage);
-            form.append("idtype", info[item.index()].idtype);
-            $.ajax({
-                type: "POST",
-                url: "../saveswipe",
-                processData: false,
-                contentType: false,
-                data: form
-            })
+            if (window.location.href.indexOf('quizz') !== -1) {
+                $("#brand").text("Does this belongs in " + cat[nb - 2] + " category");
+                nb -= 1;
+                if (item.index() >= 1 && item.index() <= 3) {
+                    note += 1
+                }
+
+                if (item.index() == 0) {
+                    done(note);
+                }
+            } else {
+                nb = nb - 1;
+                var form = new FormData();
+                form.append("vote", true);
+                form.append("idimage", info[item.index()].idimage);
+                form.append("idtype", info[item.index()].idtype);
+                $.ajax({
+                    type: "POST",
+                    url: "../saveswipe",
+                    processData: false,
+                    contentType: false,
+                    data: form
+                })
+            }
+
         },
         animationRevertSpeed: 200,
         animationSpeed: 400,
         threshold: 1,
         likeSelector: '.like',
         dislikeSelector: '.dislike'
-    });
+    })
+    ;
+
+    function done(val) {
+        var form = new FormData();
+        console.log(val);
+        form.append("note", val);
+        $.ajax({
+            type: "POST",
+            url: "../savenote",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                window.location = "../quizz"
+            }
+        })
+    }
 
 
 </script>
