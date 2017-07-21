@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<!-- Data Layer that store GA Custom Dimensions -->
+	<script>dataLayer = [];</script>
+	
+ 	<script>
+   		var shiftWindow = function() { scrollBy(0, -60) };
+   		window.addEventListener("hashchange", shiftWindow);
+ 	</script>
+    <title>The International Medical Journal for Students | Student BMJ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Student BMJ is a world renowned resource that supports medical students through every stage, from applying to medical school all the way to making the transition to junior doctor." />
+        <link rel="stylesheet" type="text/css" media="print" href="/student/css/print.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/student/css/screen.css" />
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="/student/css/ie.css" />
+    <![endif]-->
+
+    <script type="text/javascript" src="/student/js/modernizr-v2.5.3.js"></script>
+    <script type="text/javascript" src="/student/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/student/js/bmj-group-global.js"></script>
+    <script type="text/javascript" src="/student/js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="/student/js/bmjgroup-lib-2.0.js"></script>
+    <script type="text/javascript" src="/student/js/lib/form.js"></script>
+    <script type="text/javascript" src="/student/js/init.js"></script>
+
+
+    <!------ OAS SETUP begin ------>
+<SCRIPT LANGUAGE=JavaScript>
+<!-- 
+//configuration 
+OAS_url = 'http://oas.services.bmj.com/RealMedia/ads/';
+OAS_sitepage = 'student.bmj.com';
+OAS_listpos = 'Middle,Top';
+OAS_query = '';
+OAS_target = '_top';
+//end of configuration
+OAS_version = 10;
+OAS_rn = '001234567890'; OAS_rns = '1234567890';
+OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+function OAS_NORMAL(pos) {
+document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" TARGET=' + OAS_target + '>'); 
+document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" BORDER=0></A>'); 
+}
+ //--> 
+ </SCRIPT> 
+<SCRIPT LANGUAGE=JavaScript1.1> 
+<!--  
+ OAS_version = 11;   
+if ((navigator.userAgent.indexOf('Mozilla/3') != -1) || (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1))  
+ OAS_version = 10; 
+if (OAS_version >= 11) 
+document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');//-->
+</SCRIPT><SCRIPT LANGUAGE=JavaScript> 
+<!--  
+ document.write('');  
+function OAS_AD(pos) {  
+if (OAS_version >= 11 && typeof(OAS_RICH)!='undefined')
+ OAS_RICH(pos);  
+else 
+ OAS_NORMAL(pos);  
+}  //--> 
+ </SCRIPT>  
+<!------ OAS SETUP end ------> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+<!-- This should be directly in the body, not wrapped in another tag -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P6M7XZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+{'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P6M7XZ');</script> 
+<!-- End Google Tag Manager -->
+
+<div class="nav-container"><div class="master-container">
+
+<div class="ad-leaderboard">
+    <script language="JavaScript">
+        <!--
+        OAS_AD('Top');
+        //-->
+    </script>
+</div>
+
+<header>
+    <div id="user-wrapper">
+        <div id="user">
+            <div id="user-links" class="clearfix">
+                <!-- user not logged in -->
+                        <a class="user-button btn btn-default" role="button" id="register-button" href="/student/static-pages.html?pageId=17">Subscribe</a>
+                        <span class="dropdown">
+                            <a class="user-button btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" id="login-button">
+                                Log in
+                                <span class="caret"></span>
+                            </a>
+                            <div id="status" class="dropdown-menu" role="menu">
+                                <div id="quick-login-title"><h3>Log in</h3></div>
+                                <form class="quick-login" method="post" action="/student/login.html">
+                                    <div class="user">
+                                        <label accesskey="N" for="username">Username</label>
+                                        <input type="text" name="username" placeholder="Email address" class="text" id="username" tabindex="75"/>
+                                    </div>
+                                    <div class="pass">
+                                        <label for="password" accesskey="P">Password</label>
+                                        <input type="password" name="password" placeholder="Password" class="text" id="password" tabindex="75"/>
+                                    </div>
+                                    <div class="remember">
+                                        <input type="checkbox" value="true" name="rememberme" id="rememberme" tabindex="75"/>
+                                        Remember me.<a href="" class="jstooltip" title="If you want this site to remember your details so you don't have to type them in again, please tick this box. If you use a public computer - like at a library or hotel - never check the 'Remember Me' option on any website that you visit.<br/>To prevent your details from being saved in the future, please log out." tabindex="75"> [?]</a>
+                                    </div>
+                                    <div class="forgot">
+                                        <a href="/student/email-password.html" tabindex="75">Forgotten password</a>
+                                    </div>
+                                    <input id="login-submit" type="submit" value="Log in" class="btn btn-primary"></input>
+                                    <div class="register">Not got an account?<br>
+                                    	<p><a href="/student/static-pages.html?pageId=17">Subscribe</a> or <a href=" http://myaccount.bmj.com/myaccount/registration.html?regService=student-registration&fwdUrl=http%3A%2F%2Fstudent.bmj.com">register</a> here</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </span>
+                        <!-- /user not logged in -->
+
+                    </div>
+            <!-- /user-links -->
+        </div>
+        <!-- /user -->
+    </div>
+    <!-- /user-wrapper -->
+    <div id="main-nav-container">
+        <div id="main-nav" data-spy="affix" data-offset-top="125">
+            <div id="navigation-bar-wrapper">
+    <div id="navigation-bar-container">
+        <nav id="navigation-bar">    
+            <div class="btn-nav">
+                <a href="#">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <a href="/"><img class="logo" src="/student/images/studentbmj-logo.png" alt="Student BMJ" title="Student BMJ homepage" /></a>
+            <div class="search dropdown">
+                <a data-toggle="dropdown" role="button"><i class="fa fa-search"></i><span>Search</span></a>
+                <div class="dropdown-menu" role="menu" id="navbar-search">
+                    <div id="search-wrapper">
+                        <div id="search-wrapper-inner">
+                            <input type="hidden" id="searchAlert" value='Inset you search term here'/>
+                            <form onSubmit="return liveSearchSubmit('searchForm','Search Student BMJ','#searchAlert')" action="/student/search.html" method="get" id="searchForm" name="article-search">
+                                <fieldset>
+                                    <input type="hidden" value="newTextSearch" name="action"/>
+                                    <input class="form-control text" type="text" id="search" name="searchTerm" accesskey="4" size="20" maxlength="255" placeholder="Search Student BMJ"/>
+                                    <input id="search-submit" type="submit" value="Search" class="btn btn-default"></input>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle-mobile-user-bar">
+                <a href="#"
+                    ><i class="fa fa-cog"></i>
+                </a>
+            </div>  
+            <div class="links-container">
+                <ul class="primary-links">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" role="button">News &amp; views <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="at-a-glance"><a href="/student/section/NewsAndViews.html">At a glance >></a>
+                            <li><a href="/student/section/newsandviews/life.html">Life</a></li>
+                            <li><a href="/student/section/newsandviews/briefings.html">Briefings</a></li>
+                            <li><a href="/student/section/newsandviews/researchexplained.html">Research explained</a></li>
+                            <li><a href="/student/section/newsandviews/views.html">Views</a></li>
+                            <li><a href="/student/section/newsandviews/people.html">People</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" role="button">Clinical <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/student/section/clinical/practicalskills.html">Practical skills</a></li>
+                            <li><a href="/student/section/clinical/reviews.html">Clinical reviews</a></li>
+                            <li><a href="/student/section/clinical/ethicsandlaw.html">Ethics &amp; law</a></li>
+                            <li><a href="/student/section/clinical/picturequizzes.html">Picture quizzes</a></li>
+                            <li><a href="/student/section/clinical/juniordoctor.html">Junior doctor survival kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" role="button">Specialties <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/student/section/Cardiology.html">Cardiology</a></li>
+                            <li><a href="/student/section/EmergencyMedicine.html">Emergency medicine</a></li>
+                            <li><a href="/student/section/Gastroenterology.html">Gastroenterology</a></li>
+                            <li><a href="/student/section/GeneralPractice.html">General practice</a></li>
+                            <li><a href="/student/section/GeneralSurgery.html">General Surgery</a></li>
+                            <li><a href="/student/section/GeriatricMedicine.html">Geriatric medicine</a></li>
+                            <li><a href="/student/section/Neurology.html">Neurology</a></li>
+                            <li><a href="/student/section/ObsandGynae.html">Obstetrics &amp; Gynaecology</a></li>
+                            <li><a href="/student/section/Paediatrics.html">Paediatrics</a></li>
+                            <li><a href="/student/section/Psychiatry.html">Psychiatry</a></li>
+                            <li><a href="/student/section/Radiology.html">Radiology</a></li>
+                            <li><a href="/student/section/Respiratory.html">Respiratory</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" role="button">Careers <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/student/section/careers/careerplanning.html">Career planning</a></li>
+                            <li><a href="/student/section/careers/acareerin.html">A career in...</a></li>
+                            <li><a href="/student/section/careers/electives.html">Electives</a></li>
+                            <li><a href="/student/section/careers/foundationprogramme.html">Foundation programme</a></li>
+                            <li><a href="/student/section/careers/advice.html">Careers advice</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                       <a data-toggle="dropdown" role="button">Applying to medical school <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="at-a-glance"><a href="/student/applying-to-medical-school.html">At a glance >></a></li>
+                            <li><a href="/student/application-timeline.html">Application timeline</a>
+                            <li><a href="/student/section/apply/consideringdoctor.html">Considering medicine</a></li>
+                            <li><a href="http://medschoolselector.student.bmj.com">Medical School Selector</a></li>
+                            <li><a href="/student/section/apply/workexperience.html">Work experience</a></li>
+                            <li><a href="/student/section/apply/personalstatement.html">Personal statement</a></li>
+                            <li><a href="/student/section/apply/entranceexams.html">Entrance exams</a></li>
+                            <li><a href="/student/section/apply/interviews.html">Interviews</a></li>
+                            <li><a href="/student/section/apply/planb.html">Plan B</a></li>
+                            <li><a href="/student/static-pages.html?pageId=18">Graduate entry medicine</a></li>
+                            <li><a href="/student/view-article.html?id=sbmj.i2833">Mediprep course</a>
+                        </ul>
+                    </li>
+                    <li class="hidden-lg dropdown"><a href="/student/static-pages.html?pageId=17">Subscribe</a></li>
+                </ul>
+            </div>  
+            <!-- /links-container -->
+        </nav>
+    </div>
+</div>
+</div>
+    </div>
+</header>
+
+<div id="main-wrapper">
+    <div id="local-body">
+        <div id="content">
+            
+<div id="homepage">
+<div class="row top-story-row">
+<!-- row 1 -->
+<div class="col-half col-left">
+    <div class="body-copy ">
+        <div class="image"> <a href="/student/view-article.html?id=sbmj.i4406"> <img src="https://s3-eu-west-1.amazonaws.com/student-article-images/rsz_eca_041.jpg"  width="200px" height="133px"> </a> </div>
+                <div class="section-header">
+            <a href="/student/section/clinical/practicalskills.html">
+                        <h4>Practical skills</h4>
+                        </a> </div>
+        <h1><a href="/student/view-article.html?id=sbmj.i4406"> How to present patient cases</a></h1>
+                <p> -History of presenting problem -Medical and surgical history -Drugs, including allergies to drugs -Family history -Social history -Review of systems -Findings on examination, including vital signs and &hellip; </p>
+                <!-- <p><a href="/student/view-article.html?id=sbmj.i4406">Read this article in clinical >></a></p> -->
+            </div>
+    <!-- /body-copy -->
+</div>
+<!-- /col-half -->
+<div class="col-half col-right">
+    <div class="body-copy widget" id="trending">
+        <div class="title-bar"><h4><i class="fa fa-line-chart"></i> Articles trending</h4></div>
+        <div class="most-viewed-col">
+            <h3>Most viewed</h3>
+            <div id="studentpanel1">
+            </div>
+        </div>
+        <div class="latest-content-col">
+            <h3>Latest content</h3>
+            <div id="studentpanel2">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        
+	    <div class="email-alerts">
+	    	<a href="/student/alerts-registration.html?alert=med" class="btn btn-primary btn-block">Update me by email</a>
+	    </div>
+        
+    </div>
+    <!-- <div class="body-copy widget" id="studentwidgethome">
+        <ul class="tabs">
+            <li><a class="active" href="#studentpanel1">Most viewed</a></li>
+            <li><a class="active" href="#studentpanel2">What's new</a></li>
+        </ul>
+        <div class="panes">
+        <div id="studentpanel1"></div>
+        <div id="studentpanel2"></div>
+        </div>
+    </div> -->
+</div>
+<!-- /col-half -->
+    <div class="clearfix"></div>
+
+</div>
+    <!-- /row -->
+    <div class="row">
+<div class="hp-articles">
+<div class="row">
+<!-- row 2 -->
+<div class="col-third col-left homepage-article">
+<div class="body-copy ">
+            <div class="section-header">
+                <a href="/student/section/apply/consideringdoctor.html">
+                            <h4>Considering medicine </h4>
+                            </a> </div>
+
+            <h3><a href="/student/view-article.html?id=sbmj.j735"> Questions you should consider before applying to a medical school in Europe</a></h3>
+
+		            <div class="image"> <a href="/student/view-article.html?id=sbmj.j735"> <img src="https://s3-eu-west-1.amazonaws.com/student-article-images/rsz_pa-19403268.jpg"  width="100px" height="66px"> </a> </div>
+		                    <p> Applying to study medicine in Europe can be an attractive alternative for applicants from &hellip; </p>
+                    <!-- <p><a href="/student/view-article.html?id=sbmj.j735">Read this article in apply>></a></p> -->
+                </div>
+        <!-- /body-copy -->
+    </div>
+    <!-- /col-third -->
+    <div class="col-third col-middle homepage-article">
+<div class="body-copy ">
+            <div class="section-header">
+                <a href="/student/section/careers/careerplanning.html">
+                            <h4>Career planning</h4>
+                            </a> </div>
+
+            <h3><a href="/student/view-article.html?id=sbmj.h883"> How to organise a conference at medical school</a></h3>
+
+		            <div class="image"> <a href="/student/view-article.html?id=sbmj.h883"> <img src="https://s3-eu-west-1.amazonaws.com/student-article-images/rsz_conference.jpg"  width="100px" height="66px"> </a> </div>
+		                    <p> Organisation of a successful medical conference is a demanding but rewarding opportunity for students. As organisers of the 2014 &hellip; </p>
+                    <!-- <p><a href="/student/view-article.html?id=sbmj.h883">Read this article in careers>></a></p> -->
+                </div>
+        <!-- /body-copy -->
+    </div>
+    <!-- /col-third -->
+    </div>
+    <!-- /row -->
+    <div class="row">
+<!-- row 3 -->
+<div class="col-third col-left homepage-article">
+<div class="body-copy ">
+            <div class="section-header">
+                <a href="/student/section/clinical/reviews.html">
+                            <h4>Clinical reviews</h4>
+                            </a> </div>
+
+            <h3><a href="/student/view-article.html?id=sbmj.e8309"> Thiamine deficiency</a></h3>
+
+		            <div class="image"> <a href="/student/view-article.html?id=sbmj.e8309"> <img src="https://s3-eu-west-1.amazonaws.com/student-article-images/thiamine.jpg"  width="100px" height="66px"> </a> </div>
+		                    <p> Thiamine, also known as vitamin B1, is a coenzyme that has a vital role in the metabolism of carbohydrates. Thiamine deficiency may impair cardiac and neurological functioning and &hellip; </p>
+                    <!-- <p><a href="/student/view-article.html?id=sbmj.e8309">Read this article in clinical>></a></p> -->
+                </div>
+        <!-- /body-copy -->
+    </div>
+    <!-- /col-third -->
+    <div class="col-third col-middle homepage-article">
+<div class="body-copy ">
+            <div class="section-header">
+                <a href="/student/section/clinical/reviews.html">
+                            <h4>Clinical reviews</h4>
+                            </a> </div>
+
+            <h3><a href="/student/view-article.html?id=sbmj.h4480"> Common cases in cardiology: atrial fibrillation</a></h3>
+
+		            <div class="image"> <a href="/student/view-article.html?id=sbmj.h4480"> <img src="https://s3-eu-west-1.amazonaws.com/student-article-images/rsz_atrial.jpg"  width="100px" height="66px"> </a> </div>
+		                    <p> Mrs Edith Goodman is an 86 year old woman who has been admitted to hospital with a three day history of feeling generally unwell &hellip; </p>
+                    <!-- <p><a href="/student/view-article.html?id=sbmj.h4480">Read this article in clinical>></a></p> -->
+                </div>
+        <!-- /body-copy -->
+    </div>
+    <!-- /col-third -->
+    </div>
+    <!-- /row -->
+    <div class="clearfix"></div>
+    <div class="col-third col-left">
+        <div class="body-copy bmj widget">
+            <div class="section-header">
+                <h4><a href="http://bmj.com" target="_blank">Latest from BMJ</a></h4>
+            </div>
+            <div class="body-copy bmj widget" id="bmjlatest"></div>
+        </div>
+    </div>
+    <!-- /col-third -->
+    <div class="col-third col-middle">
+        <div class="body-copy bmj podcasts-widget">
+            <div class="section-header">
+                <h4><a href="http://podcasts.bmj.com/bmj/" target="_blank">BMJ Podcasts</a></h4>
+            </div>
+            <div id="feeds-widget-podcasts" class="widget"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-third col-left">
+<!-- /body-copy -->
+    </div>
+    <!-- /col-one-third -->
+    </div> <!-- /hp-articles -->
+    <!-- Right column start -->
+    <div class="col-third col-right">
+        <div class="ad-mpu">
+        <!------ OAS AD 'Middle' begin ------>
+            <SCRIPT LANGUAGE=JavaScript>
+            <!--
+            OAS_AD('Middle');
+            //-->
+            </SCRIPT>
+        <!------ OAS AD 'Middle' end ------>
+        </div>
+        <div class="banner-contribute">
+            <a href="/student/static-pages.html?pageId=2"><img src="/images/sbmj-contribute.png" alt="Contribute to Student BMJ"/></a>
+        </div>
+        <div class="body-copy interactive">
+            <div class="section-header">
+                <h4>Poll</h4>
+            </div>
+            <div class="poll">
+                <script type="text/javascript" language="javascript" charset="utf-8" src="http://static.polldaddy.com/w/24601.js"></script>
+                <noscript>
+                <a href="http://www.polldaddy.com/w.php?p=24601/">Take Our Poll</a><span style="font-size:9px;">(<a href="http://www.polldaddy.com">poll</a>)</span>
+                </noscript>
+            </div>
+        </div>
+        <p></p>
+        <div class="banner-contribute">
+            <a href="/student/notice-board.html"><img src="/images/sbmj-events.png" alt="View events"/></a>
+        </div>
+                </div>
+    <!-- /col-third -->
+    <!-- Right column end-->
+    </div>
+    <!-- /row -->
+</div>
+<!-- /homepage -->
+    <script type="text/javascript">
+        <!--
+        $("img").error(function(){
+              $(this).hide();
+            });
+        //-->
+    </script>
+</div>
+        <!-- /content -->
+    </div>
+    <!-- /local-body -->
+</div>
+<!-- /wrapper -->
+
+<div class="clearfix"></div>
+
+<footer>
+    <div id="footer-wrapper">
+        <div id="footer-inner">
+            <div class="col-quarter">
+                <h3>Stay in touch</h3>
+                <ul>
+                	<li><a href="/student/registration.html">Register for email alerts</a></li>
+	    			<li><a class="social-icon" href="https://twitter.com/studentbmj" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="social-icon" href="https://www.facebook.com/StudentBMJ" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="social-icon" href="https://www.youtube.com/channel/UCG2FSjkbF4z5JE-LHTjrrgQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                    <li><a class="social-icon" href="https://plus.google.com/u/0/102367253510508418958/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-quarter">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="/student/static-pages.html?pageId=1">Contact us</a></li>
+                    <li><a href="http://www.bmj.com/company/wp-content/uploads/2014/06/Reaching-healthcare-professionals-June-2015.pdf">Advertisers and sponsors</a></li>
+                    <li><a href="http://www.bmj.com/about-bmj/resources-media">Media</a></li>
+                </ul>
+            </div>
+            <div class="col-quarter">
+                <h3>About Student BMJ</h3>
+                <ul>
+                    <li><a href="/student/static-pages.html?pageId=10">About us</a></li>
+                    <li><a href="https://web2.bma.org.uk/memapps.nsf/splash?OpenForm">Join the BMA</a></li>
+                    <li><a href="/student/static-pages.html?pageId=17">Subscribe</a></li>
+                    <li><a href="/student/static-pages.html?pageId=2">Write for Student BMJ</a></li>
+                    <li><a href="/student/static-pages.html?pageId=6">Review articles for Student BMJ</a></li>
+                    <li><a href="http://www.bmj.com" target="_blank">The BMJ</a></li>
+                    <li><a href="/student/view-article.html?id=sbmj.h4363">The Student BMJ scholarship</a></li>
+                    <li><a href="/student/static-pages.html?pageId=5">Request permissions</a></li>
+                    <li><a href="/sitemap-dynamic-1.xml">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-quarter">
+                <h3>Terms and Conditions</h3>
+                <ul>
+                    <li><a href="http://www.bmj.com/company/legal-information/" target="_blank">Website T&amp;Cs</a></li>
+                    <li><a href="http://www.bmj.com/company/legal-information/student-bmj-med-school-selector/" target="_blank">Medical School Selector T&amp;Cs</a></li>
+                    <li><a href="http://www.bmj.com/company/your-privacy/" target="_blank">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div id="copyright" class="col-full">
+                <p>&copy; BMJ Publishing Group Limited 2017. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</footer>
+
+<!-- <script type="text/javascript" src="/student/js/lib/jquery.dimensions.pack.js"></script>-->
+<script type="text/javascript" src="/student/js/lib/jquery.tooltip.js"></script>
+<script type="text/javascript" src="/student/js/lib/date.js"></script>
+<script type="text/javascript" src="/student/js/lib/jquery.datePicker.js"></script>
+<script type="text/javascript" src="/student/js/lib/flowplayer-3.1.0.min.js"></script>
+<script type="text/javascript" src="/student/js/lib/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="/student/js/lib/bootstrap-affix.js"></script>
+<script type="text/javascript" src="/student/js/lib/bootstrap-tab.js"></script>
+<script type="text/javascript" src="/student/js/student.js"></script>
+<script type="text/javascript">$(function(){$('.date-pick').datePicker();});</script>
+
+<script>dataLayer.push({'userLoggedIn':'false'});</script>
+	</div></div>
+<!-- /master-container --><!-- /nav-container -->
+
+</body>
+</html>

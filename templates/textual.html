@@ -171,6 +171,49 @@
                     if (window.location.href.indexOf('hybrid') !== -1) {
                         window.location = "../hybrid"
                     } else {
+                        if (window.location.href.indexOf('main') !== -1) {
+                            window.location = "../main"
+                        } else if (window.location.href.indexOf('raw') !== -1) {
+                            window.location = "../raw"
+                        }
+                        else {
+                            $.ajax({
+                                type: "GET",
+                                url: "../getnext",
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+
+                                    $("#dispres").empty();
+                                    $("#dispres").load("./textual/" + data);
+                                }
+                            });
+                        }
+                    }
+                }
+            });
+        }
+    });
+
+    $("#skip").click(function () {
+                firm = new FormData();
+                firm.append("action", "skip");
+                $.ajax({
+                    type: "POST",
+                    url: "../logaction",
+                    processData: false,
+                    contentType: false,
+                    data: firm
+                });
+                if (window.location.href.indexOf('hybrid') !== -1) {
+                    window.location = "../hybrid"
+                } else {
+                    if (window.location.href.indexOf('main') !== -1) {
+                        window.location = "../main"
+                    } else if (window.location.href.indexOf('raw') !== -1) {
+                        window.location = "../raw"
+                    }
+                    else {
                         $.ajax({
                             type: "GET",
                             url: "../getnext",
@@ -184,36 +227,8 @@
                         });
                     }
                 }
-            });
-        }
-    });
-
-    $("#skip").click(function () {
-        firm = new FormData();
-        firm.append("action", "skip");
-        $.ajax({
-            type: "POST",
-            url: "../logaction",
-            processData: false,
-            contentType: false,
-            data: firm
-        });
-        if (window.location.href.indexOf('hybrid') !== -1) {
-            window.location = "../hybrid"
-        } else {
-            $.ajax({
-                type: "GET",
-                url: "../getnext",
-                processData: false,
-                contentType: false,
-                success: function (data) {
-
-                    $("#dispres").empty();
-                    $("#dispres").load("./textual/" + data);
-                }
-            });
-        }
-    });
+            }
+    );
 
     $("#value").on('input', function () {
         if ($("#value").val() != undefined) {

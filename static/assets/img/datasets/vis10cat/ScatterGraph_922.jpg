@@ -1,0 +1,198 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>Newcastle University - Faculty of Medical Sciences Central Authentication Service</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css" media="screen">@import 'css/casbackdrop.css'/**/;</style>
+ 		<!--script type="text/javascript" src="js/common_rosters.js"></script-->
+		
+		<script type="text/javascript">
+			function onPageLoad() {
+				/*var usr = document.getElementById("username").value.toLowerCase();
+				if (usr != '')
+				{
+					document.getElementById("username").value = usr;
+					document.getElementById("username").focus();
+				}
+				else
+				{
+					document.getElementById("username").value = 'dddd2';
+					document.getElementById("username").focus();
+				}*/
+			}
+			function onCASSubmit(){
+					document.getElementById("username").value = document.getElementById("username").value.toLowerCase().replace(/ /g,'');
+			}
+		</script>
+		
+		
+		<style type="text/css">
+			/* Sticky footer styles
+			-------------------------------------------------- */
+			html, body {
+				height: 100%;
+			}
+
+			#wrap {
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				margin: 0 auto -60px;
+			}
+
+			#push,#footer {
+				height: 60px;
+			}
+			#footer {
+				background-color: #f5f5f5;
+			}
+
+ 			@media (max-width: 767px) {
+				#footer {
+					margin-top: 0px; 
+					margin-left: -0px;
+					margin-right: -0px;
+					padding-left: 0px;
+					padding-right: 0px;
+				}
+			}
+ 
+			#wrap > .container {
+				padding-top: 100px;
+			}
+			.container .credit {
+				margin: 20px 0;
+			}
+			code {
+				font-size: 80%;
+			}
+			
+			#footer .label  {font-weight:normal;}
+			#footer .label a  {font-weight:bold;color:white;}
+
+		</style>
+		
+		<script src="bs/js/jquery-1.8.0.min.js"></script>
+		<link href="bs/css/bootstrap.css" rel="stylesheet">
+		<link href="bs/css/bootstrap-responsive.css" rel="stylesheet">
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+
+
+
+
+
+        </head>
+
+        <body id="cas" onload="onPageLoad();">
+	<!-- div id="header">
+		<img src="/cas/images/newcastle_logo.png">
+	</div -->
+	<div id="content" class="container">
+
+
+
+<div class="row-fluid" xmlns="http://www.w3.org/1999/html"><br/>
+	<div class="span10 offset1">
+		<div class="well" style="background-color:white;padding-left:25px;">
+			<form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=99E59451CD47A80ED23E9E516A46756B?service=http%3a%2f%2ffms-itskills.ncl.ac.uk%2foffice2003%2fdhss%2fscatter.jpg" method="post">
+				<div class="box" id="login">
+					<img src="/cas/bs/img/newcastle_master_col.png">
+					<h4>Enter your Newcastle University username and password</h4>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-user"></i><!--label for="username"><span class="accesskey">U</span>sername:</label--></span>
+						
+						
+							
+							<input id="username" name="username" class="required" title="Enter your password" tabindex="1" placeholder="Username" onChange="javascript:this.value=this.value.toLowerCase().replace(/ /g,'');" accesskey="u" type="text" value="" size="25" autocomplete="false"/>
+						
+					</div>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-lock"></i><!--label for="password"><span class="accesskey">P</span>assword:</label--></span>
+						
+						<input id="password" name="password" class="required" tabindex="2" placeholder="Password" accesskey="p" type="password" value="" size="25"/>
+					</div>
+					<div class="row-fluid btn-row">
+						<input type="hidden" name="lt" value="e1s1" />
+						<input type="hidden" name="_eventId" value="submit" />
+						<input class="btn btn-success" name="submit" onClick="javascript:onCASSubmit();"  accesskey="l" value="Login" tabindex="4" type="submit" />
+						<!--input class="btn btn-primary" name="reset" accesskey="c" value='CLEAR' tabindex="5" type="reset" /-->
+						<span id='request_password' class="" style='margin-top:10px;' >
+							<a title="If you have forgotten your username or password, click here to request a reminder or reset" class="btn btn-warning" href="http://fms-accounts.ncl.ac.uk/byhand/send_password/">Forgot your password?</a><br />
+						</span>
+					</div>
+				</div>
+				<br/>
+				
+
+			</form>
+		</div>
+	</div>
+	<div class="span10 offset1">
+		<div class=" alert alert-info">
+			<h4>What is this site?</h4>
+			<p>You have been redirected to this login portal by another website, log in here and you will be directed to the site you were visiting.<br>
+			This service is operated by <a href="http://ltms.ncl.ac.uk">Learning Technologies for Medical Sciences</a> and provides a single-sign-on portal 
+			for Newcastle University staff, students and NHS partners using our tools and services.</p>
+						
+			<h4>Help!</h4>
+			<p>To login, use your Newcastle University username and password, these are the same details as you use to login to a cluster PC, or to your university email.<br>
+			If you are having trouble remembering your username or your password, click the <a href="http://fms-accounts.ncl.ac.uk/byhand/send_password/"><b>Forgot your password?</b></a> button shown above.</p>
+			If you still experience further difficulty, please contact the support team by clicking on the <a href="#" data-controls-modal="sb-overlay"><b>Contact Support</b></a> tab on the right hand side of this page.<br>
+			
+			<h4>Security</h4>
+			<p>Newcastle University staff will never ask you for your password, so always keep it safe and don't let anyone else use it.<br>
+			When you finish using services or sites that require your username and password you should logout (where available) and close down your web browser.</p>
+ 		</div>
+	</div>
+	<br/>
+	<br/>
+</div>
+
+	</div>
+	<br/><br/>
+
+	<div id="footer" class=''>
+		<div class='container' style="text-align: center;font-size:9pt">
+			<p>Copyright &copy; 2013 <a href="http://www.ncl.ac.uk">Newcastle University</a>
+			<br/>[ <a href="http://ltms.ncl.ac.uk">LTMS</a> | <a href="http://www.ncl.ac.uk/medev">School of Medical Sciences Education Development</a> ]
+			<br/> 
+			<span class='label label-info '>Powered by <a href="http://www.ja-sig.org/products/cas/">CAS </a></span> 
+			&nbsp;  <span class='label label-info'>fmsc-cas03</span>
+			</p>
+       	</div>
+	</div>
+	
+	
+	<script>
+		var sbhost = (("https:" == document.location.protocol) ? "https://" : "http://");
+		document.write(unescape("%3Cscript src='" + sbhost +"d3932137p5ikt7.cloudfront.net/widget_v3/loader.min.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	
+	<script>
+		sb_contact_form('initialize',{
+			company: 'ltms',
+			height: '450px',
+			position: 'right',
+			locale: 'en',
+			captcha: 'false',
+			forwarding_address_id: '2657'
+		});
+	</script>
+	
+        </body>
+</html>
+

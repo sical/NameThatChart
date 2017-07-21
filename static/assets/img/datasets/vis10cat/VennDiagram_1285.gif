@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+<title>MetEd &raquo; Iniciar sesi&oacute;n</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<!-- Always force latest IE rendering engine & Chrome Frame -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+
+<meta name="description" content="MetEd: Teaching and Training Resources for the Geoscience Community" />
+<meta name="author" content="UCAR/COMET" />
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="stylesheet" href="/styles/styles.css" />
+<link rel="stylesheet" href="/scripts/fancybox/jquery.fancybox-1.3.1.css" />
+
+<script src="/scripts/jquery-1.4.2.min.js"></script>
+<script src="/scripts/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+<script src="/scripts/fancybox/jquery.easing-1.3.pack.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".sign_in a").fancybox({
+  	'type'	:	'iframe',
+  	'width' :	450,
+  	'height':	300,
+  	'scrolling' : 'no',
+  	'onComplete': function(){
+  		$("#loginForm input[name=email]").focus();
+  	}
+  });
+  $(".video").fancybox({
+  	'type'	:	'iframe',
+  	'width' :	853,
+  	'height':	480,
+  	'scrolling' : 'no'
+  });
+  
+});
+
+//used to switch between English and Spanish languages on same page
+var place = "";
+var langswitch = "";
+
+if (location.href.match("_es.php"))
+{
+
+	place = location.href.replace('_es.php','.php');
+	place = place.replace('language=6','language=1');	//change the language id 
+    langswitch = '<span><a href=\"' + place + '\">English</a></span> <span class="here"><a href="#">Espa&ntilde;ol</a></span>';
+
+}
+else if (location.href.match(".php"))
+{
+    place = location.href.replace('.php','_es.php');
+    place = place.replace('language=1','language=6');	//change the language id 
+    langswitch = '<span class="here"><a href="#">English</a></span> <span><a href=\"' + place + '\">Espa&ntilde;ol</a></span>';
+}
+else 
+{
+
+     place = location.href + 'index_es.php';
+     langswitch = '<span class="here"><a href="#">English</a></span> <span><a href=\"' + place + '\">Espa&ntilde;ol</a></span>';
+}
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7101209-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script language="JavaScript" type="text/javascript" src="/md5.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	
+	//if the users pushing "enter" while in the password box, act like the submit button was clicked
+	$('#password').keypress(function(e){
+	
+		//13 is the key code for the enter button on keyboard
+		if(e.which == 13){
+			$("#form_sign_in_btn").trigger('click');
+		}
+		
+	});		
+	
+	
+	$("#form_sign_in_btn").click( function(){
+	    
+		if( $("#email").val() == '' || $("#password").val() == '' ){
+			alert( "Introduzca un valor en ambos campos, Nombre de usuario o correo electrónico y Contraseña.");
+			return;
+		}
+	  	
+	    // make MD5 hash of password
+	    $("#challengeField").val( hex_md5( $("#password").val() ) );
+	    
+	    // clear password field so the password is not sent as clear text
+	    $("#password").val( "" );
+
+		dataString = $("#login").serialize();
+
+		//send the request through ajax
+		$.ajax({
+			url: "/loginCheck_es.php",
+		    global: false,
+		    type: "POST",
+		 	data: dataString,
+		    dataType: "json",
+		    success: function(msg){
+
+				if( msg.returnType == 'success' ){
+	
+					//route the NOAA user to update privacy info for account	
+					if( msg.privacy == 'no' ){
+						parent.window.location.replace( '/noaa_lms_info.php?go_back_to=' + msg.href );
+						return;
+					}		
+	
+					if(msg.href == "")
+					{
+						window.location.href = "/index_es.php";
+						return;
+					}
+				
+		        	//close the sign in window and return to current page
+					window.location.href = msg.href;
+					
+				} else {
+					$(".output").html( msg.message );
+				}
+		    },
+		    error: function() {
+				alert("Ocurrió un error durante el proceso de inicio de sesión.");
+			}
+		})//end .ajax	
+
+
+	});
+	
+	
+});//end document ready	
+
+</script>
+</head>
+
+<body onload="document.login.email.focus();">
+<noscript>
+	<div id="alert_wrap">
+  		<div id="alert">
+			<p>Este sitio est&aacute; dise&ntilde;ado para funcionar con Javascript activado. Utilice la ayuda de su navegador para averiguar c&oacute;mo se activa Javascript. </p>
+		</div>
+	</div>
+</noscript>
+<!-- -->
+<div id="alert_wrap">
+  <div id="alert">Nuestro servidor recibirá servicio de mantenimiento entre las 1300 y las 1800 UTC (7:00 a 12:00 MDT) del sábado 22 de julio. Tenga en cuenta que durante este período MetEd podría experimentar interrupciones intermitentes.
+  </div>
+</div>
+<!-- --><div id="header_wrap">
+<div id="header">
+  <h1><a href="/index_es.php"><img src="/images/logo.png" alt="MetEd" /></a></h1>
+  <p id="languages">
+	<script language="JavaScript" type="text/javascript">
+		document.write(langswitch);
+	</script>  
+  </p>
+  <ul id="account_bar" class="group">
+      <li class="sign_up"><a href="/registration_es.php?go_back_to=http%253A%252F%252Fwww.meted.ucar.edu%252Fdlac2%252Fmod1_es%252Fmedia%252Fgraphics%252Fuserneeds.gif&" class="button dark">Inscr&iacute;base</a></li>
+    <li class="sign_in">&iquest;Ya tiene una cuenta? <a href="/sign_in_pop_es.php" class="button medium">Inicie sesi&oacute;n</a></li>
+    <!--<li><a href="/donate_es.php?type=D" class="button yellow">Donaciones</a></li> -->
+  </ul> 
+  
+</div><!-- end header -->
+</div><!-- end header_wrap --><div id="nav_wrap">
+  <ul id="nav" class="group">
+    <li ><a href="/index_es.php">Inicio</a></li>
+    <li ><a href="/training_detail_es.php">Educaci&oacute;n y formaci&oacute;n</a></li>
+    <li ><a href="/communities_es.php">Comunidades</a></li>
+    <li ><a href="/resources_es.php">Recursos</a></li>
+    <li ><a href="/about_es.php">Nosotros</a></li>
+    <li ><a href="/my_meted/index_es.php" class="my_tab">Su MetEd</a></li>
+ 
+  </ul>
+</div><!-- end nav -->
+<div id="wrap">
+<div id="title_search" class="group">
+  <h2>Inicie sesi&oacute;n</h2>
+      <div id="search">
+    <script type="text/javascript">
+		function checkInput( form ){
+			
+			var inputString = form.q.value;
+			//check for script tags
+			var script1 = /<script/;
+			var script2 = /&lt;script/;
+		
+			if( inputString.search( script1 ) >= 0 || inputString.search( script2 ) >= 0 ){
+				alert("Please enter a valid search term.");
+				return false;
+			} else {
+				 javascript:document.googleSearch.submit();
+			}
+		}
+	</script>
+      <form name="googleSearch" action="/search/search_results_es.php" method="get">
+        <input type="hidden" name="hq" value="site:meted.ucar.edu" />
+        <!-- Google CSE Search Box Begins  -->
+        <input name="cx" value="012446052473863902991:r8nkgnwzzsc" type="hidden">
+        <input name="cof" value="FORID:11" type="hidden">
+        <input name="q" id="q" value="" type="text">
+		<input type="button" id="search_submit" class="button light" value="Buscar" onclick="checkInput(this.form);"/>
+        <script type="text/javascript" src="/search/google_cse-searchbox.js"></script>
+        <!-- Google CSE Search Box Ends -->
+      </form>
+    </div><!-- end search --></div><!-- end title_search -->
+
+<div id="main" class="group">
+<div id="content" class="wide">
+
+<h3>Inicie sesi&oacute;n</h3>
+
+<div id="sign_in">
+<form id="login" name="login" method="post" action="loginCheck_es.php">
+  <div id="message">
+    <span id="outputMessage" class="output"></span>
+  </div>
+  <div>
+    <label for="email">Nombre de usuario o correo electr&oacute;nico</label>
+    <input type="text" id="email" name="email" class="small"/>
+  </div>
+  <div>
+    <label for="password">Contrase&ntilde;a</label>
+    <input type="password" id="password" name="password" class="small"/>
+  </div>
+  <div>
+  	<!--
+    <span>
+      <input type="checkbox" checked="checked" id="remember_me" name="remember_me" />
+      <label for="remember_me">Remember me</label>
+    </span>
+    -->
+    <span>
+      <input id="form_sign_in_btn" class="button light" type="button" name="submit" value="Iniciar sesi&oacute;n" />
+    </span>
+  </div>
+  <ul>
+    <li class="sign_up_link"><a href="registration_es.php?go_back_to=http%253A%252F%252Fwww.meted.ucar.edu%252Fdlac2%252Fmod1_es%252Fmedia%252Fgraphics%252Fuserneeds.gif&">Cree una cuenta</a></li>
+    <li class="forgot_password_link"><a href="/reset_password_es.php">&iquest;Olvid&oacute; la contrase&ntilde;a?</a></li>
+  </ul>
+  <input type="hidden" id="challengeField" name="challengeField" value="">
+  <input type="hidden" id="go_back_to" name="go_back_to" value="http://www.meted.ucar.edu/dlac2/mod1_es/media/graphics/userneeds.gif">
+  <input type="hidden" name="from" value="">
+</form>
+</div><!-- end sign_in -->
+</div><!-- end content -->
+</div><!-- end main -->
+</div><!-- end wrap -->
+<div id="footer_wrap">
+  <div id="footer" class="group">
+    <h3>Mapa del sitio</h3>
+    <div class="col">
+      <h4>General</h4>
+      <ul>
+        <li><a href="/index_es.php">Inicio</a></li>
+        <li><a href="/search/search_results_es.php">Buscar</a></li>
+        <li><a href="/registration_es.php">Inscr&iacute;base</a></li>
+        <!-- <li><a href="/mobile/index_es.php">MetEd m&oacute;vil</a></li> -->
+      </ul>
+      <h4>Educaci&oacute;n y formaci&oacute;n</h4>
+      <ul>
+        <li><a href="/training_detail_es.php">M&oacute;dulos de formaci&oacute;n</a></li>
+        <li><a href="/training_detail_courses_es.php">Cursos de aprendizaje</a></li>
+        <!-- <li><a href="http://courses.comet.ucar.edu/">Cursos internos y virtuales</a></li> -->
+      </ul>
+      <ul>
+        <li class="rss"><a href="/rss/getPublishFeed_es.php">Canal RSS de nuevas&nbsp;publicaciones</a></li>
+        <li class="mail"><a href="/account/index_es.php#mailList">Lista de correo</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Comunidades</h4>
+      <ul>
+        <li><a href="/communities/education/index_es.php">Portal de ense&ntilde;anza </a></li>
+        <li><a href="/communities/hazwarnsys/index_es.php">Sistemas internacionales de&nbsp;alerta temprana</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://es-la.facebook.com/groups/cometmeted/">Grupo de Facebook</a></li>
+        <li><a href="http://www.youtube.com/cometmeted">Canal de YouTube</a></li>
+        <li><a href="http://www.flickr.com/groups/cometwx/">Grupo de Flickr</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="/resources_faq_es.php">Preguntas frecuentes de inscripci&oacute;n y soporte t&eacute;cnico</a></li>
+        <li><a href="/resources_technotes_es.php">Notas t&eacute;cnicas</a></li>
+         <!-- <li><a href="http://courses.comet.ucar.edu/">Clase virtual de COMET</a></li> -->
+        <li><a href="/resources_gloss_es.php">Glosarios de meteorolog&iacute;a</a></li>
+      </ul>
+      <h4>Acerca de nosotros</h4>
+      <ul>
+        <li><a href="/about_es.php">&iquest;Qu&eacute; es MetEd?</a></li>
+        <li><a href="/about_news_es.php">Novedades</a></li>
+        <li><a href="/about_es.php#contact">Cont&aacute;ctenos</a></li>
+        <li><a href="/about_legal_es.php">Informaci&oacute;n legal</a></li>
+      </ul>
+    </div>
+    <div class="col wide">
+      <h4>Nuestra organizaci&oacute;n</h4>
+      <p>MetEd es producto del trabajo de <a href="http://www.comet.ucar.edu/">The COMET<sup>&reg;</sup> Program</a>, un&nbsp;talentoso equipo integrado por cient&iacute;ficos, directores de dise&ntilde;o instruccional, dise&ntilde;adores y programadores que se dedica a la creaci&oacute;n de materiales de ense&ntilde;anza de alta calidad desde 1989.</p>
+      <p><a href="http://www.comet.ucar.edu/"><img src="/images/footer_comet_logo.png" alt="Logotipo de COMET" /></a></p>
+      <p>COMET y MetEd tienen el honor de formar parte de los <a href="http://www.ucp.ucar.edu/">programas de la comunidad de UCAR</a>.</p>
+      <p><a href="http://www.ucp.ucar.edu/"><img src="/images/footer_ucp_logo.jpg" alt="Logotipo de UCP" /></a></p>
+    </div>
+  </div>
+  <!-- end footer --> 
+</div>
+<!-- end footer_wrap -->
+<div id="copyright">
+  <p>&copy; Copyright 2017, <a href="http://www.ucar.edu">The University Corporation for Atmospheric Research</a>. Reservados todos los derechos. <a href="/about_legal_es.php">Avisos legales</a> <!-- | <a href="https://spreadsheets0.google.com/a/comet.ucar.edu/spreadsheet/viewform?hl=en&hl=en&formkey=dGlIakQ5Qlg3THJhLVgtYVZoUm54LVE6MA#gid=0" target="_blank">Informe de error en MetEd</a></p> -->
+</div>
+<!-- OrgNavFooter Script --> 
+  <script>
+
+// CUSTOM VARIABLES
+var contactLink = "mailto:webmaster@comet.ucar.edu";     // enter your Webmaster/Feedback link. Include http:// or mailto:
+var hideOrgNav = false;        // hide the entire OrgNav from view
+var hideFooter = true;          // hide the entire OrgFooter from view
+var hideNSF = true;               // hide the NSF disclaimer
+var footerColor = '#ccc';       // hex color of the footer font including the #
+
+// DO NOT EDIT BELOW THIS POINT
+var jsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+if(typeof jQuery === "undefined"){
+  document.write("<scr"+"ipt src='"+jsHost+"ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript'></scr"+"ipt>");
+}
+document.write("<scr"+"ipt src='"+jsHost+"www2.ucar.edu/js/orgnav' type='text/javascript'></scr"+"ipt>");
+</script>
+  <noscript>
+  <iframe  src="http://www2.ucar.edu/sites/default/modules/custom/ucar_comm_site/includes/noscript.php"></iframe>
+  </noscript>
+  <!-- END OrgNavFooter Script -->
+</body>
+</html>

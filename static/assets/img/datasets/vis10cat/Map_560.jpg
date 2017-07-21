@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <title>International Journal of Health Geographics | Home page</title>
+
+        
+
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- For IE 9 and below -->
+<!--[if IE]><link rel="shortcut icon" href=/static/images/favicons/biomedcentral/favicon-dc10a51d5f.ico><![endif]-->
+<!-- Touch Icons - iOS and Android 2.1+ -->
+<link rel="apple-touch-icon" href=/static/images/favicons/biomedcentral/favicon-0969f3a317.png>
+<!-- Firefox, Chrome, Safari, IE 11+ and Opera -->
+<link rel="icon" href=/static/images/favicons/biomedcentral/favicon-0969f3a317.png>
+        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+        <script>(function(d) {if (sessionStorage.getItem('webfonts') == 'true'){d.className += ' webfonts-loaded';}})(document.documentElement);</script>
+        <link rel="stylesheet" media="screen" href=/static/styles/basic/basic-52f301b7b1.css/>
+<link rel="stylesheet" media="print" href=/static/styles/biomedcentral/biomedcentral-print-b286681189.css/>
+
+<link rel="stylesheet" class="js-ctm" href=/static/styles/biomedcentral/biomedcentral-30bd936f9d.css
+      media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+        
+    <script type="text/javascript">
+        config = {
+            env: 'live',
+            site: 'ij-healthgeographics.biomedcentral.com',
+            siteWithPath: 'ij-healthgeographics.biomedcentral.com' + window.location.pathname,
+            twitterHashtag: '',
+            cmsPrefix: 'http://studio-cms.springer.com/studio/',
+            
+            
+            figshareScriptUrl: 'https://widgets.figshare.com/static/figshare.js',
+            publisherBrand: 'BioMed Central'
+        };
+    </script>
+
+        
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+        (function() {
+            var sampleRate = 20;
+
+            
+                ga('create', "UA-62066853-9", {
+                    cookieDomain: 'none',
+                    allowLinker: true,
+                    siteSpeedSampleRate: sampleRate
+                });
+
+                ga("set", "anonymizeIp", true);
+                ga('send', 'pageview');
+            
+
+            ga('create', "UA-54492316-9", {
+                cookieDomain: 'none',
+                allowLinker: true,
+                siteSpeedSampleRate: sampleRate,
+                name: 'global'
+            });
+
+            ga("global.set", "anonymizeIp", true);
+            ga('global.send', 'pageview');
+            ga('set', 'transport', 'beacon');
+        }())
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+        
+    
+    <link rel="canonical" href="//ij-healthgeographics.biomedcentral.com/"/>
+    
+
+
+        
+        
+    <meta name="keywords" content="International Journal of Health Geographics, Health Promotion and Disease Prevention, Remote Sensing/Photogrammetry, Epidemiology, Human Geography, Geographical Information Systems/Cartography, Public Health"/>
+    <meta name="description" content="&lt;p&gt;&lt;i&gt;International Journal of Health Geographics&lt;/i&gt; is fully dedicated to publishing novel, high quality and internationally significant manuscripts on all aspects of geospatial information systems and science applications in health and healthcare. The journal fills a serious gap in existing journals by providing a credible central venue for researchers and practitioners to publish their health geographics research.&lt;/p&gt;"/>
+
+        
+
+        
+        
+    <meta property="og:url" content="https://ij-healthgeographics.biomedcentral.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="International Journal of Health Geographics"/>
+    <meta property="og:title" content="International Journal of Health Geographics"/>
+    <meta property="og:description" content="&lt;p&gt;&lt;i&gt;International Journal of Health Geographics&lt;/i&gt; is fully dedicated to publishing novel, high quality and internationally significant manuscripts on all aspects of geospatial information systems and science applications in health and healthcare. The journal fills a serious gap in existing journals by providing a credible central venue for researchers and practitioners to publish their health geographics research.&lt;/p&gt;"/>
+    <meta property="og:image" content="https://images.springer.com/sgw/journals/medium/12942.jpg"/>
+
+        
+    </head>
+
+    <body class="journalhome" >
+    
+    <div class="container" style="height: 0"><div id="wt_refpoint"></div></div>
+    <p class="skip-to-main">
+    <a class="skip-to-main__link" href="#main">Skip to main content</a>
+</p>
+
+    <div id="top">
+        
+<div id="RealMediaLeaderboard" class="adsbox RealMediaAd Ad Ad--leaderboard" data-position="Top">
+    <div class="Ad_content">
+        <p class="Ad_label">Advertisement</p>
+        
+    </div>
+</div>
+
+
+        
+
+
+
+         
+    <div id="membership-message-loader-desktop" class="placeholder" data-placeholder="/placeholder/v1/membership/message"></div>
+    <header class="header" role="banner">
+        <div class="header__inner">
+            <a id="header-logo" href="//www.biomedcentral.com/" class="logo header__logo" title="BioMed Central">
+                <img srcset="/static/images/biomed-central-logo-2d9caecd7b.svg" src="/static/images/biomed-central-logo-5300b47908.png" class="logo__img" alt="Biomed Central" />
+            </a>
+            <div class="header__right">
+                <div class="toggles js-fade-toggle">
+                    <p id="loginLink" class="sign-in toggles__item" data-replace="true" data-placeholder="/placeholder/v1/username">
+    <a class="sign-in__link" href="//www.biomedcentral.com/login" data-track-event="click" data-event-category="Account" data-event-action="Click Login Link">
+        <span class="sign-in__no-js-account-hide">Login<span class="sign-in__js-account-hide"> to </span></span><span class="sign-in__js-account-hide sign-in__no-js-capitalise">your account</span>
+    </a>
+</p>
+                    
+                    <a href="#globalSearch" class="toggles__item toggles__item--search" data-toggle="search"><span class="sr-only">Search</span></a>
+                </div>
+                <form role="search" id="globalSearch" class="search search--expandable header__search" method="GET" action="//www.biomedcentral.com/search" data-track-event="submit"
+      data-event-category="Search and Results" data-event-action="Submit search" data-event-label="">
+    <div class="search__content">
+        <label for="publisherSearch" class="sr-only">Search BioMed Central articles</label>
+        <input id="publisherSearch" class="search__input" autocomplete="off" role="textbox" name="query" type="text" value="" title="Search BioMed Central" placeholder="Search BioMed Central articles"/>
+        <button id="search" class="search__button" type="submit">
+            <span class="sr-only">Search</span>
+        </button>
+        <input type="hidden" name="searchType" value="publisherSearch"/>
+    </div>
+</form>
+
+            </div>
+            
+        </div>
+    </header>
+
+        <main role="main">
+            
+            <header class="journal-header" role="banner">
+                <div class="journal-header__inner">
+                    <h2 class="journal-header__title" id="journalTitle">
+                        
+                        <a class="journal-header__title-text" href="/">
+                            International Journal of Health Geographics
+                        </a>
+                    </h2>
+                    
+                </div>
+                <div class="navbar">
+                    <div class="navbar__inner">
+                        
+<p class="impact-factor">
+    <span class="impact-factor__label">Impact Factor</span> <span class="impact-factor__value">3.282</span>
+</p>
+
+
+                        
+                        <nav class="navbar__nav">
+                            <h3 class="navbar__menu-toggle" data-toggle="collapse" data-target="journal-menu">
+                                <span class="sr-only">Main </span>menu
+                            </h3>
+                            <ul id="journal-menu" class="navbar__menu" id="siteNavigation" role="menu">
+                                
+                                    <li class="navbar__item" role="menuitem">
+                                        <a class="navbar__link is-active" href='/'>Home</a>
+                                    </li>
+                                
+                                    <li class="navbar__item" role="menuitem">
+                                        <a class="navbar__link" href='/about'>About</a>
+                                    </li>
+                                
+                                    <li class="navbar__item" role="menuitem">
+                                        <a class="navbar__link" href='/articles'>Articles</a>
+                                    </li>
+                                
+                                    <li class="navbar__item" role="menuitem">
+                                        <a class="navbar__link" href='/submission-guidelines'>Submission Guidelines</a>
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+                <div class="journal-identity journal-identity--escher-red">
+                    
+                        <div class="journal-identity__inner">
+                            <div class="journal-identity__main">
+                                <div class="journal-identity__search">
+                                    <form role="search"
+                                          method="GET"
+                                          action="//ij-healthgeographics.biomedcentral.com/articles"
+                                          class="search"
+                                          data-track-event="click"
+                                          data-event-category="Search and Results"
+                                          data-event-action="Search from journal header">
+                                        <input class="search__input"
+                                               placeholder="Search articles within this journal"
+                                               role="textbox"
+                                               name="query"
+                                               type="text"
+                                               value=""
+                                               title="Search International Journal of Health Geographics">
+                                        <button class="search__button" type="submit"><span class="sr-only">Search</span></button>
+                                        <input type="hidden" name="searchType" value="journalSearch">
+                                        <input type="hidden" name="tab" value="keyword">
+                                    </form>
+                                </div>
+                                
+                                    <p class="journal-identity__button">
+                                        <a class="journal-identity__submit" href="https://www.editorialmanager.com/ijhg/"
+                                           data-track-event="click"
+                                           data-event-category="Journal header"
+                                           data-event-action="Click submit a manuscript"
+                                           data-event-label="International Journal of Health Geographics"><strong>Submit a manuscript</strong>
+                                        </a>
+                                    </p>
+                                
+                            </div>
+                        </div>
+                    
+                </div>
+            </header>
+            
+        
+            <div class="container">
+                <div id="main" class="layout">
+                    
+    
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+
+
+
+                    <div class=" layout__main--wide" id="main-content">
+                        <div class="block" id="Test-ImgSrc">
+                            
+    
+        
+<div class="CmsItem CmsCollection CmsCollection--leftBias" data-fragment="729792">
+    
+
+    
+    <div class="Column">
+    <div class="CmsItem CmsCollection"  data-fragment="729788">
+        
+        
+            <div class="CmsItem CmsTeaser featured featured--stacked" data-fragment="6485398">
+    
+    <h2>Read our highly accessed series: Smart healthy cities and regions</h2>
+    
+    
+    <div class="featured__media">
+        
+            
+<div class="CmsItem CmsImage" data-fragment="6485402">
+    <a class="CmsImage_link" href="http://www.ij-healthgeographics.com/series/smarthealthycities">
+        <img class="CmsImage_img" src="//media.springernature.com/lw450/springer-cms/rest/v1/content/6485402/data/v3" alt="Smart cities"/>
+    </a>
+    
+    <p class="featured-copyright">Matthias Ripp</p>
+    
+</div>
+
+
+        
+    </div>
+    
+
+    
+
+    
+        <p class="featured__link"><a href=http://www.ij-healthgeographics.com/series/smarthealthycities> Access the full series here </a></p>
+    
+</div>
+
+        
+            
+<div class="CmsItem CmsCollection" data-tabs="tabs" data-fragment="727206">
+    <h2>Articles</h2>
+    <ul class="tabs" role="tablist">
+        
+            
+            <li role="presentation" class="tabs__item is-active">
+                <a class="tabs__link" href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">Recent</a>
+            </li>
+            
+        
+            
+            <li role="presentation" class="tabs__item ">
+                <a class="tabs__link" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">Most accessed</a>
+            </li>
+            
+        
+    </ul>
+    <div class="tab-content">
+        
+            
+        <div role="tabpanel" class="tab-content__view is-active" id="tab-1">
+            
+    <div id="recent-articles" class="placeholder placeholder-articleList">
+        
+        <div class="PlaceholderRss">
+            <a class="RssLabel" id="recent-articles-feed" href="/articles/most-recent/rss.xml" target="_blank">
+                <span class="RssLabel_label">Recent articles RSS</span>
+            </a>
+        </div>
+        <div id="search-container" class="Results" data-total="735">
+    <ol class="ResultsList ResultsList--beta">
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Methodology</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Latest Articles"
+                           data-event-action="Click Title" data-event-label="10.1186/s12942-017-0098-4"
+                           href="/articles/10.1186/s12942-017-0098-4" class="fulltexttitle"><i>GridSample</i>: an R package to generate household survey primary sampling units (PSUs) from gridded population data</a>
+                    </h3>
+                    <p class="ResultsList_authors">Dana R. Thomson, Forrest R. Stevens, Nick W. Ruktanonchai, Andrew J. Tatem and Marcia C. Castro</p>
+                    <p class="ResultsList_published">Published on: 19 July 2017</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Research</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Latest Articles"
+                           data-event-action="Click Title" data-event-label="10.1186/s12942-017-0096-6"
+                           href="/articles/10.1186/s12942-017-0096-6" class="fulltexttitle">Is gentrification all bad? Positive association between gentrification and individual’s perceived neighborhood collective efficacy in Montreal, Canada</a>
+                    </h3>
+                    <p class="ResultsList_authors">Madeleine Steinmetz-Wood, Rania Wasfi, George Parker, Lisa Bornstein, Jean Caron and Yan Kestens</p>
+                    <p class="ResultsList_published">Published on: 14 July 2017</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Research</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Latest Articles"
+                           data-event-action="Click Title" data-event-label="10.1186/s12942-017-0097-5"
+                           href="/articles/10.1186/s12942-017-0097-5" class="fulltexttitle">Estimating the prevalence of 26 health-related indicators at neighbourhood level in the Netherlands using structured additive regression</a>
+                    </h3>
+                    <p class="ResultsList_authors">Jan van de Kassteele, Laurens Zwakhals, Oscar Breugelmans, Caroline Ameling and Carolien van den Brink</p>
+                    <p class="ResultsList_published">Published on: 1 July 2017</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Research</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Latest Articles"
+                           data-event-action="Click Title" data-event-label="10.1186/s12942-017-0094-8"
+                           href="/articles/10.1186/s12942-017-0094-8" class="fulltexttitle">Developing a data-driven spatial approach to assessment of neighbourhood influences on the spatial distribution of myocardial infarction</a>
+                    </h3>
+                    <p class="ResultsList_authors">Wahida Kihal-Talantikite, Christiane Weber, Gaelle Pedrono, Claire Segala, Dominique Arveiler, Clive E. Sabel, Séverine Deguen and Denis Bard</p>
+                    <p class="ResultsList_published">Published on: 7 June 2017</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Research</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Latest Articles"
+                           data-event-action="Click Title" data-event-label="10.1186/s12942-017-0095-7"
+                           href="/articles/10.1186/s12942-017-0095-7" class="fulltexttitle">Intersection of neighborhood dynamics and socioeconomic status in small-area walkability: the Heart Healthy Hoods project</a>
+                    </h3>
+                    <p class="ResultsList_authors">Pedro Gullón, Usama Bilal, Alba Cebrecos, Hannah M. Badland, Iñaki Galán and Manuel Franco</p>
+                    <p class="ResultsList_published">Published on: 6 June 2017</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+    </ol>
+</div>
+
+        <p class="ViewAll">
+            <a href="/articles" class="LinkArrow LinkArrow--right">View all articles</a>
+        </p>
+        
+    </div>
+
+        </div>
+            
+        
+            
+        <div role="tabpanel" class="tab-content__view " id="tab-2">
+            
+    
+    <div id="most-accessed-articles" class="placeholder placeholder-articleList">
+        <div class="PlaceholderRss">
+            <a class="RssLabel" id="most-accessed-feed" href="/articles/most-accessed/rss.xml" target="_blank">
+                <span class="RssLabel_label">Most accessed articles RSS</span>
+            </a>
+        </div>
+        <div id="search-container" class="Results" data-total="5">
+    <ol class="ResultsList ResultsList--beta">
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Review</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Most accessed"
+                           data-event-action="Click Title" data-event-label="10.1186/1476-072X-10-67"
+                           href="/articles/10.1186/1476-072X-10-67" class="fulltexttitle">Crowdsourcing, citizen sensing and sensor web technologies for public and environmental health surveillance and crisis management: trends, OGC standards and application examples</a>
+                    </h3>
+                    <p class="ResultsList_authors">Maged N Kamel Boulos, Bernd Resch, David N Crowley, John G Breslin, Gunho Sohn, Russ Burtner, William A Pike, Eduardo Jezierski and Kuo-Yu Slayer Chuang</p>
+                    <p class="ResultsList_published">Published on: 21 December 2011</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Research</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Most accessed"
+                           data-event-action="Click Title" data-event-label="10.1186/s12942-016-0034-z"
+                           href="/articles/10.1186/s12942-016-0034-z" class="fulltexttitle">Performance analysis of multiple Indoor Positioning Systems in a healthcare environment</a>
+                    </h3>
+                    <p class="ResultsList_authors">Tom Van Haute, Eli De Poorter, Pieter Crombez, Filip Lemic, Vlado Handziski, Niklas Wirström, Adam Wolisz, Thiemo Voigt and Ingrid Moerman</p>
+                    <p class="ResultsList_published">Published on: 3 February 2016</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Review</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Most accessed"
+                           data-event-action="Click Title" data-event-label="10.1186/1476-072X-3-1"
+                           href="/articles/10.1186/1476-072X-3-1" class="fulltexttitle">Towards evidence-based, GIS-driven national spatial health information infrastructure and surveillance services in the United Kingdom</a>
+                    </h3>
+                    <p class="ResultsList_authors">Maged N Kamel Boulos</p>
+                    <p class="ResultsList_published">Published on: 28 January 2004</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Editorial</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Most accessed"
+                           data-event-action="Click Title" data-event-label="10.1186/1476-072X-13-10"
+                           href="/articles/10.1186/1476-072X-13-10" class="fulltexttitle">On the Internet of Things, smart cities and the WHO Healthy Cities</a>
+                    </h3>
+                    <p class="ResultsList_authors">Maged N Kamel Boulos and Najeeb M Al-Shorbaji</p>
+                    <p class="ResultsList_published">Published on: 27 March 2014</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+        <li class="ResultsList_item">
+            <article>
+                <p class="ResultsList_type">Editorial</p>
+                <div class="ResultsList_group">
+                    <h3 class="ResultsList_title">
+                        <a data-track-event="click" data-event-category="Most accessed"
+                           data-event-action="Click Title" data-event-label="10.1186/1476-072X-4-22"
+                           href="/articles/10.1186/1476-072X-4-22" class="fulltexttitle">Web GIS in practice III: creating a simple interactive map of England's Strategic Health Authorities using Google Maps API, Google Earth KML, and MSN Virtual Earth Map Control</a>
+                    </h3>
+                    <p class="ResultsList_authors">Maged N Kamel Boulos</p>
+                    <p class="ResultsList_published">Published on: 21 September 2005</p>
+                    
+
+                </div>
+            </article>
+        </li>
+        
+    </ol>
+</div>
+
+        <p class="ViewAll">
+            <a href="/articles" class="LinkArrow LinkArrow--right">View all articles</a>
+        </p>
+    </div>
+    
+
+        </div>
+            
+        
+    </div>
+</div>
+
+
+        
+    </div>
+
+</div>
+    
+    <div class="Column">
+    <div class="CmsItem CmsCollection"  data-fragment="729790">
+        
+        
+            
+        
+        <div id="aimsAndScope" class="CmsItem placeholder placeholder-aimsAndScope">
+            <h2>Aims and scope</h2>
+            <div class="placeholder-aimsAndScope_content"><p><i>International Journal of Health Geographics</i> is fully dedicated to publishing novel, high quality and internationally significant manuscripts on all aspects of geospatial information systems and science applications in health and healthcare.</p><p><i>International Journal of Health Geographics</i> covers a wide range of interdisciplinary geospatial topics in a health/healthcare context, from spatial data infrastructure and Web geospatial interoperability research, to research into real-time Geographic Information Systems (GIS)-enabled surveillance services, remote sensing applications, spatial epidemiology, spatio-temporal statistics, and even cyberspace mapping. The journal is thus of interest to audiences from many different fields.</p></div>
+        </div>
+        
+    
+        
+            <div class="CmsItem CmsArticle" data-fragment="12192672">
+    <h2>Editor-in-Chief</h2>
+    <div class="CmsArticle_body">
+        <p>Maged N. Kamel Boulos, <em>University of the Highlands and Islands, UK</em><br/></p>
+    </div>
+</div>
+        
+            <div class="CmsItem CmsArticle cleared" data-fragment="6485650">
+    <div class="CmsArticle_body cleared">
+        <p>5-Year Impact Factor: 3.199</p><p></p>
+    </div>
+</div>
+
+        
+            <div class="CmsItem CmsArticle cleared" data-fragment="6486018">
+    <div class="CmsArticle_body cleared">
+        <p>Time to first decision: 28 days</p>
+    </div>
+</div>
+
+        
+            
+    <div class="CmsItem">
+        <h2>Tweets</h2>
+        <a class="twitter-timeline" data-height="600"  data-chrome="noborders noheader" href="https://twitter.com/IJHGeo"></a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+        
+    </div>
+
+</div>
+    
+</div>
+
+
+    
+        <div class="CmsItem CmsTeaser featured" data-fragment="6488840">
+    
+    <h2>Editor&#x27;s profile</h2>
+    
+    <div class="featured__content">
+        
+        <div class="featured__media">
+            
+                
+<div class="CmsItem CmsImage" data-fragment="6488874">
+    <img class="CmsImage_img" src="//media.springernature.com/lw450/springer-cms/rest/v1/content/6488874/data/v1" alt="Maged"/>
+    
+</div>
+
+
+            
+        </div>
+        
+        <div class="featured__text">
+            <p>Professor Maged N. Kamel Boulos is a British scientist and Chair of Digital Health at the University of the Highlands and Islands, Scotland, UK. He worked before that at Plymouth University, University of Bath and City University London. He has more than 25 years of combined clinical and informatics experience, spanning the clinical, industry and academic/research worlds (1990-2015). As well as his medical degree and Master’s in Clinical Dermatology, he holds a Master’s in Medical Informatics from King's College, University of London, and a PhD in Measurement &amp; Information in Medicine (GIS) from City University London. Maged teaches and has &gt;130 publications (h-index: 31) on a specialist range of medical/public health informatics and geoinformatics topics. He is Senior Member of IEEE, Fellow of the Royal Geographical Society, and was Co-Chair of WG IV/4 within ISPRS Commission IV, 2008-2012. He is the founding editor (2001) and Editor-in-Chief of the MEDLINE-indexed Int J Health Geogr. His research received wide media coverage and is/has been funded by national and international bodies, including World Health Organization EMRO and EURO; European Commission; UK TSB KTP Programme; UK AHRC; and Public Health Agency of Canada (funding one of his former PhD students).</p>
+            
+        </div>
+    </div>
+</div>
+
+    
+
+
+
+                            <div id="RealMediaMPU" class="adsbox RealMediaAd CmsItem Ad Ad--mpu" data-position="Middle">
+                                <div class="Ad_content">
+                                    <p class="Ad_label">Advertisement</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout__sidebar-right">
+                        <div class="block">
+                            
+    
+        
+        
+        <div class="SideBox SideBox--submission">
+            <a id="linkToSubmissionInSidebar" class="SideBox_submit" data-track-event="click"
+               data-event-category="Sidebar" data-event-action="Click submit a manuscript"
+               data-event-label="International Journal of Health Geographics"
+               href='https://www.editorialmanager.com/ijhg/'>Submit a manuscript</a>
+        </div>
+        
+    
+    
+        
+<div class="SideBox" data-fragment="693368">
+    
+    <ul class="list-stacked list-stacked--2 list-stacked--small">
+        
+        <li class="list-stacked__item">
+            
+<a class="teaser-placement"  href="/about/editorial-board">Editorial Board</a>
+
+
+
+
+        </li>
+        
+        <li class="list-stacked__item">
+            
+            <a href="https://www.biomedcentral.com/add-article-alert?journalId&#x3D;12942"
+                   data-track-event="click"
+                   data-event-category="Journal sidebar"
+                   data-event-action="Sign up for article alerts"
+                   data-event-label="International Journal of Health Geographics">
+                Sign up to article alerts
+            </a>
+        
+        </li>
+        
+    </ul>
+</div>
+
+
+    
+        
+        
+        <div id="sociaMediaAccounts" class="SideBox">
+            <h3 class="SideBox_title">Follow</h3>
+            <ul class="follow follow--inline">
+                
+                <li class="follow__item">
+                    <a class="follow__link follow__link--twitter-2" href="https://twitter.com/IJHGeo" data-track-event="click" data-event-category="Social Media"
+                       data-event-action="Click Follow Social Media" data-event-label="Twitter">
+                        <span class="follow__label">Follow us on Twitter</span>
+                    </a>
+                </li>
+                
+
+                
+                <li class="follow__item">
+                    <a class="follow__link follow__link--facebook-2" href="https://www.facebook.com/IJHGeo" data-track-event="click" data-event-category="Social Media"
+                       data-event-action="Click Follow Social Media" data-event-label="Facebook">
+                        <span class="follow__label">Follow us on Facebook</span>
+                    </a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+        
+    
+    
+
+
+                            
+<div id="RealMediaSkyscraper" class="adsbox RealMediaAd Ad Ad--skyscraper" data-position="Right1">
+    <div class="Ad_content">
+        <p class="Ad_label">Advertisement</p>
+        
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+            <div class="journal-footer">
+                <div class="journal-footer__inner">
+                    <div class="journal-footer__summary">
+                        <h4 class="journal-footer__title">
+                            
+                            <span class="journal-footer__title-text">International Journal of Health Geographics</span>
+                        </h4>
+                        <p class="journal-footer__issn">ISSN: 1476-072X</p>
+                    </div>
+                    
+                        <div class="journal-footer__contact">
+                            <h4 class="journal-footer__contact-title">Contact us</h4>
+                            <ul class="journal-footer__contact-list">
+                                
+                                    <li class="journal-footer__contact-item">Editorial email: <a href="mailto:krishna.vairamani@springer.com">krishna.vairamani@springer.com</a></li>
+                                
+                                
+                                    <li class="journal-footer__contact-item">Support email: <a href="mailto:info@biomedcentral.com">info@biomedcentral.com</a></li>
+                                
+                            </ul>
+                        </div>
+                    
+                </div>
+            </div>
+        
+         
+    <footer>
+        <div class="footer">
+            <div class="footer__header">
+                <img srcset="/static/images/biomed-central-logo-white-3c6c941205.svg" src="/static/images/biomed-central-logo-white-faac4202d5.png" class="logo__img footer__logo" alt="Biomed Central" />
+                
+                    <h2 class="footer__menu-title">Publisher Main Menu</h2>
+                    <ul class="footer__primary-menu">
+                        
+                            <li class="footer__primary-item">
+                                <a class="footer__link footer__primary-link" href="//www.biomedcentral.com/journals">Explore journals</a>
+                            </li>
+                        
+                            <li class="footer__primary-item">
+                                <a class="footer__link footer__primary-link" href="//www.biomedcentral.com/getpublished">Get published</a>
+                            </li>
+                        
+                            <li class="footer__primary-item">
+                                <a class="footer__link footer__primary-link" href="//www.biomedcentral.com/about">About BioMed Central</a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+            <div id="Test-FooterExists" class="footer__content">
+                <div class="footer__legal">
+                    
+                    <p class="footer__terms">By continuing to use this website, you agree to our <a class="footer__link footer__link--inline" href="//www.biomedcentral.com/terms-and-conditions">Terms and Conditions</a>, <a class="footer__link footer__link--inline"
+                                                                                                                                                                                                                               href="//www.biomedcentral.com/terms-and-conditions/privacy-statement">Privacy
+                        statement</a> and <a class="footer__link footer__link--inline" href="//www.biomedcentral.com/cookies">Cookies</a> policy.</p>
+                </div>
+                
+    <nav id="publisherFooter" class="footer__nav">
+        <h3 class="footer__menu-title">Publisher secondary menu</h3>
+        <div class="footer__nav-inner">
+            
+            <div class="footer__menu">
+                <ul class="footer__list">
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="http://blogs.biomedcentral.com/">Read more on our blogs</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/login">Receive BMC newsletters</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/account">Manage article alerts</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="http://authorservices.springernature.com/language-editing/">Language editing for authors</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="http://authorservices.springernature.com/scientific-editing/">Scientific editing for authors</a>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div class="footer__menu">
+                <ul class="footer__list">
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/about/policies">Open Access Policies</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/accessibility">Accessibility</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/about/press-centre">Press center</a>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div class="footer__menu">
+                <ul class="footer__list">
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/about/contact-us">Contact us</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="https://biomedcentral.typeform.com/to/VLXboo">Leave feedback</a>
+                        
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a class="footer__link" href="//www.biomedcentral.com/about/jobs">Careers</a>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div class="footer__menu footer__menu--follow">
+                <div class="footer__follow">
+                    <h3 class="footer__follow-title">Follow BioMed Central</h3>
+                    <ul class="follow follow--inline">
+                    
+                        <li class="footer__follow-item follow__item">
+                            <a class="follow__link follow__link--twitter" href="https://twitter.com/biomedcentral" target="_blank" data-track-event="click" data-event-category="Social Media" data-event-action="Click Follow Social Media" data-event-label="Twitter">
+                                <span class="follow__label">Twitter</span>
+                            </a>
+                        </li>
+                    
+                        <li class="footer__follow-item follow__item">
+                            <a class="follow__link follow__link--facebook" href="https://www.facebook.com/BioMedCentral" target="_blank" data-track-event="click" data-event-category="Social Media" data-event-action="Click Follow Social Media" data-event-label="Facebook">
+                                <span class="follow__label">Facebook</span>
+                            </a>
+                        </li>
+                    
+                        <li class="footer__follow-item follow__item">
+                            <a class="follow__link follow__link--gplus" href="https://plus.google.com/106226337984152901734/" target="_blank" data-track-event="click" data-event-category="Social Media" data-event-action="Click Follow Social Media" data-event-label="Google Plus">
+                                <span class="follow__label">Google Plus</span>
+                            </a>
+                        </li>
+                    
+                        <li class="footer__follow-item follow__item">
+                            <a class="follow__link follow__link--weibo" href="http://www.weibo.com/biomedcentral" target="_blank" data-track-event="click" data-event-category="Social Media" data-event-action="Click Follow Social Media" data-event-label="Weibo">
+                                <span class="follow__label">Weibo</span>
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+            </div>
+        </div>
+        <div class="branding-bar">
+            <div class="logo branding-bar__logo">
+                <img srcset="/static/images/logo-springernature-06a514799d.svg" src="/static/images/logo-springernature-7c95d1378e.png" class="logo__img branding-bar-logo__img" alt="Springer Nature Logo" />
+            </div>
+            <p class="branding-bar__copyright">&#169; 2017 BioMed Central Ltd unless otherwise stated. Part of <a class="branding-bar__link" href="http://www.springernature.com">Springer Nature</a>.</p>
+        </div>
+    </footer>
+    <noscript class="js-cookie-banner-noscript">
+        <div class="cookie-banner js-cookie-banner">
+            <div class="cookie-banner__inner">
+                <p class="cookie-banner__message">
+                    We use cookies to improve your experience with our site.
+                    <a href="https://www.biomedcentral.com/cookies"
+                       class="cookie-banner__link"
+                       data-track-event="click"
+                       data-event-category="EU Cookie Law Banner"
+                       data-event-action="Find out more">More information <span class="sr-only">about our cookie policy</span>
+                    </a>
+                </p>
+                <button hidden class="cookie-banner__dismiss js-cookie-banner-dismiss"
+                        data-track-event="click"
+                        data-event-category="EU Cookie Law Banner"
+                        data-event-action="Close"><span class="cookie-banner__dismiss-text">Close</span>
+                </button>
+            </div>
+        </div>
+</noscript>
+
+
+    </div>
+    <div id="JHome"></div>
+    
+
+    
+<script>
+(function() {
+    var linkEl = document.querySelector('.js-ctm');
+    if (linkEl && window.matchMedia && window.matchMedia(linkEl.media)) {
+        var vendorScript = document.createElement('script');
+        vendorScript.src = '/static/js/oscar-vendor-9484f4e829.js';
+        vendorScript.async = false;
+        document.body.appendChild(vendorScript);
+        var appScript = document.createElement('script');
+        appScript.src = '/static/js/oscar-app-4cb8678dee.js';
+        appScript.async = false;
+        document.body.appendChild(appScript);
+    }
+})();
+</script>
+
+
+
+<script type="text/javascript">
+    if (config) {
+        (function (d) {
+            Array.prototype.forEach.call(d.getElementsByClassName('RealMediaAd'), function (adElement) {
+                var iframe = d.createElement('iframe');
+                iframe.frameBorder = '0';
+                iframe.scrolling = 'no';
+                var position = adElement.getAttribute("data-position"),
+                        iframeInDoc = adElement.getElementsByClassName('Ad_content')[0].appendChild(iframe),
+                        doc = iframeInDoc.contentWindow.document;
+
+                doc.open().write('<body onload="window.location.href = '
+                        + '\'/placeholder/v1/advertising/realMedia?siteWithPath=' + encodeURIComponent(config.siteWithPath)
+                        + '&placement=' + position + '\';">');
+                doc.close();
+            });
+        })(document);
+    }
+</script>
+
+
+
+    
+        <script type="text/javascript">
+            document.addEventListener('readystatechange', function () {
+                if (document.readyState === 'complete') {
+                    setTimeout(function () {
+                        var script = document.createElement("script");
+                        script.type = "text/javascript";
+                        script.src = "https://recommendations.springernature.com/latest/entry-point.js";
+                        document.getElementsByTagName("head")[0].appendChild(script);
+                    }, 0);
+                }
+            });
+        </script>
+    
+
+
+    <script type="text/javascript">
+        var _kiq = _kiq || [];
+        (function () {
+            setTimeout(function () {
+                var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//s3.amazonaws.com/ki.js/47412/9CC.js';
+                f.parentNode.insertBefore(s, f);
+            }, 1);
+            setTimeout(function () {
+                var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//s3.amazonaws.com/ki.js/47412/aC6.js';
+                f.parentNode.insertBefore(s, f);
+            }, 1);
+        })();
+    </script>
+
+
+<noscript>
+	<img hidden src="https://verify.nature.com/verify/nature.png" border="0" width="0" height="0" style="display: none">
+</noscript>
+</body>
+</html>

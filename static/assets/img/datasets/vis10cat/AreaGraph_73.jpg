@@ -1,0 +1,1167 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	 <script src="//cdn.optimizely.com/js/3737530932.js"></script>
+	 <meta charset="UTF-8">
+	 <link rel="icon" href="//www.ibm.com/favicon.ico">
+	 <link rel="canonical" href="http://www.ibm.com/analytics/us/en/technology/spss/">
+	<title>IBM SPSS - IBM Analytics </title>
+    <meta content="IBM SPSS predictive analytics software provides statistical analysis/reporting, predictive modeling, data mining, decision management/deployment, and big data analytics" name="Description"/>
+	<meta content="IBM SPSS" name="Keywords"/>
+	<meta name="dcterms.date" content="2016-03-17">
+	<meta name="dcterms.rights" content="Copyright IBM Corp. 2016">
+	<meta name="geo.country" content="US">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <script>
+  
+  digitalData = {
+   page:{
+    category:{
+     primaryCategory: "IBM_Analytics_Technology_AdvancedAnalytics_PrescriptiveAnalytics"
+    },
+    pageInfo:{
+	effectiveDate: "2016-03-17",
+     expiryDate: "2017-03-17",
+     language: "en-US",
+     publishDate: "2016-03-17",
+     publisher: "IBM Corporation",
+     version: "v18",
+hotjar: {
+enabled: true
+}, 
+ibm: {
+      country: "US",
+      industry: "Analytics",
+      owner: "Brian J Robotnik/IBM/Detroit",
+      owningPortal: "Analytics",
+      siteID: "IBM_Analytics",
+      subject: "SWQ00",
+      type: "CT000"
+     },
+     liveperson:{
+      enabled: true,
+      routing: "spss-usen"
+     },
+     analytics:{
+      defimg: "defaults/main_img_0.jpg"       
+     }
+    }
+   }
+  }
+
+  </script>
+
+	<script src="//www.ibm.com/common/stats/ida_stats.js"></script>
+	<script type="text/javascript" src="//1.www.s81c.com/common/v18/js/www.js"></script>
+	<link href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet" title="www" type="text/css" />
+	<script src="//1.www.s81c.com/common/v18/js/tables.js"></script>
+	
+	<script>
+   		 IBMCore.common.util.config.set({
+		  "masthead":{
+		    "type":"alternate"
+		  }
+		});  
+	
+	</script>
+
+	<!-- IBM Analytics custom -->
+	<script src="//www.ibm.com/software/info/direct/func_call.jsp"></script>
+	
+	<link href="css/custom-v18.css" rel="stylesheet" type="text/css" /> 
+
+		
+
+<style>
+.featured-product-circle {
+    width: 250px;
+    margin-top: -50px;
+}</style>
+
+
+
+    
+   
+   
+   
+   
+   <!--LSCustomStart-->
+    <script>var avlCusLeads = [2,4,5,6,7,8];</script>
+    <script src="/analytics/us/en/scripts/customcontent.js"></script>
+  <!--LSCustomEnd-->
+ </head>
+  <body id="ibm-com" class="ibm-type">
+    <div id="ibm-top" class="ibm-landing-page">
+
+      <!-- MASTHEAD_BEGIN -->
+      <div id="ibm-masthead" role="banner" aria-label="IBM">
+        <div id="ibm-mast-options">
+          <ul role="toolbar" aria-labelledby="ibm-masthead">
+            <li id="ibm-geo" role="presentation"><a href="http://www.ibm.com/planetwide/select/selector.html" role="button" aria-label="United States selected - Choose a country">United States</a></li>
+            <li id="ibm-language" role="presentation"><span class="ibm-active" role="button" aria-disabled="true">English</span> <a href="http://www.ibm.com/us/en/" lang="en-US" role="button">English</a></li>
+          </ul>
+        </div>
+        <div id="ibm-universal-nav">    
+          
+          <nav role="navigation" aria-label="IBM">
+            <div id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></div>
+            <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+              <li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+            </ul>
+          </nav>
+          
+          <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+            <form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
+              <p>
+                <label for="q">IBM</label>
+                <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search"/>
+                <input type="hidden" value="18" name="v"/>
+                <input type="hidden" value="utf" name="en"/>
+                <input type="hidden" value="en" name="lang"/>
+                <input type="hidden" value="us" name="cc"/>
+                <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit"/>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- MASTHEAD_END -->
+      
+		<div id="ibm-content-wrapper">
+	
+			<!-- PRIMARY_NAV_START -->
+			<header role="banner">
+				<div class="ibm-sitenav-menu-container">
+				  <div class="ibm-sitenav-menu-name"><a href="http://www.ibm.com/analytics/us/en/">IBM Analytics</a></div>
+					<div class="ibm-sitenav-menu-list">
+						<ul role="menubar">
+							<li role="presentation"><a role="menuitem"  href="http://www.ibm.com/analytics/us/en/industry/">Industry</a></li>	
+							<li role="presentation" class="ibm-haschildlist ibm-highlight"><button role="menuitem" onclick="location.href='http://www.ibm.com/analytics/us/en/technology/';">Technology</button>
+								<ul role="menu" aria-label="Technology">
+                                <li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/watson-data-platform/platform.html">Data platform</a></li>
+									<li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/technology/advanced-analytics/">Advanced analytics</a></li>
+									<li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/technology/cloud-data-services/">Cloud data services</a></li>
+									<li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/technology/data-architecture/">Database management</a></li>
+									<li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/technology/enterprise-content-mangement/">Enterprise content management</a></li>
+									<li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/technology/agile/">Integration and governance</a></li>
+									<li role="presentation"><a role="menuitem" href="http://www.ibm.com/analytics/us/en/technology/open-source/">Open source</a></li>
+								</ul>
+							</li>
+							<li role="presentation"><a role="menuitem"  href="http://www.ibm.com/analytics/us/en/business/">Business</a></li>
+							<li role="presentation"><a role="menuitem"  href="http://www.ibm.com/software/analytics/learn-center/">Learn Center</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>     
+			<!-- PRIMARY_NAV_END -->
+
+
+			
+
+      
+			<div>
+      
+			<!-- LEADSPACE_BEGIN -->
+
+<style>
+#ibm-custom-leadspace-8{min-height: 200px; background: #64B3F4;background:-moz-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:-webkit-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:linear-gradient(-211deg, #64B3F4 47%,#C8F08F 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64B3F4', endColorstr='#C8F08F',GradientType=1);display:none;}
+#ibm-custom-leadspace-8 > div:first-child{padding: 14px 0px; min-height: 0px;}
+#ibm-custom-leadspace-7{min-height: 200px; background: #64B3F4;background:-moz-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:-webkit-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:linear-gradient(-211deg, #64B3F4 47%,#C8F08F 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64B3F4', endColorstr='#C8F08F',GradientType=1);display:none;}
+#ibm-custom-leadspace-7 > div:first-child{padding: 0px 0px; min-height: 0px;}
+#ibm-custom-leadspace-6{min-height: 200px; background: #64B3F4;background:-moz-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:-webkit-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:linear-gradient(-211deg, #64B3F4 47%,#C8F08F 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64B3F4', endColorstr='#C8F08F',GradientType=1);display:none;}
+#ibm-custom-leadspace-6 > div:first-child{padding: 0px 0px; min-height: 0px;}
+#ibm-custom-leadspace-5{min-height: 200px; background: #64B3F4;background:-moz-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:-webkit-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:linear-gradient(-211deg, #64B3F4 47%,#C8F08F 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64B3F4', endColorstr='#C8F08F',GradientType=1);display:none;}
+#ibm-custom-leadspace-5 > div:first-child{padding: 0px 0px; min-height: 0px;}
+#ibm-custom-leadspace-4{min-height: 200px; background: #64B3F4;background:-moz-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:-webkit-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:linear-gradient(-211deg, #64B3F4 47%,#C8F08F 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64B3F4', endColorstr='#C8F08F',GradientType=1);display:none;}
+#ibm-custom-leadspace-4 > div:first-child{padding: 0px 0px; min-height: 0px;}
+#ibm-custom-leadspace-2{min-height: 200px; background: #64B3F4;background:-moz-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:-webkit-linear-gradient(301deg, #64B3F4 47%, #C8F08F 100%);background:linear-gradient(-211deg, #64B3F4 47%,#C8F08F 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64B3F4', endColorstr='#C8F08F',GradientType=1);}
+#ibm-custom-leadspace-2 > div:first-child{padding: 0px 0px; min-height: 0px;}
+[id^=ibm-custom-leadspace-] > div > div{overflow:hidden}
+#ibm-custom-leadspace-2 > div > div > div > div.ibm-col-6-3 > img{display:initial;margin-top: 0px;margin-bottom: -4px;max-height: 365px; width:auto;;  margin-right: -142px;}
+#ibm-custom-leadspace-4 > div > div > div > div.ibm-col-6-3 > img{display:initial;margin-top: 0px;margin-bottom: -4px;max-height: 365px; width:auto;;  margin-right: -142px;}
+#ibm-custom-leadspace-5 > div > div > div > div.ibm-col-6-3 > img{display:initial;margin-top: 0px;margin-bottom: -4px;max-height: 365px; width:auto;;  margin-right: -142px;}
+#ibm-custom-leadspace-6 > div > div > div > div.ibm-col-6-3 > img{display:initial;margin-top: 0px;margin-bottom: -4px;max-height: 365px; width:auto;;  margin-right: -142px;}
+#ibm-custom-leadspace-7 > div > div > div > div.ibm-col-6-3 > img{display:initial;margin-top: 0px;margin-bottom: -4px;max-height: 365px; width:auto;;  margin-right: -142px;}
+#ibm-custom-leadspace-8 > div > div > div > div.ibm-col-6-3 > img{display:initial;margin-top: 0px;margin-bottom: -4px;max-height: 336px; width:auto;;  margin-right: -70px;}
+</style>
+<header role="banner" aria-labelledby"ibm-page-title-h1">
+  <div id="ibm-custom-leadspace-2" data-rlt="">
+   <div class="ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div>
+     <div class="ibm-columns ibm-padding-bottom-0">
+      <div class="ibm-padding-top-0 ibm-left-small ibm-col-medium-1-1 ibm-col-6-3 ibm-padding-bottom-2">
+       <h1 class="ibm-h1 ibm-padding-bottom-0 ibm-medium ibm-textcolor-white-core ibm-padding-top-2">IBM SPSS Software</h1>
+       <h2 class="ibm-h4 ibm-h4 ibm-textcolor-white-core ibm-padding-top-1">Predict with confidence what will happen next so you can make smarter decisions for your organization</h2>
+       <p class="ibm-btn-row ibm-alternate-background ibm-padding-top-1"><a href="#spss-featured-products" class="ibm-btn-pri ibm-btn-white "><span class="ibm-btn-nowrap ibm-anchor-down-link  ">Featured products</span></a><a href="/analytics/us/en/technology/spss/spss-trials.html" class="ibm-btn-sec ibm-btn-white"><span class="ibm-btn-nowrap ibm-forward-link  ">Free SPSS trials</span></a></p>
+      </div>
+     <div class="ibm-col-6-3 ibm-hidden-small ibm-hidden-medium ibm-right"><img class="ibm-resize" src="images/leadspace-spss.png"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div id="ibm-custom-leadspace-4" data-rlt="chief_data_officer">
+   <div class="ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div>
+     <div class="ibm-columns ibm-padding-bottom-0">
+      <div class="ibm-padding-top-0 ibm-left-small ibm-col-medium-1-1 ibm-col-6-3 ibm-padding-bottom-2">
+       <h3 class="ibm-h1 ibm-padding-bottom-0 ibm-medium ibm-textcolor-white-core ibm-padding-top-2">IBM SPSS Family for Chief Data Officer</h3>
+       <h4 class="ibm-h4 ibm-h4 ibm-textcolor-white-core ibm-padding-top-1">Ensure maximum business value from all of your organization's data</h4>
+       <p class="ibm-btn-row ibm-alternate-background ibm-padding-top-1"><a href="#spss-featured-products" class="ibm-btn-pri ibm-btn-white "><span class="ibm-btn-nowrap ibm-anchor-down-link  ">Featured products</span></a><a href="/analytics/us/en/technology/spss/spss-trials.html" class="ibm-btn-sec ibm-btn-white"><span class="ibm-btn-nowrap ibm-forward-link  ">Free SPSS trials</span></a></p>
+      </div>
+     <div class="ibm-col-6-3 ibm-hidden-small ibm-hidden-medium ibm-right"><img class="ibm-resize" src="images/leadspace-spss.png"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div id="ibm-custom-leadspace-5" data-rlt="business_analyst">
+   <div class="ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div>
+     <div class="ibm-columns ibm-padding-bottom-0">
+      <div class="ibm-padding-top-0 ibm-left-small ibm-col-medium-1-1 ibm-col-6-3 ibm-padding-bottom-2">
+       <h3 class="ibm-h1 ibm-padding-bottom-0 ibm-medium ibm-textcolor-white-core ibm-padding-top-2">IBM SPSS Family for Business Analyst</h3>
+       <h4 class="ibm-h4 ibm-h4 ibm-textcolor-white-core ibm-padding-top-1">Get answers to everyday business questions without programming</h4>
+       <p class="ibm-btn-row ibm-alternate-background ibm-padding-top-1"><a href="#spss-featured-products" class="ibm-btn-pri ibm-btn-white "><span class="ibm-btn-nowrap ibm-anchor-down-link  ">Featured products</span></a><a href="/analytics/us/en/technology/spss/spss-trials.html" class="ibm-btn-sec ibm-btn-white"><span class="ibm-btn-nowrap ibm-forward-link  ">Free SPSS trials</span></a></p>
+      </div>
+     <div class="ibm-col-6-3 ibm-hidden-small ibm-hidden-medium ibm-right"><img class="ibm-resize" src="images/leadspace-spss.png"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div id="ibm-custom-leadspace-6" data-rlt="data_analyst">
+   <div class="ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div>
+     <div class="ibm-columns ibm-padding-bottom-0">
+      <div class="ibm-padding-top-0 ibm-left-small ibm-col-medium-1-1 ibm-col-6-3 ibm-padding-bottom-2">
+       <h3 class="ibm-h1 ibm-padding-bottom-0 ibm-medium ibm-textcolor-white-core ibm-padding-top-2">IBM SPSS Family for<br/>Data Analyst</h3>
+       <h4 class="ibm-h4 ibm-h4 ibm-textcolor-white-core ibm-padding-top-1">Uncover valuable insights quickly from structured and unstructured data</h4>
+       <p class="ibm-btn-row ibm-alternate-background ibm-padding-top-1"><a href="#spss-featured-products" class="ibm-btn-pri ibm-btn-white "><span class="ibm-btn-nowrap ibm-anchor-down-link  ">Featured products</span></a><a href="/analytics/us/en/technology/spss/spss-trials.html" class="ibm-btn-sec ibm-btn-white"><span class="ibm-btn-nowrap ibm-forward-link  ">Free SPSS trials</span></a></p>
+      </div>
+     <div class="ibm-col-6-3 ibm-hidden-small ibm-hidden-medium ibm-right"><img class="ibm-resize" src="images/leadspace-spss.png"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div id="ibm-custom-leadspace-7" data-rlt="consultant">
+   <div class="ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div>
+     <div class="ibm-columns ibm-padding-bottom-0">
+      <div class="ibm-padding-top-0 ibm-left-small ibm-col-medium-1-1 ibm-col-6-3 ibm-padding-bottom-2">
+       <h3 class="ibm-h1 ibm-padding-bottom-0 ibm-medium ibm-textcolor-white-core ibm-padding-top-2">IBM SPSS Family for Consultants</h3>
+       <h4 class="ibm-h4 ibm-h4 ibm-textcolor-white-core ibm-padding-top-1">Help your clients transform their organizations with integrated end-to-end analytics software</h4>
+       <p class="ibm-btn-row ibm-alternate-background ibm-padding-top-1"><a href="#spss-featured-products" class="ibm-btn-pri ibm-btn-white "><span class="ibm-btn-nowrap ibm-anchor-down-link  ">Featured products</span></a><a href="/analytics/us/en/technology/spss/spss-trials.html" class="ibm-btn-sec ibm-btn-white"><span class="ibm-btn-nowrap ibm-forward-link  ">Free SPSS trials</span></a></p>
+      </div>
+     <div class="ibm-col-6-3 ibm-hidden-small ibm-hidden-medium ibm-right"><img class="ibm-resize" src="images/leadspace-spss.png"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div id="ibm-custom-leadspace-8" data-rlt="student">
+   <div class="ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div>
+     <div class="ibm-columns ibm-padding-bottom-0">
+      <div class="ibm-padding-top-0 ibm-left-small ibm-col-medium-1-1 ibm-col-6-3 ibm-padding-bottom-2">
+       <h3 class="ibm-h1 ibm-padding-bottom-0 ibm-medium ibm-textcolor-white-core ibm-padding-top-2">IBM SPSS Family for Students</h3>
+       <h4 class="ibm-h4 ibm-h4 ibm-textcolor-white-core ibm-padding-top-1">Explore essential tools for statistical analysis and data mining</h4>
+       <p class="ibm-btn-row ibm-alternate-background ibm-padding-top-1"><a href="#spss-featured-products" class="ibm-btn-pri ibm-btn-white "><span class="ibm-btn-nowrap ibm-anchor-down-link  ">Featured products</span></a><a href="/analytics/us/en/technology/spss/spss-trials.html" class="ibm-btn-sec ibm-btn-white"><span class="ibm-btn-nowrap ibm-forward-link  ">Free SPSS trials</span></a></p>
+      </div>
+     <div class="ibm-col-6-3 ibm-hidden-small ibm-hidden-medium ibm-right"><img class="ibm-resize" src="images/leadspace-spss-student.png"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+ <div id="ibm-leadspace-head"></div>
+</header>
+<!-- LEADSPACE_END -->		
+
+			
+			
+			<!-- SECONDARY_NAV_BEGIN -->
+			<nav id="secondary-nav-analytics" class="ibm-hidden-medium ibm-hidden-small">
+				<div id="secondary-nav-container" class="ibm-background-blue-50 ibm-alternate-background">
+					<div class="ibm-columns ibm-padding-top-1">
+						<div class="ibm-col-6-1"><p><a href="#what-is-spss" onClick="scrlTempPos('what-is-spss');return false">About</a></p></div>
+						<div class="ibm-col-6-1"><p><a href="#spss-featured-products" onClick="scrlTempPos('spss-featured-products');return false">Products</a></p></div>
+						<div class="ibm-col-6-1"><p><a href="#get-connected" onClick="scrlTempPos('get-connected');return false">Get started</a></p></div>
+						<div class="ibm-col-6-1"><p><a href="#spss-resources" onClick="scrlTempPos('spss-resources');return false">Resources</a></p></div>
+						<div class="ibm-col-6-1"><div id="lpbutton" class="ibm-btn-sec ibm-btn-blue-50"></div></div>
+						<div class="ibm-col-6-1"><p><a href="spss-trials.html" class="ibm-btn-pri ibm-btn-yellow-10 ibm-btn-nowrap" style="color:#323232 !important;">Free SPSS trials</a></p></div>
+
+					</div>
+				</div>
+			</nav>
+			<!-- SECONDARY_NAV_END -->
+	            <!-- CALLOUT_SPOT_START -->
+            
+ <div class="ibm-band ibm-alternate-background ibm-background-purple-80">
+  <div class="ibm-columns ibm-padding-top-1">
+   <div class="ibm-col-6-4">
+    <h2 class="ibm-h2 ibm-light">Top analyst firms position IBM as a leader in data science, predictive analytics and machine learning</h2>
+   </div>
+   <div class="ibm-col-6-2">
+    <p ></p>
+   </div>
+  </div>
+ </div>
+       
+        
+ <div class="ibm-band ibm-alternate-background ibm-background-purple-70" style="border-bottom:5px solid #412356">
+  <div class="ibm-columns ibm-padding-top-2">
+   <div class="ibm-col-6-4 ibm-col-medium-1-1">
+    <p class="ibm-h3">2017 Gartner Magic Quadrant for Data Science Platforms names IBM a leader</p>
+    <p>Learn why IBM is recognized as a leader in data science platforms and why data science, analytics, and machine learning are the engines of the future.</p>
+    <p class="ibm-btn-row"><a class="ibm-btn-pri ibm-btn-white-core" href="https://www-01.ibm.com/marketing/iwm/dre/signup?source=urx-13221&S_PKG=ov57144" target="_blank" title="">Register to read the report</a></p>
+   </div>
+   <div class="ibm-col-6-2"><img src="/analytics/us/en/technology/predictive-analytics/images/GartnerMQ-thumb.png" class=""></div>
+  </div>
+ </div>
+ <div class="ibm-band ibm-alternate-background ibm-background-purple-70" style="border-bottom:5px solid #412356">
+  <div class="ibm-columns ibm-padding-top-2">
+   <div class="ibm-col-6-4 ibm-col-medium-1-1">
+    <p class="ibm-h3">The Forrester Wave&trade;: Predictive Analytics and Machine Learning Solutions, Q1 2017 positions IBM as a Leader</p>
+    <p>Read this report to learn how predictive analytics and machine learning solutions help data scientists be more productive and find out why IBM earned a place in the Leaders category.</p>
+    <p class="ibm-btn-row"><a class="ibm-btn-pri ibm-btn-white-core" href="/analytics/us/en/technology/data-science/forrester-wave.html" title="Register for Forrest Wave report">Register to read the report</a></p>
+   </div>
+   <div class="ibm-col-6-2"><img src="/analytics/us/en/technology/predictive-analytics/images/forrester_wave.gif" class="" style="max-width:228px"></div>
+  </div>
+ </div>
+            
+            
+            <!-- CALLOUT_SPOT_END -->
+	
+	
+	
+	
+		<!--MAIN_CONTENT_BEGIN-->
+        <div role="main">
+          <div id="ibm-pcon">
+            <div id="ibm-content">
+              <div id="ibm-content-body">
+			    <!-- CONTENT_BEGIN -->  
+                <div id="ibm-content-main">
+				
+				
+				          
+				    <!-- OVERVIEW_BEGIN --> 
+					<section id="spss-overview" data-solution="what-is-spss">
+						<div id="overview-container" class="ibm-padding-bottom-3 ibm-padding-top-2">
+							<div class="ibm-columns ibm-padding-bottom-2">
+								<div class="ibm-col-4-1 ibm-col-medium-1-1">
+									<h2 class="ibm-h2 ibm-light  ibm-textcolor-blue-30">What is IBM SPSS?</h2>
+								</div>							
+								<div class="ibm-col-4-3 ibm-col-medium-1-1">
+									<p class="ibm-h4 ibm-light">What if you could get deeper, more meaningful insights from your data and predict what is likely to happen next? IBM SPSS predictive analytics software offers advanced techniques in an easy-to-use package to help you find new opportunities, improve efficiency and minimize risk.</p>
+									<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a href="#ibm-analytics-client-references" onclick="scrlTempPos('ibm-analytics-client-references');return false"><span class="ibm-icon-nolink ibm-anchor-down-link">Learn how customers are using IBM SPSS</span></a></p>
+								</div>		
+							</div>
+							
+							<div class="ibm-columns">
+								<!--solution_highlights_begin -->
+								<div class="ibm-col-4-1 ibm-center">
+									<img src="images/spss_featureicon1.png" alt="spss reporting icon" width="125" />
+									<h4 class="ibm-h4 ibm-textcolor-blue-30 ibm-padding-top-1">Statistical analysis and reporting</h4>
+									<p>Address the entire analytical process: planning, data collection, analysis, reporting, and deployment. </p>
+								</div>	
+								
+								<div class="ibm-col-4-1 ibm-center">
+									<img src="images/spss_featureicon2.png" alt="spss predictive icon" width="125" />
+									<h4 class="ibm-h4 ibm-textcolor-blue-30 ibm-padding-top-1">Predictive modeling and data mining</h4>
+									<p>Use powerful model-building, evaluation, and automation capabilities.</p>
+								</div>
+								
+								<div class="ibm-col-4-1 ibm-center">
+									<img src="images/spss_featureicon4.png"  alt="spss dsm icon" width="125" />
+									<h4 class="ibm-h4 ibm-textcolor-blue-30 ibm-padding-top-1">Decision management and deployment</h4>
+									<p>Activate your analytics with advanced model management and analytic decision management on prem, on cloud or as hybrid.</p>
+								</div>								
+
+								<div class="ibm-col-4-1 ibm-center">
+									<img src="images/spss_featureicon3.png"  alt="spss big data icon" width="125" />
+									<h4 class="ibm-h4 ibm-textcolor-blue-30 ibm-padding-top-1">Big data analytics</h4>
+									<p>Analyze big data to gain predictive insights and build effective business strategies.</p>
+								</div>
+								<!--solution_highlights_end -->
+							 </div>					
+						</div>
+					</section>
+					<!-- OVERVIEW_END --> 
+
+
+					
+					<!-- FEATURED_SOLUTIONS_BEGIN --> 
+					<section id="spss-featured-products" data-solution="spss-featured-products">
+						<div id="featured-solution-container" class="ibm-padding-bottom-2 ibm-padding-top-2 ibm-alternate-background  ibm-background-blue-50">
+							<div class="ibm-columns">
+
+								<!--										<p class="ibm-padding-top-1 ibm-padding-bottom-1 ibm-center">
+													<a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="cGiiYKG0Lsk" data-videotype="youtube" class="ibm-textcolor-white-core" href="https://www.youtube.com/watch?v=cGiiYKG0Lsk" style="margin-right:35px;"><span class="ibm-icon-nolink ibm-play-link">Watch overview</span></a>
+													</p>-->
+								
+								
+								<div class="ibm-col-6-2 ibm-col-medium-6-3">
+									<div class="ibm-padding-top-1">
+										<img src="images/modler.gif" alt="IBM SPSS Modeler" class="ibm-resize">
+									</div>
+								</div>							
+								<div class="ibm-col-6-4 ibm-col-medium-6-3">
+											<div class="ibm-padding-bottom-1 ibm-padding-horizontal">
+												<p class="ibm-textcolor-yellow-10 ibm-padding-top-1">Featured IBM SPSS product</p>
+												<h3 class="ibm-h3">IBM SPSS Modeler</h3>
+												<p class="ibm-h4">Discover patterns and trends in structured and unstructured data with an intuitive visual interface supported by advanced analytics. Available on cloud.</p>
+												
+												<p class="ibm-padding-top-2 ibm-padding-bottom-1">
+													<a class="ibm-btn-pri ibm-btn-yellow-10 ibm-h4 do-not-pass ibm-btn-nowrap" href="https://www.ibm.com/account/us-en/signup/register.html?a=IBMSPSSModeler&ctx=C001&cc=us&lc=en&trial=yes&quantity=1&catalogName=Master&partNumber=SPSS_M_TRIAL&source=mrsaas-trial-ibmid&pkg=ov33083&S_TACT=000000OA&S_OFF_CD=10000400&siteID=ECOM" target="blank">Try SPSS Modeler</a>
+												</p>
+												
+													
+												
+										<p class="ibm-padding-top-1 ibm-padding-bottom-2">
+										<a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="HZr3CmOgL_M" data-videotype="youtube" class="ibm-inlinelink ibm-video-player-con" href="https://www.youtube.com/watch?v=HZr3CmOgL_M" style="margin-right:35px;"><span class="ibm-icon-nolink ibm-play-link">Watch video</span></a>
+										<br class="ibm-hidden-large ibm-hidden-xlarge"><br class="ibm-hidden-large ibm-hidden-xlarge">
+										<!--http://www.ibm.com/marketplace/cloud/statistical-analysis-and-reporting/us/en-us" style=//-->
+										<a class="ibm-forward-link ibm-inlinelink" href="https://www.ibm.com/marketplace/cloud/spss-modeler/us/en-us?S_TACT=M161007W" style="margin-right:35px;">&nbsp; Learn more</a>
+										</p>												
+												
+											</div>
+								</div>								
+							</div>
+						</div>
+						
+						<div id="analytics-featured-continued-container" class="ibm-padding-bottom-2 ibm-background-white-core ibm-padding-top-3">
+							<div class="ibm-columns" data-widget="setsameheight" data-items=".ibm-col-xLarge-4-2">
+							
+							
+								<div class="ibm-col-1-1 ">
+									<h2 class="ibm-h4 ibm-light  ibm-textcolor-blue-40">Additional featured product</h2>
+								</div>
+								
+							
+								
+								
+
+
+								<div class="ibm-col-1-1">
+									<!--featured product-begin-->
+									<div class="ibm-card__content ibm-padding-bottom-2">
+										<div class="ibm-mo__image ibm-hidden-small">
+											<img src="images/stats.gif" class="featured-product-circle">
+											<p class="ibm-padding-top-1 ibm-center"><a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="LMhcmuozM7U" data-videotype="youtube" class=" ibm-inlinelink" href="https://www.youtube.com/watch?v=LMhcmuozM7U"><span class="ibm-icon-nolink ibm-play-link">Watch overview</span></a></p>
+										</div>
+										<div class="ibm-mo__body">
+											<img src="images/stats.gif" class="featured-product-circle ibm-padding-top-1 ibm-center ibm-padding-bottom-1 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge">
+											<h4 class="ibm-bold">IBM SPSS Statistics
+											<span class="ibm-textcolor-gray-50 ibm-small ibm-light"> | Predictive  analytics</span></h4>
+											<p class="ibm-padding-bottom-1">Empower everyone from beginners to expert analysts to understand data, identify trends and produce accurate forecasts.  </p>
+											<p>
+												<p class="ibm-padding-top-1 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"><a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="LMhcmuozM7U" data-videotype="youtube" class=" ibm-inlinelink" href="https://www.youtube.com/watch?v=LMhcmuozM7U"><span class="ibm-icon-nolink ibm-play-link">Watch overview</span></a></p>
+												<br class="ibm-hidden-small ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"/>
+												<p><!--<a class="ibm-forward-link ibm-inlinelink" href="//www.ibm.com/marketplace/cloud/statistical-analysis-and-reporting/us/en-us" style="margin-right:35px;"> &nbsp; Learn more</a>--><a class="ibm-forward-link ibm-inlinelink" href="//www.ibm.com/us-en/marketplace/spss-statistics" style="margin-right:35px;"> &nbsp; Learn more</a></p>
+												<br/>
+												<p><!--<a class="ibm-btn-pri ibm-btn-blue-50 do-not-pass ibm-btn-nowrap" href="https://www.ibm.com/account/us-en/signup/register.html?a=IBMSPSSStatistics&ctx=C001&cc=us&lc=en&trial=yes&quantity=1&catalogName=Master&partNumber=SPSS_S_TRIAL&source=mrsaas-trial-ibmid&pkg=ov5354&S_TACT=000000OA&S_OFF_CD=10000400&siteID=ECOM" target="blank" data-apsproc="0">Try SPSS Statistics</a>--><a class="ibm-btn-pri ibm-btn-blue-50 do-not-pass ibm-btn-nowrap" href="https://www.ibm.com/us-en/marketplace/spss-statistics/purchase" target="blank">Try SPSS Statistics subscription</a></p>
+												
+											</p>
+										  </div>
+									</div>								
+									<!--featured-product-end-->		
+								</div>								
+								
+<!--
+								<div class="ibm-col-1-1 ibm-col-xlarge-4-2">
+									<div class="ibm-card__content ibm-padding-bottom-2">
+										<div class="ibm-mo__image ibm-hidden-small">
+											<img src="images/modler.gif" class="featured-product-circle">
+											<p class="ibm-padding-top-1 ibm-center"><a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="cGiiYKG0Lsk" data-videotype="youtube" class=" ibm-inlinelink" href="https://www.youtube.com/watch?v=cGiiYKG0Lsk"><span class="ibm-icon-nolink ibm-play-link">Watch overview</span></a></p>
+										</div>
+										<div class="ibm-mo__body">
+											<img src="images/modler.gif" class="featured-product-circle ibm-padding-top-1 ibm-center ibm-padding-bottom-1 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge">
+											<h4 class="ibm-bold">IBM SPSS Modeler Gold on Cloud
+											<span class="ibm-textcolor-gray-50 ibm-small ibm-light"> | Predictive  analytics</span></h4>
+											<p class="ibm-padding-bottom-1">Build and deploy predictive models throughout your organization without the need to purchase or maintain software. </p>
+											<p>
+												<p class="ibm-padding-top-1 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"><a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="cGiiYKG0Lsk" data-videotype="youtube" class=" ibm-inlinelink" href="https://www.youtube.com/watch?v=cGiiYKG0Lsk"><span class="ibm-icon-nolink ibm-play-link">Watch overview</span></a></p>
+												<br class="ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"/>
+												<p><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/marketplace/cloud/build-and-deploy-predictive-models/us/en-us" style="margin-right:35px;"> &nbsp; Learn more</a></p>
+												<br/>
+												<p><a class="ibm-btn-pri ibm-btn-blue-50 do-not-pass ibm-btn-nowrap" href="https://www.ibm.com/account/us-en/signup/register.html?a=IBMSPSSModeler&ctx=C001&cc=us&lc=en&trial=yes&quantity=1&catalogName=Master&partNumber=SPSS_M_TRIAL&source=mrsaas-trial-ibmid&pkg=ov33083&S_TACT=000000OA&S_OFF_CD=10000400&siteID=ECOM" target="blank" data-apsproc="0">Try SPSS Modeler on Cloud</a></p>
+												
+											</p>
+										  </div>
+									</div>								
+								</div>
+-->								
+								
+
+							</div>
+						</div>
+						
+						
+						
+					</section>
+					<!-- FEATURED_SOLUTIONS_END --> 
+					
+										
+					
+					
+					
+					
+	
+
+				    <!-- PRODUCTS_BEGIN --> 
+					<section id="spss-products" data-solution="spss-products">
+						<div id="products-container" class="ibm-padding-top-3 ibm-padding-bottom-3 ibm-background-neutral-white-30">
+							<div class="ibm-columns">
+							
+								<div class="ibm-col-6-2 ibm-col-medium-1-1">
+									<h2 class="ibm-h2 ibm-light  ibm-textcolor-blue-30">Power every decision with predictive insights</h2>
+								</div>
+								
+								<div class="ibm-col-6-4 ibm-padding-bottom-2 ibm-padding-left-1 ibm-col-medium-1-1">
+									<p class="ibm-h4 ibm-light">With IBM SPSS software, you can make data-driven decisions everywhere to improve business results and manage risk.</p>
+								</div>		
+							</div>
+							
+							<!--highlighted_products_begin -->
+							<div  class="ibm-columns ibm-cards" data-widget="setsameheight" data-items=".ibm-col-xlarge-4-1 > div">
+							
+							
+							
+								<!--PRODUCT-START-->
+								  <div class="ibm-col-4-2 ibm-col-xlarge-4-1">
+									<div class="ibm-card ibm-padding-bottom-1">
+									  <div class="ibm-card__content">
+										<div class="ibm-center"><img src="images/SPSS_video1.png" alt="SPSS customer solutions" class="ibm-downsize  ibm-center ibm-padding-bottom-1" style="width:150px;"></div>
+										<h3 class="ibm-h3 ibm-light  ibm-textcolor-blue-30 ibm-padding-bottom-1">Strengthen customer loyalty and retention</h3>
+										<div class="ibm-vertical-center ibm-mo ibm-mo--middle ibm-padding-bottom-1">
+										  <div class="ibm-mo__body">
+											<p class="">
+											  Enhance the effectiveness of every customer interaction.  <br/>
+											</p>										  
+										  </div>
+										</div>
+
+									  </div>
+
+									  <div class="ibm-padding-top-3 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-padding-top-2 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-card__bottom ibm-padding-bottom-1">
+										<p class="ibm-btn-row">
+											<a class="ibm-btn-pri ibm-btn-blue-50" data-widget="videoplayer" data-videodisplay="overlay" data-videoid="GUWcNb6cKxU" data-videotype="youtube" href="https://www.youtube.com/watch?v=GUWcNb6cKxU"><span class="ibm-icon-nolink ibm-play-link">Watch video</span></a>
+										</p>
+									  </div>				  
+									</div>
+								  </div>
+								  <!-- PRODUCT-END-->
+								  
+								  
+								  
+								<!--PRODUCT-START-->
+								  <div class="ibm-col-4-2 ibm-col-xlarge-4-1">
+									<div class="ibm-card ibm-padding-bottom-1">
+									  <div class="ibm-card__content">
+										<div class="ibm-center"><img src="images/SPSS_video2.png" alt="SPSS hiring solutions" class="ibm-downsize  ibm-center ibm-padding-bottom-1" style="width:150px;"></div>
+										<h3 class="ibm-h3 ibm-light  ibm-textcolor-blue-30 ibm-padding-bottom-2">Optimize hiring processes</h3>
+										<div class="ibm-vertical-center ibm-mo ibm-mo--middle ibm-padding-bottom-1">
+										  <div class="ibm-mo__body">
+											<p class="">
+											 Match the right people to the right roles and reduce attrition. <br/>
+											</p>										  
+										  </div>
+										</div>
+
+									  </div>
+
+									  <div class="ibm-padding-top-3 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-padding-top-2 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-card__bottom ibm-padding-bottom-1">
+										<p class="ibm-btn-row">
+											<a class="ibm-btn-pri ibm-btn-blue-50" data-widget="videoplayer" data-videodisplay="overlay" data-videoid="ww-u8fytu7M" data-videotype="youtube" href="https://www.youtube.com/watch?v=ww-u8fytu7M"><span class="ibm-icon-nolink ibm-play-link">Watch video</span></a>
+										</p>
+									  </div>
+									</div>
+								  </div>
+								  <!-- PRODUCT-END-->
+
+
+								<!--PRODUCT-START-->
+								  <div class="ibm-col-4-2 ibm-col-xlarge-4-1">
+									<div class="ibm-card ibm-padding-bottom-1">
+									  <div class="ibm-card__content">
+										<div class="ibm-center"><img src="images/SPSS_video3.png" alt="SPSS fraud solutions" class="ibm-downsize  ibm-center ibm-padding-bottom-1" style="width:150px;"></div>
+										<h3 class="ibm-h3 ibm-light  ibm-textcolor-blue-30 ibm-padding-bottom-2">Minimize and mitigate fraud</h3>
+										<div class="ibm-vertical-center ibm-mo ibm-mo--middle ibm-padding-bottom-1">
+										  <div class="ibm-mo__body">
+											<p class="">
+											  Outsmart fraud to protect your organization’s revenue and reputation. <br/>
+											</p>										  
+										  </div>
+										</div>
+									  </div>
+
+									  <div class="ibm-padding-top-3 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-padding-top-2 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-card__bottom ibm-padding-bottom-1">
+										<p class="ibm-btn-row">
+												<a class="ibm-btn-pri ibm-btn-blue-50" data-widget="videoplayer" data-videodisplay="overlay" data-videoid="SIrwaHEGFMg" data-videotype="youtube" href="https://www.youtube.com/watch?v=SIrwaHEGFMg"><span class="ibm-icon-nolink ibm-play-link">Watch video</span></a>
+										
+										</p>
+									  </div>
+									</div>
+								  </div>
+								  <!-- PRODUCT-END-->
+
+								<!--PRODUCT-START-->
+								  <div class="ibm-col-4-2 ibm-col-xlarge-4-1">
+									<div class="ibm-card ibm-padding-bottom-1">
+									  <div class="ibm-card__content">
+										<div class="ibm-center"><img src="images/SPSS_video4.png" alt="SPSS growth solutions" class="ibm-downsize  ibm-center ibm-padding-bottom-1" style="width:150px;"></div>
+										<h3 class="ibm-h3 ibm-light  ibm-textcolor-blue-30 ibm-padding-bottom-1">Drive revenue growth and profitability</h3>
+										<div class="ibm-vertical-center ibm-mo ibm-mo--middle ibm-padding-bottom-1">
+										<div class="ibm-mo__body">
+											<p class="">
+											Quickly identify new opportunities for growth and competitive advantage. <br/>
+											</p>										
+										  </div>
+										</div>
+
+									  </div>
+
+									  <div class="ibm-padding-top-3 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  <div class="ibm-padding-top-2 ibm-hidden-medium ibm-hidden-large ibm-hidden-xlarge"></div>
+									  
+									  <div class="ibm-card__bottom ibm-padding-bottom-1">
+										<p class="ibm-btn-row">
+											<a class="ibm-btn-pri ibm-btn-blue-50" data-widget="videoplayer" data-videodisplay="overlay" data-videoid="Ern6FmCnzMI" data-videotype="youtube" href="https://www.youtube.com/watch?v=Ern6FmCnzMI"><span class="ibm-icon-nolink ibm-play-link">Watch video</span></a>
+										</p>
+									  </div>
+									</div>
+								  </div>
+								  <!-- PRODUCT-END-->
+																			 
+							</div>
+							<!--highlighted_products_end -->
+				
+							<div  class="ibm-columns">
+								<div class="ibm-col-1-1 ibm-center ibm-padding-top-2 ibm-padding-bottom-1">
+								 <p> <a href="http://www.ibm.com/analytics/us/en/technology/predictive-analytics/" class="ibm-textcolor-blue-50 ibm-forward-link ibm-inlinelink ibm-h4 ibm-textcolor-blue-50">Learn more about the power of predictive analytics for optimizing the impact of every business decision</a></p>
+								</div>
+							</div>  
+				
+				
+						</div>
+					</section>
+					<!-- PRODUCTS_END --> 
+
+
+					<!-- BROWSE_ALL_PRODUCTS_BEGIN --> 
+					<section id="spss-all-products-and-solutions" data-solution="spss-all-products-and-solutions">
+
+						<div id="integrations-container" class="ibm-padding-top-2 no-margin ibm-padding-bottom-2 ibm-border-cool-gray-50 ibm-background-cool-gray-50 ibm-alternate-background ">	
+
+							<div class="ibm-columns">		
+								<div class="ibm-col-1-1">
+									<h2 class="ibm-h2 ibm-light ibm-textcolor-green-20">Browse all IBM SPSS products </h2>
+								</div>
+							</div>
+							<div class="ibm-columns">
+								
+								<div class="ibm-col-1-1">
+								<div class="ibm-card__content">
+									<div data-widget="showhide" data-type="panel" class="ibm-show-hide">
+										
+										
+										<!-- PRODUCT_LINE_START -->
+										<h2 class=" ibm-h4 ibm-textcolor-white-core">
+											IBM SPSS Modeler
+										</h2>
+										<div class="ibm-container-body ibm-padding-top-2 ibm-padding-bottom-2">
+											<div class="ibm-columns">
+												<div class="ibm-col-1-1">
+												
+													<div class="ibm-columns">
+														<div class="ibm-col-4-1">
+															<img src="images/modler.gif" alt="SPSS Screenshot" class="ibm-resize ibm-padding-bottom-1">
+														</div>
+														<div class="ibm-col-4-3">
+														   <p class="ibm-h3 ibm-padding-bottom-1">
+															A predictive analytics platform that brings predictive intelligence to decisions made by individuals, groups, systems and the enterprise.
+															</p>
+															<p class=" ibm-textcolor-white-core ibm-h ibm-padding-bottom-1">
+																Build and deploy predictive models directly into your business processes so people and systems can make the right decisions every time. Analytical decision management combines predictive analytics with rules, scoring and optimization in your organization’s processes and operational systems to provide recommended actions at the point of impact.
+															</p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1">
+																<a class="ibm-textcolor-white-core" href="https://www.ibm.com/marketplace/cloud/spss-modeler/us/en-us/" style="margin-right:35px;"><span class="ibm-icon-nolink ibm-forward-link">Learn more about IBM SPSS Modeler</span></a>
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<a href="https://www.ibm.com/marketplace/cloud/build-and-deploy-predictive-models/us/en-us/" class="ibm-textcolor-green-30"><span class="ibm-icon-nolink ibm-cloud-link">Available on cloud</span></a>
+																</p>
+															<p class="ibm-padding-top-2 ibm-padding-bottom-2">
+																<a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="XWqJNi3cWrY" data-videotype="youtube" class="ibm-btn-sec ibm-btn-white-core ibm-video-player-con" href="https://www.youtube.com/watch?v=XWqJNi3cWrY" style="margin-right:35px;"><span class="ibm-icon-nolink ibm-play-link">See it in action</span></a>
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<a class="ibm-btn-pri ibm-btn-blue-50" href="https://www-01.ibm.com/marketing/iwm/dre/signup?source=mrs-form-702&S_PKG=ov19200" target="blank">Read data sheet &nbsp;<span class="ibm-textcolor-gray-10 ibm-small">(PDF,  184 KB)</span></a>
+															</p>
+															<hr/>
+															<p class="ibm-padding-top-2 ibm-bold ibm-bold ibm-textcolor-green-20">Product versions</p>
+															
+															
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="https://www.ibm.com/marketplace/cloud/spss-modeler/us/en-us"> &nbsp; IBM SPSS Modeler Gold</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="https://www.ibm.com/marketplace/cloud/build-and-deploy-predictive-models/us/en-us"> &nbsp; IBM SPSS Modeler on Cloud</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="https://www.ibm.com/marketplace/cloud/spss-modeler/us/en-us"> &nbsp; IBM SPSS Modeler Premium</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="https://www.ibm.com/marketplace/cloud/spss-modeler/us/en-us"> &nbsp; IBM SPSS Modeler Professional</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www-03.ibm.com/software/products/en/spss-predictive-analytics-enterprise"> &nbsp; IBM SPSS Modeler Server</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www-03.ibm.com/software/products/en/modeler-linux-system-z"> &nbsp; IBM SPSS Modeler for Linux on System Z</a></p>
+															
+															
+															</div>	
+														</div>
+													</div>
+												</div>
+											</div>
+										<!-- PRODUCT_LINE_END -->
+
+	
+										<!-- PRODUCT_LINE_START -->
+										<h2 class=" ibm-h4 ibm-textcolor-white-core">
+											IBM SPSS Statistics
+										</h2>
+										<div class="ibm-container-body ibm-padding-top-2 ibm-padding-bottom-2">
+											<div class="ibm-columns">
+												<div class="ibm-col-1-1">
+												
+													<div class="ibm-columns">
+														<div class="ibm-col-4-1">
+															<img src="images/stats.gif" alt="SPSS Screenshot" class="ibm-resize ibm-padding-bottom-1">
+														</div>
+														<div class="ibm-col-4-3">
+														   <p class=" ibm-h3 ibm-padding-bottom-1">
+															SPSS Statistics addresses the entire statistical analysis process - planning, data collection, analysis, reporting - for better decision making and performance.
+															</p>
+															<p class=" ibm-textcolor-white-core ibm-h ibm-padding-bottom-1">
+																IBM SPSS Statistics is an integrated family of products that addresses the entire analytical process, from planning to data collection to analysis, reporting and deployment. 
+															</p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-textcolor-white-core" href="https://www.ibm.com/marketplace/cloud/statistical-analysis-and-reporting/us/en-us"><span class="ibm-icon-nolink ibm-forward-link">Learn more about IBM SPSS Statistics</span></a></p>
+															<p class="ibm-padding-top-2 ibm-padding-bottom-2">
+																<a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="SWdEtsMvSnM" data-videotype="youtube" class="ibm-btn-sec ibm-btn-white-core ibm-video-player-con" href="https://www.youtube.com/watch?v=SWdEtsMvSnM" style="margin-right:35px;"><span class="ibm-icon-nolink ibm-play-link">See it in action</span></a>
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<br class="ibm-hidden-large ibm-hidden-xlarge">
+																<a class="ibm-btn-pri ibm-btn-blue-50" href="http://w3-01.ibm.com/sales/ssi/cgi-bin/ssialias?subtype=SP&infotype=PM&appname=SWGI_YT_YV_USEN&htmlfid=YTD03123USEN&attachment=YTD03123USEN.PDF" target="blank">Read data sheet &nbsp;<span class="ibm-textcolor-gray-10 ibm-small">(PDF,  1.46 MB)</span></a>
+															</p>
+															<hr/>
+															<p class="ibm-padding-top-2 ibm-bold ibm-bold ibm-textcolor-green-20">SPSS Statistical software</p>
+															
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/en/spss-advanced-stats/"> &nbsp;IBM SPSS Advanced Statistics</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="https://www.ibm.com/marketplace/cloud/structural-equation-modeling-sem/us/en-us/"> &nbsp;IBM SPSS Amos	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-bootstrapping/"> &nbsp;IBM SPSS Bootstrapping</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-categories/"> &nbsp;IBM SPSS Categories	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-complex-samples/"> &nbsp;IBM SPSS Complex Samples</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-conjoint/"> &nbsp;IBM SPSS Conjoint	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-custom-tables/"> &nbsp;IBM SPSS Custom Tables</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-data-preparation/"> &nbsp;IBM SPSS Data Preparation</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-decision-trees/"> &nbsp;IBM SPSS Decision Trees</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-direct-marketing/"> &nbsp;IBM SPSS Direct Marketing</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-exact-tests/"> &nbsp;IBM SPSS Exact Tests</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-forecasting/"> &nbsp;IBM SPSS Forecasting</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-missing-values/"> &nbsp;IBM SPSS Missing Values</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-neural-networks/"> &nbsp;IBM SPSS Neural Networks</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-regression/"> &nbsp;IBM SPSS Regression	</a></p>
+															
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-base/"> &nbsp;IBM SPSS Statistics Base	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-campus/"> &nbsp;IBM SPSS Statistics Campus	</a></p>
+															
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-faculty-pack/"> &nbsp;IBM SPSS Statistics Faculty Pack	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-gradpack/"> &nbsp;IBM SPSS Statistics GradPack	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/statistics-linux-system-z/"> &nbsp;IBM SPSS Statistics for Linux on System z</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-premium/"> &nbsp;IBM SPSS Statistics Premium	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-pro/"> &nbsp;IBM SPSS Statistics Professional	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-programmability/"> &nbsp;IBM SPSS Statistics Programmability Extension</a></p>	
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-server/?S_TACT=M161007W"> &nbsp;IBM SPSS Statistics Server	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-stats-standard/"> &nbsp;IBM SPSS Statistics Standard	</a></p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/software/products/us/en/spss-text-analytics-surveys/"> &nbsp;IBM SPSS Text Analytics for Surveys	</a></p>
+																			
+
+																				
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- PRODUCT_LINE_END -->	
+	
+	
+										<!-- PRODUCT_LINE_START -->
+										<h2 class=" ibm-h4 ibm-textcolor-white-core">
+											IBM SPSS Analytic Server
+										</h2>
+										<div class="ibm-container-body ibm-padding-top-2 ibm-padding-bottom-2">
+											<div class="ibm-columns">
+												<div class="ibm-col-1-1">
+												
+													<div class="ibm-columns">
+														<div class="ibm-col-4-1">
+															<img src="images/server.gif" alt="SPSS Screenshot" class="ibm-resize ibm-padding-bottom-1">
+														</div>
+														<div class="ibm-col-4-3">
+														   <p class=" ibm-h3 ibm-padding-bottom-1">
+															Efficiently derive predictions and recommendations from big data
+															</p>
+															<p class=" ibm-textcolor-white-core ibm-h ibm-padding-bottom-1">
+																IBM® SPSS® Analytic Server enables the IBM predictive analytics platform to use data from Hadoop distributions to improve decisions and outcomes with the use of IBM SPSS Modeler. 
+															</p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-textcolor-white-core" href="http://www-03.ibm.com/software/products/en/spss-analytic-server"><span class="ibm-icon-nolink ibm-forward-link">Learn more about SPSS Analytic Server</span></a></p>
+															<p class="ibm-padding-top-2 ibm-padding-bottom-2">
+																<a class="ibm-btn-pri ibm-btn-blue-50" href="https://ibm.com/marketing/iwm/dre/signup?source=ibm-analytics&S_PKG=ov16634&dynform=1103&lang=en_US" target="blank">Read data sheet &nbsp;<span class="ibm-textcolor-gray-10 ibm-small"> &nbsp;(PDF,  151 KB)</span></a>
+															</p>
+													
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- PRODUCT_LINE_END -->
+	
+	
+	
+	
+	
+
+									<!-- PRODUCT_LINE_START -->
+										<h2 class=" ibm-h4 ibm-textcolor-white-core">
+											IBM SPSS Collaboration and Deployment Services
+										</h2>
+										<div class="ibm-container-body ibm-padding-top-2 ibm-padding-bottom-2">
+											<div class="ibm-columns">
+												<div class="ibm-col-1-1">
+												
+													<div class="ibm-columns">
+														<div class="ibm-col-4-1">
+															<img src="images/collaboration.gif" alt="SPSS Screenshot" class="ibm-resize ibm-padding-bottom-1">
+														</div>
+														<div class="ibm-col-4-3">
+														   <p class="ibm-h3 ibm-padding-bottom-1">
+																Widely share critical business information easily and securely
+															</p>
+															<p class=" ibm-textcolor-white-core ibm-h ibm-padding-bottom-1">
+																IBM® SPSS® Collaboration and Deployment Services lets you manage analytical assets, automate processes and efficiently share results widely and securely. Because when the people developing and the people using analytics can collaborate, your analytic efficiency increases.
+															</p>
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-textcolor-white-core0" href="http://www-03.ibm.com/software/products/en/spss-collaboration"><span class="ibm-icon-nolink ibm-forward-link">Learn more about IBM SPSS Modeler</span></a></p>
+															<p class="ibm-padding-top-2 ibm-padding-bottom-2"></p>
+															<hr/>
+															<p class="ibm-padding-top-2 ibm-bold ibm-bold ibm-textcolor-green-20">Additional versions</p>
+															
+															<p class="ibm-padding-top-1 ibm-padding-bottom-1"><a class="ibm-forward-link ibm-inlinelink" href="http://www-03.ibm.com/software/products/en/spss-collaboration-linux-sys-z"> &nbsp; SPSS Collaboration and Deployment Services for Linux on System z</a></p>
+																
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- PRODUCT_LINE_END -->
+
+										
+	
+	
+									</div>
+								</div>
+							</div>
+						</div>	
+						</div>
+					</section>
+					<!-- BROWSE_ALL_PRODUCTS_END --> 
+            
+
+
+				    <!-- GET_STARTED_BEGIN --> 
+					<section id="spss-getstarted" data-solution="get-connected">
+						<div id="getstarted-container" class=" ibm-background-white-core ibm-padding-top-2 ibm-padding-bottom-2">					
+					
+							<div class="ibm-columns ibm-center ibm-padding-bottom-1 ibm-padding-top-1">	
+								<div class="ibm-col-1-1"><img src="images/spss_gettingstarted2.png" alt="Get started with an IBM SPSS trial"/></div>
+								<div class="ibm-col-1-1  ibm-padding-top-2"><h3 class="ibm-h2 ibm-textcolor-blue-30">Get started with a free IBM SPSS trial today</h3></div>
+							</div>
+
+							<div class="ibm-columns ibm-center ibm-padding-bottom-3 ibm-padding-top-1">	
+								<div class="ibm-col-6-2 ibm-center ibm-padding-bottom-1 ibm-col-medium-1-1">
+									<a data-widget="videoplayer" data-videodisplay="overlay" data-videoid="-EBnBvlXyRo" data-videotype="youtube" class="ibm-btn-sec ibm-btn-blue-50" href="https://www.youtube.com/watch?v=-EBnBvlXyRo"><span class="ibm-icon-nolink ibm-play-link">Watch overview</span></a>
+									<br class="ibm-hidden-large ibm-hidden-xlarge" /><br class="ibm-hidden-large ibm-hidden-xlarge" /><br class="ibm-hidden-large ibm-hidden-xlarge" />
+								</div>
+								<div class="ibm-col-6-2 ibm-center ibm-padding-bottom-1 ibm-col-medium-1-1">
+									<a class="ibm-btn-pri ibm-btn-yellow-10" href="spss-trials.html"><span class="ibm-h4">View free SPSS trials</span></a>
+									<br class="ibm-hidden-large ibm-hidden-xlarge" /><br class="ibm-hidden-large ibm-hidden-xlarge" /><br class="ibm-hidden-large ibm-hidden-xlarge" />
+								</div>
+								<div class="ibm-col-6-2 ibm-center ibm-padding-bottom-1 ibm-col-medium-1-1">
+									<a class="ibm-btn-sec ibm-btn-blue-50" href="https://ibm.com/marketing/iwm/dre/signup?source=MAIL-analytics3&S_PKG=ov42187&disableCookie=Yes&lang=en_us" target="blank"><span class="ibm-icon-nolink ibm-email-link">E-mail us</span></a>
+									<br class="ibm-hidden-large ibm-hidden-xlarge" /><br class="ibm-hidden-large ibm-hidden-xlarge" /><br class="ibm-hidden-large ibm-hidden-xlarge" />
+								</div>	
+							</div>		
+							
+						</div>
+					</section>
+					<!-- GET_STARTED_END --> 
+					
+					
+
+					<!--CLIENT_REFERENCES_BEGIN-->
+					<section id="ibm-analytics-client-references" data-solution="ibm-analytics-client-references">
+						<div id="client-container" class="colored-band-cta  ibm-background-alternate">
+                        <div class="ctas" data-widget="setsameheight" data-items=".ibm-col-4-1">
+                          <div class="ibm-col-4-1 no-margin ibm-padding-top-r1 ibm-padding-bottom-r1 testfirst client-references-background-color">
+                            <h2 class="ibm-h2 ibm-light  ibm-textcolor-white-core ibm-padding-top-2">Client success stories</h2>
+                            <p>&nbsp;</p>
+                         </div>
+                          <div class="ibm-col-4-1 no-margin ibm-padding-top-r1 ibm-padding-bottom-r1 ibm-background-blue-30 ibm-alternate-background ">
+							<p  class="ibm-h4"><strong>Santos</strong></p>
+                            <p class="ibm-padding-bottom-2 ibm-textcolor-white-core">Saving millions with a predictive asset monitoring and alert system</p>
+							<p class="ibm-padding-top-1 ibm-padding-bottom-2"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=AB&infotype=PM&htmlfid=ASC12379USEN&attachment=ASC12379USEN.PDF" target="blank"> &nbsp; Read story</a></p>
+						 </div>
+                          <div class="ibm-col-4-1 no-margin ibm-padding-top-r1 ibm-padding-bottom-r1 ibm-background-blue-40 ibm-alternate-background ">
+							<p  class="ibm-h4"><strong>Cablevision Argentina</strong></p>
+                            <p class="ibm-padding-bottom-2 ibm-textcolor-white-core">Predicting customer satisfaction based on network health helps boost loyalty and reduce churn</p>
+							<p class="ibm-padding-top-1 ibm-padding-bottom-2"><a class="ibm-forward-link ibm-inlinelink" href="http://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=AB&infotype=PM&htmlfid=YTC04035USEN&attachment=YTC04035USEN.PDF&cm_mc_uid=04530596770314430181297&cm_mc_sid_50200000=1452525628" target="blank"> &nbsp; Read story</a></p>
+						 </div>	
+                          <div class="ibm-col-4-1 no-margin ibm-padding-top-r1 ibm-padding-bottom-r1 ibm-background-blue-50 ibm-alternate-background ">
+							<p  class="ibm-h4"><strong>Tennessee Highway Patrol</strong></p>
+                            <p>"The first full year the IBM predictive analytics solution was used in Tennessee was the second lowest traffic fatality year since 1963."</p>
+							<p class="ibm-padding-bottom-2 ibm-textcolor-white-core">Colonel Tracy Trott, Tennessee Highway Patrol</p>
+							<p class="ibm-padding-top-1 ibm-padding-bottom-2"><a class="ibm-forward-link ibm-inlinelink" href="http://ibm.com/common/ssi/cgi-bin/ssialias?subtype=AB&infotype=PM&htmlfid=GVC03014USEN&attachment=GVC03014USEN.PDF" target="blank"> &nbsp; Read story</a></p>
+						 </div>							 
+					  						  
+                        </div>
+                      </div>
+					</section>
+					<!--CLIENT_REFERENCES_END-->					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- RESOURCES_START --> 	
+					<section id="spss-resources" data-solution="spss-resources">
+						<div id="resources-container" class="ibm-background-cool-white-30 ibm-padding-top-2 ibm-padding-bottom-2">
+
+							<div class="ibm-columns">	
+								<div class="ibm-col-6-4  ibm-col-medium-1-1">
+									<h2 class="ibm-h2 ibm-light  ibm-textcolor-blue-30">IBM SPSS Resources</h2>
+								</div>
+								
+
+								<div class="ibm-col-6-2  ibm-col-medium-1-1">
+									<p class="ibm-h4 ibm-light"><a href="http://www-01.ibm.com/software/analytics/learn-center/Technology/Advanced-Analytics/Predictive-Analytics/" class="ibm-textcolor-blue-50"><span class="ibm-icon-nolink ibm-forward-link"></span>&nbsp;See all SPSS resources</a></p>
+								</div>	
+							
+							</div>
+								
+							<div class="ibm-columns">
+								
+									<!-- resource_tiles_start -->
+
+									<div class="ibm-columns ibm-padding-top-1" data-widget="setsameheight" data-always="true" data-items=".ibm-card">
+									 
+										<div class="ibm-col-6-2 ibm-col-medium-4-2">
+											<div class="ibm-card">
+												<div class="ibm-card__image ibm-background-blue-30 ibm-center">
+													<p>&nbsp;</p>
+												</div>
+												<div class="ibm-card__content">
+													<h3 class="ibm-light ibm-h4 ibm-textcolor-blue-40">Driving Next-Generation Predictive Analytics</h3>
+													<p>Explore predictive analytics trends, challenges and benefits in this benchmark summary report from Ventana Research.</p>
+												</div>
+												<div class="ibm-card__bottom"><p class="ibm-padding-top-1 ibm-button-link"><a class="ibm-btn-sec ibm-btn-blue-50" href="https://www-01.ibm.com/marketing/iwm/dre/signup?source=mrs-form-4334&S_PKG=ov37822" target="blank">Read analyst report <span class="ibm-textcolor-gray-50 ibm-small"> &nbsp;(PDF, 804 KB)</span></a></p></div>
+											</div>
+										</div>
+										
+										<div class="ibm-col-6-2 ibm-col-medium-4-2">
+											<div class="ibm-card">
+												<div class="ibm-card__image ibm-background-blue-30 ibm-center"><p>&nbsp;</p></div>
+												<div class="ibm-card__content">
+													<h3 class="ibm-light ibm-h4 ibm-textcolor-blue-40">Are you powered to predict?</h3>
+													<p>Discover how to illuminate the brilliant insights in your data with the power of predictive analytics.</p>
+												
+												</div>
+												<div class="ibm-card__bottom"><p class="ibm-padding-top-1 ibm-button-link"><a class="ibm-btn-sec ibm-btn-blue-50" href="https://ibm.biz/PoweredToPredict" target="blank">View infographic</a></p></div>
+											</div>
+										</div>
+
+										<div class="ibm-col-6-2 ibm-col-medium-4-2">
+											<div class="ibm-card">
+												<div class="ibm-card__image ibm-background-blue-30 ibm-center"><p>&nbsp;</p></div>
+												<div class="ibm-card__content">
+													<h3 class="ibm-light ibm-h4 ibm-textcolor-blue-40">Get to Know the IBM SPSS Product Portfolio</h3>
+													<p>Predictive analytics software helps organizations use data in their daily decision making, helping to substantially improve outcomes. Learn how your organization can benefit. </p>
+												</div>
+												<div class="ibm-card__bottom"><p class="ibm-padding-top-1 ibm-button-link"><a class="ibm-btn-sec ibm-btn-blue-50" href="https://www-01.ibm.com/marketing/iwm/dre/signup?source=mrs-form-727&S_PKG=ov4724" target="blank">Read paper <span class="ibm-textcolor-gray-50 ibm-small"> &nbsp;(PDF, 295 KB)</span></a></p></div>
+											</div>
+										</div>										
+
+									</div>									
+									<!-- resource_tiles_end -->
+								</div>
+							</div>
+					</section>
+					<!-- RESOURCES_END --> 	
+
+
+					
+
+					
+					
+					
+					
+					<!-- GET_CONNECTED_BEGIN-->
+					<section id="get-connected"> 
+						<div id="get-conected-container" class="ibm-background-blue-30">
+							<div class="ibm-columns ibm-alternate-background ibm-padding-top-2 ibm-padding-bottom-1">
+								<div class="ibm-col-4-1 ibm-col-medium-1-1"><p class="ibm-h3  ibm-bold">Get Connected</p></div>
+								<div class="ibm-col-4-1 ibm-col-medium-1-1"><p class="ibm-h4 ibm-light"><a href="http://developer.ibm.com/predictiveanalytics/"><span class="ibm-icon-nolink ibm-collaborate-link"> SPSS Community</span></a></p></div>
+								<div class="ibm-col-4-1 ibm-col-medium-1-1"><p class="ibm-h4 ibm-light"><a href="http://www-01.ibm.com/software/analytics/learn-center/Technology/Advanced-Analytics/Predictive-Analytics/" target="blank"><span class="ibm-icon-nolink ibm-document-link">Learn Center</span></a></p></div>
+								<div class="ibm-col-4-1 ibm-col-medium-1-1"><p class="ibm-h4 ibm-light"><a href="http://www.ibm.com/marketplace/next/search/us/en-us/?terms=spss" target=""><span class="ibm-icon-nolink ibm-cart-link">SPSS Marketplace</span></a></p></div>
+							</div>
+						</div>
+					</section> 
+					<!-- GET_CONNECTED_END-->				
+				
+				  
+				  
+					<!--RELATED_SOLUTIONS_BEGIN-->
+					
+					<section id="realted-solutions"> 
+						<div id="grealted-solutions-container" class=" ibm-alternate-background ibm-background-gray-40">
+							<div class="ibm-columns  ibm-padding-top-2 ibm-padding-bottom-1">
+								<div class="ibm-col-4-1 "><p class="ibm-h3  ibm-bold">Related solutions</p></div>
+								<div class="ibm-col-4-1 center"><p class="ibm-h4 ibm-light"><a href="http://www.ibm.com/analytics/us/en/technology/products/cognos-analytics/"> IBM Cognos Analytics </a></p></div>
+								<div class="ibm-col-4-1 center"><p class="ibm-h4 ibm-light"><a href="http://console.ng.bluemix.net/catalog/services/predictive-analytics"> Predictive Analytics on Bluemix </a></p></div>
+								<div class="ibm-col-4-1 center"><p class="ibm-h4 ibm-light"><a href="http://www.ibm.com/analytics/us/en/technology/hadoop/"> Hadoop </a></p></div>
+							</div>
+						</div>
+					</section> 		
+					<!--RELATED_SOLUTIONS_END-->				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  <!-- SOCIAL_BEGIN -->
+<section id="footer" class="ibm-padding-bottom-r2 ibm-background-white-core">
+	<div class="ibm-columns ibm-textcolor-grey-80">
+		
+		<div class="ibm-col-5-1 ibm-padding-top-2">
+			<h4 class="ibm-bold ibm-textcolor-gray-80">SPSS products</h4>
+			
+            <p><a class="ibm-textcolor-gray-80" href="http://www.ibm.com/marketplace/cloud/spss-modeler/us/en-us">IBM SPSS Modeler </a></p>
+            
+            <p><a class="ibm-textcolor-gray-80" href="http://www.ibm.com/marketplace/cloud/statistical-analysis-and-reporting/us/en-us">IBM SPSS Statistics</a></p>
+            
+           <p><a class="ibm-textcolor-gray-80" href="http://www-03.ibm.com/software/products/en/spss-analytic-server/">IBM SPSS Analytics Server</a></p>
+
+		    <p><a class="ibm-textcolor-gray-80" href="http://www-03.ibm.com/software/products/en/spss-collaboration/">IBM SPSS Collaboration and Deployment Services</a></p>
+			            
+        </div>
+        
+		<div class="ibm-col-5-1 ibm-padding-top-2">
+			<h4 class="ibm-bold ibm-textcolor-gray-80">Analytics Platform Services</h4>
+			
+			<p><a class="ibm-textcolor-gray-80" href="../cloud-data-services/">Cloud Data Services</a></p>
+            			
+            <p><a class="ibm-textcolor-gray-80" href="../advanced-analytics/">Advanced Analytics</a></p>
+            
+            <p><a class="ibm-textcolor-gray-80" href="../agile/">Integration and Governance</a></p>
+            
+            <p><a class="ibm-textcolor-gray-80" href="../data-architecture/">Data and Content Management</a></p>
+
+			<p><a class="ibm-textcolor-gray-80" href="../open-source/">Open Source</a></p>
+
+			<p><a class="ibm-textcolor-gray-80" href="../enterprise-content-management/">Enterprise Content Management</a></p>
+
+
+        </div>
+        
+		<div class="ibm-col-5-1 ibm-padding-top-2">
+			<h4 class="ibm-bold ibm-textcolor-gray-80">Solutions for...</h4>
+			
+            <p><a class="ibm-textcolor-gray-80" href="../technology/index.html">Technology</a></p>
+            
+            <p><a class="ibm-textcolor-gray-80" href="../../industry/index.html">Industry</a></p>
+            
+            <p><a class="ibm-textcolor-gray-80" href="../../business/index.html">Business</a></p>
+            
+        </div>
+        
+        <div class="ibm-col-6-1 ibm-padding-top-2">
+           <h4 class="ibm-bold">Connect with IBM SPSS</h4>
+           <p class="ibm-ind-link"><a class="ibm-facebook-link ibm-textcolor-black-core" target="_blank" href="http://www.facebook.com/ibmspss/"></a></p>
+           <p class="ibm-ind-link"><a class="ibm-twitter-link ibm-textcolor-black-core" target="_blank" href="http://twitter.com/IBMSPSS"></a></p>
+       </div>
+   </div>
+</section>
+					 <!-- SOCIAL_END-->
+
+								
+								
+							
+				  
+				  
+				  
+                  <!-- CONTENT_END -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+		<!--MAIN_CONTENT_END-->      
+      </div>
+
+      <!-- FOOTER_BEGIN -->
+      <div id="ibm-footer-module"><!-- Dynamic footer links inserted here inside a <section> --></div>
+      
+      
+      <footer role="contentinfo" aria-label="IBM">
+        <div id="ibm-footer">
+          <ul>
+            <li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+            <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+            <li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+            <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+          </ul>
+        </div>
+      </footer>
+      <!-- FOOTER_END -->
+
+    </div>
+	
+
+<div id="ibm-contact-module">
+    <h2 class="ibm-bold">Contact us</h2>
+    <h3 class="ibm-bold">Have questions?</h3>
+    <ul class="ibm-live-assistance-list">
+        <li><a href="http://ibm.com/marketing/iwm/dre/signup?source=MAIL-analytics3&S_PKG=ov42187&disableCookie=Yes&lang=en_us" target="blank">Email IBM</a> </li>
+        <!--<li><a class="ibm-requestquote-link" href="####">Request a quote</a></li>-->
+        <li>
+            <p class="ibm-icon-nolink ibm-phone-link">Or call us at: 1-800-543-2185
+                <br><span class="ibm-priority-code">Priority code: SPSS</span>
+            </p>
+        </li>
+    </ul>
+</div>
+
+</div>
+</div>
+<script src="../common/analytics-secondary-navigation-v18-productline.js" type="text/javascript"></script>   
+
+	
+  </body>
+</html>

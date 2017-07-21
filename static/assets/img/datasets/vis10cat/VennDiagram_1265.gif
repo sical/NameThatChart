@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" prefix="dcterms: http://purl.org/dc/terms/ rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# perc: http://percussion.com/perc/elements/1.0/ og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=10"/>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+<link rel="canonical" href="http://www.communitylearningcampus.ca/error.html" />
+<title>error</title>
+<script type="text/javascript">
+var percGlobalErrors = [];         
+window.onerror=function(msg, url, linenumber){
+var jsErrorMsg = 'JavaScript error -- ' + msg;  
+percGlobalErrors.push(jsErrorMsg);
+return false;
+}
+</script>
+<link rel="stylesheet" href="/web_resources/cm/themes/smoothness/jquery-ui-1.8.9.custom.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/web_resources/themes/CLC/clc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/web_resources/themes/CLC/perc/perc_region.css" type="text/css" media="all" />
+<script type="text/javascript" src="/web_resources/cm/jslib/jquery.js"></script>
+<script type="text/javascript" src="/web_resources/widgets/navBar/js/superfish.min.js"></script>
+<script type="text/javascript" src="/web_resources/cm/jslib/jquery-ui.js"></script>
+<script type="text/javascript" src="/web_resources/cm/common/js/perc_common_ui.js"></script>
+<script type="text/javascript" src="/web_resources/widgets/navBar/js/hoverIntent.min.js"></script>
+<script type="text/javascript" src="/web_resources/cm/jslib/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="/web_resources/widgets/navBar/js/navbar.min.js"></script>
+<script type="text/javascript" src="/web_resources/widgets/image/tinyLightbox/jquery.tinyLightbox.min.js"></script>
+<script type="text/javascript" src="/web_resources/cm/common/js/PercGlobalVariables.js"></script>
+<script type="text/javascript" src="/web_resources/widgets/image/tinyLightbox/jquery.tinyLightbox.original.min.js"></script>
+<meta property="dcterms:type" content="page"/>
+<meta property="dcterms:source" content="sub-page"/>
+<meta property="dcterms:created" content="2016-06-30T14:40:33"/> 
+<meta property="dcterms:alternative" content="error"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/web_resources/themes/CLC/css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" href="/web_resources/themes/CLC/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" href="/web_resources/themes/CLC/css/foundation.css" type="text/css" media="all">
+<link rel="stylesheet" href="/web_resources/themes/CLC/css/jquery.bxslider.css" type="text/css" media="all">
+
+<script type="text/javascript" src="/web_resources/themes/CLC/js/foundation.min.js"></script>
+<script type="text/javascript" src="/web_resources/themes/CLC/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/web_resources/themes/CLC/js/modernizr-2.7.1.min.js"></script>
+<script type="text/javascript" src="/web_resources/themes/CLC/js/clcAll.js"></script>
+
+<!-- ANALYTICS -->
+
+<script type="text/javascript"  src="/web_resources/themes/CLC/js/scripts.js" async></script>
+
+
+<script type="text/javascript">(function() { jQuery.getDeliveryServiceBase = function(){ return 'https://oldscollege-dts.percussion.marketing';};jQuery.getCm1License = function(){ return '2016CM1-OLDS-4435';};jQuery.getCm1Version = function(){ return '5.3.15';};})();</script>
+</head>
+<body>
+<input type="hidden" id="perc_linkback_id" value="3-101-48342"/>
+
+
+<div  class="perc-region perc-vertical "  data-noautoresize="false" id="perc-container"> <div class=" perc-vertical "><div  class="perc-region perc-vertical "  data-noautoresize="false" id="perc-content"> <div class=" perc-vertical "><div  class="perc-region perc-fixed perc-vertical clc-header-wrapper "  data-noautoresize="false" id="clc-header-wrapper"> <div class=" perc-vertical "><div  class="perc-region perc-fixed perc-vertical clc-header row width "  data-noautoresize="false" id="clc-header"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-fixed perc-vertical columns large-6 medium-6 "  data-noautoresize="false" id="temp-region-5"> <div class=" perc-vertical "><div class="perc-widget" >
+<div class="columns">
+<div class="rxbodyfield"><div><a class="header-logo" href="/" title="Home"><img alt="CLC Logo" height="157" imgtype="_full" src="/Assets/CLCAssets/images/clc-logo.jpg" width="405" /></a></div></div></div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-fixed perc-vertical columns large-5 medium-6 large-offset-1 "  data-noautoresize="false" id="temp-region-4"> <div class=" perc-vertical "><div class="perc-widget" >
+<gcse:search></gcse:search>
+
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-fixed perc-vertical columns large-5 medium-6 large-offset-1 "  data-noautoresize="false" id="loginBox"> <div class=" perc-vertical "><div class="perc-widget" >
+<div>
+<div class="rxbodyfield"><p><a href="https://oldscollege.perfectmind.com/SocialSite/MemberRegistration/MemberSignIn" title="Member Login">LOGIN</a></p></div></div>
+</div>
+</div></div></div></div><div  class="perc-region perc-region-leaf perc-fixed perc-vertical navigation "  data-noautoresize="false" id="navigation"> <div class=" perc-vertical "><div class="perc-widget" >
+
+    
+<div role="navigation" aria-label="Main Navigation" class=" perc-navbar">
+<ul role="menubar" class="perc-navbar-vertical">
+                          <li role="presentation" class="nav-level-2 nav-entry-1 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-1-list-position-1-760228150" href="/about-us/" role="menuitem">About Us</a><ul role="menu" aria-labelledby="perc-navigation-menuitem-nav-level-2-nav-entry-1-list-position-1-760228150">
+    <li role="presentation" class="nav-level-3 nav-entry-1 list-position-1 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-1-list-position-1-760228150" href="/about-us/" role="menuitem">About Us</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-2 list-position-2 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-2-list-position-2-760228150" href="/about-us/executive-committee/" role="menuitem">Executive Committee</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-3 list-position-3 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-3-list-position-3-760228150" href="/about-us/governance-team/" role="menuitem">Governance Team</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-4 list-position-4 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-4-list-position-4-760228150" href="/about-us/documents/" role="menuitem">Documents</a></li>
+</ul></li>       <li role="presentation" class="nav-level-2 nav-entry-2 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-2-list-position-1-760228150" href="/news/" role="menuitem">News</a></li>
+       <li role="presentation" class="nav-level-2 nav-entry-3 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-3-list-position-1-760228150" href="/fitness-center/" role="menuitem">Fitness Centre</a><ul role="menu" aria-labelledby="perc-navigation-menuitem-nav-level-2-nav-entry-3-list-position-1-760228150">
+    <li role="presentation" class="nav-level-3 nav-entry-5 list-position-1 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-5-list-position-1-760228150" href="/fitness-center/fitness-memberships/" role="menuitem">Fitness Memberships</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-6 list-position-2 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-6-list-position-2-760228150" href="https://oldscollege.perfectmind.com/22170/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=1e0d5906-74f7-4a2e-95f4-c3fc068a746f&widgetId=15f6af07-39c5-473e-b053-96653f77a406&embed=False&singleCalendarWidget=true" role="menuitem" target='_blank'>Fitness Classes</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-7 list-position-3 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-7-list-position-3-760228150" href="/fitness-center/personal-Training/" role="menuitem">Personal Training</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-8 list-position-4 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-8-list-position-4-760228150" href="/fitness-center/fitness-facilities/" role="menuitem">Fitness Facilities</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-9 list-position-5 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-9-list-position-5-760228150" href="/fitness-center/high-performance/" role="menuitem">High Performance Centre</a></li>
+</ul></li>       <li role="presentation" class="nav-level-2 nav-entry-4 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-4-list-position-1-760228150" href="/recreation/" role="menuitem">Recreation</a><ul role="menu" aria-labelledby="perc-navigation-menuitem-nav-level-2-nav-entry-4-list-position-1-760228150">
+    <li role="presentation" class="nav-level-3 nav-entry-10 list-position-1 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-10-list-position-1-760228150" href="/recreation/Outdoor-Center/" role="menuitem">Outdoor Centre</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-11 list-position-2 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-11-list-position-2-760228150" href="https://oldscollege.perfectmind.com/22170/Facilities/BookMe4BookingPages/BookingCoursesPage?calendarId=5ab82f25-4301-1272-c957-5aa4a5822789&widgetId=61c5eabf-96f4-474f-b97a-d9f15ccebc18&embed=False&singleCalendarWidget=true" role="menuitem" target='_blank'>Intramurals</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-12 list-position-3 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-12-list-position-3-760228150" href="https://oldscollege.perfectmind.com/22170/Facilities/BookMe4BookingPages/BookingCoursesPage?calendarId=6a6459e0-3d01-4328-8159-60334bf1209b&widgetId=f9ec90f3-a75a-4c92-b9f1-d99ef0861834&embed=False&singleCalendarWidget=true" role="menuitem" target='_blank'>Activities</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-13 list-position-4 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-13-list-position-4-760228150" href="https://oldscollege.perfectmind.com/22170/Reports/BookMe4?widgetId=cf594357-c087-4d1f-b47f-da7e7da8b696" role="menuitem" target='_blank'>Camps</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-14 list-position-5 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-14-list-position-5-760228150" href="https://calendar.google.com/calendar/embed?src=oldscollege.ca_jhir7pcfrudklf6alpcdi9liuc%40group.calendar.google.com&ctz=America/Edmonton" role="menuitem" target='_blank'>CALENDAR</a></li>
+</ul></li>       <li role="presentation" class="nav-level-2 nav-entry-5 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-5-list-position-1-760228150" href="/events/" role="menuitem">Events</a><ul role="menu" aria-labelledby="perc-navigation-menuitem-nav-level-2-nav-entry-5-list-position-1-760228150">
+    <li role="presentation" class="nav-level-3 nav-entry-15 list-position-1 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-15-list-position-1-760228150" href="/events/community-events/" role="menuitem">Community Events</a></li>
+</ul></li>       <li role="presentation" class="nav-level-2 nav-entry-6 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-6-list-position-1-760228150" href="/Learning/" role="menuitem">Learning</a><ul role="menu" aria-labelledby="perc-navigation-menuitem-nav-level-2-nav-entry-6-list-position-1-760228150">
+    <li role="presentation" class="nav-level-3 nav-entry-16 list-position-1 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-16-list-position-1-760228150" href="/Learning/dual-credit/" role="menuitem">Dual Credit</a></li>
+</ul></li>       <li role="presentation" class="nav-level-2 nav-entry-7 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-7-list-position-1-760228150" href="/facilities/" role="menuitem">Facilities</a><ul role="menu" aria-labelledby="perc-navigation-menuitem-nav-level-2-nav-entry-7-list-position-1-760228150">
+    <li role="presentation" class="nav-level-3 nav-entry-17 list-position-1 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-17-list-position-1-760228150" href="/facilities/catering/" role="menuitem">Catering</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-18 list-position-2 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-18-list-position-2-760228150" href="/facilities/bell-e-learning-centre/" role="menuitem">Bell E-Learning Centre</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-19 list-position-3 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-19-list-position-3-760228150" href="/fitness-center/fitness-facilities/" role="menuitem">Fitness Facilities</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-20 list-position-4 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-20-list-position-4-760228150" href="/facilities/performing-arts-theater/" role="menuitem">Fine Arts &amp; Multi Media Centre</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-21 list-position-5 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-21-list-position-5-760228150" href="/facilities/ralph-klein-centre/" role="menuitem">Ralph Klein Centre</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-22 list-position-6 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-22-list-position-6-760228150" href="/facilities/booking-form/" role="menuitem">Booking Form</a></li>
+    <li role="presentation" class="nav-level-3 nav-entry-23 list-position-7 "><a id="perc-navigation-menuitem-nav-level-3-nav-entry-23-list-position-7-760228150" href="/facilities/facility-rental-rates/" role="menuitem">Facility Rental Rates</a></li>
+</ul></li>       <li role="presentation" class="nav-level-2 nav-entry-8 list-position-1 "><a id="perc-navigation-menuitem-nav-level-2-nav-entry-8-list-position-1-760228150" href="https://oldscollege.perfectmind.com/SocialSite/MemberRegistration/MemberSignIn" role="menuitem">Login</a></li>
+</ul>
+<div style="clear:both"></div>
+</div>
+
+</div>
+</div></div></div></div><div  class="perc-region perc-fixed perc-vertical clc-content-wrapper "  data-noautoresize="false" id="clc-content-wrapper"> <div class=" perc-vertical "><div  class="perc-region perc-fixed perc-vertical clc-content "  data-noautoresize="false" id="clc-content"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-fixed perc-vertical flexslider clcSliderContainer "  data-noautoresize="false" id="clcSliderContainer"> <div class=" perc-vertical "></div></div><div  class="perc-region perc-fixed perc-vertical heroImage "  data-noautoresize="false" id="heroImage"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-20"> <div class=" perc-vertical "><div class="perc-widget" >
+
+    
+        
+    
+</div>
+</div></div></div></div><div  class="perc-region perc-fixed perc-vertical subPageContent row "  data-noautoresize="false" id="subPageContent"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-fixed perc-vertical "  data-noautoresize="false" id="temp-region-6"> <div class=" perc-vertical "><div class="perc-widget" >
+<div class="contentPadding">
+</div>
+</div>
+</div></div><div style="width:100%;" class="perc-region perc-region-leaf perc-fixed perc-vertical "  data-noautoresize="false" id="temp-region-7"> <div class=" perc-vertical "></div></div></div></div><div  class="perc-region perc-fixed perc-vertical section2Wrapper greenbg50 "  data-noautoresize="false" id="section2Wrapper"> <div class=" perc-vertical "><div  class="perc-region perc-fixed perc-vertical section2Inner row "  data-noautoresize="false" id="section2Inner"> <div class=" perc-vertical "><div  class="perc-region perc-fixed perc-vertical columns large-12 "  data-noautoresize="false" id="temp-region-11"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-12"> <div class=" perc-vertical "><div class="perc-widget" >
+<div class="strikeThrough paddingTop">
+<div class="rxbodyfield"><div class=""><div class="rxbodyfield"><h1 style="text-align: left;">Somethings Up!</h1><h2 style="text-align: left;"><strong>Page Not Found</strong></h2><h3 style="text-align: left;">This page seems to be missing. This is usually the result of a bad or outdated link. We apologize for any inconvenience. Here are a few things that you can try to find the page you were looking for. </h3></div></div><div class=""><div><div class="rxbodyfield"><p style="text-align: left;">Try going back to the previous page and then press CTRL+F5 on your keyboard to do a hard refresh.  Sometimes your browser will cache old pages that have since then been fixed.</p></div></div></div></div></div>
+</div>
+<div class="perc-widget" >
+<div>
+</div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-13"> <div class=" perc-vertical "></div></div></div></div><div  class="perc-region perc-fixed perc-vertical columns large-4 "  data-noautoresize="false" id="temp-region-8"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-14"> <div class=" perc-vertical "><div class="perc-widget" >
+<div class="topPadding">
+<div class="rxbodyfield"><h3>DID THE SEARCH TOOL BRING YOU HERE?</h3><p>Sometimes it takes Google a few days to re-crawl our site after we have moved things around on the website.  Try choosing the <strong>second or third item</strong> in the <strong>search results</strong> and it might take you to the correct page.</p><p>If that doesn't work try using the menu above to manually navigate to the page you are looking for.</p><p>You can always click on the Olds College Logo to take you back to the home page.</p></div></div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-15"> <div class=" perc-vertical "></div></div></div></div><div  class="perc-region perc-fixed perc-vertical columns large-4 "  data-noautoresize="false" id="temp-region-9"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-16"> <div class=" perc-vertical "><div class="perc-widget" >
+<div class="topPadding">
+<div class="rxbodyfield"><h3>DID YOU HAVE A PAGE BOOKMARKED?</h3><p>If you had a page bookmarked it may have been moved.  Try our search tool.</p></div></div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-17"> <div class=" perc-vertical "></div></div></div></div><div  class="perc-region perc-fixed perc-vertical columns large-4 "  data-noautoresize="false" id="temp-region-10"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-18"> <div class=" perc-vertical "><div class="perc-widget" >
+<div class="topPadding">
+<div class="rxbodyfield"><h3>CONTACT US</h3><p>Still can't find what you are looking for?  Email or call us</p><div>Front Desk, Ralph Klein Centre:<br />403-507-7781</div><div>Fitness Centre: 403-507-7782</div><div>Manager: 403-556-8359</div><div>Director of Learning: 403-507-7731</div></div></div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-vertical "  data-noautoresize="undefined" id="temp-region-19"> <div class=" perc-vertical "></div></div></div></div><div style="width:100%;" class="perc-region perc-region-leaf perc-fixed perc-vertical "  data-noautoresize="false" id="customBox"> <div class=" perc-vertical "></div></div></div></div></div></div></div></div></div></div><div  class="perc-region perc-fixed perc-vertical clc-footer-wrapper "  data-noautoresize="false" id="clc-footer-wrapper"> <div class=" perc-vertical "><div  class="perc-region perc-fixed perc-vertical clc-footer row width "  data-noautoresize="false" id="clc-footer"> <div class=" perc-vertical "><div  class="perc-region perc-region-leaf perc-fixed perc-vertical large-4 columns "  data-noautoresize="false" id="temp-region-1"> <div class=" perc-vertical "><div class="perc-widget" >
+<div>
+<div class="rxbodyfield"><h1>CONTACT US</h1><div>Front Desk, Ralph Klein Centre: 403-507-7781</div><div>Fitness Centre: 403-507-7782</div><div>Manager: 403-556-8359</div><div>Director, Community Learning Campus: 403-507-7731<br /> </div><div><em class="fa fa-facebook fa-3x"><a href="https://www.facebook.com/clcfitness" target="_blank"> </a>  <a class="" href="https://twitter.com/search?q=%40CLC_Fitness&amp;src=typd&amp;lang=en" target="_blank" title="clc fitness twitter"><img alt="twitter CLC fitness" border="" height="50" imgtype="_full" src="/Assets/CLCAssets/mudRun/template-images/whiteTwitter.png" title="twitter " width="53" /></a></em></div></div></div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-fixed perc-vertical large-4 columns "  data-noautoresize="false" id="temp-region-2"> <div class=" perc-vertical "><div class="perc-widget" >
+<div>
+<div class="rxbodyfield"><h1>LINKS</h1><div><a href="http://www.oldscollege.ca" target="_blank" title="Olds College">Olds College</a></div><div><a href="http://www.olds.ca" target="_blank">Town of Olds</a></div><div><a href="http://www.mountainviewcounty.com" target="_blank">Mountain View County</a></div><div><a href="http://www.chinooksedge.ab.ca/" target="_blank">Chinook's Edge</a></div><div><a href="http://www.ualberta.ca" target="_blank">University of Alberta</a></div><div><a href="https://www.everythingolds.ca/" target="_blank" title="Everything Olds">Everything Olds</a></div></div></div>
+</div>
+</div></div><div  class="perc-region perc-region-leaf perc-fixed perc-vertical large-4 columns "  data-noautoresize="false" id="temp-region-3"> <div class=" perc-vertical "><div class="perc-widget" >
+<div>
+<div class="rxbodyfield"><a href="http://www.oldscollege.ca" target="_blank" title="Olds College"><img alt="OC_Logo_White_CMYK (1).png" height="120" imgtype="_full" src="/Assets/OldsCollege/shared/communications/Communications-Toolbox/Logos-Guidelines/PNG-Files/OC_Logo_White_CMYK%20(1).png" title="Olds College logo " width="400" /></a></div></div>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+</body>
+ </html>

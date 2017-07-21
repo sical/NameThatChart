@@ -68,6 +68,7 @@
                 }
             })
         } else {
+
             var form = new FormData();
             form.append("idimage", $(this).attr("value"));
             form.append("idtype", type);
@@ -79,10 +80,17 @@
                 contentType: false,
                 data: form,
                 success: function (data) {
-                    $("#fill").empty();
-                    $("#brand").text(" Select the picture which best describe : ");
-                    fillthem();
+                    if (window.location.href.indexOf('main') !== -1) {
+                        window.location = "../main"
+                    } else if (window.location.href.indexOf('raw') !== -1) {
+                        window.location = "../raw"
+                    }
+                    else {
+                        $("#fill").empty();
+                        $("#brand").text(" Select the picture which best describe : ");
+                        fillthem();
 
+                    }
                 }
             })
         }

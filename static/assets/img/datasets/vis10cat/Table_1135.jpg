@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+	<head profile="http://www.w3.org/1999/xhtml/vocab">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://www.discapnet.es/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+		<title>Discapnet | El Portal de las Personas con Discapacidad</title> 
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style type="text/css" media="all">
+@import url("http://www.discapnet.es/modules/system/system.base.css?os7901");
+@import url("http://www.discapnet.es/modules/system/system.menus.css?os7901");
+@import url("http://www.discapnet.es/modules/system/system.messages.css?os7901");
+@import url("http://www.discapnet.es/modules/system/system.theme.css?os7901");
+</style>
+<style type="text/css" media="all">
+@import url("http://www.discapnet.es/sites/all/modules/simplenews/simplenews.css?os7901");
+@import url("http://www.discapnet.es/modules/aggregator/aggregator.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/calendar/css/calendar_multiday.css?os7901");
+@import url("http://www.discapnet.es/modules/comment/comment.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/date/date_api/date.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?os7901");
+@import url("http://www.discapnet.es/modules/field/theme/field.css?os7901");
+@import url("http://www.discapnet.es/modules/node/node.css?os7901");
+@import url("http://www.discapnet.es/modules/poll/poll.css?os7901");
+@import url("http://www.discapnet.es/modules/search/search.css?os7901");
+@import url("http://www.discapnet.es/modules/user/user.css?os7901");
+@import url("http://www.discapnet.es/modules/forum/forum.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/views/css/views.css?os7901");
+</style>
+<style type="text/css" media="all">
+@import url("http://www.discapnet.es/sites/all/modules/ctools/css/ctools.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/panels/css/panels.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/panels/plugins/layouts/flexible/flexible.css?os7901");
+@import url("http://www.discapnet.es/sites/default/files/ctools/css/df9599f5bd0b3de1e2ee176e56a5f679.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/nice_menus/css/nice_menus.css?os7901");
+@import url("http://www.discapnet.es/sites/all/modules/nice_menus/css/nice_menus_default.css?os7901");
+</style>
+<style type="text/css" media="all">
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/fonts.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/discapnet.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/discapnet_layouts.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/areas-tematicas.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/jquery.bxslider.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/jquery.sidr.dark.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/foros.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/unificado.css?os7901");
+@import url("http://www.discapnet.es/sites/all/themes/discapnet/css/controlesReproYoutubeAcc.css?os7901");
+</style>
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://www.discapnet.es/sites/all/themes/discapnet/css/ie.css?os7901" media="all" />
+<![endif]-->
+		<script type="text/javascript" src="http://www.discapnet.es/sites/default/files/js/js_ri60QNjcazMKdlAmWmDsmRb0iKaVkkXUQxH2MsgpmVo.js"></script>
+<script type="text/javascript" src="http://www.discapnet.es/sites/default/files/js/js_45JniWrXrY8q8AEVIV6GFupI5scizolw-FrujytMgiY.js"></script>
+<script type="text/javascript" src="http://www.discapnet.es/sites/default/files/js/js_N0sK9X9sBa_eXy_t4AyAU2ICOiAgldi3v363Q6JJ0dc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-9218028-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.discapnet.es/sites/default/files/js/js_xzaJL5zPjgzw8WzGP0-Od1lvxQ0FWSamwhHpJIpRo-o.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"discapnet","theme_token":"J7NDx2pU6twe35MGgpMwms8tOcRmpdXHZQfu_BWVPCY","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/nice_menus\/js\/jquery.bgiframe.js":1,"sites\/all\/modules\/nice_menus\/js\/jquery.hoverIntent.js":1,"sites\/all\/modules\/nice_menus\/js\/superfish.js":1,"sites\/all\/modules\/nice_menus\/js\/nice_menus.js":1,"public:\/\/languages\/es_vNKZfEl8iLtQ7DSyi_nEDF5orwymQpW9xNEZZhlxtjo.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/discapnet\/js\/discapnet.js":1,"sites\/all\/themes\/discapnet\/js\/jquery.sidr.js":1,"sites\/all\/themes\/discapnet\/js\/boxslider\/jquery.bxslider.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"public:\/\/ctools\/css\/df9599f5bd0b3de1e2ee176e56a5f679.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus_default.css":1,"sites\/all\/themes\/discapnet\/css\/fonts.css":1,"sites\/all\/themes\/discapnet\/css\/discapnet.css":1,"sites\/all\/themes\/discapnet\/css\/discapnet_layouts.css":1,"sites\/all\/themes\/discapnet\/css\/areas-tematicas.css":1,"sites\/all\/themes\/discapnet\/css\/jquery.bxslider.css":1,"sites\/all\/themes\/discapnet\/css\/jquery.sidr.dark.css":1,"sites\/all\/themes\/discapnet\/css\/foros.css":1,"sites\/all\/themes\/discapnet\/css\/unificado.css":1,"sites\/all\/themes\/discapnet\/css\/controlesReproYoutubeAcc.css":1,"sites\/all\/themes\/discapnet\/css\/ie.css":1}},"nice_menus_options":{"delay":800,"speed":"slow"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/":true}});
+//--><!]]>
+</script>
+	</head>
+	
+	<body class="html front not-logged-in no-sidebars page-home i18n-es" >
+		<div id="skip-link">
+			<a href="#main-content" class="element-invisible element-focusable">Pasar al contenido principal</a>
+		</div>
+				<div id="page-wrapper">
+	<div id="page">
+
+		<div id="header-wrapper">
+			<div id="header">
+				<div class="section clearfix">
+
+											<h1 id="logo">
+							<a href="/" title="Discapnet.  Ir a inicio" rel="home">
+								<img src="http://www.discapnet.es/sites/default/files/logo.png" alt="Discapnet. Ir a inicio" />
+							</a>
+						</h1>
+					
+											<div id="site-slogan">
+							<p>El Portal de las Personas con Discapacidad</p>
+						</div>
+					
+					  <div class="region region-header">
+    <div id="block-block-41" class="block block-block logo-fonce">
+
+    
+  <div class="content">
+    <p><a href="http://www.fundaciononce.es" target="blank" title="La página abre en ventana nueva"><img alt="La página abre en ventana nueva" src="/sites/default/files/pictures/logo-fonce.png" /></a></p>
+  </div>
+</div>
+  </div>
+					
+				</div>
+			</div>
+		</div> <!-- /.section, /#header, /#header-wrapper -->
+  
+		<div id="wrapper-preheader">
+			<div class="section clearfix">
+				  <div class="region region-preheader">
+    <div id="block-menu-menu-menu-sup" class="block block-menu menu_sup">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="/contacto" title="">Contactar</a></li>
+<li class="leaf"><a href="/mapa-web" title="">Mapa web</a></li>
+<li class="leaf"><a href="/accesibilidad" title="">Accesibilidad</a></li>
+<li class="last leaf"><a href="/anunciate-en-discapnet" title="">Anúnciate en Discapnet</a></li>
+</ul>  </div>
+</div>
+<div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <ul id="redes"><li><a href="https://www.facebook.com/Discapnet-el-portal-de-la-discapacidad-m%C3%A1s-grande-de-habla-hispana-180846798275/?ref=aymt_homepage_panel" target="blank" title="Facebook, abre en ventana nueva">Facebook</a></li>
+<li><a href="https://twitter.com/discapnet" target="blank" title="Twitter abre en ventanan nueva">Twitter</a></li>
+<li><a href="https://plus.google.com/106196570759906572720" target="blank" title="Google abre en ventanan nueva">Google</a></li>
+</ul>  </div>
+</div>
+  </div>
+			</div>
+		</div>
+  
+		<div id="main-menu-wrapper">
+			
+			<div id="main-menu" class="navigation">
+								
+				  <div class="region region-navigation">
+    <div id="block-nice-menus-1" class="block block-nice-menus">
+
+    
+  <div class="content">
+    <ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-1"><li class="menu-425 menu-path-front first odd "><a href="/" title="" class="active">Portada</a></li>
+<li class="menu-857 menu-path-node-1  even "><a href="/quienes-somos">Quiénes somos</a></li>
+<li class="menu-441 menuparent  menu-path-areas-tematicas  odd "><a href="/areas-tematicas" title="">Áreas Temáticas</a><ul><li class="menu-454 menuparent  menu-path-taxonomy-term-950 first odd "><a href="/areas-tematicas/accesibilidad" title="">Accesibilidad</a><ul><li class="menu-622 menu-path-areas-tematicas-accesibilidad-actualidad first odd "><a href="/areas-tematicas/accesibilidad/actualidad" title="">Actualidad Accesibilidad</a></li>
+<li class="menu-1039 menu-path-node-84132  even "><a href="/areas-tematicas/accesibilidad/turismo-para-todos/espanol/turismo-para-todos">Turismo para Todos</a></li>
+<li class="menu-1026 menu-path-node-84347  odd "><a href="/areas-tematicas/accesibilidad/transporte-accesible">Transporte accesible</a></li>
+<li class="menu-1027 menu-path-node-84328  even last"><a href="/areas-tematicas/accesibilidad/ocio-accesible/ocio-accesible">Ocio accesible</a></li>
+</ul></li>
+<li class="menu-455 menuparent  menu-path-taxonomy-term-3611  even "><a href="/areas-tematicas/salud" title="">Salud</a><ul><li class="menu-623 menu-path-areas-tematicas-salud-actualidad first odd "><a href="/areas-tematicas/salud/actualidad" title="">Actualidad Salud</a></li>
+<li class="menu-1801 menu-path-node-87076  even "><a href="/areas-tematicas/salud/discapacidades">Discapacidades</a></li>
+<li class="menu-1834 menu-path-node-87077  odd "><a href="/areas-tematicas/salud/enfermedades">Enfermedades</a></li>
+<li class="menu-1087 menu-path-areas-tematicas-salud-enciclopedia  even "><a href="/areas-tematicas/salud/enciclopedia" title="">Enciclopedia</a></li>
+<li class="menu-1088 menu-path-node-85308  odd "><a href="/areas-tematicas/salud/educar-en-salud">Educar en Salud</a></li>
+<li class="menu-1089 menu-path-node-85659  even "><a href="/areas-tematicas/salud/los-riesgos-psicosociales">Los riesgos Psicosociales</a></li>
+<li class="menu-2596 menu-path-node-87579  odd "><a href="/areas-tematicas/salud/salud-laboral">Salud Laboral</a></li>
+<li class="menu-1092 menu-path-node-85242  even "><a href="/areas-tematicas/salud/conciliacion-laboral">Conciliación laboral</a></li>
+<li class="menu-1095 menu-path-node-85258  odd "><a href="/areas-tematicas/salud/cuidados-medicos">Cuidados Médicos</a></li>
+<li class="menu-2022 menu-path-node-87100  even "><a href="/areas-tematicas/salud/guias-y-articulos-de-salud">Guías y artículos de Salud</a></li>
+<li class="menu-1098 menu-path-node-85263  odd "><a href="/areas-tematicas/salud/cuida-t">Cuida-T</a></li>
+<li class="menu-2388 menu-path-node-87514  even last"><a href="/areas-tematicas/salud/recursos">Recursos</a></li>
+</ul></li>
+<li class="menu-456 menuparent  menu-path-taxonomy-term-951  odd "><a href="/areas-tematicas/nuestros-derechos" title="">Nuestros Derechos</a><ul><li class="menu-2286 menu-path-areas-tematicas-nuestros-derechos-actualidad first odd "><a href="/areas-tematicas/nuestros-derechos/actualidad" title="">Actualidad nuestros derechos</a></li>
+<li class="menu-995 menu-path-node-84881  even "><a href="/areas-tematicas/nuestros-derechos/tus-derechos-fondo">Tus derechos, a fondo</a></li>
+<li class="menu-1222 menu-path-node-84791  odd "><a href="/areas-tematicas/nuestros-derechos/legislacion">Legislación</a></li>
+<li class="menu-997 menu-path-node-84378  even "><a href="/areas-tematicas/nuestros-derechos/ayudas-la-discapacidad">Ayudas a la discapacidad</a></li>
+<li class="menu-998 menu-path-node-84827  odd last"><a href="/areas-tematicas/nuestros-derechos/preguntas-y-respuestas">Preguntas y respuestas</a></li>
+</ul></li>
+<li class="menu-457 menuparent  menu-path-taxonomy-term-952  even "><a href="/areas-tematicas/educacion" title="">Educación</a><ul><li class="menu-625 menu-path-areas-tematicas-educacion-actualidad first odd "><a href="/areas-tematicas/educacion/actualidad" title="">Actualidad educación</a></li>
+<li class="menu-1030 menu-path-node-84954  even "><a href="/areas-tematicas/educacion/educacion-y-discapacidad">Educación y Discapacidad</a></li>
+<li class="menu-1033 menu-path-node-84970  odd "><a href="/areas-tematicas/educacion/formacion-lo-largo-de-la-vida">Formación a lo largo de la vida</a></li>
+<li class="menu-1035 menu-path-node-84979  even "><a href="/areas-tematicas/educacion/guia-universitaria-para-estudiantes-con-discapacidad">Guía universitaria para estudiantes con discapacidad</a></li>
+<li class="menu-1038 menu-path-node-84930  odd "><a href="/areas-tematicas/educacion/becas-y-ayudas">Becas y Ayudas</a></li>
+<li class="menu-1041 menu-path-node-84980  even "><a href="/areas-tematicas/educacion/guias-sobre-tecnologias-en-la-red">Guías sobre tecnologías en la Red</a></li>
+<li class="menu-1045 menu-path-node-84982  odd last"><a href="/areas-tematicas/educacion/juegos-educativos">Juegos Educativos</a></li>
+</ul></li>
+<li class="menu-458 menuparent  menu-path-taxonomy-term-956  odd "><a href="/areas-tematicas/tecnologia-inclusiva" title="">Tecnología inclusiva</a><ul><li class="menu-2345 menu-path-areas-tematicas-tecnologia-inclusiva-actualidad first odd "><a href="/areas-tematicas/tecnologia-inclusiva/actualidad" title="">Actualidad tecnología inclusiva</a></li>
+<li class="menu-1015 menu-path-node-85238  even "><a href="/areas-tematicas/tecnologia-inclusiva/tendencias-en-tecnologia-accesible">Tendencias en tecnología accesible</a></li>
+<li class="menu-1017 menu-path-node-85173  odd "><a href="/areas-tematicas/tecnologia-inclusiva/estado-del-arte">Estado del Arte</a></li>
+<li class="menu-1021 menu-path-node-84293  even "><a href="/areas-tematicas/tecnologia-inclusiva/observatorio-de-accesibilidad-tic">Observatorio de Accesibilidad TIC</a></li>
+<li class="menu-1018 menu-path-node-85231  odd "><a href="/areas-tematicas/tecnologia-inclusiva/tecnologia-y-necesidades-humanas">Tecnología y necesidades humanas</a></li>
+<li class="menu-1019 menu-path-node-85165  even "><a href="/areas-tematicas/tecnologia-inclusiva/acceso-la-tecnologia">Acceso a la tecnología</a></li>
+<li class="menu-1022 menu-path-node-85202  odd "><a href="/areas-tematicas/tecnologia-inclusiva/productos-de-apoyo">Productos de apoyo</a></li>
+<li class="menu-1025 menu-path-node-85170  even "><a href="/areas-tematicas/tecnologia-inclusiva/aplicaciones-moviles/aplicaciones-moviles-para-windows-iphone-7-y-android">Aplicaciones móviles</a></li>
+<li class="menu-1174 menu-path-node-84329  odd "><a href="/areas-tematicas/tecnologia-inclusiva/guia-de-juguetes-accesibles">Guía de Juguetes Accesibles</a></li>
+<li class="menu-1282 menu-path-node-86512  even "><a href="/areas-tematicas/tecnologia-inclusiva/drt4all">DRT4ALL</a></li>
+<li class="menu-1218 menu-path-node-85228  odd last"><a href="/areas-tematicas/tecnologia-inclusiva/redes-sociales-y-accesibilidad">Redes Sociales y Accesibilidad</a></li>
+</ul></li>
+<li class="menu-459 menuparent  menu-path-taxonomy-term-953  even "><a href="/areas-tematicas/innovacion-y-empleo" title="">Innovación y empleo</a><ul><li class="menu-2346 menu-path-areas-tematicas-innovacion-y-empleo-actualidad first odd "><a href="/areas-tematicas/innovacion-y-empleo/actualidad" title="">Actualidad innovación y empleo</a></li>
+<li class="menu-1241 menu-path-node-86487  even "><a href="/areas-tematicas/innovacion-y-empleo/la-fundacion-once-y-el-empleo">La Fundación ONCE y el empleo</a></li>
+<li class="menu-1085 menu-path-node-84985  odd "><a href="/areas-tematicas/innovacion-y-empleo/fomento-del-empleo">Fomento del empleo</a></li>
+<li class="menu-1086 menu-path-node-84984  even last"><a href="/areas-tematicas/innovacion-y-empleo/centros-especiales-de-empleo">Centros Especiales de Empleo</a></li>
+</ul></li>
+<li class="menu-1102 menu-path-taxonomy-term-5804  odd "><a href="/areas-tematicas/deportes" title="">Deporte</a></li>
+<li class="menu-469 menuparent  menu-path-taxonomy-term-955  even "><a href="/areas-tematicas/turismo-y-cultura" title="">Turismo y cultura</a><ul><li class="menu-2347 menu-path-areas-tematicas-turismo-y-cultura-actualidad first odd "><a href="/areas-tematicas/turismo-y-cultura/actualidad" title="">Actualidad turismo y cultura</a></li>
+<li class="menu-1101 menu-path-node-85050  even "><a href="/areas-tematicas/turismo-y-cultura/cultura">Cultura</a></li>
+<li class="menu-1103 menu-path-node-85141  odd "><a href="/areas-tematicas/turismo-y-cultura/turismo">Turismo</a></li>
+<li class="menu-1245 menu-path-node-86491  even "><a href="/areas-tematicas/turismo-y-cultura/recreacion-y-entrevistas">Recreación y entrevistas</a></li>
+<li class="menu-1278 menu-path-node-86508  odd last"><a href="/areas-tematicas/turismo-y-cultura/mapa-accesible">Mapa accesible</a></li>
+</ul></li>
+<li class="menu-460 menuparent  menu-path-taxonomy-term-3612  odd "><a href="/areas-tematicas/canal-senior" title="">Canal Senior</a><ul><li class="menu-517 menu-path-areas-tematicas-canal-senior-actualidad first odd "><a href="/areas-tematicas/canal-senior/actualidad" title="">Actualidad Canal Senior</a></li>
+<li class="menu-1385 menu-path-node-86520  even "><a href="/areas-tematicas/canal-senior/salud-y-mayores">Salud y Mayores</a></li>
+<li class="menu-1387 menu-path-node-86521  odd "><a href="/areas-tematicas/canal-senior/el-cuidador">El cuidador</a></li>
+<li class="menu-1388 menu-path-node-86522  even "><a href="/areas-tematicas/canal-senior/especiales">Especiales</a></li>
+<li class="menu-1389 menu-path-node-86523  odd "><a href="/areas-tematicas/canal-senior/documentacion">Documentación</a></li>
+<li class="menu-1390 menu-path-node-86524  even "><a href="/areas-tematicas/canal-senior/legislacion">Legislación</a></li>
+<li class="menu-1391 menu-path-node-86525  odd "><a href="/areas-tematicas/canal-senior/recursos-de-asistencia">Recursos de asistencia</a></li>
+<li class="menu-1392 menu-path-node-86526  even last"><a href="/areas-tematicas/canal-senior/entrevistas">Entrevistas</a></li>
+</ul></li>
+<li class="menu-2072 menu-path-taxonomy-term-5806  even "><a href="/areas-tematicas/diseno-para-todos" title="">Diseño para todos</a></li>
+<li class="menu-2068 menu-path-taxonomy-term-5805  odd "><a href="/areas-tematicas/latinoamerica" title="">Latinoamérica</a></li>
+<li class="menu-2067 menu-path-taxonomy-term-5803  even last"><a href="/areas-tematicas/responsabilidad-social" title="">Responsabilidad Social</a></li>
+</ul></li>
+<li class="menu-468 menu-path-participa  even "><a href="/participa" title="">Participa</a></li>
+<li class="menu-442 menuparent  menu-path-actualidad-y-eventos  odd "><a href="/actualidad-y-eventos" title="">Actualidad y Eventos</a><ul><li class="menu-463 menu-path-taxonomy-term-3867 first odd "><a href="/actualidad-y-eventos/actualidad" title="">Actualidad</a></li>
+<li class="menu-462 menu-path-taxonomy-term-3866  even "><a href="/actualidad-y-eventos/el-sector-social-al-dia" title="">El sector social al día</a></li>
+<li class="menu-800 menu-path-taxonomy-term-3865  odd "><a href="/actualidad-y-eventos/noticias-sobre-discapacidad" title="">Noticias sobre Discapacidad</a></li>
+<li class="menu-464 menu-path-solidaridaddigitales  even "><a href="http://www.solidaridaddigital.es" title="">Solidaridad Digital</a></li>
+<li class="menu-465 menu-path-noticiasfaciles-es-paginas-indexaspx  odd "><a href="http://www.noticiasfacil.es/ES/Paginas/index.aspx" title="">Noticias Fácil</a></li>
+<li class="menu-793 menu-path-actualidad-y-eventos-agenda  even last"><a href="/actualidad-y-eventos/agenda" title="">Agenda</a></li>
+</ul></li>
+<li class="menu-972 menu-path-node-64451  even last"><a href="/nuestros-boletines">Nuestros Boletines</a></li>
+</ul>
+  </div>
+</div>
+<div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Formulario de búsqueda</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Búsqueda </label>
+ <input title="Escriba lo que quiere buscar." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Búsqueda" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-0uX_3_DRB6oss4IenlIHp6TMG0dcuLmXIpqKOY04kYg" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+  </div>
+			</div>
+			
+		</div><!-- /#main-menu, /#main-menu-wrapper -->
+	
+		<!--bloque slider-->
+		<div id="wrapper-slider">
+			<div class="section clearfix">
+				  <div class="region region-slider">
+    <div id="block-views-carrusel-home-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-carrusel-home view-id-carrusel_home view-display-id-block view-dom-id-89ba7d72bf85feb8d7f2f10f68c27f98">
+        
+  
+  
+      <div class="view-content">
+          <ul class="bxslider">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+          <img src="http://www.discapnet.es/sites/default/files/slide_1_1.png" width="381" height="271" alt="Jovenes estudiando" />    
+          <div class="tx_slider"><a href="http://www.discapnet.es/areas-tematicas/tecnologia-inclusiva/observatorio-de-accesibilidad-tic/informes-discapnet/accesibilidad-de-plataformas-educativas"><span class="area950">Tecnología inclusiva</span>
+<span class="descricion950">Último informe del Observatorio: Accesibilidad de Plataformas Educativas</span>
+<span class="fecha950"><span class="date-display-single">19  Diciembre 2016</span></span></a></div>  </li>
+          <li class="views-row views-row-2 views-row-even">  
+          <img src="http://www.discapnet.es/sites/default/files/derechos2_carrusel.jpg" width="381" height="271" alt="mazo, balanza de ley y libros" />    
+          <div class="tx_slider"><a href="http://www.discapnet.es/areas-tematicas/derechos/preguntas-y-respuestas/preguntas-y-respuestas-frecuentes"><span class="area951">Derechos</span>
+<span class="descricion951">Preguntas y respuestas frecuentes sobre discapacidad y legislación, ¿conoces tus derechos?</span>
+<span class="fecha951"><span class="date-display-single">19  Abril 2017</span></span></a></div>  </li>
+          <li class="views-row views-row-3 views-row-odd">  
+          <img src="http://www.discapnet.es/sites/default/files/educacion-2.jpg" width="381" height="271" alt="Niña sonriendo y con una tablet" />    
+          <div class="tx_slider"><a href="http://www.discapnet.es/areas-tematicas/educacion/educacion-y-discapacidad/necesidades-especiales-en-educacion"><span class="area952">Educación</span>
+<span class="descricion952">Necesidades especiales en educación: ayudas y apoyos a la inclusión educativa</span>
+<span class="fecha952"><span class="date-display-single">19  Marzo 2017</span></span></a></div>  </li>
+          <li class="views-row views-row-4 views-row-even views-row-last">  
+          <img src="http://www.discapnet.es/sites/default/files/salud.jpg" width="381" height="271" alt="" />    
+          <div class="tx_slider"><a href="http://www.discapnet.es/areas-tematicas/salud/educar-en-salud"><span class="area3611">Salud</span>
+<span class="descricion3611">Educar en Salud: la importancia de conocer hábitos saludables y cómo manejar la enfermedad</span>
+<span class="fecha3611"><span class="date-display-single">19  Marzo 2017</span></span></a></div>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+			</div>
+		</div>
+		<!--fin bloque slider-->
+	
+		<div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+
+			
+			<div id="content" class="column"><div class="section">
+				<a id="main-content"></a>
+					      
+					      
+					      
+										
+											<div class="tabs">
+													</div>
+										
+										
+						  
+									
+					  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="panel-flexible panels-flexible-discapnet_75_25 clearfix" id="p-home">
+<div class="panel-flexible-inside panels-flexible-discapnet_75_25-inside">
+<div class="panels-flexible-column panels-flexible-column-discapnet_75_25-main panels-flexible-column-first col_izquierda">
+  <div class="inside panels-flexible-column-inside panels-flexible-column-discapnet_75_25-main-inside panels-flexible-column-inside-first">
+<div class="panels-flexible-region panels-flexible-region-discapnet_75_25-center panels-flexible-region-first panels-flexible-region-last ">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-discapnet_75_25-center-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+<div class="panel-pane pane-views pane-carrusel-home bloques-home carrusel-act"  >
+  
+        <h2 class="pane-title">
+      Actualidad y eventos    </h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-carrusel-home view-id-carrusel_home view-display-id-block_1 view-dom-id-c6250d6d5888a3348898fa353ebc9188">
+        
+  
+  
+      <div class="view-content">
+          <ul class="bxslider_act">          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/casaaccesibleentrada.jpg" width="600" height="399" alt="personas con y sin discapacidad a la entrada de la casa accesible" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/la-casa-accesible-de-fundacion-once-cierra-su-segundo-recorrido-por-espana-con">La casa accesible de Fundación ONCE cierra su segundo recorrido por España con más de 40....</a></strong>
+<p>21  Julio 2017</p>
+<div>La casa inteligente, accesible y sostenible de Fundación ONCE cierra su segundo recorrido por las plazas y calles españolas con un total de 40.000 visitas a su paso por...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/elperrodelhortelano.jpg" width="600" height="400" alt="pareja sobre el escenario interpreta el perro del hortelano" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/teatro-accesible-en-los-festivales-de-olite-y-almagro">Teatro accesible en los festivales de Olite y Almagro</a></strong>
+<p>21  Julio 2017</p>
+<div>El Festival de Teatro de Olite ofrecerá este fin de semana dos funciones accesibles en el marco de su festival.Así, serán , &quot;Sueño&quot; el 22 de julio, con texto y...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/np_f.asisa-f.once_20170720_01.jpg" width="451" height="300" alt="momento de la firma del acuerdo" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/fundacion-asisa-y-fundacion-once-firman-un-acuerdo-de-colaboracion-en-el-ambito">Fundación ASISA y Fundación ONCE firman un acuerdo de colaboración en el ámbito de la...</a></strong>
+<p>21  Julio 2017</p>
+<div>Fundación ASISA y Fundación ONCE han firmado un convenio marco con el fin de que ambas instituciones trabajen juntas en el ámbito de la economía social.El acuerdo ha...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/1._playa_matalascanas._plano_de_accesibilidad_grande.jpg" width="470" height="350" alt="mapa de acceso a las playas de matalascañas" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/esta-semana-en-nuestro-reportaje-de-turismo-viajamos-donana">Esta semana en nuestro reportaje de turismo... viajamos a Doñana</a></strong>
+<p>20  Julio 2017</p>
+<div>Desde Discapnet os invitamos este verano a viajar cada semana a un destino de turismo, haciendo hincapié en sus posibilidades y en su accesibilidad. Ofrecemos...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/entradasonline_0.jpg" width="399" height="280" alt="mujer en silla de ruedas viendo el portatil en su casa" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/las-personas-con-discapacidad-reclaman-su-derecho-comprar-entradas-online">Las personas con discapacidad reclaman su derecho a comprar entradas online</a></strong>
+<p>20  Julio 2017</p>
+<div>La Confederación Española de Personas con Discapacidad Física y Orgánica (COCEMFE) quiere hacer un llamamiento a las plataformas de venta de entradas online y a los...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/emprendimientoconapoyo.jpg" width="484" height="284" alt="asistentes a la presentación" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/fundacion-once-en-colaboracion-con-citi-lanza-un-programa-de-emprendimiento-con">Fundación ONCE, en colaboración con Citi, lanza un programa de emprendimiento con apoyo...</a></strong>
+<p>20  Julio 2017</p>
+<div>Fundación ONCE presentó ayer en Madrid el proyecto EmcA (Emprendimiento con Apoyo), una iniciativa que pretende fomentar el emprendimiento entre personas con...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/goni.jpg" width="600" height="400" alt="Senador PP durante su intervención" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/la-once-y-el-cermi-compareceran-en-la-comision-de-discapacidad-del-senado-en">La ONCE y el CERMI comparecerán en la Comisión de discapacidad del Senado en septiembre</a></strong>
+<p>20  Julio 2017</p>
+<div>En una entrevista realizada en la sede de Servimedia, Goñi afirmó que &quot;las personas con discapacidad y las organizaciones que las representan tendrán en esta...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/down_santiago_camino.jpg" width="400" height="225" alt="peregrinos en Santiago con camisetas amarillas" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/jovenes-de-down-madrid-finalizan-el-camino-de-santiago">Jóvenes de Down Madrid finalizan el Camino de Santiago</a></strong>
+<p>19  Julio 2017</p>
+<div>Los jóvenes, que iniciaron su peregrinaje el pasado 7 de julio en compañía de seis personas de apoyo, llegaron el pasado domingo a Santiago de Compostela tras recorrer...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/garrigues_fonce.jpg" width="400" height="257" alt="momento de la firma" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/fundacion-once-y-garrigues-colaboran-para-fomentar-la-insercion-laboral-de">Fundación ONCE y Garrigues colaboran para fomentar la inserción laboral de personas con...</a></strong>
+<p>19  Julio 2017</p>
+<div>El vicepresidente ejecutivo de Fundación ONCE, Alberto Durán, y el presidente ejecutivo de Garrigues, Fernando Vives, han firmado ayer en Madrid un Convenio Inserta para...</div></div>  </li>
+          <li class="not-act-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/noticias/sinsujeciones.jpg" width="400" height="276" alt="asistentes a la presentación" /></p>    
+          <div class="datos_carr_act"><strong><a href="/actualidad/2017/07/nace-la-plataforma-nacional-sin-sujeciones-para-luchar-contra-el-excesivo-uso-de">Nace la Plataforma Nacional Sin Sujeciones para luchar contra el excesivo uso de...</a></strong>
+<p>19  Julio 2017</p>
+<div>La sede de Fundación ONCE en Madrid ha acogido ayer la presentación de la Plataforma Nacional Sin Sujeciones, que tiene como objetivo luchar contra el excesivo uso de...</div></div>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-areas-tematicas areas-home"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-areas-tematicas view-id-areas_tematicas view-display-id-block_2 areas-tematicas view-dom-id-5344e4162eaf4711fd699163361bcf4d">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row-odd views-row-first area area-950">  
+          <h2><a href="/areas-tematicas/accesibilidad">Accesibilidad</a></h2>    
+          <div class="view view-listado-por-area-tematica view-id-listado_por_area_tematica view-display-id-block view-dom-id-2cda214692ee863e4c2cf720d2643316">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row-odd views-row-first item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/fotolia_34796368_xs281.jpg?itok=S9Ti0DrH" width="272" height="135" alt="" /></p>    
+          <p><a href="http://discapnet.es/areas-tematicas/accesibilidad/transporte-accesible">Transporte accesible</a></p>  </li>
+          <li class="views-row-even item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/moviles_comunicacion.jpg?itok=yP6zBLHM" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/accesibilidad/accesibilidad-de-comunicacion">Comunicación accesible</a></p>  </li>
+          <li class="views-row-odd views-row-last item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/ocio_accesible_desta.jpg?itok=-PpjOA25" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/accesibilidad/ocio-accesible/ocio-accesible">Ocio accesible</a></p>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </li>
+          <li class="views-row-even area area-3612">  
+          <h2><a href="/areas-tematicas/canal-senior">Canal Senior</a></h2>    
+          <div class="view view-listado-por-area-tematica view-id-listado_por_area_tematica view-display-id-block view-dom-id-b1512eb319769fa51a83e3df4a97b6f0">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row-odd views-row-first item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/senior_desta.jpg?itok=Xu8p21c-" width="272" height="135" alt="" /></p>    
+          <p><a href="http://discapnet.es/areas-tematicas/canal-senior/salud-y-mayores">Salud y mayores</a></p>  </li>
+          <li class="views-row-even item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/cuidador.jpg?itok=9WLd8IJ5" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/canal-senior/el-cuidador/cuidado-del-cuidador">Cuidado del cuidador</a></p>  </li>
+          <li class="views-row-odd views-row-last item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/recurso-asistencia.jpg?itok=gZVU9TJs" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/canal-senior/recursos-de-asistencia">Recursos de asistencia</a></p>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </li>
+          <li class="views-row-odd area area-952">  
+          <h2><a href="/areas-tematicas/educacion">Educación</a></h2>    
+          <div class="view view-listado-por-area-tematica view-id-listado_por_area_tematica view-display-id-block view-dom-id-7cca241cf3087c9e25d671d66208a6da">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row-odd views-row-first item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/educacion_especial.jpg?itok=PwalhqIC" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/educacion/educacion-y-discapacidad">Necesidades especiales en educación</a></p>  </li>
+          <li class="views-row-even item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/recursos_formacion.jpg?itok=UwG02qve" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/educacion/formacion-lo-largo-de-la-vida/recursos">Recursos de formación</a></p>  </li>
+          <li class="views-row-odd views-row-last item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/ayudas_becas.jpg?itok=NWxmz0VH" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/educacion/becas-y-ayudas">Becas y ayudas para estudiantes con discapacidad</a></p>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </li>
+          <li class="views-row-even views-row-last area area-3611">  
+          <h2><a href="/areas-tematicas/salud">Salud</a></h2>    
+          <div class="view view-listado-por-area-tematica view-id-listado_por_area_tematica view-display-id-block view-dom-id-7ff5d88a778b6c056fb4d428bed1fa77">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row-odd views-row-first item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/educarensalud.jpg?itok=8PWedAwz" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/salud/educar-en-salud">Educar en Salud</a></p>  </li>
+          <li class="views-row-even item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/cuida-terapia.jpg?itok=EX1FaTme" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/salud/cuida-t">Cuida-T: terapias</a></p>  </li>
+          <li class="views-row-odd views-row-last item-sub-home">  
+          <p class="imagen"><img src="http://www.discapnet.es/sites/default/files/styles/imagen_principal_subhome_areas/public/enfermedades-discap.jpg?itok=x5kB4peV" width="272" height="135" alt="" /></p>    
+          <p><a href="http://www.discapnet.es/areas-tematicas/salud/enfermedades/enfermedades-discapacitantes">¿Qué enfermedades son discapacitantes?</a></p>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="panels-flexible-column panels-flexible-column-discapnet_75_25-1 panels-flexible-column-last col_derecha">
+  <div class="inside panels-flexible-column-inside panels-flexible-column-discapnet_75_25-1-inside panels-flexible-column-inside-last">
+<div class="panels-flexible-region panels-flexible-region-discapnet_75_25-reg_der panels-flexible-region-first panels-flexible-region-last ">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-discapnet_75_25-reg_der-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+<div class="panel-pane pane-block pane-block-33 bloques-home pane-block"  id="lista-areas" >
+  
+        <h2 class="pane-title">
+      Areas temáticas    </h2>
+    
+  
+  <div class="pane-content">
+    <ul id="menu-home-temas"></ul>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-poll-recent bloques-home pane-poll"  >
+  
+        <h2 class="pane-title">
+      Encuesta    </h2>
+    
+  
+  <div class="pane-content">
+    
+<div class="poll">
+  <div class="title">¿Crees que hay  muchas barreras en educación?</div>
+  
+<div class="text">Sí, sobre todo en educación superior /universitaria</div>
+<div class="bar">
+  <div style="width: 24%;" class="foreground"></div>
+</div>
+<div class="percent">
+  24%
+</div>
+
+<div class="text">Hay barreras arquitectónicas en centros de estudios</div>
+<div class="bar">
+  <div style="width: 29%;" class="foreground"></div>
+</div>
+<div class="percent">
+  29%
+</div>
+
+<div class="text">Los materiales didácticos no están adaptados</div>
+<div class="bar">
+  <div style="width: 14%;" class="foreground"></div>
+</div>
+<div class="percent">
+  14%
+</div>
+
+<div class="text">Los profesores cuentan con las personas con discapacidad</div>
+<div class="bar">
+  <div style="width: 19%;" class="foreground"></div>
+</div>
+<div class="percent">
+  19%
+</div>
+
+<div class="text">No, no hay barreras, cada vez estudiar es más accesible</div>
+<div class="bar">
+  <div style="width: 14%;" class="foreground"></div>
+</div>
+<div class="percent">
+  14%
+</div>
+  <div class="total">
+    Total de votos: 21  </div>
+</div>
+<div class="links"><ul class="links"><li class="0 first last"><a href="/participa/encuestas" title="Ver la lista de las encuestas del sitio.">Encuestas anteriores</a></li>
+</ul></div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-banners bloques-home"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-banners view-id-banners view-display-id-block view-dom-id-d0a8595f3f795322703512f819050043">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="banner-grande">  
+          <div><a href="http://www.discapnet.es/areas-tematicas/educacion/educacion-y-discapacidad/recursos/fichas-didacticas" alt="ir a Fichas didácticas descubrir, aprender y jugar. Programa de desarrollo personal y mejora de las habilidades." target="_blank"> <img src="http://www.discapnet.es/sites/default/files/styles/banner_200x200/public/banner1.png?itok=02y1dnpe" width="200" height="200" alt="Fichas didácticas descubrir, aprender y jugar. Programa de desarrollo personal y mejora de las habilidades." /> <span class="element-invisible">Abre en ventana nueva</span></a></div>  </li>
+          <li class="banner-grande">  
+          <div><a href="http://guiauniversitaria.fundaciononce.es/" alt="ir a Guía Universitaria para estudiantes con Discapacidad" target="_blank"> <img src="http://www.discapnet.es/sites/default/files/styles/banner_200x200/public/banner3.png?itok=sRM1iIjq" width="200" height="200" alt="Guía Universitaria para estudiantes con Discapacidad" /> <span class="element-invisible">Abre en ventana nueva</span></a></div>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-banners bloques-home"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-banners view-id-banners view-display-id-block_1 view-dom-id-8ddbc2e77a09492b203da3394653ff95">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="banner-grande">  
+          <div><a href="http://fundacionuniversia.net/inicio.html" alt="ir a Fundación Universia. Por un empleo cualificado." target="_blank"> <img src="http://www.discapnet.es/sites/default/files/styles/banner_200x50/public/banner4.png?itok=bsLRaX24" width="200" height="50" alt="Fundación Universia. Por un empleo cualificado." /> <span class="element-invisible">Abre en ventana nueva</span></a></div>  </li>
+          <li class="banner-grande">  
+          <div><a href="https://www.portalento.es/Paginas/Inicio.aspx" alt="ir a Por talento" target="_blank"> <img src="http://www.discapnet.es/sites/default/files/styles/banner_200x50/public/banner5.png?itok=KN8KrCrt" width="200" height="50" alt="Por talento" /> <span class="element-invisible">Abre en ventana nueva</span></a></div>  </li>
+          <li class="banner-grande">  
+          <div><a href="http://premios.discapnet.es/" alt="ir a Premios Discapnet" target="_blank"> <img src="http://www.discapnet.es/sites/default/files/styles/banner_200x50/public/logo_premios_iv_edicion_negro1_-_copia.png?itok=bvQbJwN0" width="200" height="50" alt="logo premios discapnet IV Edición" /> <span class="element-invisible">Abre en ventana nueva</span></a></div>  </li>
+          <li class="banner-grande">  
+          <div><a href="http://bienal.fundaciononce.es/" alt="ir a VI Bienal de Arte Contemporáneo. Fundación ONCE." target="_blank"> <img src="http://www.discapnet.es/sites/default/files/styles/banner_200x50/public/vi-bienal-arte-contemporaneo-200x50.jpg?itok=A3pBtV96" width="200" height="50" alt="VI Bienal de Arte Contemporáneo. Fundación ONCE." /> <span class="element-invisible">Abre en ventana nueva</span></a></div>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+					
+					
+			</div></div> <!-- /.section, /#content -->
+
+		</div></div> <!-- /#main, /#main-wrapper -->
+
+		<div id="footer-wrapper"><div class="section">  
+			<!-- prefooter --
+			<div id="wrapper-prefooter">
+				<div class="section clearfix">
+					?php print render($page['prefooter']); ? 
+				</div>
+			</div> -->
+
+							<div id="footer" class="clearfix">
+					  <div class="region region-footer">
+    <div id="block-block-36" class="block block-block bloque_pie_menu-1">
+
+    <h2>Quienes somos</h2>
+  
+  <div class="content">
+    <ul><li><a href="/quienes-somos">Qué es Discapnet</a></li>
+<li><a href="/areas-tematicas/turismo-y-cultura/recreacion-y-entrevistas/premios-discapnet">Premios Discapnet</a></li>
+<li><a href="/sites/default/files/areas-tematicas/docs/Normas comunitarias de las plataformas virtuales de Discapnet.pdf">Normas para las plataformas virtuales de Discapnet</a></li>
+</ul>  </div>
+</div>
+<div id="block-menu-block-1" class="block block-menu-block bloque_pie_menu-2">
+
+    <h2>Áreas Temáticas</h2>
+  
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-441 menu-level-1">
+  <ul class="menu"><li class="first leaf has-children menu-mlid-454"><a href="/areas-tematicas/accesibilidad" title="">Accesibilidad</a></li>
+<li class="leaf has-children menu-mlid-455"><a href="/areas-tematicas/salud" title="">Salud</a></li>
+<li class="leaf has-children menu-mlid-456"><a href="/areas-tematicas/nuestros-derechos" title="">Nuestros Derechos</a></li>
+<li class="leaf has-children menu-mlid-457"><a href="/areas-tematicas/educacion" title="">Educación</a></li>
+<li class="leaf has-children menu-mlid-458"><a href="/areas-tematicas/tecnologia-inclusiva" title="">Tecnología inclusiva</a></li>
+<li class="leaf has-children menu-mlid-459"><a href="/areas-tematicas/innovacion-y-empleo" title="">Innovación y empleo</a></li>
+<li class="leaf has-children menu-mlid-1102"><a href="/areas-tematicas/deportes" title="">Deporte</a></li>
+<li class="leaf has-children menu-mlid-469"><a href="/areas-tematicas/turismo-y-cultura" title="">Turismo y cultura</a></li>
+<li class="leaf has-children menu-mlid-460"><a href="/areas-tematicas/canal-senior" title="">Canal Senior</a></li>
+<li class="leaf has-children menu-mlid-2072"><a href="/areas-tematicas/diseno-para-todos" title="">Diseño para todos</a></li>
+<li class="leaf has-children menu-mlid-2068"><a href="/areas-tematicas/latinoamerica" title="">Latinoamérica</a></li>
+<li class="last leaf has-children menu-mlid-2067"><a href="/areas-tematicas/responsabilidad-social" title="">Responsabilidad Social</a></li>
+</ul></div>
+  </div>
+</div>
+<div id="block-menu-block-8" class="block block-menu-block bloque_pie_menu-3">
+
+    <h2>Actualidad</h2>
+  
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-8 menu-name-main-menu parent-mlid-442 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-463"><a href="/actualidad-y-eventos/actualidad" title="">Actualidad</a></li>
+<li class="leaf menu-mlid-462"><a href="/actualidad-y-eventos/el-sector-social-al-dia" title="">El sector social al día</a></li>
+<li class="leaf menu-mlid-800"><a href="/actualidad-y-eventos/noticias-sobre-discapacidad" title="">Noticias sobre Discapacidad</a></li>
+<li class="leaf menu-mlid-464"><a href="http://www.solidaridaddigital.es" title="">Solidaridad Digital</a></li>
+<li class="leaf menu-mlid-465"><a href="http://www.noticiasfacil.es/ES/Paginas/index.aspx" title="">Noticias Fácil</a></li>
+<li class="last leaf menu-mlid-793"><a href="/actualidad-y-eventos/agenda" title="">Agenda</a></li>
+</ul></div>
+  </div>
+</div>
+<div id="block-block-7" class="block block-block bloque_pie_boletines">
+
+    <h2>Nuestros boletines</h2>
+  
+  <div class="content">
+    <p><a href="/nuestros-boletines">Suscribete a nuestros boletines</a> y recibe las novedades de los temas que más te interesen.</p>
+  </div>
+</div>
+<div id="block-block-8" class="block block-block bloque_pie_logos">
+
+    <h2>Colaboradores</h2>
+  
+  <div class="content">
+    <ul id="logos_footer"><li><a href="http://www.once.es/new" target="blank" alt="Abre en ventana nueva"><img alt="logo_ONCE" src="/sites/default/files/logo_once.png" tittle="ONCE" /></a></li>
+<li><a href="http://www.fundaciononce.es/" target="blank" alt="Abre en ventana nueva"><img alt="logo_fundacion_ONCE" src="/sites/default/files/logo_funda_once.png" tittle="fundacion ONCE" /></a></li>
+</ul>  </div>
+</div>
+  </div>
+				</div> <!-- /#footer -->
+					</div></div> <!-- /.section, /#footer-wrapper -->
+
+	</div>
+</div> <!-- /#page, /#page-wrapper -->
+			</body>
+	
+</html>

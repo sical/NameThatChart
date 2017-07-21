@@ -99,7 +99,7 @@
         var text = $("#value").val();
         $("#value").val('');
         if (window.location.href.indexOf('quizz') !== -1) {
-            if(text == 'tree map'){
+            if (text == 'tree map') {
                 note = 4
             }
             else {
@@ -142,17 +142,24 @@
                     if (window.location.href.indexOf('hybrid') !== -1) {
                         window.location = "../hybrid"
                     } else {
-                        $.ajax({
-                            type: "GET",
-                            url: "../getnextimg",
-                            processData: false,
-                            contentType: false,
-                            success: function (data) {
+                        if (window.location.href.indexOf('main') !== -1) {
+                            window.location = "../main"
+                        } else if (window.location.href.indexOf('raw') !== -1) {
+                            window.location = "../raw"
+                        }
+                        else {
+                            $.ajax({
+                                type: "GET",
+                                url: "../getnextimg",
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
 
 
-                                $("#imgdisp").attr("src", data);
-                            }
-                        });
+                                    $("#imgdisp").attr("src", data);
+                                }
+                            });
+                        }
                     }
                 }
             });
@@ -173,17 +180,25 @@
         if (window.location.href.indexOf('hybrid') !== -1) {
             window.location = "../hybrid"
         } else {
-            $.ajax({
-                type: "GET",
-                url: "../getnextimg",
-                processData: false,
-                contentType: false,
-                success: function (data) {
+            if (window.location.href.indexOf('main') !== -1) {
+                window.location = "../main"
+            } else if (window.location.href.indexOf('raw') !== -1) {
+                window.location = "../raw"
+            }
+            else {
+
+                $.ajax({
+                    type: "GET",
+                    url: "../getnextimg",
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
 
 
-                    $("#imgdisp").attr("src", data);
-                }
-            });
+                        $("#imgdisp").attr("src", data);
+                    }
+                });
+            }
         }
 
     });
@@ -191,24 +206,25 @@
 
     $("#value").on('input', function () {
 
-         if (window.location.href.indexOf('quizz') !== -1) {
+        if (window.location.href.indexOf('quizz') !== -1) {
 
-         }else {
-             if ($("#value").val() != undefined) {
-                 if ($("#value").val().length == 1 && started) {
-                     started = false;
-                     firm = new FormData();
-                     firm.append("action", "started typing");
-                     $.ajax({
-                         type: "POST",
-                         url: "../logaction",
-                         processData: false,
-                         contentType: false,
-                         data: firm
-                     });
-                 }
-             }
-         }
+        } else {
+
+            if ($("#value").val() != undefined) {
+                if ($("#value").val().length == 1 && started) {
+                    started = false;
+                    firm = new FormData();
+                    firm.append("action", "started typing");
+                    $.ajax({
+                        type: "POST",
+                        url: "../logaction",
+                        processData: false,
+                        contentType: false,
+                        data: firm
+                    });
+                }
+            }
+        }
     });
 
     window.onkeydown = function (e) {

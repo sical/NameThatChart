@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en" class="direction-ltr" style="direction: ltr;" prefix="og: http://ogp.me/ns#"><head><title>Telligent Community</title>
+<meta name="GENERATOR" content="Telligent Community 10" /><meta property="og:site_name" content="Telligent Community" /><link rel="alternate" type="application/rss+xml" title="Anonymous&#39;s Activities (RSS 2.0)" href="/members/anonymous/activities/rss"  /><link rel="alternate" type="application/rss+xml" title="Anonymous&#39;s Groups Activities (RSS 2.0)" href="/members/anonymous/activities/groupsrss"  /><link rel="alternate" type="application/rss+xml" title=" (RSS 2.0)" href="https://community.telligent.com/rss"  /><script type ="text/javascript" src="/utility/jquery/jquery.min.js?_=636361027480000000"></script><script type ="text/javascript" src="/utility/jquery/telligent.glow.min.js?_=636361027480000000"></script><script type="text/javascript" src="/utility/jquery/jquery.validate.min.js?_=636361027480000000"></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.extend(jQuery.validator.messages,{required:'This field is required.',remote:'Please fix this field.',date:'Please enter a valid date.',dateISO:'Please enter a valid date (ISO).',number:'Please enter a valid number.',digits:'Please enter only digits.',creditcard:'Please enter a valid credit card number.',equalTo:'Please enter the same value again.',accept:'Please enter a value with a valid extension.',maxlength:jQuery.validator.format('Please enter no more than {0} characters.'),minlength:jQuery.validator.format('Please enter at least {0} characters.'),rangelength:jQuery.validator.format('Please enter a value between {0} and {1} characters long.'),range:jQuery.validator.format('Please enter a value between {0} and {1}.'),max:jQuery.validator.format('Please enter a value less than or equal to {0}.'),min:jQuery.validator.format('Please enter a value greater than or equal to {0}.')}); } catch(e) { };
+// ]]>
+</script><script type="text/javascript" src="/utility/jquery/telligent.evolution.min.js?_=636361027480000000"></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.telligent.evolution.site.configure({baseUrl:'\/',isRemote:false,remoteUrlEncodePattern:'',quoteText:'Quote',datePattern:{
+	pattern: '<Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec> <1-31> <0001-9999>',
+    yearIndex: 2,
+    monthIndex: 0,
+    dayIndex: 1,
+    hourIndex: -1,
+    minuteIndex: -1,
+    amPmIndex: -1,
+    parseDateOnLoad: true
+},dateTimePattern:{
+	pattern: '<Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec> <1-31> <0001-9999> <1-12>:<00-59> <AM,PM>',
+    yearIndex: 2,
+    monthIndex: 0,
+    dayIndex: 1,
+    hourIndex: 3,
+    minuteIndex: 4,
+    amPmIndex: 5,
+    parseDateOnLoad: true
+},timePattern:{
+	pattern: '<1-12>:<00-59> <AM,PM>',
+    yearIndex: -1,
+    monthIndex: -1,
+    dayIndex: -1,
+    hourIndex: 0,
+    minuteIndex: 1,
+    amPmIndex: 2,
+    parseDateOnLoad: true
+},monthNames:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],dayNames:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],authorizationCookieName:'AuthorizationCookie',defaultErrorMessage:'An error occurred.  Please try again or contact your administrator.',defaultMultiErrorMessagePrefix:'The following errors occurred:  ',silverlightFileUploadEnabled:true,accessingUserId:1850,accessingUserIsSystemAccount:true,reflowBreakpoint:670,dateMinuteInFutureFormat:'in a few seconds',dateMinutesInFutureFormat:'in {0} minutes',dateHourInFutureFormat:'in over an hour',dateHoursInFutureFormat:'in {0} hours',dateDayInFutureFormat:'in {0} day',dateDaysInFutureFormat:'in {0} days',dateMonthInFutureFormat:'in {0} month',dateMonthsInFutureFormat:'in {0} months',dateYearInFutureFormat:'in over {0} year',dateYearsInFutureFormat:'in over {0} years',dateNowAgoFormat:'now',dateMinuteAgoFormat:'a few seconds ago',dateMinutesAgoFormat:'{0} minutes ago',dateHourAgoFormat:'{0} hour ago',dateHoursAgoFormat:'{0} hours ago',dateDayAgoFormat:'{0} day ago',dateDayAgoFormat:'{0} days ago',dateMonthAgoFormat:'{0} month ago',dateMonthsAgoFormat:'{0} months ago',dateYearAgoFormat:'over {0} year ago',dateYearsAgoFormat:'over {0} years ago'});
+jQuery.telligent.evolution.imagePreview.configure({zoomIn:'Zoom in',zoomOut:'Zoom out',close:'Close'});
+jQuery.extend($.fn.evolutionUserFileTextBox.defaults,{removeText:'Remove',selectText:'Select\/Upload...',noFileText:'No File Selected'});
+jQuery.telligent.evolution.navigationConfirmation.configure({message:'Unless you save before leaving this page, you will lose any changes you have made.'});
+jQuery.telligent.evolution.systemNotifications.configure({explicitPanelUrl:'#_cptype=panel&_cpcontexttype=Explicit&_cppanelid=994a7020-02f3-4fc2-ba7d-be3f0febf9f9&viewnotification=1',notificationText:'System Notification',reviewText:'Click to review and resolve.',andMoreText:' (plus {0} more)'});
+jQuery.telligent.evolution.validation.registerExtensions({passwordInvalidMessage:'Password contains invalid chars ...',passwordRegex:'^(.*)$',emailInvalidMessage:'Your email address is invalid.',emailRegex:'^[!$&*\\-=^`|~#%\'\\.\"+\/?_{}\\\\a-zA-Z0-9 ]+@[\\-\\.a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)+$',usernameInvalidMessage:'Your sign in name does not meet the requirements for this site.',usernameRegex:'^[a-zA-Z0-9_\\- @#\\.]+$',emailsInvalidMessage:'One or more emails is invalid',urlInvalidMessage:'URL not in correct format',urlRegex:'^(?:(?:http|https|mailto|ftp|mms):|\/|#|~\/|data:image\/(?:png|gif|jpe?g);base64,)'});
+jQuery.extend(jQuery.fn.evolutionLike.defaults,{likeText:'Like',unlikeText:'Unlike',modalTitleText:'People who like this',modalShowMoreText:'Show More',whoLikesOtherText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> likes this',whoLikesOtherTwoText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">1 other<\/span> like this',whoLikesOtherMultipleText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">{count} others<\/span> like this',whoLikesAccessingText:'You like this',whoLikesAccessingTwoText:'You and <span class=\"who-likes\">1 other<\/span> like this',whoLikesAccessingMultipleText:'You and <span class=\"who-likes\">{count} others<\/span> like this'});
+jQuery.extend(jQuery.fn.evolutionInlineTagEditor.defaults,{editButtonText:'Edit tags',selectTagsText:'Select tags',saveTagsText:'Save',cancelText:'Cancel'});
+jQuery.extend(jQuery.fn.evolutionStarRating.defaults,{titles:['Terrible','Poor','Fair','Average','Good','Excellent'],ratingMessageFormat:'Average rating: {rating} out of {count} ratings.'});
+jQuery.extend(jQuery.fn.evolutionModerate.defaults,{moderateLinkText:'moderate',reportLinkText:'Report as abusive',reportedLinkText:'Reported as abusive',reportedNotificationMessageText:'{NAME}\'s post has been reported. <strong>Thank you for your feedback.<\/strong>'});
+jQuery.extend(jQuery.fn.evolutionBookmark.defaults,{deleteBookmarkText:'Unbookmark {content_type_name}',addBookmarkText:'Bookmark this {content_type_name}',processingText:'...'});
+jQuery.extend($.fn.evolutionCodeEditor.defaults,{editorUrl:'\/cfs-file\/__key\/system\/ace\/ace.js'});
+jQuery.extend(jQuery.telligent.evolution.ui.components.forumvotes.defaults,{modalTitleTextThread:'People who had this question',modalTitleTextReply:'People helped by this answer',noVotesText:'No Votes',modalShowMoreText:'More'});
+jQuery.extend(jQuery.telligent.evolution.ui.components.forumqualityvotes.defaults,{modalTitleText:'People who voted on this thread',tipTextThread:'View Voters',noVotesText:'No Votes',upVoteText:'Vote Up',downVoteText:'Vote Down',logintext:'Login to vote on this thread',modalShowMoreText:'More'});
+jQuery.extend(jQuery.fn.evolutionFeature.defaults,{editFeatureText:'Edit Feature',addFeatureText:'Feature ',processingText:'...'});
+} catch(e) { };
+// ]]>
+</script><script type="text/javascript">jQuery(function($) {
+	$.telligent.evolution.messaging.subscribe('userActionFollowToggle', function(data) {
+		var e = $(data.target);
+		var userId = e.data('userid'), accessingUserId = e.data('accessinguserid'), v = e.data('follow');
+		e.html('...');
+		if (v) {
+			$.telligent.evolution.post({
+				url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{FollowerId}/following.json',
+				data: { FollowerId: accessingUserId, FollowingId: userId },
+				dataType: 'json',
+				success: function(response) { e.html('Unfollow').data('follow', false); },
+				error: function(response) {  e.html('Follow').data('follow', true); }
+			});
+		} else {
+			$.telligent.evolution.del({
+				url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{FollowerId}/following/{FollowingId}.json',
+				data: { FollowerId: accessingUserId, FollowingId: userId },
+				dataType: 'json',
+				success: function(response) { e.html('Follow').data('follow', true); },
+				error: function(response) {  e.html('Unfollow').data('follow', false); }
+			});
+		}
+	});
+});</script><script type="text/javascript">jQuery(function($) {
+	$.telligent.evolution.messaging.subscribe('userActionFriendshipToggle', function(data) {
+		var e = $(data.target);
+		var userId = e.data('userid'), accessingUserId = e.data('accessinguserid'), v = parseInt(e.data('friendship'));
+		var t = e.html();
+		e.html('...');
+		if (v == 0) {
+				e.html(t);
+				$.glowModal('/user/requestfriend?UserId=' + userId + '', {width:670,height:390});
+		} else if (v == 3) {
+				$.telligent.evolution.post({
+					url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{RequestorId}/friends.json',
+					data: { RequestorId: accessingUserId, RequesteeId: userId, RequestMessage: '<p>Hi! I\'m a member of the community at Telligent&nbsp;too and would like to connect with you.<\/p> '},
+					dataType: 'json',
+					success: function(response) { window.location = window.location; },
+					error: function(response) {  e.html(t); }
+				});
+		} else if (v == 1 || v == 2 || v == 4) {
+			if (v == 4 || (v == 1 && window.confirm('Are you sure you want to cancel this friendship request?')) || (v == 2 && window.confirm('Are you sure you want to unfriend this person?'))) {
+				$.telligent.evolution.del({
+					url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{RequestorId}/friends/{RequesteeId}.json',
+					data: { RequestorId: accessingUserId, RequesteeId: userId },
+					dataType: 'json',
+					success: function(response) { window.location = window.location; },
+					error: function(response) {  e.html(t); }
+				});
+			} else { e.html(t); }
+		}
+	});
+});</script><script type="text/javascript">
+(function($){
+$.extend($.fn.evolutionUpDownVoting.defaults,{voteDownMessage:'Vote against this idea',voteUpMessage:'Vote for this idea',loginMessage:'Sign in to vote on ideas',noPermissionMessage:'You do not have permission to vote for this idea',notGroupMemberMessage:'Join this group to vote on this idea',deleteMessage:'Remove your vote for this idea',readOnlyMessage: 'Voting on this idea has been disabled',switchToDownVoteMessage: 'Vote against this idea instead of for it',switchToUpVoteMessage: 'Vote for this idea instead of against it' });}(jQuery));
+</script>
+<script type="text/javascript">(function($){ $.telligent.evolution.media.defaults.endpoint = 'https://community.telligent.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.FileViewerEndpoint%2C%20Telligent.Evolution.Platform'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.preview.defaults.endpoint = 'https://community.telligent.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.WebPreviewEndpoint%2C%20Telligent.Evolution.Platform'; }(jQuery));</script><script type="text/javascript">(function($){ $.fn.evolutionComposer.plugins.mentions.defaults.mentionablesEndpoint = 'https://community.telligent.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.MentionablesEndpoint%2C%20Telligent.Evolution.Platform'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.language.defaults.dateEndpoint = 'https://community.telligent.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.DateFormattingEndpoint%2C%20Telligent.Evolution.Platform'; }(jQuery));</script><script type="text/javascript">(function($){ $.fn.evolutionUserFileTextBox.defaults.endpoint = 'https://community.telligent.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.UserFileTextBoxEndpoint%2C%20Telligent.Evolution.Platform'; }(jQuery));</script><script type="text/javascript">
+if (window === window.top) {
+	jQuery(document).ready(function(j){
+		var redirected = false;
+		var ensureLoggedIn = function(){
+			if (!redirected) {
+				var hashData = jQuery.telligent.evolution.url.hashData();
+				if (hashData._cptype){
+					redirected = true;
+					window.location = jQuery.telligent.evolution.url.modify({
+						url:'/login?ReturnUrl=%2F',
+						query: {
+							ReturnUrl:window.location+''
+						},
+						hash: ''
+					});
+				}
+			}
+		};
+		jQuery(window).on('hashchange', function(){
+			ensureLoggedIn();
+		});
+		ensureLoggedIn()
+	});
+}
+</script><script type="text/javascript" src="https://community.telligent.com/WebResource.axd?d=BaUCdwW-8h8BwruL6fJZv5N-Qq-siFxpOSYaQn5ZkNwO3fTyCcWFJMtn7bV_cNNGzJ6UUKFeMkk3ZIkxub7BdU3qt777kPDmbfXh1_Cv0m9a2ruekmFbZ6xbfwWvVvqF6efnMcQJ7Bbr7rQnm33rj_0Yg-xqXgGGVHmF36ivBA9D-2X6RsPHkihQ_lM-otbtGeDmevi5AzsxqRWI7gYlSA2&t=636215389180000000"></script><link rel="stylesheet" href="https://community.telligent.com/cfs-filesystemfile/__key/system/h-00000000155e5461-https-communitytelligentcom-443-css/platform.less?_=636361859583935846" media="screen" />
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" type="image/ico" href="https://community.telligent.com/cfs-filesystemfile/__key/themefiles/s-3fc3f82483d14ec485ef92e206116d49-files/favicon.ico?_=636361900119332094" />
+<link rel="apple-touch-icon-precomposed" href="https://community.telligent.com/cfs-filesystemfile/__key/themefiles/s-3fc3f82483d14ec485ef92e206116d49-files/favicon152.png?_=636361900118974271">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="https://community.telligent.com/cfs-filesystemfile/__key/themefiles/s-3fc3f82483d14ec485ef92e206116d49-files/favicon144.png?_=636361900118817791">
+<meta name="google-site-verification" content="xsPzusHsvGRC6ObMHbZE5ShvmTU8Rp4UsmNQVIbLKPM" />
+        <link type="text/css" rel="stylesheet" href="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-stylesheetfiles-https-communitytelligentcom-443/screen.less?_=636361900209452099" /><link type="text/css" rel="stylesheet" href="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-stylesheetfiles-https-communitytelligentcom-443/print.css?_=636361900210077123" media="print" /><link type="text/css" rel="stylesheet" href="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-stylesheetfiles-https-communitytelligentcom-443/handheld.less?_=636361900213046214" media="only screen and (max-width: 670px)" /><link type="text/css" rel="stylesheet" href="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-stylesheetfiles-https-communitytelligentcom-443/tablet.less?_=636361900214764740" media="only screen and (min-device-width: 671px) and (max-device-width: 1024px) and (orientation: landscape), only screen and (min-device-width: 671px) and (max-device-width: 1024px) and (orientation: portrait)" /><link type="text/css" rel="stylesheet" href="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-stylesheetfiles-https-communitytelligentcom-443/targetprocess.less?_=636361900187183589" /><link type="text/css" rel="stylesheet" href="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-stylesheetfiles-https-communitytelligentcom-443/analyticswidget.css?_=636361900186715081" /><script type="text/javascript" src="/cfs-filesystemfile/__key/themefiles/h-00000000155e6bf8-s-3fc3f82483d14ec485ef92e206116d49-jsfiles-https-communitytelligentcom-443/theme.js?_=636361900185772175"></script>
+          <link type="text/css" rel="stylesheet" href="/dynamic-style?ThemeTypeId=0c647246-6735-42f9-875d-c8b991fe739b&amp;ThemeContextId=00000000-0000-0000-0000-000000000000&amp;PreviewKey=0&amp;Theme=3fc3f82483d14ec485ef92e206116d49&amp;_=-321705571" media="screen,print" />
+        <meta name="msvalidate.01" content="AD68A0A006A03D3DA4819281E019287B" />
+<meta property="fb:app_id" content="221453704563240">
+
+
+
+
+</head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d7fc497f21","applicationID":"45846834,45849624","transactionName":"MgEBYBNZW0dYVkNQWwtLImcxFw==","queueTime":0,"applicationTime":107,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><body spellcheck="true" ><form name="ctl01" method="post" action="./" id="ctl01">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="gkbP5E68beALuiQfJ+l9Hbd1yQ5rpY/1Ox6QEQYlMFK1lJX31RTlBhR6IZBthLRLvz7SfNs93cPx0utciF7Dug==" />
+
+
+<script src="/WebResource.axd?d=eKTiq9T8TyaiaiunFSxIYV8DFlYPMvJJql8NN39W5-VaTXsiPJrEtIO9_XVJ9nZS3defPfs0qCu18XOg5qLCioT3wKrZSZQ1BhhqP5Y6SNyfhPX8swj-YhTHszXuC7EZOSOM0RQO5Y-pTPTYiLW0GTq1WvlNepVYcfsTv7Jv30oOfOokJCEpVstDeqjFVRRCpSt37nenXNcbUnvuQZopjmr0U4bXPkFff9bqHXHBce01&amp;t=636360855120000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=3KNc1qD2td3njStYBL12vC82bSDcnTYdo43vG7vz3wrxatjDS_oKuBgLRdIbIU03Nm5tAPC-yntA9VyXdA9Xq1BVRpfjE_ym3GHFTqKuXZOD_YjZjz9dkLf28ZFCPgkTjY6WmNESnWKgnWsBZ5ULdjLuJ2UWdJHMMSHtjZlxpPo1&amp;t=636118085880000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=XZtWz8xG5Xixtjrd1JSvSQGbx7RYMc7tfUL1I0W8o9c9gFAJ0Ot_s_oL0xscfAEBptN6MAAcjnT1WAoTvRVTOnZMJodmZ84s_rc-W6NMybEz7Mm1dkMXCLVt11aK6Di06aTDWQ_UskY2Io_zggAeV-HC90Q2WXU0bo5wlIoFTkOfyl-Pd5AnPHH7ovDEJVI20&amp;t=636118085880000000" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C21772F6" /><div class="header-fragments-header"></div>
+<div class="single-column header-fragments evolution-reflow-container" data-related="ctl02_ctl01_page" id="ctl02_ctl01_singlecolumn" style = "display:none"></div><div class="header-fragments evolution-reflow-container" data-related="ctl02_ctl01_singlecolumn" id="ctl02_ctl01_page" ><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content header-top-content" id="ctl02_ctl01_layout"><div class="layout-region header" id="ctl02_ctl01_header">
+<div class="layout-region-inner header"><div class="content-fragment site-banner no-wrapper responsive-1 	all
+" id="header-789" data-reflow="ctl02_ctl01_header,ctl02_ctl01_singlecolumn,1,0,0">
+<div class="content-fragment-content">
+
+
+
+
+
+	
+				
+		
+				  
+		  
+		
+		
+		
+					
+
+
+	
+<style>
+.header-fragments .layout .header-top-content .layout-region.header {
+	background-color: #263238;
+}
+
+.banner.site fieldset ul.field-list li.field-item .field-item-input input {
+	background-color: #3b4d56;
+}
+
+
+.header-fragments .header-top-content .layout-region.header .banner.site .navigation-list ul a,
+.header-fragments .header-top-content .layout-region.header .banner.site .navigation-list ul a.active,
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul li .field-item-input input,
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul li .field-item-input input.active,
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input:after,
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input.active,
+.header-fragments .header-top-content .layout-region.header .content-fragment.navigation-custom .navigation-list[data-direction='horizontal'] a {
+	color: #90A4AE;
+}
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input::placeholder {
+	color: #90A4AE;
+}
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input:-ms-input-placeholder {
+	color: #90A4AE;
+}
+.header-fragments .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input::-ms-input-placeholder {
+	color: #90A4AE;
+}
+
+.header-fragments:hover .header-top-content .layout-region.header .banner.site .navigation-list ul a,
+.header-fragments:hover .header-top-content .layout-region.header .banner.site .navigation-list ul a.active,
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul li .field-item-input input,
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul li .field-item-input input.active,
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input:after,
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input.active,
+.header-fragments .header-top-content .layout-region.header .content-fragment.navigation-custom .navigation-list[data-direction='horizontal'] a.subnav-open,
+.header-fragments .header-top-content .layout-region.header .content-fragment.navigation-custom .navigation-list[data-direction='horizontal'] a.links-expanded,
+.header-fragments:hover .header-top-content .layout-region.header .content-fragment.navigation-custom .navigation-list[data-direction='horizontal'] a {
+	color: #ffffff;
+}
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input::placeholder {
+	color: #ffffff;
+}
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input:-ms-input-placeholder {
+	color: #ffffff;
+}
+.header-fragments:hover .header-top-content .layout-region.header .banner.site fieldset ul.field-list li.field-item .field-item-input input::-ms-input-placeholder {
+	color: #ffffff;
+}
+.header-fragments .header-top-content .layout-region.header .content-fragment.navigation-custom .navigation-list[data-direction='horizontal'] a.selected:after {
+	background-color: #ffffff;
+}
+
+
+
+
+.single-column .banner.site {
+	background-color: #263238;
+}
+.single-column .banner.site > .navigation-list.handheld ul a,
+.single-column .banner.site .container.handheld .user-links ul a {
+	color: #90A4AE;
+}
+.single-column .banner.site > .navigation-list.handheld ul a.active,
+.single-column .banner.site .container.handheld .user-links ul a.active {
+	color: #ffffff;
+}
+</style>
+
+
+<div class="banner site  all   with-site-navigation " id="header-789_banner">
+			<div class="avatar">
+														<a href="https://community.telligent.com/" title="Home" >
+					<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/widgetcontainerfiles-3fc3f82483d14ec485ef92e206116d49-s-AAAAAAAAAAAAAAAAAAAAAA-header-header/telligent_2D00_light_2D00_on_2D00_dark.png_2D00_250x88.png?_=636358968763679838" border="0px" style="max-width:125px;max-height:44px;" />
+				</a>
+					</div>
+
+					<h1 class="name hidden">Telligent Community</h1>
+		
+								<div class="navigation-list site-links" id="header-789_bannerSiteLinks">
+				<ul>
+					<li class="navigation-list-item">
+						<a href="#"
+																						class="site-navigation group ui-tip"
+													id="header-789_site">Site</a>
+					</li>
+				</ul>
+			</div>
+						<fieldset class="search" id="header-789_searchFields">
+			<ul class="field-list">
+				<li class="field-item">
+					<span class="field-item-description hidden">
+						<label>Search</label>
+					</span>
+					<span class="field-item-input">
+						<input autocomplete="off" type="search" placeholder="Search" id="header-789_Search" value=""   />
+					</span>
+				</li>
+			</ul>
+		</fieldset>
+								<div class="navigation-list user-links" id="header-789_bannerLinks">
+					<ul>
+																																																																				<li class="navigation-list-item">
+								<a href="/login?ReturnUrl=%2F" class="internal-link user with-icon ui-tip" title="Join or sign in">User</a>
+							</li>
+																																																												</ul>
+				</div>
+						<div class="navigation-list handheld">
+			<ul>
+				<li class="navigation-list-item">
+					<a href="#" class="site" id="header-789_handheldSiteLinksLink" >Site</a>
+				</li>
+				<li class="navigation-list-item">
+					<a href="#" class="search" id="header-789_handheldSearchFieldsLink">Search</a>
+				</li>
+				<li class="navigation-list-item">
+																		<a href="/login?ReturnUrl=%2F" class="user">User</a>
+															</li>
+			</ul>
+		</div>
+		<div class="container handheld">
+			<fieldset class="search" style="display:none" id="header-789_handheldSearchFields"></fieldset>
+			<div class="user-links" style="display:none" id="header-789_handheldBannerLinks"></div>
+		</div>
+	</div>
+
+
+			</div>
+<div class="content-fragment-footer"></div>
+</div>
+</div>
+</div>
+<div class="layout-region content" id="ctl02_ctl01_content">
+<div class="layout-region-inner content"><div class="content-fragment navigation-custom no-wrapper responsive-1" id="header-790" data-reflow="ctl02_ctl01_content,ctl02_ctl01_singlecolumn,1,1,1">
+<div class="content-fragment-content">
+
+
+
+	
+
+
+			<div class="ui-links navigation-list links"
+			id="header-790_container"
+			data-minlinks="0"
+			data-direction="horizontal"
+			data-maxlinks="7">
+			<ul class="navigation-list">
+						<li class="navigation-list-item">
+					<a href="http://telligent.com" >Telligent.com</a>
+																
+				</li>
+						<li class="navigation-list-item">
+					<a href="/blog/" >News &amp; Updates</a>
+																
+				</li>
+						<li class="navigation-list-item">
+					<a href="/community/" >Forums</a>
+																
+				</li>
+						<li class="navigation-list-item">
+					<a href="/training/" >Training</a>
+																
+				</li>
+						<li class="navigation-list-item">
+					<a href="/developers/" >API Documentation</a>
+																
+				</li>
+						<li class="navigation-list-item">
+					<a href="/documentation/" >User Documentation</a>
+																
+				</li>
+						<li class="navigation-list-item">
+					<a href="/g" >All Groups</a>
+																
+				</li>
+					<li class="navigation-list-item">
+					<a href="#" data-more>More</a>
+				</li>
+				<li class="navigation-list-item">
+					<a href="#" data-cancel>Cancel</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div id="header-791"></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="header-fragments-footer"></div><div class="single-column content-fragment-page common-home evolution-reflow-container" data-related="ctl02_ctl02_page" id="ctl02_ctl02_singlecolumn" style = "display:none"></div><div class="content-fragment-page common-home evolution-reflow-container" data-related="ctl02_ctl02_singlecolumn" id="ctl02_ctl02_page" ><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content header-top-content-left-sidebar-right" id="ctl02_ctl02_layout"><div class="layout-region header" id="ctl02_ctl02_header">
+<div class="layout-region-inner header"><div class="content-fragment featured-content-carousel no-wrapper responsive-1 
+
+	foreground-page-width
+	" id="fragment-39826" data-reflow="ctl02_ctl02_header,ctl02_ctl02_singlecolumn,1,0,0">
+<div class="content-fragment-content">
+
+
+
+
+
+<style>
+.content-fragment.featured-content-carousel .slider-container {
+			height: 416px;
+	}
+
+.content-fragment.featured-content-carousel.full-width {
+	height: 416px;
+}
+
+.content-fragment.featured-content-carousel .slider-container .slider .content-list.content > .content-item > .content {
+			justify-content: center;
+				align-items: center;
+		text-align: center;
+	
+	}
+</style>
+
+
+<div class="slider-container">
+	<div class="slider">
+		<ul class="content-list content">
+										
+<li class="content-item    with-url " style="
+		"
+			data-featureurl="https://community.telligent.com/blog/b/announcements/posts/telligent-community-10-now-available"
+		data-foreground="#FFF"
+	>
+			<div class="feature-photo" style="
+									background-image: url(/resized-image/__size/2080x832x2/__key/widgetcontainerfiles/3fc3f82483d14ec485ef92e206116d49-s-AAAAAAAAAAAAAAAAAAAAAA-page-1common_2D00_home/Telligent_5F00_Product_5F00_launch_5F00_1046x417_5F00_light.png);
+					">
+		</div>
+		<div class="content">
+
+		
+		
+		
+	</div>
+</li>
+
+
+							</ul>
+	</div>
+
+	</div>
+
+<style>
+.content-fragment.featured-content-carousel .slider-container .slider .content-list.content {
+	width: 100%;
+}
+</style>
+
+		</div>
+<div class="content-fragment-footer"></div>
+</div>
+</div>
+</div>
+<div class="layout-region right-sidebar" id="ctl02_ctl02_right-sidebar">
+<div class="layout-region-inner right-sidebar"><div class="content-fragment raw-content no-wrapper responsive-hidden" id="fragment-39827" data-reflow="ctl02_ctl02_right-sidebar,ctl02_ctl02_singlecolumn,10000,5,1">
+<div class="content-fragment-content">
+    <div id="fragment-39827_content" class=" user-defined-markup" style="">
+        <!-- Trial button -->
+<a style="border: none;" href="http://www.verint.com/registration/scom_global_17_scom_in_tlgt_60daytrial.html">
+    <img src="https://community.telligent.com/cfs-file/__key/widgetcontainerfiles/3fc3f82483d14ec485ef92e206116d49-s-AAAAAAAAAAAAAAAAAAAAAA-page-1common_2D00_home/button_2D00_trial_2D00_v10_2D00_230x58.png" alt="Try Telligent Community" /></a>
+<!-- Free Edition button -->
+<a style="border: none;" href="http://www.verint.com/registration/scom_global_17_scom_in_tlgt_freeedition.html">
+    <img src="https://community.telligent.com/cfs-file/__key/widgetcontainerfiles/3fc3f82483d14ec485ef92e206116d49-s-AAAAAAAAAAAAAAAAAAAAAA-page-1common_2D00_home/button_2D00_free_2D00_v10_2D00_230x59.png" alt="Telligent Community Free Edition" /></a><div style="clear:both;"></div>
+    </div>
+</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div class="content-fragment leaderboard no-wrapper with-spacing responsive-hidden" id="fragment-39828" data-reflow="ctl02_ctl02_right-sidebar,ctl02_ctl02_singlecolumn,10000,5,2">
+<div class="content-fragment-content">
+
+
+
+
+	
+		
+	<ul class="content-list simple leaderboards">
+		<li class="content-item simple leaderboard">
+							<h3><a href="/community/leaders/top_contributors">Most helpful members</a></h3>	
+
+	<ul class="leaders">
+		<li class="row leader-header">
+			<div class="column rank-column">Rank</div>					
+			<div class="column name-column">Name</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">1 </div>
+			<div class="column name-column">
+									<a href="/members/lucasrd" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-05-88-53/4TRQ9W6UOILA.png_2D00_35x35x2.png?_=636187005745213533" alt="Luke D" />
+					</a>
+					<a href="/members/lucasrd" class="internal-link view-user-profile username">
+						Luke D
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">2 </div>
+			<div class="column name-column">
+									<a href="/members/ruckus" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-27-04-28/4U0OQM2MSUNM.jpg_2D00_35x35x2.jpg?_=636241361254577612" alt="ruckus" />
+					</a>
+					<a href="/members/ruckus" class="internal-link view-user-profile username">
+						ruckus
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">3 </div>
+			<div class="column name-column">
+									<a href="/members/kgroneman" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-27-82-46/4U0ARN6E5PRI.jpg_2D00_35x35x2.jpg?_=636201946540038308" alt="kgroneman" />
+					</a>
+					<a href="/members/kgroneman" class="internal-link view-user-profile username">
+						kgroneman
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">4 </div>
+			<div class="column name-column">
+									<a href="/members/silviu" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/system-images/anonymous.gif_2D00_35x35x2.png?_=636356684791320972" alt="Silviu" />
+					</a>
+					<a href="/members/silviu" class="internal-link view-user-profile username">
+						Silviu
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">5 </div>
+			<div class="column name-column">
+									<a href="/members/matei" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/system-images/anonymous.gif_2D00_35x35x2.png?_=636356684791320972" alt="Matei" />
+					</a>
+					<a href="/members/matei" class="internal-link view-user-profile username">
+						Matei
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">6 </div>
+			<div class="column name-column">
+									<a href="/members/jessedringoli" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-24-12-99/4TQUSP3N1EHS.jpg_2D00_35x35x2.jpg?_=636245824767259327" alt="JesseDringoli" />
+					</a>
+					<a href="/members/jessedringoli" class="internal-link view-user-profile username">
+						JesseDringoli
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">7 </div>
+			<div class="column name-column">
+									<a href="/members/vishnualc" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-27-81-70/4TZYE4TYLHOA.jpg_2D00_35x35x2.jpg?_=636280991860558319" alt="VishnuALC" />
+					</a>
+					<a href="/members/vishnualc" class="internal-link view-user-profile username">
+						VishnuALC
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">8 </div>
+			<div class="column name-column">
+									<a href="/members/drnas" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-27-78-43/4U1P8C6JWKMP.jpg_2D00_35x35x2.jpg?_=636346676829035265" alt="drnas" />
+					</a>
+					<a href="/members/drnas" class="internal-link view-user-profile username">
+						drnas
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">9 </div>
+			<div class="column name-column">
+									<a href="/members/dsinde" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/system-images/anonymous.gif_2D00_35x35x2.png?_=636356684791320972" alt="dsinde" />
+					</a>
+					<a href="/members/dsinde" class="internal-link view-user-profile username">
+						dsinde
+					</a>
+								
+			</div>					
+					</li>
+		<li class="row leader-item ">
+			<div class="column rank-column">9 </div>
+			<div class="column name-column">
+									<a href="/members/travisl" class="internal-link view-user-profile avatar">
+						<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-27-77-61/4TYLFK69HAHR.jpg_2D00_35x35x2.jpg?_=636258194267487182" alt="TravisL" />
+					</a>
+					<a href="/members/travisl" class="internal-link view-user-profile username">
+						TravisL
+					</a>
+								
+			</div>					
+					</li>
+	</ul>
+
+					</li>
+	</ul>
+			</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div class="content-fragment blog-post-list top-border with-spacing with-header responsive-hidden" id="fragment-39829" data-reflow="ctl02_ctl02_right-sidebar,ctl02_ctl02_singlecolumn,10000,5,3">
+<div class="content-fragment-header">
+Recent blog posts
+		</div>
+<div class="content-fragment-content">
+
+
+
+	
+
+
+			<div class="avatar-list">
+		<ul class="content-list">
+				
+
+<li class="content-item">
+	<div class="author">
+		<div class="avatar">
+							<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-01-19-46/4TAS75V3XLRB.jpg_2D00_44x44x2.jpg?_=636187127221490991" border="0px" alt="Kevin Cunningham" />
+					</div>
+		<a href="https://community.telligent.com/blog/b/announcements/posts/telligent-community-10-now-available" class="internal-link view-full-post navigable ui-tip" data-tip="View">
+			<div class="content">Telligent Community 10 Now Available</div>
+		</a>
+		<div class="meta">
+			<a href="https://community.telligent.com/blog/b/announcements/posts/telligent-community-10-now-available" class="internal-link view-post navigable">
+				<span class="ui-agodate ui-tip " data-tip="Wed, Feb 15 2017 2:00 PM" data-dateutc="2017-02-15T14:00:00.000Z">5 months ago</span>
+			</a>
+		</div>
+	</div>
+</li>
+
+				
+
+<li class="content-item">
+	<div class="author">
+		<div class="avatar">
+							<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-00-88-71/4U0E5V5Z90TY.jpg_2D00_44x44x2.jpg?_=636211523955272898" border="0px" alt="DanBartels" />
+					</div>
+		<a href="https://community.telligent.com/blog/b/developers/posts/saml-authentication-plugin-update" class="internal-link view-full-post navigable ui-tip" data-tip="View">
+			<div class="content">SAML Authentication Plugin Update</div>
+		</a>
+		<div class="meta">
+			<a href="https://community.telligent.com/blog/b/developers/posts/saml-authentication-plugin-update" class="internal-link view-post navigable">
+				<span class="ui-agodate ui-tip " data-tip="Fri, Jan 27 2017 10:07 PM" data-dateutc="2017-01-27T22:07:00.000Z">5 months ago</span>
+			</a>
+		</div>
+	</div>
+</li>
+
+				
+
+<li class="content-item">
+	<div class="author">
+		<div class="avatar">
+							<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-11-69-70/4TDJO6I8B2T3.jpg_2D00_44x44x2.jpg?_=636187006112351195" border="0px" alt="Patrick Mason" />
+					</div>
+		<a href="https://community.telligent.com/blog/b/developers/posts/telligent-community-10-0-developer-announcements" class="internal-link view-full-post navigable ui-tip" data-tip="View">
+			<div class="content">Telligent Community 10.0 Developer Announcements</div>
+		</a>
+		<div class="meta">
+			<a href="https://community.telligent.com/blog/b/developers/posts/telligent-community-10-0-developer-announcements" class="internal-link view-post navigable">
+				<span class="ui-agodate ui-tip " data-tip="Wed, Jan 25 2017 3:22 PM" data-dateutc="2017-01-25T15:22:00.000Z">5 months ago</span>
+			</a>
+		</div>
+	</div>
+</li>
+
+				
+
+<li class="content-item">
+	<div class="author">
+		<div class="avatar">
+							<a href="https://community.telligent.com/blog/b/announcements/posts/aberdeen-group-whitepaper---the-roi-of-investing-in-an-online-community-platform" class="internal-link">
+					<img src="/cfs-filesystemfile/__key/communityserver-components-secureimagefileviewer/communityserver-blogs-components-weblogfiles-00-00-00-17-78/Aberdeen-Group.png_2D00_44x44x2.png?_=636359398777148547" border="0px" />
+				</a>
+					</div>
+		<a href="https://community.telligent.com/blog/b/announcements/posts/aberdeen-group-whitepaper---the-roi-of-investing-in-an-online-community-platform" class="internal-link view-full-post navigable ui-tip" data-tip="View">
+			<div class="content">Aberdeen Group Whitepaper - THE ROI OF INVESTING IN AN ONLINE COMMUNITY PLATFORM</div>
+		</a>
+		<div class="meta">
+			<a href="https://community.telligent.com/blog/b/announcements/posts/aberdeen-group-whitepaper---the-roi-of-investing-in-an-online-community-platform" class="internal-link view-post navigable">
+				<span class="ui-agodate ui-tip " data-tip="Wed, Jan 25 2017 3:19 PM" data-dateutc="2017-01-25T15:19:00.000Z">5 months ago</span>
+			</a>
+		</div>
+	</div>
+</li>
+
+				
+
+<li class="content-item">
+	<div class="author">
+		<div class="avatar">
+							<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-02-50-86/4TWFEP51MZU2.jpg_2D00_44x44x2.jpg?_=636187027183706064" border="0px" alt="Michael Kelley" />
+					</div>
+		<a href="https://community.telligent.com/blog/b/announcements/posts/happy-holidays-some-announcements-about-support" class="internal-link view-full-post navigable ui-tip" data-tip="View">
+			<div class="content">Happy Holidays &amp; Some Announcements About Support</div>
+		</a>
+		<div class="meta">
+			<a href="https://community.telligent.com/blog/b/announcements/posts/happy-holidays-some-announcements-about-support" class="internal-link view-post navigable">
+				<span class="ui-agodate ui-tip " data-tip="Tue, Dec 13 2016 11:00 PM" data-dateutc="2016-12-13T23:00:00.000Z">7 months ago</span>
+			</a>
+		</div>
+	</div>
+</li>
+
+			</ul>
+		</div>
+	
+
+		</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div id="fragment-39830"></div>
+<div class="content-fragment more-content top-border with-spacing with-header responsive-hidden 
+			as-list
+		" id="fragment-39831" data-reflow="ctl02_ctl02_right-sidebar,ctl02_ctl02_singlecolumn,10000,5,5">
+<div class="content-fragment-header">
+Recommended For You
+			</div>
+<div class="content-fragment-content">
+
+<div id="fragment-39831_delayedPagedContentWrapper"></div>
+
+
+
+
+
+			</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div class="content-fragment more-content top-border with-spacing with-header responsive-hidden 
+			as-list
+		" id="fragment-39832" data-reflow="ctl02_ctl02_right-sidebar,ctl02_ctl02_singlecolumn,10000,5,6">
+<div class="content-fragment-header">
+People You May Know
+			</div>
+<div class="content-fragment-content">
+
+<div id="fragment-39832_delayedPagedContentWrapper"></div>
+
+
+
+
+
+			</div>
+<div class="content-fragment-footer"></div>
+</div>
+</div>
+</div>
+<div class="layout-region content" id="ctl02_ctl02_content">
+<div class="layout-region-inner content"><div class="content-fragment thread-list top-border with-spacing with-header responsive-hidden" id="fragment-39833" data-reflow="ctl02_ctl02_content,ctl02_ctl02_singlecolumn,10000,1,7">
+<div class="content-fragment-header">
+
+
+Latest Questions
+		</div>
+<div class="content-fragment-content">
+
+
+
+
+    <div id="pi39833-paged-content">
+
+
+
+
+	<ul class="content-list content margin-bottom tabular">
+
+	<li class="content-item with-href " data-threadid="1144459" data-href="https://community.telligent.com/community/f/developer-forum/1144459/if-we-have-group-owner-or-manager-permission-can-we-edit-wiki-pages-which-are-created-by-others">
+
+		<div class="icon cell answer-status">
+												<span class="attribute-value unanswered ui-tip" title="Unanswered question">Not Answered</span>
+									</div>
+		<div class="name cell">
+			<h3>
+				<a href="https://community.telligent.com/community/f/developer-forum/1144459/if-we-have-group-owner-or-manager-permission-can-we-edit-wiki-pages-which-are-created-by-others" class="internal-link view-post unread ">If we have group owner or manager permission, Can we edit wiki pages which are created by others?</a>
+				
+									<a href="#"  class="ui-presentcontent ui-forumvotes thread" data-presentcontents="22199a3e26ca4c1c9262c62ecf932d47|46448885d0e64133bbfbf0cd7b0fd6f7|"  data-id="1144459" data-type="thread" data-count="0" data-voted="false">0</a>
+							</h3>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">91</span>
+			<span class="description">
+									views
+							</span>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">5</span>
+			<span class="description">
+									replies
+							</span>
+		</div>
+		<div class="minimal cell nowrap latest">
+									
+						
+			<span class="value">
+				Latest <a href="/community/f/developer-forum/1144459/if-we-have-group-owner-or-manager-permission-can-we-edit-wiki-pages-which-are-created-by-others/1598221#1598221" class="internal-link view-user-profile">20 hours ago</a><br />
+			</span>
+
+			<span class="description">
+				by <a href="/members/pmason" class="internal-link view-user-profile">Patrick Mason</a>
+			</span>
+		</div>
+	</li>
+	<li class="content-item preview" data-threadid="1144459">
+		<div class="cell supplementary"></div>
+		<div class="cell content"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+	</li>
+
+	<li class="content-item with-href " data-threadid="1144467" data-href="https://community.telligent.com/community/f/suggestions-feedback/1144467/real-time-header-search-in-this-community-is-broken-for-me">
+
+		<div class="icon cell answer-status">
+												<span class="attribute-value"><a href="#" title="Question answered (click to preview)" class="ui-tip verified" data-threadid="1144467" data-answertype="verified-answers">Answered</a></span>
+									</div>
+		<div class="name cell">
+			<h3>
+				<a href="https://community.telligent.com/community/f/suggestions-feedback/1144467/real-time-header-search-in-this-community-is-broken-for-me" class="internal-link view-post unread ">Real time header search in this community is broken for me</a>
+				
+									<a href="#"  class="ui-presentcontent ui-forumvotes thread" data-presentcontents="5f5fc54d528e4668bccd1179bbe0490c|46448885d0e64133bbfbf0cd7b0fd6f7|"  data-id="1144467" data-type="thread" data-count="0" data-voted="false">0</a>
+							</h3>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">32</span>
+			<span class="description">
+									views
+							</span>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">1</span>
+			<span class="description">
+									reply
+							</span>
+		</div>
+		<div class="minimal cell nowrap latest">
+									
+						
+			<span class="value">
+				Latest <a href="/community/f/suggestions-feedback/1144467/real-time-header-search-in-this-community-is-broken-for-me/1598215#1598215" class="internal-link view-user-profile">21 hours ago</a><br />
+			</span>
+
+			<span class="description">
+				by <a href="/members/mdamico" class="internal-link view-user-profile">Mathew D&#39;Amico</a>
+			</span>
+		</div>
+	</li>
+	<li class="content-item preview" data-threadid="1144467">
+		<div class="cell supplementary"></div>
+		<div class="cell content"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+	</li>
+
+	<li class="content-item with-href " data-threadid="1143595" data-href="https://community.telligent.com/community/f/telligent-community-forum/1143595/downloads-link-throws-exception-in-gallery-files-panel">
+
+		<div class="icon cell answer-status">
+												<span class="attribute-value"><a href="#" title="Question answered (click to preview)" class="ui-tip verified" data-threadid="1143595" data-answertype="verified-answers">Answered</a></span>
+									</div>
+		<div class="name cell">
+			<h3>
+				<a href="https://community.telligent.com/community/f/telligent-community-forum/1143595/downloads-link-throws-exception-in-gallery-files-panel" class="internal-link view-post unread ">Downloads link throws exception in Gallery Files panel</a>
+				
+									<a href="#"  class="ui-presentcontent ui-forumvotes thread" data-presentcontents="039e96341a6d4f89a249f86ecf96c6a2|46448885d0e64133bbfbf0cd7b0fd6f7|"  data-id="1143595" data-type="thread" data-count="0" data-voted="false">0</a>
+							</h3>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">374</span>
+			<span class="description">
+									views
+							</span>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">4</span>
+			<span class="description">
+									replies
+							</span>
+		</div>
+		<div class="minimal cell nowrap latest">
+									
+						
+			<span class="value">
+				Latest <a href="/community/f/telligent-community-forum/1143595/downloads-link-throws-exception-in-gallery-files-panel/1598209#1598209" class="internal-link view-user-profile">1 day ago</a><br />
+			</span>
+
+			<span class="description">
+				by <a href="$core_v2_encoding.HtmlAttributeEncode($latestUser.ProfileUrl)" class="internal-link view-user-profile">Telligent Community</a>
+			</span>
+		</div>
+	</li>
+	<li class="content-item preview" data-threadid="1143595">
+		<div class="cell supplementary"></div>
+		<div class="cell content"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+	</li>
+
+	<li class="content-item with-href " data-threadid="1144455" data-href="https://community.telligent.com/community/f/telligent-community-forum/1144455/can-the-code-syntax-highlighting-in-v10-be-customized">
+
+		<div class="icon cell answer-status">
+												<span class="attribute-value"><a href="#" title="Answer suggested (click to preview)" class="ui-tip suggested" data-threadid="1144455" data-answertype="non-verified-answers">Suggested Answer</a></span>
+									</div>
+		<div class="name cell">
+			<h3>
+				<a href="https://community.telligent.com/community/f/telligent-community-forum/1144455/can-the-code-syntax-highlighting-in-v10-be-customized" class="internal-link view-post unread ">Can the code syntax highlighting in V10 be customized?</a>
+				
+									<a href="#"  class="ui-presentcontent ui-forumvotes thread" data-presentcontents="fb023fbd14a54d5fa8c20bdcacc5d11c|46448885d0e64133bbfbf0cd7b0fd6f7|"  data-id="1144455" data-type="thread" data-count="0" data-voted="false">0</a>
+							</h3>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">127</span>
+			<span class="description">
+									views
+							</span>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">4</span>
+			<span class="description">
+									replies
+							</span>
+		</div>
+		<div class="minimal cell nowrap latest">
+									
+						
+			<span class="value">
+				Latest <a href="/community/f/telligent-community-forum/1144455/can-the-code-syntax-highlighting-in-v10-be-customized/1598205#1598205" class="internal-link view-user-profile">1 day ago</a><br />
+			</span>
+
+			<span class="description">
+				by <a href="/members/jessedringoli" class="internal-link view-user-profile">JesseDringoli</a>
+			</span>
+		</div>
+	</li>
+	<li class="content-item preview" data-threadid="1144455">
+		<div class="cell supplementary"></div>
+		<div class="cell content"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+	</li>
+
+	<li class="content-item with-href " data-threadid="1144461" data-href="https://community.telligent.com/community/f/telligent-community-forum/1144461/errhh-how-does-contact-request-work">
+
+		<div class="icon cell answer-status">
+												<span class="attribute-value unanswered ui-tip" title="Unanswered question">Not Answered</span>
+									</div>
+		<div class="name cell">
+			<h3>
+				<a href="https://community.telligent.com/community/f/telligent-community-forum/1144461/errhh-how-does-contact-request-work" class="internal-link view-post unread ">Errhh... How does contact request work?</a>
+				
+									<a href="#"  class="ui-presentcontent ui-forumvotes thread" data-presentcontents="52c45c40e3214c089c5ce5383d4b7b78|46448885d0e64133bbfbf0cd7b0fd6f7|"  data-id="1144461" data-type="thread" data-count="0" data-voted="false">0</a>
+							</h3>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">61</span>
+			<span class="description">
+									views
+							</span>
+		</div>
+		<div class="cell nowrap supplementary">
+			<span class="value">1</span>
+			<span class="description">
+									reply
+							</span>
+		</div>
+		<div class="minimal cell nowrap latest">
+									
+						
+			<span class="value">
+				Latest <a href="/community/f/telligent-community-forum/1144461/errhh-how-does-contact-request-work/1598200#1598200" class="internal-link view-user-profile">1 day ago</a><br />
+			</span>
+
+			<span class="description">
+				by <a href="/members/mdamico" class="internal-link view-user-profile">Mathew D&#39;Amico</a>
+			</span>
+		</div>
+	</li>
+	<li class="content-item preview" data-threadid="1144461">
+		<div class="cell supplementary"></div>
+		<div class="cell content"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+		<div class="cell supplementary"></div>
+	</li>
+	</ul>
+
+
+
+<div class="pager ui-page" data-currentpage="0" data-pagesize="5" data-totalitems="5298" data-pagekey="pi39833" data-pagedcontenturl="/utility/scripted-file.ashx?_cf=list.vm&amp;_fid=39833&amp;_ct=page&amp;_cp=common-home&amp;_ctt=0c647246673542f9875dc8b991fe739b&amp;_ctc=00000000000000000000000000000000&amp;_ctn=3fc3f82483d14ec485ef92e206116d49&amp;_cc=0&amp;_pcurl=~%2F" data-pagedcontentwrapperid="pi39833-paged-content" data-pagedcontentpagingevent="ui.page.pi39833.paging" data-pagedcontentpagedevent="ui.page.pi39833.paged" data-loadonanyhashchange="false" data-loadingindicator="true" data-configuration="PagedContentFile=list.vm&amp;LoadingIndicator=true" ><a href="/?pi39833=2" class="next"  style="display:none" ><span>&#62;</span></a></div>
+</div>
+
+    
+			</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div class="content-fragment activity-story-stream no-wrapper with-spacing responsive-1" id="fragment-39834" data-reflow="ctl02_ctl02_content,ctl02_ctl02_singlecolumn,1,1,8">
+<div class="content-fragment-content">
+
+
+
+
+
+
+
+
+
+
+	<ul class="filter with-query" id="fragment-39834_tabs" style="display:none">
+					<li class="filter-option"><a href="#" data-filterindex="0">Filter</a></span>
+											</ul>
+
+<div class="content-list-header activity-stories"></div>
+<div class="content-list-name activity-stories"></div>
+<div id="fragment-39834_more-stories" class="more-stories" style="display:none;"></div>
+<ul  class="ui-presentservice content-list activity-stories" data-presentservices="2bb4eb0b1c9e4f4a890c88c157540cf7|00000000000000000000000000000000|"  id="fragment-39834_containerId"></ul>
+<div class="content-list-footer activity-stories"></div>
+
+
+<div id="fragment-39834_loading" class="loading"><span class="ui-loading"></span></div>
+
+	</div>
+<div class="content-fragment-footer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="footer-fragments-header"></div>
+<div class="single-column footer-fragments evolution-reflow-container" data-related="ctl02_ctl03_page" id="ctl02_ctl03_singlecolumn" style = "display:none"></div><div class="footer-fragments evolution-reflow-container" data-related="ctl02_ctl03_singlecolumn" id="ctl02_ctl03_page" ><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content content" id="ctl02_ctl03_layout"><div class="layout-region content" id="ctl02_ctl03_content">
+<div class="layout-region-inner content"><div class="content-fragment html-content no-wrapper with-spacing responsive-3" id="footer-700" data-reflow="ctl02_ctl03_content,ctl02_ctl03_singlecolumn,3,1,0">
+<div class="content-fragment-content">
+    <div id="footer-700_content" class=" user-defined-markup" style="">
+        <p style="text-align:left;"><span style="font-size:75%;color:#999999;">Powered by <span style="color:#333333;"><a title="Telligent" href="http://telligent.com"><span style="color:#333333;">Telligent Community</span></a></span></span></p><div style="clear:both;"></div>
+    </div>
+</div>
+<div class="content-fragment-footer"></div>
+</div>
+<div id="footer-702"></div>
+<div id="footer-703"></div>
+<div id="footer-704"></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="footer-fragments-footer"></div>
+	<script type="text/javascript" src="/cfs-filesystemfile/__key/defaultwidgets/7bb87a0cc5864a9392ae5b9e5f9747b7-c9932b3229d8453892c87cef53db657e/ui.js?_=636356684215241034"></script>
+	<script type="text/html" id="header-789_site-banner-list-template">
+		<div>
+			<div class="multiple-column-list columns-1">
+				<div class="multiple-column-item column-1">
+					<ul class="content-list content">
+					</ul>
+					<div class="loading"><span class="ui-loading"></span></div>
+					<% if(footerContent) { %>
+						<div class="content-list-footer">
+							<%= footerContent %>
+						</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</script>
+
+			<script type="text/html" id="header-789_site-banner-notification-preferences-template">
+			<div class="notification-preference">
+				<span class="description">Do not notify me when someone <strong><%: notificationTypeName %></strong>?</span>
+				<a href="#" class="confirm internal-link button submit-button" data-notificationtypeid="<%: notificationTypeId %>">Confirm</a>
+				<a href="#" class="cancel internal-link button submit-button">Cancel</a>
+			</div>
+		</script>
+
+		<script type="text/html" id="header-789_site-banner-bookmark-filter-template">
+
+			<ul class="navigation-list filter">
+				<% if(contentTypeIds && contentTypeIds.length > 0) { %>
+					<li class="navigation-item conversations">
+						<a class="internal-link" href="#" data-contenttypeids="<%: contentTypeIds %>">Content</a>
+					</li>
+				<% } %>
+				<% if(applicationContentTypeIds && applicationContentTypeIds.length > 0) { %>
+					<li class="navigation-item conversations">
+						<a class="internal-link" href="#" data-contenttypeids="<%: applicationContentTypeIds %>">Application</a>
+					</li>
+				<% } %>
+				<% if(containerTypes && containerTypes.length > 0) { %>
+					<% foreach(containerTypes, function(containerType) {  %>
+						<li class="navigation-item conversations">
+							<a class="internal-link" href="#" data-contenttypeids="<%: containerType.id %>"><%: containerType.name %></a>
+						</li>
+					<% }); %>
+				<% } %>
+			</ul>
+		</script>
+
+		<script type="text/html" id="header-789_site-banner-user-template">
+									<div class="user "
+								<div>
+					<div class="avatar">
+						<a href="$core_v2_encoding.HtmlAttributeEncode($user.ProfileUrl)">
+							<img src="/cfs-filesystemfile/__key/communityserver-components-imagefileviewer/communityserver-components-avatars-00-00-00-18-50/4TWGN5FHZOHW.png_2D00_40x40x2.png?_=636196670432936686" />
+						</a>
+					</div>
+					<span class="user-name">
+						<a href="$core_v2_encoding.HtmlAttributeEncode($user.ProfileUrl)">Anonymous</a>
+					</span>
+
+														</div>
+			</div>
+
+										<ul class="navigation-list user">
+																																																																																																																											</ul>
+					</script>
+				<script type="text/html" id="header-789_site-banner-search-filter-template">
+			<% if(places && places.length > 0) { %>
+				<ul class="navigation-list filter">
+					<% foreach(places, function(place) { %>
+						<li class="navigation-item">
+							<a class="place internal-link" href="#" data-key="<%: place.key %>" data-value="<%: place.value %>" data-searchparam="<%: place.searchParameter %>" data-searchvalue="<%: place.searchValue %>"><%= place.name %></a>
+					<% }); %>
+				</ul>
+			<% } %>
+
+			<% if(filters && filters.length > 0) { %>
+				<ul class="navigation-list filter">
+				<% foreach(filters, function(filter) {  %>
+					<li class="navigation-item">
+						<a class="type internal-link" href="#" data-key="<%: filter.key %>"><%= filter.name %></a>
+					</li>
+				<% }); %>
+				</ul>
+			<% } %>
+		</script>
+	
+	<script type="text/javascript">
+		
+		
+
+			
+															
+		jQuery(function(){
+			jQuery.telligent.evolution.widgets.siteBanner.register({
+				wrapper: '#header-789',
+				messagePrefix: 'widget.header-789.',
+				userPopupTemplate: 'header-789_site-banner-list-template',
+				banner: jQuery('#header-789_banner'),
+									handheldSearchFieldsLink: jQuery('#header-789_handheldSearchFieldsLink'),
+					handheldSearchFields: jQuery('#header-789_handheldSearchFields'),
+					handheldBannerLinksLink: jQuery('#header-789_handheldBannerLinksLink'),
+					handheldBannerLinks: jQuery('#header-789_handheldBannerLinks'),
+					handheldBannerLinksCount: jQuery('#header-789_handheldBannerLinksCount'),
+					bannerSiteLinks: jQuery('#header-789_bannerSiteLinks'),
+					handheldSiteLinksLink: jQuery('#header-789_handheldSiteLinksLink'),
+					handheldSiteLinks: jQuery('#header-789_handheldSiteLinks'),
+
+											siteNavigationType: 'group',
+						siteNavigationUrl: '/utility/scripted-file.ashx?_cf=groups.vm\u0026_fid=789\u0026_ct=header\u0026_cp=\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+						siteNavigationTemplate: 'header-789_site-banner-list-template',
+						siteNavigationLink: jQuery('#header-789_site'),
+						siteNavigationTitle:  							'Groups'
+						,
+													siteNavigationCustomItems:
+															[
+																						{
+									label: 'News \u0026amp; Updates',
+									url: 'https://community.telligent.com/blog/'
+								}
+															,
+																						{
+									label: 'Forums \u0026amp; Ideas',
+									url: 'https://community.telligent.com/community/'
+								}
+															,
+																						{
+									label: 'My Telligent Trial',
+									url: 'https://community.telligent.com/my_trial/'
+								}
+															,
+																						{
+									label: 'API Documentation',
+									url: 'https://community.telligent.com/developers/'
+								}
+															,
+																						{
+									label: 'User Documentation',
+									url: 'https://community.telligent.com/documentation/'
+								}
+															,
+																						{
+									label: 'Training',
+									url: 'https://community.telligent.com/training/'
+								}
+															 
+									,{
+										label: 'All groups',
+										url: '/g'
+									}
+																]
+							,
+																								searchFields: jQuery('#header-789_searchFields'),
+					searchTemplate: 'header-789_site-banner-list-template',
+					searchUrl: '/utility/scripted-file.ashx?_cf=search.vm\u0026_fid=789\u0026_ct=header\u0026_cp=\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+					searchInput: jQuery('#header-789_Search'),
+					searchFooterContent: '\u003ca data-messagename=\"widget.header-789.advancedsearch\" class=\"right\" id=\"header-789_advancedsearch\" href=\"#\"\u003eAdvanced search\u003c/a\u003e',
+					searchFilterTemplate: 'header-789_site-banner-search-filter-template',
+					searchAdvancedUrl: '/search?{0}',
+					searchAdvancedUserUrl: '/members?{0}',
+					searchFilterContentName: 'Content',
+					searchFilterGroupsName: 'Groups',
+					searchFilterPeopleName: 'People',
+					searchPlaceApplicationId:  null ,
+					searchPlaceApplicationName:  null ,
+					searchPlaceGroupId:  null ,
+					searchPlaceGroupLocalId:  null ,
+					searchPlaceGroupName:  null ,
+					searchPlaceAnywhereName: 'Anywhere',
+					advancedSearchId: 'header-789_advancedsearch',
+					searchShowPeople:  false,
+													bannerLinks: jQuery('#header-789_bannerLinks'),
+
+					notificationsTemplate: 'header-789_site-banner-list-template',
+					notificationsUrl: '/utility/scripted-file.ashx?_cf=notifications.vm\u0026_fid=789\u0026_ct=header\u0026_cp=\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+					notificationsLink: jQuery('#header-789_notifications'),
+					notificationsUnread: 0,
+					notificationListFooterContent: '\u003ca href=\"$core_v2_urls.Notifications()\" class=\"view-all left\"\u003eView all\u003c/a\u003e\u003ca class=\"right\" href=\"${notificationSettingsUrl}\"\u003eSettings\u003c/a\u003e',
+					notificationPreferenceTemplate: 'header-789_site-banner-notification-preferences-template',
+					notificationssUnreadCountMessageSingular: 'You have {0} unread notification',
+					notificationssUnreadCountMessagePlural: 'You have {0} unread notifications',
+
+					conversationsTemplate: 'header-789_site-banner-list-template',
+					conversationsUrl: '/utility/scripted-file.ashx?_cf=conversations.vm\u0026_fid=789\u0026_ct=header\u0026_cp=\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+					conversationsLink: jQuery('#header-789_conversations'),
+					conversationsUnread: 0,
+					conversationNotificationTypeId: '84e4c0a7-3a17-4dfe-b8a0-d7038aa04a84',
+					conversationListFooterContent: '\u003ca href=\"${core_v2_urls.Conversations()}\" class=\"left\"\u003eView all\u003c/a\u003e\u003ca href=\"#\" data-messagename=\"widget.header-789.startconversation\" class=\"right\"\u003eNew message\u003c/a\u003e',
+					conversationsUnreadCountMessageSingular: 'You have {0} unread message',
+					conversationsUnreadCountMessagePlural: 'You have {0} unread messages',
+					conversationNewConversationUrl: '/user/conversations?New=True',
+
+					bookmarksTemplate: 'header-789_site-banner-list-template',
+					bookmarksUrl: '/utility/scripted-file.ashx?_cf=bookmarks.vm\u0026_fid=789\u0026_ct=header\u0026_cp=\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+					bookmarksLink: jQuery('#header-789_bookmarks'),
+					bookmarksListFooterContent: '\u003ca class=\"left\" href=\"${bookmarksUrl}\"\u003eView all\u003c/a\u003e',
+					bookmarksContentTypes: '$core_v2_encoding.JavascriptEncode($contentTypes)',
+					bookmarksApplicationContentTypes: '$core_v2_encoding.JavascriptEncode($applicationContentTypes)',
+					bookmarksContainerContentTypes: '$core_v2_encoding.JavascriptEncode($containerContentTypes)',
+					bookmarksFilterTemplate: 'header-789_site-banner-bookmark-filter-template',
+					bookmarksIsBookmarked:  false ,
+					bookmarksCurrentContentId: '',
+					bookmarksBookmarks: 'Bookmarks',
+					bookmarkAdded: 'Bookmark added',
+					bookmarkRemoved: 'Bookmark removed',
+
+					userContentTemplate: 'header-789_site-banner-user-template',
+					userLink: jQuery('#header-789_user'),
+				
+				viewType: 'all'
+			});
+		});
+	</script>
+		<script>
+		jQuery(function(j){
+			// no sub-nav on touch
+			if(j('body').hasClass('touch'))
+				return;
+
+			var container = j('#header-790_container');
+			var popup;
+
+			function hideLinksPopup() {
+				if(popup) {
+					popup.glowPopUpPanel('hide');
+				}
+			}
+
+			function showLinksPopUp(parent, children) {
+				var links = j('<ul></ul>').append(children);
+				links.on('mouseleave', function(){
+					hideLinksPopup();
+				});
+
+				if(popup) {
+					hideLinksPopup();
+					popup.glowPopUpPanel('empty', '')
+						.glowPopUpPanel('append', links)
+						.glowPopUpPanel('show', parent);
+				} else {
+					popup = j('<div></div>')
+						.glowPopUpPanel({
+							cssClass: 'links-popup-panel',
+							zIndex: 1500,
+							hideOnDocumentClick: true
+						})
+						.glowPopUpPanel('append', links)
+						.glowPopUpPanel('show', parent)
+				}
+			}
+
+			container.on('mouseover', '.navigation-list-item a', function(e){
+				var elm = j(e.target);
+				var children = elm.data('_link_children');
+				if(!children) {
+					children = elm.closest('li').find('ul.children > li');
+					elm.data('_link_children', children);
+				}
+				if(children && children.length > 0) {
+					showLinksPopUp(elm, children);
+				}
+			});
+
+			container.on('mouseout', '.navigation-list-item a', function(e){
+				if(!(e.relatedTarget &&
+					(j(e.relatedTarget).is('.links-popup-panel') ||
+					j(e.relatedTarget).closest('.links-popup-panel').length > 0)))
+					hideLinksPopup();
+			});
+		});
+		</script>
+	<script type="text/javascript">
+// <![CDATA[
+if (!$.telligent.evolution.contentFragmentContainers) { $.telligent.evolution.contentFragmentContainers = {}; }
+$.telligent.evolution.contentFragmentContainers.header = new ContentFragmentContainerCustomCallback('ctl02_ctl01_page',new Function('mode','parameters','callback','errorCallback','context','authValue','ctl02_ctl01_ctl00._doCallback(mode+\':\'+authValue+\':\'+parameters,callback,context,errorCallback);'),'AuthorizationCookie');
+// ]]>
+</script>	<script src="/cfs-filesystemfile/__key/defaultwidgets/7bb87a0cc5864a9392ae5b9e5f9747b7-387656725d5b48bdae2c451035b95d4d/ui.js?_=636361859330899495"></script>
+	<script>
+		jQuery(function(){
+			jQuery.telligent.evolution.widgets.featuredContentList.register({
+				wrapper: '#fragment-39826',
+				automatic:  true ,
+				duration: 15000
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/cfs-filesystemfile/__key/defaultwidgets/7bb87a0cc5864a9392ae5b9e5f9747b7-0df71baf88f84214bf4a2907d004bc2c/ui.js?_=636356684153492860"></script>
+		<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery.telligent.evolution.widgets.moreContent.register({
+			wrapper: '#fragment-39831',
+			useSlider:  false ,
+			title: 'Recommended For You',
+			content: '#pi39831-paged-content',
+			sliderTemplate: 'telligent.evolution.widgets.moreContent.sliderTemplate',
+			slideAt: 0.8,
+			delayedPagedContentWrapper: 'fragment-39831_delayedPagedContentWrapper',
+			delayedPagedContentUrl: "/utility/scripted-file.ashx?_cf=content.vm\u0026_fid=39831\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F",
+			isPreview:  false		});
+	});
+	</script>
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery.telligent.evolution.widgets.moreContent.register({
+			wrapper: '#fragment-39832',
+			useSlider:  false ,
+			title: 'People You May Know',
+			content: '#pi39832-paged-content',
+			sliderTemplate: 'telligent.evolution.widgets.moreContent.sliderTemplate',
+			slideAt: 0.8,
+			delayedPagedContentWrapper: 'fragment-39832_delayedPagedContentWrapper',
+			delayedPagedContentUrl: "/utility/scripted-file.ashx?_cf=content.vm\u0026_fid=39832\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F",
+			isPreview:  false		});
+	});
+	</script>
+        <script type="text/javascript">
+        jQuery(function(j){
+            j('#fragment-39833').on('click', '.answer-status a', function(e){
+                e.preventDefault();
+                var link = j(this),
+                    threadItem = link.closest('.content-item');
+                    previewItem = threadItem.next('.preview');
+                    container = previewItem.find('.content');
+
+                if(!container.is(':empty')) {
+                    container.empty();
+                    threadItem.removeClass('previewing');
+                    previewItem.removeClass('previewing');
+                } else {
+                    threadItem.addClass('previewing');
+                    previewItem.addClass('previewing');
+                    j.telligent.evolution.get({
+                        url: '/utility/scripted-file.ashx?_cf=answer.vm\u0026_fid=39833\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+                        data: {
+                            threadId: link.data('threadid'),
+                            answerType: link.data('answertype')
+                        }
+                    }).then(function(excerpt){
+                        container.hide().empty().append(excerpt).show();
+                    });
+                }
+            });
+        });
+        </script>
+    	<script type="text/javascript" src="/cfs-filesystemfile/__key/defaultwidgets/7bb87a0cc5864a9392ae5b9e5f9747b7-ff79be4dcc9b4884bbf9a455ef5eb1c5/ui.js?_=636356684230992866"></script>
+	<script type="text/javascript">
+		jQuery(function(){
+			jQuery.telligent.evolution.widgets.activityStoryStream.register({
+				wrapper: '#fragment-39834',
+				loader: '#fragment-39834_loading',
+				pager: '#fragment-39834_pager',
+				container: '#fragment-39834_containerId',
+				filterType: 'Site',
+				tabs: '#fragment-39834_tabs',
+				pageSize: 15,
+				moreStoriesUrl: '/utility/scripted-file.ashx?_cf=callback-morestories.vm\u0026_fid=39834\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+				getStoryUrl: '/utility/scripted-file.ashx?_cf=callback-getstory.vm\u0026_fid=39834\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+				moreCommentsUrl: '/utility/scripted-file.ashx?_cf=callback-morecomments.vm\u0026_fid=39834\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+				getCommentUrl: '/utility/scripted-file.ashx?_cf=callback-getcomment.vm\u0026_fid=39834\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+				getEditorUrl: '/utility/scripted-file.ashx?_cf=callback-geteditor.vm\u0026_fid=39834\u0026_ct=page\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+				deleteForumReplyPanelUrl: '#_cptype=panel\u0026_cpcontexttype=Explicit\u0026_cppanelid=c2360510-559b-4c97-9cc9-760e5b71a003\u0026replyid=0',
+				accessingUserId: 1850,
+				userId: 1850,
+				groupId: 77,
+				containerId: 'efe0ccbc-7cb8-4fd9-90a6-71a47f585df5',
+				includeSubGroups:  true ,
+				maxReplyLength: 512,
+				todayText: 'Today',
+				cancelText: 'Cancel',
+				replyText: 'Reply',
+				endlessScroll:  true ,
+				hideOriginalPost: 'Hide original post',
+				showOriginalPost: 'Show original post',
+				hideHistory: 'Hide revision history',
+				showHistory: 'Show revision history',
+				deleteActivityMessage: 'Are you sure you want to delete this story?',
+				deleteCommentMessage: 'Are you sure you want to delete this comment?',
+				commentModeratedMessaage: 'Thank you, your reply requires moderation so it may take a while to appear.',
+				commentContentTypeId: '9262536b-49a3-4494-802f-04dff10424ed',
+				commentDeletedText: 'This reply has been deleted.',
+				moreStories: '#fragment-39834_more-stories',
+				showMoreStoriesSingleText: 'Show {0} new story.',
+				showMoreStoriesMultipleText: 'Show {0} new stories.',
+				showMoreCommentsSingleText: 'Show {0} new reply.',
+				showMoreCommentsMultipleText: 'Show {0} new replies.',
+				filters: {
+				    				        				                                                                            	                        		                        		                                    		                                					                            0: {
+                        		                            			'948477cb045b40778bf17ce1a091db11':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'44a697e2d1b348f6951945cfa2bfc4fd':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'0f7404b7d8f24a1b97c9175af1be4570':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'acf00be657174a25a17de2036c694444':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'0a680cf3f19648c592dbdf8cebe3fe92':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'ecf7e9ef76f0447c9b252a531c7bb651':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'edebd6ada45a470f89e63dfc31714bd6':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'a23334fb669a421d85e91945a7b80581':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'14656a259a034311b8e346cef57ac02b':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'333cc77c019644c5aefa6e35a0011ee8':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'276a9e5128394ae98291e3f24b49cbc4':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'e9dd0cb7adf74518b0961b00f3f51246':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'3d10e9df357b42038f7d3bf15f60fd61':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'cf26068cf6644050bf69f1d5c3e7eb1a':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'432f675c15bb429c98a99e99d539587b':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'a481f65a7c744bdea8da44f562aaed91':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'4938dae8d68844109d8f82421f8ee2be':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'f0192462ea3f4eef9a4d4e896c049aac':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'7274e046a373482f837cee44ac4c54e5':true
+                        		                        	                        		                        		                            		        ,
+                        		                            			'919abea56ce64b34a6a6baf8b392af90':true
+                        		                        	                        				                    }
+			                                                                				                                                                            				                                                                            				                                                                            				                                                                        				}
+			});
+		});
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+if (!$.telligent.evolution.contentFragmentContainers) { $.telligent.evolution.contentFragmentContainers = {}; }
+$.telligent.evolution.contentFragmentContainers.page = new ContentFragmentContainerCustomCallback('ctl02_ctl02_page',new Function('mode','parameters','callback','errorCallback','context','authValue','ctl02_ctl02_ctl00._doCallback(mode+\':\'+authValue+\':\'+parameters,callback,context,errorCallback);'),'AuthorizationCookie');
+// ]]>
+</script>	<script type="text/javascript" src="/cfs-filesystemfile/__key/defaultwidgets/7bb87a0cc5864a9392ae5b9e5f9747b7-212f71d69e37457887f33f32918f6ae2/ui.js?_=636356684159117914"></script>
+	<script type="text/javascript">
+		jQuery(function(){
+			jQuery.telligent.evolution.widgets.userHover.register({
+				getUserInformationUrl: '/utility/scripted-file.ashx?_cf=get-user-information.vm\u0026_fid=702\u0026_ct=footer\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F',
+				getRecentActivityUrl: '/utility/scripted-file.ashx?_cf=get-recent-activity.vm\u0026_fid=702\u0026_ct=footer\u0026_cp=common-home\u0026_ctt=0c647246673542f9875dc8b991fe739b\u0026_ctc=00000000000000000000000000000000\u0026_ctn=3fc3f82483d14ec485ef92e206116d49\u0026_cc=0\u0026_pcurl=~%2F'
+			});
+		});
+	</script>
+	<script type="text/html" id="footer-704_tip_template">
+		<div class="tourtip">
+			<div class="tourtip-message">
+				<%= message %>
+			</div>
+			<ul class="tourtip-actions">
+				<% if(state.index() > 0) { %>
+					<li>
+						<a href="#" class="tourtip-previous">Previous</a>
+					</li>
+				<% } %>
+				<% if(state.index() < (state.count() - 1)) { %>
+					<li>
+						<a href="#" class="tourtip-next">Next</a>
+					</li>
+				<% } %>
+				<% if(state.index() === (state.count() - 1)) { %>
+					<li>
+						<a href="#" class="tourtip-finish">Ok, got it!</a>
+					</li>
+				<% } else { %>
+					<li>
+						<a href="#" class="ui-tip tourtip-skip" title="Continue this tour in 24 hours.">Later</a>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+	</script>
+	<script type="text/javascript" src="/cfs-filesystemfile/__key/defaultwidgets/7bb87a0cc5864a9392ae5b9e5f9747b7-22e271b19ea14e54a503441c1f4f167e/ui.js?_=636356684159586772"></script>
+	<script type="text/javascript">
+	jQuery(function(){
+		jQuery.telligent.evolution.widgets.tourTips.register({
+			tipTemplate: 'footer-704_tip_template',
+			minWidth: 750,
+			suppressDuration: 86400
+		});
+	});
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+if (!$.telligent.evolution.contentFragmentContainers) { $.telligent.evolution.contentFragmentContainers = {}; }
+$.telligent.evolution.contentFragmentContainers.footer = new ContentFragmentContainerCustomCallback('ctl02_ctl03_page',new Function('mode','parameters','callback','errorCallback','context','authValue','ctl02_ctl03_ctl00._doCallback(mode+\':\'+authValue+\':\'+parameters,callback,context,errorCallback);'),'AuthorizationCookie');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl02_ctl01_ctl00 = new Telligent_CallbackManager('ctl02_ctl01_ctl00','ctl02$ctl01$ctl00','ctl01');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl02_ctl02_ctl00 = new Telligent_CallbackManager('ctl02_ctl02_ctl00','ctl02$ctl02$ctl00','ctl01');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl02_ctl03_ctl00 = new Telligent_CallbackManager('ctl02_ctl03_ctl00','ctl02$ctl03$ctl00','ctl01');
+// ]]>
+</script></form><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62097232-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- OpinionLab
+<script src="https://telligent.com/wp-includes/onlineopinionV5.9.11/oo_5F00_conf.js"></script>
+-->
+
+<!-- ShareThis, added by Jim Gross 07/20/2016 as requested by Jon Allen 
+ *** temporarily removed 03/15/17 -jg 
+
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "885b0e89-2344-467f-96bb-a8845e527ce2", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+--></body>
+</html>

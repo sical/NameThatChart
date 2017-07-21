@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="de" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="de" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="de" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="no-js ie lt-ie9" lang="de" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="de" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><![endif]-->
+  <!--[if !IE]><!--><html class="no-js" lang="de" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<link href="https://www.gruner.ch/sites/all/themes/grunertheme/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+<link href="https://www.gruner.ch/sites/all/themes/grunertheme/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+<meta name="HandheldFriendly" content="true" />
+<link href="https://www.gruner.ch/sites/all/themes/grunertheme/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+<meta name="MobileOptimized" content="width" />
+<link rel="apple-touch-icon-precomposed" href="https://www.gruner.ch/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="https://www.gruner.ch/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="https://www.gruner.ch/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" href="https://www.gruner.ch/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<meta http-equiv="cleartype" content="on" />
+<link href="https://www.gruner.ch/sites/all/themes/grunertheme/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57" />
+<link rel="shortcut icon" href="https://www.gruner.ch/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Gruner AG, Bauingenieure und Planer" />
+<meta name="abstract" content="Gruner AG, Bauingenieure und Planer" />
+<meta name="keywords" content="Gruner AG, Bauingenieure und Planer, Energie, Gebäudetechnik, Generalplanung, Infrastruktur, Konstruktion, Sicherheit, Umwelt" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="rights" content="Gruner AG" />
+<link rel="canonical" href="https://www.gruner.ch/de/unternehmen/gruppe/gruner-kiwi-ag" />
+<link rel="shortlink" href="https://www.gruner.ch/de/node/99" />
+<link rel="publisher" href="https://www.gruner.ch/" />
+  <title>Gruner Kiwi AG | Gruner AG</title>
+  <link type="text/css" rel="stylesheet" href="https://www.gruner.ch/sites/default/files/css/css_xgzN2isVcdrEZ5j6Pxl1p3bUcoFN2qOWs79pg5LvGZ0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.gruner.ch/sites/default/files/css/css_cVJQNAw6g5oVccFcjRntj6abDY2sQEW9irQxCXWSRSQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.gruner.ch/sites/default/files/css/css_YPLf8CVE3XjtJuowRZ4yRQMUxpteRLgBOVNACcwFCtM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.gruner.ch/sites/default/files/css/css_4zz9JD9vPq5WWc7sA6bVhTzYU89q5ShR2DCuclGNdgk.css" media="print" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://www.gruner.ch/sites/default/files/css/css_HFn_kCJImugDijpv_fjGQ26QYDSL4bsHpb57Sqt7cpo.css" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="https://www.gruner.ch/sites/default/files/css/css_gq2CBb8zIIoGKvGdPA1PQNScJP8WkLR4Z73HN4VDn7Y.css" media="all" />
+  <script>document.cookie = 'adaptive_image=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+<script src="https://www.gruner.ch/sites/default/files/js/js_KPu2woAL851thW4-4xJE-0Ze4h3QvRYCeWPid7himXM.js"></script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="https://www.gruner.ch/sites/default/files/js/js_1H0BagV0_yWBCoyD6G9pQzg9T5T5Wv2lSk0YbPgykMU.js"></script>
+<![endif]-->
+<script src="https://www.gruner.ch/sites/default/files/js/js_20FFJ_MxUfbCc8uKaodshFLPHz3M3sWa7X7IKKXD9tA.js"></script>
+<script src="https://jwpsrv.com/library/ACngCtnXEeObiyIACi0I_Q.js"></script>
+<script src="https://www.gruner.ch/sites/default/files/js/js_sCAfXkM-8NZSQpsYRYCEcRwLddoEV6na-P-MD_rGGs0.js"></script>
+<script>(function($) {
+  $(document).ready(function(){
+	  var option = Drupal.settings.mmoptions_2;
+    $("#megamenu-2 > ul").megadrupalMenu(option);selectnav('mdmegamenu-2', {
+					label: '--- Table of content ---',
+					nested: true,
+					indent: '-'
+			 });
+      }); })(jQuery);</script>
+<script src="https://www.gruner.ch/sites/default/files/js/js_2vOiMWT0yKRU5hc9iWlzMa6eD41cU5Bze8WRNve3_n4.js"></script>
+<script src="https://www.gruner.ch/sites/default/files/js/js_M171KCJfnyEE31U6czmsq5-GyE2KZwqzw_5pKSZ2BfI.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"de\/","colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Schlie\u00dfen","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"fcselector":".contentblock-ui","fcreload":1,"custom_search":{"form_target":"_self","solr":0},"mmoptions_2":{"effects":{"effectTypeOpen":"none","effectTypeClose":"none"},"timeBeforeOpening":"100","timeBeforeClosing":"600","trigger":"hover_intent"},"piwik":{"trackMailto":1,"trackColorbox":1},"urlIsAjaxTrusted":{"\/de\/node\/99?nat":true}});</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Gruner AG">
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-99 node-type-firmen i18n-de section-unternehmen">
+  <a href="#main-content" class="element-invisible element-focusable">Direkt zum Inhalt</a>
+    <div class="l-page has-no-sidebars">
+  <header class="l-header" role="banner">
+    <div class="l-branding">
+
+      <div class="l-region l-region--header">
+    <div id="block-search-form" role="search" class="block block--search block--search-form">
+        <div class="block__content">
+    <form class="search-form search-block-form" role="search" onsubmit="" action="/de/node/99?nat" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Suchformular</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Suche </label>
+ <input title="Geben Sie die Begriffe ein, nach denen Sie suchen." class="custom-search-box form-text" placeholder="" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="40" maxlength="128" />
+</div>
+<div class="form-item form-type-select form-item-custom-search-types">
+  <label for="edit-custom-search-types">Search for </label>
+ <select class="custom-search-selector custom-search-types form-select" id="edit-custom-search-types" name="custom_search_types"><option value="c-all" selected="selected">-Any-</option><option value="c-page">Einfache Seite</option><option value="c-firmen">Firmen</option><option value="c-competence">Kompetenzen</option><option value="c-medien">Medien</option><option value="c-news">News</option><option value="c-project">Projekte</option><option value="c-reference">Referenzen</option></select>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="image" id="edit-submit" name="submit" value="&lt;img src=&quot;/sites/themes/grunertheme/images/icons/lupe.png&quot;&gt;" src="/sites/all/themes/grunertheme/images/icons/lupe.png" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-PHmGZ7lKRIpBa0yXhc9ft7km6LH2QbBmMIvffvCeQ-Y" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+<nav id="block-menu-menu-metanavigation" role="navigation" class="block block--menu block--menu-menu-metanavigation">
+      
+  <ul class="menu"><li class="first leaf"><a href="/de/medien">Medien</a></li>
+<li class="leaf"><a href="/de/news">News</a></li>
+<li class="leaf"><a href="/de/e-newsletter">E-Newsletter</a></li>
+<li class="last leaf"><a href="/de/sitemap">Sitemap </a></li>
+</ul></nav>
+<div id="block-locale-language" role="complementary" class="block block--locale block--locale-language">
+        <div class="block__content">
+    <ul class="language-switcher-locale-url"><li class="de first active"><a href="/de/unternehmen/gruppe/gruner-kiwi-ag" class="language-link active" xml:lang="de" title="Gruner Kiwi AG">D</a></li>
+<li class="en"><a href="/en/corporation/group/gruner-kiwi-ag" class="language-link" xml:lang="en" title="Gruner Kiwi AG">E</a></li>
+<li class="fr last"><a href="/fr/entreprise/groupe/gruner-kiwi-ag" class="language-link" xml:lang="fr" title="Gruner Kiwi AG">F</a></li>
+</ul>  </div>
+</div>
+<div id="block-grunerbase-socialmedia" class="block block--grunerbase block--grunerbase-socialmedia">
+        <div class="block__content">
+    
+<ul id="gruner-social-media">
+  <li class="social-media-item first">
+    <a class="xing" href="https://www.xing.com/companies/grunergruppe" target="_blank">
+       <img src="https://www.gruner.ch/sites/all/themes/grunertheme/images/xing.png" alt="xing" />    </a>
+  </li>
+  <li class="social-media-item">
+    <a class="googleplus"  href="https://plus.google.com/u/0/108871437753173714678/posts" target="_blank" >
+      <img src="https://www.gruner.ch/sites/all/themes/grunertheme/images/googleplus.png" alt="google+" />    </a>
+  </li>
+  <li class="social-media-item">
+    <a class="linkedin" href="https://www.linkedin.com/company/3502198?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A1353159401428421419141%2CVSRPtargetId%3A3502198%2CVSRPcmpt%3Aprimary" target="_blank">
+       <img src="https://www.gruner.ch/sites/all/themes/grunertheme/images/linkedin.png" alt="linkedin" />    </a>
+  </li>
+</ul>  </div>
+</div>
+  </div>
+              <div id="site-logo"><a href="/de" title="Startseite" rel="home" class="site-logo"><img src="https://www.gruner.ch/sites/all/themes/grunertheme/logo.png" alt="Startseite" /></a></div>
+          </div>
+
+      <div class="l-region l-region--navigation">
+    <div id="block-grunerbase-startflags" class="block block--grunerbase block--grunerbase-startflags">
+        <div class="block__content">
+        <div id="startflags">
+                    <a href="/de/karriere/jobs" class="flag jobs">
+                <div class="flagiconwrapper"></div>
+                <div class="flagtext">Jobs</div>
+                <div class="flagicon" style="background-image : url('https://www.gruner.ch/sites/default/files/styles/default/public/thumbnails/image/jobico5.png?itok=v_QRkrpe');"></div>
+            </a>
+                    <a href="/de/news" class="flag news">
+                <div class="flagiconwrapper"></div>
+                <div class="flagtext">News</div>
+                <div class="flagicon" style="background-image : url('https://www.gruner.ch/sites/default/files/styles/default/public/thumbnails/image/newsico6.png?itok=y-vPwBFI');"></div>
+            </a>
+                    <a href="/de/videos" class="flag videos">
+                <div class="flagiconwrapper"></div>
+                <div class="flagtext">Videos</div>
+                <div class="flagicon" style="background-image : url('https://www.gruner.ch/sites/default/files/styles/default/public/thumbnails/image/videoico7.png?itok=Wcy9qTJy');"></div>
+            </a>
+            </div>  </div>
+</div>
+<div id="block-grunerbase-mobile-menu" class="block block--grunerbase block--grunerbase-mobile-menu">
+        <div class="block__content">
+    <div id="gruner-mobile-menu">
+    <div id="gruner-mobile-menu-icon">
+        <span class="line first"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    <a class="gruner-mobile-menu-search" href="/de/search/node">
+        <span class="icon-icon_lupe_m"></span>
+    </a>
+    <ul id="gruner-mobile-menu-wrapper" class="">
+                    <li class="gruner-mobile-menu-kat-item">
+                <a class="gruner-mobile-menu-kat-title" href="/de">Home</a>
+                                    <ul class="gruner-mobile-menu-subkat">
+                                            </ul>
+                  
+            </li>
+                    <li class="gruner-mobile-menu-kat-item">
+                <a class="gruner-mobile-menu-kat-title" href="/de/unternehmen">Unternehmen</a>
+                                    <ul class="gruner-mobile-menu-subkat">
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/unternehmen/entwicklung-gruner-gruppe">> Entwicklung der Gruner Gruppe</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/unternehmen">> Profil</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/unternehmen/vision-strategie">> Vision, Strategie</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/content/ethik-charta-gruner-gruppe">> Ethik Charta</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/unternehmen/organisation">> Organe</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/unternehmen/geschichte">> Geschichte</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/unternehmen/gruppe">> Gruppe</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-ag-0">Gruner AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-berchtold-eicher-ag">Gruner Berchtold Eicher AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-bohringer-ag">Gruner Böhringer AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-gmbh-leipzig">Gruner GmbH (Leipzig)</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-gmbh-wien">Gruner GmbH (Wien)</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/hamburg">Gruner GmbH, Hamburg</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-gmbh-koeln">Gruner GmbH, Köln</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-gmbh-stuttgart">Gruner GmbH, Stuttgart</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-gruneko-ag">Gruner Gruneko AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-ingenieure-ag">Gruner Ingenieure AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-kiwi-ag">Gruner Kiwi AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-luem-ag">Gruner Lüem AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-ltd-international">Gruner Ltd, International</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-roschi-ag">Gruner Roschi AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-wepf-ag-st-gallen">Gruner Wepf AG, St. Gallen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/gruner-wepf-ag-zurich">Gruner Wepf AG, Zürich</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/stucky-sa">Stucky AG</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/stucky-asia">Stucky Asia</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/stucky-balkans-doo">Stucky Balkans d.o.o.</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/stucky-caucasus-ltd">Stucky Caucasus Ltd</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/unternehmen/gruppe/stucky-teknik-eng-cons-comp-ltd">Stucky Teknik Eng. & Cons. Comp. Ltd</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                  
+            </li>
+                    <li class="gruner-mobile-menu-kat-item">
+                <a class="gruner-mobile-menu-kat-title" href="/de/kompetenz/brandschutz-0">Kompetenzen</a>
+                                    <ul class="gruner-mobile-menu-subkat">
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/brandschutz-0">> Brandschutz</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/brandfallsteuerungen-0">Brandfallsteuerungen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/brandschutzberatung">Brandschutzberatung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/brandschutzkonzepte">Brandschutzkonzepte</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/ingenieurmethoden-0">Ingenieurmethoden</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/organisatorischer-und-abwehrender-brandschutz">Organisatorischer und  abwehrender Brandschutz</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/qualitaetssicherung-fachbauleitung">Qualitätssicherung,  Fachbauleitung</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/energie">> Energie</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/energieanlagen-">Energieanlagen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/energieuebertragung">Energieübertragung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/geothermie-0">Geothermie</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/leitungsbau-1">Leitungsbau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/wasserkraft">Wasserkraft</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/gebaeudetechnik">> Gebäudetechnik</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bauklimatik">Bauklimatik</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/datacenter-rechencenter">Datacenter, Rechencenter</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/elektro">Elektro</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/energieanlagen">Energieanlagen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/gebaeudeautomation-raumautomation">Gebäudeautomation, Raumautomation</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/geothermie">Geothermie</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/heizung-lueftung-klima-kaelte">Heizung, Lüftung, Klima, Kälte</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/integrale-planung">Integrale Planung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/labor-reinraeume-institute">Labor, Reinräume, Institute</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/leitungsbau">Leitungsbau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/leitungsbau-0">Leitungsbau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/sanitar-sprinkler">Sanitär, Sprinkler</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/technischer-brandschutz">Technischer Brandschutz</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/generalplanung">> Generalplanung</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/ausfuehrungsarchitektur">Ausführungsplanung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bauherren-beratung">Bauherrenberatung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bauleitung">Bauleitung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/generalplanung-0">Generalplanung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/gesamtleitung">Gesamtleitung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/kostenplanung">Kostenplanung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/projektentwicklung">Projektentwicklung</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/infrastruktur">> Infrastruktur</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bahnen-stadtbahnen">Bahnen, Stadtbahnen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/brueckenbau">Brückenbau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/gemeindeingenieurwesen">Gemeindeingenieurwesen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/baumesstechnik">Geomatik</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/spezialtiefbau-geotechnik-naturgefahren">Spezialtiefbau, Geotechnik</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/staedtischer-und-kommunaler-tiefbau">Städtischer und kommunaler Tiefbau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/strassen">Strassen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/untertagebau">Untertagebau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/verkehr">Verkehr</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/wasserbau">Wasserbau</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/konstruktion">> Konstruktion</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bauwerkserhalt">Bauwerkserhalt</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/erdbebensicherheitsueberpruefung">Erdbebensicherheitsüberprüfung</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/gebaeudeschadstoffe">Gebäudeschadstoffe</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/pruefingenieurwesen-expertisen">Prüfingenieurwesen, Expertisen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/rueckbau">Rückbau</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/tragwerksplanung">Tragwerksplanung</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/sicherheit">> Sicherheit</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/infrastruktursicherheit">Infrastruktursicherheit</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/spezialdienstleistungen-expertisen">Spezialdienstleistungen, Expertisen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/unternehmenssicherheit">Unternehmenssicherheit</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/veranstaltungssicherheit">Veranstaltungssicherheit</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/oeffentliche-sicherheit">Öffentliche Sicherheit</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/kompetenz/umwelt">> Umwelt</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bauakustik-raumakustik">Bauakustik, Raumakustik</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/bauphysik-bauklimatik">Bauphysik, Bauklimatik</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/geologie">Geologie</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/erschuetterungsschutz">Lärmschutz, Erschütterungsschutz</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/naturgefahren">Naturgefahren</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/naturschutz">Naturschutz</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/umwelt-due-diligence">Umwelt Due Diligence</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/kompetenz/umweltplanung">Umweltplanung</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                  
+            </li>
+                    <li class="gruner-mobile-menu-kat-item">
+                <a class="gruner-mobile-menu-kat-title" href="/de/projekte">Projekte</a>
+                                    <ul class="gruner-mobile-menu-subkat">
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/projekte">> Projekte Übersicht (geordnet nach Kompetenzen)</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/projekte#projekte-national">> National</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/wildegg-schweiz">Abwärmerückgewinnungsanlage Jura Cement Fabriken, Wildegg</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/actelion-h89-g06-gebaeude-allschwil">Actelion Gebäude H89/G06, Allschwil</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/kiss-doppelstockzug">Aerodynamik KISS-Doppelstockzug</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/autobahnknotenpunkt-bruttisellen">Autobahnknotenpunkt, Brüttisellen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/burgerspital-bern">Burgerspital, Bern</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/buerogebaeude-roche-tower-basel">Bürogebäude Roche Tower, Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/ceva-bahnverbindung-cornavin-eaux-vives-annemasse-tunnel-und-tiefbahnhof-champel-hopital">CEVA – Bahnverbindung Cornavin–Eaux-Vives–Annemasse, Tunnel und Tiefbahnhof «Champel-Hôpital»</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/referenzen/gt-d-fernwaerme-teris-abwaerme-aus-der-kva-giubiasco-fuer-die-region-bellinzona">Fernwärme Teris, Region Bellinzona</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/referenzen/uniklinik-campus-balgrist-zuerich">Forschungs- / Entwicklungsgebäude Balgrist Campus, Zürich</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/goetheanum-dornach">Goetheanum, Dornach</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/gotthard-basistunnel-nord-gesamtprojekt">Gotthard-Basistunnel Nord: Gesamtprojekt</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/basel-grosspeter-tower">Grosspeter Tower, Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/helvetia-tower-pratteln">Helvetia Tower, Pratteln</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/kinderspital-zuerich">Kinderspital, Zürich</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/mfh-bettstrasse-allschwil">MFH Bettenstrasse, Allschwil</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/neubau-messe-basel-basel">Neubau Messe Basel, Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/prime-tower-zurich">Prime Tower, Zürich</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/produktionsgebaeude-k-90-basel">Produktionsgebäude K-90, Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/hongrin-leman-kanton-waadt">Pumpspeicherwerk Hongrin-Léman, Waadt</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/schulgebaeude-baspo-magglingen">Schulgebäude BASPO, Magglingen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/referenzen/sicherheit-sicherheit-gefahrenabwehr-stjabok-stadion-stjakob-arena">Stadion St.Jakob-Park Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/staumauer-muttsee-glarner-alpen-schweiz">Staumauer Muttsee, Glarner Alpen</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/vieux-emosson-wallis">Staumauer Vieux Emosson, Wallis</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/circle-zuerich">The Circle, Zürich</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/theater-und-schauspielhaus-basel">Theater und Schauspielhaus, Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/referenzen/gt-d-uvek-bern-neubau-buero-verwaltungsgebaeude">UVEK, Bern, Neubau Büro-Verwaltungsgebäude</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/swatch-eta-parc-industriel-et-horologere-boncourt">Uhrenindustriepark Swatch ETA,  Boncourt</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/umfahrung-bad-zurzach">Umfahrung Bad Zurzach</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/referenzen/gru-d-universitaetsspital-basel">Universitätsspital Basel</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/wohnueberbauung-selve-thun">Wohnüberbauung Selve, Thun</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/neubau-zentrum-staldenbach-pfaffikon">Zentrumsüberbauung Staldenbach, Pfäffikon</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/deutsche-eisenbahnstrecken-auf-schweizer-gebiet">Deutsche Eisenbahnstrecken auf Schweizer Gebiet</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/projekte#projekte-inter">> International</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                                <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/b10-tunnel-grotzingen-deutschland">B10-Tunnel Grötzingen, Deutschland</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/sanierung-und-erhohung-der-bogenmauer-von-cambambe-angola">Bogenmauer von Cambambe, Angola</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/besucherstrom-expo-milano-2015">Expo Milano 2015</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/krasny-russland">Floatglas- und Beschichtungsanlage Krasny Sulin, Russland</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/referenzen/gru-d-stuttgart-21">Hauptbahnhof Stuttgart</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/kaluga-russland">Karosseriewerk Kaluga, Russland</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/tabligbo-togo">Klinkeranlage Tabligbo, Togo</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/swiss-green-tower-china">Null-Energie-Gebäude Swiss Green Tower, China</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/al-minya-aegypten">Produktionsanlage Al Minya, Ägypten</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/garadagh-aserbaidschan">Produktionslinie Garadagh, Aserbaidschan</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/kitimat-kanada">Stahlkonstruktion Kitimat, Kanada</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/wasserkraftwerk-alimit-philippinen-mandat-machbarkeitsstudie-stucky">Wasserkraftwerk Alimit, Philippinen - Mandat Machbarkeitsstudie an Stucky</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/nenskra-georgien">Wasserkraftwerk Nenskra, Georgien</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/buk-bijela-und-foca-bosnien-und-herzegowina">Wasserkraftwerke Buk Bijela und Foca, Bosnien und Herzegowina</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/edo-nigeria">Zementanlage Edo, Nigeria</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/khukh-tsav-mongolei">Zementanlage Khukh Tsav, Mongolei</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/nocibe-benin">Zementanlage NOCIBE, Benin</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/shurovo-russland">Zementmühle Shurovo, Russland</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/ciba-grey-algerien">Zementproduktionslinie CIBA Grey, Algerien</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/ciba-white-algerien">Zementproduktionslinie CIBA White, Algerien</a>
+                                            </li>
+                                                                                    <li class="gruner-mobile-menu-list-item">
+                                                <a class="gruner-mobile-menu-list-title" href="/de/projekte/malmoe-schweden">Zementterminal Malmö, Schweden</a>
+                                            </li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                  
+            </li>
+                    <li class="gruner-mobile-menu-kat-item">
+                <a class="gruner-mobile-menu-kat-title" href="/de/karriere">Karriere</a>
+                                    <ul class="gruner-mobile-menu-subkat">
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/karriere">> Arbeiten bei Gruner</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/karriere/jobs">> Stellen</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/karriere/lehrstellen">> Lehrstellen</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/karriere/praktikum">> Praktikum</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/karriere/chancen">> Entwicklung</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                                    <li class="gruner-mobile-menu-subkat-item">
+                                <a class="gruner-mobile-menu-subkat-title" href="/de/karriere/leitbild">> Leitbild</a>
+                                <ul class="gruner-mobile-menu-lists">
+                                                                    </ul>
+                            </li>
+                                            </ul>
+                  
+            </li>
+                    <li class="gruner-mobile-menu-kat-item">
+                <a class="gruner-mobile-menu-kat-title" href="/de/kontakt">Kontakte</a>
+                                    <ul class="gruner-mobile-menu-subkat">
+                                            </ul>
+                  
+            </li>
+            </ul>
+</div>  </div>
+</div>
+<div id="block-md-megamenu-2" class="block block--md-megamenu block--md-megamenu-2">
+        <div class="block__content">
+    <div id="megamenu-2" class="mdmegamenu md-horizontal  md-style2">
+  <ul id="mdmegamenu-2" class="megamenu clearfix">
+                  <li class="mm-item first mm-item-1">
+<a href="https://www.gruner.ch/de/home">Home</a></li>                        <li class="mm-item mm-parent mm-item-2 mm-active">
+  <a href="https://www.gruner.ch/de/unternehmen">Unternehmen</a>  <div class="mm-container mm-fullwidth mmcontainer_12">
+          <div class="mm-sub clearfix" >
+                  <div class="mmg_12" >
+            <div class="inner">
+            <ul id="mm_gruner_menu_unternehmen" class="mm-main-tree menu">
+    <li class="leaf first"><a href="/de/unternehmen">Profil </a></li>
+    <li class="leaf"><a href="/de/unternehmen/vision-strategie">Vision, Strategie </a></li>
+    <li class="leaf"><a href="/de/content/ethik-charta-gruner-gruppe">Ethik Charta </a></li>
+    <li class="leaf"><a href="/de/unternehmen/organisation">Organe </a></li>
+    <li class="leaf"><a href="/de/unternehmen/geschichte">Geschichte </a></li>
+    <li class="leaf last"><a href="/de/unternehmen/gruppe">Gruppe </a><ul id="mm_gruner_menu_unternehmen_743" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/unternehmen/gruppe/gruner-ag-0">Gruner AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-berchtold-eicher-ag">Gruner Berchtold Eicher AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-bohringer-ag">Gruner Böhringer AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-gmbh-leipzig">Gruner GmbH (Leipzig) </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-gmbh-wien">Gruner GmbH (Wien) </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/hamburg">Gruner GmbH, Hamburg </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-gmbh-koeln">Gruner GmbH, Köln </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-gmbh-stuttgart">Gruner GmbH, Stuttgart </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-gruneko-ag">Gruner Gruneko AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-ingenieure-ag">Gruner Ingenieure AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-kiwi-ag" class="active">Gruner Kiwi AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-luem-ag">Gruner Lüem AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-ltd-international">Gruner Ltd, Inter&shy;natio&shy;nal </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-roschi-ag">Gruner Roschi AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-wepf-ag-st-gallen">Gruner Wepf AG, St. Gallen </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/gruner-wepf-ag-zurich">Gruner Wepf AG, Zürich </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/stucky-sa">Stucky AG </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/stucky-asia">Stucky Asia </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/stucky-balkans-doo">Stucky Balkans d.o.o. </a></li>
+    <li class="leaf"><a href="/de/unternehmen/gruppe/stucky-caucasus-ltd">Stucky Caucasus Ltd </a></li>
+    <li class="leaf last"><a href="/de/unternehmen/gruppe/stucky-teknik-eng-cons-comp-ltd">Stucky Teknik Eng. & Cons. Comp. Ltd </a></li>
+</ul></li>
+</ul>            </div>
+          </div>
+              </div>
+      </div>
+</li>                        <li class="mm-item mm-parent mm-item-3">
+  <a href="https://www.gruner.ch/de/kompetenz/brandschutz-0">Kompetenzen</a>  <div class="mm-container mm-fullwidth mmcontainer_12">
+          <div class="mm-sub clearfix" >
+                  <div class="mmg_12" >
+            <div class="inner">
+            <ul id="mm_gruner_menu_kompetenzen" class="mm-main-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/brandschutz-0">Brandschutz </a><ul id="mm_gruner_menu_kompetenzen_2294" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/brandfallsteuerungen-0">Brand&shy;fall&shy;steue&shy;rung&shy;en </a></li>
+    <li class="leaf"><a href="/de/kompetenz/brandschutzberatung">Brand&shy;schutz&shy;beratung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/brandschutzkonzepte">Brand&shy;schutz&shy;konzepte </a></li>
+    <li class="leaf"><a href="/de/kompetenz/ingenieurmethoden-0">Inge&shy;nieur&shy;method&shy;en </a></li>
+    <li class="leaf"><a href="/de/kompetenz/organisatorischer-und-abwehrender-brandschutz">Or&shy;ga&shy;ni&shy;sa&shy;to&shy;rischer und  abwehrender Brand&shy;schutz </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/qualitaetssicherung-fachbauleitung">Qua&shy;li&shy;täts&shy;si&shy;che&shy;rung,  Fachbauleitung </a></li>
+</ul></li>
+    <li class="leaf"><a href="/de/kompetenz/energie">Energie </a><ul id="mm_gruner_menu_kompetenzen_726" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/energieanlagen-">Energie&shy;anlagen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/energieuebertragung">Energie&shy;übertragung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/geothermie-0">Geo&shy;thermie </a></li>
+    <li class="leaf"><a href="/de/kompetenz/leitungsbau-1">Leitungsbau </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/wasserkraft">Wasser&shy;kraft </a></li>
+</ul></li>
+    <li class="leaf"><a href="/de/kompetenz/gebaeudetechnik">Gebäudetechnik </a><ul id="mm_gruner_menu_kompetenzen_699" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/bauklimatik">Bauklimatik </a></li>
+    <li class="leaf"><a href="/de/kompetenz/datacenter-rechencenter">Data&shy;cen&shy;ter, Rechen&shy;cen&shy;ter </a></li>
+    <li class="leaf"><a href="/de/kompetenz/elektro">Elektro </a></li>
+    <li class="leaf"><a href="/de/kompetenz/energieanlagen">Energie&shy;anlagen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/gebaeudeautomation-raumautomation">Gebäude&shy;auto&shy;ma&shy;tion, Raum&shy;auto&shy;ma&shy;tion </a></li>
+    <li class="leaf"><a href="/de/kompetenz/geothermie">Geo&shy;thermie </a></li>
+    <li class="leaf"><a href="/de/kompetenz/heizung-lueftung-klima-kaelte">Heizung, Lüftung, Klima, Kälte </a></li>
+    <li class="leaf"><a href="/de/kompetenz/integrale-planung">Integrale Pla&shy;nung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/labor-reinraeume-institute">Labor, Reinräume, Institute </a></li>
+    <li class="leaf"><a href="/de/kompetenz/leitungsbau">Leitungsbau </a></li>
+    <li class="leaf"><a href="/de/kompetenz/sanitar-sprinkler">Sanitär, Sprinkler </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/technischer-brandschutz">Technischer Brand&shy;schutz </a></li>
+</ul></li>
+    <li class="leaf"><a href="/de/kompetenz/generalplanung">Generalplanung </a><ul id="mm_gruner_menu_kompetenzen_704" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/ausfuehrungsarchitektur">Aus&shy;führungs&shy;pla&shy;nung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/bauherren-beratung">Bau&shy;herren&shy;beratung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/bauleitung">Bauleitung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/generalplanung-0">General&shy;pla&shy;nung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/gesamtleitung">Gesamt&shy;leitung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/kostenplanung">Kostenplanung </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/projektentwicklung">Projekt&shy;entwicklung </a></li>
+</ul></li>
+    <li class="leaf"><a href="/de/kompetenz/infrastruktur">Infrastruktur </a><ul id="mm_gruner_menu_kompetenzen_708" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/bahnen-stadtbahnen">Bahnen, Stadt&shy;bah&shy;nen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/brueckenbau">Brückenbau </a></li>
+    <li class="leaf"><a href="/de/kompetenz/gemeindeingenieurwesen">Gemeinde&shy;ingenieur&shy;wesen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/baumesstechnik">Geomatik </a></li>
+    <li class="leaf"><a href="/de/kompetenz/spezialtiefbau-geotechnik-naturgefahren">Spezial&shy;tief&shy;bau, Geotechnik </a></li>
+    <li class="leaf"><a href="/de/kompetenz/staedtischer-und-kommunaler-tiefbau">Städtischer und kommunaler Tiefbau </a></li>
+    <li class="leaf"><a href="/de/kompetenz/strassen">Strassen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/untertagebau">Unter&shy;tage&shy;bau </a></li>
+    <li class="leaf"><a href="/de/kompetenz/verkehr">Verkehr </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/wasserbau">Wasserbau </a></li>
+</ul></li>
+    <li class="leaf"><a href="/de/kompetenz/konstruktion">Konstruktion </a><ul id="mm_gruner_menu_kompetenzen_705" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/bauwerkserhalt">Bauwerkserhalt </a></li>
+    <li class="leaf"><a href="/de/kompetenz/erdbebensicherheitsueberpruefung">Erdbeben&shy;sicherheits&shy;überprü&shy;fung </a></li>
+    <li class="leaf"><a href="/de/kompetenz/gebaeudeschadstoffe">Gebäude&shy;schad&shy;stoffe </a></li>
+    <li class="leaf"><a href="/de/kompetenz/pruefingenieurwesen-expertisen">Prüf&shy;ingenieur&shy;wesen, Expertisen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/rueckbau">Rück&shy;bau </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/tragwerksplanung">Trag&shy;werks&shy;planung </a></li>
+</ul></li>
+    <li class="leaf"><a href="/de/kompetenz/sicherheit">Sicherheit </a><ul id="mm_gruner_menu_kompetenzen_722" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/infrastruktursicherheit">Infra&shy;struktur&shy;si&shy;cher&shy;heit </a></li>
+    <li class="leaf"><a href="/de/kompetenz/spezialdienstleistungen-expertisen">Spezial&shy;dienst&shy;leis&shy;tung&shy;en, Expertisen </a></li>
+    <li class="leaf"><a href="/de/kompetenz/unternehmenssicherheit">Unter&shy;nehmens&shy;si&shy;cher&shy;heit </a></li>
+    <li class="leaf"><a href="/de/kompetenz/veranstaltungssicherheit">Ver&shy;anstal&shy;tungs&shy;si&shy;cher&shy;heit </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/oeffentliche-sicherheit">Öffentliche Sicher&shy;heit </a></li>
+</ul></li>
+    <li class="leaf last"><a href="/de/kompetenz/umwelt">Umwelt </a><ul id="mm_gruner_menu_kompetenzen_714" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/kompetenz/bauakustik-raumakustik">Bauakustik, Raumakustik </a></li>
+    <li class="leaf"><a href="/de/kompetenz/bauphysik-bauklimatik">Bauphysik, Bauklimatik </a></li>
+    <li class="leaf"><a href="/de/kompetenz/geologie">Geologie </a></li>
+    <li class="leaf"><a href="/de/kompetenz/erschuetterungsschutz">Lärmschutz, Er&shy;schüt&shy;terungs&shy;schutz </a></li>
+    <li class="leaf"><a href="/de/kompetenz/naturgefahren">Natur&shy;ge&shy;fahr&shy;en </a></li>
+    <li class="leaf"><a href="/de/kompetenz/naturschutz">Naturschutz </a></li>
+    <li class="leaf"><a href="/de/kompetenz/umwelt-due-diligence">Umwelt Due Diligence </a></li>
+    <li class="leaf last"><a href="/de/kompetenz/umweltplanung">Umwelt&shy;pla&shy;nung </a></li>
+</ul></li>
+</ul>            </div>
+          </div>
+              </div>
+      </div>
+</li>                        <li class="mm-item mm-parent mm-item-4">
+  <a href="https://www.gruner.ch/de/projekte">Projekte</a>  <div class="mm-container mm-fullwidth mmcontainer_12">
+          <div class="mm-sub clearfix" >
+                  <div class="mmg_12" >
+            <div class="inner">
+            <ul id="mm_gruner_menu_projekte" class="mm-main-tree menu">
+    <li class="leaf first"><a href="/de/projekte">Projekte Übersicht (geordnet nach Kompetenzen) </a></li>
+    <li class="leaf"><a href="/de/project-national">National </a><ul id="mm_gruner_menu_projekte_866" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/projekte/wildegg-schweiz">Abwärme&shy;rück&shy;gewinnungs&shy;anlage Jura Cement Fabriken, Wildegg </a></li>
+    <li class="leaf"><a href="/de/projekte/actelion-h89-g06-gebaeude-allschwil">Actelion Ge&shy;bäu&shy;de H89/G06, All&shy;sch&shy;wil </a></li>
+    <li class="leaf"><a href="/de/projekte/kiss-doppelstockzug">Aero&shy;dynamik KISS-Doppelstockzug </a></li>
+    <li class="leaf"><a href="/de/projekte/autobahnknotenpunkt-bruttisellen">Autobahnknotenpunkt, Brüttisellen </a></li>
+    <li class="leaf"><a href="/de/projekte/burgerspital-bern">Burgerspital, Bern </a></li>
+    <li class="leaf"><a href="/de/projekte/buerogebaeude-roche-tower-basel">Büro&shy;ge&shy;bäude Roche Tower, Basel </a></li>
+    <li class="leaf"><a href="/de/projekte/ceva-bahnverbindung-cornavin-eaux-vives-annemasse-tunnel-und-tiefbahnhof-champel-hopital">CEVA – Bahnverbindung Cornavin–Eaux-Vives–Annemasse, Tunnel und Tiefbahnhof «Champel-Hôpital» </a></li>
+    <li class="leaf"><a href="/de/referenzen/gt-d-fernwaerme-teris-abwaerme-aus-der-kva-giubiasco-fuer-die-region-bellinzona">Fernwärme Teris, Region Bellinzona </a></li>
+    <li class="leaf"><a href="/de/referenzen/uniklinik-campus-balgrist-zuerich">Forschungs- / Entwicklungsgebäude Balgrist Campus, Zürich </a></li>
+    <li class="leaf"><a href="/de/projekte/goetheanum-dornach">Goetheanum, Dornach </a></li>
+    <li class="leaf"><a href="/de/projekte/gotthard-basistunnel-nord-gesamtprojekt">Gotthard-Basistunnel Nord: Gesamtprojekt </a></li>
+    <li class="leaf"><a href="/de/projekte/basel-grosspeter-tower">Gross&shy;peter Tower, Basel </a></li>
+    <li class="leaf"><a href="/de/projekte/helvetia-tower-pratteln">Helvetia Tower, Pratteln </a></li>
+    <li class="leaf"><a href="/de/projekte/kinderspital-zuerich">Kinderspital, Zürich </a></li>
+    <li class="leaf"><a href="/de/projekte/mfh-bettstrasse-allschwil">MFH Bettenstrasse, All&shy;sch&shy;wil </a></li>
+    <li class="leaf"><a href="/de/projekte/neubau-messe-basel-basel">Neu&shy;bau Messe Basel, Basel </a></li>
+    <li class="leaf"><a href="/de/projekte/prime-tower-zurich">Prime Tower, Zürich </a></li>
+    <li class="leaf"><a href="/de/projekte/produktionsgebaeude-k-90-basel">Produkt&shy;ions&shy;ge&shy;bäu&shy;de K-90, Basel </a></li>
+    <li class="leaf"><a href="/de/projekte/hongrin-leman-kanton-waadt">Pump&shy;speicher&shy;werk Hongrin-Léman, Waadt </a></li>
+    <li class="leaf"><a href="/de/projekte/schulgebaeude-baspo-magglingen">Schulgebäude BASPO, Magglingen </a></li>
+    <li class="leaf"><a href="/de/referenzen/sicherheit-sicherheit-gefahrenabwehr-stjabok-stadion-stjakob-arena">Stadion St.Jakob-Park Basel </a></li>
+    <li class="leaf"><a href="/de/projekte/staumauer-muttsee-glarner-alpen-schweiz">Staumauer Muttsee, Glarner Alpen </a></li>
+    <li class="leaf"><a href="/de/projekte/vieux-emosson-wallis">Staumauer Vieux Emosson, Wallis </a></li>
+    <li class="leaf"><a href="/de/projekte/circle-zuerich">The Circle, Zürich </a></li>
+    <li class="leaf"><a href="/de/projekte/theater-und-schauspielhaus-basel">Theater und Schauspielhaus, Basel </a></li>
+    <li class="leaf"><a href="/de/referenzen/gt-d-uvek-bern-neubau-buero-verwaltungsgebaeude">UVEK, Bern, Neu&shy;bau Büro-Verwaltungsgebäude </a></li>
+    <li class="leaf"><a href="/de/projekte/swatch-eta-parc-industriel-et-horologere-boncourt">Uhrenindustriepark Swatch ETA,  Boncourt </a></li>
+    <li class="leaf"><a href="/de/projekte/umfahrung-bad-zurzach">Umfahrung Bad Zurzach </a></li>
+    <li class="leaf"><a href="/de/referenzen/gru-d-universitaetsspital-basel">Uni&shy;ver&shy;sitäts&shy;spital Basel </a></li>
+    <li class="leaf"><a href="/de/projekte/wohnueberbauung-selve-thun">Wohn&shy;über&shy;bau&shy;ung Selve, Thun </a></li>
+    <li class="leaf"><a href="/de/projekte/neubau-zentrum-staldenbach-pfaffikon">Zentrumsüberbauung Staldenbach, Pfäffikon </a></li>
+    <li class="leaf last"><a href="/de/projekte/deutsche-eisenbahnstrecken-auf-schweizer-gebiet">Deutsche Eisen&shy;bahn&shy;stre&shy;cken auf Schweiz&shy;er Gebiet </a></li>
+</ul></li>
+    <li class="leaf last"><a href="/de/project-international">International </a><ul id="mm_gruner_menu_projekte_867" class="mm-sub-tree menu">
+    <li class="leaf first"><a href="/de/projekte/b10-tunnel-grotzingen-deutschland">B10-Tunnel Grötzingen, Deutschland </a></li>
+    <li class="leaf"><a href="/de/projekte/sanierung-und-erhohung-der-bogenmauer-von-cambambe-angola">Bogen&shy;mauer von Cambambe, Angola </a></li>
+    <li class="leaf"><a href="/de/projekte/besucherstrom-expo-milano-2015">Expo Milano 2015 </a></li>
+    <li class="leaf"><a href="/de/projekte/krasny-russland">Floatglas- und Beschichtungsanlage Krasny Sulin, Russland </a></li>
+    <li class="leaf"><a href="/de/referenzen/gru-d-stuttgart-21">Hauptbahnhof Stuttgart </a></li>
+    <li class="leaf"><a href="/de/projekte/kaluga-russland">Karosseriewerk Kaluga, Russland </a></li>
+    <li class="leaf"><a href="/de/projekte/tabligbo-togo">Klinkeranlage Tabligbo, Togo </a></li>
+    <li class="leaf"><a href="/de/projekte/swiss-green-tower-china">Null-Energie-Gebäude Swiss Green Tower, China </a></li>
+    <li class="leaf"><a href="/de/projekte/al-minya-aegypten">Pro&shy;duktions&shy;an&shy;lage Al Minya, Ägypten </a></li>
+    <li class="leaf"><a href="/de/projekte/garadagh-aserbaidschan">Pro&shy;duktions&shy;li&shy;nie Garadagh, Aser&shy;baid&shy;schan </a></li>
+    <li class="leaf"><a href="/de/projekte/kitimat-kanada">Stahlkonstruktion Kitimat, Kanada </a></li>
+    <li class="leaf"><a href="/de/projekte/wasserkraftwerk-alimit-philippinen-mandat-machbarkeitsstudie-stucky">Wasserkraftwerk Alimit, Philippinen - Mandat Mach&shy;bar&shy;keits&shy;studie an Stucky </a></li>
+    <li class="leaf"><a href="/de/projekte/nenskra-georgien">Wasserkraftwerk Nenskra, Georgien </a></li>
+    <li class="leaf"><a href="/de/projekte/buk-bijela-und-foca-bosnien-und-herzegowina">Wasserkraftwerke Buk Bijela und Foca, Bosnien und Herzegowina </a></li>
+    <li class="leaf"><a href="/de/projekte/edo-nigeria">Zement&shy;an&shy;lage Edo, Nigeria </a></li>
+    <li class="leaf"><a href="/de/projekte/khukh-tsav-mongolei">Zement&shy;an&shy;lage Khukh Tsav, Mongolei </a></li>
+    <li class="leaf"><a href="/de/projekte/nocibe-benin">Zement&shy;an&shy;lage NOCIBE, Benin </a></li>
+    <li class="leaf"><a href="/de/projekte/shurovo-russland">Zementmühle Shurovo, Russland </a></li>
+    <li class="leaf"><a href="/de/projekte/ciba-grey-algerien">Zement&shy;pro&shy;duktions&shy;linie CIBA Grey, Algerien </a></li>
+    <li class="leaf"><a href="/de/projekte/ciba-white-algerien">Zement&shy;pro&shy;duktions&shy;linie CIBA White, Algerien </a></li>
+    <li class="leaf last"><a href="/de/projekte/malmoe-schweden">Ze&shy;ment&shy;term&shy;inal Malmö, Schweden </a></li>
+</ul></li>
+</ul>            </div>
+          </div>
+              </div>
+      </div>
+</li>                        <li class="mm-item mm-parent mm-item-5">
+  <a href="https://www.gruner.ch/de/karriere">Karriere</a>  <div class="mm-container mm-fullwidth mmcontainer_12">
+          <div class="mm-sub clearfix" >
+                  <div class="mmg_12" >
+            <div class="inner">
+            <ul id="mm_gruner_menu_karriere" class="mm-main-tree menu">
+    <li class="leaf first"><a href="/de/karriere">Arbeiten bei Gruner </a></li>
+    <li class="leaf"><a href="/de/karriere/jobs">Stellen </a></li>
+    <li class="leaf"><a href="/de/karriere/lehrstellen">Lehrstellen </a></li>
+    <li class="leaf"><a href="/de/karriere/praktikum">Praktikum </a></li>
+    <li class="leaf"><a href="/de/karriere/chancen">Entwicklung </a></li>
+    <li class="leaf last"><a href="/de/karriere/leitbild">Leitbild </a></li>
+</ul>            </div>
+          </div>
+              </div>
+      </div>
+</li>                        <li class="mm-item last mm-item-6">
+<a href="https://www.gruner.ch/de/kontakt">Kontakt</a></li>            </ul>
+  </div>  </div>
+</div>
+  </div>
+  </header>
+
+  <div class="l-main">
+
+    <div class="l-content" role="main">
+            <h2 class="element-invisible">Sie sind hier</h2><ul class="breadcrumb"><li><a href="/de">Startseite</a></li><li><a href="/de/unternehmen">Unternehmen</a></li><li><a href="/de/unternehmen/gruppe">Gruppe</a></li></ul>      <a id="main-content"></a>
+                                    
+                   
+           
+
+<article about="/de/unternehmen/gruppe/gruner-kiwi-ag" typeof="sioc:Item foaf:Document" role="article" class="node node--firmen node--full node--firmen--full">
+
+    
+
+
+
+
+<!-- Two Colum Layout -->
+
+
+<div class="basic-content-block padding-top-only submenu-block  backcolor-white"><div class="basic-content-center"><div class="basic-content-center-width"><ul id="gruner-submenu" class="gruner-submenu"><li><a href="https://www.gruner.ch/de/unternehmen" >Profil</a></li><li><a href="https://www.gruner.ch/de/unternehmen/vision-strategie" >Vision, Strategie</a></li><li><a href="https://www.gruner.ch/de/content/ethik-charta-gruner-gruppe" >Ethik Charta</a></li><li><a href="https://www.gruner.ch/de/unternehmen/organisation" >Organe</a></li><li><a href="https://www.gruner.ch/de/unternehmen/geschichte" >Geschichte</a></li><li><a href="https://www.gruner.ch/de/unternehmen/gruppe" class="active">Gruppe</a></li></ul><ul id="metanavigation2"><li class= "share"><a  href="https://www.gruner.ch/de/forward?path=unternehmen/gruppe/gruner-kiwi-ag">Teilen</a></li><li class= "print"><a  href="javascript:window.print()">Drucken</a></li><li class= "size"><a id= "fontsizechanger" href="https://www.gruner.ch/de">Schriftgrösse</a></li></ul></div></div></div>  
+  <div id="a-164"
+       class="basic-content-block backcolor-white   padding-both  "
+       data-fcinline="164"  >
+    <div class="basic-content-one-colum display-both-colums">
+      <div class="basic-content-left">
+        <div class="basic-content-fix-width float-right">
+
+                                  <h2 class="red-big">
+	Gruner<br />
+	Kiwi AG&nbsp;</h2>
+          
+                  </div>
+
+      </div>
+
+      <div class="basic-content-right">
+        <div class="basic-content-fix-width">
+          <p>Gruner Kiwi AG, gegründet 1990, ist eine unabhängige Beratungs- und Planungsfirma mit Sitz in Dübendorf. Wir stärken die Gruner Gruppe mit unseren Kernkompetenzen in der Beratung und Planung von technischen Gebäudeausrüstungen.</p>
+<p>Wir bieten privaten und öffentlichen Auftraggebern unsere langjährige Erfahrung und unser umfassendes Fachwissen als Gesamt- oder Fachplaner an. Qualifizierte und engagierte Mitarbeitende stehen für kundenspezifische Lösungen zur Verfügung. Je nach Aufgabenstellung werden für die Bearbeitung von Projekten kompetente, interdisziplinäre Projektteams gebildet.</p>
+<p>Building Information Modeling: Damit aus Ihrer Idee Realität wird, arbeiten wir mit dem Modell der 7 Dimensionen des digitalen Planens. Im <a href="https://www.gruner.ch/sites/default/files/videos/Gruner_Imagefilm_7_Dimensionen/Gruner_Imagefilm_7_Dimensionen.mp4">Video</a> erfahren Sie, wie die Gruner Gruppe mit BIM plant, um Ihr Gebäudetechnik-Projekt zu realisieren.</p>
+<p>&nbsp;</p>
+
+
+                  </div>
+
+      </div>
+    </div>
+      </div>
+  <!-- End Two Colum Layout -->
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+<!-- Two Colum Layout -->
+
+
+
+  <div id="a-794"
+       class="basic-content-block backcolor-white   padding-both  "
+       data-fcinline="794"  >
+    <div class="basic-content-one-colum display-both-colums">
+      <div class="basic-content-left">
+        <div class="basic-content-fix-width float-right">
+
+                                  <h2 class="black-small">
+	Geschäftsleitung</h2>
+          
+                  </div>
+
+      </div>
+
+      <div class="basic-content-right">
+        <div class="basic-content-fix-width">
+          <p>Michael Reuteler, Dipl. Ing. FH, Elektrotechnik</p>
+
+
+                  </div>
+
+      </div>
+    </div>
+      </div>
+  <!-- End Two Colum Layout -->
+
+
+
+
+
+
+  
+  
+  
+<div class="basic-content-block backcolor-white padding-bottom-only">
+  <div class="basic-content-left">
+    <div class="basic-content-fix-width float-right">              
+         <h2 class="black-small">
+         Kompetenzen         </h2>    
+    </div>   
+  </div>   
+  <div class="basic-content-right">
+    <div class="basic-content-fix-width company--competence">
+       <p><strong>Energie</strong></p><ul><li><a href="/de/kompetenz/energieanlagen-">Energieanlagen</a></li><li><a href="/de/kompetenz/energieuebertragung">Energieübertragung</a></li><li><a href="/de/kompetenz/geothermie-0">Geothermie</a></li><li><a href="/de/kompetenz/leitungsbau-1">Leitungsbau</a></li><li><a href="/de/kompetenz/wasserkraft">Wasserkraft</a></li></ul><p><strong>Gebäudetechnik</strong></p><ul><li><a href="/de/kompetenz/bauklimatik">Bauklimatik</a></li><li><a href="/de/kompetenz/datacenter-rechencenter">Datacenter, Rechencenter</a></li><li><a href="/de/kompetenz/elektro">Elektro</a></li><li><a href="/de/kompetenz/energieanlagen">Energieanlagen</a></li><li><a href="/de/kompetenz/gebaeudeautomation-raumautomation">Gebäude- und Raumautomation</a></li><li><a href="/de/kompetenz/geothermie">Geothermie</a></li><li><a href="/de/kompetenz/heizung-lueftung-klima-kaelte">Heizung, Lüftung, Klima, Kälte</a></li><li><a href="/de/kompetenz/integrale-planung">Integrale Planung</a></li><li><a href="/de/kompetenz/labor-reinraeume-institute">Labor, Reinräume, Institute</a></li><li><a href="/de/kompetenz/leitungsbau">Leitungsbau</a></li><li><a href="/de/kompetenz/sanitar-sprinkler">Sanitär, Sprinkler</a></li><li><a href="/de/kompetenz/technischer-brandschutz">Technischer Brandschutz</a></li></ul>    </div>
+  </div>
+</div>  
+<div class="basic-content-block backcolor-grey padding-both reference-block">
+    <div class="basic-content-left">
+
+        <div class="basic-content-fix-width float-right"> 
+            
+
+                 
+
+              <h2 class="white-big">
+                  Referenzen              </h2>
+
+
+              <h2 class="black-big">
+	Gruner<br />
+	Kiwi AG&nbsp;</h2>
+
+                
+
+               
+
+
+               
+
+
+    
+
+        </div>   
+    </div>
+
+    <div class="basic-content-right">
+                  <div class="basic-content-fix-width reference-owl">
+                                    <div class="related-references-slide">
+                              <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/erweiterung-der-zone-flughafen-zuerich?target=99" title="Erweiterung der Zone A, Flughafen Zürich"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/flughafen_zuerich_erweiterung_zonea_1.png?itok=1ZEsU2tj" alt="Flughafen Zuerich, Erweiterung Zone A" title="Flughafen Zuerich, Erweiterung Zone A" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/erweiterung-der-zone-flughafen-zuerich?target=99" title="Erweiterung der Zone A, Flughafen Zürich" class="link-black">Erweiterung der Zone A, Flughafen Zürich</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/uniklinik-campus-balgrist-zuerich?target=99" title="Gebäude F&E Balgrist Campus, Zürich"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/balgrist_campus_lenggweg_nacht.jpg?itok=6VwgCTld" alt="Referenz Gruner Kiwi Forschungs- und Entwicklungsgebäude Balgrist Campus, Zürich" title="Referenz Gruner Kiwi Forschungs- und Entwicklungsgebäude Balgrist Campus, Zürich" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/uniklinik-campus-balgrist-zuerich?target=99" title="Gebäude F&E Balgrist Campus, Zürich" class="link-black">Gebäude F&E Balgrist Campus, Zürich</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/d-sihl-city?target=99" title="Sihlcity, Zürich "><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/sihlcity_luft_m12.jpg?itok=g-hwN-4Z" alt="Referenz sihlcity_luft_m12.jpg" title="Referenz sihlcity_luft_m12.jpg" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/d-sihl-city?target=99" title="Sihlcity, Zürich " class="link-black">Sihlcity, Zürich </a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/novartis-laborgebaeude-wsj-177?target=99" title="Novartis, Laborgebäude WSJ-177"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/novartis_campus_wsj-177_labor.jpg?itok=QPOElRhM" alt="Novartis, Laborgebäude WSJ-177" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/novartis-laborgebaeude-wsj-177?target=99" title="Novartis, Laborgebäude WSJ-177" class="link-black">Novartis, Laborgebäude WSJ-177</a></div>
+                        </div>
+                                    </div>
+                                  <div class="related-references-slide">
+                              <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/bankgebaeude-stgaller-kb-st-leonhardstrasse?target=99" title="Bankgebäude St.Galler KB, St. Leonhardstrasse"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/sgkb_zentralsitz_st._leonhardstrasse_gebaeudeansicht.jpg?itok=4JqTKiLQ" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/bankgebaeude-stgaller-kb-st-leonhardstrasse?target=99" title="Bankgebäude St.Galler KB, St. Leonhardstrasse" class="link-black">Bankgebäude St.Galler KB, St. Leonhardstrasse</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/gt-d-ibm-datacenter-winterthur?target=99" title="IBM-Datacenter Winterthur"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/new_datacenter_winterthur_gebaeudeansicht.jpg?itok=1OyMj2ce" alt="new_datacenter_winterthur_gebaeudeansicht.jpg" title="new_datacenter_winterthur_gebaeudeansicht.jpg" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/gt-d-ibm-datacenter-winterthur?target=99" title="IBM-Datacenter Winterthur" class="link-black">IBM-Datacenter Winterthur</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/novartis-neubau-nslf-pharma-produktion?target=99" title="Novartis, Neubau NSLF, Pharma Produktion"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/novartis_nslf_gebaeudeansicht_sued-ost.jpg?itok=J7R4bihi" alt="Novartis NSLF" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/novartis-neubau-nslf-pharma-produktion?target=99" title="Novartis, Neubau NSLF, Pharma Produktion" class="link-black">Novartis, Neubau NSLF, Pharma Produktion</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/gt-d-suva-luzern-ersatz-rechenzentrum?target=99" title="Suva Luzern, Ersatz Rechenzentrum"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/suva_roesslimatt_gebaeudeansicht_0.jpg?itok=P40EMnUr" alt="suva_roesslimatt_gebaeudeansicht.jpg" title="suva_roesslimatt_gebaeudeansicht.jpg" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/gt-d-suva-luzern-ersatz-rechenzentrum?target=99" title="Suva Luzern, Ersatz Rechenzentrum" class="link-black">Suva Luzern, Ersatz Rechenzentrum</a></div>
+                        </div>
+                                    </div>
+                                  <div class="related-references-slide">
+                              <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/gebaeudetechnik-dienstleistungsgebaeude-stettbach-zuerich?target=99" title="Gebäudetechnik Dienstleistungsgebäude Stettbach, Zürich"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/zuerich_dienstleistungsgebaeude_stettbach_gebaeudeansicht_0.jpg?itok=ziuv3FPD" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/gebaeudetechnik-dienstleistungsgebaeude-stettbach-zuerich?target=99" title="Gebäudetechnik Dienstleistungsgebäude Stettbach, Zürich" class="link-black">Gebäudetechnik Dienstleistungsgebäude Stettbach, Zürich</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/gt-d-roche-areal-kaiseraugst-laborgebaude-q2k?target=99" title="Roche Areal Kaiseraugst, Laborgebäude Q2K"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/roche_kaiseraugst_q2k_gebaeudeansicht.jpg?itok=_a4YuQSS" alt="roche_kaiseraugst_q2k_gebaeudeansicht.jpg" title="roche_kaiseraugst_q2k_gebaeudeansicht.jpg" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/gt-d-roche-areal-kaiseraugst-laborgebaude-q2k?target=99" title="Roche Areal Kaiseraugst, Laborgebäude Q2K" class="link-black">Roche Areal Kaiseraugst, Laborgebäude Q2K</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/gt-d-uvek-bern-neubau-buero-verwaltungsgebaeude?target=99" title="UVEK, Bern, Neubau Büro-Verwaltungsgebäude"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/visualisierung_uvek_bern.jpg?itok=eCOWDTUP" alt="visualisierung_uvek_bern.jpg" title="visualisierung_uvek_bern.jpg" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/gt-d-uvek-bern-neubau-buero-verwaltungsgebaeude?target=99" title="UVEK, Bern, Neubau Büro-Verwaltungsgebäude" class="link-black">UVEK, Bern, Neubau Büro-Verwaltungsgebäude</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/referenzen/bankgebaeude-credit-suisse-paradeplatz-zuerich?target=99" title="Bankgebäude, Credit Suisse Paradeplatz, Zürich"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/cs_paradeplatz.jpg?itok=tQkZVlYc" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/referenzen/bankgebaeude-credit-suisse-paradeplatz-zuerich?target=99" title="Bankgebäude, Credit Suisse Paradeplatz, Zürich" class="link-black">Bankgebäude, Credit Suisse Paradeplatz, Zürich</a></div>
+                        </div>
+                                    </div>
+                                  <div class="related-references-slide">
+                              <div class="related-references">
+                            <a href="https://www.gruner.ch/de/projekte/buerogebaeude-roche-tower-basel?target=99" title="Bürogebäude Roche Tower, Basel"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/roche_tower_gebaeudeansicht_hudm.jpg?itok=0otZXX6K" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/projekte/buerogebaeude-roche-tower-basel?target=99" title="Bürogebäude Roche Tower, Basel" class="link-black">Bürogebäude Roche Tower, Basel</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/projekte/ara-hard-winterthur?target=99" title="ARA Hard Winterthur"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/ara-hard_stadtwerke_winterthur.jpg?itok=v8_mfSOh" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/projekte/ara-hard-winterthur?target=99" title="ARA Hard Winterthur" class="link-black">ARA Hard Winterthur</a></div>
+                        </div>
+                                          <div class="related-references">
+                            <a href="https://www.gruner.ch/de/projekte/europaallee-baufeld-h-zuerich-gt?target=99" title="Europaallee Baufeld H, Zürich (GT)"><img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/reference-image-small/public/thumbnails/image/perspektive_008.jpg?itok=s7iOtc9T" alt="Projekt Europaallee - Bild 3" title="Projekt Europaallee - Bild 3" /></a>
+                            <div class="related-references-link"><a href="https://www.gruner.ch/de/projekte/europaallee-baufeld-h-zuerich-gt?target=99" title="Europaallee Baufeld H, Zürich (GT)" class="link-black">Europaallee Baufeld H, Zürich (GT)</a></div>
+                        </div>
+                                    </div>
+                
+                        </div>
+    </div>
+</div>
+
+
+<div class="basic-content-block backcolor-darkgrey contact-display padding-both">
+    <div class="basic-content-left">
+        <div class="basic-content-fix-width float-right">
+
+                          <h2 class="red-big">Kontakt</h2>
+            
+
+            <h2 class="white-big">
+	Gruner<br />
+	Kiwi AG&nbsp;</h2>
+
+             
+
+             
+                    </div>   
+    </div>
+    <div class="basic-content-right">
+        <div class="basic-content-fix-width">
+            <div class="basic-content-contact-info company">
+
+                
+                <strong>Gruner Kiwi AG</strong><br>
+                Im Schörli 5<br>
+                8600 Dübendorf<br>
+                Schweiz<br>
+                T +41 44 802 11 77<br>                F +41 44 802 11 88<br>                                                <div class="location map-link">See map: <a href="http://maps.google.com?q=Im+Sch%C3%B6rli+5%2C+D%C3%BCbendorf%2C+Schweiz">Standort</a></div>                            
+            </div>
+            
+                            <div class="basic-content-contactperson-info-wrapper"> 
+                    <div class="basic-content-contactperson-info"> 
+                        <strong>Ansprechpartner</strong><br />
+                          Michael Reuteler<br />
+                        T +41 44 802 11 97 <br />                        
+                                  
+                          <a id="contact-obfx-5167" class="contact-obfx " data-cid="5167" href="http://www.google.com/recaptcha/mailhide/d?k=01RgRLgvxEUrUhAUtFCSPNRA==&amp;c=0nIRqiLvmUU-5ifT56SvMSY2hB9qsGA9T0u6dIWkHPI="><div style="display:none"><span style="display:none">obfuscationXfunc</span>Michael.Reuteler@gr<span style="display:none;">obfuscationXfunc</span>uner.ch</div>
+                              <img class="mailicon" src="/sites/all/themes/grunertheme/images/mail.png" />
+                          </a>
+                                            </div>
+                    <div class="basic-content-contactperson-image">
+    <img class="" typeof="foaf:Image" src="https://www.gruner.ch/sites/default/files/styles/contactperson/public/thumbnails/image/michael_reuteler_gruner.jpg?itok=YLlu84ps" alt="Michael Reuteler Gruner Gruneko AG" title="Michael Reuteler Gruner Gruneko AG" />                    </div>
+                </div>
+                <br />
+                        </div>
+    </div>  
+</div>
+
+
+<div class="basic-content-block backcolor-darkgrey contact-display padding-bottom-only">
+    <div class="basic-content-left">
+        <div class="basic-content-fix-width float-right">
+
+            
+
+            
+             
+
+                          &nbsp;
+             
+                    </div>   
+    </div>
+    <div class="basic-content-right">
+        <div class="basic-content-fix-width">
+            <div class="basic-content-contact-info branch">
+
+                <h3 class="h3-red-bigger">Niederlassung</h3>
+                <strong>Gruner Kiwi AG</strong><br>
+                St. Jakobs-Strasse 199<br>
+                4020 Basel<br>
+                Schweiz<br>
+                T +41 61 511 09 30<br>                F +41 61 511 09 49<br>                                                <div class="location map-link">See map: <a href="http://maps.google.com?q=St.+Jakobs-Strasse+199%2C+Basel%2C+Schweiz">Standort</a></div>                            
+            </div>
+            
+                    </div>
+    </div>  
+</div>
+
+</article>
+              
+
+          </div>
+
+          </div>
+
+  <footer class="l-footer" role="contentinfo">
+      <div class="l-region l-region--footer">
+    <div id="block-grunerbase-gruner-footer" class="block block--grunerbase block--grunerbase-gruner-footer">
+        <div class="block__content">
+    
+
+    <div class="gfooter-distance">
+        <div class="distance-top">
+            <div class="top-link">TOP</div>
+
+        </div>
+        <div class="logo-container">
+            <div class="logo-box">
+                <div class="gruner-logo"><img src="/sites/all/themes/grunertheme/logo.png" alt="Gruner" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="footerwrapper">
+        <div class="gfooter">
+            <div class="gfooter-wrap">
+                                        <div class="gfooter-col col1">
+                    <h3>
+	Kontakt</h3>
+<p>Gruner AG<br />
+	Gellertstrasse 55<br />
+	CH-4020 Basel</p>
+<p>T +41 61 317 61 61<br />
+	F +41 61 312 40 09</p>
+                    </div>
+                        <div class="gfooter-col col2">
+                    <h3>
+	Unternehmen</h3>
+<ul>
+	<li>
+		<a href="/de/news">News</a></li>
+	<li>
+		<a href="/e-newsletter" id="anlform">E-Newsletter</a></li>
+	<li>
+		<a href="/de/events">Veranstaltungen</a></li>
+	<li>
+		<a href="/de/sponsoring">Sponsoring</a></li>
+</ul>
+                    </div>
+                        <div class="gfooter-col col3">
+                    <h3>
+	Downloads</h3>
+<ul>
+	<li>
+		<a href="/de/broschueren">Broschüren</a></li>
+	<li>
+		<a href="/de/publikationen">Publikationen</a></li>
+</ul>
+<h3 class="media">
+	Multimedia</h3>
+<ul>
+	<li>
+		<a href="/de/videos">Videos</a></li>
+	<li>
+		<a href="/de/spezial/app">App</a></li>
+</ul>
+                    </div>
+                    <div class="gfooter-col col4">
+                    <h3>Navigation</h3>
+                    <ul class="menu"><li class="first leaf"><a href="/de">Home</a></li>
+<li class="collapsed"><a href="/de/unternehmen">Unternehmen</a></li>
+<li class="collapsed"><a href="/de/kompetenz/brandschutz-0">Kompetenzen</a></li>
+<li class="collapsed"><a href="/de/projekte">Projekte</a></li>
+<li class="collapsed"><a href="/de/karriere">Karriere</a></li>
+<li class="last collapsed"><a href="/de/kontakt">Kontakte</a></li>
+</ul>                </div>
+                <div class="gfooter-col col5">
+                    <div class="lang-switch">
+                        <ul class="language-switcher-locale-url"><li class="de first active"><a href="/de/unternehmen/gruppe/gruner-kiwi-ag" class="language-link active" xml:lang="de" title="Gruner Kiwi AG">D</a></li>
+<li class="en"><a href="/en/corporation/group/gruner-kiwi-ag" class="language-link" xml:lang="en" title="Gruner Kiwi AG">E</a></li>
+<li class="fr last"><a href="/fr/entreprise/groupe/gruner-kiwi-ag" class="language-link" xml:lang="fr" title="Gruner Kiwi AG">F</a></li>
+</ul>                    </div>
+
+                    <p><a href="/login">Login</a><br />
+	<a href="/de/sitemap">Sitemap</a><br />
+	<a href="/de/impressum">Impressum</a></p>
+<p>© Gruner AG | <a href="/de/disclaimer">Disclaimer</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+</div>
+  </div>
+  </footer>
+</div>
+  <script src="https://www.gruner.ch/sites/default/files/js/js_pMpn-aGMsGKgMnAtmxLe-SZAZXUOnXxQqYAoiRN9DJI.js"></script>
+<script>var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://www.gruner.ch/piwik/" : "https://www.gruner.ch/piwik/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["setCookieDomain", ".gruner.ch"]);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();</script>
+</body>
+</html>

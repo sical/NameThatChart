@@ -1,0 +1,30 @@
+<html>
+<head><title>Site Unavailable</title></head>
+<body style="margin:auto; 
+             font-family:'Trebuchet MS', Tahoma, Helvetica, Arial, Sans; 
+             text-align:center;
+             background-color: #F7F7F7;">
+<center>
+<div style="width:600px;margin-top:25px; 
+            padding:25px; 
+            text-align:left; 
+            background-color:white; 
+            border: 1px solid #316BA5;">
+            
+<p style="text-align:center"><a href="http://www.editme.com"><img src="/default/bulb_out.gif" alt="EditMe" border="0"/></a></p>
+<h3 style="padding-top:24px;">Site Unavailable</h3>
+
+<p>If you're seeing this message unexpectedly, click your browser's Refresh/Reload button to make sure this page isn't cached.</p>
+
+<p style="font-size:85%;">You're seeing this message because this site is "suspended". The most common reason for a site being suspended is a billing problem, such as a missing or expired credit card. You can fix this problem by logging into the <a href="https://manage.editme.com">Account Manager</a> and updating your billing information.</p>
+
+<p style="font-size:85%;">If you've forgotten your username and password, be sure to use the <a href="/_Forgot">Forgot Password</a> form to get it sent to your email address. Then, log in to the <a href="https://manage.editme.com">Account Manager</a>.</p>
+
+<p style="font-size:85%;">To avoid having your site get suspended again in the future, make sure the billing contact email address you've entered is correct. EditMe makes several attempts to contact customers via email before suspending a site, so make sure that you've added support@editme.com to your email contact list to ensure that your spam filter is not getting in the way.</p>
+
+<p style="font-size:85%;">If there is no billing problem, the account may be suspended for some other reason, or the suspension could be in error. Please <a href="http://wiki.editme.com/contact-support">contact EditMe</a> with the name of your site to inquire about the reason for suspension.</p>
+
+</div>
+</center>
+</body>
+</html>

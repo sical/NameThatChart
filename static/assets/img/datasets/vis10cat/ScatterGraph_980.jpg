@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willkommen!</title>
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body><h3>Hier entsteht die neue Internetseite von</h3>
+
+<h4>Barbara Bredner<br>
+Statistische Beratung und Lösungen</h4>
+<p>Borkumstr. 15<br>
+45149 Essen</p>
+
+<p>Tel: +49 (0)201 9467 7787<br>
+Mobil: +49 (0)176 2425 0227<br>
+Mail: <a href="mailto:bredner@bb-sbl.de">bredner@bb-sbl.de</a></p>
+  </body>
+</html>
+

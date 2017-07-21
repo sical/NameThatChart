@@ -1,0 +1,377 @@
+<!DOCTYPE  html>
+<html lang="de" >
+<head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Kostenlose E-Mail-Adresse - freenet Mail basic</title>
+<meta name="description" content="Das kostenlose E-Mail-Postfach mit 1GB Online-Speicher und sicheren Spamschutz made in Germany. Schnell und einfach anmelden." />
+<meta name="robots" content="index, follow, noodp, noydir" />
+<meta property="lp:type" content="website" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Das kostenlose E-Mail-Postfach mit 1GB Online-Speicher und sicheren Spamschutz made in Germany. Schnell und einfach anmelden." />
+<meta property="og:title" content="Kostenlose E-Mail-Adresse - freenet Mail basic" />
+<meta property="og:site_name" content="freenet.de E-Mail" />
+<meta property="og:image" content="//blob.freent.de/contentblob/1973262/data/freenet_fb_logo.png" /><link rel="stylesheet" type="text/css" href="https://email.freenet.de/code/5626266/16233492786511/_EmailLib.css"  />
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="https://email.freenet.de/code/5622882/2/ie8.css"  />
+<![endif]--><!-- start[head] -->
+<!-- end[head] -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="https://blob.freent.de/contentblob/5625134/1/data/freenet-32x32.ico" />
+<meta name="robots" content="index, follow, noodp, noydir" />
+<meta name="google-site-verification" content="PJtIcqLvd5pbgvoQy4P_OdtdXej4E0lIu5gIpNdZG5w" />
+<meta name="language" content="de" />
+<meta name="copyright" content="freenet.de GmbH" />
+<meta name="organization" content="freenet.de GmbH" />
+<meta name="author" content="freenet.de - freenet" />
+<meta name="publisher" content="freenet.de - freenet" />
+<meta property="fb:app_id" content="140319285993092" />
+<meta property="fb:admins" content="1195671585, 100000487061078, 100000318309384" />
+<script type='text/javascript'>
+var isLoggedIn = '0';
+var webmailAdress = 'https://webmail.freenet.de/';
+</script>
+<script type="text/javascript" src="https://email.freenet.de/code/5626204/332372/EmailLib.js" ></script>
+<!-- @@ partnerHead @@ -->
+</head>
+<body class="mailUebersicht">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MTLVWB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MTLVWB');</script>
+<!-- End Google Tag Manager -->
+<div id="frnMain">
+<div id="frnKopf_Neu" >
+<div id="frnKopfRechts">
+<div id="frnLogo">
+<img src="https://blob.freent.de/contentblob/5622948/1/original/emaillogoshade.gif" width="3" height="2" alt="" />
+</div>
+<div id="frnKopfLogo">
+<div id="frnKopfLinkleiste" class="frnNoTopicHeadline">
+<div id="shopHead">
+<div id="shopHeadTop">
+<div id="shopHeadContent" class="shopBoxes">
+<div id="freenetMailLogo"><a href="https://www.freenet.de/index.html"><div class="icon-icon_shop_freenet_de_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></div></a></div>
+<a id="shopHeadLinkEMIG" href="https://email.freenet.de/emig/index.html"><div id="shopSiegelEMIG" class="shopSprite2017"></div></a>
+<a id="shopHeadLinkCloud" href="https://email.freenet.de/cloud/index.html"><div id="shopSiegelCloud" class="shopSprite2017"></div></a>
+<div id="shopLoginButton">
+<div id="shopLoginButtonBlue" class="shopSprite" onmouseover="$('#freenetLogins').show();">
+<div id="shopLoginButtonText" style="float:left;">Login</div>
+<div id="shopLoginButtonArrow" class="shopSprite"></div>
+</div>
+<div id="freenetLogins">
+<div id="shopLoginBurger" class="shopSprite"><img src="https://blob.freent.de/contentblob/5642256/2/data/burger-inaktiv.png" /></div>
+<div id="shopItems">
+<div class="freenetLoginDropdown freenetBasic"><a id="loginLinkBasic" href="https://www.freenet.de/index.html">Basic</a></div>
+<div class="freenetLoginDropdownLine"></div>
+<div class="freenetLoginDropdown freenetClassic"><a id="loginLinkClassic" href="https://power.freenet.de/">
+<div>Start</div>
+<div>Classic</div>
+</a></div>
+</div>
+<div id="shopItemsMobile">
+<div class="freenetLoginDropdown label">Produkte</div>
+<div class="navMobile freenetBasic"><a id="mobNaviBasic" href="https://email.freenet.de/index.html">Basic</a></div>
+<div class="navMobile freenetBasicplus"><a id="mobNaviBasicplus" href="https://email.freenet.de/basicplus/index.html">Basic <span style="font-size:0.6em;vertical-align:top;">plus</span></a></div>
+<div class="navMobile freenetStart"><a id="mobNaviStart" href="https://email.freenet.de/start/index.html">Start</a></div>
+<div class="navMobile freenetClassic"><a id="mobNaviClassic" href="https://email.freenet.de/classic/index.html">Classic</a></div>
+<div class="navMobile freenetSicherheit"><a id="mobNaviSicherheit" href="https://email.freenet.de/onlinesicherheit/index.html">Norton</a></div>
+<div class="navMobile freenetIdschutz"><a id="mobNaviIdschutz" href="https://email.freenet.de/idschutz/index.html">ID Schutz+</a></div>
+<div class="freenetLoginDropdown label">Login</div>
+<div class="navMobile freenetBasicLogin"><a id="loginLinkBasicMobil" href="https://www.freenet.de/index.html" onclick="event.preventDefault();">Basic</a></div>
+<div class="navMobile freenetClassicLogin"><a id="loginLinkClassicMobil" href="https://power.freenet.de/" onclick="event.preventDefault();">Start / Classic</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="shopHeaderMenue">
+<div id="shopHeaderMenueWrapper" class="shopBoxes">
+<a id="naviHome" href="https://www.freenet.de/index.html" target="_blank"><div id="shopMenueHome" class="shopSprite2017"></div></a>
+<a id="naviBasic" href="https://email.freenet.de/index.html"><div id="shopMenueBasic" class="shopMenueBoxes">Basic</div></a>
+<a id="naviBasicplus" href="https://email.freenet.de/basicplus/index.html"><div id="shopMenueBasicplus" class="shopMenueBoxes">Basic <span style="font-size:0.6em;vertical-align:top;">plus</span></div></a>
+<a id="naviStart" href="https://email.freenet.de/start/index.html"><div id="shopMenueStart" class="shopMenueBoxes">Start</div></a>
+<a id="naviClassic" href="https://email.freenet.de/classic/index.html"><div id="shopMenueClassic" class="shopMenueBoxes">Classic</div></a>
+<a id="naviSicherheit" href="https://email.freenet.de/onlinesicherheit/index.html"><div id="shopMenueSicherheit" class="shopMenueBoxes">Norton</div></a>
+<a id="naviIdschutz" href="https://email.freenet.de/idschutz/index.html"><div id="shopMenueIdschutz" class="shopMenueBoxes">ID Schutz+</div></a>
+</div>
+</div>
+<div class="shopHeadTrenner"></div>
+</div>
+<div id="interAppAnroid"><a href="https://app.adjust.com/ejiaf3" target="_blank"><img src="https://blob.freent.de/contentblob/5810546/4/data/android.jpg" /></a><div class="closeLayer"></div></div>
+<div id="interAppIos"><a href="https://app.adjust.com/q7o4jw" target="_blank"><img src="https://blob.freent.de/contentblob/5810544/4/data/ios.jpg" /></a><div class="closeLayer"></div></div>
+<script type="text/javascript">
+$('body.mailUebersicht #shopMenueBasic, body.mailBasicplus #shopMenueBasicplus, body.mailStart, body.mailStart, body.mailStart #shopMenueStart, body.mailClassic #shopMenueClassic, body.onlinesicherheit #shopMenueSicherheit, body.idschutz #shopMenueIdschutz').addClass('activeMenue');
+$('body.mailUebersicht .navMobile.freenetBasic, body.mailBasicplus .navMobile.freenetBasicplus, body.mailStart .navMobile.freenetStart, body.mailClassic .navMobile.freenetClassic, body.onlinesicherheit .navMobile.freenetSicherheit, body.idschutz .navMobile.freenetIdschutz').addClass('activeMenue');
+</script>
+</div>
+<a href="http://www.freenet.de" id="frnKopfLogoLink" title="Startseite"></a>
+</div>
+<div id="frnKopfWelcome"></div>
+</div>
+</div>
+<div id="frnRahmenWrapper">
+<div id="frnRahmen">
+<script type="text/javascript">
+/* <![CDATA[ */
+initThemenFlyout();
+initNaviHorizontal();
+/* ]]> */</script>
+<div style="clear: both;"></div>
+<!-- bo Layouttable -->
+<div id="frnContentGutter">
+<div id="frnContentTop">
+<div class="lay4">
+</div>
+</div>
+<div id="frnTopic" class="frn_col5_typ0MR ">
+<div id="frnContentMain" class="frn_col5_typ0M">
+<!-- CONTENT[ -->
+<div class="lay5">
+<style type="text/css">
+#shopHeaderMenue{display:none;}
+/* Landingpage allgemein */
+.content{width:100%;}
+.content_inner{width:100%;max-width:1240px;margin:0 auto;padding-left:43px;position:relative;}
+.shopTrennerIcon{width:78px;height:78px;margin:-40px 0 0 -55px!important;cursor:pointer;font-size:78px;}
+.icon-icon_shop_naechster_abschnitt .path1:before{box-shadow:0 0 8px rgba(0,0,0,0.1);border-radius:40px;}
+.bg_grey{background-color:#f7f7f7;display:inline-block;}
+.bg_white{background-color:#ffffff;display:inline-block;}
+h1{color:#21314d;font-size:48px;padding-top:70px;font-weight:400;}
+h2{color:#84bc34;font-size:38px;padding-top:4px;font-weight:400;}
+#feature_list{float:left;padding-top:51px;}
+#feature_list .icon-icon_shop_vorteile_haken{color:#84bc34;padding-bottom:24px;}
+.feature{font-family:'Open Sans';color:#21314d;font-size:24px;padding-left:15px;}
+.ssl_short{display:none;}
+/* Landingpage basic */
+#emig_logo{position:absolute;top:85px;right:63px;}
+#mail_video{padding-top:51px;padding-right:60px;float:left;height:auto;max-height:317px;width:90%;max-width:567px;}
+#button_container{margin:33px 0 80px;text-transform:uppercase;font-size:22px;}
+#button_container2{margin:45px 0 80px;text-transform:uppercase;font-size:22px;}
+.button1{background-color:#84bc34;color:#ffffff;text-decoration:none;font-weight:700;padding:15px 40px;}
+.button2{background-color:#84bc34;color:#ffffff;text-decoration:none;font-weight:700;padding:15px 156px;}
+.button3{background-color:#84bc34;color:#ffffff;text-decoration:none;font-weight:700;padding:15px 146px;}
+.button1:hover{background-color:#76aa2c;}
+.button2:hover{background-color:#76aa2c;}
+.button3:hover{background-color:#76aa2c;}
+#box_freenetmail_start{float:left;margin:120px 0 80px;width:567px;padding-right:20px;display:inline;position:relative;}
+#box_freenetmail_classic{float:left;margin:120px 0 80px;width:567px;display:inline;position:relative;}
+.bg_orange{background-color:#ff674b;color:#ffffff;font-size:28px;font-weight:600;padding:22px 42px;}
+.bg_blue{height:275px;background-color:#21314d;padding:40px 42px;}
+.bg_blue .icon-icon_shop_vorteile_haken{color:#ffffff;}
+.bg_blue .feature{font-family:'Open Sans';color:#ffffff;font-size:24px;padding-left:15px;width:483px;}
+.bg_blue .feature2{font-family:'Open Sans';color:#ffffff;font-size:24px;padding-left:37px;width:483px;}
+.price_info{color:#ffffff;font-size:28px;font-weight:600;}
+.stoerer{position:absolute;top:68px;right:22px;font-size:143px;}
+/* Media Queries */
+@media only screen and (max-width:670px) {
+#shopLoginButton{margin-right:20px!important;margin-top:-70px;height:92px;}
+#shopLoginButtonBlue{background-position:20px -1030px;height:92px;}
+#freenetLogins{top:76px;}
+.content_inner{padding-left:15px;}
+h1{font-size:30px;padding-top:20px;}
+h2{font-size:20px;}
+.feature{font-size:16px;padding-left:10px;}
+.ssl{display:none;}
+.ssl_short{display:inline-block;}
+.icon-icon_shop_vorteile_haken{font-size:14px;}
+#button_container, #button_container2{font-size:19px;margin:33px 0 80px!important;}
+.button1{padding:15px;}
+.button2{padding:15px 47px;}
+.button3{padding:15px 37px;}
+.bg_blue, .bg_orange{padding:20px;}
+.bg_blue .feature, .bg_blue .feature2{font-size:17px;}
+.stoerer {font-size: 101px;position: absolute;right: 3px;top: 112px;}
+#box_freenetmail_start, #box_freenetmail_classic{margin-top:60px;margin-bottom:0;width:88%;}
+#box_freenetmail_classic{margin-bottom:60px;}
+#mail_video iframe{height:162px;}
+}
+@media only screen and (max-width:768px) {
+#box_freenetmail_start, #box_freenetmail_classic{margin-top:60px;margin-bottom:0;width:88%;}
+#box_freenetmail_classic{margin-bottom:60px;}
+}
+@media only screen and (max-width:840px) {
+h1,h2 {
+width:90%;
+}
+}
+@media only screen and (max-width:1154px) {
+#box_freenetmail_start, #box_freenetmail_classic{margin-top:60px;margin-bottom:0;width:88%;}
+#box_freenetmail_classic{margin-bottom:60px;}
+}
+@media only screen and (max-width:1220px) {
+.shopTrennerIcon,#emig_logo {
+display:none;
+}
+}
+</style>
+<div class="content bg_grey">
+<div class="content_inner">
+<h1>Sicheres E-Mailing inklusive Cloud</h1>
+<h2>kostenlos und Made in Germany</h2>
+<div id="emig_logo"><img src="https://blob.freent.de/contentblob/6132256/1/data/emig-logo.png" /></div>
+<div id="mail_video">
+<iframe width="100%" height="317" src="https://www.youtube.com/embed/XRG6zcd1kCY?rel=0&amp;controls=0&amp;showinfo=0&amp;autohide=1" frameborder="0" allowfullscreen></iframe>
+</div>
+<div id="feature_list">
+<div class="icon-icon_shop_vorteile_haken"><span class="feature">Datenspeicherung in Deutschland</span></div>
+<div class="icon-icon_shop_vorteile_haken"><span class="feature">Deutscher Datenschutz</span></div>
+<div class="icon-icon_shop_vorteile_haken"><span class="feature">Nur 2 GB Cloud-Speicher</span></div>
+<div class="icon-icon_shop_vorteile_haken"><span class="feature ssl">Hohe Sicherheitsstandards (SSL-Verschlüsselung)</span><span class="feature ssl_short">SSL-Verschlüsselung</span></div>
+<div class="icon-icon_shop_vorteile_haken"><span class="feature">Keine Bindung</span></div>
+<div id="button_container">
+<a  class="button1" href="https://email.freenet.de/registrierung/frn?ipid=e9900000335&tid=2001004">Jetzt sicher mailen</a>
+</div>
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="shopTrennerIcon icon-icon_shop_naechster_abschnitt"><span class="path1"></span><span class="path2"></span></div>
+<div class="content bg_white">
+<div class="content_inner">
+<div id="box_freenetmail_start">
+<div class="bg_orange">Mehr Leistung gewünscht?<br />freenet Mail start</div>
+<div class="bg_blue">
+<div class="icon-icon_shop_vorteile_haken" style="padding-bottom:30px;"><span class="feature">Werbefreies Postfach</span></div>
+<div class="icon-icon_shop_vorteile_haken"><span class="feature">20 GB Cloud-Speicher für</span></div>
+<div style="padding-bottom:40px;"><span class="feature2">Ihre schönsten Fotos</span></div>
+<div class="price_info">Für nur <span style="font-weight:800;">2,99 €</span>/mtl.</div>
+<div id="button_container2">
+<a  class="button2" href="https://email.freenet.de/registrierung/frn?tid=2001043&ipid=i9900000335">Jetzt starten</a>
+</div>
+</div>
+</div>
+<div id="box_freenetmail_classic">
+<div class="bg_orange">Sie wollen das Beste?<br />freenet Mail classic</div>
+<div class="bg_blue">
+<div class="icon-icon_shop_vorteile_haken"><span class="feature">40 GB Cloud-Speicher für</span></div>
+<div  style="padding-bottom:26px;"><span class="feature2">Ihre schönsten Fotos</span></div>
+<div class="icon-icon_shop_vorteile_haken"  style="padding-bottom:44px;"><span class="feature">10 GB E-Mail-Speicher</span></div>
+<div class="price_info">Für nur <span style="font-weight:800;">3,24 €</span>/mtl.</div>
+<div id="button_container2">
+<a  class="button3" href="https://email.freenet.de/registrierung/frn?tid=2001056&ipid=i9900000335">Jetzt bestellen</a>
+</div>
+<div class="stoerer icon-icon_shop_stoerer_35_rabatt"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span></div>
+</div>
+</div>
+</div>
+​</div>
+<div class="clearBoth"></div>
+</div>
+<!-- ] -->
+</div>
+</div>
+<div style="clear: both;"></div>
+<div id="frnContentBottom">
+<!-- CONTENT[ -->
+<div class="lay5">
+</div>
+<!-- ] -->
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+initLazyImages(false);
+/* ]]> */</script>
+</div>
+<!-- eo Layouttable -->
+<div style="clear: both;"></div>
+<div id="frnGreen"></div>
+</div>
+<div id="frnFoot">
+<div id="footer">
+<div id="footerContent" class="shopBoxes">
+<div id="footerContentWrapper">
+<div class="footerColumn">
+<div class="footerColumnText">
+<div><a href="http://kontakt.freenet.de" target="_blank">Kontakt</a></div>
+<div><a href="http://kundenservice.freenet.de/" target="_blank">Online-Hilfe</a></div>
+<div><a href="https://www.facebook.com/freenet/" target="_blank">Facebook</a></div>
+<div><a id="footerTarifvergleich" href="https://blob.freent.de/contentblob/4784972/15/data/lb-freenetmail.pdf">Tarifvergleich</a></div>
+</div>
+</div>
+<div class="footerColumn">
+<div class="footerColumnText">
+<div><a href="http://www.freenet-group.de/index.html" target="_blank">freenet Group</a></div>
+<div><a href="http://www.freenet-group.de/karriere/index.html" target="_blank">Karriere</a></div>
+<div><a href="http://werbung.freenet.de/" target="_blank">Mediadaten</a></div>
+<div><a href="https://www.freenet.de/impressum/index.html" target="_blank">Impressum</a></div>
+</div>
+</div>
+<div class="footerColumn">
+<div class="footerColumnText">
+<div><a href="https://www.freenet.de/agb/index.html" target="_blank">AGB</a></div>
+<div><a href="https://www.freenet.de/datenschutz/index.html" target="_blank">Datenschutz</a></div>
+<div><a href="https://email.freenet.de/index.html">Mail & Cloud</a></div>
+<div><a href="https://www.freenet.tv/" target="_blank">freenet TV</a></div>
+</div>
+</div>
+<div class="footerColumn">
+<div class="footerColumnText">
+<div><a href="https://www.freenetmobile.de/index.php" target="_blank">freenetmobile</a></div>
+<div><a href="http://community.freenet.de/index.html?pid=10343246096" target="_blank">Community</a></div>
+</div>
+</div>
+<div class="footerColumn2">
+<div class="footer_icon_container">
+<div class="footer_icons icon-icon_shop_sepa"></div>
+<div class="footer_icons icon-icon_shop_pay_pal"></div>
+<div class="footer_icons icon-icon_shop_master_card"></div>
+<div class="footer_icons icon-icon_shop_visa"></div>
+</div>
+<div id="mailFooterRegistrationSiegel">
+<div id="mailFooterRegistrationEMIG" class="shopSprite2017"></div>
+<div id="mailFooterRegistrationCloud" class="shopSprite2017"></div>
+<div id="mailFooterRegistrationSSL" class="shopSprite2017"></div>
+</div>
+</div>
+</div>
+<div id="footerGroup">Eine Marke der freenet Group</div>
+</div>
+</div>
+<div id="footerTexte">
+<div id="footerTexteContent" class="shopBoxes">
+<h3>Mit freenetmail unterwegs</h3>
+<p>Sie möchten ständigen Zugriff auf Ihr E-Mail Postfach haben? Mit freenetmail mobil kein Problem! Sie können mit jedem internetfähigen Handy immer und überall auf Ihre E-Mails, Kontakte und Ihren Kalender zugfreifen. Selbstverständlich stehen Ihnen Ihre kostenlosen SMS auch mobil zur Verfügung.<br />Mit der freenetmail App haben Sie Ihre E-Mails und Ihr Adressbuch auch auf ihrem Android oder iOS Smartphone immer dabei und können bequem und synchron auf allen Geräten kommunizieren.</p>
+<h3>Mehr als nur eine kostenlose E-Mail Adresse</h3>
+<p>freenetmail bietet Ihnen mehr als nur ein bedienerfreundliches E-Mail Postfach, kostenlose E-Mail Adressen und genügend online Speicherplatz für Ihre persönlichen Daten. So können Sie Ihr E-Mail Postfach ebenfalls nutzen, um kostenlose SMS zu verschicken. Bereits als freenetmail basic Mitglied stehen Ihnen monatlich 3 Frei SMS zur Verfügung.</p>
+<h3>Das Organisationstalent</h3>
+<p>Das übersichtliche und leicht zu bedienende Adressbuch online hilft Ihnen Ordnung in Ihren Kontaktdaten zu halten. Zusätzlich steht Ihnen der Online Kalender zur Verfügung. Kombinieren Sie beides und Sie werden nie wieder wichtige Anlässe wie z.B. Geburtstage Ihrer Freunde vergessen. Lassen Sie sich über den Kalender einfach erinnern und schicken Sie Ihren Freunden Grußkarten kostenlos zu. Bei freenetmail haben Sie eine große Auswahl an Motiven zu besonderen Anlässen (Geburtstag, Hochzeit, Ostern, Weihnachten, Muttertag,Liebe, Comic, Smileys und viele mehr ...)! Hierbei stehen Ihnen alle E-Karten kostenlos zur Verfügung.</p>
+<h3>CLOUD SPEICHER FÜR IHRE BILDER, VIDEOS, MUSIK UND ANDERE DATEN</h3>
+<p>Wussten Sie, dass Sie als freenetmail basic, basic plus, start oder classic Kunde über einen großen Online Speicher für Ihre Bilder, Videos, Musik und andere Daten verfügen?<br />Ihre Daten liegen sicher auf unserem deutschen Cloud Server in Düsseldorf und Sie können rund um die Uhr von überall auf der Welt darauf zugreifen.<br />Ihre Daten bleiben dabei stets zu Ihrer Sicherheit in Deutschland und sind nach modernsten Verfahren verschlüsselt.</p>
+</div>
+</div>
+</div>
+</div> <div id="frnIVW"><!-- IVW/SZM VERSION="2.0" -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var iam_data = {
+"mg":"yes",
+"st":"freenet",
+"cp":"stat/freenet/mail/landingpages",
+"oc":"26171230",
+"sv":"ke"
+};
+if(typeof szmMobile !== "undefined" && szmMobile === true){iam_data.st = "mobfreen";}
+iom.c(iam_data);
+/* ]]> */</script>
+<!--/IVW/SZM -->
+<script type="text/javascript">
+/* <![CDATA[ */var evCnt=["26171230","freenet/email","/index/index.html","p","stat/freenet/mail/landingpages"];
+if (typeof(frn_Ivw) == "object" ) { frn_Ivw.setKeyVal('fCnt',false) };
+/* ]]> */</script>
+</div><div id="frnBanner">
+<div id="frnBannerAd">
+<div id="fnbanner"><!-- PH Banner  -->
+</div>
+</div>
+</div>
+<!-- PH Sky -->
+</div>
+<!-- PH SWF -->
+<!-- PH Popunder -->
+<!-- PH ad99 -->
+<!-- Fri Jul 21 12:22:31 CEST 2017, host: 'cm7-cae05.core.freenet-rz.de', app: '4', rev: 'Revision Id: 29b2fe00384a80dfae4bcb57cba7c7e9cb8e50e4 : 19.07.2017 11:28' --></body>
+</html>

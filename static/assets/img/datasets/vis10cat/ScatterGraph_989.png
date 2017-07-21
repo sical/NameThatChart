@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="ie lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>ColdFusion Jedi</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+	<link rel="pingback" href="http://www.coldfusionjedi.com/xmlrpc.php"/>
+
+	
+<!-- SEO Ultimate (http://www.seodesignsolutions.com/wordpress-seo/) -->
+	<meta name="description" content="Adobe ColdFusion Guide"/>
+	<meta property="og:type" content="blog"/>
+	<meta property="og:title" content="ColdFusion Jedi"/>
+	<meta property="og:description" content="Adobe ColdFusion Guide"/>
+	<meta property="og:url" content="http://www.coldfusionjedi.com/"/>
+	<meta property="og:site_name" content="ColdFusion Jedi"/>
+	<meta name="twitter:card" content="summary"/>
+<!-- /SEO Ultimate -->
+
+<link rel="alternate" type="application/rss+xml" title="ColdFusion Jedi &raquo; Feed" href="http://www.coldfusionjedi.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="ColdFusion Jedi &raquo; Comments Feed" href="http://www.coldfusionjedi.com/comments/feed/"/>
+<link rel='stylesheet' id='smartadapt-foundation-css' href='http://www.coldfusionjedi.com/wp-content/themes/smartadapt/css/A.foundation.min.css,qver=3.9.19.pagespeed.cf.tFrl-U9gkz.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='smartadapt-font-icon-css' href='http://www.coldfusionjedi.com/wp-content/themes/smartadapt/font/css/A.font-awesome.min.css,qver=3.9.19.pagespeed.cf.ZQRvzBRhjx.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='smartadapt-photoswipe-css-css' href='http://www.coldfusionjedi.com/wp-content/themes/smartadapt/css/photoswipe/A.photoswipe.css,qver=3.9.19.pagespeed.cf.CLaW1jFH2z.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='smartadapt-flexslider-css' href='http://www.coldfusionjedi.com/wp-content/themes/smartadapt/css/flexslider/A.flexslider.css,qver=3.9.19.pagespeed.cf.9cZOs1B4ZV.css' type='text/css' media='all'/>
+<style id='smartadapt-responsive-tables-css' media='all'>table th{font-weight:bold}table td,table th{padding:9px 10px;text-align:left}@media only screen and (max-width:767px){table.smartadapt-responsive-table{margin-bottom:0}.pinned{position:absolute;left:0;top:0;background:#fff;width:35%;overflow:hidden;overflow-x:scroll;border-right:1px solid #ccc;border-left:1px solid #ccc}.pinned table{border-right:none;border-left:none;width:100%}.pinned table th,.pinned table td{white-space:nowrap}.pinned td:last-child{border-bottom:0}div.table-wrapper{position:relative;margin-bottom:20px;overflow:hidden;border-right:1px solid #ccc}div.table-wrapper div.scrollable{margin-left:35%}div.table-wrapper div.scrollable{overflow:scroll;overflow-y:hidden}table.smartadapt-responsive-table td,table.smartadapt-responsive-table th{position:relative;white-space:nowrap;overflow:hidden}table.smartadapt-responsive-table th:first-child,table.smartadapt-responsive-table td:first-child,table.smartadapt-responsive-table td:first-child,table.smartadapt-responsive-table.pinned td{display:none}}</style>
+<link rel='stylesheet' id='smartadapt-structure-css' href='http://www.coldfusionjedi.com/wp-content/themes/smartadapt/A.style.css,qver=3.9.19.pagespeed.cf.8UBs0qstOM.css' type='text/css' media='all'/>
+<script type='text/javascript' src='http://www.coldfusionjedi.com/wp-includes/js/jquery/jquery.js,qver=1.11.0.pagespeed.jm.ocognCjcS2.js'></script>
+<script src="http://www.coldfusionjedi.com/wp-includes,_js,_jquery,_jquery-migrate.min.js,qver==1.2.1+wp-content,_themes,_smartadapt,_js,_foundation,_modernizr.foundation.js,qver==1.0+wp-content,_themes,_smartadapt,_js,_flexslider,_jquery.flexslider-min.js,qver==1.0+wp-content,_themes,_smartadapt,_js,_main.js,qver==1.0.pagespeed.jc.gHptcEyT5E.js"></script><script>eval(mod_pagespeed_Hf0$z$LmEX);</script>
+<script>eval(mod_pagespeed_upKlYEtDMl);</script>
+<script>eval(mod_pagespeed_E4Njc0ch_S);</script>
+<script>eval(mod_pagespeed_O$C0xVPjTt);</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.coldfusionjedi.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.coldfusionjedi.com/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 3.9.19"/>
+	<!--Customizer CSS-->
+<style type="text/css">body{background-color:#d8d8d8}</style>
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;amp;subset=latin,latin-ext"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&amp;amp;subset=latin,latin-ext"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;amp;subset=latin,latin-ext">
+	<!--[if IE 7]>
+<link rel="stylesheet" href="http://www.coldfusionjedi.com/wp-content/themes/smartadapt/font/css/font-awesome-ie7.min.css">
+<![endif]-->
+<!--[if IE 7]>
+<style>
+	* {
+	* behavior : url (http://www.coldfusionjedi.com/wp-content/themes/smartadapt/js/boxsize-fix.htc );
+	}
+</style>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://www.coldfusionjedi.com/wp-content/themes/smartadapt/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+<body class="home blog">
+<!--[if lt IE 7]>
+<p class=chromeframe>Your browser is <em>ancient!</em></p>
+<![endif]-->
+<div class="top-bar-outer">
+	
+<div id="top-bar" class="top-bar home-border">
+
+	<div class="row">
+		<div class="columns four mobile-one">
+			<a href="http://www.coldfusionjedi.com/" title="ColdFusion Jedi" rel="home" class="site-logo ">
+				ColdFusion Jedi</a></div>
+
+
+		<div class="columns twelve mobile-three">
+			<!--falayout search menu-->
+			<ul id="top-switches" class="no-bullet right">
+	<li>
+		<a href="#toggle-search" class="toggle-topbar toggle-button button">
+			<span class="icon-search"></span>
+		</a>
+	</li>
+	<li class="show-for-small">
+		<a href="#top-navigation" class="toggle-topbar toggle-button button">
+			<span class="icon-reorder"></span>
+		</a>
+	</li>
+</ul>
+
+			<nav id="top-navigation" class="right hide-for-small">
+				<div class="top-menu"><ul><li class="current_page_item"><a href="http://www.coldfusionjedi.com/">Home</a></li></ul></div>
+			</nav>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns sixteen toggle-area" id="toggle-search">
+			<form action="http://www.coldfusionjedi.com/" method="get" role="search">
+	<div class="row">
+		<div class="columns sixteen mobile-four">
+			<input id="search-input" type="text" name="s" placeholder="Search for ..." value="">
+			<input class="button" id="top-searchsubmit" type="submit" value="Search">
+		</div>
+	</div>
+
+</form>
+		</div>
+
+	</div>
+</div>
+</div>
+<div id="wrapper" class="row">
+
+		<div id="page" role="main" class="twelve columns">
+			<header class="frontpage-header" role="banner">
+
+					<h1 class="site-title"><a href="http://www.coldfusionjedi.com/" title="ColdFusion Jedi" rel="home">ColdFusion Jedi</a></h1>
+
+			<h2 class="site-description">Adobe ColdFusion Guide</h2>
+			
+	</header>
+
+			<div id="main" class="row">
+			<nav id="mobile-navigation" class="columns sixteen show-for-small" role="navigation">
+					<select class="menu-not-found">
+		<option value="">Menu Not Found</option>
+	</select>
+		
+			</nav>
+<div class="four columns">
+<nav id="site-navigation" class="main-navigation hide-for-small" role="navigation">
+
+<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+	<div class="nav-menu tabs vertical">
+	<div class="menu"><ul><li class="current_page_item"><a href="http://www.coldfusionjedi.com/">Home</a></li></ul></div>
+</div>
+</nav>
+
+<!-- #site-navigation -->
+</div>           
+
+
+
+
+
+<div id="content" class="twelve columns" role="main">
+	
+				<div class="post-box ">
+    <article id="post-26" class="post-26 post type-post status-publish format-standard has-post-thumbnail hentry category-other-technologies">
+                <header class="entry-header">
+
+                        <div class="top-meta">
+                <div class="category-line">
+	<a href="http://www.coldfusionjedi.com/category/other-technologies/" title="View all posts in Other Technologies">Other Technologies</a></div>
+
+
+
+            </div>
+            <h2 class="entry-title">
+                <a href="http://www.coldfusionjedi.com/wordpress-woocommerce/" title="Permalink to WordPress &amp; Woocommerce" rel="bookmark">WordPress &#038; Woocommerce</a>
+            </h2>
+                        <p class="meta-line">
+                <a href="http://www.coldfusionjedi.com/2014/09/29/" title="3:48 pm" rel="bookmark" class="meta-label meta-date"><i class="icon-left icon-calendar"></i><time class="entry-date" datetime="2014-09-29T15:48:46+00:00">September 29, 2014</time></a>                <span class="meta-label meta-publisher vcard">Published by:  <a href="http://www.coldfusionjedi.com/author/coldfusionjedi/" title="Posts by coldfusionjedi" rel="author">coldfusionjedi</a> </span>
+            </p>
+        </header>
+        <!-- .entry-header -->
+        <div class="row">
+            <div class="columns sixteen">
+                                    <div class="thumbnail-outer format-ico post-ico"><a href="http://www.coldfusionjedi.com/wordpress-woocommerce/"><img width="266" height="200" src="http://www.coldfusionjedi.com/wp-content/uploads/2014/09/xwp-logo-large-266x200.png.pagespeed.ic.zr_vSXQJBQ.png" class="attachment-single-post-small wp-post-image" alt="WP Logo"/></a></div>
+
+                                        <div class="entry-content">
+                        <p>Do you remember what personal websites looked like in 1998? Simplistic designs, crude graphics and badly laid out text made reading many of them a painful experience. HTML coding isn’t all that hard, but without some skill and experience the results can be awful. Technical limitations – mainly the fact that most web access was through dialup modems – also forced people to keep things simple, and editors like FrontPage often resulted in clunky, bandwidth-hogging code.</p>
+<p>It’s all different now. We’ve seen the rise and fall of independent blogging platforms, online web development software and many other technologies that promised to make it easy to build your own site. In their place a single tool has now become the go-to option for anyone who wants to create a smart site cheaply. That tool is WordPress, which is now used by a quarter if the top 10 million websites and has become the most popular blogging tool on the web.</p>
+<p>Once you’ve played with WordPress it’s not hard to see why it’s so popular. It’s a simple online toolkit that lets anyone produce a professional-looking site easily. A huge range of themes means it’s easy to tailor your new site’s appearance to suit your tastes, and new themes can be bought or developed without too much trouble. There’s also a truly enormous selection of plugins to add extra functionality – everything from spam filters to sophisticated e-commerce packages.</p>
+<p>I’ve seen some really great ecommerce sites pop-up in the last few years using the wordpress platform coupled with woocommerce. Here are a few:</p>
+<p><a title="WooThemes" href="http://www.woothemes.com">Woothemes</a> – The largest woocommerce site is actually the one that sells products for woocommerce, go figure.</p>
+<p><a title="WPML" href="http://wpml.org/purchase/">WPML.org</a> – The wordpress multilingual plugin is actually sold using woocommerce. This site gets millions of visitors and is selling 3 simple products.</p>
+<p><a title="The Tree Center" href="http://www.thetreecenter.com/">The Tree Center</a> – Fun site that sells trees and plants online that I came across. They are using the highend theme and some customizations to the woocommerce platform.</p>
+<p><a title="Entrepreneur Bookstore" href="https://bookstore.entrepreneur.com/">Entrepreneur Bookstore</a> – This company runs one of the largest financial magazines in the world. In 2012 they launched a bookstore which uses the woocommerce platform.</p>
+<p><a title="Pagelines" href="http://www.pagelines.com/shop/">Pagelines DMS</a> – WordPress based design management system that uses the subscription feature of woocommerce.</p>
+<p><img class="alignright size-medium wp-image-28" src="http://www.coldfusionjedi.com/wp-content/uploads/2014/09/xwoocommerce-logo-300x136.png.pagespeed.ic.OazeXG7v-d.png" alt="Woocommerce Logo" width="300" height="136"/>WordPress started out as a blogging platform, but it’s swiftly become far more than that. It’s ideal for blogging but it also works perfectly for more formal articles, images or as a product catalog. The hierarchy of files and pages can be as simple or as elaborate as you like, making it easy to create sites with different sections laid out in different ways. The standard tools let you create interesting, feature-rich pages without having to learn any code – just add prefabricated modules to the basic template and the code is automatically generated. Additional tools can be bought or found online if you have special requirements.</p>
+<p>It’s the flexibility and scalability of the platform that really makes WordPress so popular. No matter what you want from a website, it can be arranged. You can set up a free blog without having to buy a domain name or hosting, and add a whole lot of features that earlier blogging platforms didn’t offer. If you already have a domain name you can install the WordPress server-side software on your hosting package and do a lot more customization – that’s the method of choice for business sites. If you don’t have hosting it can all be arranged through WordPress. If you had to sum it up in one word it would be “versatile”.</p>
+<p>Nothing is forever on the internet and many companies are keen to challenge the dominance of WordPress, but so far nobody’s managed it. The software is constantly being developed and refined, with new features and even slicker code enhancing the experience for both developers and site visitors. Unless you’re willing to pay for custom site design WordPress looks set to be the best option for a long time to come.</p>
+                                            </div><!-- .entry-content -->
+                                </div>
+        </div>
+
+        
+
+
+        <footer class="entry-meta">
+                                </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post -->
+</div><!-- .post-box -->
+				<div class="post-box ">
+    <article id="post-16" class="post-16 post type-post status-publish format-standard hentry category-coldfusion category-other-technologies">
+                <header class="entry-header">
+
+                        <div class="top-meta">
+                <div class="category-line">
+	<a href="http://www.coldfusionjedi.com/category/coldfusion/" title="View all posts in ColdFusion">ColdFusion</a> <a href="http://www.coldfusionjedi.com/category/other-technologies/" title="View all posts in Other Technologies">Other Technologies</a></div>
+
+
+
+            </div>
+            <h2 class="entry-title">
+                <a href="http://www.coldfusionjedi.com/coldfusion-vs-ruby-on-rails/" title="Permalink to Coldfusion vs. Ruby On Rails" rel="bookmark">Coldfusion vs. Ruby On Rails</a>
+            </h2>
+                        <p class="meta-line">
+                <a href="http://www.coldfusionjedi.com/2014/09/21/" title="6:45 pm" rel="bookmark" class="meta-label meta-date"><i class="icon-left icon-calendar"></i><time class="entry-date" datetime="2014-09-21T18:45:03+00:00">September 21, 2014</time></a>                <span class="meta-label meta-publisher vcard">Published by:  <a href="http://www.coldfusionjedi.com/author/coldfusionjedi/" title="Posts by coldfusionjedi" rel="author">coldfusionjedi</a> </span>
+            </p>
+        </header>
+        <!-- .entry-header -->
+        <div class="row">
+            <div class="columns sixteen">
+                                    <div class="entry-content">
+                        <p>ColdFusion is a product that belongs to Macromedia. Macro media has over the years been able to come up with products that suit the current needs of developers. However, it has not been an easy ride in the market due to the presence of other developer tools in the market which have almost the same architecture and capabilities as ColdFusion. Products such as Microsoft Visual Studio among others have been some of the sources of competition to Macromedia’s ColdFusion. The biggest war has however been the ColdFusion vs. Ruby On Rails. Ruby on Rail, which is commonly refer to as Rail is an opens system source web application that is written on Ruby. Ruby is therefore the programming language upon which Rail is written. Rails is a full search framework that emphasizes on the use of well known softwares engineering patterns as well as paradigms. These may include Coc, DRY, MVC and active record period. ColdFusion vs. Ruby on Rails is a battle which might have to continue as both product developers continue coming up with improved features to be able to handle the current developers needs which for sure are quite different from the needs that were there some times back.</p>
+<p>It has now been sometimes since Macromedia released what can be termed as the most important and ambitious ColdFusion ever. This came in the form of the ColdFusion MX. When you consider the scope of undertaking, ColdFusion MX has for sure had incredible success. This product has given developers new capabilities. The move that was made to the java based architecture has greatly helped developers increase their performance and also given the developers numerous deployment options. The Cold Fusion MX was then followed by an upgraded model in the form of ColdFusion MX 6.1 which is even faster, simpler and more powerful if you compare it to other developer tools. ColdFusion has several advantages as well as disadvantages.</p>
+<p><strong>Some of the most popular sites using Ruby On Rails.</strong></p>
+<p><a href="http://www.twitter.com">Twitter.com</a><br/>
+<a href="http://www.shopify.com">Shopify.com</a><br/>
+<a href="http://www.groupon.com">Groupon.com</a></p>
+<p>&nbsp;</p>
+<p><strong>Advantages of Cold Fusion</strong></p>
+<p>With ColdFusion, you can build and deploy powerful web applications and web services. This is possible with less training time and fewer line codes than other tools. It also delivers simplified installations and migrations as well as streamlined product family. With this features the developer can be able to deliver very fast due to the simplicity. In addition to that the ColdFusion product is known to have high run time that is needed in development. This makes the process not only fast and easy but also simple. This has been one of the major reasons why many developers prefer it especially the ColdFusion MX 6.1 over other tools. In additions to this Cold Fusion allows you to program in either tag or script based syntax. Both are very easy to learn meaning that you won’t spend a lot of time learning how to do it. The other advantage is that it is a cross platform which supports a variety of platforms. Anything that runs Java can run ColdFusion. Windows, Unix Macs and Linux are all capable of running ColdFusion. Below are some of the main advantages of ColdFusion over Ruby and Rails.</p>
+<ul>
+<li>High Runtime Performance</li>
+<li>Reliable</li>
+<li>Simpler</li>
+<li>Cross platform</li>
+<li>Easy coding</li>
+</ul>
+<p><strong>Disadvantages of ColdFusion</strong></p>
+<p>Despite the known pros, ColdFusion has some disadvantages. The first one is cost. ColdFusion is expensive to purchase if you intend to run the product on your own server. Enterprise is the most expensive with the Professional Version being the cheapest. However you can also get a Developer version for free if you want to try it out or set it up on your own development machine. If you intend to use hosting provider then the cost will be very high. The other disadvantage of ColdFusion is that it is a commercial product. If open source is important to you then know that with ColdFusion you will not have the ability to tinker with engine they same way you could do it with PNP or Ruby on Rails. The main disadvantages of ColdFusion are listed below;</p>
+<ul>
+<li>Expensive</li>
+<li>Commercial product</li>
+<li>Does not allow tinkering</li>
+</ul>
+<p>Cold Fusion provides the developer with a fantastic architecture that can be used for various applications across various platforms. In addition to that, the coding is easy and the time required to learn to use it is also shortened. Despite the cons that are associated with this product it is still a tool that you as a developer should try out.</p>
+                                            </div><!-- .entry-content -->
+                                </div>
+        </div>
+
+        
+
+
+        <footer class="entry-meta">
+                                </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post -->
+</div><!-- .post-box -->
+				<div class="post-box ">
+    <article id="post-14" class="post-14 post type-post status-publish format-standard hentry category-other-technologies">
+                <header class="entry-header">
+
+                        <div class="top-meta">
+                <div class="category-line">
+	<a href="http://www.coldfusionjedi.com/category/other-technologies/" title="View all posts in Other Technologies">Other Technologies</a></div>
+
+
+
+            </div>
+            <h2 class="entry-title">
+                <a href="http://www.coldfusionjedi.com/coldfusion-vs-php/" title="Permalink to ColdFusion vs. PHP" rel="bookmark">ColdFusion vs. PHP</a>
+            </h2>
+                        <p class="meta-line">
+                <a href="http://www.coldfusionjedi.com/2014/09/14/" title="4:06 pm" rel="bookmark" class="meta-label meta-date"><i class="icon-left icon-calendar"></i><time class="entry-date" datetime="2014-09-14T16:06:53+00:00">September 14, 2014</time></a>                <span class="meta-label meta-publisher vcard">Published by:  <a href="http://www.coldfusionjedi.com/author/coldfusionjedi/" title="Posts by coldfusionjedi" rel="author">coldfusionjedi</a> </span>
+            </p>
+        </header>
+        <!-- .entry-header -->
+        <div class="row">
+            <div class="columns sixteen">
+                                    <div class="entry-content">
+                        <p>Web design is basic thing which plays a very vital role in establishing an online business. There are many types of designing platform on which the websites are created and through that only you can show up your level of working as nowadays generally it is the key feature of your online business success. But there are only two basic platforms on which mostly all the websites are created from years i.e. on PHP and on Cold Fusion. These two platforms are mostly taken up by everyone and they have successfully created attractive websites which attract user more and more. Both of these languages use HTML code, as if we use only HTML code, then it will cannot create dynamic content, cannot connect to the database successfully to perform all the queries, and manipulate files or can’t able to handle all the data alone. These two languages are totally different to each other, but they&#8217;re working is same as we can do complete data encryption to edit images by their codes.</p>
+<p><strong>PHP</strong></p>
+<p>PHP is a very big language and in this we can make any sort of websites, especially those who runs on apache server and MySQL database. PHP is a free language and has open source technology in which there is no need of purchasing any licensed software or any other thing, it works simply, while working on PHP we should have a good knowledge of ASP.NET or Java. If we have a command of these two languages than we can easily work on PHP without any problem or any query.</p>
+<p>Largest Sites using PHP:</p>
+<p><a href="http://www.flickr.com">Flickr.com</a><br/>
+<a href="http://www.digg.com">Digg.com</a><br/>
+<a href="http://www.wikipedia.com">Wikipedia.com</a><br/>
+<a href="http://www.facebook.com">facebook.com</a></p>
+<p>Another huge step for PHP has been the rising popularity of <a title="WordPress &amp; Woocommerce" href="http://www.coldfusionjedi.com/wordpress-woocommerce/">wordpress</a> as not only a blogging platform but as a CMS and ecommerce platform.</p>
+<p>&nbsp;</p>
+<p><strong>Main Advantages of using PHP</strong></p>
+<ul>
+<li>PHP is an open source language, as we can freely use it anywhere we needed.</li>
+<li>PHP can easily work on any platform provided to it, without any error or without any this functionality.</li>
+<li>It can be easily embedded in HTML.</li>
+<li>It runs faster than any other language on the internet.</li>
+<li>Interface of this language is easy with any Apache as well as MySQL.</li>
+<li>Easy to learn comparing to other languages.</li>
+<li>In this other web designing tools can be easily used,</li>
+<li>In this it depends on us that how much attractive web design we can make out.</li>
+</ul>
+<p><strong>Disadvantages of using PHP</strong></p>
+<ul>
+<li>Main disadvantage of PHP is its security, as it is an open source language we have to face the problem of bugs in the language.</li>
+<li>It is not suitable for large applications.</li>
+<li>At some point in the database, it is a weak language .</li>
+</ul>
+<p><strong>Cold Fusion</strong></p>
+<p>Cold Fusion is also a very important language to develop a website, but it is basically used by the beginners in this field to develop a web application or web pages. This is very helpful for the beginners as in this language they get a chance to learn big codes and it will be easy for them to learn high level language as it is the basic language. Cold Fusion also uses in Flash frameworks through which we can easily develop a Rich Internet Applications or the websites that contain media portion, this cold fusion has very less code than the PHP as this takes a large storage space as well as bandwidth so developers stop using this and switched to PHP.</p>
+<p><strong>Advantage of Cold Fusion</strong></p>
+<ul>
+<li>Installation of this language is simple.</li>
+<li>Supports all types of platforms.</li>
+<li>Supports all databases</li>
+<li>Easy in learning</li>
+<li>Works on Flash as well as integrated version of this language is used with PDF.</li>
+</ul>
+<p><strong>Disadvantages of Cold Fusion</strong></p>
+<ul>
+<li>This is very expensive language</li>
+<li>Very tricky syntaxes</li>
+<li>Less prestige given by developers as it is a toy language</li>
+<li>Very less pre written scripts is available</li>
+<li>Long bugs</li>
+</ul>
+<p>If we compare both the languages PHP and ColdFusion than most of the developers prefer Cold fusion as their web designing language because:</p>
+<ul>
+<li>In that there is less code</li>
+<li>It is presented in a cleaner form</li>
+<li>Can be easily integrated with PDF as well as Flash</li>
+<li>It is a tag based language</li>
+<li>Easily executes program in batch files on the server</li>
+<li>It can be easily retrieved from any point</li>
+<li>It provides session management</li>
+</ul>
+<p>By knowing all these features, mostly all developers choose this language as to design a website or web application, it they have to choose between PHP or Cold Fusion. As developers find cold fusion much easier than PHP, so they opt that language for wed designing.</p>
+                                            </div><!-- .entry-content -->
+                                </div>
+        </div>
+
+        
+
+
+        <footer class="entry-meta">
+                                </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post -->
+</div><!-- .post-box -->
+				<div class="post-box ">
+    <article id="post-12" class="post-12 post type-post status-publish format-standard hentry category-uncategorized">
+                <header class="entry-header">
+
+                        <div class="top-meta">
+                <div class="category-line">
+	<a href="http://www.coldfusionjedi.com/category/uncategorized/" title="View all posts in Uncategorized">Uncategorized</a></div>
+
+
+
+            </div>
+            <h2 class="entry-title">
+                <a href="http://www.coldfusionjedi.com/coldfusion-vs-javascript/" title="Permalink to ColdFusion vs. JavaScript" rel="bookmark">ColdFusion vs. JavaScript</a>
+            </h2>
+                        <p class="meta-line">
+                <a href="http://www.coldfusionjedi.com/2014/09/12/" title="12:00 pm" rel="bookmark" class="meta-label meta-date"><i class="icon-left icon-calendar"></i><time class="entry-date" datetime="2014-09-12T12:00:53+00:00">September 12, 2014</time></a>                <span class="meta-label meta-publisher vcard">Published by:  <a href="http://www.coldfusionjedi.com/author/coldfusionjedi/" title="Posts by coldfusionjedi" rel="author">coldfusionjedi</a> </span>
+            </p>
+        </header>
+        <!-- .entry-header -->
+        <div class="row">
+            <div class="columns sixteen">
+                                    <div class="entry-content">
+                        <p>ColdFusion is a platform to create applications for both the internet and for smartphones. JavaScript is an objected oriented programming language that is used to make webpages interactive. On the following section, we will detail the advantages and disadvantages of both of them so you can get a brief overview of each one.</p>
+<p><strong>Pros of ColdFusion</strong></p>
+<ul>
+<li>One of the main advantages of ColdFusion is that it has a fast learning curve in which a person can easily grasp the concepts and how to use it in a matter of just a few days or weeks. If the programmer knows HTML, then it is even easier to learn ColdFusion since the whole language is based on it.</li>
+<li>ColdFusion can be run on Java allowing the program being developed to function in a myriad of operative systems including Windows and Linux</li>
+<li>There is no need for a test server to write and execute a program written since it comes with an application made for that purpose</li>
+<li>ColdFusion is compatible with other Macromedia products. For instance it can easily and effortlessly be adapted to Dreamweaver, Flash, PDF, etc.</li>
+<li>ColdFusion can be used with the CFScript language which can be used to write code needed for dynamic websites.</li>
+<li>ColdFusion is constantly being redeveloped to improve its features. To this day, it has been updated 10 times and its aim has always been to make it easier and faster for the programmer to use it and implement it.</li>
+<li>ColdFusion is widely used with 75% of the Fortune 100 companies using it. Almost 1% of all websites use ColdFusion as its code language.</li>
+<li>Finding support for ColdFusion topics is very easy as there are many active people and websites available for that purpose.</li>
+<li>ColdFusion requires less code than virtually any other programming language. It is easy to read as well. The Custom Tags it has in it make it extremely easy to manage website templates.</li>
+</ul>
+<p><strong>Cons of ColdFusion</strong></p>
+<ul>
+<li>ColdFusion is not an “open source” programming application. Its cost begins from almost $1,300 for the cheapest version and so on.</li>
+<li>ColdFusion’s advantage of being able to run in Java is also a disadvantage since this takes speed away from it. Although ColdFusion is classified as a rapid web development application, the reason previously stated makes it rather slower than some of its counterparts.</li>
+<li>A lot of criticism has been made regarding the poor programming that has been made with ColdFusion. This happens because the nature of ColdFusion of being an easy and fast programming language, programmers often sacrifice quality over quantity.</li>
+</ul>
+<p><strong>Pros of JavaScript</strong></p>
+<ul>
+<li>JavaScript is fast. Being a client-side language, meaning that is executed on the user’s web browser instead of a web server, JavaScript is fast because it can be run right away as it doesn’t have to wait for a server to respond.</li>
+<li>It is easy to learn as its syntax resembles a lot the English language. There is also no need to reinvent the wheel as it has prewritten functions to objects on various pages which can be used to save time.</li>
+<li>JavaScript is very versatile. It can more or less fit other languages and applications. Moreover, it can be inserted in webpages and it can be written within other languages like PHP, etc.</li>
+<li>JavaScript also works in other platforms, such as Dreamweaver, Dashboards, Photoshop, PDF editors and so on.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Cons of JavaScript</strong></p>
+<ul>
+<li>JavaScript is everything except secure. Due to it being a client-side language, anyone can write a program for evil purposes and affect other people’s computer systems. No wonder why there are many people who disable JavaScript on their PCs.</li>
+<li>Its output is not the same on all browsers. If the program or application isn’t tested on the most popular and the majority of web browsers, it can work correctly in the one it was developed for but it may go wrong on others. This is also caused by it client-side characteristic. This can create many problems and sometimes it upsets most programmers using this language for developing applications.</li>
+<li>It is not the most popular programming language today as it is used only in 0.1% of all websites developed in the world.</li>
+</ul>
+<p><em>Resources</em></p>
+<p><a href="http://vschart.com/compare/coldfusion/vs/javascript">http://vschart.com/compare/coldfusion/vs/javascript</a></p>
+<p><a href="http://www.webtricks.com/code/coldfusion_javascript.cfm">http://www.webtricks.com/code/coldfusion_javascript.cfm</a></p>
+<p><a href="http://w3techs.com/technologies/comparison/pl-coldfusion,pl-js">http://w3techs.com/technologies/comparison/pl-coldfusion,pl-js</a></p>
+<p><a href="http://www.mediacollege.com/internet/javascript/pros-cons.html">http://www.mediacollege.com/internet/javascript/pros-cons.html</a></p>
+<p><a href="http://www.jscripters.com/javascript-advantages-and-disadvantages/">http://www.jscripters.com/javascript-advantages-and-disadvantages/</a></p>
+<p><a href="http://coldfusion-development.blogspot.com/2009/03/advantages-and-disadvantages-of.html">http://coldfusion-development.blogspot.com/2009/03/advantages-and-disadvantages-of.html</a></p>
+<p>&nbsp;</p>
+                                            </div><!-- .entry-content -->
+                                </div>
+        </div>
+
+        
+
+
+        <footer class="entry-meta">
+                                </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post -->
+</div><!-- .post-box -->
+				<div class="post-box ">
+    <article id="post-10" class="post-10 post type-post status-publish format-standard hentry category-coldfusion category-other-technologies">
+                <header class="entry-header">
+
+                        <div class="top-meta">
+                <div class="category-line">
+	<a href="http://www.coldfusionjedi.com/category/coldfusion/" title="View all posts in ColdFusion">ColdFusion</a> <a href="http://www.coldfusionjedi.com/category/other-technologies/" title="View all posts in Other Technologies">Other Technologies</a></div>
+
+
+
+            </div>
+            <h2 class="entry-title">
+                <a href="http://www.coldfusionjedi.com/coldfusion-vs-asp-net/" title="Permalink to ColdFusion vs. ASP.NET" rel="bookmark">ColdFusion vs. ASP.NET</a>
+            </h2>
+                        <p class="meta-line">
+                <a href="http://www.coldfusionjedi.com/2014/09/05/" title="12:53 pm" rel="bookmark" class="meta-label meta-date"><i class="icon-left icon-calendar"></i><time class="entry-date" datetime="2014-09-05T12:53:34+00:00">September 5, 2014</time></a>                <span class="meta-label meta-publisher vcard">Published by:  <a href="http://www.coldfusionjedi.com/author/coldfusionjedi/" title="Posts by coldfusionjedi" rel="author">coldfusionjedi</a> </span>
+            </p>
+        </header>
+        <!-- .entry-header -->
+        <div class="row">
+            <div class="columns sixteen">
+                                    <div class="entry-content">
+                        <p>Any type of migration starts with getting a better understanding of how each capability of the source system map towards every capability of the target system. Does there happen to be any missing functionality within the target system that could possibly require added purchase of an entire set of third party components? Are there any substantial capabilities the target system may give off? The purpose of this paper is to give a comparative of the capabilities of ColdFusion MX by Macromedia to ASP.NET of Microsoft on the note of a solid application development framework. As such, we will examine how certain common tasks are done through each and get a clearer view on the similarities and differences on these two contending platforms.</p>
+<p><strong>Architectural Framework Comparison</strong></p>
+<p>The most rudimentary of all architectural niceties between ColdFusion MX and ASP.NET would be its underlying framework to which each is based on. ColdFusion MX is based on Java that runs on top of the JRun server by Macromedia. It also benefits several other industry standard J2EE app servers. All CFML pages undergo parsing and conversion into Java-based source code at runtime. It then gets compiled as Java bytecode before its execution. Once the initial compilation is completed, the cached bytecode designated for a page will be re-executed even without further compilation or parsing.</p>
+<p>On the other hand, ASP.NET stands by the .NET Framework of Microsoft. The same thing applies at runtime; all ASP.NET pages created undergo parsing and source code conversion for a compatible language &#8212; oftentimes C# Microsoft Visual Basic .NET. Compilation into Microsoft Intermediate Language or MSIL, a bytecode independent from a processor and akin to Java bytecode, follows. This MSIL will be compiled for native machine coding as preparation for execution. The cached NMC for every page will be re-executed even without further compilation or parsing.</p>
+<p>Basically, we can see a common pattern between the two platforms with its methodologies and procedural movements in terms of source coding and data parsing.</p>
+<p><strong>The Pros</strong></p>
+<p>For all we know, ColdFusion has a lot in its arsenal that makes it worth migrating to from your current ASP.NET platform. First to note would be it custom tag features of ColdFusion that greatly resemble the user controls that of ASP.NET’s. Unlike the user control, custom tags allow the user to mark up HTML and send its output into the browser. They can also give full-fledged control over objects with their own unique methods and properties. In a strong sense do these custom tags outrun the capacities of ASP.NET’s user controls.</p>
+<p>Newly introduced for ColdFusion MX would be the ColdFusion Components or CFCs in short represent the very first real step designed for the platform to revolutionary functionalities such as encapsulation and other maintenance and flexibility advantages of a real object-edged system. CFCs are able to run multiple instances altogether on one page, with every instance having its exclusive data contained therein the same way it can easily maneuver its own contents.</p>
+<p>Also, the omnipresent acceptance of ColdFusion doesn’t just come out of blind faith of the users. It is backed by other evident advantages of the platform, which would include its system being fairly easy to learn and adapt, allowing developers to get up to speed on CFScript and CFML in a matter of days or weeks should they be oriented to the basics of Java.</p>
+<p><strong>The Cons</strong></p>
+<p>While the ColdFusion platform does seem to be promising, you can’t really have it all. Just as ASP.NET has its own basket of erratum, ColdFusion has a few noticeable drawbacks. One of which would be its stringent demand for system memory, particularly on CFML engine integration. It does have a memory quantum compared to the typical C++ and on the usual, it would take around 2GB of permgen memory for its operational efficiency to manifest. Also, it lacks support sources from the open source community itself, which from time to time may require the user to work things around on his own. Empirical attempts to accurately put it.</p>
+<p><strong>The Verdict</strong></p>
+<p>Overall, migrating from ColdFusion to ASP.NET is considerably a simple task to undertake. It can be pretty straightforward throughout the process, especially if you first settle with the basic features and functionality of it. After all, there&#8217;s plenty of time to learn and it takes a meager of time to actually take in the gist of other boons and essential elements in ColdFusion&#8217;s reservation.</p>
+<p><em><strong>Sources:</strong></em></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/aa479305.aspx">http://msdn.microsoft.com/en-us/library/aa479305.aspx</a></p>
+<p><a href="http://vschart.com/compare/coldfusion/vs/asp-net-mvc-framework">http://vschart.com/compare/coldfusion/vs/asp-net-mvc-framework</a></p>
+<p><a href="https://www.farbeyondcode.com/Pros-and-Cons-of-CFML-vs-PHP-and-other-languages-5-2878.html">https://www.farbeyondcode.com/Pros-and-Cons-of-CFML-vs-PHP-and-other-languages-5-2878.html</a></p>
+                                            </div><!-- .entry-content -->
+                                </div>
+        </div>
+
+        
+
+
+        <footer class="entry-meta">
+                                </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post -->
+</div><!-- .post-box -->
+				<div class="post-box ">
+    <article id="post-6" class="post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-coldfusion">
+                <header class="entry-header">
+
+                        <div class="top-meta">
+                <div class="category-line">
+	<a href="http://www.coldfusionjedi.com/category/coldfusion/" title="View all posts in ColdFusion">ColdFusion</a></div>
+
+
+
+            </div>
+            <h2 class="entry-title">
+                <a href="http://www.coldfusionjedi.com/adobe-coldfusion-overview/" title="Permalink to Adobe ColdFusion Overview" rel="bookmark">Adobe ColdFusion Overview</a>
+            </h2>
+                        <p class="meta-line">
+                <a href="http://www.coldfusionjedi.com/2014/08/15/" title="3:30 pm" rel="bookmark" class="meta-label meta-date"><i class="icon-left icon-calendar"></i><time class="entry-date" datetime="2014-08-15T15:30:18+00:00">August 15, 2014</time></a>                <span class="meta-label meta-publisher vcard">Published by:  <a href="http://www.coldfusionjedi.com/author/coldfusionjedi/" title="Posts by coldfusionjedi" rel="author">coldfusionjedi</a> </span>
+            </p>
+        </header>
+        <!-- .entry-header -->
+        <div class="row">
+            <div class="columns sixteen">
+                                    <div class="thumbnail-outer format-ico post-ico"><a href="http://www.coldfusionjedi.com/adobe-coldfusion-overview/"><img width="266" height="200" src="http://www.coldfusionjedi.com/wp-content/uploads/2014/09/xCold-Fusion-266x200.jpg.pagespeed.ic.HJdP3EM8Y-.jpg" class="attachment-single-post-small wp-post-image" alt="Cold-Fusion"/></a></div>
+
+                                        <div class="entry-content">
+                        <p>&nbsp;</p>
+<p>Adobe Coldfusion is a programming platform released by JJ Allaire way back in 1995. Ever since its release, Coldfusion has continuously grown in popularity for various reasons. Coldfusion has changed hands since it was released, from Allaire to Macromedia, and now Adobe. According to statistics Coldfusion is extensively deployed among different organizations. In fact, Coldfusion is deployed to over 75% of the present Fortune 100 companies. If you want to know more about Adobe Coldfusion, then you have come to the right place as this article is going to serve as a <a href="http://www.adobe.com/products/coldfusion-family.html">Adobe Coldfusion</a> overview.</p>
+<p>As an introduction, Coldfusion is considered as a Rapid Application Development application. It is mainly used to create compelling and strong web-based applications. Also, Coldfusion acts like a language and an application server at the same time, and it&#8217;s great at doing it. Since it&#8217;s built on a Java J2EE platform, it is able to offer portability, scalability and fast rendering, which is one of the reasons why it is very popular with a deployment that spans across the globe.</p>
+<p>As of now, Coldfusion is available in two editions. There are the Enterprise and Standard. The Enterprise Edition is the perfect solution for web application development as it is able to deliver multiple web applications. Standard Edition is more or less the same with the Enterprise, except the Standard edition does not have the feature for managing multi-application environments.</p>
+<p><strong>Why Coldfusion?</strong></p>
+<p>This brings us to the next subject, why would you choose to deploy keyword? This section of the article is going to discuss a few of the many benefits of keyword.</p>
+<p>Some of the most popular sites using Adobe Coldfusion:</p>
+<p><a href="http://www.shutterfly.com">Shutterfly.com</a></p>
+<p><a href="http://www.ft.com">Ft.com</a></p>
+<p><a href="http://www.target.com">Target.com</a></p>
+<p>&nbsp;</p>
+<p>As a start, Coldfusion is one of the easiest and fastest way of building complex web applications. Furthermore, application development with Coldfusion offers fast development times and lower cost when compared to other technologies that is available in the market right now.</p>
+<p>Another great advantage of Coldfusion is its ability to integrate with a wide range of web platforms and applications. There are only a handful of platforms out there that are able to match or surpass the level of language-level integration offered by Codlfusion. With Coldfusion, you are able to send an http request, file operations, fetch data, generate PDF&#8217;s, send an email or LDAP &#8220;talking&#8221;; and we are barely scratching the surface of what it can do.</p>
+<p>Let&#8217;s talk more about the integration capabilities of Coldfusion. As a start, Coldfusion is able to &#8220;talk&#8221; with a Java portlet server, Microsoft Office, Microsoft Exchange and LDAP. If you need to integrate .NET or Java projects into your applications, Coldfusion can do it. You need you talk to cell phones or printers through SMS? Then Coldfusion is able to do it. Most importantly, with Coldfusion, you do not have to spend a dime on third-party tools or waste time searching, installing and integrating third-party tools.</p>
+<p><strong>A Few Disadvantages<br/>
+</strong>Like most things, Coldfusion has its downsides. Below are a few of them:</p>
+<p><em>Comes With A Price Tag</em> &#8211; since Coldfusion is largely a commercial product, this means that you will have to spend money to use it. It&#8217;s relatively expensive in a way that its competitors are open source or free. However, most open source or free applications are built separately. Meaning you have to integrate different applications and platform if you want the same kind of capabilities brought by Coldfusion.</p>
+<p><em>Unusual Syntax</em> &#8211; Coldfusion is known to use syntax that is considered as &#8220;unusual&#8221; for most programmers. For the most part, it can be tricky for programmers to get used to. However, once they get the hang of it, Coldfusion syntax confusion-related problems are a thing of the past.</p>
+<p><em>Not A Flagship Product</em> &#8211; as of now, Coldfusion is branded by Adobe. Adobe has a lot of different products such as Macromedia Flash and Adobe Photoshop. When it comes to their list of products, Coldufion is not considered as one of the their flagship products. For some, this could mean that Coldfusion does not have the kind of priority or importance. In reality, Coldfusion is already a great product by itself and the amount of attention given to it by Adobe is fitting.</p>
+<p>Coldfusion is an application platform primarily used for creating web-based applications. It offers easy usability, relatively economical and highly integratable. On the downsides, it comes with a price tag and may have unusual syntax. All in all, Coldfusion is still worth getting. As most would say, 75% of the Fortune 100 companies couldn’t be wrong for deploying Coldfusion.</p>
+<p>Links: <a href="http://coldfusion-development.blogspot.com/2009/03/advantages-and-disadvantages-of.html">http://coldfusion-development.blogspot.com/2009/03/advantages-and-disadvantages-of.html</a><br/>
+<a href="http://en.wikipedia.org/wiki/Adobe_ColdFusion">http://en.wikipedia.org/wiki/Adobe_ColdFusion</a></p>
+                                            </div><!-- .entry-content -->
+                                </div>
+        </div>
+
+        
+
+
+        <footer class="entry-meta">
+                                </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post -->
+</div><!-- .post-box -->
+			
+</div><!-- #content -->
+</div><!-- #main -->
+
+</div><!-- #page -->
+
+<section id="sidebar" class="four columns">
+        <div id="secondary" class="widget-area" role="complementary">
+        <aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform-content" action="http://www.coldfusionjedi.com/">
+    <div class="row">
+
+
+        <input type="text" value="" name="s" class="search-content-input" placeholder="Search">
+
+
+        <input type="submit" class="searchsubmit-content" value="Search">
+
+    </div>
+</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title"><span>Recent Posts</span></h3>		<ul>
+					<li>
+				<a href="http://www.coldfusionjedi.com/wordpress-woocommerce/">WordPress &#038; Woocommerce</a>
+						</li>
+					<li>
+				<a href="http://www.coldfusionjedi.com/coldfusion-vs-ruby-on-rails/">Coldfusion vs. Ruby On Rails</a>
+						</li>
+					<li>
+				<a href="http://www.coldfusionjedi.com/coldfusion-vs-php/">ColdFusion vs. PHP</a>
+						</li>
+					<li>
+				<a href="http://www.coldfusionjedi.com/coldfusion-vs-javascript/">ColdFusion vs. JavaScript</a>
+						</li>
+					<li>
+				<a href="http://www.coldfusionjedi.com/coldfusion-vs-asp-net/">ColdFusion vs. ASP.NET</a>
+						</li>
+				</ul>
+		</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title"><span>Categories</span></h3>		<ul>
+	<li class="cat-item cat-item-2"><a href="http://www.coldfusionjedi.com/category/coldfusion/" title="View all posts filed under ColdFusion">ColdFusion</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.coldfusionjedi.com/category/other-technologies/" title="View all posts filed under Other Technologies">Other Technologies</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.coldfusionjedi.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+		</ul>
+</aside>    </div><!-- #secondary -->
+    </section><!-- #sidebar .widget-area -->
+
+
+
+
+</div><!-- #wrapper -->
+<footer id="main-footer" class="main-footer">
+    <div class="row sidebar-footer">
+    <ul class="block-grid four-up mobile">
+            </ul>
+</div>
+    <div id="footer-bottom">
+        <div class="row">
+            <div class="four columns">
+                           </div>
+            <div class="twelve columns footer-navigation">
+                <div class="menu"><ul><li class="current_page_item"><a href="http://www.coldfusionjedi.com/">Home</a></li></ul></div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <div id="su-footer-links" style="text-align: center;"></div><script src="http://www.coldfusionjedi.com/wp-content/themes/smartadapt/js/foundation,_jquery.foundation.navigation.js,qver==1.0+foundation,_jquery.foundation.buttons.js,qver==1.0+foundation,_jquery.foundation.topbar.js,qver==1.0+foundation,_jquery.foundation.tooltips.js,qver==1.0+photoswipe,_lib,_klass.min.js,qver==1.0.pagespeed.jc._NYPi3RrQV.js"></script><script>eval(mod_pagespeed_qWsFZhCasP);</script>
+<script>eval(mod_pagespeed_H6uYqQ8_89);</script>
+<script>eval(mod_pagespeed_IUMYcvYnje);</script>
+<script>eval(mod_pagespeed_HPDsF$U_aN);</script>
+<script>eval(mod_pagespeed__oYtmN0pgj);</script>
+<script src="http://www.coldfusionjedi.com/wp-content/themes/smartadapt/js/photoswipe,_code.photoswipe.jquery-3.0.5.min.js,qver==1.0+responsive-tables.js,qver==1.0+foundation,_app.js,qver==1.0+mobile-menu.js,qver==3.9.19.pagespeed.jc._PGx_cBT-5.js"></script><script>eval(mod_pagespeed_QefIDvEl3E);</script>
+<script>eval(mod_pagespeed_Gik4bPpb4F);</script>
+<script>eval(mod_pagespeed_1KDpQNzOQR);</script>
+<script>eval(mod_pagespeed_3Ro8DSYf_d);</script>
+</body>
+</html>

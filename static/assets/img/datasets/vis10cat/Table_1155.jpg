@@ -1,0 +1,238 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>	
+<meta name="viewport" content="width=device-width, initial-scale=1"/>      
+<link rel="icon" href="//www.ibm.com/favicon.ico"/>
+<link rel="canonical" href="//www.ibm.com/developerworks/error/error-404.html"/>
+<meta name="geo.country" content="ZZ"/>
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2017"/>
+<meta name="dcterms.date" content="2017-02-23"/>
+<meta name="description" content="The page you requested cannot be displayed (HTTP response code 404)"/>	
+<meta name="keywords" content="The page you requested cannot be displayed (HTTP response code 404)"/>
+<meta name="robots" content="noindex,nofollow"/>
+<title>IBM developerWorks : Sorry, the page you're looking for is not available</title>
+    
+<script> 
+    digitalData = {
+        "page":{
+            "category":{
+                "primaryCategory":"SOFDCOTHZZ"
+            },
+            "pageInfo":{
+                "effectiveDate":"2017-02-23",                
+                "language":"en",
+                "publishDate":"2017-02-23",
+                "publisher":"IBM Corporation",
+                "version":"v18",
+                "ibm":{ 
+                    "contentDelivery":"IBM developerWorks template",
+                    "contentProducer":"IBM developerWorks",
+                    "country":"ZZ",
+                    "owner":"developerWorks Content/Raleigh/IBM",
+                    "subject":"ZZ999",
+                    "type":"CT801",
+                    "topic":"Browsers",
+                    "contentArea":"none",
+                },
+                "keywords":"The page you requested cannot be displayed (HTTP response code 404)",
+                "description":"The page you requested cannot be displayed (HTTP response code 404)"
+            }
+        }
+    }; 
+</script>
+	
+<!-- SITE MON : START (DO NOT DELETE) -->
+<!-- developerWorks monitoring token -->
+<!-- SITE MON : END (DO NOT DELETE) -->
+
+<!-- HEADER_SCRIPTS_AND_CSS_INCLUDE -->
+<script src="//1.www.s81c.com/common/stats/ida_stats.js"></script>
+<link href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet" />
+<link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/dw-mf-v18.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+	<link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/dw-mf-ie8fix.css" rel="stylesheet" />
+<![endif]-->
+<link href="//dw1.s81c.com/developerworks/css/v18/dw-landing.css" rel="stylesheet" />
+<script src="//1.www.s81c.com/common/v18/js/www.js"></script>
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-landing.js"></script>
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-auth-properties.js"></script>
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-auth.js"></script>
+<script src="//dw1.s81c.com/developerworks/js/dw-mf/v18/dw-mf.js"></script>
+</head>
+<body id="ibm-com" class="ibm-type dw-js-disabled">
+
+<div id="ibm-top" class="ibm-landing-page">
+
+<!-- MASTHEAD_BEGIN -->
+<div id="ibm-masthead" role="banner" aria-label="IBM">
+    <div id="ibm-mast-options">
+        <ul role="toolbar" aria-labelledby="ibm-masthead">
+            <li id="ibm-geo" role="presentation"><a href="https://www.ibm.com/planetwide/select/selector.html" role="button" aria-label="United States selected - Choose a country">United States</a></li>
+        </ul>
+    </div>
+    <div id="ibm-universal-nav">    
+  
+        <nav role="navigation" aria-label="IBM">
+            <div id="ibm-home"><a href="https://www.ibm.com/us/en/">IBM®</a></div>
+            <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+                <li><a href="https://www.ibm.com/sitemap/us/en/">Site map</a></li>
+            </ul> 
+        </nav>
+  
+        <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+            <form id="ibm-search-form" action="https://www.ibm.com/Search/" method="get">
+                <p>
+                    <label for="q">IBM</label>
+                    <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search developerWorks"/>
+                    <input type="hidden" value="18" name="v"/>
+                    <input type="hidden" value="utf" name="en"/>
+                    <input type="hidden" value="en" name="lang"/>
+                    <input type="hidden" value="us" name="cc"/>
+                    <input type="hidden" name="sn" value="dw" />
+                    <input type="hidden" name="dws" value="dw" />
+                    <input type="hidden" name="hpp" value="20" />
+                    <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit"/>
+                </p>
+            </form>
+        </div>
+       
+    </div>
+</div>
+<!-- MASTHEAD_END -->
+	    
+<div id="ibm-content-wrapper">
+    
+<!-- LEADSPACE_BEGIN -->
+<header role="banner" aria-labelledby="ibm-pagetitle-h1">
+<!-- MASTHEAD_SITENAV_BEGIN -->
+<div class="ibm-sitenav-menu-container">
+    <div class="ibm-sitenav-menu-name">
+        <a href="//www.ibm.com/developerworks/">
+            <img width="186" height="24" alt="developerWorks®" src="//dw1.s81c.com/developerworks/i/mf/dw-mf-wordmark.svg"/>
+        </a>
+    </div>
+    <div class="ibm-sitenav-menu-list">
+        <ul role="menubar">
+            <li class="dw-navpage-learn" role="presentation">
+                <span role="menuitem"><a href="//www.ibm.com/developerworks/learn/">Learn</a></span>
+            </li>                    
+            <li role="presentation" class="dw-navpage-develop">
+                <span role="menuitem"><a href="//www.ibm.com/developerworks/develop/">Develop</a></span>
+            </li>            
+            <li role="presentation" class="dw-navpage-connect">
+                <span role="menuitem"><a href="//www.ibm.com/developerworks/connect/">Connect</a></span>
+            </li>
+        </ul>
+    </div>
+</div>        
+<!-- MASTHEAD_SITENAV_END -->   
+<div id="ibm-leadspace-head" class="ibm-alternate ibm-hidden-bg-small ibm-hidden-bg-medium">
+    <div id="ibm-leadspace-body">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <h1 id="ibm-pagetitle-h1" class="ibm-h1">Oops, that's not right!</h1>
+                <h2 class="ibm-h2">Sorry, the page you're looking for is not available</h2>
+                <p class="ibm-button-link"><a id="dw-report-issue" class="ibm-btn-sec dw-btn-green" href="//www.ibm.com/developerworks/secure/feedback">Report the issue</a></p>
+            </div>
+        </div>
+    </div>
+</div>        
+</header>
+<!-- LEADSPACE_END -->    
+    
+<!-- MAIN_CONTENT_BEGIN -->
+<main role="main" aria-labelledby="ibm-pagetitle-h1">
+    <div id="ibm-pcon">
+        <!-- BEGIN_IBM-CONTENT -->
+        <div id="ibm-content">
+            <!-- BEGIN_IBM-CONTENT-BODY -->
+            <div id="ibm-content-body">
+                <!-- BEGIN_IBM-CONTENT-MAIN -->
+                <div id="ibm-content-main">                         
+                    <!-- BEGIN_INTERIOR_COLUMNS -->
+                    <div class="ibm-columns">
+                    <div class="ibm-col-6-4">
+                        <p>The page you're looking for has been moved or deleted, or the URL is incorrect. If you got to this page through a bookmark, please update your bookmark.
+If you got here through a link on developerWorks, please report the broken link to our <a href="mailto:talk2dw@us.ibm.com">support team</a> and we will promptly fix it.</p>
+                        <p>One of these pages may help you find what you're looking for:</p>
+                        <ul class="ibm-bullet-list">
+                            <li><a href="https://www.ibm.com/developerworks/learn/">developerWorks technical topics</a></li>
+                            <li><a href="https://developer.ibm.com/courses/">developerWorks courses</a></li>
+                            <li><a href="https://developer.ibm.com/tv/">developerWorks videos</a></li>
+                            <li><a href="https://developer.ibm.com/dwblog/">developerWorks blog</a></li>
+                            <li><a href="https://www.ibm.com/developerworks/newsletter/">developerWorks newsletters</a></li>
+                        </ul>
+                        <p>Sorry for the inconvenience. Thanks for using IBM developerWorks!</p><p>&#160;</p><p>Error 404</p>
+                    </div>
+                    <div class="ibm-col-6-2">                            
+                        <p>&#160;</p>
+                    </div> 
+                    </div>
+                    <!--END_INTERIOR_COLUMNS -->                        
+                </div>
+                <!-- END_IBM-CONTENT-MAIN -->
+            </div>
+            <!-- END_IBM-CONTENT-BODY -->
+        </div>
+        <!-- END_IBM-CONTENT -->
+    </div>
+    <!-- END_IBM-PCON -->
+</main>
+<!-- MAIN_CONTENT_END -->
+    
+<!-- END_CONTENT-WRAPPER -->	
+</div>
+    
+<!-- FOOTER_BEGIN -->
+<footer role="contentinfo" aria-label="IBM developerWorks">
+    <div id="dw-footer" class="ibm-padding-normal ibm-alternate">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <div class="dw-footer-corporate-links">
+                <ul>
+                    <li><a href="//www.ibm.com/developerworks/aboutdw/contacts.html">Contact</a></li>
+                    <li><a href="//www.ibm.com/privacy/us/en/">Privacy</a></li>
+                    <li><a href="//www.ibm.com/developerworks/community/terms/use/">Terms of use</a></li>
+                    <li><a href="//www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+                    <li class="ibm-feedbacklink"><a href="#">Feedback</a></li>
+                    <li id="ibm-truste-cp"><a onclick="truste.eu.clickListener();return false;" href="#">Cookie Preferences</a></li>
+                </ul>                 
+                </div>
+                <div id="ibm-footer-locale-selector"></div>
+            </div>
+        </div>
+    </div>        
+</footer> 
+<!-- FOOTER_END -->
+
+<!-- END_IBM-TOP -->
+</div>
+
+<!-- SCRIPTS_INCLUDE_BEGIN -->
+<script>    
+$(document).ready(function() {
+    var feedbackLink = $('#dw-report-issue').attr('href');
+    var queryString = '?referringURL=';
+    var referrer = document.referrer;
+    var requested = window.location.search;
+    var url2pass = "";
+    if (referrer) {
+        var url2pass = referrer;
+    } else if (requested) {
+        var requestedEdit = requested.slice(0, requested.lastIndexOf('&'));
+        var requestedEdit = requestedEdit.slice(11);
+        var url2pass = window.location.origin + requestedEdit;
+    }
+    var targetURL = feedbackLink + queryString + url2pass;
+    $('#dw-report-issue').attr('href',targetURL);  
+});    
+</script>   
+<!-- SCRIPTS_INCLUDE_END -->
+
+</body>
+</html>

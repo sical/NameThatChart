@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en">
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Adobe Create Magazine</title>
+    
+	<link rel="apple-touch-icon" sizes="57x57" href="/etc/designs/inspire/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/etc/designs/inspire/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/etc/designs/inspire/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/etc/designs/inspire/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/etc/designs/inspire/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/etc/designs/inspire/images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/etc/designs/inspire/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/etc/designs/inspire/images/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/etc/designs/inspire/images/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/etc/designs/inspire/images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/etc/designs/inspire/images/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/etc/designs/inspire/images/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/etc/designs/inspire/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/etc/designs/inspire/images/favicons/manifest.json">
+	<link rel="mask-icon" href="/etc/designs/inspire/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/etc/designs/inspire/images/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="/etc/designs/inspire/images/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/etc/designs/inspire/images/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Each week, Adobe Create Magazine features innovative artists and shines a spotlight on creative work in photography, design, video, illustration, and more." />
+    <meta property="og:image" content="http://create.adobe.com/etc/designs/inspire/images/facebook_header_create.jpg" />
+    <meta http-equiv="Cache-Control" content="max-age=3600"/>
+
+
+    
+    
+<script type="text/javascript" src="/etc/designs/inspire/clientlibs.js"></script>
+<link rel="stylesheet" href="/etc/designs/inspire/clientlibs.css" type="text/css"/>
+
+
+
+<link href="/etc/designs/inspire.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="/etc/designs/inspire/clientlibs/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
+
+    <!-- <script type="text/javascript" src="/etc/designs/inspire/clientlibs/js/inspire.home.article-list.js"></script> -->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script type="text/javascript" src="js/rem.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="//use.typekit.net/lvh3jos.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="//assets.adobedtm.com/659ec8ada5450db95675e43beaaae92399591a11/satelliteLib-46e65db5bb0c375f8f64619be31cc9b29acf4867.js"></script>
+
+    <script type="text/javascript">
+        window.pageTagOverride = "";
+    </script>
+    
+    <link rel="next" href="/index.page2.html"/>
+    <link rel="prev" href="#"/>
+
+    
+    
+</head>
+
+
+<body class="new-style" ng-app="inspireArticles">
+<div class="master-offset">
+	<div class="master-container" ng-controller="inspireAppController">
+		
+<nav id="mobile-left-rail" class="nodesktop">
+    <!--<a href="javascript:void(0);" class="close-mobile-rail">+</a>-->
+    <section class="nav-selection">
+        <ul class="nav-selection-list">
+            <li class="topic-list">
+                <ul class="nav-menu-list">
+                    
+                    <li><a href="/graphic-design.html">Graphic Design</a></li>
+                    <li><a href="/illustration.html">Illustration</a></li>
+                    <li><a href="/motion-graphics.html">Motion Graphics</a></li>
+                    <li><a href="/photography.html">Photography</a></li>
+                    <div class="mobile-reserve-container" style="height:0px;">
+                        <li class="reserve-article-topics"><a href="/art-direction.html">Art Direction</a></li>
+                        <li class="reserve-article-topics"><a href="/audio-video.html">Audio/Video</a></li>
+                        <li class="reserve-article-topics"><a href="/branding.html">Branding</a></li>
+                        <li class="reserve-article-topics"><a href="/2015/4/30/adobe_creative_residency.html">Creative Residency</a></li>
+                        <li class="reserve-article-topics"><a href="/screen-design.html">Screen Design</a></li>
+                    </div>
+                    <li class="nav-reserve-plus"><a href="javascript:void(0)">More...</a></li>
+                    <li class="nav-reserve-minus" style="display:none;"><a href="javascript:void(0)">...Less</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="nav-sub-right">
+        <ul class="nav-icon-list">
+            <li>
+                <a href="/search.html" class="inspire-icon-search" title="Search"><span>Search</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/adobecreate" class="inspire-icon-twitter" title="Follow" target="_blank"><span>Follow</span></a>
+            </li>
+            <li>
+                <a href="/lets_be_friends.html" class="inspire-icon-subscribe" title="Let's Be Friends - Subscribe"><span>Let's Be Friends</span></a>
+            </li>
+            <li>
+                <a href="/lets_be_friends.html" id="app-download-link" class="inspire-icon-get-app" title="Get App"><span>Get App</span></a>
+                <script type="text/javascript">
+                    if (getMobileOperatingSystem() == 'iOS')
+                        $('#app-download-link').attr('href','http://itunes.apple.com/us/app/adobe-inspire/id536737621');
+                    else if (getMobileOperatingSystem() == 'Android')
+                         $('#app-download-link').attr('href','https://play.google.com/store/apps/details?id=com.adobe.dpspubs.inspire');                
+                </script>
+            </li>
+        </ul>
+    </section>
+</nav>
+<nav class="page-navigation-group group">
+    <section class="page-navigation">
+        <div class="nav-header">
+            <a href="javascript:void(0);" class="nodesktop inspire-icon-menu"></a>
+            <a class="nav-create-logo" href="/">
+                <div class="inspire-icon-create"></div>
+            </a>
+            <span class="nav-header-title nomobile">ADOBE CREATE MAGAZINE</span>
+            <div class="nav-sub">
+                <ul class="nav-icon-list">
+                    <li class="search-list-item">
+                        <a href="javascript:void(0)" class="nav-icon-menu-item inspire-icon-search-v3" title="Search"></a>
+                        <form id="site-search" name="site-search" method="get" action="/search.html" class="nav-sub-search ng-pristine ng-valid">
+                            <input id="search-input" type="text" title="Search" name="q" placeholder="Search">
+                        </form>
+                    </li>
+                    <li>
+                        <a href="/lets_be_friends.html" class="nav-icon-menu-item inspire-icon-subscribe-v3" title="Let's Be Friends - Subscribe"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/adobecreate" class="inspire-icon-twitter-v3" title="Twitter" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a class="nav-adobe-logo inspire-icon-adobe" href="http://www.adobe.com" title="Adobe.com" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <section class="nav-selection">
+            <ul class="nav-selection-list">
+                
+                <li><a href="/graphic-design.html" class="">Graphic Design</a></li>
+                <li><a href="/illustration.html" class="">Illustration</a></li>
+                <li><a href="/motion-graphics.html" class="">Motion Graphics</a></li>
+                <li><a href="/photography.html" class="">Photography</a></li>
+                <li><span>More...</span>
+                    <ul class="nav-selection-more">
+                        <li class="reserve-article-topics"><a href="/art-direction.html" class="">Art Direction</a></li>
+                        <li class="reserve-article-topics"><a href="/audio-video.html" class="">Audio/Video</a></li>
+                        <li class="reserve-article-topics"><a href="/branding.html" class="">Branding</a></li>
+                        <li class="reserve-article-topics"><a href="/2015/4/30/adobe_creative_residency.html" class="">Creative Residency</a></li>
+                        <li class="reserve-article-topics"><a href="/screen-design.html" class="">Screen Design</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </section> 
+</nav>
+
+<div class="category-title-group-container group">
+    <aside class="category-title">INDEX</aside>
+    <aside class="category-description"></aside>
+</div>
+   
+		
+
+
+
+
+
+
+
+<div class="content-area-main">
+    <div class="articles-flow-area">
+        
+        
+        <div class="page-marquee-group group">
+            
+<section class="page-marquee">
+        <div class="page-marquee-image">
+            <a href="http://create.adobe.com/2017/7/12/the_geometric_illustrations_of_yo_az.html">
+        	   <div id="cq-image-jsp-/content/microsites/inspire/index/jcr:content/marquee/image"><img title="" alt="file" class="cq-dd-image" src="/content/microsites/inspire/index/_jcr_content/marquee/image.img.jpg/1499971238511.jpg"/></div>
+    
+    
+<script type="text/javascript">
+    (function() {
+        var imageDiv = document.getElementById("cq-image-jsp-/content/microsites/inspire/index/jcr:content/marquee/image");
+        var imageEvars = '{ imageLink: "/", imageAsset: "", imageTitle: "" }';
+        var tagNodes = imageDiv.getElementsByTagName('A');
+        for (var i = 0; i < tagNodes.length; i++) {
+            var link = tagNodes.item(i); 
+            link.setAttribute('onclick', 'CQ_Analytics.record({event: "imageClick", values: ' + imageEvars + ', collect:  false, options: { obj: this }, componentPath: "foundation/components/image"})');
+        }
+        
+    })();
+</script>
+
+            </a>
+        </div>
+        <header class="font-small article-descriptor">
+        	<div class="page-marquee-attribution">
+                
+        	</div>
+            <h1><a href="http://create.adobe.com/2017/7/12/the_geometric_illustrations_of_yo_az.html">The Geometric Illustrations of Yo Az</a></h1>
+            <p><a href="http://create.adobe.com/2017/7/12/the_geometric_illustrations_of_yo_az.html">This Paris-based digital artist is inspired by Cubism and Pop Art and works in a delightfully intricate vector style. </a></p>
+        </header>
+</section>
+        </div>
+        
+        <div class="secondary-marquee-group group">
+            <div class="secondary-marquee">
+                
+<article>
+    <a href="http://create.adobe.com/2017/6/20/artists_put_new_spin_on_wheelchairs.html">
+        	<div class="hover-overlay"></div>
+        <div id="cq-image-jsp-/content/microsites/inspire/index/jcr:content/secondary-marquee-1/image"><img title="" alt="file" class="cq-dd-image" src="/content/microsites/inspire/index/_jcr_content/secondary-marquee-1/image.img.jpg/1500067472322.jpg"/></div>
+    
+    
+<script type="text/javascript">
+    (function() {
+        var imageDiv = document.getElementById("cq-image-jsp-/content/microsites/inspire/index/jcr:content/secondary-marquee-1/image");
+        var imageEvars = '{ imageLink: "/", imageAsset: "", imageTitle: "" }';
+        var tagNodes = imageDiv.getElementsByTagName('A');
+        for (var i = 0; i < tagNodes.length; i++) {
+            var link = tagNodes.item(i); 
+            link.setAttribute('onclick', 'CQ_Analytics.record({event: "imageClick", values: ' + imageEvars + ', collect:  false, options: { obj: this }, componentPath: "foundation/components/image"})');
+        }
+        
+    })();
+</script>
+
+        <header class="font-small secondary-article-descriptor">
+            <h2>Artists Put a New Spin on Wheelchairs</h2>
+            <p>International artists turn wheelchairs into fashion statements.</p>
+        </header>
+    </a>
+</article>
+            </div>
+            <div class="secondary-marquee right">
+                
+<article>
+    <a href="http://create.adobe.com/2017/6/22/how_to_create_typography_inspired_by_embroidered_patches_.html">
+        	<div class="hover-overlay"></div>
+        <div id="cq-image-jsp-/content/microsites/inspire/index/jcr:content/secondary-marquee-2/image"><img title="" alt="file" class="cq-dd-image" src="/content/microsites/inspire/index/_jcr_content/secondary-marquee-2/image.img.jpg/1500067781888.jpg"/></div>
+    
+    
+<script type="text/javascript">
+    (function() {
+        var imageDiv = document.getElementById("cq-image-jsp-/content/microsites/inspire/index/jcr:content/secondary-marquee-2/image");
+        var imageEvars = '{ imageLink: "/", imageAsset: "", imageTitle: "" }';
+        var tagNodes = imageDiv.getElementsByTagName('A');
+        for (var i = 0; i < tagNodes.length; i++) {
+            var link = tagNodes.item(i); 
+            link.setAttribute('onclick', 'CQ_Analytics.record({event: "imageClick", values: ' + imageEvars + ', collect:  false, options: { obj: this }, componentPath: "foundation/components/image"})');
+        }
+        
+    })();
+</script>
+
+        <header class="font-small secondary-article-descriptor">
+            <h2>Create Type Inspired by Embroidered Patches </h2>
+            <p>Listen to patch designer Ben Goetting while you learn how to make type worthy of a patch.</p>
+        </header>
+    </a>
+</article>
+            </div>
+        </div>
+        
+
+        <div id="article-lazyload-area" class="page-articles-group group page-content-4 page-articles " >
+            <div id="content-column-1" class="content-column " >
+                
+                    <article class='content-item ' data-idx='01'>
+                        
+                            
+                        <a href="/2017/7/20/james_noble_on_doing_good_with_a_digital_mindset.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/7/20/james_noble_on_doing_good_with_a_digital_mindset/_jcr_content/previewImage.img.jpg/1500590189638.jpg" alt="As this photo of James Noble playing tennis shows, the founder of Carter Digital has a sense of humor along with a desire to make the world a better place."/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">James Noble on Doing Good with a Digital Mindset</h3>
+                                
+                                
+
+                                <p class="article-byline">James Noble &amp; his design agency help companies change the world for the better.</p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='04'>
+                        
+                            
+                        <a href="/2017/7/14/motion_graphics_from_the_future.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/7/14/motion_graphics_from_the_future/_jcr_content/previewImage.img.jpg/1500069040109.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Motion Graphics from the Future</h3>
+                                
+                                
+
+                                <p class="article-byline">Nicolas Lopardo creates motion graphics for film and TV.</p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='07'>
+                        
+                            
+                        <a href="/2017/7/7/drawing_abe_from_paper_sketch_to_digital_artwork.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/7/7/drawing_abe_from_paper_sketch_to_digital_artwork/_jcr_content/previewImage.img.jpg/1499390872746.jpg" alt="Von Glitschka created this colorful, mosaic-like illustration of Abraham Lincoln in Adobe Illustrator Draw and Adobe Illustrator CC"/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Drawing Abe, from Paper Sketch to Digital Artwork</h3>
+                                
+                                
+
+                                <p class="article-byline">Watch Von Glitschka colorize, shade, and texturize a vibrant portrait.</p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='10'>
+                        
+                            
+                        <a href="/2017/6/28/big_in_japan_the_illustrator_30_part_one_.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/6/28/big_in_japan_the_illustrator_30_part_one_/_jcr_content/previewImage.img.jpg/1498755682722.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Big in Japan: The Illustrator 30 (Part One)</h3>
+                                
+                                
+
+                                <p class="article-byline">As part of Adobe Illustrator’s 30th birthday celebration, we’re getting to know some inspiring young creatives from Japan. </p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='13'>
+                        
+                            
+                        <a href="/2017/6/15/design_and_alchemy_meet_at_an_auckland_creative_jam.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/6/15/design_and_alchemy_meet_at_an_auckland_creative_jam/_jcr_content/previewImage.img.jpg/1497570625545.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Design and Alchemy Meet at an Auckland Creative Jam</h3>
+                                
+                                
+
+                                <p class="article-byline">New Zealand designer Sam Bunny created the winning label for an inspiring craft beer. </p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='16'>
+                        
+                            
+                        <a href="/2017/6/9/finding_beauty_in_the_everyday_illustrator_sukanto_debnath.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/6/9/finding_beauty_in_the_everyday_illustrator_sukanto_debnath/_jcr_content/previewImage.img.jpg/1500497741313.jpg" alt="An illustration of men walking, by Sukanto Debnath"/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Finding Beauty in the Everyday: Illustrator Sukanto Debnath</h3>
+                                
+                                
+
+                                <p class="article-byline">The India-born, Hungary-based illustrator finds inspiration in life’s candid, casual moments.</p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='19'>
+                        
+                            
+                        <a href="/2017/6/3/the_philosophy_of_ux_interaction_designer_natalie_lew.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="300" data-width="600" src="/2017/6/3/the_philosophy_of_ux_interaction_designer_natalie_lew/_jcr_content/previewImage.img.jpg/1496682940267.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">The Philosophy of UX: Interaction Designer Natalie Lew</h3>
+                                
+                                
+
+                                <p class="article-byline">The new Adobe Creative Resident believes in the power of design to solve problems. </p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='22'>
+                        
+                            
+                        <a href="/2017/6/1/unity_love_strength_designing_adobe_s_2017_pride_identity.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/6/1/unity_love_strength_designing_adobe_s_2017_pride_identity/_jcr_content/previewImage.img.jpg/1500497796280.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Unity, Love, Strength: Designing Adobe’s 2017 Pride Visuals</h3>
+                                
+                                
+
+                                <p class="article-byline">Download and print our typographic poster meant to celebrate diversity! Happy Pride!  </p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+                    <article class='content-item ' data-idx='25'>
+                        
+                            
+                        <a href="/2017/5/30/of_myth_muscles_and_photoshop.html" class="isNotAd">
+                              <div class="hover-overlay"></div>
+                              <img data-height="400" data-width="600" src="/2017/5/30/of_myth_muscles_and_photoshop/_jcr_content/previewImage.img.jpg/1496172728342.jpg" alt="A digitally created image of shipwrecked sailors, by Ted Kincaid. "/>
+                            
+                            <header class="font-small">
+                                
+                                    <h3 class="article-headline">Of Myth, Muscles, and Photoshop</h3>
+                                
+                                
+
+                                <p class="article-byline">Ted Kincaid blends photos, paintings, and literary inspiration into epic images. </p>
+                            </header>
+                            
+                        </a>
+                            
+                        
+                        
+                    </article>
+                
+            </div>
+            <div id="content-column-2" class="content-column " >
+                
+                    <article class="content-item" data-idx='02'>
+                        
+                        <a href="/2017/7/18/make_it_impactful_project_felix.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/7/18/make_it_impactful_project_felix/_jcr_content/previewImage.img.jpg/1500482773148.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Make It Impactful: Project Felix</h3>
+                                <p class="article-byline">Learn how to composite 3D objects into images—it’s easy with Adobe’s new Project Felix. Then share your work for a chance to win. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='05'>
+                        
+                        <a href="/2017/7/13/_5_3_4_questions_lorena_g.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/7/13/_5_3_4_questions_lorena_g/_jcr_content/previewImage.img.jpg/1499979570647.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">5 &amp; 3/4 Questions: Lorena G</h3>
+                                <p class="article-byline">This self-taught Spanish graphic designer loves bold colors and working flat. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='08'>
+                        
+                        <a href="/2017/7/6/best_of_behance_studio_bbg.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/7/6/best_of_behance_studio_bbg/_jcr_content/previewImage.img.jpg/1500586300808.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Best of Behance: Studio BBG</h3>
+                                <p class="article-byline">Mosaic tile signs in New York City Subway stations inspired two brothers to create a typeface. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='11'>
+                        
+                        <a href="/2017/6/27/photo_compositing_tips_and_tricks.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/6/27/photo_compositing_tips_and_tricks/_jcr_content/previewImage.img.jpg/1500497845796.jpg" alt="Kervin Brisseaux demonstrates his techniques for compositing multiple images using Adobe Photoshop CC. He also creates graphic elements in Adobe Illustrator CC and incorporates those elements into the final image that is shown here."/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Photo Compositing Tips and Tricks</h3>
+                                <p class="article-byline">Make a retro photo illustration with these Photoshop and Illustrator techniques.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='14'>
+                        
+                        <a href="/2017/6/14/how_to_make_seamless_looping_videos_for_instagram.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="300" data-width="600" src="/2017/6/14/how_to_make_seamless_looping_videos_for_instagram/_jcr_content/previewImage.img.jpg/1497488275062.jpg" alt="A still from the tutorial by Russell Preston Brown"/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">How To Make Seamless Looping Videos for Instagram</h3>
+                                <p class="article-byline">Banish jumpy loops with this Photoshop video tutorial.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='17'>
+                        
+                        <a href="/2017/5/15/stocketition_contest.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/5/15/stocketition_contest/_jcr_content/previewImage.img.jpg/1496852633343.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">The Hovering Art Director Stocketition</h3>
+                                <p class="article-byline">Get 20 Adobe Stock assets and create an original artwork for a chance to win!</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='20'>
+                        
+                        <a href="/2017/6/1/rob_zilla_s_designs_for_the_nba_s_golden_state_warriors.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/6/1/rob_zilla_s_designs_for_the_nba_s_golden_state_warriors/_jcr_content/previewImage.img.jpg/1496354840408.jpg" alt="A self-portrait of Rob Zilla "/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Rob Zilla’s Designs for the NBA’s Golden State Warriors</h3>
+                                <p class="article-byline">The self-proclaimed “vector art monster” created an image for a Fan Night T-shirt and cheer card. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='23'>
+                        
+                        <a href="/2017/5/31/copper_power_fashion_designer_sadie_clayton.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="500" data-width="600" src="/2017/5/31/copper_power_fashion_designer_sadie_clayton/_jcr_content/previewImage.img.jpg/1496340153642.jpg" alt="photo of Sadie Clayton"/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Copper Power: Fashion Designer Sadie Clayton</h3>
+                                <p class="article-byline">Clayton creates stunning, avant-garde high fashion using copper and other unusual materials. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='26'>
+                        
+                        <a href="/2017/5/27/taking_it_to_the_streets_photographer_aundre_larrow.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="300" data-width="600" src="/2017/5/27/taking_it_to_the_streets_photographer_aundre_larrow/_jcr_content/previewImage.img.jpg/1496081582921.jpg" alt="A photo of children wearing masks, by Aundre Larrow"/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Taking It to the Streets: Photographer Aundre Larrow</h3>
+                                <p class="article-byline">The new Adobe Creative Resident uses photography to tell stories and create connection. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+            </div>
+            <div id="content-column-3" class="content-column " >
+                
+                    <article class="content-item" data-idx='03'>
+                        
+                        <a href="/2017/7/17/kyle_t_webster_summer_brush_set_giveaway_and_tutorial.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/7/17/kyle_t_webster_summer_brush_set_giveaway_and_tutorial/_jcr_content/previewImage.img.jpg/1500497624265.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Kyle T. Webster Summer Brush Set Giveaway and Tutorial</h3>
+                                <p class="article-byline">Celebrate summer with a cool set of five free Photoshop tools—see how Kyle uses them and then take them for a spin. </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='06'>
+                        
+                        <a href="/2017/7/10/make_it_in_a_minute_see_through_movie_titles.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/7/10/make_it_in_a_minute_see_through_movie_titles/_jcr_content/previewImage.img.jpg/1499730489782.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Make It in A Minute: See-Through Movie Titles</h3>
+                                <p class="article-byline">This Premiere Pro tip will make your movie titles doubly effective.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='09'>
+                        
+                        <a href="/2017/6/29/the_hand_crafted_wonders_of_kitiya_palaskas.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="300" data-width="600" src="/2017/6/29/the_hand_crafted_wonders_of_kitiya_palaskas/_jcr_content/previewImage.img.jpg/1498762677905.jpg" alt="DIY designer Kitiya has a thriving international business."/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">The Hand-Crafted Wonders of Kitiya Palaskas</h3>
+                                <p class="article-byline">This DIY designer has a thriving international business.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='12'>
+                        
+                        <a href="/2017/6/19/make_it_impactful_optimizing_images_with_lightroom.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/6/19/make_it_impactful_optimizing_images_with_lightroom/_jcr_content/previewImage.img.jpg/1497567376847.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Make It Impactful: Optimizing Images with Lightroom</h3>
+                                <p class="article-byline">See how three photographers used Adobe Photoshop Lightroom to perfect an image—then try it yourself for a chance to win! </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='15'>
+                        
+                        <a href="/2017/6/13/reckoning_with_nature.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="500" data-width="600" src="/2017/6/13/reckoning_with_nature/_jcr_content/previewImage.img.jpg/1497389800076.jpg" alt="Carol Erb evokes political and cultural trends in scenes of disaster she constructs using Photoshop and her own source images."/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Reckoning with Nature</h3>
+                                <p class="article-byline">With Photoshop and her own photos, Carol Erb constructs scenes of disaster.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='18'>
+                        
+                        <a href="/2017/6/5/_5_3_4_questions_jethro_haynes.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/6/5/_5_3_4_questions_jethro_haynes/_jcr_content/previewImage.img.jpg/1496700012111.jpg" alt="&quot;Keep It Real&quot; 3d type model by Jethro Haynes"/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">5 &amp; 3/4 Questions: Jethro Haynes</h3>
+                                <p class="article-byline">This intriguing illustrator, model maker, and designer is inspired by ocean creatures (and a lot more). </p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='21'>
+                        
+                        <a href="/2017/6/1/spreading_joy_and_provoking_thought_letterer_rosa_kammermeier.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="300" data-width="600" src="/2017/6/1/spreading_joy_and_provoking_thought_letterer_rosa_kammermeier/_jcr_content/previewImage.img.jpg/1496359353446.jpg" alt=""/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">Spreading Joy and Provoking Thought: Letterer Rosa Kammermeier</h3>
+                                <p class="article-byline">With her hand-drawn creations, the new Adobe Creative Resident has a message.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='24'>
+                        
+                        
+                        <a href="http://max.adobe.com/?promoid=XFWLHM8C&mv=other" class="isAd">
+                            <img data-height="600" data-width="600" src="/2017/2/16/adobe_max_preregister/_jcr_content/previewImage.img.jpg/1496249417785.jpg" alt=""/>
+                        </a>
+                        
+                    </article>
+                
+                    <article class="content-item" data-idx='27'>
+                        
+                        <a href="/2017/5/25/the_art_of_the_infographic_designer_and_activist_jessica_bellamy_.html" class="isNotAd">
+                            <div class="hover-overlay"></div>
+                            
+                            <img data-height="400" data-width="600" src="/2017/5/25/the_art_of_the_infographic_designer_and_activist_jessica_bellamy_/_jcr_content/previewImage.img.jpg/1495756048735.jpg" alt="A page from a timeline of LGBT history in Kentucky, designed by GRIDS"/>
+                            
+                            <header class="font-small">
+                                <h3 class="article-headline">The Art of the Infographic: Designer and Activist Jessica Bellamy </h3>
+                                <p class="article-byline">The new Adobe Creative Resident’s innovative work combines art, data, and social justice.</p>
+                            </header>
+                        </a>
+                        
+                        
+                    </article>
+                
+            </div>
+
+        </div>
+
+        <div class="lazy-load-button hide-on-mobile">
+            <a href="#" class="start-lazy-load previous-page disable-button">
+                <span class="enable-button">PREVIOUS PAGE</span>
+            </a>
+            <span class="page-pagination">PAGE 1 OF 19</span>
+            <a href="/index.page2.html" class="start-lazy-load next-page ">
+                <span class="enable-button">NEXT PAGE</span>
+            </a>
+        </div>
+        <div class="lazy-load-button show-on-mobile">
+            <div>
+                <span class="page-pagination">PAGE 1 OF 19</span>
+            </div>
+            <div class="mobile-pagination-buttons-container">
+                <div class="mobile-pagination-buttons">
+                    <a href="#" class="start-lazy-load previous-page disable-button">
+                        <span class="enable-button">PREVIOUS PAGE</span>
+                    </a>
+                </div>
+                <div class="mobile-pagination-buttons">
+                    <a href="/index.page2.html" class="start-lazy-load next-page ">
+                        <span class="enable-button">NEXT PAGE</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        
+<footer>
+    <div class="footer-nav-group group">
+        <div class="footer-about-text" >Create is Adobe&#146;s magazine by creatives, for creatives &#8212; available online and as a mobile app. <br/> Visit us for inspiration and tutorials on photography, illustration, graphic design, web design, motion graphics, audio/video, branding, and more. Formerly Adobe Inspire Magazine. </div>
+        <div class="inspire-icon-create"></div>
+        <nav class="footer-nav">
+            <ul>
+                
+                <li><a href="/lets_be_friends.html">Let&#146;s Be Friends</a></li>
+                <li><a href="/lets_talk.html">Contact</a></li>
+                <li><a href="http://www.adobe.com/legal/general-terms.html" target="_blank">Terms of Use</a></li>
+                <li><a href="/help.html">Help</a></li>
+                <li><a href="http://www.adobe.com/privacy.html" target="_blank">Privacy</a></li>
+            </ul>
+        </nav> 
+    </div>
+</footer>
+    </div>
+</div>
+	</div>
+</div>
+
+<!-- Tracking -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>

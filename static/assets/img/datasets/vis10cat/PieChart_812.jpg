@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de-DE" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<meta name="verification" content="a53b297e258e4851e285ab6fa0f8ba5d" />
+<title>Semper TI - Der IT Blog | Das Magazin rund um Marketing &amp; IT !</title>
+<!-- This site is optimized with the Yoast SEO plugin v4.9 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Semper TI ist das Online-Magazin für digitale Pioniere zu den Themen Marketing, Internet, Webdesign und Serverhosting. Kompakt, schnell, informativ!"/>
+<link rel="canonical" href="http://www.semper-ti.de/" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Semper TI - Der IT Blog | Das Magazin rund um Marketing &amp; IT !" />
+<meta property="og:description" content="Semper TI ist das Online-Magazin für digitale Pioniere zu den Themen Marketing, Internet, Webdesign und Serverhosting. Kompakt, schnell, informativ!" />
+<meta property="og:url" content="http://www.semper-ti.de/" />
+<meta property="og:site_name" content="Semper Ti" />
+<meta property="og:image" content="http://semper-ti.de/wp-content/uploads/2017/02/Semper-Ti.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Semper TI ist das Online-Magazin für digitale Pioniere zu den Themen Marketing, Internet, Webdesign und Serverhosting. Kompakt, schnell, informativ!" />
+<meta name="twitter:title" content="Semper TI - Der IT Blog | Das Magazin rund um Marketing &amp; IT !" />
+<meta name="twitter:image" content="http://semper-ti.de/wp-content/uploads/2017/02/Semper-Ti.jpg" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/www.semper-ti.de\/","name":"Semper Ti","potentialAction":{"@type":"SearchAction","target":"http:\/\/www.semper-ti.de\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<meta name="google-site-verification" content="oZ52UxJreM6VC-aaHDOV-MOATIR_YK0vegThqRHexgM" />
+<!-- / Yoast SEO plugin. -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Semper Ti &raquo; Feed" href="http://www.semper-ti.de/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Semper Ti &raquo; Kommentar-Feed" href="http://www.semper-ti.de/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.semper-ti.de\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='generate-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic' type='text/css' media='all' />
+<!-- <link rel='stylesheet' id='generate-style-grid-css'  href='http://www.semper-ti.de/wp-content/themes/generatepress/css/unsemantic-grid.min.css?ver=1.3.44' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='generate-style-css'  href='http://www.semper-ti.de/wp-content/themes/generatepress/style.css?ver=1.3.44' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//www.semper-ti.de/wp-content/cache/wpfc-minified/54e32b0ab10bb9aee16e9959779371e7/1500369964index.css" media="all"/>
+<style id='generate-style-inline-css' type='text/css'>
+body{background-color:#efefef;color:#3a3a3a;}a, a:visited{color:#1e73be;text-decoration:none;}a:hover, a:focus, a:active{color:#000000;text-decoration:none;}body .grid-container{max-width:1100px;}
+.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a,.site-header a:visited{color:#3a3a3a;}.main-title a,.main-title a:hover,.main-title a:visited{color:#222222;}.site-description{color:#999999;}.main-navigation,.main-navigation ul ul{background-color:#222222;}.main-navigation .main-nav ul li a,.menu-toggle{color:#ffffff;}.main-navigation .main-nav ul li > a:hover,.main-navigation .main-nav ul li > a:focus, .main-navigation .main-nav ul li.sfHover > a{color:#ffffff;background-color:#3f3f3f;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation ul ul{background-color:#3f3f3f;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li > a:hover,.main-navigation .main-nav ul ul li > a:focus,.main-navigation .main-nav ul ul li.sfHover > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#4f4f4f;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-meta{color:#888888;}.entry-meta a,.entry-meta a:visited{color:#666666;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{background-color:#ffffff;}.footer-widgets .widget-title{color:#000000;}.site-info{color:#ffffff;background-color:#222222;}.site-info a,.site-info a:visited{color:#ffffff;}.site-info a:hover{color:#606060;}.footer-bar .widget_nav_menu .current-menu-item a{color:#606060;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],textarea{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,textarea:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],.button,.button:visited{color:#ffffff;background-color:#666666;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,.button:focus{color:#ffffff;background-color:#3f3f3f;}
+</style>
+<!-- <link rel='stylesheet' id='generate-mobile-style-css'  href='http://www.semper-ti.de/wp-content/themes/generatepress/css/mobile.min.css?ver=1.3.44' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='generate-defaults-css'  href='http://www.semper-ti.de/wp-content/themes/generatepress/css/defaults.min.css?ver=1.3.44' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//www.semper-ti.de/wp-content/cache/wpfc-minified/b754d10a6385e654e702c2223ffc2cb4/1500369964index.css" media="all"/>
+<style id='generate-defaults-inline-css' type='text/css'>
+body, button, input, select, textarea{font-family:"Open Sans", sans-serif;}.main-navigation .main-nav ul ul li a{font-size:14px;}@media (max-width:768px) {.main-title{font-size:30px;}h1{font-size:30px;}h2{font-size:25px;}}
+.main-navigation ul ul{top:auto;}@media (max-width:768px) {.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content {padding: 30px;}}
+</style>
+<!-- <link rel='stylesheet' id='fontawesome-css'  href='http://www.semper-ti.de/wp-content/themes/generatepress/css/font-awesome.min.css?ver=4.7' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//www.semper-ti.de/wp-content/cache/wpfc-minified/c19bc96053eeefaa81d842dc7e1556f2/1500369964index.css" media="all"/>
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='generate-ie-css'  href='http://www.semper-ti.de/wp-content/themes/generatepress/css/ie.min.css?ver=1.3.44' type='text/css' media='all' />
+<![endif]-->
+<script src='//www.semper-ti.de/wp-content/cache/wpfc-minified/97fed571fa0f91962867a39c0235b422/1500369965index.js' type="text/javascript"></script>
+<!-- <script type='text/javascript' src='http://www.semper-ti.de/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script> -->
+<!-- <script type='text/javascript' src='http://www.semper-ti.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script> -->
+<link rel='https://api.w.org/' href='http://www.semper-ti.de/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.semper-ti.de/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.semper-ti.de/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8" />
+<link rel='shortlink' href='http://www.semper-ti.de/' />
+<link rel="alternate" type="application/json+oembed" href="http://www.semper-ti.de/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.semper-ti.de%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.semper-ti.de/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.semper-ti.de%2F&#038;format=xml" />
+<link rel="apple-touch-icon" sizes="120x120" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/wp-content/uploads/fbrfg/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/wp-content/uploads/fbrfg/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/manifest.json">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"><meta name="viewport" content="width=device-width, initial-scale=1">		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type='text/javascript' src='http://www.semper-ti.de/wp-content/plugins/wp-spamshield/js/jscripts.php'></script> 
+</head>
+<body itemtype='http://schema.org/WebPage' itemscope='itemscope' class="home page-template-default page page-id-5 generatepress  right-sidebar nav-below-header fluid-header separate-containers active-footer-widgets-3 nav-aligned-left header-aligned-left dropdown-hover">
+<a class="screen-reader-text skip-link" href="#content" title="Springe zum Inhalt">Springe zum Inhalt</a>
+<header itemtype="http://schema.org/WPHeader" itemscope="itemscope" id="masthead" class="site-header">
+<div class="inside-header grid-container grid-parent">
+<div class="site-branding">
+<p class="main-title" itemprop="headline"><a href="http://www.semper-ti.de/" rel="home">Semper Ti</a></p>
+<p class="site-description">Das Online Magazin rund um Marketing & IT</p>
+</div>
+</div><!-- .inside-header -->
+</header><!-- #masthead -->
+<nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" class="main-navigation">
+<div class="inside-navigation grid-container grid-parent">
+<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+<span class="mobile-menu">Menü</span>
+</button>
+<div id="primary-menu" class="main-nav"><ul id="menu-menu-1" class=" menu sf-menu"><li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-14"><a href="http://www.semper-ti.de/">Home</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17"><a href="http://www.semper-ti.de/info/it/">IT</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="http://www.semper-ti.de/info/webhosting/">Webhosting</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18"><a href="http://www.semper-ti.de/info/marketing/">Marketing</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-19"><a href="http://www.semper-ti.de/info/webdesign/">Webdesign</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-25"><a href="http://www.semper-ti.de/anbieter/">Anbieter<span role="button" class="dropdown-menu-toggle" aria-expanded="false"></span></a>
+<ul  class="sub-menu">
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="http://www.semper-ti.de/webgo/">webgo</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://www.semper-ti.de/netcup/">Netcup</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="http://www.semper-ti.de/linevast/">Linevast</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://www.semper-ti.de/alfahosting/">Alfahosting</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://www.semper-ti.de/all-inkl/">All-Inkl</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="http://www.semper-ti.de/domainfactory/">DomainFactory</a></li>
+<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="http://www.semper-ti.de/mittwald/">Mittwald</a></li>
+</ul>
+</li>
+</ul></div>		</div><!-- .inside-navigation -->
+</nav><!-- #site-navigation -->
+<div id="page" class="hfeed site grid-container container grid-parent">
+<div id="content" class="site-content">
+<div id="primary" class="content-area grid-parent mobile-grid-100 grid-75 tablet-grid-75">
+<main id="main" class="site-main">
+<article id="post-5" class="post-5 page type-page status-publish" itemtype='http://schema.org/CreativeWork' itemscope='itemscope'>
+<div class="inside-article">
+<header class="entry-header">
+<h1 class="entry-title" itemprop="headline">Home</h1>			</header><!-- .entry-header -->
+<div class="entry-content" itemprop="text">
+<figure id="attachment_10" style="width: 1678px" class="wp-caption alignnone"><img class="wp-image-10 size-full" title="Webhosting Magazin" src="http://semper-ti.de/wp-content/uploads/2017/02/Semper-Ti.jpg" width="1688" height="1125" srcset="http://www.semper-ti.de/wp-content/uploads/2017/02/Semper-Ti.jpg 1688w, http://www.semper-ti.de/wp-content/uploads/2017/02/Semper-Ti-300x199.jpg 300w, http://www.semper-ti.de/wp-content/uploads/2017/02/Semper-Ti-768x511.jpg 768w, http://www.semper-ti.de/wp-content/uploads/2017/02/Semper-Ti-1024x682.jpg 1024w, http://www.semper-ti.de/wp-content/uploads/2017/02/Semper-Ti-1200x799.jpg 1200w" sizes="(max-width: 1688px) 100vw, 1688px" /><figcaption class="wp-caption-text">© peshkov &#8211; Fotolia.com</figcaption></figure>
+<p><strong>Semper-Ti | Das Magazin rund um Marketing &amp; IT !</strong></p>
+<p>Wir freuen uns über deinen Besuch. Bei uns gibt es eine breit gefächerte Auswahl rund um die spannende Welt der IT und allem was dazu gehört. Wir möchten Informationsquelle, Motivator und Nachschlagewerk zugleich sein und haben daher eine Art IT Magazin gegründet. Wir möchten die Themen etwas anders angehen als andere Portale und sehen uns daher nicht als reine Nachrichtenquelle.</p>
+<p>Folgende Themen stehen bei Semper-Ti momentan im Mittelpunkt:</p>
+<h2>IT</h2>
+<p>Die IT-Branche ist ständig im Wandel und wir gehen mit ihr mit. Kaum ein anderer Bereich entwickelt sich so schnell und rasant weiter wie die Informationstechnik. Kennst du schon unsere <a href="http://www.semper-ti.de/info/it/">IT Kategorie</a>? Nein, noch nicht? Na dann wird´s aber Zeit!</p>
+<h2>Webhosting</h2>
+<p>Die Anzahl der Server- und Webhostingbetreiber ist mittlerweile beinahe nicht mehr überschaubar. Wer hostet wirklich noch in Deutschland? Wer bietet guten Support? Was hat es mit SSD-Webhosting auf sich? Als Laie kann die Antwort auf diese Fragen oft mit stundenlanger Google-Recherche verbunden sein. Wir nehmen euch an die Hand und stellen einige gute <a href="http://www.semper-ti.de/anbieter/">Webhoster aus Deutschland</a> vor.</p>
+<div class="su-box su-box-style-default" style="border-color:#2460ca;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;"><div class="su-box-title" style="background-color:#2d78fd;color:#FFFFFF;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-topright:2px;border-top-left-radius:2px;border-top-right-radius:2px;">Webhosting Tipp</div><div class="su-box-content su-clearfix">Netcup ist ein Webhostingunternehmen aus Karlsruhe, welches für Privat- und Geschäftskunden sehr günstige Konditionen bietet. So gibt es hier beispielsweiße einen Root-Server mit Intel® Xeon® E5-2680V4, 6 GB DDR4 RAM und 2 dedizierten Kernen bereits ab 8,99 Euro monatlich. </div></div>
+<p>Bei unserem Partner 5xo.de gibt es zudem derzeit einen 5 Euro <a href="http://5xo.de/netcup-gutscheine/"><strong>Netcup Gutschein</strong></a> für Neukunden sowie weitere Rabattmöglichkeiten für die Webhostingpakate.</p>
+<h2>Marketing</h2>
+<p>Als gelernter Systemkaufmann konnte ich, Dominik &#8211; der Inhaber von Semper-Ti &#8211; bereits in jungen Jahren Erfahrung im Marketingbereich einer großen Firma sammeln. Dieses Wissen möchte ich auch an unsere Leser weitergeben. Denn auch hier gibt es immer wieder neue Spielregeln, an die man sich halten sollte.</p>
+<h2>Webdesign</h2>
+<p>Braucht man denn in Zeiten von Homepagebaukästen und vorgefertigten WordPress Templates überhaupt noch einen Webdesigner? Vor allem wenn dieser (auf den ersten Blick) oftmals schwindelerregende Preise für seine Arbeit verlangt? Wir finden ja! Gerade als Firma sollte man die Vorteile eines eigenen Corporate Designs nicht außer Acht lassen. Das große Möbelgeschäft nutzt dasselbe, vorgefertigte Template wie der Bäcker nebenan? Unvorstellbar! Weitere Infos findest du in unserem Artikel <a href="http://www.semper-ti.de/webdesigner-vs-homepage-baukasten/">Webdesigner vs. Homepage Baukasten</a>.</p>
+<p>Wer neben dem Webdesign noch den passenden Webhoster sucht, kann als Neukunde mit einem <a href="http://www.semper-ti.de/webgo/">webgo Gutschein</a> noch etwas Geld sparen.</p>
+<p>Zudem ist der Job des Webdesigners kein Zuckerschlecken &#8211; lange Arbeitszeiten, viel Konkurrenzkampf und Dumping-Preise machen den Einstieg als Gründer nicht einfach. Wir können hier zum Teil aus eigener Erfahrung sprechen. Umso wichtiger ist es, zu wissen wie man mit diesen Problemen umgeht und auch mit den schwierigsten Kunden fertig wird.</p>
+<p>HTML5? Responsiv Webdesign? Du kannst mit diesen Fachbegriffen nichts anfangen? Wir helfen dir weiter!</p>
+<blockquote><p>Dein Semper-ti Team</p></blockquote>
+</div><!-- .entry-content -->
+</div><!-- .inside-article -->
+</article><!-- #post-## -->
+</main><!-- #main -->
+</div><!-- #primary -->
+<div id="right-sidebar" itemtype="http://schema.org/WPSideBar" itemscope="itemscope" role="complementary" class="widget-area grid-25 tablet-grid-25 grid-parent sidebar">
+<div class="inside-right-sidebar">
+<aside id="search-2" class="widget inner-padding widget_search"><form method="get" class="search-form" action="http://www.semper-ti.de/">
+<label>
+<span class="screen-reader-text">Suche nach:</span>
+<input type="search" class="search-field" placeholder="Suche&#160;&hellip;" value="" name="s" title="Suche nach:">
+</label>
+<input type="submit" class="search-submit" value="Suchen">
+</form></aside><aside id="text-3" class="widget inner-padding widget_text"><h4 class="widget-title">SSD Webhosting</h4>			<div class="textwidget"><a href="http://www.semper-ti.de/webgo/" ><img class="alignnone wp-image-22 size-full" title="webgo gutschein" src="http://semper-ti.de/wp-content/uploads/2017/02/webgo.jpg" alt="webgo" width="239" height="90" /></a></div>
+</aside><aside id="text-6" class="widget inner-padding widget_text"><h4 class="widget-title">Tipp</h4>			<div class="textwidget"><a href="http://www.semper-ti.de/netcup/"><img class="alignnone wp-image-65" title="Netcup" src="http://www.semper-ti.de/wp-content/uploads/2017/02/netcup_logo-300x300.png" alt="Netcup" width="200" height="200" /></a></div>
+</aside>		<aside id="recent-posts-2" class="widget inner-padding widget_recent_entries">		<h4 class="widget-title">Neueste Beiträge</h4>		<ul>
+<li>
+<a href="http://www.semper-ti.de/cloud-hosting-im-aufwind/">Cloud Hosting im Aufwind</a>
+</li>
+<li>
+<a href="http://www.semper-ti.de/adwords-automatisierung-update-fuer-dynamic-search-ads/">AdWords Automatisierung: Update für Dynamic Search Ads</a>
+</li>
+<li>
+<a href="http://www.semper-ti.de/leaseweb-techsummit-findet-in-berlin-statt/">LeaseWeb: TechSummit findet in Berlin statt</a>
+</li>
+<li>
+<a href="http://www.semper-ti.de/google-bestaetigt-fred-update-wirkungsweise-weiter-unklar/">Google bestätigt Fred-Update – Wirkungsweise weiter unklar</a>
+</li>
+<li>
+<a href="http://www.semper-ti.de/storagesystem-mit-rekord-packungsdichte-von-der-rausch-netzwerktechnik-gmbh/">Storagesystem mit Rekord-Packungsdichte von der Rausch Netzwerktechnik GmbH</a>
+</li>
+</ul>
+</aside>		<aside id="recent-comments-2" class="widget inner-padding widget_recent_comments"><h4 class="widget-title">Neueste Kommentare</h4><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Daniel</span> bei <a href="http://www.semper-ti.de/webgo/#comment-55">webgo</a></li><li class="recentcomments"><span class="comment-author-link">Larissa Neff</span> bei <a href="http://www.semper-ti.de/webgo/#comment-54">webgo</a></li><li class="recentcomments"><span class="comment-author-link">berlinerbär</span> bei <a href="http://www.semper-ti.de/netcup/#comment-53">Netcup</a></li><li class="recentcomments"><span class="comment-author-link">P.O.L_94</span> bei <a href="http://www.semper-ti.de/webgo/#comment-52">webgo</a></li><li class="recentcomments"><span class="comment-author-link">Daniel</span> bei <a href="http://www.semper-ti.de/webgo/#comment-17">webgo</a></li></ul></aside><aside id="archives-2" class="widget inner-padding widget_archive"><h4 class="widget-title">Archive</h4>		<ul>
+<li><a href='http://www.semper-ti.de/2017/06/'>Juni 2017</a></li>
+<li><a href='http://www.semper-ti.de/2017/05/'>Mai 2017</a></li>
+<li><a href='http://www.semper-ti.de/2017/04/'>April 2017</a></li>
+<li><a href='http://www.semper-ti.de/2017/03/'>März 2017</a></li>
+<li><a href='http://www.semper-ti.de/2017/02/'>Februar 2017</a></li>
+</ul>
+</aside>			</div><!-- .inside-right-sidebar -->
+</div><!-- #secondary -->
+</div><!-- #content -->
+</div><!-- #page -->
+<div class="site-footer  ">
+<div id="footer-widgets" class="site footer-widgets">
+<div class="footer-widgets-container grid-container grid-parent">
+<div class="inside-footer-widgets">
+<div class="footer-widget-1 grid-parent grid-33 tablet-grid-50 mobile-grid-100">
+<aside id="text-5" class="widget inner-padding widget_text"><h4 class="widget-title">Über uns</h4>			<div class="textwidget"><p><strong>Semper TI - Der IT Blog | Das Magazin rund um Marketing & IT !</strong></p>
+<p>Semper TI ist das Online-Magazin für digitale Pioniere zu den Themen Marketing, Internet, Webdesign und Serverhosting. Kompakt, schnell, informativ!</p>
+</div>
+</aside>						</div>
+<div class="footer-widget-2 grid-parent grid-33 tablet-grid-50 mobile-grid-100">
+<aside id="text-4" class="widget inner-padding widget_text"><h4 class="widget-title">Webhosting Anbieter</h4>			<div class="textwidget"><p><a href="http://www.semper-ti.de/webgo/">webgo</a><br />
+<a href="http://www.semper-ti.de/netcup/">Netcup</a><br />
+<a href="http://www.semper-ti.de/linevast/">Linevast</a><br />
+<a href="http://www.semper-ti.de/alfahosting/">Alfahosting</a><br />
+<a href="http://www.semper-ti.de/all-inkl/">All Inkl</a></p>
+<p><a href="http://www.semper-ti.de/anbieter/">[Alle anzeigen]</a></p>
+</div>
+</aside>					</div>
+<div class="footer-widget-3 grid-parent grid-33 tablet-grid-50 mobile-grid-100">
+<aside id="text-2" class="widget inner-padding widget_text"><h4 class="widget-title">Infos</h4>			<div class="textwidget"><script type="text/javascript" src="http://www.blogtraffic.de/track/trackit.php?uid=23687"></script>
+<noscript>
+<a href="http://www.blogtraffic.de"><img src="http://www.blogtraffic.de/track/track.php?uid=23687" border="0" alt="" /></a>
+</noscript>
+<br/>
+<a href="http://semper-ti.de/impressum-datenschutz/">Impressum / Datenschutz</a>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11255673; 
+var sc_invisible=1; 
+var sc_security="7a404ddd"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11255673/0/7a404ddd/1/" alt="hit
+counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide --></div>
+</aside>					</div>
+</div>
+</div>
+</div>
+<footer class="site-info" itemtype="http://schema.org/WPFooter" itemscope="itemscope">
+<div class="inside-site-info grid-container grid-parent">
+<div class="copyright-bar">
+<span class="copyright">&copy; 2017</span> &bull; <a href="http://semper-ti.de/" itemprop="url">Semper-Ti</a>			</div>
+</div>
+</footer><!-- .site-info -->
+</div><!-- .site-footer -->
+<script type='text/javascript'>
+/* <![CDATA[ */
+r3f5x9JS=escape(document['referrer']);
+hf4N='b40de0b9c88772902de2f0926b397087';
+hf4V='823fe46f10a4ea3331456c622f10aeb5';
+jQuery(document).ready(function($){var e="#commentform, .comment-respond form, .comment-form, #lostpasswordform, #registerform, #loginform, #login_form, #wpss_contact_form";$(e).submit(function(){$("<input>").attr("type","hidden").attr("name","r3f5x9JS").attr("value",r3f5x9JS).appendTo(e);$("<input>").attr("type","hidden").attr("name",hf4N).attr("value",hf4V).appendTo(e);return true;});$("#comment").attr({minlength:"15",maxlength:"15360"})});
+/* ]]> */
+</script> 
+<!-- <link rel='stylesheet' id='su-box-shortcodes-css'  href='http://www.semper-ti.de/wp-content/plugins/shortcodes-ultimate/assets/css/box-shortcodes.css?ver=4.9.9' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//www.semper-ti.de/wp-content/cache/wpfc-minified/c8166a2c56dadc48786b8bb155062902/1500369964index.css" media="all"/>
+<script type='text/javascript' src='http://www.semper-ti.de/wp-content/themes/generatepress/js/navigation.min.js?ver=1.3.44'></script>
+<script type='text/javascript' src='http://www.semper-ti.de/wp-content/themes/generatepress/js/dropdown.min.js?ver=1.3.44'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://www.semper-ti.de/wp-content/themes/generatepress/js/html5shiv.min.js?ver=1.3.44'></script>
+<![endif]-->
+<script type='text/javascript' src='http://www.semper-ti.de/wp-content/plugins/wp-spamshield/js/jscripts-ftr-min.js'></script>
+<script type='text/javascript' src='http://www.semper-ti.de/wp-includes/js/wp-embed.min.js?ver=4.8'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 1.8666839599609 seconds, on 18-07-17 11:26:05 -->

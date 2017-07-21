@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="水のいろんな効果を解説" />
+	<title>水で健康生活 &raquo; Modo Mantenimiento</title>
+<link rel="stylesheet" href="http://www.ground-water-models.com/wp-content/plugins/acid-maintenance-mode-wp/maintenance-mode_theme_WP_files/style.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="http://www.ground-water-models.com/wp-content/plugins/acid-maintenance-mode-wp/maintenance-mode_theme_WP_files/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="http://www.ground-water-models.com/wp-content/plugins/acid-maintenance-mode-wp/maintenance-mode_theme_WP_files/js/cufon.js"></script>
+<script type="text/javascript" src="http://www.ground-water-models.com/wp-content/plugins/acid-maintenance-mode-wp/maintenance-mode_theme_WP_files/js/Myriad_Pro_300.font.js"></script>
+<script type="text/javascript" src="http://www.ground-water-models.com/wp-content/plugins/acid-maintenance-mode-wp/maintenance-mode_theme_WP_files/js/Myriad_Pro_700.font.js"></script>
+<script type="text/javascript">
+Cufon.replace('.#head h2', { fontFamily: 'Myriad Light' });
+Cufon.replace('#head h1,#subhead h3', { fontFamily: 'Myriad Pro' });
+</script>
+</head>
+<body>
+<div id="wrapper">
+
+<div id="head">
+		<h1 id="logo"><a title="水で健康生活" href="http://www.ground-water-models.com">水で健康生活</a></h1>
+</div>
+
+<div id="subhead">
+<h2> Mantenimiento [ACTIVADO] </h2>
+</div>
+
+<div id="content">
+<h1>Modo Mantenimiento: </h1>
+
+<p><a title="水で健康生活" href="http://www.ground-water-models.com">水で健康生活</a> se encuentra actualmente en mantenimiento programado.<br />
+<br />
+Por favor, inténtelo de nuevo en de nuevo pronto.</p>
+
+<p>Disculpa las molestias.</p></div>
+
+<div class="adminlogin">
+<a rel="nofollow" href="http://www.ground-water-models.com/wp-login.php">Log In</a></div>
+
+</div>
+
+
+<div id="footer">
+<table style='margin: 0 auto;'>
+<tr>
+<td>
+<strong>Sitio optimizado por/Website optimized by:</strong> <a href='http://www.laliamos.com' alt='Posicionamiento web.'><strong>Posicionamiento web.</strong></a></td></tr>
+<table>
+</div>
+</body>
+</html>

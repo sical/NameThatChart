@@ -1,0 +1,202 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>USGS Glacier Studies: Home</title>
+	<meta name="language" content="en" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="U.S. Geological Survey" />
+	<meta name="publisher" content="USGS - U.S. Geological Survey" />
+	<meta name="created" content="2017131" />
+	<meta name="expires" content="never" />
+	<meta name="review" content="2018131" />
+	<meta name="revised" content="2017131" />
+	<meta name="expires" content="never" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/climate_landuse/styles/common.css">
+	<link rel="stylesheet" type="text/css" href="/climate_landuse/styles/bootstrap_basic.css">
+	<link rel="stylesheet" type="text/css" href="styles/custom.css">
+		
+	<script type="text/javascript" src="https://www2.usgs.gov/scripts/analytics/usgs-analytics.js"></script>	
+</head>
+
+<body id="home">
+	<div class="container" role="main">
+	<div class="banner">
+		<!-- BEGIN USGS Header Template -->
+<div id="usgscolorband">
+	<div id="usgsbanner">
+		<div id="usgsidentifier"><a href="http://www.usgs.gov/"><img src="/climate_landuse/includes/header_graphic_usgsIdentifier_white.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page" width="178" height="72" /></a></div>
+		<div id="usgsccsabox">
+			<div id="usgsccsa">
+			  <br /><a href="http://www.usgs.gov/">USGS Home</a>
+			  <br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
+			  <br /><a href="http://search.usgs.gov/">Search USGS</a>
+        <br />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END USGS Header Template -->
+    <div id="usgstitle">
+			<p>Glaciers and Climate <span id="long">Project</span></p>
+		</div>
+		<div class="navbar" role="navigation">
+			<div>
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			    <span class="sr-only">Toggle navigation</span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+		    </button>
+		  </div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a id="menu-home" href="default.asp">Home</a></li>
+					<li class="dropdown">
+						<a id="menu-prj" href="#" data-toggle="dropdown">Glaciology Projects <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+		          <li><a id="menu-prjovr" href="glacierProject.asp">Overview</a></li>
+		          <div class="divider"> </div>
+		          <div class="dropdown-header">Current Projects</div>
+		          <li><a id="menu-benchmark" href="benchmarkGlaciers.asp">Benchmark Glacier Research</a></li>
+				     	<li><a id="menu-colm" href="columbia.asp">Columbia Glacier, Alaska</a></li>
+		          <li><a href="http://glaciers.research.pdx.edu/" target="_blank">U.S. Glacier Inventory</a></li>
+		          <div class="divider"> </div>
+		          <div class="dropdown-header">Past Projects</div>
+		          <li><a id="menu-brps" href="brapids.asp">Black Rapids Glacier, Alaska</a></li>
+		          <li><a id="menu-hub" href="hubbard.asp">Hubbard Glacier, Alaska</a></li>
+		          <div class="divider"> </div>
+		          <li><a id="menu-reffects" href="regionEffects.asp">Regional Effects</a></li>
+		      </ul>
+					</li>
+					<li class="dropdown">
+						<a id="menu-glacier" href="#" data-toggle="dropdown">Benchmark Glaciers <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+							<li><a id="menu-gulkana" href="gulkana.asp">Gulkana</a></li>
+							<li><a id="menu-scascade" href="scascade.asp">South Cascade</a></li>
+							<li><a id="menu-sperry" href="sperry.asp">Sperry</a></li>
+							<li><a id="menu-wolverine" href="wolverine.asp">Wolverine</a></li>
+						</ul>
+					</li>
+		      <li class="dropdown">
+						<a id="menu-resources" href="#" data-toggle="dropdown">Resources <b class="caret"></b></a>
+						<ul class="dropdown-menu" >
+							<li><a id="menu-pubs" href="publications.asp">Publication Search</a></li>
+							<li><a id="menu-relWeb" href="relatedWeb.asp">Related Websites</a></li>
+						</ul>
+					</li>
+					<li><a id="menu-contacts" href="contacts.asp">Contacts</a></li>	
+				</ul>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="https://twitter.com/USGSGlaciology"><img src="images/twittericon.png" /></a></li>    
+		    </ul>
+			</div><!-- end .collapse -->
+		</div><!-- end .navbar -->
+	</div><!-- end .banner -->
+  
+  <!-- Slideshow -->
+	<div id="carousel-main" class="carousel slide carousel-fade pull-right" data-interval="7000" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-main" data-slide-to="1"></li>
+			<li data-target="#carousel-main" data-slide-to="2"></li>
+			<li data-target="#carousel-main" data-slide-to="3"></li>
+		</ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+			  <img src="images/hpGulkana_500.jpg" alt="Gulkana Glacier, Alaska">
+			  <div class="carousel-caption">Gulkana Glacier, Alaska</div>
+			</div>
+			<div class="item">
+			  <img src="images/hpSouthCascade_500.jpg" alt="South Cascade Glacier, Washington">
+			  <div class="carousel-caption">South Cascade Glacier, Washington</div>
+			</div>
+			<div class="item">
+			  <img src="images/hpSperry_500.jpg" alt="Sperry Glacier, Montana">
+			  <div class="carousel-caption">Sperry Glacier, Montana</div>
+			</div>
+			<div class="item">
+				<img src="images/hpWolverine_500.jpg" alt="Wolverine Glacier, Alaska">
+			  <div class="carousel-caption">Wolverine Glacier, Alaska</div>
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="carousel-control left" href="#carousel-main" role="button" data-slide="prev">
+			<img src="images/chevron-left.png" alt="Previous Image">
+		</a>
+		<a class="carousel-control right" href="#carousel-main" role="button" data-slide="next">
+			<img src="images/chevron-right.png" alt="Next Image">
+		</a>
+	</div>
+	<!-- end slideshow -->
+  
+  <h1>Welcome</h1>
+  <p>Glaciers have long captured the interest of scientists, but their value as indicators of climate change and their environmental and socio-economic impacts have come to the forefront of contemporary scientific research.  Glaciers store precipitation as ice, transport it away from where it was deposited, then release it as water, sometimes centuries or millennia later.  As we continue to learn how glaciers respond to climate change, the close linkages to ecosystems and human populations far beyond their local environment becomes increasingly apparent.</p>
+	<a href="http://www.earth-syst-sci-data.net/9/47/2017/essd-9-47-2017.html">
+    <div class="img-thumbnail pull-left" style="width:260px;">
+      <img src="images/sperryPub20052015.jpg" class="img-responsive" alt="Glaciological measurements and mass balances from Sperry Glacier, Montana, USA, years 2005-2015" title="Glaciological measurements and mass balances from Sperry Glacier, Montana, USA, years 2005-2015" />
+      <div class="caption">New Publication: Glaciological measurements and mass balances from Sperry Glacier, Montana, USA, years 2005-2015</div>
+    </div>
+  </a>
+  <p>Scientists with the Glaciers and Climate Project study many of the pertinent impacts that glaciers present to society, such as altering hydrologic cycles, contributing to sea-level rise, and creating environmental hazards. Having progressed from early studies which focused on understanding where and why glaciers exist, and their primary response to climate, the Glaciers and Climate Project's objective today is to advance the quantitative understanding of glacier-climate interactions to best predict and prepare for local, regional, and global implications of changes to Earth's mountain glaciers and ice sheets. With a firm foundation of long-term records, the Glaciers and Climate Project continues to broaden its value and impact by incorporating new technologies and expertise over a diverse suite of glaciological challenges.</p>
+  
+		<div class="banner">
+		<!-- BEGIN USGS Footer Template -->
+<div id="usgsfooter">
+	<p id="usgsfooterbar">
+		<a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)">Accessibility</a>
+		<a href="http://www.usgs.gov/foia/" title="Freedom of Information Act">FOIA</a>
+		<a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey.">Privacy</a>
+		<a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites.">Policies and Notices</a>
+	</p>
+	
+	<p id="usgsfootertext">
+		<a href="http://usa.gov/"><img src="/climate_landuse/includes/footer_graphic_usagov.jpg" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" /></a>
+		<a href="http://www.doi.gov/">U.S. Department of the Interior</a> |
+		<a href="http://www.usgs.gov/">U.S. Geological Survey</a><br />
+
+	  URL: https://www2.usgs.gov/climate_landuse/clu_rd/glacierstudies/default.asp<br /> 
+    Page Contact Information:
+    <script type="text/javascript" language="javascript">
+      <!--
+      // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+      // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+      // This code is freeware provided these four comment lines remain intact
+      // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+      { coded = "KKy0Nvv@Cvev.eVa"
+        key = "b1iv4xkQ3XYJhrEelDoafTw2G5ZPM0UNStVWuAc7jzmOBH9dFsn6CpyRKLI8qg"
+        shift=coded.length
+        link=""
+        for (i=0; i<coded.length; i++) {
+          if (key.indexOf(coded.charAt(i))==-1) {
+            ltr = coded.charAt(i)
+            link += (ltr)
+          }
+          else {     
+            ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+            link += (key.charAt(ltr))
+          }
+        }
+      document.write("<a href='mailto:"+link+"'>Website Manager</a>")
+      }
+    </script>
+    <noscript>Sorry, you need Javascript on to email us.</noscript><br>
+    Page Last Modified: Tuesday, January 31, 2017  
+	</p>
+</div>
+<!-- END USGS Footer Template -->
+	</div><!-- end .banner --> 
+</div> <!-- end main container -->
+
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/climate_landuse/scripts/jquery-3.1.0.min.js"></script>
+<script src="/climate_landuse/scripts/bootstrap.min-3.3.7.js"></script>
+</body>
+</html>

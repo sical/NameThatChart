@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+            <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+            <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+            <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+            <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+            <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link sizes="16x16" type="image/png" rel="icon" href="/themes/Mirage2/images/favicons/favicon-16x16.png">
+<link sizes="32x32" type="image/png" rel="icon" href="/themes/Mirage2/images/favicons/favicon-32x32.png">
+<link sizes="96x96" type="image/png" rel="icon" href="/themes/Mirage2/images/favicons/favicon-96x96.png">
+<link rel="apple-touch-icon" href="/themes/Mirage2/images/favicons/touch-icon-iphone.png">
+<link sizes="152x152" rel="apple-touch-icon" href="/themes/Mirage2/images/favicons/touch-icon-ipad.png">
+<link sizes="180x180" rel="apple-touch-icon" href="/themes/Mirage2/images/favicons/touch-icon-iphone-retina.png">
+<link sizes="167x167" rel="apple-touch-icon" href="/themes/Mirage2/images/favicons/touch-icon-ipad-retina.png">
+<meta name="Generator" content="DSpace 6.1-SNAPSHOT">
+<link href="/themes/Mirage2/styles/main.css" rel="stylesheet">
+<link type="application/opensearchdescription+xml" rel="search" href="http://edoc.hu-berlin.de:80/open-search/description.xml" title="DSpace">
+<script>
+                //Clear default text of empty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == ' '){element.value='';}
+                }
+                //Clear default text of empty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == ' '){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+                function disableEnterKey(e)
+                {
+                var key;
+
+                if(window.event)
+                key = window.event.keyCode; //Internet Explorer
+                else
+                key = e.which; //Firefox and Netscape
+
+                if(key == 13) //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
+            </script><!--[if lt IE 9]>
+                <script src="/themes/Mirage2/vendor/html5shiv/dist/html5shiv.js"> </script>
+                <script src="/themes/Mirage2/vendor/respond/dest/respond.min.js"> </script>
+                <![endif]--><script src="/themes/Mirage2/vendor/modernizr/modernizr.js"> </script>
+<title>Transurethrale Holmiumlaser Enukleation der Prostata (HoLEP) versus Transurethrale Elektroresektion der Prostata (TURP)</title>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.creator" content="Ahyai, Sascha A." />
+<meta name="DCTERMS.dateAccepted" content="2017-06-18T07:21:29Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.available" content="2017-06-18T07:21:29Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.created" content="2006-01-27" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.issued" content="2006-01-04" xml:lang="none" scheme="DCTERMS.W3CDTF" />
+<meta name="DC.identifier" content="http://edoc.hu-berlin.de/dissertationen/ahyai-sascha-a-2005-12-16/PDF/ahyai.pdf" />
+<meta name="DC.identifier" content="http://edoc.hu-berlin.de/dissertationen/ahyai-sascha-a-2005-12-16/HTML/" />
+<meta name="DC.identifier" content="http://edoc.hu-berlin.de/dissertationen/ahyai-sascha-a-2005-12-16/XML/" />
+<meta name="DC.identifier" content="http://edoc.hu-berlin.de/18452/16046" scheme="DCTERMS.URI" />
+<meta name="DCTERMS.abstract" content="Ziele: Trotz ihrer signifikanten Morbidität stellt die transurethrale Resektion der Prostata (TURP) den gold standard dar für die instrumentelle Therapie der durch die benigne Prostatahyperplasie (BPH) bedingten Blasenauslassobstruktion. Mit dem Hochleistungs-Holmium: YAG Laser kann endoskopisch, in einer relativ blutungsarmen Weise, Prostatagewebe enukleiert werden. Wir verglichen die Technik der transurethralen Holmium-Laser-Enukleation der Prostata (HoLEP) mit der Standard-TURP bei der operativen Therapie von Prostataadenomen. Wir präsentieren die perioperativen Daten, die Kurz- und Langzeitergebnisse dieser randomisierten klinischen Studie.  Material und Methoden: Insgesamt wurden 200 Patienten mit einer urodynamisch nachgewiesenen benignen Prostataobstruktion bei einem Prostatavolumen kleiner 100g im transrektalen Ultraschall in ein TURP- und HoLEP-Kollektiv randomisiert. Alle Patienten wurden präoperativ und postoperativ nach 1,6, 12, 18, 24 und 36 Monaten durch Erhebung des American Urological Association symptom score und Messung der maximalen Harnflussrate und des Restharns evaluiert. Die perioperativen Daten und die postoperativen Ergebnisse wurden verglichen. Alle Komplikationen wurden vermerkt.  Ergebnisse: Bei der HoLEP waren die Katheterzeit, der Krankenhausaufenthalt und der Hämoglobinverlust signifikant geringer, jedoch die Operationszeit signifikant länger als bei der TURP. HoLEP und TURP führten zu signifikanter und anhaltender Verbesserung aller Miktionsparameter, wobei der Restharn bis einschließlich 36 Monate postoperativ in der HoLEP Gruppe signifikant geringer blieb. Auch die perioperative Morbidität war bei der HoLEP kleiner; Kontinenz, Potenz und Spätkomplikation waren in beiden Gruppen ähnlich.  Schlussfolgerungen: HoLEP ist mindestens genauso effektiv wie TURP. HoLEP dauert länger, jedoch sind die perioperative Morbidität, Katheter- und Krankenhausdauer geringer. Beide Methoden zeigen befriedigende Langzeitergebnisse mit wenigen Spätkomplikationen. Dies bestätigt die Dauerhaftigkeit des Therapieerfolges dieser 2. Verfahren." xml:lang="ger" />
+<meta name="DCTERMS.abstract" content="Purpose: Transurethral electrocautery resection (TURP) is generally regarded as the gold standard surgical treatment for bladder outflow obstruction due to benign prostatic hyperplasia (BPH) despite its rather high morbidity. The high powered holmium: YAG laser can be used endoscopically to enucleate prostatic tissue in a relatively bloodless manner. The technique of transurethral holmium laser enucleation of the prostate (HoLEP) was compared to standard TURP for the surgical management of prostate adenomas. We present the perioperative data, short and long-term results of this randomized clinical trial.  Materials and Methods: A total of 200 patients with urodynamic obstruction with a prostate less than 100 gm on transrectal ultrasound were randomized into 2 comparable groups and assigned to HoLEP or TURP. All patients were assessed preoperatively and followed prospectively 1, 6, 12, 18, 24, and 36 months postoperatively with an American Urological Association symptom score, peak urinary flow rate and post-void residual measurement. Perioperative data and postoperative outcome were compared. All complications were noted.  Results: HoLEP was significantly superior to TURP in terms of catheter time, hospital stay and hemoglobin loss but operative time was significantly longer. HoLEP and TURP resulted in a significant and lasting improvement of all parameters with post-void residual volume still significantly better in the HoLEP group at the 36-month assessment. Perioperative morbidity was less in the HoLEP group; continence, potency and late complications were similar in both groups.  Conclusion: HoLEP is at least as effective as TURP. HoLEP takes longer than TURP, but perioperative morbidtity, catheter time and hospital stay is less. Both treatments have satisfactory long term results with a low late complication rate. This confirms the durability of these 2 procedures." xml:lang="eng" />
+<meta name="DC.language" content="ger" scheme="DCTERMS.RFC1766" />
+<meta name="DC.publisher" content="Humboldt-Universität zu Berlin, Medizinische Fakultät - Universitätsklinikum Charité" />
+<meta name="DC.subject" content="Prostata" xml:lang="ger" />
+<meta name="DC.subject" content="TURP" xml:lang="ger" />
+<meta name="DC.subject" content="HoLEP" xml:lang="ger" />
+<meta name="DC.subject" content="Laser" xml:lang="ger" />
+<meta name="DC.subject" content="TURP" xml:lang="eng" />
+<meta name="DC.subject" content="HoLEP" xml:lang="eng" />
+<meta name="DC.subject" content="Prostate" xml:lang="eng" />
+<meta name="DC.subject" content="Laser" xml:lang="eng" />
+<meta name="DC.subject" content="610 Medizin" scheme="DCTERMS.DDC" />
+<meta name="DC.title" content="Transurethrale Holmiumlaser Enukleation der Prostata (HoLEP) versus Transurethrale Elektroresektion der Prostata (TURP)" />
+<meta name="DC.type" content="doctoralThesis" />
+<meta name="DC.identifier" content="urn:nbn:de:kobv:11-10056775" />
+<meta name="DC.identifier" content="urn:nbn:de:kobv:11-10067507" />
+<meta name="DC.identifier" content="urn:nbn:de:kobv:11-10067510" />
+<meta name="DC.identifier" content="http://dx.doi.org/10.18452/15394" />
+<meta name="DC.identifier" content="HU001522351" />
+<meta name="DC.date" content="2005-12-16" scheme="DCTERMS.W3CDTF" />
+<meta name="DC.contributor" content="Rassweiler, J. J." />
+<meta name="DC.contributor" content="Miller, K." />
+<meta name="DC.contributor" content="Kuntz, R. M." />
+<meta name="DC.subject" content="33 Medizin" />
+<meta name="DC.subject" content="XG 8204" />
+<meta name="DC.subject" content="YI 1704" />
+<meta name="DC.subject" content="YK 5504" />
+<meta name="DC.subject" content="YK 9594" />
+<meta content="Prostata; TURP; HoLEP; Laser; TURP; HoLEP; Prostate; Laser; doctoralThesis" name="citation_keywords">
+<meta content="Transurethrale Holmiumlaser Enukleation der Prostata (HoLEP) versus Transurethrale Elektroresektion der Prostata (TURP)" name="citation_title">
+<meta content="Humboldt-Universit&auml;t zu Berlin, Medizinische Fakult&auml;t - Universit&auml;tsklinikum Charit&eacute;" name="citation_publisher">
+<meta content="ger" name="citation_language">
+<meta content="Ahyai, Sascha A." name="citation_author">
+<meta content="https://edoc.hu-berlin.de/bitstream/18452/16046/1/ahyai.pdf" name="citation_pdf_url">
+<meta content="2006-01-04" name="citation_date">
+<meta content="https://edoc.hu-berlin.de/handle/18452/16046" name="citation_abstract_html_url">
+</head><body>
+<header>
+<div role="navigation" class="navbar navbar-default navbar-static-top">
+<div class="container">
+<div class="logo-header clearfix">
+<a class="navbar-brand" href="https://www.hu-berlin.de"><img src="/themes/Mirage2/images/hukombi_bwb_gross.png" class="visible-sm visible-md visible-lg logo-big"><img src="/themes/Mirage2/images/husiegel_bw_gross.png" class="visible-xs hidden-sm logo-small"></a>
+</div>
+<div class="navigational-header">
+<button data-toggle="offcanvas" class="icon-bar-toggle hidden-lg hidden-md" type="button"><span class="sr-only">Umschalten der Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+<div class="navbar-header">
+<div>
+<a href="/"><span class="hidden-sm hidden-xs">edoc Publikationsserver</span><span class="hidden-lg hidden-md">edoc</span></a>
+</div>
+</div>
+<div id="ds-language-selection">
+<a href="?locale-attribute=de"><span class="disabled bold">de</span></a>|<a href="?locale-attribute=en"><span>en</span></a>
+</div>
+</div>
+<div class="banner-header visible-md visible-lg row">
+<img src="/themes/Mirage2/images/hu-banner.jpeg"></div>
+</div>
+</div>
+<div class="visible-xs visible-sm container">
+<div class="ds-option-set" id="ds-search-option">
+<form method="post" class="" id="ds-search-form" action="/discover">
+<fieldset>
+<div class="input-group">
+<input placeholder="Suche" type="text" class="ds-text-field form-control" name="query"><span class="input-group-btn"><button title="Los" class="ds-button-field btn btn-default magnifying-glass-button" type="submit"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button></span>
+</div>
+</fieldset>
+</form>
+</div>
+<div class="trail-wrapper hidden-print">
+<div class="row">
+<div class="col-xs-12">
+<div class="breadcrumb dropdown hidden-md hidden-lg">
+<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="trail-dropdown-toggle">Publikation anzeigen&nbsp;<b class="caret"></b></a>
+<ul aria-labelledby="trail-dropdown-toggle" role="menu" class="dropdown-menu">
+<li role="presentation">
+<a role="menuitem" href="/">edoc Startseite</a>
+</li>
+<li role="presentation">
+<a role="menuitem" href="/handle/18452/1">Qualifikationsarbeiten</a>
+</li>
+<li role="presentation">
+<a role="menuitem" href="/handle/18452/2">Dissertationen</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#" role="menuitem">Publikation anzeigen</a>
+</li>
+</ul>
+</div>
+<ul class="breadcrumb hidden-xs">
+<li>
+<a href="/">edoc Startseite</a>
+</li>
+<li>
+<a href="/handle/18452/1">Qualifikationsarbeiten</a>
+</li>
+<li>
+<a href="/handle/18452/2">Dissertationen</a>
+</li>
+<li class="active">Publikation anzeigen</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="hidden" id="no-js-warning-wrapper">
+<div id="no-js-warning">
+<div class="notice failure">JavaScript is disabled for your browser. Some features of this site may not work without it.</div>
+</div>
+</div>
+<div class="container" id="main-container">
+<div class="row row-offcanvas row-offcanvas-left">
+<div class="horizontal-slider clearfix">
+<div role="navigation" id="desktop-sidebar" class="col-xs-6 col-sm-3 hidden-xs hidden-sm">
+<div class="word-break hidden-print" id="ds-options">
+<div id="aspect_viewArtifacts_Navigation_list_browse" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading">Gesamter edoc-Server</span></a><a href="/community-list" class="list-group-item ds-option">Bereiche &amp; Sammlungen</a><a href="/browse?type=title" class="list-group-item ds-option">Titel</a><a href="/browse?type=author" class="list-group-item ds-option">Autor</a><a href="/browse?type=subject" class="list-group-item ds-option">Schlagwort</a><a class="list-group-item active"><span class="h5 list-group-item-heading">Diese Sammlung</span></a><a href="/handle/18452/2/browse?type=title" class="list-group-item ds-option">Titel</a><a href="/handle/18452/2/browse?type=author" class="list-group-item ds-option">Autor</a><a href="/handle/18452/2/browse?type=subject" class="list-group-item ds-option">Schlagwort</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_account" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading">Publizieren</span></a><a href="/login" class="list-group-item ds-option">Einloggen</a><a href="/register" class="list-group-item ds-option">Registrieren</a><a href="https://edoc-info.hu-berlin.de" class="list-group-item ds-option">Hilfe</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_context" class="list-group"></div>
+<div id="aspect_viewArtifacts_Navigation_list_administrative" class="list-group"></div>
+<div id="aspect_discovery_Navigation_list_discovery" class="list-group"></div>
+<div id="aspect_statistics_Navigation_list_statistics" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading">Statistik</span></a><a href="/handle/18452/16046/statistics" class="list-group-item ds-option">Benutzungsstatistik</a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-9 main-content">
+<div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas hidden-md hidden-lg">
+<div class="word-break hidden-print" id="ds-options">
+<div id="aspect_viewArtifacts_Navigation_list_browse" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading">Gesamter edoc-Server</span></a><a href="/community-list" class="list-group-item ds-option">Bereiche &amp; Sammlungen</a><a href="/browse?type=title" class="list-group-item ds-option">Titel</a><a href="/browse?type=author" class="list-group-item ds-option">Autor</a><a href="/browse?type=subject" class="list-group-item ds-option">Schlagwort</a><a class="list-group-item active"><span class="h5 list-group-item-heading">Diese Sammlung</span></a><a href="/handle/18452/2/browse?type=title" class="list-group-item ds-option">Titel</a><a href="/handle/18452/2/browse?type=author" class="list-group-item ds-option">Autor</a><a href="/handle/18452/2/browse?type=subject" class="list-group-item ds-option">Schlagwort</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_account" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading">Publizieren</span></a><a href="/login" class="list-group-item ds-option">Einloggen</a><a href="/register" class="list-group-item ds-option">Registrieren</a><a href="https://edoc-info.hu-berlin.de" class="list-group-item ds-option">Hilfe</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_context" class="list-group"></div>
+<div id="aspect_viewArtifacts_Navigation_list_administrative" class="list-group"></div>
+<div id="aspect_discovery_Navigation_list_discovery" class="list-group"></div>
+<div id="aspect_statistics_Navigation_list_statistics" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading">Statistik</span></a><a href="/handle/18452/16046/statistics" class="list-group-item ds-option">Benutzungsstatistik</a>
+</div>
+</div>
+</div>
+<div class="hidden-xs hidden-sm">
+<div class="ds-option-set" id="ds-search-option">
+<form method="post" class="" id="ds-search-form" action="/discover">
+<fieldset>
+<div class="input-group">
+<input placeholder="Suche" type="text" class="ds-text-field form-control" name="query"><span class="input-group-btn"><button title="Los" class="ds-button-field btn btn-default magnifying-glass-button" type="submit"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button></span>
+</div>
+</fieldset>
+</form>
+</div>
+<div class="trail-wrapper hidden-print">
+<div class="row">
+<div class="col-xs-12">
+<div class="breadcrumb dropdown hidden-md hidden-lg">
+<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="trail-dropdown-toggle">Publikation anzeigen&nbsp;<b class="caret"></b></a>
+<ul aria-labelledby="trail-dropdown-toggle" role="menu" class="dropdown-menu">
+<li role="presentation">
+<a role="menuitem" href="/">edoc Startseite</a>
+</li>
+<li role="presentation">
+<a role="menuitem" href="/handle/18452/1">Qualifikationsarbeiten</a>
+</li>
+<li role="presentation">
+<a role="menuitem" href="/handle/18452/2">Dissertationen</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#" role="menuitem">Publikation anzeigen</a>
+</li>
+</ul>
+</div>
+<ul class="breadcrumb hidden-xs">
+<li>
+<a href="/">edoc Startseite</a>
+</li>
+<li>
+<a href="/handle/18452/1">Qualifikationsarbeiten</a>
+</li>
+<li>
+<a href="/handle/18452/2">Dissertationen</a>
+</li>
+<li class="active">Publikation anzeigen</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div id="aspect_versioning_VersionNoticeTransformer_div_item-view" class="ds-static-div primary">
+<!-- External Metadata URL: cocoon://metadata/handle/18452/16046/mets.xml-->
+<div class="item-summary-view-metadata">
+<div class="row">
+<div class="col-xs-12">
+<div class="badges">
+<div class="artifact-badges">
+<span class="badge badge-date"><span class="date">2006-01-04</span></span><span class="badge badge-type"><span class="type">Dissertation</span></span><a href="#" data-toggle="modal" data-target="#doi-modal" class="doi-modal-anchor"><span class="badge badge-doi"><span class="doi">
+                            DOI:
+                            10.18452/15394</span></span></a>
+</div>
+</div>
+<div class="simple-item-view-title item-page-field-wrapper ">
+<div class="h3">Transurethrale Holmiumlaser Enukleation der Prostata (HoLEP) versus Transurethrale Elektroresektion der Prostata (TURP)</div>
+</div>
+<div class="simple-item-view-subtitle item-page-field-wrapper ">
+<div class="h4">eine randomisierte Studie an 200 Patienten mit Prostatae kleiner 100 g und urodynamisch nachgewiesener Obstruktion</div>
+</div>
+<div class="simple-item-view-authors item-page-field-wrapper h4">
+<div class="ds-dc_contributor_author-authority">Ahyai, Sascha A.</div>
+</div>
+<div class="simple-item-view-description item-page-field-wrapper ">
+<div class="h4">Humboldt-Universit&auml;t zu Berlin, Medizinische Fakult&auml;t - Universit&auml;tsklinikum Charit&eacute;</div>
+</div>
+<div class="simple-item-view-description item-page-field-wrapper table">
+<div>Ziele: Trotz ihrer signifikanten Morbidit&auml;t stellt die transurethrale Resektion der Prostata (TURP) den gold standard dar f&uuml;r die instrumentelle Therapie der durch die benigne Prostatahyperplasie (BPH) bedingten Blasenauslassobstruktion. Mit dem Hochleistungs-Holmium: YAG Laser kann endoskopisch, in einer relativ blutungsarmen Weise, Prostatagewebe enukleiert werden. Wir verglichen die Technik der transurethralen Holmium-Laser-Enukleation der Prostata (HoLEP) mit der Standard-TURP bei der operativen Therapie von Prostataadenomen. Wir pr&auml;sentieren die perioperativen Daten, die Kurz- und Langzeitergebnisse dieser randomisierten klinischen Studie.  Material und Methoden: Insgesamt wurden 200 Patienten mit einer urodynamisch nachgewiesenen benignen Prostataobstruktion bei einem Prostatavolumen kleiner 100g im transrektalen Ultraschall in ein TURP- und HoLEP-Kollektiv randomisiert. Alle Patienten wurden pr&auml;operativ und postoperativ nach 1,6, 12, 18, 24 und 36 Monaten durch Erhebung des American Urological Association symptom score und Messung der maximalen Harnflussrate und des Restharns evaluiert. Die perioperativen Daten und die postoperativen Ergebnisse wurden verglichen. Alle Komplikationen wurden vermerkt.  Ergebnisse: Bei der HoLEP waren die Katheterzeit, der Krankenhausaufenthalt und der H&auml;moglobinverlust signifikant geringer, jedoch die Operationszeit signifikant l&auml;nger als bei der TURP. HoLEP und TURP f&uuml;hrten zu signifikanter und anhaltender Verbesserung aller Miktionsparameter, wobei der Restharn bis einschlie&szlig;lich 36 Monate postoperativ in der HoLEP Gruppe signifikant geringer blieb. Auch die perioperative Morbidit&auml;t war bei der HoLEP kleiner; Kontinenz, Potenz und Sp&auml;tkomplikation waren in beiden Gruppen &auml;hnlich.  Schlussfolgerungen: HoLEP ist mindestens genauso effektiv wie TURP. HoLEP dauert l&auml;nger, jedoch sind die perioperative Morbidit&auml;t, Katheter- und Krankenhausdauer geringer. Beide Methoden zeigen befriedigende Langzeitergebnisse mit wenigen Sp&auml;tkomplikationen. Dies best&auml;tigt die Dauerhaftigkeit des Therapieerfolges dieser 2. Verfahren.<div class="spacer">&nbsp;</div>Purpose: Transurethral electrocautery resection (TURP) is generally regarded as the gold standard surgical treatment for bladder outflow obstruction due to benign prostatic hyperplasia (BPH) despite its rather high morbidity. The high powered holmium: YAG laser can be used endoscopically to enucleate prostatic tissue in a relatively bloodless manner. The technique of transurethral holmium laser enucleation of the prostate (HoLEP) was compared to standard TURP for the surgical management of prostate adenomas. We present the perioperative data, short and long-term results of this randomized clinical trial.  Materials and Methods: A total of 200 patients with urodynamic obstruction with a prostate less than 100 gm on transrectal ultrasound were randomized into 2 comparable groups and assigned to HoLEP or TURP. All patients were assessed preoperatively and followed prospectively 1, 6, 12, 18, 24, and 36 months postoperatively with an American Urological Association symptom score, peak urinary flow rate and post-void residual measurement. Perioperative data and postoperative outcome were compared. All complications were noted.  Results: HoLEP was significantly superior to TURP in terms of catheter time, hospital stay and hemoglobin loss but operative time was significantly longer. HoLEP and TURP resulted in a significant and lasting improvement of all parameters with post-void residual volume still significantly better in the HoLEP group at the 36-month assessment. Perioperative morbidity was less in the HoLEP group; continence, potency and late complications were similar in both groups.  Conclusion: HoLEP is at least as effective as TURP. HoLEP takes longer than TURP, but perioperative morbidtity, catheter time and hospital stay is less. Both treatments have satisfactory long term results with a low late complication rate. This confirms the durability of these 2 procedures.<div class="spacer">&nbsp;</div>
+</div>
+</div>
+<div class="item-page-field-wrapper file-section word-break ds-artifact-list ">
+<div class="list-head">Dateien zu dieser Publikation</div>
+<div class="ds-artifact-item">
+<a class="clearfix" href="/bitstream/handle/18452/16046/ahyai.pdf?sequence=1&amp;isAllowed=y">
+<div class="pull-right thumbnail">
+<img alt="Thumbnail" class="img-thumbnail" src="/bitstream/handle/18452/16046/ahyai.pdf.jpg?sequence=5&amp;isAllowed=y"></div>
+<div class="artifact-wrapper">
+<div class="file-artifact">
+<div class="file-title">ahyai.pdf<span> &mdash; </span><span class="small">PDF - 2.478 Mb</span>
+</div>
+</div>
+<div class="file-checksum file-artifact">
+<span class="small">MD5: c921b111d24bc69e4f342c3233540d6b</span>
+</div>
+</div>
+</a>
+</div>
+<div class="ds-artifact-item">
+<a class="clearfix" href="/bitstream/handle/18452/16046/26526_html.zip?sequence=2&amp;isAllowed=y">
+<div class="artifact-wrapper">
+<div class="file-artifact">
+<div class="file-title">26526_html.zip<span> &mdash; </span><span class="small">Unbekannt - 421.6 Kb</span>
+</div>
+</div>
+<div class="file-checksum file-artifact">
+<span class="small">MD5: f75cb114fc79667b14fd750ee33c38a8</span>
+</div>
+</div>
+</a>
+</div>
+<div class="ds-artifact-item">
+<a class="clearfix" href="/bitstream/handle/18452/16046/26526_xml.zip?sequence=3&amp;isAllowed=y">
+<div class="artifact-wrapper">
+<div class="file-artifact">
+<div class="file-title">26526_xml.zip<span> &mdash; </span><span class="small">Unbekannt - 186.1 Kb</span>
+</div>
+</div>
+<div class="file-checksum file-artifact">
+<span class="small">MD5: 19ce8570b034b57d6f79f70ba6dfca49</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="item-page-field-wrapper citation-section word-break ds-artifact-list ">
+<div class="list-head">Zitieren</div>
+<div class="ds-artifact-item">
+<a href="/citations/bibtex/18452-16046.bib">
+<div class="artifact-wrapper">BibTeX</div>
+</a>
+</div>
+<div class="ds-artifact-item">
+<a href="/citations/endnote/18452-16046.enw">
+<div class="artifact-wrapper">EndNote</div>
+</a>
+</div>
+</div>
+<div class="simple-item-view-show-full item-page-field-wrapper table clearfix">
+<div class="pull-right full-details">
+<a class="btn btn-primary" href="/handle/18452/16046?show=full">Zur Langanzeige</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="row">
+<div class="footer-links">
+<a href="https://edoc-info.hu-berlin.de/de/nutzung/impr">Impressum</a><a href="https://edoc-info.hu-berlin.de/de/nutzung/nutzung_leitlinien/nutzung_leit">Leitlinien</a><a href="/contact">Kontakt</a>
+</div>
+<div class="footer-copyright">&copy; Humboldt-Universit&auml;t zu Berlin</div>
+</div>
+<a class="hidden" href="/htmlmap">&nbsp;</a>
+</footer>
+</div>
+<script type="text/javascript">
+                         if(typeof window.publication === 'undefined'){
+                            window.publication={};
+                          };
+                        window.publication.contextPath= '';window.publication.themePath= '/themes/Mirage2/';</script><script>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='';window.DSpace.theme_path='/themes/Mirage2/';</script><script src="/themes/Mirage2/scripts/theme.js"> </script>
+<!-- External Metadata URL: cocoon://metadata/handle/18452/16046/mets.xml?rightsMDTypes=METSRIGHTS-->
+<div role="dialog" class="modal fade" id="doi-modal">
+<div role="document" class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<h5 class="h5-doi-modal-card-first">DOI</h5>
+<div class="card doi-modal-card">
+<div class="card-block">10.18452/15394</div>
+</div>
+<h5 class="h5-doi-modal-card">Permanent URL</h5>
+<div class="card doi-modal-card">
+<div class="card-block">http://dx.doi.org/10.18452/15394</div>
+</div>
+<h5 class="h5-doi-modal-card">HTML</h5>
+<div class="card doi-modal-card">
+<div class="card-block">&lt;a href="http://dx.doi.org/10.18452/15394"&gt;http://dx.doi.org/10.18452/15394&lt;/a&gt;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

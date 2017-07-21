@@ -128,7 +128,7 @@
     var info = [];
     var width = screen.width;
     var height = screen.height;
-    var note =0;
+    var note = 0;
     $(document).ready(function () {
 
         if (window.location.href.indexOf('quizz') !== -1) {
@@ -163,44 +163,7 @@
 
 
         } else {
-            $.ajax({
-                type: "GET",
-                url: "../getfive",
-                processData: false,
-                contentType: false,
-                success: function (data) {
-                    info = JSON.parse(data);
-                    var i = 1;
-                    info.forEach(function (img) {
-                        cat.push(img.label);
-                        var temp = $('.pane' + i);
-
-                        if (width > 1024) {
-                            temp.css("width", "100%");
-                            temp.css("height", "60%");
-                        } else {
-                            if (width > 700) {
-                                temp.css("width", "100%");
-                                temp.css("height", "41%");
-                            } else {
-                                if (width > 400) {
-                                    temp.css("width", "70%");
-                                    temp.css("height", "30%");
-                                } else {
-                                    temp.css("width", "55%");
-                                    temp.css("height", "23%");
-                                }
-                            }
-                        }
-                        temp.css("background-image", 'url("' + img.path + '")');
-                        temp.attr("value", img.idimage);
-                        $("#" + i + "_txt").text(img.label);
-                        $("#brand").text("Does this belongs in " + cat[nb] + " category");
-                        i++;
-                    })
-
-                }
-            });
+            fill();
         }
 
     });
@@ -231,7 +194,17 @@
                     processData: false,
                     contentType: false,
                     data: form
-                })
+                });
+                if (item.index() == 0) {
+                    if (window.location.href.indexOf('main') !== -1) {
+                        window.location = "../main"
+                    } else if (window.location.href.indexOf('raw') !== -1) {
+                        window.location = "../raw"
+                    }
+                    else {
+                        window.location = "../swipes"
+                    }
+                }
             }
         },
 
@@ -259,7 +232,18 @@
                     processData: false,
                     contentType: false,
                     data: form
-                })
+                });
+
+                if (item.index() == 0) {
+                    if (window.location.href.indexOf('main') !== -1) {
+                        window.location = "../main"
+                    } else if (window.location.href.indexOf('raw') !== -1) {
+                        window.location = "../raw"
+                    }
+                    else {
+                        window.location = "../swipes"
+                    }
+                }
             }
 
         },
@@ -288,6 +272,46 @@
     }
 
 
+    function fill() {
+        $.ajax({
+            type: "GET",
+            url: "../getfive",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                info = JSON.parse(data);
+                var i = 1;
+                info.forEach(function (img) {
+                    cat.push(img.label);
+                    var temp = $('.pane' + i);
+
+                    if (width > 1024) {
+                        temp.css("width", "100%");
+                        temp.css("height", "60%");
+                    } else {
+                        if (width > 700) {
+                            temp.css("width", "100%");
+                            temp.css("height", "41%");
+                        } else {
+                            if (width > 400) {
+                                temp.css("width", "70%");
+                                temp.css("height", "30%");
+                            } else {
+                                temp.css("width", "55%");
+                                temp.css("height", "23%");
+                            }
+                        }
+                    }
+                    temp.css("background-image", 'url("' + img.path + '")');
+                    temp.attr("value", img.idimage);
+                    $("#" + i + "_txt").text(img.label);
+                    $("#brand").text("Does this belongs in " + cat[nb] + " category");
+                    i++;
+                })
+
+            }
+        });
+    }
 </script>
 </body>
 
