@@ -128,15 +128,19 @@
         if (window.location.href.indexOf('quizz') !== -1) {
             var path = ["static/assets/img/datasets/json/4_diagram_of_the_cause_of_mortality.png", "static/assets/img/datasets/textualsaved/136.jpg", "static/assets/img/datasets/textualsaved/123.jpg", "static/assets/img/datasets/textualsaved/178.jpg", "static/assets/img/datasets/textualsaved/170.jpg"];
             cat = ["pie chart", "line chart", "scatter plot", "bar chart", "polar area diagram"];
+
             for (var i = 0; i < 5; i++) {
                 console.log(i + 1);
                 var temp = $('.pane' + (i + 1));
-
+                temp.css("width", "75%");
+                temp.css("height", "55%");
+                temp.css("max-width", "800px");
+                temp.css("background-color", "#FFF");
+                temp.css("border", "solid 1px");
                 temp.css("background-image", 'url("' + path[i] + '")');
                 $("#" + i + "_txt").text("");
                 $("#brand").text("Does this belongs in " + cat[4] + " category");
             }
-
 
         } else {
             fill();
@@ -246,7 +250,6 @@
             }
         })
     }
-
 
     function fill() {
         $.ajax({

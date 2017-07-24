@@ -107,10 +107,13 @@ def maj(dir):
 
     for i in range(0, len(imgs)):
         path = imgs[i].replace("./static/", "")
-        temp = path.split("/")
+
         cursor.execute("SELECT * FROM image WHERE imagepath LIKE '" + path + "' LIMIT 1")
         data = cursor.fetchone()
-        idtype = gettype(temp[len(temp - 1)].split("_")[0])[0]
+        temp = path.split('_')
+
+        ext = str(temp[0])
+        idtype = gettype(ext)[0]
         if data is None:
             cursor.execute(
                 "INSERT INTO image (imagepath,`from`,idtype) VALUES ('" + path + "','" + dir + "'," + str(idtype) + ")")
