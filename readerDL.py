@@ -13,28 +13,6 @@ def main(_):
     return 'ok'
 
 
-def gettype(typename):
-    con = mysql.connect()
-    cursor = con.cursor()
-    typename = typename.lower()
-
-    if " " in typename:
-        typename = typename.replace(" ", "_")
-
-    q = "SELECT idtype FROM type WHERE lower(label) LIKE '" + typename + "'"
-    cursor.execute(q)
-    data = cursor.fetchone()
-    if data is None:
-        query = "INSERT INTO type (label) VALUES ('" + typename.replace("_", " ") + "')"
-        cursor.execute(query)
-        con.commit()
-    cursor.execute("SELECT idtype FROM type WHERE lower(label) LIKE '" + typename.replace("_", " ") + "'")
-    data = cursor.fetchone()
-    cursor.close()
-    con.close()
-    return data
-
-
 def chunks(l, n):
     return [l[i::n] for i in range(n)]
 
@@ -60,7 +38,6 @@ def getimgtypes(path):
     t2.start()
     t3.start()
     t4.start()
-
 
 
 if __name__ == '__main__':
