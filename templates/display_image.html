@@ -1,24 +1,19 @@
-
 {% include 'nav.html' %}
 
 <!-- /. NAV SIDE  -->
-<div id="page-wrapper">
-    <div class="header">
 
-        <input id="sh" type="text" placeholder="Type Image ID or type">
-
-    </div>
-    <div id="page-inner">
-
-        <div id="fill">
-
-        </div>
-        <!-- /. PAGE INNER  -->
-    </div>
-
-    <!-- /. PAGE WRAPPER  -->
+<div class="page-header" id="brand" style="text-align: center">
+    <h1 id="brand">
+        Type wanted image id or category</h1>
+    <br/>
+    <input id="sh" type="text" placeholder="Type Image ID or type">
 </div>
-<!-- /. WRAPPER  -->
+
+
+<div id="fill">
+
+</div>
+
 
 <!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
@@ -44,7 +39,7 @@
                 var test_array = eval("[" + data + "]");
 
                 for (i = 0; i < test_array[0].length; i++) {
-                    $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")
+                    $("#fill").append("<img class='idata' style='border: solid 1px' src=" + test_array[0][i] + ">")
 
 
                 }
@@ -73,7 +68,7 @@
                 success: function (data) {
                     var test_array = eval("[" + data + "]");
                     for (i = 0; i < test_array.length; i++) {
-                        $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[i] + ">")
+                        $("#fill").append("<img class='idata' style='border: solid 1px' src=" + test_array[i] + ">")
 
                     }
                 }
@@ -93,7 +88,7 @@
                     var test_array = eval("[" + data + "]");
 
                     for (i = 0; i < test_array[0].length; i++) {
-                        $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")
+                        $("#fill").append("<img class='idata' style='border: solid 1px' src=" + test_array[0][i] + ">")
 
 
                     }

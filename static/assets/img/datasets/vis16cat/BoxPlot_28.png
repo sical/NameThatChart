@@ -1,0 +1,465 @@
+<html>
+<head>
+<title>Peltier Tech Chart Utility for Excel</title>
+
+<meta name="keywords" content="Microsoft, Excel, chart, graph, data, utility, add-in, tutorial, plot, vba, programming, mvp, custom, help" />
+<meta name="robots" content="ALL" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="author" content="Jon Peltier" />
+<meta http-equiv="reply-to" content="jon@peltiertech.com" />
+<meta http-equiv="Content-Language" content="English" />
+<meta name="y_key" content="8f08dad2e6581a95" />
+
+<link rel="stylesheet" type="text/css" href="../Common/jpStylescss.css" />
+<link rel="shortcut icon" type="image/x-icon" href="../Common/PTS.ico" />
+
+<meta name="description" content="License the Peltier Technical Services Chart Utility here." />
+
+</head>
+<body link="#0000FF" vlink="#660099" text="#000000">
+
+<div id="container">
+
+<a name="top"></a>
+
+<div id="top">
+
+<div id="headerlogosmall">
+
+<a href="http://peltiertech.com/" title="Jon's Excel Charts and Tutorials"><img src="../Common/PTSlogo232.gif" width="233" height="47" border="0" alt="Peltier Technical Services, Inc." title="Excel Charts and Tutorials" /></a>
+
+</div>
+
+<div id="blankclear">
+</div>
+
+</div>
+
+<div id="titlecenter">
+
+<H1 style="font-size: 21pt;">Peltier Tech Chart Utility</H1>
+
+<p style="font-size: 10pt;"><b>Custom Chart Types and Chart Formatting Tools for Microsoft Excel</b></p>
+
+</div>
+
+<!-- CONTENT START -->
+
+<h2 style="margin: 36 0 48 0; text-align: center; font-style: italic; color: red;">There is a new version of this software.<br />
+Go to <a href="http://peltiertech.com/Utility30/" title="Peltier Tech Charts for Excel 3.0">Peltier Tech Charts for Excel 3.0</a> for information.</h2>
+
+<h3 align="center"><a href="PeltierTechUtilityBannerAdvanced.png" target="_blank"><img src="PeltierTechUtilityBannerAdvanced.png" alt="Peltier Tech Advanced Utility Ribbon in Excel 2013 - Click for full size view" title="Peltier Tech Utility Ribbon in Excel 2013 - Click for full size view" width="960" height="181" /></a><br />
+Peltier Tech Chart Utility - Advanced Edition</h3>
+
+<h3 align="center"><a href="PeltierTechUtilityBannerStandard.png" target="_blank"><img src="PeltierTechUtilityBannerStandard.png" alt="Peltier Tech Standard Utility Ribbon in Excel 2013 - Click for full size view" title="Peltier Tech Utility Ribbon in Excel 2013 - Click for full size view" width="624" height="181" /></a><br />
+Peltier Tech Chart Utility - Standard Edition<br />&nbsp;</h3>
+
+<div id="bothlistsA">
+<div id="leftlistA" style="text-align: left;">
+<h4><em>Excel 2007, 2010, and 2013 for Windows.</em></h4>
+<h4><em>Easy to Use.</em></h4>
+<h4><em>8 Custom Charts in Standard Edition.</em></h4>
+<h4><em>15 Custom Charts in Advanced Edition.</em></h4>
+<h4><em>Handy Functions and Features.</em></h4>
+</div>
+<div id="rightlistA" style="text-align: left;">
+<h4><em>Excel 2011 for Macintosh.</em></h4>
+<h4><em>Guaranteed.</em></h4>
+<h4><em>Bulk Discounts Available.</em></h4>
+<h4><em>Secure Purchase.</em></h4>
+</div>
+</div>
+
+<!-- wide left column - start -->
+<div id="contentdoc">
+
+<p style="clear: left;">&nbsp;</p>
+
+<!-- purchase block -->
+
+<h4 style="margin: 36 0 48 0; text-align: center; font-style: italic; color: red;">There is a new version of this software.<br />
+Go to <a href="http://peltiertech.com/Utility30/" title="Peltier Tech Charts for Excel 3.0">Peltier Tech Charts for Excel 3.0</a> for information.</h4>
+
+<div id="purchaseLR">
+<h4 style="margin: 0 0 10 0; text-align: center;">Purchase the Peltier Tech Chart Utility</h4>
+<div id="purchaseLR1">
+<p style="margin: 10 0;"><b>Advanced Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2007, 2010, 2013<br />for Windows.</b></p>
+<p><img alt="Microsoft Windows" src="Windows64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$99 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script></p>
+</div>
+<div id="purchaseLR2">
+<p style="margin: 10 0;"><b>Standard Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2007, 2010, 2013<br />for Windows.</b></p>
+<p><img alt="Microsoft Windows" src="Windows64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$79 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script></div>
+<div id="purchaseLR3">
+<p style="margin: 10 0;"><b>Advanced Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2011 for<br />Macintosh.</b></p>
+<p><img alt="Microsoft Windows" src="Apple64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$99 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+</p>
+</div>
+<div id="purchaseLR4">
+<p style="margin: 10 0;"><b>Standard Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2011 for<br />Macintosh.</b></p>
+<p><img alt="Apple macintosh" src="Apple64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$79 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+</p>
+</div>
+<p style="clear: left; padding-top: 10px; text-align: center;"><a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=84674&ejc=2" target="ejc" class="ecc_thkbx" onClick="javascript:return EJEJC_lc(this);"><b><i>View Cart</i></b></a></p>
+</div>
+<!-- end purchase block -->
+
+<h2 style="clear: right;">&nbsp;<br />General Features of the Peltier Tech Chart Utility</h2>
+
+<ul style="font-size: 11pt;">
+<li>Excel 2007, 2010, and 2013 for Windows (32-bit and 64-bit).<br />&nbsp;</li>
+<li>Excel 2011 for Macintosh.<br />&nbsp;</li>
+<li>Integrated into Microsoft Excel spreadsheet software as a standard add-in.<br />&nbsp;</li>
+<li>Create complex charts in a few simple steps using intuitive dialogs.<br />&nbsp;</li>
+<li>No programming or formula skills needed, no complicated instructions to follow.<br />&nbsp;</li>
+<li>Easy to install, and the utility adds a custom tab to the Excel Ribbon.<br />&nbsp;</li>
+<li>Copy and paste, move or resize the custom chart.<br />&nbsp;</li>
+<li>Customize the finished chart with your own colors, fonts, and other formatting.<br />&nbsp;</li>
+<li>Easily access this functionality from your own VBA programs.<br />&nbsp;</li>
+</ul>
+
+<h2>But What Can It DO?</h2>
+
+<p>See <a href="#documentation">documentation</a> for details. Or read the <a href="http://peltiertech.com/Utility20/Documentation20/FAQ.html" title="Peltier Tech Chart Utility for Excel - Frequently Asked Questions">Frequently Asked Questions</a>.</p>
+
+<h3>Comparison of Features</h3>
+
+<img style="display: block; margin: 0 auto; padding-bottom: 24px;" src="CompareChartsAdvStdMacWin.png" alt="Comparison of custom charts in standard and advanced versions" title="Comparison of custom charts in standard and advanced versions" width="663" height="481" />
+<img style="display: block; margin: 0 auto; padding-bottom: 24px;" src="CompareFeaturesAdvStdMacWin.png" alt="Comparison of charting features in standard and advanced versions" title="Comparison of charting features in standard and advanced versions" width="663" height="511" />
+<img style="display: block; margin: 0 auto;" src="CompareDetailsAdvStdMacWin.png" alt="Comparison of other details in standard and advanced versions" title="Comparison of other details in standard and advanced versions" width="663" height="121" />
+
+<a name="documentation" />
+<h2 style="clear: left;">&nbsp;<br />Documentation for the Peltier Tech Chart Utility</h2>
+
+<p>Here are a few links of documentation for the Peltier Tech Chart Utility.</p>
+
+<ul>
+<li><a href="http://peltiertech.com/Utility20/Documentation20/Installation.html" title="Peltier Tech Chart Utility for Excel - Installation">Installing the Utility</a><br />&nbsp;</li>
+<li><a href="http://peltiertech.com/Utility20/Documentation20/" title="Peltier Tech Chart Utility for Excel - Documentation Index">Documentation Index</a><br />&nbsp;</li>
+<li><a href="http://peltiertech.com/Utility20/Documentation20/FAQ.html" title="Peltier Tech Chart Utility for Excel - Frequently Asked Questions">Frequently Asked Questions</a><br />&nbsp;</li>
+<li><a href="Documentation20/VersionHistory.html" title="Peltier Tech Chart Utility - Version History">Version History</a> - <em>email Peltier Tech to get up-to-date</em><br />&nbsp;</li>
+</ul>
+
+<p>Online documentation is not yet complete. The following PDF downloads can serve as partial documentation until the web help is finished.</p>
+
+<ul>
+<li><a href="http://peltiertech.com/Utility20/Documentation20/Using_the_Peltier_Tech_Utility.pdf" title="Using the Peltier Tech Utility (PDF)">Using the Peltier Tech Utility (PDF)</a><br />&nbsp;</li>
+<li><a href="http://peltiertech.com/Utility20/Documentation20/Programming_with_the_Peltier_Tech_Utility.pdf" title="Programming with the Peltier Tech Utility (PDF)">Programming with the Peltier Tech Utility (PDF)</a><br />&nbsp;</li>
+</ul>
+
+<h2>&nbsp;<br />Money Back Guarantee</h2>
+
+<p>Peltier Tech guarantees this product for 90 days from the date of purchase. If you are unsatisfied <em>for any reason</em>, <a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">contact Peltier Tech directly</a> to request a refund. Any feedback is appreciated, but none is necessary.</p>
+
+<h2>&nbsp;<br />Discounts for Multiple Item Purchases</h2>
+<p>When you purchase more than one license (for one or multiple utilities), the following percentage discounts are applied automatically to your entire order. </p>
+<img style="display: block; margin: 0 auto; padding-bottom: 24px;" src="BulkDiscountList.png" alt="Peltier Tech Chart Utility Bulk Discounts" title="Peltier Tech Chart Utility Bulk Discounts" width="226" height="203" />
+
+<p>Please <a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">contact Peltier Tech</a> if you need more licenses.</p>
+
+<h2>&nbsp;<br />Discounts for Existing Users</h2>
+<p>If you are already a Peltier Tech customer, you qualify for a discount. If you use the Standard Edition of the Peltier Tech Chart Utility, you can upgrade to the Advanced Edition for the differential in price ($20). If you use any of the earlier Peltier Tech <em>Something</em> Chart Utilities, you can upgrade for half price to either the Standard ($39.50) or Advanced ($49.50) Edition.</p>
+<p><a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">Contact Peltier Tech</a> and request a coupon code to apply at checkout, or <a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">contact Peltier Tech</a> after your purchase at the regular price to request a partial refund.</p>
+
+<!-- purchase block -->
+
+<h4 style="margin: 36 0 48 0; text-align: center; font-style: italic; color: red;">There is a new version of this software.<br />
+Go to <a href="http://peltiertech.com/Utility30/" title="Peltier Tech Charts for Excel 3.0">Peltier Tech Charts for Excel 3.0</a> for information.</h4>
+
+<div id="purchaseLR">
+<h4 style="margin: 0 0 10 0; text-align: center;">Purchase the Peltier Tech Chart Utility</h4>
+<div id="purchaseLR1">
+<p style="margin: 10 0;"><b>Advanced Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2007, 2010, 2013<br />for Windows.</b></p>
+<p><img alt="Microsoft Windows" src="Windows64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$99 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script></p>
+</div>
+<div id="purchaseLR2">
+<p style="margin: 10 0;"><b>Standard Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2007, 2010, 2013<br />for Windows.</b></p>
+<p><img alt="Microsoft Windows" src="Windows64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$79 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script></div>
+<div id="purchaseLR3">
+<p style="margin: 10 0;"><b>Advanced Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2011 for<br />Macintosh.</b></p>
+<p><img alt="Microsoft Windows" src="Apple64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$99 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+</p>
+</div>
+<div id="purchaseLR4">
+<p style="margin: 10 0;"><b>Standard Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2011 for<br />Macintosh.</b></p>
+<p><img alt="Apple macintosh" src="Apple64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$79 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+</p>
+</div>
+<p style="clear: left; padding-top: 10px; text-align: center;"><a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=84674&ejc=2" target="ejc" class="ecc_thkbx" onClick="javascript:return EJEJC_lc(this);"><b><i>View Cart</i></b></a></p>
+</div>
+<!-- end purchase block -->
+
+<!-- about purchasing block -->
+<h2 style="clear: left;">&nbsp;<br />The Purchase Process is Quick and Easy</h2>
+
+<p>When your payment is approved, you will be directed to a web page with a download link. You will also receive an email from <b><i>Peltier Technical Services (jon@peltiertech.com)</i></b> with a link to a download page. <font color=red>If you do not receive this email</font>, check that it has not been filtered out as spam, then <a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">contact Peltier Tech</a>.</p>
+
+<h2>&nbsp;<br />The Utility is Downloaded as a Zip File</h2>
+
+<p>To account for possible connection problems, the download link remains valid for a period of 5 days or for up to 5 downloads, whichever comes first. If you need to download the utility after this, <a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">contact Peltier Tech</a> to obtain a new link.</p>
+
+<p>Note that the five allowed download attempts does not entitle the licensee to install the software on five computers. The standard license requires one purchased license per user, and a user is allowed to install the software on two computers.</p>
+
+<p>If you have problems with the download or installation, please <a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">contact Peltier Technical Services</a>.</p>
+
+<h4>Installation Instructions - Windows</h4>
+<ol>
+<li>Create a new folder on your computer, in a convenient location like<br />
+&nbsp;<br />
+<em>C:\Users\&lt;username&gt;\Documents\Peltier Tech</em><br />
+&nbsp;<br />
+or<br />
+&nbsp;<br />
+<em>C:\Users\&lt;username&gt;\AppData\Roaming\Peltier Tech</em><br />&nbsp;</li>
+
+<li>Unzip the contents of attached file into this new folder.<br />&nbsp;</li>
+
+<li>In Excel, click on the big round Office button (Excel 2007) or the File tab (Excel 2010 & 2013).<br />&nbsp;</li>
+
+<li>Click on Excel Options or Options.<br />&nbsp;</li>
+
+<li>Click Add-Ins in the list, then click Go in the dialog.<br />&nbsp;</li>
+
+<li>In the Add-Ins dialog, click Browse, and navigate to the folder that contains the files you unzipped above.<br />&nbsp;</li>
+
+<li>Select PeltierTechUtility_200A.xlam or PeltierTechUtility_200B.xlam, and click OK twice to return to Excel.<br />&nbsp;</li>
+
+<li>Installing the add-in file adds the "Peltier Tech" or "Peltier Tech Advanced" tab to Excel's ribbon, and adds buttons for all of its functions to this menu.<br />&nbsp;</li>
+</ol>
+
+<h4>Installation Instructions - Mac</h4>
+<ol>
+<li>Create a new folder on your computer, in a convenient location like<br />
+&nbsp;<br />
+<em>HD:Users:&lt;username&gt;:Peltier Tech</em><br />
+&nbsp;</li>
+
+<li>Unzip the contents of attached file into this new folder.<br />&nbsp;</li>
+
+<li>Open Excel.<br />&nbsp;</li>
+
+<li>Go to the Tools menu > Add-Ins<br />&nbsp;</li>
+
+<li>In the Add-Ins dialog, click Select... and browse to the folder that contains the files you unzipped above.<br />&nbsp;</li>
+
+<li>Select PeltierTechChartUtility_200A_Mac.xlam or PeltierTechChartUtility_200B_Mac.xlam, and click OK twice to return to Excel.<br />&nbsp;</li>
+
+<li>Installing or opening the add-in file adds the "Peltier Tech" menu to Excel if it isn't already present, and adds buttons for all of its functions to this menu.<br />&nbsp;</li>
+</ol>
+
+<h2 style="clear: left;">&nbsp;<br />Purchase Orders</h2>
+
+<p>Peltier Tech will accept purchase orders for orders of $500 or more.</p>
+
+<!-- end about purchasing block -->
+
+<h2>&nbsp;<br />The Peltier Tech Affiliate Program</h2>
+
+<p>If you have a web site, blog, or email newsletter, you can market the Peltier Tech Chart Utility and earn a 25% commission.</p>
+<p>The affiliate program is managed by E-Junkie, the same service that handles Peltier Tech electronic sales, and payments are made to your PayPal account. <a href="https://www.e-junkie.com/affiliates/?cl=84674&ev=a16929e1b7" target="_blank">Click here to join the PTS Affiliate Program.</a> </p>
+<p>If you are already an affiliate, you can make use of these <a href="http://peltiertech.com/Utility20/AffiliateCode.html" title="Banners, Tiles, and Codes for Peltier Technical Services Affiliates">Banners, Tiles, and Codes for Peltier Technical Services Affiliates</a>.</p>
+
+<h2>&nbsp;<br />Resellers</h2>
+<p>Please read the <a href="../Utility/resellers.html" title="For Resellers">Resellers</a> page.</p>
+
+<h2>Contact Peltier Tech</h2>
+<ul>
+<li>Question about the utility?<br />&nbsp;</li>
+<li>Inquiry about bulk discounts?<br />&nbsp;</li>
+<li>Existing user discounts?<br />&nbsp;</li>
+<li>Download or installation problem?<br />&nbsp;</li>
+<li>How do I...?</li>
+</ul>
+<p style="margin: 0 0 0 0;"><a href="mailto:jon@peltiertech.com?subject=Peltier%20Tech%20Chart%20Utility">Contact us about the Peltier Tech Chart Utility</a></p>
+
+<p>&nbsp;</p>
+
+<!-- purchase block -->
+
+<h4 style="margin: 36 0 48 0; text-align: center; font-style: italic; color: red;">There is a new version of this software.<br />
+Go to <a href="http://peltiertech.com/Utility30/" title="Peltier Tech Charts for Excel 3.0">Peltier Tech Charts for Excel 3.0</a> for information.</h4>
+
+<div id="purchaseLR">
+<h4 style="margin: 0 0 10 0; text-align: center;">Purchase the Peltier Tech Chart Utility</h4>
+<div id="purchaseLR1">
+<p style="margin: 10 0;"><b>Advanced Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2007, 2010, 2013<br />for Windows.</b></p>
+<p><img alt="Microsoft Windows" src="Windows64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$99 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script></p>
+</div>
+<div id="purchaseLR2">
+<p style="margin: 10 0;"><b>Standard Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2007, 2010, 2013<br />for Windows.</b></p>
+<p><img alt="Microsoft Windows" src="Windows64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$79 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script></div>
+<div id="purchaseLR3">
+<p style="margin: 10 0;"><b>Advanced Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2011 for<br />Macintosh.</b></p>
+<p><img alt="Microsoft Windows" src="Apple64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$99 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+</p>
+</div>
+<div id="purchaseLR4">
+<p style="margin: 10 0;"><b>Standard Edition</b></p>
+<p style="margin: 10 0;"><b>Excel 2011 for<br />Macintosh.</b></p>
+<p><img alt="Apple macintosh" src="Apple64.png" width="64" height="64" /></p>
+<p style="margin: 10 0;"><b>$79 US</b></p>
+<p style="margin: 10 0;">
+<a href="http://peltiertech.com/Utility30/"><img src="AddToCart.gif" border="0" alt="Add to Cart" height="23" width="134" style="vertical-align: middle;" /></a>
+
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+</p>
+</div>
+<p style="clear: left; padding-top: 10px; text-align: center;"><a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=84674&ejc=2" target="ejc" class="ecc_thkbx" onClick="javascript:return EJEJC_lc(this);"><b><i>View Cart</i></b></a></p>
+</div>
+<!-- end purchase block -->
+
+<p>&nbsp;</p>
+
+</div>
+<!-- wide left column - end -->
+
+<!-- CONTENT END -->
+
+<div id="bottom">
+<!-- PTS -->
+<p><image src="../Common/PeltierTechSvcsInfo.png" alt="Peltier Technical Services, Inc." /></p>
+<!-- copyright -->
+<p style="font-size: 8pt;">Peltier Technical Services, Inc., Copyright &#169; 2014. All rights reserved.</p>
+<p style="font-size: 8pt;">Microsoft and the Office logo are trademarks or registered trademarks of Microsoft Corporation in the United States and/or other countries.</p>
+</div>
+<!-- Google Analytics - second part adjusted per E-junkie 2010-01-22 -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var ejGATracker = _gat._getTracker("UA-2138733-1");
+ejGATracker._setDomainName("none");
+ejGATracker._setAllowLinker(true);
+ejGATracker._trackPageview();
+</script>
+</div>
+
+</body>
+</html>

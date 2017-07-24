@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7 no-js" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 no-js" lang="en-US"><![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!--><html lang="en-US" class="no-js"><!--<![endif]-->
+<head>
+		<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+	<meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="Colt in Asia,Colt,services,network,IT managed services,data center,security,cloud computing,cloud,professional services,voice,Asia,information delivery platform,"/>
+		<meta name="description" content="Colt in asia is Asia&#039;s leading information delivery platform with a range of customizable data center, network, managed IT, cloud and voice services throughout Asia Pacific. " />
+		<link rel="publisher" href="https://plus.google.com/117177552690463329090" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="http://asia.colt.net/xmlrpc.php" />
+
+	<title>Colt in Asia</title>
+<link rel='dns-prefetch' href='//asia.colt.net' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Colt in Asia &raquo; Feed" href="http://asia.colt.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Colt in Asia &raquo; Comments Feed" href="http://asia.colt.net/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Colt in Asia &raquo; Colt in Asia Comments Feed" href="http://asia.colt.net/colt-asia-top/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/asia.colt.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://asia.colt.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='hmbase-theme-css'  href='http://asia.colt.net/wp-content/themes/colt/assets/css/theme.min.css?ver=0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://asia.colt.net/wp-content/themes/colt-child/css/bootstrap-custom.min.css?ver=4.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='colt-style-css'  href='http://asia.colt.net/wp-content/themes/colt-child/style.css?ver=4.7.3' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v6.0.16 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-43319797-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('require', 'displayfeatures');
+	__gaTracker('require', 'linkid', 'linkid.js');
+	__gaTracker('send','pageview');
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<script type='text/javascript' src='http://asia.colt.net/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt/assets/js/theme.min.js?ver=0.1'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt-child/js/childtheme.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt/assets/js/externals/jquery.waypoints.min.js?ver=20150320'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt/assets/js/externals/isotope.min.js?ver=20150320'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt/assets/js/externals/imagesloaded.pkgd.min.js?ver=20150320'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt/assets/js/externals/jquery.smartresize.js?ver=20150320'></script>
+<link rel='https://api.w.org/' href='http://asia.colt.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://asia.colt.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://asia.colt.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.3" />
+<link rel='shortlink' href='http://asia.colt.net/' />
+<link rel="alternate" type="application/json+oembed" href="http://asia.colt.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fasia.colt.net%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://asia.colt.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fasia.colt.net%2F&#038;format=xml" />
+
+<meta http-equiv="Content-Language" content="en-US" />
+<style type="text/css" media="screen">
+.qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_en { background:url(http://asia.colt.net/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+.qtrans_flag_ja { background:url(http://asia.colt.net/wp-content/plugins/qtranslate/flags/jp.png) no-repeat }
+</style>
+<link hreflang="ja" href="http://asia.colt.net/ja/" rel="alternate" />
+<link rel='canonical' href='http://asia.colt.net/' />
+	<link rel="stylesheet" type="text/css" href="//asia.colt.net/wp-content/fonts/302875/876C7AADD5EFDDC16.css" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			<style type="text/css">
+			.site-header .descriptor {
+			background: url(/images/capacity-award-banner.jpg) no-repeat center top;
+			background-size: cover;
+		}
+				.site-title a,
+		.site-description {
+			color: #000000;
+		}
+		</style>
+	
+		<link rel="apple-touch-icon" sizes="57x57" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-57x57.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-60x60.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-72x72.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-76x76.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-114x114.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-120x120.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-144x144.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-152x152.png?v=XBqW4l0gxx">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://asia.colt.net/wp-content/themes/colt/assets/images/apple-touch-icon-180x180.png?v=XBqW4l0gxx">
+		<link rel="icon" type="image/png" href="http://asia.colt.net/wp-content/themes/colt/assets/images/favicon-32x32.png?v=XBqW4l0gxx" sizes="32x32">
+		<link rel="icon" type="image/png" href="http://asia.colt.net/wp-content/themes/colt/assets/images/android-chrome-192x192.png?v=XBqW4l0gxx" sizes="192x192">
+		<link rel="icon" type="image/png" href="http://asia.colt.net/wp-content/themes/colt/assets/images/favicon-96x96.png?v=XBqW4l0gxx" sizes="96x96">
+		<link rel="icon" type="image/png" href="http://asia.colt.net/wp-content/themes/colt/assets/images/favicon-16x16.png?v=XBqW4l0gxx" sizes="16x16">
+		<link rel="manifest" href="http://asia.colt.net/wp-content/themes/colt/assets/images/manifest.json?v=XBqW4l0gxx">
+		<link rel="shortcut icon" href="http://asia.colt.net/wp-content/themes/colt/assets/images/favicon.ico?v=XBqW4l0gxx">
+		<meta name="msapplication-TileColor" content="#00a499">
+		<meta name="msapplication-TileImage" content="http://asia.colt.net/wp-content/themes/colt/assets/images/mstile-144x144.png?v=XBqW4l0gxx">
+		<meta name="msapplication-config" content="http://asia.colt.net/wp-content/themes/colt/assets/images/browserconfig.xml?v=XBqW4l0gxx">
+		<meta name="theme-color" content="#ffffff">
+			<!--[if lt IE 9]>
+	<script src="http://asia.colt.net/wp-content/themes/colt/assets/js/externals/html5.js" type="text/javascript"></script>
+	<script src="http://asia.colt.net/wp-content/themes/colt/assets/js/externals/respond.min.js" type="text/javascript"></script>
+	<![endif]-->
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$('.fade1, .fade2, .fade3, .fade4, .fade5').css({'display':'none'});
+
+    $('.en .nav-tab-1').click( function() {
+    	__gaTracker('send', 'event', 'Top page - Data Centre Tab EN', 'click', 'Data Centre'); 
+    });
+    $('.en .nav-tab-2').click( function() {
+    	__gaTracker('send', 'event', 'Top page - Network Tab EN', 'click', 'Network'); 
+    });
+    $('.en .nav-tab-3').click( function() {
+    	__gaTracker('send', 'event', 'Top page - IT Management Tab EN', 'click', 'Managed IT'); 
+    });
+    $('.en .nav-tab-4').click( function() {
+    	__gaTracker('send', 'event', 'Top page - Voice Tab EN', 'click', 'Voice'); 
+    });
+
+    $('.ja .nav-tab-1').click( function() {
+    	__gaTracker('send', 'event', 'Top page - Data Centre Tab JP', 'click', 'データセンター'); 
+    });
+    $('.ja .nav-tab-2').click( function() {
+    	__gaTracker('send', 'event', 'Top page - Network Tab JP', 'click', 'ネットワーク'); 
+    });
+    $('.ja .nav-tab-3').click( function() {
+    	__gaTracker('send', 'event', 'Top page - IT Management Tab JP', 'click', 'ITマネジメント'); 
+    });
+    $('.ja .nav-tab-4').click( function() {
+    	__gaTracker('send', 'event', 'Top page - Voice Tab JP', 'click', '音声サービス'); 
+    });
+});
+</script>
+<link rel='stylesheet' id='colt-promotion-top-style-css'  href='/wp-content/themes/colt-child/css/promotion-top.css' type='text/css' media='all' />	
+</head>
+
+<body class="home page-template page-template-page-wide page-template-page-wide-php page page-id-5 hide-menu hide-search en group-blog" id="pagetop">
+
+<div class="hfeed site">
+	<div id="head_links_sp_wrap">
+		<div id="head_links_sp">
+			<ul class="qtrans_language_chooser" id="qtranslate-chooser"><li class="lang-en active"><a href="http://asia.colt.net/" hreflang="en" title="English"><span>English</span></a></li><li class="lang-ja"><a href="http://asia.colt.net/ja/" hreflang="ja" title="日本語"><span>日本語</span></a></li></ul><div class="qtrans_widget_end"></div>			<!-- Clickable Nav -->
+			<div class="click-nav">
+				<ul class="no-js">
+					<li>
+						<a class="clicker">Portal Login</a>
+						<ul>
+							<li><a class="clicker-sublink1" href="https://partner.asia-colt.net/" target="_blank" rel="nofollow">Partner Portal</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- /Clickable Nav -->
+			<ul id="head_link_sp">
+			<li><a href="http://asia.colt.net/about/contact-us/">Contact Us</a></li>
+			</ul>
+			</div><!-- / #head_links_sp -->
+	</div><!-- / #head_links_sp_wrap -->
+	<header class="site-header navbar" role="banner">
+		
+		<div class="navbar" role="navigation">
+			<h1 class="logo"><a href="http://asia.colt.net" rel="home">Colt in Asia</a></h1>
+
+			<div id="head_links">
+			<ul class="qtrans_language_chooser" id="qtranslate-chooser"><li class="lang-en active"><a href="http://asia.colt.net/" hreflang="en" title="English"><span>English</span></a></li><li class="lang-ja"><a href="http://asia.colt.net/ja/" hreflang="ja" title="日本語"><span>日本語</span></a></li></ul><div class="qtrans_widget_end"></div>			<!-- Clickable Nav -->
+			<div class="click-nav">
+				<ul class="no-js">
+					<li>
+						<a class="clicker">Portal Login</a>
+						<ul>
+							<li><a class="clicker-sublink2" href="https://partner.asia-colt.net/" target="_blank" rel="nofollow">Partner Portal</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- /Clickable Nav -->
+			<ul id="head_link">
+			<li><a href="http://asia.colt.net/about/contact-us/">Contact Us</a></li>
+			</ul>
+
+			</div><!-- / #head_links -->
+
+			<div id="mobile-bton-search-container">
+			<form role="search" method="get" class="search-form" action="http://asia.colt.net/">
+	<span class="fa fa-search"><span class="fallback">Search</span></span>
+	<div class="wrap">
+  	<label>
+		  <span class="screen-reader-text">Search for:</span>
+      <input type="search" class="search-field" placeholder="Search&hellip;" value="" name="s" />
+    </label>
+    <button type="submit" class="search-submit fa fa-search"></button>
+	</div>
+</form>			<button class="menu-toggle button" aria-controls="menu" aria-expanded="false">
+				<span class="fa fa-2x fa-bars"></span>
+				<span class="fa fa-2x fa-times"></span>
+				<span class="screen-reader-text">Show Menu</span>
+			</button>
+			</div>
+
+			<ul id="menu-global-navigation" class="navigation navigation-main"><li id="menu-item-13941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-13941"><a href="http://asia.colt.net/services/"><span class="link-txt">Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-20671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20671"><a href="http://asia.colt.net/services/"><span class="link-txt">Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	<li id="menu-item-20480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-20480"><a href="http://asia.colt.net/services/network/"><span class="link-txt">Network<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20471"><a href="http://asia.colt.net/services/network/about-colt-network/"><span class="link-txt">About Colt&#8217;s Network<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20473"><a href="http://asia.colt.net/services/network/ethernet-services/"><span class="link-txt">Ethernet Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24151"><a href="http://asia.colt.net/services/network/ethernet-services/dedicated-cloud-access/"><span class="link-txt">Dedicated Cloud Access<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24152"><a href="http://asia.colt.net/services/network/ethernet-services/ethernet-line-hub-spoke-japan/"><span class="link-txt">Ethernet Line | Ethernet Hub &#038; Spoke &#8211; Japan<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24153"><a href="http://asia.colt.net/services/network/ethernet-services/ethernet-line-hub-spoke-singapore/"><span class="link-txt">Ethernet Line | Ethernet Hub &#038; Spoke &#8211; Singapore<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24166"><a href="http://asia.colt.net/services/network/ethernet-services/ethernet-vpn/"><span class="link-txt">Ethernet VPN<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24155"><a href="http://asia.colt.net/services/network/ip-services/"><span class="link-txt">IP Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24157"><a href="http://asia.colt.net/services/network/ip-services/ip-access-japan/"><span class="link-txt">IP Access &#8211; Japan<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24156"><a href="http://asia.colt.net/services/network/ip-services/ip-access-singapore/"><span class="link-txt">IP Access &#8211; Singapore<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20474"><a href="http://asia.colt.net/services/network/ipvpn/"><span class="link-txt">IP VPN<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-24158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24158"><a href="http://asia.colt.net/services/network/optical-services/"><span class="link-txt">Optical Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-24159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24159"><a href="http://asia.colt.net/services/network/optical-services/wave/"><span class="link-txt">Wave<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20478"><a href="http://asia.colt.net/services/network/managed-network/"><span class="link-txt">Managed Network Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24162"><a href="http://asia.colt.net/services/network/managed-network/"><span class="link-txt">Managed Network<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20466"><a href="http://asia.colt.net/services/network/managed-security/"><span class="link-txt">Managed Security Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24165"><a href="http://asia.colt.net/services/network/managed-security/firewall/"><span class="link-txt">Managed Firewall<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24164"><a href="http://asia.colt.net/services/network/managed-security/ids-ips/"><span class="link-txt">Managed IDS/IPS<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24163"><a href="http://asia.colt.net/services/network/managed-security/ddos/"><span class="link-txt">DDoS Monitoring &#038; Mitigation<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-20485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-20485"><a href="http://asia.colt.net/services/data-centre/"><span class="link-txt">Data Centre<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20487"><a href="http://asia.colt.net/services/data-centre/about-colt-data-centres/"><span class="link-txt">About Colt Data Centres<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20481"><a href="http://asia.colt.net/services/data-centre/colocation/"><span class="link-txt">Colocation Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20486"><a href="http://asia.colt.net/services/data-centre/monitoring-and-reporting/"><span class="link-txt">Monitoring &#038; Reporting Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20482"><a href="http://asia.colt.net/services/data-centre/dc-operation/"><span class="link-txt">Operational Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20479"><a href="http://asia.colt.net/services/data-centre/professional/"><span class="link-txt">Professional Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20469"><a href="http://asia.colt.net/services/data-centre/storage-backup/"><span class="link-txt">Storage ＆ Back-up Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20461"><a href="http://asia.colt.net/services/data-centre/private-cloud/"><span class="link-txt">Private Cloud Services<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-20488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20488"><a href="http://asia.colt.net/services/voice/"><span class="link-txt">Voice<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+		<li id="menu-item-24161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24161"><a href="http://asia.colt.net/services/voice-services/"><span class="link-txt">VoiceLINE ISDN | Colt SIP Trunking | Colt SIP Trunking 050<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-21078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21078"><a href="http://asia.colt.net/solutions/"><span class="link-txt">Solutions<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+<li id="menu-item-14070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14070"><a href="http://asia.colt.net/case-studies/"><span class="link-txt">Case Studies<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+<li id="menu-item-20491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-20491"><a href="http://asia.colt.net/about/"><span class="link-txt">About Colt in Asia<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-21031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21031"><a href="http://asia.colt.net/about/"><span class="link-txt">About Colt in Asia<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	<li id="menu-item-14074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14074"><a href="http://asia.colt.net/about/history/"><span class="link-txt">Our History<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20489"><a href="http://asia.colt.net/about/why-colt-in-asia/"><span class="link-txt">Why Colt<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-14076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14076"><a href="http://asia.colt.net/about/profile/"><span class="link-txt">Corporate Profile &#038; Offices<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-22998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22998"><a href="http://asia.colt.net/about/corporate-social-responsibility/"><span class="link-txt">CSR<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-20982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-20982"><a href="http://asia.colt.net/about/asia-careers/"><span class="link-txt">Careers<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20490"><a href="http://asia.colt.net/about/contact-us/"><span class="link-txt">Contact Us<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-21033" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-21033"><a href="http://asia.colt.net/news/"><span class="link-txt">News<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-21034" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21034"><a href="http://asia.colt.net/news/"><span class="link-txt">News<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	<li id="menu-item-21036" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21036"><a href="http://asia.colt.net/news/press/"><span class="link-txt">Press<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+	<li id="menu-item-21035" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21035"><a href="http://asia.colt.net/news/events/"><span class="link-txt">Event/Seminars<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></span></a></li>
+</ul>
+</li>
+</ul>		</div>
+
+					
+						<div class="brand_head banner">
+			    <div class="brand_head_outer">
+			      <div class="brand_head_middle">
+			        <div class="brand_head_inner center">
+			          <div class="brand_head_title">Colt Wave services in Singapore<div>Limited time pricing campaign for select data centres</div></div>
+			          <a onclick="__gaTracker('send', 'event', 'singapore wave campaign cta button en', 'click', 'Get it today');" href="http://information.colt.net/high-bandwidth-wave-services-singapore" target="_blank" class="campaign-button">Get it today</a>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+			            <div class="colt-net-tag">
+                <div>
+                    <a href="http://www.colt.net/" target="_blank" class="colt-net-link">colt.net</a>
+                </div>
+                <div>
+                    <div class="colt-net-asia"><span>Asia</span></div>
+                </div>
+            </div>
+
+		
+		
+
+	</header>
+				
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $('.fade1').delay(200).css({'display':'block', 'opacity':'0'}).animate({'opacity':'1','top':'-10px'}, 400);
+    $('.fade2').delay(400).css({'display':'block', 'opacity':'0'}).animate({'opacity':'1','top':'-10px'}, 400);
+    $('.fade3').delay(600).css({'display':'block', 'opacity':'0'}).animate({'opacity':'1','top':'-10px'}, 400);
+    $('.fade4').delay(800).css({'display':'block', 'opacity':'0'}).animate({'opacity':'1','bottom':'50px'}, 400);
+
+    $('.home_vid_play').click( function() { 
+      $('.video').fadeIn( 'slow', function() {});
+    });
+});
+</script>
+
+<div class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+      
+            
+      <article id="post-5" class="post-5 page type-page status-publish hentry">
+       <div class="entry-content">
+        <div id="services-global-tabs-wrap">
+          <div class="services-nav-tabs-wrap">
+            <ul class='tabs'>
+              <li class="tab-link nav-tab-2 current" data-tab="tab-2"><span class="tab-sprite"></span>Network</li>
+              <li class="tab-link nav-tab-1" data-tab="tab-1"><span class="tab-sprite"></span>Data Centre</li>
+              <li class="tab-link nav-tab-4" data-tab="tab-4"><span class="tab-sprite"></span>Voice</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services-content-tabs-wrap">
+          <div id="tab-2" class="tab-content current">
+            <h4>Reliable and high-quality networks that propel you forward</h4>
+            <p>
+              Colt provides a range of data connectivity products and services from simple broadband access to complex managed networking solutions to support businesses and wholesale carriers across Asia, Europe and the U.S. We focus on interconnecting leading cities,
+              data ecosystems, and information hubs, where our customers do business.</p>
+              <div class="servicesTabsIconWrap">
+                <div><img class="net-feature-icon1" src="/wp-content/themes/colt-child/images/toppage/Network-MetropolitanCoverage-icon.png">
+                  <div class="icon-text">Metropolitan Coverage in 49 Markets</div>
+                </div>
+                <div> <img class="net-feature-icon2" src="/wp-content/themes/colt-child/images/toppage/Network-GlobalUltraLowLatency-icon.png">
+                  <div class="icon-text">Global Ultra-Low Latency</div>
+                </div>
+                <div> <img class="net-feature-icon3" src="/wp-content/themes/colt-child/images/toppage/Network-CloudDCDCConnectivity-icon.png">
+                  <div class="icon-text">Cloud &amp; DC-to-DC Connectivity</div>
+                </div>
+              </div>
+              <div class="toppage-bton"><a href="http://asia.colt.net/services/network/">Learn more about our network services</a></div>
+            </div>
+           <div id="tab-1" class="tab-content">
+            <h4>Robust facilities and expert staff to handle all your data needs</h4>
+
+            <p>
+              Colt offers colocation and value added data centre services in secure, carrier neutral facilities across Asia and Europe. We provide flexible, integrated and scalable data centre solutions that reduce risk and help manage the evolving needs of data intensive
+              enterprises.              
+            </p>
+            <div class="servicesTabsIconWrap">
+              <div><img class="data-feature-icon1" src="/wp-content/themes/colt-child/images/toppage/DataCenters-Distributed-icon.png">
+                <div class="icon-text">7 Distributed Data Centres in Asia</div>
+              </div>
+              <div> <img class="data-feature-icon2" src="/wp-content/themes/colt-child/images/toppage/DataCenters-specifications-icon.png">
+                <div class="icon-text">High Resilience – Tier 3+ specifications</div>
+              </div>
+              <div> <img class="data-feature-icon3" src="/wp-content/themes/colt-child/images/toppage/DataCenters-PowerComputingCapacityAsia-icon1.png">
+                <div class="icon-text">15 Megawatts Power Computing Capacity in Asia</div>
+              </div>
+            </div>
+            <div class="toppage-bton"><a href="http://asia.colt.net/services/data-centre/">Learn more about our data centre services</a></div>
+          </div>
+
+              <div id="tab-4" class="tab-content">
+                <h4>Competitively priced and highly reliable Voice Services for Japan</h4>
+                <p>
+                  Colt offers a range of high quality, reliable ISDN/PRI and IP-based voice services for enterprise and wholesale customers operating in Japan. We can provide traditional telephone services or also help customers transition from legacy telephony to the
+                  increasingly popular Voice over IP services.                  </p>
+                  <div class="servicesTabsIconWrap">
+                    <div><img class="voice-feature-icon1" src="/wp-content/themes/colt-child/images/toppage/Voice-HighlyCostEffective-icon2.png">
+                      <div class="icon-text">Highly Cost Effective</div>
+                    </div>
+                    <div> <img class="voice-feature-icon2" src="/wp-content/themes/colt-child/images/toppage/Voice-ReliableVoIPandISDNServices-icon.png">
+                      <div class="icon-text">Reliable VoIP and ISDN Services</div>
+                    </div>
+                    <div> <img class="voice-feature-icon3" src="/wp-content/themes/colt-child/images/toppage/Voice-VoiceDRandBCPOptions-icon.png">
+                      <div class="icon-text">Voice DR and BCP Options</div>
+                    </div>
+                  </div>
+                  <div class="toppage-bton"><a href="http://asia.colt.net/services/voice/">Learn more about our voice services</a></div>
+                </div>
+              </div>
+                            <div class="news-events-section">
+                <div class="news-section-wrap">
+                  <h3 class="intro">News &amp; Press Releases</h3>
+                  <span class="featured-post">
+
+                     
+                      <a href="http://asia.colt.net/news/press/press-release-colt-adds-equiduct-to-colt-prizmnet/">
+                        <div class="caption-wrap">
+                          <div class="caption">
+                            <p>[Press Release] Colt adds Equiduct to Colt PrizmNet</p>
+                          </div>
+                          <img width="510" height="170" src="/images/media-1400x178-510x170.jpg" class="img-responsive wp-post-image" alt="" />                          </div>
+                        </a>
+                                          </span>
+
+                    <p class="text-right">
+                      <a href="http://asia.colt.net/news/">
+                        All News &amp; Press Releases                      </a>
+                    </p>    
+                    <span class="news-list-wrap">
+                       
+                        <div>
+                          <h4>
+                            <a href="http://asia.colt.net/news/press/press-release-colt-to-offer-new-low-latency-network-route-between-stock-exchanges-in-tokyo-and-chicago/">[Press release] Colt to offer new low-latency network route between stock exchanges in Tokyo and Chicago</a></h4>
+                            <p>
+                              May 23, 2017                            </p>
+                          </div> 
+                           
+                        <div>
+                          <h4>
+                            <a href="http://asia.colt.net/news/press/press-release-colt-prizmnet-connects-three-of-the-top-five-us-brokers/">[Press release] Colt PrizmNet connects three of the top five US brokers</a></h4>
+                            <p>
+                              May 15, 2017                            </p>
+                          </div> 
+                           
+                        <div>
+                          <h4>
+                            <a href="http://asia.colt.net/news/press/press-release-colt-opens-marseille-node-addressing-demand-for-bandwidth-transit-between-europe-and-asia-pacific/">[Press release] Colt opens Marseille node, addressing demand for bandwidth transit between Europe and Asia-Pacific</a></h4>
+                            <p>
+                              April 27, 2017                            </p>
+                          </div> 
+                                                  </span>
+                      </div>
+                      <div class="news-events-spacer"></div>
+                      <div class="events-section-wrap">
+
+                        <h3 class="intro">Upcoming & Recent Events</h3>
+
+                            
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                                              
+                      <p class="text-right">
+                        <a href="http://asia.colt.net/news/events/">
+                          All Events                        </a>
+                      </p>    
+                        <span class="events-list-wrap">
+                                                                                  <div>
+                            <h4><a href="http://asia.colt.net/news/events/content-tokyo-2017/">Content Tokyo 2017</a></h4>
+                            <p>
+                              <span>Event on</span>
+                              June 28, 2017                            </p>
+                          </div> 
+                                                      
+                                                                                                          <div>
+                            <h4><a href="http://asia.colt.net/news/events/aws-summit-tokyo-2017/">AWS Summit Tokyo 2017</a></h4>
+                            <p>
+                              <span>Event on</span>
+                              May 30, 2017                            </p>
+                          </div> 
+                                                      
+                                                                                                          <div>
+                            <h4><a href="http://asia.colt.net/news/events/cloud-days-2017-spring/">Cloud Days 2017 Spring</a></h4>
+                            <p>
+                              <span>Event on</span>
+                              March 9, 2017                            </p>
+                          </div> 
+                                                      
+                                                                                                          <div>
+                            <h4><a href="http://asia.colt.net/news/events/cloud-days-2016/">Cloud Days 2016</a></h4>
+                            <p>
+                              <span>Event on</span>
+                              October 21, 2016                            </p>
+                          </div> 
+                                                      
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                              
+                        </span>
+                      </div>
+                    </div><!-- news-events-section -->
+
+                    <div class="featured-customer-section">
+                      <h4>Select stories from our great customer base</h4>
+                      <div class="featured-customer-section-wrap">
+                      <div class="featured-customer-wrap">
+                          <div class="featured-customer-logo">
+                            <a href="http://asia.colt.net/case-studies/gree-inc/">
+                           <img src="/wp-content/themes/colt-child/images/toppage/gree-logo.png"/> 
+                           <div class="view-featured-story">View Gree case study</div>
+                           </a>
+                         </div>
+                        <div class="case-study-quote">
+                        <span class="case-study-quote-mark">“</span>
+                        By adopting Coltʼs designs, we were able to solve challenges on the global expansion front. Coltʼs one-stop solution aided us immensely in establishing overseas offices and optimizing areas...                        <span class="case-study-quote-mark">”</span>
+                        <span class="case-study-quote-author">
+                        – Shintaro Aikawa, Executive Officer &amp; Head of Infrastructure Management, Gree, Inc.                        </span>
+                        </div>
+                        <div class="toppage-bton">
+                          <a href="http://asia.colt.net/case-studies/">View all customer stories</a>
+                        </div>
+                      </div>
+                       <div class="other-customers">
+                          <a href="http://asia.colt.net/case-studies/jorudan/" class="first-logo-link"><div class="jorudan-logo"></div></a>
+                          <a href="http://asia.colt.net/case-studies/gmo_click/"><div class="gmo-logo"></div></a>
+                          <a href="http://asia.colt.net/case-studies/systemsgo/"><div class="systemsgo-logo"></div></a>
+                          <a href="http://asia.colt.net/case-studies/sakura-internet/"><div class="sakura-logo"></div></a>
+                       </div>
+                     </div>
+                    </div><!-- .featured-customer-section -->
+                 </article><!-- #post-## -->
+
+               
+             
+         </main><!-- #main -->
+       </div><!-- #primary -->
+     </div><!-- #content -->
+     
+	<div class="footer-columns">
+		<ul id="menu-global-footer-column-navigation" class="navigation navigation-footer-columns"><li id="menu-item-21119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-21119"><a href="http://asia.colt.net/services/">Services <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-19663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19663"><a href="http://asia.colt.net/services/data-centre/">Data Centre <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19681"><a href="http://asia.colt.net/services/network/">Network Service <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19819"><a href="http://asia.colt.net/services/voice/">Voice <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19827"><a href="http://asia.colt.net/terms-and-conditions/">Terms &#038; Conditions <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-19829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19829"><a href="http://asia.colt.net/solutions/">Solutions <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-21120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21120"><a href="http://asia.colt.net/case-studies/">Case Studies <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19905"><a href="http://asia.colt.net/about/asia-careers/">Colt Careers in Asia <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-21123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-21123"><a href="http://asia.colt.net/about/">About Colt in Asia <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-19906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19906"><a href="http://asia.colt.net/about/history/">Our History <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19912"><a href="http://asia.colt.net/about/profile/">Corporate Profile &#038; Offices <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19913"><a href="http://asia.colt.net/about/why-colt-in-asia/">Why Colt in Asia <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-19919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19919"><a href="http://asia.colt.net/about/contact-us/">Contact Us <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-21122" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-21122"><a href="http://asia.colt.net/news/">News <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-21026" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21026"><a href="http://asia.colt.net/news/press/">Press <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+	<li id="menu-item-21027" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21027"><a href="http://asia.colt.net/news/events/">Events <span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span></a></li>
+</ul>
+</li>
+</ul>	</div>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		
+		<div class="site-footer-content">
+  		
+  		<div class="social">
+    		<a href="https://www.linkedin.com/company/colt-technology-services" title="Follow us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+    		<a href="https://twitter.com/Colt_Technology" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+    		<a href="https://www.youtube.com/user/kvhdigitalmarketing" title="Follow us on YouTube"><i class="fa fa-youtube"></i></a>
+    		<a href="https://plus.google.com/117177552690463329090/videos" title="Follow us on Google+" rel="nofollow"><i class="fa fa-google-plus"></i></a>
+    		<a href="http://www.slideshare.net/ColtTechnologyServices" title="Follow us on SlideShare"><i class="fa fa-slideshare"></i></a>
+    		<a href="http://asia.colt.net/news/feed/" title="View our RSS feed"><i class="fa fa-rss"></i></a>
+  		</div>
+			
+			<ul id="menu-global-footer-navigation" class="navigation navigation-footer"><li id="menu-item-21415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21415"><a href="https://partner.asia-colt.net/">Partner Portal</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="http://asia.colt.net/news/feed/">RSS Feed</a></li>
+<li id="menu-item-20981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20981"><a href="http://asia.colt.net/terms-and-conditions/">General Terms and Conditions</a></li>
+<li id="menu-item-20975" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20975"><a href="http://asia.colt.net/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-20979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20979"><a href="http://asia.colt.net/security/">About Information Security</a></li>
+<li id="menu-item-23268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23268"><a href="http://asia.colt.net/prevention-of-fraudulent-use-of-voice-calls-by-third-parties/">Prevention of Fraudulent Use of Voice Calls by Third Parties</a></li>
+<li id="menu-item-24434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24434"><a href="http://asia.colt.net/procurement-terms-and-conditions/">Procurement Terms and Conditions</a></li>
+</ul>			
+			<div class="site-info">
+				&copy; 2017 Colt Technology Services Group Limited			</div><!-- .site-info -->
+		</div>
+		
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--[if lt IE 9]>
+<p class="browserupgrade">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+	<!-- Azalead Tracking Code -->
+	<script src="//b2btagmgr.azalead.com/tag?az=aWRTdWJzY3JpYmVyPTE4NzYmaWRTaXRlPTE5NzAmb3JpZ2luPXd3dy5jb2x0Lm5ldC8mY3VzdG9tPW5vbmU=" type="application/javascript"></script>
+	<!-- End Azalead Tracking Code -->
+		
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54bff3270befe1e4" async="async"></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.7'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-content/themes/colt-child/js/hotjar.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-includes/js/comment-reply.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='http://asia.colt.net/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script>
+		<script type="text/javascript">
+			var bwpRecaptchaCallback = function() {
+				// render all collected recaptcha instances
+			};
+		</script>
+
+		<script src="https://www.google.com/recaptcha/api.js?onload=bwpRecaptchaCallback&#038;render=explicit" async defer></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"dc9fd9be05","applicationID":"7586563","transactionName":"NgQBMBcDWRdQB0YNWw9OIgcRC1gKHgJAC1oVTBMFAgc=","queueTime":0,"applicationTime":949,"atts":"GkMCRl8ZShk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

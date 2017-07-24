@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<!-- Sorry no IE7 support! -->
+<!-- @see http://foundation.zurb.com/docs/index.html#basicHTMLMarkup -->
+
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+  <script>window['adrum-start-time'] = new Date().getTime();</script><script src="/sites/all/themes/tibco_community/scripts/js/appdynamics_agent.js"></script>
+  <!--[if IE]><![endif]-->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<![endif]--><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1039.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta http-equiv="ImageToolbar" content="false" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="dns-prefetch" href="//d2wh20haedxe3f.cloudfront.net" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<meta name="description" content="  Introduction TIBCO Spotfire® is a highly extensible and customizable platform. It contains a variety of options to extend the core functionality with custom components, customize and automate your Spotfire analyses or even embed Spotfire visualizations into other web applications. You can extend TIBCO Spotfire yourself using TIBCO Spotfire&#039;s publicly published APIs, download extensions from the TIBCO component exchange or one of our partners&#039; marketplaces, engage TIBCO professional services or engage one of TIBCO Spotfire&#039;s partners to create it for you.     TIBCO Spotfire® Developer Platform  Extending Spotfire with C# The Spotfire platform provides a comprehensive API that let you extend Spotfire&#039;s capabilities with custom components, such as tools, visualizations, data sources, data transformations and much more. Spotfire C# Extensions - tutorials and examples Spotfire Analyst API Reference  Automation with IronPython Configure and automate your Spotfire analysis using IronPython scripting. This is a quick and easy way to get started with customizing Spotfire as you don&#039;t need to build a custom extension and you don&#039;t need any additional tools. IronPython Scripting in Spotfire - tutorials and examples Spotfire Analyst API Reference  Web Integration with JavaScript The Spotfire JavaScript API can be used to embed a Spotfire analysis into a web page and to integrate Spotfire with other web applications. Spotfire JavaScript API - tutorials and examples Spotfire JavaScript API Reference  Web Services TIhe Spotfire Server provides web services to interact with the Spotfire Library, Information Services, User Directory and and other server components. Web Services API -  tutorials and examples Web Services API Reference  Extending Spotfire Server with Java The Spotfire Server provides Java APIs to extend and customize authentication models, Information Services data sources and other server components. Custom Authentication Server Platform API Reference Information Services API Reference  Extending Automation Services with C# The Spotfire Automation Services API lets you create custom tasks that can be used together with the built in tasks when running automated jobs. How to create an Automation Services Custom Task Spotfire Automation Services API Reference Spotfire Analyst API Reference  Spotfire Binary Data File (SBDF) Library Integrate Spotfire directly into your data workflows and business processes by generate and consume data in an optimal format for Spotfire. TIBCO Spotfire® SBDF Library    Extensions &amp; Customizations JSViz - JavaScript Visualization Framework JavaScript Visualization Framework, or JSViz, - a custom extension for TIBCO Spotfire that allows users to create their own visualizations using JavaScript libraries such as D3 or HighCharts. KNIME and Spotfire KNIME and Spotfire - When you need to quickly and easily manipulate, analyze, and distill statistics from data, the combination of TIBCO Spotfire and KNIME might be something to consider. It gives you the ability to rapidly iterate and visualize your analyses in a code-free environment for improved speed to insight. Further details on KNIME partner page. Alerting Extension Spotfire Extension for Alerting - allows you to configure alerts directly from any Spotfire analysis file and can be used to alert when thresholds or rules on any chart are violated.  It is an extension for TIBCO Spotfire that integrates with Automation Services via an alerting task.  The task can generate e-mail, text or pop-up alerts.  Natural Language Generation Extension with Wordsmith Spotfire can be extended with a Natural Language Generation capability. Natural Language Generation is a field of Machine Learning that deals with Natural Language Processing to generate human-like speech. Spotfire integrates with Wordsmith to take structured data and create stories with the tone personality &amp; variability of a human being.  TIBCO Spotfire connector for BIOVIA Pipeline Pilot The integration of TIBCO Spotfire and BIOVIA Pipeline Pilot allows the creation of workflow based applications which combine advanced scientific data access and manipulation with powerful interactive visualizations. More information can be found on this page Application Profiler The Spotfire Application Profiler is useful for understanding your analysis files. It can iterate over a collection of files and report on them. The Application Profiler is easily extended by using IronPython scripting Further Customization Options Cobranding Cobranding manual. - Customize the look and feel of the Spotfire clients and the Server administrative interface by replacing the product name, logo, and similar resources with those in your own company profile. Custom Login Page Create a Custom Login Page - Tutorial showing how to create a custom login page for the Spotfire Server, enabling you to fully customize the look and feel. HTML and JavaScript in Text Areas HTML in Spotfire Text Areas -  a great way to enhance the look and feel of your dashboards. JavaScript in Spotfire Text Areas - best practices for writing JavaScript code in Text Areas in a supportable and maintainable way so the analysis files will continue to work with future versions of TIBCO Spotfire. Customize Sample Files Customize the sample files shown on the start page in Spotfire Analyst - Replace the default sample files with other sample files that may be more relevant to a specific market or user context. Parameterize Spotfire Clients and Analyses Spotfire Analyst Command Line Parameter Reference - Configure the launch behaviour of Spotfire Analyst using command line parameters. Configuration blocks - Parameterizing an analysis means to inject parameters into the process of opening the Spotfire analysis file, and optionally configure the analysis further before it becomes interactive to the user. Both actions are defined in a configuration block.   Component Exchanges Spotfire components on the Exchange:  Download data functions and analysis templates that enable you to easily extend Spotfire capabilities. Other Spotfire Marketplaces: Exchange ai Community Group - hosted by TIBCO partner Ruths.ai. Partner marketplace that offers pre-built apps for Spotfire. Includes apps for data quality, data science, finance, integration, knowledge management, manufacturing, oil and gas, and more. Other Script Collections Spotfire Developer website (not affiliated with TIBCO) - Unofficial Collection of Spotfire Script Snippets Spotfire Metadata Queries (not supported by TIBCO) - A collection of user generated queries for use with the Spotfire Metadata admin database Spotfire Professional Services  Looking to get help directly from TIBCO? Email the Spotfire Professional Services team. Partners Need some extra help extending and customizing Spotfire? Check out our Spotfire Partner overview for some help near you Back to Main Spotfire Wiki page" />
+<meta name="keywords" content="Extending TIBCO Spotfire®, TIBCO Community" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://community.tibco.com/wiki/extending-tibco-spotfire" />
+<link rel="shortlink" href="https://community.tibco.com/node/649176" />
+  <title>Extending TIBCO Spotfire® | TIBCO Community</title>
+  <link rel="shortcut icon" href="/sites/all/themes/tibco_community/assets/images/favicon.ico" type="image/ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6097072/672988/css/fonts.css" />
+  <link rel="stylesheet" href="//d2wh20haedxe3f.cloudfront.net/sites/default/files/advagg_css/css__cO8IVTjLRHL97L0aOxNAPa8Id64VIoczVMbkG7hxIRo__kp9UMMmL-3uzEipoppyEvXfkQvoSveCLQH251UJ1QGQ__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.css" />
+<link rel="stylesheet" href="//d2wh20haedxe3f.cloudfront.net/sites/default/files/advagg_css/css__BC8REqyIMOjN3QsXBiCFLDxFDVYvHfDz-rocSbR5rug__YIefeurPgGeHVVyBDKqRN20oep5MRdcctlL_OdoRzb0__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.css" />
+<style>@import url("//d2wh20haedxe3f.cloudfront.net/sites/all/themes/tibco_community/styles/CoveoFullSearchNewDesign.css?ot2jg1");</style>
+<link rel="stylesheet" href="//d2wh20haedxe3f.cloudfront.net/sites/default/files/advagg_css/css__HyBn0gJM1Mej7Zv8lz9Jb9y8-MVmQjRkUG7wnYF8qrE__J-eFInrGpQJuXnMy6h4OV2PqABIDAaDvsote7L5ny3M__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.css" />
+<link rel="stylesheet" href="//d2wh20haedxe3f.cloudfront.net/sites/default/files/advagg_css/css__l6ZltRsEcQZnckfoW6-ceZXjNuRB14v8SyZ2JXbj3l4__R5hsjy7RajA0cEjRhs1nh6ougif76O0atSSDqStc0aU__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.css" />
+  
+<!--[if lte IE 9]>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__y2G5kJtJHzEi2YMkbPUnPt9LFKcb00lZH_muQ8q1n2U__-UagLnp8K8-TyKWgKPe65iPqmdqp2zBSKrivrGqEZno__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js#ie9-" onload="if(jQuery.isFunction(jQuery.holdReady)){jQuery.holdReady(true);}"></script>
+<![endif]-->
+
+<!--[if gt IE 9]>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__y2G5kJtJHzEi2YMkbPUnPt9LFKcb00lZH_muQ8q1n2U__-UagLnp8K8-TyKWgKPe65iPqmdqp2zBSKrivrGqEZno__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js#ie10+" defer="defer" onload="if(jQuery.isFunction(jQuery.holdReady)){jQuery.holdReady(true);}"></script>
+<![endif]-->
+
+<!--[if !IE]><!-->
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__y2G5kJtJHzEi2YMkbPUnPt9LFKcb00lZH_muQ8q1n2U__-UagLnp8K8-TyKWgKPe65iPqmdqp2zBSKrivrGqEZno__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer" onload="if(jQuery.isFunction(jQuery.holdReady)){jQuery.holdReady(true);}"></script>
+<!--<![endif]-->
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__EZqYnijnD4ZMDO3FCBBz9dT9QfRlSrGMlW4CU5QJjzA__u_MrIwpzHUesPsry9H8wiZCJnlUbPdunc6psdV3DIzc__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer" onload="
+function advagg_mod_1() {
+  // Count how many times this function is called.
+  advagg_mod_1.count = ++advagg_mod_1.count || 1;
+  try {
+    if (advagg_mod_1.count <= 40) {
+      init_drupal_core_settings();
+
+      // Set this to 100 so that this function only runs once.
+      advagg_mod_1.count = 100;
+    }
+  }
+  catch(e) {
+    if (advagg_mod_1.count >= 40) {
+      // Throw the exception if this still fails after running 40 times.
+      throw e;
+    }
+    else {
+      // Try again in 1 ms.
+      window.setTimeout(advagg_mod_1, 1);
+    }
+  }
+}
+function advagg_mod_1_check() {
+  if (window.init_drupal_core_settings && window.jQuery && window.Drupal) {
+    advagg_mod_1();
+  }
+  else {
+    window.setTimeout(advagg_mod_1_check, 1);
+  }
+}
+advagg_mod_1_check();"></script>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__QZ_0z_vp6zMcEVxuTH1Y25e_wJFVCwYxrQG0QJ6UFgk__tZpeuP14VNeDf1VPOGonZI8n_Mtj9XZtcZrGRbhx4NY__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer"></script>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__DeW0SyAaV5GRRDinTtXMPI6Z2yeJrGHsy-J6DClFwuY__TSDF6XkfThWux_JXnG_VJpzEVmsCS58edCzvD5DqJUc__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer"></script>
+<script>function init_drupal_core_settings() {jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"tibco_community","theme_token":"46XzL8Wr3Eq7YhSD8-PS8jOfv7WCuDibUsJf1HqqmqQ","jquery_version":"1.8","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"sites\/all\/modules\/contrib\/answers\/css\/answers.css":1,"sites\/all\/modules\/contrib\/answers\/answers_voting\/css\/answers-voting.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/reviews\/css\/reviews.css":1,"modules\/search\/search.css":1,"sites\/all\/modules\/contrib_mod\/toc_node\/css\/toc_node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/features\/tibco_auth\/theme\/tibco_auth--page.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib_mod\/rate\/rate.css":1,"sites\/all\/modules\/features\/tibco_auth\/theme\/tibco_auth--modal.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/modal.css":1,"sites\/all\/modules\/custom\/tibco_utilities\/theme\/tibco_utilities--page--wiki_page.css":1,"sites\/all\/modules\/custom\/tibco_post_meta\/widgets\/tibco_updown\/tibco_updown.css":1,"sites\/all\/modules\/contrib\/vote_up_down\/widgets\/updown\/updown.css":1,"sites\/all\/modules\/contrib\/radioactivity\/css\/radioactivity.css":1,"sites\/all\/modules\/contrib_mod\/rate\/templates\/number-up-down\/number-up-down.css":1,"sites\/all\/modules\/contrib\/nice_menus\/css\/nice_menus.css":1,"sites\/all\/modules\/contrib\/nice_menus\/css\/nice_menus_default.css":1,"sites\/all\/libraries\/ckeditor\/plugins\/codesnippet\/lib\/highlight\/styles\/github.css":1,"sites\/all\/modules\/contrib\/hide_submit\/hide_submit.css":1,"sites\/all\/themes\/zurb_foundation\/css\/normalize.css":1,"sites\/all\/themes\/zurb_foundation\/css\/foundation.custom.css":1,"sites\/all\/themes\/tibco_community\/styles\/styles.min.css":1,"sites\/all\/themes\/tibco_community\/styles\/CoveoFullSearchNewDesign.css":1},"js":{"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/contrib\/nice_menus\/js\/jquery.bgiframe.js":1,"sites\/all\/modules\/contrib\/nice_menus\/js\/jquery.hoverIntent.js":1,"sites\/all\/modules\/contrib\/nice_menus\/js\/superfish.js":1,"sites\/all\/modules\/contrib\/nice_menus\/js\/nice_menus.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/contrib\/answers\/js\/answers.js":1,"sites\/all\/modules\/contrib\/impression\/impression.js":1,"sites\/all\/modules\/features\/tibco_auth\/theme\/tibco_auth--page.js":1,"sites\/all\/modules\/features\/tibco_auth\/includes\/jasperforge_user_prompt.js":1,"sites\/all\/modules\/custom\/tibco_utilities\/theme\/tibco_utilities.js":1,"sites\/all\/modules\/features\/tibco_auth\/theme\/tibco_auth--modal.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/ajax-responder.js":1,"sites\/all\/modules\/contrib_mod\/rate\/rate.js":1,"sites\/all\/modules\/contrib\/radioactivity\/js\/radioactivity.js":1,"sites\/all\/libraries\/ckeditor\/plugins\/codesnippet\/lib\/highlight\/highlight.pack.js":1,"sites\/all\/modules\/contrib\/wysiwyg_codesnippet\/wysiwyg_codesnippet.js":1,"sites\/all\/modules\/contrib\/hide_submit\/hide_submit.js":1,"sites\/all\/themes\/zurb_foundation\/js\/vendor\/modernizr.js":1,"sites\/all\/themes\/zurb_foundation\/js\/foundation.min.js":1,"sites\/all\/themes\/tibco_community\/scripts\/js\/foundation.js":1,"sites\/all\/themes\/tibco_community\/scripts\/js\/tibco.js":1,"sites\/all\/themes\/tibco_community\/scripts\/js\/CoveoJsSearch.js":1,"sites\/all\/themes\/tibco_community\/scripts\/js\/DJ_All.js":1,"sites\/all\/themes\/tibco_community\/scripts\/js\/tibcoCoveo.js":1}},"tibco-auth-register-modal-style":{"modalSize":{"type":"fixed","width":500,"height":700,"contentRight":10},"modalOptions":{"opacity":0.2,"background-color":"#000"},"animation":"fadeIn","modalTheme":"tibco_auth_Modal","closeText":"\u0026#10060;","throbber":"\u003Cimg src=\u0022\/\/d2wh20haedxe3f.cloudfront.net\/sites\/all\/modules\/contrib\/ctools\/ctools_ajax_sample\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E"},"tibco-auth-login-modal-style":{"modalSize":{"type":"fixed","width":750,"height":420,"contentRight":10},"modalOptions":{"opacity":0.2,"background-color":"#000"},"animation":"fadeIn","modalTheme":"tibco_auth_Modal","closeText":"\u0026#10060;","throbber":"\u003Cimg src=\u0022\/\/d2wh20haedxe3f.cloudfront.net\/sites\/all\/modules\/contrib\/ctools\/ctools_ajax_sample\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E"},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg src=\u0022\/\/d2wh20haedxe3f.cloudfront.net\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E","throbber":"\u003Cimg src=\u0022\/\/d2wh20haedxe3f.cloudfront.net\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E"},"rate":{"basePath":"\/rate\/vote\/js","destination":"node\/649176"},"hide_submit":{"hide_submit_status":true,"hide_submit_method":"disable","hide_submit_css":"hide-submit-disable","hide_submit_abtext":"","hide_submit_atext":"","hide_submit_hide_css":"hide-submit-processing","hide_submit_hide_text":"Processing...","hide_submit_hide_fx":1,"hide_submit_reset_time":8000},"facetapi":{"view_args":{"related_content_search_api_:block":["649176"]},"exposed_input":{"related_content_search_api_:block":[]},"view_path":{"related_content_search_api_:block":null}},"better_exposed_filters":{"views":{"related_content_search_api_":{"displays":{"block":{"filters":[]}}}}},"statistics":{"data":{"nid":"649176"},"url":"\/modules\/statistics\/statistics.php"},"nice_menus_options":{"delay":"800","speed":"fast"},"radioactivity":{"emitters":{"emitDefault":[{"accuracy":100,"bundle":"wiki_page","energy":10,"entity_id":"649176","entity_type":"node","field_name":"field_radioactivity","language":"und","storage":"Memcached","type":"none","checksum":"b41cdef26e3a0ea1f330c5a0ad0530af"},{"accuracy":100,"bundle":"wiki_page","energy":10,"entity_id":"649176","entity_type":"node","field_name":"field_radioactivity","language":"und","storage":"Memcached","type":"none","checksum":"b41cdef26e3a0ea1f330c5a0ad0530af"}]},"config":{"emitPath":"\/sites\/all\/modules\/contrib\/radioactivity\/emit.php","fpEnabled":1,"fpTimeout":"1"}},"urlIsAjaxTrusted":{"\/wiki\/extending-tibco-spotfire":true},"wysiwyg":{"codeSnippet_theme":"github","codeSnippet_languages":"{\u0022bash\u0022:\u0022Bash\u0022,\u0022cpp\u0022:\u0022C++\u0022,\u0022css\u0022:\u0022CSS\u0022,\u0022xml\u0022:\u0022XML\\\/HTML\u0022,\u0022json\u0022:\u0022JSON\u0022,\u0022java\u0022:\u0022Java\u0022,\u0022javascript\u0022:\u0022Javascript\u0022,\u0022makefile\u0022:\u0022Makefile\u0022,\u0022php\u0022:\u0022PHP\u0022,\u0022python\u0022:\u0022Python\u0022,\u0022ruby\u0022:\u0022Ruby\u0022,\u0022scss\u0022:\u0022Scss\u0022,\u0022sql\u0022:\u0022SQL\u0022,\u0022vbscript\u0022:\u0022VBScript\u0022,\u0022xhtml\u0022:\u0022XHTML\u0022}"}});
+if(jQuery.isFunction(jQuery.holdReady)){jQuery.holdReady(false);}} if(window.jQuery && window.Drupal){init_drupal_core_settings();}</script>
+  <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-649176 node-type-wiki-page section-wiki" ><!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T7BJHQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+analyticsDataLayer = [{"isMarketoForm":false,"pageID":"649176","pageLastEditDate":"19691231"}];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','analyticsDataLayer','GTM-T7BJHQ');</script>
+<!-- End Google Tag Manager --><script src="//assets.adobedtm.com/eb3bce35b1b2394cf275fca0b5c54ad8528b21ff/satelliteLib-b122dc3cb66085519330a71561507fb45d04f37c.js"></script>
+  <div class="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <!--.page -->
+<div role="document" class="page">
+
+<header role="navigation" class="header">
+
+  <div class="top-bar-wrap">
+    <div class="row">
+      <div class="medium-12 hide-for-small columns">
+        <section class="top-menu-wrap">
+            <section class="block block-menu block-menu-menu-marketing-site-items">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="http://www.tibco.com/" title="">TIBCO Software Inc.</a></li>
+<li class="leaf"><a href="https://docs.tibco.com" title="">Documentation</a></li>
+<li class="leaf"><a href="https://support.tibco.com" title="">Support</a></li>
+<li class="leaf"><a href="https://community.tibco.com" title="">Community</a></li>
+<li class="last leaf"><a href="http://www.tibco.com/company/contactus" title="">Contact</a></li>
+</ul>  
+  </section><section class="block block-system block-menu block-system-user-menu">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="/user/register/nojs" title="" class="ctools-use-modal ctools-modal-tibco-auth-register-modal-style hidden" id="user-register-link">New Account</a></li>
+<li class="leaf"><a href="/saml_login" title="">Log in</a></li>
+<li class="last leaf"><a href="/user/login/nojs?destination=node/649176" title="" class="ctools-use-modal ctools-modal-tibco-auth-login-modal-style ctools-use-modal ctools-modal-tibco-auth-login-modal-style ctools-use-modal ctools-modal-tibco-auth-login-modal-style ctools-use-modal ctools-modal-tibco-auth-login-modal-style" id="user-login-link">Register</a></li>
+</ul>  
+  </section>        </section>
+      </div>
+    </div>
+  </div>
+  <!--/.top-bar -->
+
+  <div class="menu-bar-wrap">
+    <div class="row">
+      <div class="large-3 columns">
+        <section class="header-logo">
+          <a href="/" title="Home" rel="home" id="logo"><img src="/sites/all/themes/tibco_community/assets/images/logo.svg" width="245" height="27"></a>
+        </section>
+        <div id="menu-button"></div>
+      </div>
+
+      <div class="large-9 columns">
+        <section class="search-wrap">
+            <section class="block block-search-api-page block-search-api-page-search-api-solr">
+  
+      
+    <form action="/wiki/extending-tibco-spotfire" method="post" id="search-api-page-search-form-search-api-solr" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-keys-31">
+  <label class="element-invisible" for="edit-keys-31">Enter your keywords </label>
+ <input placeholder="Enter your keywords" type="text" id="edit-keys-31" name="keys_31" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<input type="hidden" name="id" value="31" />
+<button id="edit-submit-31" name="op" value="Search" type="submit" class="form-submit">Search</button>
+<input type="hidden" name="form_build_id" value="form-wURiaN2qsqkGCbuk4iQxpicnl-9pARokM_4MCvvwmjI" />
+<input type="hidden" name="form_id" value="search_api_page_search_form_search_api_solr" />
+</div></form>  
+  </section>        </section>
+        
+                  <section id="main-menu">
+              <section class="block block-nice-menus block-nice-menus-2">
+  
+      
+    <ul class="nice-menu nice-menu-down nice-menu-menu-global-mobile-menu" id="nice-menu-2"><li class="menu-71136 menuparent  menu-path-nolink first odd last"><span title="" class="nolink">TIBCO Software Inc.</span><ul><li class="menu-71161 menu-path-tibcocom first odd "><a href="http://www.tibco.com" title="">TIBCO.com</a></li>
+<li class="menu-71141 menu-path-sdocstibcocom-  even "><a href="https://docs.tibco.com/" title="">Documentation</a></li>
+<li class="menu-71146 menu-path-ssupporttibcocom  odd "><a href="https://support.tibco.com" title="">Support</a></li>
+<li class="menu-71151 menu-path-scommunitytibcocom  even "><a href="https://community.tibco.com" title="">Community</a></li>
+<li class="menu-71156 menu-path-tibcocom-company-contactus  odd last"><a href="http://www.tibco.com/company/contactus" title="">Contact</a></li>
+</ul></li>
+</ul>
+  
+  </section><section class="block block-nice-menus block-nice-menus-1">
+  
+      
+    <ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-1"><li class="menu-712 menuparent  menu-path-products first odd "><a href="/products" title="">Products</a><ul></ul></li>
+<li class="menu-16041 menu-path-answers  even "><a href="/answers">Answers</a></li>
+<li class="menu-63569 menu-path-exchange  odd "><a href="/exchange">Exchange</a></li>
+<li class="menu-65781 menu-path-node-74631  even "><a href="/wiki" title="">Wiki</a></li>
+<li class="menu-74081 menu-path-ideastibcocom  odd "><a href="http://ideas.tibco.com" title="">Ideas</a></li>
+<li class="menu-720 menu-path-sdocstibcocom-  even "><a href="https://docs.tibco.com/" title="">Documentation</a></li>
+<li class="menu-40781 menuparent  menu-path-nolink  odd last"><span title="" class="nolink">Try Now</span><ul><li class="menu-65971 menu-path-spotfiretibcocom-trial first odd "><a href="http://spotfire.tibco.com/trial" title="Spotfire® Evaluations">TIBCO Spotfire®</a></li>
+<li class="menu-45836 menu-path-tibcocom-integration  even "><a href="http://www.tibco.com/integration" title="BusinessWorks® Evaluations">TIBCO ActiveMatrix BusinessWorks™</a></li>
+<li class="menu-72996 menu-path-cloudtibcocom-  odd "><a href="http://cloud.tibco.com/">TIBCO® Cloud Integration</a></li>
+<li class="menu-75641 menu-path-select-regioncloudtibcocom-domainliveappsmodesignup  even "><a href="http://select-region.cloud.tibco.com/?domain=LiveApps&amp;mode=signup">TIBCO Cloud™ Live Apps</a></li>
+<li class="menu-71171 menu-path-tibcocom-event-processing-live-datamart-trial  odd "><a href="http://www.tibco.com/event-processing/live-datamart-trial">TIBCO® Live Datamart</a></li>
+<li class="menu-74801 menu-path-tibcocom-products-tibco-streambase  even "><a href="http://www.tibco.com/products/tibco-streambase">TIBCO Streambase®</a></li>
+<li class="menu-74286 menu-path-strytibbrcom-tibbr-web-signup  odd last"><a href="https://try.tibbr.com/tibbr/web/signup">tibbr®</a></li>
+</ul></li>
+</ul>
+  
+  </section><section class="block block-menu block-menu-menu-mobile-user-anonymous">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="/user/register" title="">Register</a></li>
+<li class="last leaf"><a href="/saml_login?destination=node/649176" title="">Log In</a></li>
+</ul>  
+  </section><section class="block block-menu block-menu-menu-mobile-user-authenticated">
+  
+      
+      
+  </section>          </section>
+              </div>
+    </div>
+  </div>
+  <!--/.menu-bar -->
+
+</header>
+<!--/.header -->
+    
+    <div class="row admin-tab-container">
+    <div class="column">
+      <div class="admin-options">
+              </div>
+    </div>
+  </div>
+  
+  <main role="main" class="l-main">
+
+    <div class="content-wrap">
+      <section class="main-content-wrap">
+          
+      
+    
+  
+  <div class="primary">
+    <div class="row">
+      <div class="large-9 columns">
+        <div class="layout-content">
+          <div class="panel-pane pane-block pane-tibco-post-meta-vote-views-follow"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="vote-views-watch-module">
+<div class="vud-widget vud-widget-updown" id="widget-node-649176">
+                  <a rel="nofollow" href="/user/login/?destination=wiki/extending-tibco-spotfire" rel="nofollow" class="vud-link-up">
+                <div class="up-active updown-up" title="Vote up!"></div>
+              </a>
+          
+    <div class="updown-score">
+      <span class="updown-current-score">3</span>
+    </div>
+
+                  <a rel="nofollow" href="/user/login/?destination=wiki/extending-tibco-spotfire" rel="nofollow" class="vud-link-down">
+                <div class="down-active updown-down" title="Vote down!"></div>
+              </a>
+          
+  <a href="#" rel="nofollow" class="vud-link-reset" title="Reset your vote">
+    <div class="reset-inactive">
+      reset    </div>
+  </a>
+</div>
+<div class="node-view-count">15.9k<span>views</span></div><span class="watch-wrap flag-wrapper flag-watch flag-watch-649176"><div class="watch-count">16</div><a href="/user/login?destination=wiki/extending-tibco-spotfire" class="flag flag-action">watch</a></span></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-title"  >
+  
+      
+  
+  <div class="pane-content">
+    Extending TIBCO Spotfire®  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-product"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-product field-type-entityreference field-label-hidden field-wrapper"><a href="/products/spotfire">TIBCO Spotfire®</a></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-author"  >
+  
+        <h6 class="pane-title">
+      By:    </h6>
+    
+  
+  <div class="pane-content">
+    <a href="/users/magnus-rylander" rel="nofollow" class="username">Magnus Rylander</a>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-updated"  >
+  
+        <span class="pane-title">
+      Last updated:    </span>
+    
+  
+  <div class="pane-content">
+    6:46am Jul 13, 2017  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field-extra pane-node-flag-inappropriate"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="flag-outer flag-outer-inappropriate">
+    <span class="flag-wrapper flag-inappropriate flag-inappropriate-649176">
+		  <a href="/user/login?destination=node/649176%3Fusterms%3Dcross%2520table%2520code%2520examplee%26ustype%3D1%26uscat%3D0%252C1%252C2%252C3%26uspage%3D5">Flag as Inappropriate</a>		</span>
+  </div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-tibco-utilities-product-tag"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="product-group-tags"></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-tibco-utilities-wiki-edit-button"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="wiki-admin button-wrap"><a class="button edit-wiki" href="/user/login/?destination=wiki/extending-tibco-spotfire">Edit This Page</a><a class="button create-wiki" href="/user/login/?destination=wiki/extending-tibco-spotfire">Create New Page</a></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-toc-node-toc-node hide-for-small"  >
+  
+        <span class="pane-title">
+      Table of Contents    </span>
+    
+  
+  <div class="pane-content">
+    <div id="table-of-contents-links"><a name="table-of-contents"></a><div class="item-list"><ul class="toc-node-numbers"><li class="toc-node-level-1 first"><a href="/wiki/extending-tibco-spotfire#toc-1"><span class="toc-number">0</span> <span class="toc-text">Extending TIBCO Spotfire®</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-2"><span class="toc-number">0.1</span> <span class="toc-text">  Introduction</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-3"><span class="toc-number">0.2</span> <span class="toc-text">TIBCO Spotfire® Developer Platform</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-10"><span class="toc-number">0.2</span> <span class="toc-text">Extending Spotfire with C#</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-11"><span class="toc-number">0.2</span> <span class="toc-text">Automation with IronPython</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-12"><span class="toc-number">0.2</span> <span class="toc-text">Web Integration with JavaScript</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-13"><span class="toc-number">0.2</span> <span class="toc-text">Web Services</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-14"><span class="toc-number">0.2</span> <span class="toc-text">Extending Spotfire Server with Java</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-15"><span class="toc-number">0.2</span> <span class="toc-text">Extending Automation Services with C#</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-16"><span class="toc-number">0.2</span> <span class="toc-text">Spotfire Binary Data File (SBDF) Library</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-4"><span class="toc-number">0.3</span> <span class="toc-text">Extensions & Customizations</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-17"><span class="toc-number">0.3</span> <span class="toc-text">JSViz - JavaScript Visualization Framework</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-18"><span class="toc-number">0.3</span> <span class="toc-text">KNIME and Spotfire</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-19"><span class="toc-number">0.3</span> <span class="toc-text">Alerting Extension</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-20"><span class="toc-number">0.3</span> <span class="toc-text">Natural Language Generation Extension with Wordsmith</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-21"><span class="toc-number">0.3</span> <span class="toc-text">TIBCO Spotfire connector for BIOVIA Pipeline Pilot</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-22"><span class="toc-number">0.3</span> <span class="toc-text">Application Profiler</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-23"><span class="toc-number">0.3</span> <span class="toc-text">The Spotfire Application Profiler is useful for understanding your analysis files. It can iterate over a collection of files and report on them. The Application Profiler is easily extended by using IronPython scripting</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-5"><span class="toc-number">0.4</span> <span class="toc-text">Further Customization Options</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-24"><span class="toc-number">0.4</span> <span class="toc-text">Cobranding</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-25"><span class="toc-number">0.4</span> <span class="toc-text">Custom Login Page</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-26"><span class="toc-number">0.4</span> <span class="toc-text">HTML and JavaScript in Text Areas</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-27"><span class="toc-number">0.4</span> <span class="toc-text">Customize Sample Files</span></a></li>
+<li class="toc-node-level-3"><a href="/wiki/extending-tibco-spotfire#toc-28"><span class="toc-number">0.4</span> <span class="toc-text">Parameterize Spotfire Clients and Analyses</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-6"><span class="toc-number">0.5</span> <span class="toc-text">Component Exchanges</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-7"><span class="toc-number">0.6</span> <span class="toc-text">Other Script Collections</span></a></li>
+<li class="toc-node-level-2"><a href="/wiki/extending-tibco-spotfire#toc-8"><span class="toc-number">0.7</span> <span class="toc-text">Spotfire Professional Services</span></a></li>
+<li class="toc-node-level-2 last"><a href="/wiki/extending-tibco-spotfire#toc-9"><span class="toc-number">0.8</span> <span class="toc-text">Partners</span></a></li>
+</ul></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-description"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-description field-type-text-long field-label-hidden field-wrapper"><hr />
+<h3><img height="512" width="512" style="width: 50px; height: 50px;" class="media-element file-default" src="//d2wh20haedxe3f.cloudfront.net/sites/default/files/extending-spotfire_0.png" alt="" />  Introduction</h3>
+<p>TIBCO Spotfire<sup>®</sup> is a highly extensible and customizable platform. It contains a variety of options to extend the core functionality with custom components, customize and automate your Spotfire analyses or even embed Spotfire visualizations into other web applications.</p>
+<p>You can extend TIBCO Spotfire yourself using TIBCO Spotfire's publicly published APIs, download extensions from the TIBCO component exchange or one of our partners' marketplaces, engage TIBCO professional services or engage one of <a href="https://community.tibco.com/wiki/tibco-spotfirer-partners">TIBCO Spotfire's partners</a> to create it for you.  </p>
+<p> </p>
+<h3>TIBCO Spotfire<sup>®</sup> Developer Platform</h3>
+<table>
+<tbody>
+<tr>
+<td style="vertical-align:top">
+<h4>Extending Spotfire with C#</h4>
+</td>
+<td>
+<p>The Spotfire platform provides a comprehensive API that let you extend Spotfire's capabilities with custom components, such as tools, visualizations, data sources, data transformations and much more.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/create-extensions-tibco-spotfirer">Spotfire C# Extensions - tutorials and examples</a></li>
+<li><a href="https://docs.tibco.com/pub/doc_remote/sfire_dev/area/doc/api/TIB_sfire-analyst_api/Index.aspx">Spotfire Analyst API Reference</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top">
+<h4>Automation with IronPython</h4>
+</td>
+<td>
+<p>Configure and automate your Spotfire analysis using IronPython scripting. This is a quick and easy way to get started with customizing Spotfire as you don't need to build a custom extension and you don't need any additional tools.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/ironpython-scripting-tibco-spotfire">IronPython Scripting in Spotfire - tutorials and examples</a></li>
+<li><a href="https://docs.tibco.com/pub/doc_remote/sfire_dev/area/doc/api/TIB_sfire-analyst_api/Index.aspx">Spotfire Analyst API Reference</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top">
+<h4>Web Integration with JavaScript</h4>
+</td>
+<td>
+<p>The Spotfire JavaScript API can be used to embed a Spotfire analysis into a web page and to integrate Spotfire with other web applications.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/tibco-spotfirer-javascript-api">Spotfire JavaScript API - tutorials and examples</a></li>
+<li><a href="https://docs.tibco.com/pub/sfire_dev/area/doc/api/TIB_sfire_Web_Player_JavaScript_API_Reference/index.html">Spotfire JavaScript API Reference</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top">
+<h4>Web Services</h4>
+</td>
+<td>
+<p>TIhe Spotfire Server provides web services to interact with the Spotfire Library, Information Services, User Directory and and other server components.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/tibco-spotfirer-web-services-api-tutorials-and-examples">Web Services API -  tutorials and examples</a></li>
+<li><a href="https://docs.tibco.com/pub/sfire_dev/area/doc/api/TIB_sfire_server_WebServices_API_Reference/index.html">Web Services API Reference</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top">
+<h4>Extending Spotfire Server with Java</h4>
+</td>
+<td style="vertical-align:top">
+<p>The Spotfire Server provides Java APIs to extend and customize authentication models, Information Services data sources and other server components.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/tibco-spotfirer-server-api-custom-authentication">Custom Authentication</a></li>
+<li><a href="https://docs.tibco.com/pub/sfire_dev/area/doc/api/TIB_sfire_server_Server_Platform_API_Reference/index.html">Server Platform API Reference</a></li>
+<li><a href="https://docs.tibco.com/pub/sfire_dev/area/doc/api/TIB_sfire_server_Information_Services_API_Reference/index.html">Information Services API Reference</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top">
+<h4>Extending Automation Services with C#</h4>
+</td>
+<td style="vertical-align:top">
+<p>The Spotfire Automation Services API lets you create custom tasks that can be used together with the built in tasks when running automated jobs.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/create-automation-services-custom-task-tibco-spotfirer">How to create an Automation Services Custom Task</a></li>
+<li><a href="https://docs.tibco.com/pub/doc_remote/sfire_dev/area/doc/api/TIB_sfire_autsvcs/Index.aspx">Spotfire Automation Services API Reference</a></li>
+<li><a href="https://docs.tibco.com/pub/doc_remote/sfire_dev/area/doc/api/TIB_sfire-analyst_api/Index.aspx">Spotfire Analyst API Reference</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top">
+<h4>Spotfire Binary Data File (SBDF) Library</h4>
+</td>
+<td style="vertical-align:top">
+<p>Integrate Spotfire directly into your data workflows and business processes by generate and consume data in an optimal format for Spotfire.</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/tibco-spotfirer-sbdf-library">TIBCO Spotfire® SBDF Library</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h3>Extensions &amp; Customizations</h3>
+<h4>JSViz - JavaScript Visualization Framework</h4>
+<ul>
+<li><a href="http://community.tibco.com/wiki/javascript-visualization-framework-jsviz">JavaScript Visualization Framework</a>, or JSViz, - a custom extension for TIBCO Spotfire that allows users to create their own visualizations using JavaScript libraries such as D3 or HighCharts.</li>
+</ul>
+<h4>KNIME and Spotfire</h4>
+<ul>
+<li><a href="http://spotfire.tibco.com/assets/blt6120d8fc236917b6/ds-tibco-spotfire-and-knime.pdf">KNIME and Spotfire</a> - When you need to quickly and easily manipulate, analyze, and distill statistics from data, the combination of TIBCO Spotfire and KNIME might be something to consider. It gives you the ability to rapidly iterate and visualize your analyses in a code-free environment for improved speed to insight. Further details on <a href="https://community.tibco.com/wiki/knime">KNIME partner page</a>.</li>
+</ul>
+<h4>Alerting Extension</h4>
+<ul>
+<li><a href="https://community.tibco.com/wiki/spotfire-alerting-extension">Spotfire Extension for Alerting</a> - allows you to configure alerts directly from any Spotfire analysis file and can be used to alert when thresholds or rules on any chart are violated.  It is an extension for TIBCO Spotfire that integrates with Automation Services via an alerting task.  The task can generate e-mail, text or pop-up alerts. </li>
+</ul>
+<h4>Natural Language Generation Extension with Wordsmith</h4>
+<ul>
+<li>
+<div>Spotfire can be extended with a <a href="https://community.tibco.com/wiki/spotfire-natural-language-generation-wordsmith">Natural Language Generation</a> capability. Natural Language Generation is a field of Machine Learning that deals with Natural Language Processing to generate human-like speech. Spotfire integrates with Wordsmith to take structured data and create stories with the tone personality &amp; variability of a human being. </div>
+</li>
+</ul>
+<h4>TIBCO Spotfire connector for BIOVIA Pipeline Pilot</h4>
+<ul>
+<li>The integration of TIBCO Spotfire and <a href="http://accelrys.com/products/collaborative-science/biovia-pipeline-pilot/">BIOVIA Pipeline Pilot</a> allows the creation of workflow based applications which combine advanced scientific data access and manipulation with powerful interactive visualizations. More information can be found on this <a href="https://www.discngine.com/solutions/tibco-spotfire-connector-for-pipeline-pilot">page</a></li>
+</ul>
+<h4>Application Profiler</h4>
+<ul>
+<li>
+<h4>The <a href="https://community.tibco.com/wiki/tibco-spotfirer-application-profiler-tech-note">Spotfire Application Profiler</a> is useful for understanding your analysis files. It can iterate over a collection of files and report on them. The Application Profiler is easily extended by using IronPython scripting</h4>
+</li>
+</ul>
+<h3>Further Customization Options</h3>
+<h4>Cobranding</h4>
+<ul>
+<li><a href="https://docs.tibco.com/pub/sfire-analyst/7.8.0/doc/pdf/TIB_sfire_7.8.0_cobranding.pdf">Cobranding manual</a>. - Customize the look and feel of the Spotfire clients and the Server administrative interface by replacing the product name, logo, and similar resources with those in your own company profile.</li>
+</ul>
+<h4>Custom Login Page</h4>
+<ul>
+<li><a href="https://community.tibco.com/wiki/create-custom-login-page-tibco-spotfirer">Create a Custom Login Page</a> - Tutorial showing how to create a custom login page for the Spotfire Server, enabling you to fully customize the look and feel.</li>
+</ul>
+<h4>HTML and JavaScript in Text Areas</h4>
+<ul>
+<li><a href="http://community.tibco.com/wiki/visual-design-best-practices-tibco-spotfirer">HTML in Spotfire Text Areas</a> -  a great way to enhance the look and feel of your dashboards.</li>
+<li><a href="https://community.tibco.com/wiki/best-practices-writing-custom-javascript-code-text-areas">JavaScript in Spotfire Text Areas</a> - best practices for writing JavaScript code in Text Areas in a supportable and maintainable way so the analysis files will continue to work with future versions of TIBCO Spotfire.</li>
+</ul>
+<h4>Customize Sample Files</h4>
+<ul>
+<li><a href="http://community.tibco.com/wiki/customizing-sample-files-shown-start-page-spotfire-analyst">Customize the sample files shown on the start page in Spotfire Analyst</a> - Replace the default sample files with other sample files that may be more relevant to a specific market or user context.</li>
+</ul>
+<h4>Parameterize Spotfire Clients and Analyses</h4>
+<ul>
+<li><a href="https://community.tibco.com/wiki/tibco-spotfirer-analyst-command-line-parameter-reference">Spotfire Analyst Command Line Parameter Reference</a> - Configure the launch behaviour of Spotfire Analyst using command line parameters.</li>
+<li><a href="http://community.tibco.com/wiki/create-configuration-block-tibco-spotfire">Configuration blocks</a> - Parameterizing an analysis means to inject parameters into the process of opening the Spotfire analysis file, and optionally configure the analysis further before it becomes interactive to the user. Both actions are defined in a configuration block.</li>
+</ul>
+<p> </p>
+<h3>Component Exchanges</h3>
+<ul>
+<li><a href="https://community.tibco.com/exchange/product_category/analytics-5506/product_group/tibco-spotfirer-6731/product_group/tibco-spotfirer-extensions-6726/field_product%253Afield_product_category/analytics-5506">Spotfire components</a> on the Exchange:  Download data functions and analysis templates that enable you to easily extend Spotfire capabilities.</li>
+</ul>
+<p>Other Spotfire Marketplaces:</p>
+<ul>
+<li><a href="https://community.tibco.com/wiki/exchangeai-community-group">Exchange ai Community Group</a> - hosted by TIBCO partner Ruths.ai. <span>Partner marketplace that offers pre-built apps for Spotfire. Includes apps for </span><span>data quality, data science, finance, integration, knowledge management, </span><span>manufacturing, oil and gas, and more.</span></li>
+</ul>
+<h3>Other Script Collections</h3>
+<ul>
+<li><a href="http://spotfired.blogspot.com/">Spotfire Developer website</a> (not affiliated with TIBCO) - Unofficial Collection of Spotfire Script Snippets</li>
+<li><a href="https://community.tibco.com/wiki/spotfire-metadata-queries">Spotfire Metadata Queries</a> (not supported by TIBCO) - A collection of user generated queries for use with the Spotfire Metadata admin database</li>
+</ul>
+<h3>Spotfire Professional Services</h3>
+<ul>
+<li> Looking to get help directly from TIBCO? Email the <a href="mailto:spotfireconsulting@tibco.com?subject=Request%20for%20TIBCO%20Spotfire%20Professional%20Services">Spotfire Professional Services team</a>.</li>
+</ul>
+<h3>Partners</h3>
+<ul>
+<li>Need some extra help extending and customizing Spotfire? Check out our <a href="https://community.tibco.com/wiki/spotfire-partners">Spotfire Partner</a> overview for some help near you</li>
+</ul>
+<p><a href="https://community.tibco.com/wiki/tibco-spotfirer-community-wiki"><img height="512" width="512" style="width: 50px; height: 50px;" class="media-element file-default" src="//d2wh20haedxe3f.cloudfront.net/sites/default/files/back-to-page_6.png" alt="" /></a>Back to <a href="https://community.tibco.com/wiki/tibco-spotfirer-community-wiki">Main Spotfire Wiki page</a></p>
+</div>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+      <div class="large-3 columns hide-for-small hide-for-medium">
+        <div class="layout-info">
+          <div class="panel-pane pane-views pane-related-content-search-api"  >
+  
+        <h2 class="pane-title">
+      Similar Articles    </h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-related-content-search-api- view-id-related_content_search_api_ view-display-id-block view-dom-id-9b4d781d4c938dde92a78ebb98b52c99">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div>        <span><a href="/wiki/tibco-spotfirer-developer-jumpstart">TIBCO Spotfire® Developer - Jumpstart</a><br><br></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div>        <span><a href="/wiki/tibco-spotfirer-resource-links">TIBCO Spotfire® Resource Links</a><br><br></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div>        <span><a href="/wiki/tibco-spotfire-aws-overview">TIBCO Spotfire® for AWS Overview</a><br><br></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div>        <span><a href="/wiki/tibco-spotfire-cloud-overview">TIBCO Spotfire® Cloud Overview</a><br><br></span>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+      
+  <div>        <span><a href="/wiki/tibco-spotfirer-developer-tutorials">TIBCO Spotfire® Developer Tutorials</a><br><br></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-tibco-utilities-ask-question-button"  id="sidebar-ask" >
+  
+        <h2 class="pane-title">
+      Haven't found what you are looking for?    </h2>
+    
+  
+  <div class="pane-content">
+    <a href="/user/login?destination=node/add/answers-question" class="answers-block-cta hide-for-small">Ask a Question</a>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+        </section>
+    </div>
+
+    
+    
+  </main>
+  <!--/.l-main -->
+  <div class="sticky-footer footer-open">
+    <div class="footer-content">
+      <div class="cloud-toggle toggle-item toggle-off">
+        <span class="toggle-label cloud-toggle-label">Cloud Only</span>
+        <a href="/wiki/extending-tibco-spotfire?exp=cloud" class="toggle-switch">
+          <span class="toggle-state-on">ON</span>
+          <span class="toggle-state-off">OFF</span>
+          <span class="toggle-nub"></span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-toggle">
+      <a href="#" class="sticky-footer-toggle">Hide</a>
+    </div>
+  </div>
+</div>
+<!--/.page -->
+
+<footer role="contentinfo" class="footer">
+
+  <div class="footer-wrap">
+    <div class="row">
+      <section class="footer-left">
+          <section class="block block-menu block-menu-menu-footer-menu-1">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="http://www.tibco.com/company" title="">About TIBCO</a></li>
+<li class="leaf"><a href="http://www.tibco.com/products" title="">TIBCO Products</a></li>
+<li class="leaf"><a href="https://support.tibco.com" title="">Support</a></li>
+<li class="last leaf"><a href="http://www.tibco.com/services" title="">TIBCO Services</a></li>
+</ul>  
+  </section><section class="block block-tibco-utilities block-tibco-utilities-footer-copyright">
+  
+      
+    <p class="copyright">Copyright &copy;2017 TIBCO Software Inc.</p>  
+  </section><section class="block block-menu block-menu-menu-footer-menu-2">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="http://www.tibco.com/company/privacy" title="">Privacy Policy</a></li>
+<li class="leaf"><a href="http://www.tibco.com/company/termsofuse" title="">Terms of Use</a></li>
+<li class="leaf"><a href="http://www.tibco.com/company/contactus" title="">Contact Us</a></li>
+<li class="last leaf"><a href="http://www.tibco.com/trademarks" title="">Trademarks</a></li>
+</ul>  
+  </section>      </section>
+      <!--/.footer-left -->
+
+      <section class="footer-right">
+        <div id="social-links">
+          <a class="facebook" target="blank" href="https://www.facebook.com/TIBCOSoftware"></a>
+          <a class="twitter" target="blank" href="https://twitter.com/tibco"></a>
+          <a class="linkedin" target="blank" href="http://www.linkedin.com/company/tibco-software-inc-"></a>
+          <a class="feeds" target="blank" href="http://feeds.feedburner.com/TibcoPressReleases"></a>
+          <a class="tibcommunity" target="blank" href="https://tibbr.tibcommunity.com/tibbr/web/login?_ga=1.183758246.1427733690.1432144002"></a>
+        </div>
+      </section>
+      <!--/.footer-right -->
+
+    </div>
+  </div>
+</footer>
+<!--/.footer -->
+
+  <script src="https://community.tibco.com/sites/default/files/advagg_js/js__dHsv49hVzE6I2iF1JGMLm4ZIZraXM3XDM7P6cXk9AtA__TcbXaWnWG59FzZBDtNKNsmYY6EOXI1RzE6AZ9S_Tbnw__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer"></script>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__shukjkpFd10Z476fC_PYMNxJhGlhrdDXOlzHV8jtKao__tp0uyanbGzX3K74n32LU8LC6msnq6Fr4R9u44x6Xv9E__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer"></script>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__QByAqDL0NVmRiZKOYLKP46p46vxK20T_Ab6Wy0wl8zs__RGkwXstxDNlbx5iQU2sJrmDwvg7joXz3HcZDoXwHkmM__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer"></script>
+<script src="https://community.tibco.com/sites/default/files/advagg_js/js__6S9MmPe_nlugXWi3HxYF-0GPXT9g3nsVKOAdTDha_fk__fLQLX7mwX3Ub_L5URADv_MtxwBmQsxEtgxFAVOXYxWg__lQ6Y-e99fAWlY-GHfsmqJ_ITh8NQZbtpVORQ4-nbFr4.js" defer="defer"></script>
+  <script type="text/javascript">_satellite.pageBottom();</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"86562037a3","applicationID":"51792482","transactionName":"NlRbNkZZVhBWUhBYWQ8ebBBdF1ENU1QcH0YJQQ==","queueTime":0,"applicationTime":70,"atts":"GhNYQA5DRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

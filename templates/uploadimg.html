@@ -2,67 +2,52 @@
 
 
 <!-- /. NAV SIDE  -->
-<div id="page-wrapper">
-    <div class="header">
-        <h1 class="page-header">
-            Administration
-            <small>Upload</small>
-        </h1>
 
-    </div>
+<div class="header">
+    <h1 id="brand" class="page-header">
+        Administration
+        <small>Upload</small>
+    </h1>
 
-    <div id="page-inner">
-
-        <div class="row">
-
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-action">
-                        image Features form
-                    </div>
-                    <div class="card-content" id="features">
-                        <form id="form" style="margin-bottom:76px ">
-                            Type of visualization :
-                            <input type="text" name="name" id="name"
-                                   placeholder="Title of the visualization">
-                            <input type="text" name="url" id="url"
-                                   placeholder="URL of the picture">
-                            <select class="form-control" name="cat" id="sel">
-                                <option>None</option>
-                                <option>Standard</option>
-                                <option>Complex</option>
-                                <option>Historical</option>
-                            </select>
-                        </form>
-
-                        <button class="waves-effect waves-light btn" id="send"> Submit</button>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6" id="drag">
-                <div class="card">
-                    <div class="card-action">
-                        image Features Json
-                    </div>
-                    <div class="card-content" id="uploade">
-                        <form>
-                            <label for="imgInp" class="waves-effect waves-light btn" tabindex="0">Upload </label>
-                            <input style="display: none" type='file' id="imgInp" name="imgInp"/>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /. PAGE INNER  -->
-
-
-    </div>
-    <!-- /. PAGE WRAPPER  -->
 </div>
 
-<!-- /. WRAPPER  -->
-<!-- JS Scripts-->
+<div style="margin-left: 10%;text-align: center">
+    <div>
+        <h4>image Features form</h4>
+        <div id="features">
+            <form id="form" style="margin-bottom:76px ">
+                Type of visualization :
+                <input type="text" name="name" id="name"
+                       placeholder="Title of the visualization"><br/>
+                Url of the picture : <input type="text" name="url" id="url"
+                                            placeholder="URL of the picture">
+                <select name="cat" id="sel">
+                    <option>None</option>
+                    <option>Standard</option>
+                    <option>Complex</option>
+                    <option>Historical</option>
+                </select>
+            </form>
+
+            <button id="send"> Submit</button>
+        </div>
+    </div>
+    <h3>OR</h3><hr>
+    <div class="col col-6" id="drag" style="display: inline-block">
+        <h4>
+            image Features Json
+        </h4>
+
+        <div id="uploade">
+            <form>
+                <label for="imgInp" class="waves-effect waves-light btn" tabindex="0">Upload </label>
+                <input type='file' id="imgInp" name="imgInp"/>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
 <!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 
@@ -140,7 +125,7 @@
     function upload(f) {
         console.log(f.name);
         var form = new FormData();
-         form.append("local", f);
+        form.append("local", f);
         $.ajax({
             type: "POST",
             url: "../upjsonimg",
@@ -149,7 +134,7 @@
             contentType: false,
             data: form,
             success: function (data) {
-                if(data=='ok'){
+                if (data == 'ok') {
                     window.location = "../admin"
                 }
             }

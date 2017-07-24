@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>My Website Has Moved</title>
+    <META http-equiv="refresh"
+	  content="5;URL=http://www.ams.jhu.edu/ers">
+    <body bgcolor="#ffffff">
+  </head>
+  <font size="+2">
+
+    <center>
+      <b>Ed Scheinerman's personal website has moved</b>
+    </center>
+    <p>
+      The new URL  is
+      <a href="http://www.ams.jhu.edu/ers"><code>www.ams.jhu.edu/ers</code></a>
+    </p>
+    <p>
+      You will be taken there automatically.
+    </p>
+    </font>
+  </body>
+</html>

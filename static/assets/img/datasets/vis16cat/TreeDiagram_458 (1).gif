@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<title>Distributed Campus</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="pragma" content="no-cache" />
+<script  type="text/javascript">
+
+function DisplayError() {
+	var idDefault="404";
+	var idDiv;
+	var mandant;
+	if (window.location.search != "") {
+		params=window.location.search;
+		var arrParams = params.split("&");
+		var aParam = arrParams[0].split("=");
+        idDiv = aParam[1];
+		if(arrParams[1]) {
+			var aParam = arrParams[1].split("=");
+			mandant = aParam[1];
+			document.getElementById('urlDe').href=window.location.protocol+"//"+window.location.hostname+"/"+mandant;
+			document.getElementById('urlDe').firstChild.nodeValue=window.location.protocol+"//"+window.location.hostname+"/"+mandant+"/";
+			document.getElementById('urlEn').href=window.location.protocol+"//"+window.location.hostname+"/"+mandant+"/";
+			document.getElementById('urlEn').firstChild.nodeValue=window.location.protocol+"//"+window.location.hostname+"/"+mandant+"/";
+		}
+		if(document.getElementById(idDiv)) {
+			document.getElementById(idDiv).style.display="block";
+		}
+		else {
+			document.getElementById(idDefault).style.display="block";
+		}
+	}
+	else {
+			document.getElementById(idDefault).style.display="block";
+	}
+}
+
+</script>
+
+		<style>
+		body{
+			font-family: verdana;
+			font-size: 10pt;
+			color: #330000;
+			background: #fff;
+		}
+		p{
+			font-family: verdana;
+			font-size: 10pt;
+			color: #330000;
+		}
+		a{
+			font-family: verdana;
+			font-size: 10pt;
+			color: #330000;
+		}
+		h1{
+			font-family: verdana;
+			font-size: 12pt;
+			font-weight: bold;
+			color: #330000;
+		}
+		img{
+			border: 0;
+		}
+		.message {
+			left:200px;
+			display:none;
+		}		
+		</style>
+	</head>
+	<body onLoad="DisplayError();">
+		
+		<div>
+			<div style="position:absolute;top:80px;left:5px;width:150px;">
+				&nbsp;
+			</div>
+			<div style="position:absolute;top:280px;left:25px;width:130px;">
+				&nbsp;
+			</div>
+			<div id="container" style="position:absolute;top:80px;left:200px;">
+				<div id="404" class="message">
+				<h1>Seite nicht gefunden / Page not found</h1>
+				<p>
+					Die Seite, die Sie aufgerufen haben, ist keine g&uuml;ltige Seite.
+				</p>
+				<p>
+					The page you tried to open is no a valid page.
+				</p>
+				</div>
+				<div id="404Domain" class="message">
+				<h1>Seite nicht gefunden / Page not found</h1>
+				<p>
+					Die Domain, die Sie aufgerufen haben, wird auf diesem Server nicht mehr bedient.
+				</p>
+				<p>
+					The domain you tried to open is not hosted on this server anymore.
+				</p>
+				</div>				
+				<div id="403" class="message">
+					<h1>Zugriff verweigert / Access denied</h1>
+					<p>
+Die angeforderte Seite kann nicht aufgerufen werden.<br/>
+Bitte wenden Sie sich an den Administrator: <a href="mailto:support@cedis.fu-berlin.de">support@cedis.fu-berlin.de</a>
+					</p>
+					<p>
+The requested page cannot be opened.<br/>
+Please contact the administrator: <a href="mailto:support@cedis.fu-berlin.de">support@cedis.fu-berlin.de</a>
+					</p>
+				</div>				
+				<div id="500" class="message">
+					<h1>Server Fehler / Server Error</h1>
+					<p>
+Die angeforderte Seite kann nicht aufgerufen werden.<br/>
+Bitte wenden Sie sich an den Administrator: <a href="mailto:support@cedis.fu-berlin.de">support@cedis.fu-berlin.de</a>
+					</p>
+					<p>
+The requested page cannot be opened.<br/>
+Please contact the administrator: <a href="mailto:support@cedis.fu-berlin.de">support@cedis.fu-berlin.de</a>
+
+					</p>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
+

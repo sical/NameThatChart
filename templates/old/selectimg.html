@@ -1,0 +1,139 @@
+﻿{% include 'nav.html' %}
+
+<div id="page-wrapper" style="padding-top: 0%">
+    <div style="margin-top: -0%" class="header">
+        <h1 class="page-header" id="brand">
+            Select the picture which best describe :
+        </h1>
+
+    </div>
+
+    <div id="page-inner">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content" id="fill">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+
+    <!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
+
+<script type="text/javascript">
+    var type;
+    $(document).ready(function () {
+        if (window.location.href.indexOf('quizz') !== -1) {
+            fillthem2();
+        } else {
+            fillthem();
+        }
+    });
+
+
+    $('body').on('click', 'img', function () {
+        $('.selec').removeClass('selec');
+        $(this).addClass('selec');
+
+        if (window.location.href.indexOf('quizz') !== -1) {
+            var note = 0;
+            if ($(this).attr("value") == 2) {
+                note = 4
+            }
+            var form = new FormData();
+            form.append("note", note);
+            $.ajax({
+                type: "POST",
+                url: "../savenote",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    window.location = "../main"
+                }
+            })
+        } else {
+
+            var form = new FormData();
+            form.append("idimage", $(this).attr("value"));
+            form.append("idtype", type);
+
+            $.ajax({
+                type: "POST",
+                url: "../saveselect",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    if (window.location.href.indexOf('main') !== -1) {
+                        window.location = "../main"
+                    } else if (window.location.href.indexOf('raw') !== -1) {
+                        window.location = "../raw"
+                    }
+                    else {
+                        $("#fill").empty();
+                        $("#brand").text(" Select the picture which best describe : ");
+                        fillthem();
+
+                    }
+                }
+            })
+        }
+    });
+
+
+    function fillthem() {
+        $.ajax({
+            type: "GET",
+            url: "../getselect",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                info = JSON.parse(data);
+                console.log(info.imgs);
+                $("#brand").append(info.name);
+                type = info.idtype;
+                info.imgs.forEach(function (img) {
+                    console.log('lalalala');
+                    $("#fill").append("<img id='imgsel' value='" + img.id + "' src='static/" + img.path + "' />")
+                })
+
+            }
+        });
+    }
+
+    function fillthem2() {
+
+        var imgues = ["static/assets/img/datasets/textualsaved/4.jpg", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "static/assets/img/datasets/textualsaved/10.jpg", "static/assets/img/datasets/quizz/3.png", "static/assets/img/datasets/textualsaved/211.jpg"];
+
+        $("#brand").append("Histogram");
+        var i = 0;
+        imgues.forEach(function (img) {
+            console.log('lalalala');
+            $("#fill").append("<img id='imgsel' value='" + i + "' src=" + img + " />")
+        })
+
+    }
+</script>
+
+
+</div>
+
+</body>
+
+</html>

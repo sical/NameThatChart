@@ -16,8 +16,14 @@ body {
 }
 
 #tinderslide {
-    position: relative;
-    background: #fff;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
     width: 95%;
     height: 100%;
 }
@@ -189,37 +195,39 @@ body {
 
 .test5 {
 
-
 }
 
 /* jTinder images */
 #tinderslide .pane5 .img {
-    width: 400px;
-    height: 400px;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
     background-size: cover;
 }
 
 #tinderslide .pane4 .img {
-    width: 400px;
-    height: 400px;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
     background-size: cover;
 }
 
 #tinderslide .pane3 .img {
-    width: 400px;
-    height: 400px;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
     background-size: cover;
 }
 
 #tinderslide .pane2 .img {
-    width: 400px;
-    height: 400px;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
     background-size: cover;
 }
 
 #tinderslide .pane1 .img {
-    width: 400px;
-    height: 400px;
+
     background-size: cover;
 }
 
@@ -230,4 +238,10 @@ body {
     font-family: arial;
     margin-top: 30px;
     font-weight: bold;
+}
+
+#tinderslide s {
+    width: 60%;
+    height: 50%;
+
 }

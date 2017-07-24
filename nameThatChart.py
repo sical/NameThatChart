@@ -17,6 +17,8 @@ import d3jsdownload as dl
 import imagePrep as pics
 import wget
 
+import readerDL as rd
+
 app = Flask(__name__)
 mysql = MySQL()
 
@@ -52,6 +54,22 @@ def vis10():
     return 'ok'
 
 
+@app.route("/tempdl")
+def tempdl():
+    result = []
+    rd.getimgtypes("static/assets/img/datasets/vis16cat/")
+    imgs = pics.getimgs("static/assets/img/datasets/vis16cat/")
+    for img in imgs:
+        print(img)
+        temp = img.split("_")
+        url = img.replace(str(os.getcwd()), "")
+        url = url.replace("static/", "")
+        result.append(ImgType(temp[0], ""))
+        result[len(result) - 1].path = url
+
+    return 'ok'
+
+
 # get d3js html from bl.ock and save it
 @app.route('/gethemall')
 def gethemall():
@@ -81,19 +99,21 @@ def downthumb():
 
 
 # fill database from "/static/assets/img/datasets/"
-@app.route('/maj')
-def maj():
-    imgs = pics.getimgs("./static/assets/img/datasets/")
+@app.route('/maj/<dir>')
+def maj(dir):
+    imgs = pics.getimgs("./static/assets/img/datasets/" + dir + "/")
     con = mysql.connect()
     cursor = con.cursor()
 
     for i in range(0, len(imgs)):
         path = imgs[i].replace("./static/", "")
-        cursor.execute("SELECT * FROM image WHERE imagepath LIKE '%" + path + "%' LIMIT 1")
+        temp = path.split("/")
+        cursor.execute("SELECT * FROM image WHERE imagepath LIKE '" + path + "' LIMIT 1")
         data = cursor.fetchone()
-
+        idtype = gettype(temp[len(temp - 1)].split("_")[0])[0]
         if data is None:
-            cursor.execute("INSERT INTO image (imagepath) VALUES ('" + path + "')")
+            cursor.execute(
+                "INSERT INTO image (imagepath,`from`,idtype) VALUES ('" + path + "','" + dir + "'," + str(idtype) + ")")
 
     cursor.close()
     con.commit()
@@ -108,6 +128,40 @@ def maj():
 @app.route('/')
 def hello_world():
     return render_template('index.html')
+
+
+@app.route('/simple')
+def simple():
+    return render_template('simple/simpleswipes.html')
+
+@app.route('/simpleup')
+def simpleup():
+    return render_template('simple/simpleuploadimg.html')
+
+
+@app.route('/txtsimple')
+def txtsimple():
+    return render_template('simple/textualsimple.html')
+
+
+@app.route('/simpleadmin')
+def simpledmin():
+    return render_template('simple/simpleadmin.html')
+
+
+@app.route('/imgsimple')
+def imgsimple():
+    return render_template('simple/simpletextualimg.html')
+
+
+@app.route('/simpleselect')
+def simpleselect():
+    return render_template('simple/simpleselect.html')
+
+
+@app.route('/simpledisplay')
+def simpledisplay():
+    return render_template('simple/simpledisplay_image.html')
 
 
 # Nav bar (testing)
@@ -210,10 +264,7 @@ def hybrid():
 def mainraw():
     a = randint(0, 300)
     if a < 100:
-        if randint(0, 100) < 50:
-            return render_template("textual.html")
-        else:
-            return render_template('textualimg.html')
+        return render_template('textualimg.html')
     elif a < 200:
         return render_template('selectimg.html')
     else:
@@ -233,19 +284,16 @@ def main():
         return redirect("/raw")
 
     if int(session.get("task")) > 80 and int(session.get("lvl")) > 0:
-        session['task'] += getcost(0, int(session.get("lvl")))
-        if randint(0, 100) < 50:
-            return render_template("textual.html")
-        else:
-            return render_template('textualimg.html')
+        session['task'] = str(int(session.get("task")) + getcost(0, int(session.get("lvl"))))
+        return render_template('textualimg.html')
     elif int(session.get("task")) > 50 and int(session.get("lvl")) > 0:
-        session['task'] += getcost(1, int(session.get("lvl")))
+        session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
         return render_template('selectimg.html')
     elif int(session.get("task")) > 50 and int(session.get("lvl")) == 0:
-        session['task'] += getcost(1, int(session.get("lvl")))
+        session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
         return render_template('selectimg.html')
     else:
-        session['task'] += getcost(2, int(session.get("lvl")))
+        session['task'] = str(int(session.get("task")) + getcost(2, int(session.get("lvl"))))
         return render_template('swipes.html')
 
 
@@ -445,18 +493,20 @@ def getfirstrow():
     con.close()
     return json.dumps(data)
 
+
 # Mapping to get image to display in Textualimg
 @app.route('/getnextimg')
 def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT imagepath,idimage FROM image WHERE `from` ='json' ORDER BY rand() LIMIT 1")
+    cursor.execute("SELECT imagepath,idimage FROM image WHERE `from` NOT LIKE 'generated' ORDER BY rand() LIMIT 1")
     data = cursor.fetchone()
     cursor.close()
     con.close()
     session['idimg'] = data[1]
     print(data[0])
     return "static/" + str(data[0])
+
 
 # Return User data to display into admin table
 @app.route('/userstats')
@@ -505,6 +555,7 @@ def getskip():
     con.close()
     return json.dumps(res)
 
+
 # Save upload of image (admin) with FORM
 @app.route('/saveupimg', methods=['POST'])
 def saveupimg():
@@ -533,6 +584,7 @@ def saveupimg():
     con.close()
 
     return 'ok'
+
 
 # Save upload of image (admin) with JSON
 @app.route("/upjsonimg", methods=['POST'])
@@ -606,6 +658,7 @@ def db2csv():
     cursor.close()
     con.close()
     return res
+
 
 # Group user rows and make average of time
 def getavg(page, skip, sub):
@@ -707,6 +760,7 @@ def saveselect():
 
     return 'ok'
 
+
 # Get set of images to display in selection
 @app.route('/getselect')
 def getselect():
@@ -718,8 +772,8 @@ def getselect():
     idtype = cursor.fetchone()
 
     cursor.execute(
-        "SELECT imagepath,image.idimage FROM textvote INNER JOIN image ON image.idimage = textvote.idimage WHERE idtype = " + str(
-            idtype[0]) + " ORDER BY rand() LIMIT 9")
+        "SELECT imagepath,image.idimage FROM textvote INNER JOIN image ON image.idimage = textvote.idimage WHERE textvote.idtype = " + str(
+            idtype[0]) + " ORDER BY rand() LIMIT 6")
 
     imgs = cursor.fetchall()
     cursor.close()
@@ -760,6 +814,7 @@ def getnext():
     con.close()
     return data[0]
 
+
 # Save Generated Chart from Textual (D3JS)
 @app.route('/saveimg', methods=['POST'])
 def saveimg():
@@ -783,6 +838,7 @@ def saveimg():
     cursor.close()
     con.close()
     return 'ok'
+
 
 # Log Textual user actions ( Page loaded , started typing etc ...)
 @app.route('/logaction', methods=['POST'])
@@ -825,6 +881,7 @@ def getimgbyid():
     con.close()
     return json.dumps(result)
 
+
 # Get set of 5 images & types to fill swipes
 @app.route('/getfive', )
 def getfive():
@@ -832,8 +889,8 @@ def getfive():
     cursor = con.cursor()
 
     cursor.execute("SELECT imagepath,idimage,max(number),idtype  "
-                   "FROM (SELECT image.idimage,imagepath ,count(idtype) AS number,idtype FROM selection INNER JOIN image ON image.idimage = selection.idimage "
-                   "GROUP BY image.idimage, idtype) AS temp GROUP BY idimage ORDER BY rand() LIMIT 5")
+                   "FROM (SELECT image.idimage,imagepath ,count(selection.idtype) AS number,selection.idtype FROM selection INNER JOIN image ON image.idimage = selection.idimage "
+                   "GROUP BY image.idimage, selection.idtype) AS temp GROUP BY idimage ORDER BY rand() LIMIT 5")
     data = cursor.fetchall()
 
     result = "[ "
@@ -853,6 +910,7 @@ def getfive():
     cursor.close()
     con.close()
     return result
+
 
 # Save one swipe on swipes
 @app.route('/saveswipe', methods=['POST'])
@@ -874,6 +932,7 @@ def saveswipe():
     con.close()
     return 'ok'
 
+
 # Get image from given type with SQL match (LIKE %%) used in display_image
 @app.route('/getimgbytype', methods=['POST'])
 def getimgbytype():
@@ -893,19 +952,6 @@ def getimgbytype():
     cursor.close()
     con.close()
     return json.dumps(result)
-
-
-@app.route('/getnextpic')
-def getnextpic():
-    con = mysql.connect()
-    cursor = con.cursor()
-    cursor.execute("SELECT imgpath FROM image  WHERE `from` ='json' ORDER BY RAND() LIMIT 1")
-
-    data = cursor.fetchone()
-
-    cursor.close()
-    con.close()
-    return data[0]
 
 
 def getposted(id):
@@ -963,25 +1009,13 @@ def gettype(typename):
     cursor.execute(q)
     data = cursor.fetchone()
     if data is None:
-
-        if "chart" in typename:
-            if "_chart" in typename or "-chart" in typename or ".chart" in typename:
-                typename = typename.replace("_", "chart")
-                typename = typename.replace("-", "chart")
-                typename = typename.replace(".", "chart")
-            else:
-                typename = typename.replace("chart", "_chart")
-            q = "SELECT idtype FROM type WHERE lower(label) LIKE '" + typename + "'"
-        cursor.execute(q)
-        data = cursor.fetchone()
-        if data is None:
-            query = "INSERT INTO type (label) VALUES ('" + typename.replace("_", " ") + "')"
-            cursor.execute(query)
-            con.commit()
-            cursor.execute("SELECT idtype FROM type WHERE lower(label) LIKE '" + typename.replace("_", " ") + "'")
-            data = cursor.fetchone()
-            cursor.close()
-            con.close()
+        query = "INSERT INTO type (label) VALUES ('" + typename.replace("_", " ") + "')"
+        cursor.execute(query)
+        con.commit()
+    cursor.execute("SELECT idtype FROM type WHERE lower(label) LIKE '" + typename.replace("_", " ") + "'")
+    data = cursor.fetchone()
+    cursor.close()
+    con.close()
     return data
 
 
@@ -1003,21 +1037,21 @@ def getcost(task, lvl):
         elif task == 1:
             cost = -5
         else:
-            cost = + 30
+            cost = + 60
     elif lvl == 2:
         if task == 0:
             cost = -15
         elif task == 1:
             cost = -10
         else:
-            cost = + 20
+            cost = + 40
     else:
         if task == 0:
             cost = -50
         elif task == 1:
             cost = -20
         else:
-            cost = +6
+            cost = +9
     print(str(cost) + "COUT")
     return cost
 

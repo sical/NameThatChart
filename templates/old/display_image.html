@@ -1,0 +1,106 @@
+{% include 'nav.html' %}
+
+
+<div class="center">
+    <div class="header center">
+        <h1> Type wanted image / type</h1>
+        <input id="sh" type="text" placeholder="Type Image ID or type">
+
+    </div>
+    <div id="fill">
+
+    </div>
+
+</div>
+
+
+
+<!-- jQuery Js -->
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var form = new FormData();
+        form.append("action", "_");
+        $.ajax({
+            type: "POST",
+            url: "../getimgbytype",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                var test_array = eval("[" + data + "]");
+
+                for (i = 0; i < test_array[0].length; i++) {
+                    $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")
+
+
+                }
+            }
+        })
+
+
+    });
+
+
+    $("#sh").on('input', function () {
+
+        $("#fill").empty();
+        if (!isNaN(parseInt($(this).val()))) {
+            var idimage = $(this).val();
+            var form = new FormData();
+
+
+            form.append("action", "" + idimage);
+            $.ajax({
+                type: "POST",
+                url: "../getimgbyid",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    var test_array = eval("[" + data + "]");
+                    for (i = 0; i < test_array.length; i++) {
+                        $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[i] + ">")
+
+                    }
+                }
+            })
+        }
+        else {
+            var idimage = $(this).val();
+            var form = new FormData();
+            form.append("action", "" + idimage);
+            $.ajax({
+                type: "POST",
+                url: "../getimgbytype",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function (data) {
+                    var test_array = eval("[" + data + "]");
+
+                    for (i = 0; i < test_array[0].length; i++) {
+                        $("#fill").append("<img style='border: solid 1px' height ='150px' width='300px' src=" + test_array[0][i] + ">")
+
+
+                    }
+                }
+            })
+        }
+    });
+
+
+</script>
+
+</div>
+
+</body>
+
+</html>

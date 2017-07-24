@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8">
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2016 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.org/
+-->
+
+
+<link rel="shortcut icon" href="/fileadmin/templates/images/favicon.ico" type="image/x-icon; charset=binary">
+<link rel="icon" href="/fileadmin/templates/images/favicon.ico" type="image/x-icon; charset=binary">
+
+<meta name="generator" content="TYPO3 CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta name="keywords" content="Ihre PVS">
+<meta name="description" content="Ihre PVS - Ihr Spezialist für Privat- und Kassenab­rechnungen - Schnell, individuell, absolut korrekt &amp; rechtssicher">
+
+
+<link rel="stylesheet" type="text/css" href="/typo3temp/compressor/merged-eefc85960f094e4731b29d93c28e8cd8-a984444cae143ca3743402859c8fe5aa.css?1500555635" media="all">
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/typo3temp/compressor/pvs-ie7-457c48939c1bb28a237092f5cc551e9e.css?1430837616" media="all"><![endif]-->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/typo3temp/compressor/merged-110b4577c05d33c8718d0a005568a002-f8b8c6ffaabe0f2238b4ef7fd74a2d25.js?1430837130" type="text/javascript"></script>
+
+
+<title>Startseite - Ihre PVS - Abrechnung im Gesundheitswesen</title><script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<!-- Container -->
+	<div id="container" class="
+	homepage
+	">
+		
+	    <!-- Start Header -->
+			<div class="hidden-header"></div>
+		    <header class="clearfix">
+		        
+				<!-- Start Header ( Logo and Navigation ) -->
+				<div class="navbar navbar-default navbar-top">
+					<div class="container">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/startseite/">
+								<img class="navbar-brand-logo" alt="" src="/fileadmin/templates/images/pvs_logo.png">
+							</a>
+						</div>
+						<div class="navbar-collapse collapse">
+		                    <!-- Start TopMetanavigation -->
+		                        <div class="pull-right" id="topmetanavigation">
+	<div class="clearfix">
+	
+		<div class="search-side pull-right">
+			<a href="#" class="show-search"><i class="icon-search"></i></a>
+			
+			<div class="search-form">
+				<form autocomplete="off" role="search" method="post" class="searchform" action="/unternehmen/unternehmen2/suchergebnisse/?no_cache=1" name="searchform" id="tx_indexedsearch"><input value="" type="text" class="searchbox-sword" placeholder="Suchbegriff eingeben..." id="s" name="tx_indexedsearch[sword]">    <input type="hidden" name="tx_indexedsearch[_sections]" value="0" />
+    <input type="hidden" name="tx_indexedsearch[pointer]" id="tx_indexedsearch_pointer" value="0" />
+    <input type="hidden" name="tx_indexedsearch[ext]" value="0" />
+    <input type="hidden" name="tx_indexedsearch[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_" />
+    </form>
+			</div>
+		</div>	
+		
+		<div class="customerlogin-side pull-right">
+			<a class="customerlogin " href="/pvs-leistungen/online-kundenbereich-pvs-dialog/"><i class="icon-lock-1"></i></a>
+		</div>
+		
+	</div>
+</div>
+
+		                    <!-- End TopMetanavigation -->
+		                    
+		                    <!-- Start Navigation List -->
+		                    	
+		<ul class="nav navbar-nav navbar-right">
+		
+		    
+		        
+			            
+								<li class="drop">				            
+	           		            	
+			           		            	<a title="PVS-Leistungen" href="/pvs-leistungen/niedergelassene-aerzte-praxen/">Leistungen</a>           		            		
+	           		            		
+
+				            		<ul class="dropdown droprightcontainer mainsubnavigation">
+						                
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Niedergelassene Ärzte &amp; Praxen" href="/pvs-leistungen/niedergelassene-aerzte-praxen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Niedergelassene Ärzte &amp; Praxen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+											            	<div class="container dropright">
+											            		<div class="row contents">
+											            			<div class="col-md-6 col-sm-12 col-xs-12 subnavigation">
+														            	<ul>
+															                
+															                    
+															                        <li><a title="Privatabrechnung" href="/pvs-leistungen/niedergelassene-aerzte-praxen/privatabrechnung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Privatabrechnung</span></a></li>
+															                    
+															                        <li><a title="Vorfinanzierung" href="/pvs-leistungen/niedergelassene-aerzte-praxen/vorfinanzierung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Vorfinanzierung</span></a></li>
+															                    
+															                        <li><a title="Forderungseinzug" href="/pvs-leistungen/niedergelassene-aerzte-praxen/forderungseinzug/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Forderungseinzug</span></a></li>
+															                    
+															                        <li><a title="Korrespondenz" href="/pvs-leistungen/niedergelassene-aerzte-praxen/korrespondenz/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Korrespondenz</span></a></li>
+															                    
+															                        <li><a title="Dokumentation" href="/pvs-leistungen/niedergelassene-aerzte-praxen/dokumentation/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Dokumentation</span></a></li>
+															                    
+															                        <li><a title="Abrechnungspakete" href="/pvs-leistungen/niedergelassene-aerzte-praxen/abrechnungspakete/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Abrechnungspakete</span></a></li>
+															                    
+															                        <li><a title="PVS dialog" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS dialog</span></a></li>
+															                    
+															                        <li><a title="PVS medident" href="/pvs-leistungen/niedergelassene-aerzte-praxen/pvs-medident/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS medident</span></a></li>
+															                    
+															                        <li><a title="Selektivverträge / Neue Versorgungsformen" href="/pvs-leistungen/niedergelassene-aerzte-praxen/selektivvertraege-neue-versorgungsformen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Selektivverträge / Neue Versorgungsformen</span></a></li>
+															                    
+															                
+														            	</ul>
+											            			</div>
+																	
+																		<div class="col-md-6 hidden-sm hidden-xs content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/Unterschreiben_Notieren/img_anmeldung_teaser_high.jpg); background-repeat: no-repeat; background-position: left center; background-size: 100%;">
+																			<div class="row">
+																				<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Wir sorgen dafür, dass Ihre Leistungen adäquat und rechtssicher honoriert werden - mit einer Erfolgsquote von nahezu 100 %.</h4></div>
+																			</div>
+																		</div>
+																	
+											            		</div>
+											            	</div>
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Kliniken &amp; Chefärzte" href="/pvs-leistungen/kliniken-chefaerzte/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Kliniken &amp; Chefärzte</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+											            	<div class="container dropright">
+											            		<div class="row contents">
+											            			<div class="col-md-6 col-sm-12 col-xs-12 subnavigation">
+														            	<ul>
+															                
+															                    
+															                        <li><a title="Privatabrechnung (PKV)" href="/pvs-leistungen/kliniken-chefaerzte/privatabrechnung-pkv/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Privatabrechnung (PKV)</span></a></li>
+															                    
+															                        <li><a title="Kassenabrechnung (GKV)" href="/pvs-leistungen/kliniken-chefaerzte/kassenabrechnung-gkv/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Kassenabrechnung (GKV)</span></a></li>
+															                    
+															                        <li><a title="Abrechnungsmanagement" href="/pvs-leistungen/kliniken-chefaerzte/abrechnungsmanagement/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Abrechnungsmanagement</span></a></li>
+															                    
+															                        <li><a title="Forderungsmanagement" href="/pvs-leistungen/kliniken-chefaerzte/forderungsmanagement/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Forderungsmanagement</span></a></li>
+															                    
+															                        <li><a title="Finanzmanagement" href="/pvs-leistungen/kliniken-chefaerzte/finanzmanagement/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Finanzmanagement</span></a></li>
+															                    
+															                        <li><a title="Management-Tools" href="/pvs-leistungen/kliniken-chefaerzte/management-tools/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Management-Tools</span></a></li>
+															                    
+															                        <li><a title="PVS dialog" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS dialog</span></a></li>
+															                    
+															                
+														            	</ul>
+											            			</div>
+																	
+																		<div class="col-md-6 hidden-sm hidden-xs content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/img_arzt-im-krankenzimmer_teaser-high.jpg); background-repeat: no-repeat; background-position: left center; background-size: 100%;">
+																			<div class="row">
+																				<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>So individuell wie jedes Krankenhaus, so individuell sind unsere maßgeschneiderten Abrechnungs­konzepte, denn wir sind Partner und Problemlöser.</h4></div>
+																			</div>
+																		</div>
+																	
+											            		</div>
+											            	</div>
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="MVZ &amp; Labore" href="/pvs-leistungen/mvz-labore/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">MVZ &amp; Labore</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+											            	<div class="container dropright">
+											            		<div class="row contents">
+											            			<div class="col-md-6 col-sm-12 col-xs-12 subnavigation">
+														            	<ul>
+															                
+															                    
+															                        <li><a title="MVZ" href="/pvs-leistungen/mvz-labore/mvz/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">MVZ</span></a></li>
+															                    
+															                        <li><a title="Labore" href="/pvs-leistungen/mvz-labore/labore/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Labore</span></a></li>
+															                    
+															                
+														            	</ul>
+											            			</div>
+																	
+																		<div class="col-md-6 hidden-sm hidden-xs content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/img_arzt-im-gespraech3_teaser-high.jpg); background-repeat: no-repeat; background-position: left center; background-size: 100%;">
+																			<div class="row">
+																				<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Wir stellen uns auf Ihre Gegebenheiten vor Ort ein und sorgen für eine transparente Abrechnung aller beteiligten Ärzte.</h4></div>
+																			</div>
+																		</div>
+																	
+											            		</div>
+											            	</div>
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Pflegeeinrichtungen" href="/pvs-leistungen/pflegeeinrichtungen/mit-uns-sparen-sie-zeit/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Pflegeeinrichtungen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+											            	<div class="container dropright">
+											            		<div class="row contents">
+											            			<div class="col-md-6 col-sm-12 col-xs-12 subnavigation">
+														            	<ul>
+															                
+															                    
+															                        <li><a title="Mit uns sparen Sie Zeit" href="/pvs-leistungen/pflegeeinrichtungen/mit-uns-sparen-sie-zeit/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Mit uns sparen Sie Zeit</span></a></li>
+															                    
+															                
+														            	</ul>
+											            			</div>
+																	
+																		<div class="col-md-6 hidden-sm hidden-xs content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/img_mann-brille-blaues-hemd_teaser-high.jpg); background-repeat: no-repeat; background-position: left center; background-size: 100%;">
+																			<div class="row">
+																				<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Wir sind die Experten, wenn es um die Abrechnung von Pflegeleistungen - wie Häusliche Krankenpflege, Pflegesachleistungen, Betreuungsleistungen, Verhinderungspflege, Beratungsbesuche - geht.</h4></div>
+																			</div>
+																		</div>
+																	
+											            		</div>
+											            	</div>
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		<li role="separator" class="divider"></li>
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Weiterempfehlen" href="/pvs-leistungen/weiterempfehlen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Weiterempfehlen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Fortbildung" href="/pvs-leistungen/fortbildung/seminare-inkl-anmeldung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Fortbildung</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+											            	<div class="container dropright">
+											            		<div class="row contents">
+											            			<div class="col-md-6 col-sm-12 col-xs-12 subnavigation">
+														            	<ul>
+															                
+															                    
+															                        <li><a title="Seminare (inkl. Anmeldung)" href="/pvs-leistungen/fortbildung/seminare-inkl-anmeldung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Seminare (inkl. Anmeldung)</span></a></li>
+															                    
+															                        <li><a title="Referenten" href="/pvs-leistungen/fortbildung/referenten/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Referenten</span></a></li>
+															                    
+															                        <li><a title="AGBs" href="/pvs-leistungen/fortbildung/agbs/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">AGBs</span></a></li>
+															                    
+															                
+														            	</ul>
+											            			</div>
+																	
+																		<div class="col-md-6 hidden-sm hidden-xs content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/PVS_forum/img_Seminar_Hand_teaser_high.jpg); background-repeat: no-repeat; background-position: left center; background-size: 100%;">
+																			<div class="row">
+																				<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Setzen Sie auf Qualität und profitieren Sie von unserem maßgeschneidertem Fortbildungsprogramm.</h4></div>
+																			</div>
+																		</div>
+																	
+											            		</div>
+											            	</div>
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Praxisbörse" target="_blank" href="/pvs-leistungen/praxisboerse/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Praxisbörse</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		<li role="separator" class="divider"></li>
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Online-Kundenbereich PVS dialog" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Online-Kundenbereich PVS dialog</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	
+						       		            		 
+											            	<div class="container dropright">
+											            		<div class="row contents">
+											            			<div class="col-md-6 col-sm-12 col-xs-12 subnavigation">
+														            	<ul>
+															                
+															                    
+															                        <li><a title="Zugangsdaten anfordern" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/zugangsdaten-anfordern/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Zugangsdaten anfordern</span></a></li>
+															                    
+															                        <li><a title="Papierlose Dokumentation" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/papierlose-dokumentation/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Papierlose Dokumentation</span></a></li>
+															                    
+															                
+														            	</ul>
+											            			</div>
+																	
+																		<div class="col-md-6 hidden-sm hidden-xs content" style="background-image:url(/fileadmin/user_upload/img_dialog_teaser_high.jpg); background-repeat: no-repeat; background-position: left center; background-size: 100%;">
+																			<div class="row">
+																				<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Profitieren Sie von den Möglichkeiten, die Ihnen unser Online-Kundenbereich PVS dialog bietet. Mit nur einem Klick erhalten Sie alle wichtigen Informationen zu Ihrer Rechnungsabwicklung und sind immer auf dem neuesten Stand.</h4></div>
+																			</div>
+																		</div>
+																	
+											            		</div>
+											            	</div>
+						       		            		 
+						       		            	                      	
+								                </li>
+						                    
+						                
+						                
+									        		<li class="servicesplaceholder">&nbsp;</li>							                						                
+						                
+				            		</ul>
+								</li>								
+				            
+			            
+		        
+			            
+								<li class="drop">				            
+	           		            	
+			           		            	<a title="Unternehmen" href="/unternehmen/unsere-maxime/">Unternehmen</a>           		            		
+	           		            		
+
+				            		<ul class="dropdown droprightcontainer mainsubnavigation">
+						                
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Unsere Maxime" href="/unternehmen/unsere-maxime/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Unsere Maxime</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="90 Jahre PVS" href="/unternehmen/90-jahre-pvs/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">90 Jahre PVS</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Unsere Unternehmen" href="/unternehmen/unsere-unternehmen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Unsere Unternehmen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Aufsichtsrat und Geschäftsführung" href="/unternehmen/aufsichtsrat-und-geschaeftsfuehrung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Aufsichtsrat und Geschäftsführung</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Zahlen &amp; Fakten" href="/unternehmen/zahlen-fakten/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Zahlen &amp; Fakten</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Arbeitgeber" href="/unternehmen/arbeitgeber/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Arbeitgeber</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Qualitätsmanagement" href="/unternehmen/qualitaetsmanagement/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Qualitätsmanagement</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Partner und Kooperationen" href="/unternehmen/partner-und-kooperationen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Partner und Kooperationen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Kundenmagazin &quot;PVS Einblick&quot;" href="/unternehmen/kundenmagazin-pvs-einblick/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Kundenmagazin &quot;PVS Einblick&quot;</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Kunstausstellung" href="/unternehmen/kunstausstellung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Kunstausstellung</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Pressemitteilungen" href="/unternehmen/pressemitteilungen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Pressemitteilungen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Veranstaltungen" href="/unternehmen/veranstaltungen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Veranstaltungen</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="Neuigkeiten" href="/unternehmen/neuigkeiten/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Neuigkeiten</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                
+						                
+				            		</ul>
+								</li>								
+				            
+			            
+		        
+			            
+								<li class="drop">				            
+	           		            	
+			           		            	<a title="Gesellschaften" href="/gesellschaften/">Gesellschaften</a>           		            		
+	           		            		
+
+				            		<ul class="dropdown droprightcontainer mainsubnavigation">
+						                
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="PVS rhein-ruhr" href="http://www.pvs-rr.de/startseite/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS rhein-ruhr</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="PVS berlin-brandenburg-hamburg" href="http://www.pvs-bbh.de/startseite/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS berlin-brandenburg-hamburg</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="PVS bayern" href="http://www.pvsbayern.de/startseite/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS bayern</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                    		
+						                    		
+						                        <li class="item">
+					           		            	
+							           		            	<a title="PVS Pria" href="http://www.pvs-pria.de/startseite/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS Pria</span></a>  		     
+					           		            							                        	
+						       		            	
+						       		            	                      	
+								                </li>
+						                    
+						                
+						                
+				            		</ul>
+								</li>								
+				            
+			            
+		        
+			            
+								<li>
+									<a title="Patienten-Service" href="/patienten-service/">Patienten-Service</a>				            
+								</li>							
+				            
+			            
+		        
+		    
+		    
+		    <!-- Start Additional Login-Link -->
+			<li class="customerlogin drop">
+				<a href="#" title="Kunden-Login"><span class="icon-lock-1 linkicon"></span> <span class="linklabel">Kunden-Login</span></a>
+				<ul class="dropdown droprightcontainer mainsubnavigation">
+					<li class="item item-no-hover">
+						<div class="col-sm-12">
+						  
+		
+
+		<form method="post" id="loginForm" action="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" autocomplete="on">
+	    <input value="on" name="_spring_security_remember_me" type="hidden">
+      <h4>PVS dialog</h4>
+      
+      
+			
+					<div class="form-group">
+						<select size="1" name="mandant" class="form-control input-sm" required="required">
+		          <option value="">Unternehmen wählen...</option>
+		          <option value="pvsmh" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvsmh/login?mode=passwort_vergessen">PVS rhein-ruhr</option>
+		          <option value="pvsbb" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvsbb/login?mode=passwort_vergessen">PVS berlin-brandenburg-hamburg</option>
+		          <option value="pvsbayern" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvsbayern/login?mode=passwort_vergessen">PVS bayern</option>  
+		          <option value="pvspr" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvspr/login?mode=passwort_vergessen">PVS pria</option>        
+		        </select>
+		      </div>
+				        
+      <div class="form-group">
+        <input placeholder="Nutzername" autofocus="autofocus" name="j_username" class="form-control input-sm" id="j_username" type="text" required="required">
+      </div>
+      <div class="form-group">
+        <input placeholder="Passwort" name="j_password" id="j_password" class="form-control input-sm" type="password" required="required">
+      </div>
+      <div class="form-group">
+      	<button class="btn btn-primary" value="Anmelden" type="submit">Anmelden</button>
+      </div>
+  		<div class="form-group">
+      	
+        		<a id="login-forgotten-passwort" href="https://mitglieder.pvs-dialog.de/PVSdialog/login" title="Neues Passwort anfordern" target="_blank">Passwort vergessen?</a>
+        	
+      </div>
+	  </form>
+	
+						</div>
+					</li>
+				</ul>
+			</li>		
+			<!-- End Additional Login-Link -->
+		</ul>
+	
+		                    <!-- End Navigation List -->
+						</div>
+					</div>
+				</div>
+		        <!-- End Header ( Logo and Navigation ) -->
+		      
+			</header>
+		<!-- End Header -->
+		
+		<!-- Start Body -->
+			<div id="content">			
+				
+				<div class="overlay hidden"></div>
+				<div class="background">
+					<div id="contentinner">
+						<div id="contentmain">
+							
+	<div class="container">
+			<div class="row widget widget-categories" id="sidebarnavigation">	
+				<div class="col-xs-12 teasercol">
+					<div id="contentnavigation" class="panel-group visible-xs" role="tablist" aria-multiselectable="true">		
+						<div class="clearfix">		
+							<div class="headline pull-left mainnavigation">
+								<!-- Start Toggle Nav Link For Mobiles -->
+								<button type="button"
+										class="navbar-toggle"
+										data-toggle="collapse"
+										data-parent="#contentnavigation"
+										data-target="#contentnavigation1"
+										aria-expanded="true"
+										aria-controls="contentnavigation1">
+									<i class="icon-home"></i>
+									Hauptmenü
+								</button>
+						        <!-- End Toggle Nav Link For Mobiles -->
+							</div>
+							
+							<div class="headline pull-left" id="mobilelogin">
+								<!-- Start Toggle Login For Mobiles -->
+								<button type="button"
+										class="navbar-toggle"
+										data-toggle="collapse"
+										data-parent="#contentnavigation"
+										data-target="#contentlogin"
+										aria-expanded="true"
+										aria-controls="contentlogin">
+									<i class="icon-lock-1"></i>
+								</button>
+						        <!-- End Toggle Login For Mobiles -->
+							</div>
+						</div>							
+						
+						<div class="panel">
+							<div class="panel-collapse collapse" id="contentnavigation1" aria-labelledby="contentnavigation1">
+								
+		<ul class="nav navbar-nav">
+		    
+		        
+		            <li><a title="PVS-Leistungen" href="/pvs-leistungen/niedergelassene-aerzte-praxen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS-Leistungen</span></a></li>
+		        
+		            <li><a title="Unternehmen" href="/unternehmen/unsere-maxime/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Unternehmen</span></a></li>
+		        
+		            <li><a title="Gesellschaften" href="/gesellschaften/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Gesellschaften</span></a></li>
+		        
+		            <li><a title="Patienten-Service" href="/patienten-service/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Patienten-Service</span></a></li>
+		        
+		    
+		</ul>
+	
+							</div>
+						</div>
+						
+						<div class="panel">
+							<ul class="panel-collapse sidenav collapse" role="tabpanel"  id="contentlogin" aria-labelledby="contentlogin">				
+								
+		<div class="col-sm-12">
+			
+		
+
+		<form method="post" id="loginForm" action="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" autocomplete="on">
+	    <input value="on" name="_spring_security_remember_me" type="hidden">
+      <h4>PVS dialog</h4>
+      
+      
+			
+					<div class="form-group">
+						<select size="1" name="mandant" class="form-control input-sm" required="required">
+		          <option value="">Unternehmen wählen...</option>
+		          <option value="pvsmh" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvsmh/login?mode=passwort_vergessen">PVS rhein-ruhr</option>
+		          <option value="pvsbb" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvsbb/login?mode=passwort_vergessen">PVS berlin-brandenburg-hamburg</option>
+		          <option value="pvsbayern" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvsbayern/login?mode=passwort_vergessen">PVS bayern</option>  
+		          <option value="pvspr" data-login-url="https://mitglieder.pvs-dialog.de/PVSdialog/j_spring_security_check" data-forgotten-password-url="https://mitglieder.pvs-dialog.de/PVSdialog/pvspr/login?mode=passwort_vergessen">PVS pria</option>        
+		        </select>
+		      </div>
+				        
+      <div class="form-group">
+        <input placeholder="Nutzername" autofocus="autofocus" name="j_username" class="form-control input-sm" id="j_username" type="text" required="required">
+      </div>
+      <div class="form-group">
+        <input placeholder="Passwort" name="j_password" id="j_password" class="form-control input-sm" type="password" required="required">
+      </div>
+      <div class="form-group">
+      	<button class="btn btn-primary" value="Anmelden" type="submit">Anmelden</button>
+      </div>
+  		<div class="form-group">
+      	
+        		<a id="login-forgotten-passwort" href="https://mitglieder.pvs-dialog.de/PVSdialog/login" title="Neues Passwort anfordern" target="_blank">Passwort vergessen?</a>
+        	
+      </div>
+	  </form>
+	
+		 </div>
+		      						
+							</ul>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="row" id="teaser">
+				<div class="col-md-3 headfont teasercol animated fadeInUp" id="teaserleft">
+					<div id="teaserleftcontainer">
+							<div id="teaserslogan"><div class="center"><h3>ABRECHNUNG</h3><h5>im Gesundheitswesen</h5></div></div>
+	
+							<!-- Teasernavigation -->
+				            
+				            
+	<ul id="teasernavigation" class="droprightcontainer">
+	    
+	        
+	        		
+            	
+	            <li class="item item39">
+		            
+			            	<a title="Niedergelassene Ärzte &amp; Praxen" href="/pvs-leistungen/niedergelassene-aerzte-praxen/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Niedergelassene Ärzte &amp; Praxen</span></a>
+       		            	
+			            	<div class="container dropright hidden-sm hidden-xs">
+			            		<div class="row contents">
+			            			
+					            			<div class="col-md-12 col-sm-12 col-xs-12 headline">
+					            				<h2>PVS-Leistungen</h2>
+					            			</div>
+			            				
+					            			<div class="col-md-6 col-sm-6 col-xs-6 subnavigation">
+								            	<ul>
+									                
+									                    
+									                        <li><a title="Privatabrechnung" href="/pvs-leistungen/niedergelassene-aerzte-praxen/privatabrechnung/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Privatabrechnung</span></a></li>
+									                    
+									                        <li><a title="Vorfinanzierung" href="/pvs-leistungen/niedergelassene-aerzte-praxen/vorfinanzierung/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Vorfinanzierung</span></a></li>
+									                    
+									                        <li><a title="Forderungseinzug" href="/pvs-leistungen/niedergelassene-aerzte-praxen/forderungseinzug/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Forderungseinzug</span></a></li>
+									                    
+									                        <li><a title="Korrespondenz" href="/pvs-leistungen/niedergelassene-aerzte-praxen/korrespondenz/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Korrespondenz</span></a></li>
+									                    
+									                        <li><a title="Dokumentation" href="/pvs-leistungen/niedergelassene-aerzte-praxen/dokumentation/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Dokumentation</span></a></li>
+									                    
+									                        <li><a title="Abrechnungspakete" href="/pvs-leistungen/niedergelassene-aerzte-praxen/abrechnungspakete/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Abrechnungspakete</span></a></li>
+									                    
+									                        <li><a title="PVS dialog" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS dialog</span></a></li>
+									                    
+									                        <li><a title="PVS medident" href="/pvs-leistungen/niedergelassene-aerzte-praxen/pvs-medident/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS medident</span></a></li>
+									                    
+									                        <li><a title="Selektivverträge / Neue Versorgungsformen" href="/pvs-leistungen/niedergelassene-aerzte-praxen/selektivvertraege-neue-versorgungsformen/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Selektivverträge / Neue Versorgungsformen</span></a></li>
+									                    
+									                
+								            	</ul>
+					            			</div>				            				
+			            				
+			            			
+			            			
+									
+										<div class="col-md-6 col-sm-6 col-xs-6 content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/Unterschreiben_Notieren/img_anmeldung_teaser_high.jpg); background-repeat: no-repeat; background-position: left top; background-size: 100%;">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Wir sorgen dafür, dass Ihre Leistungen adäquat und rechtssicher honoriert werden - mit einer Erfolgsquote von nahezu 100 %.</h4></div>
+											</div>
+										</div>
+									
+			            		</div>
+			            	</div>
+			            
+				</li>
+	        
+	        		
+            	
+	            <li class="item item504">
+		            
+			            	<a title="Kliniken &amp; Chefärzte" href="/pvs-leistungen/kliniken-chefaerzte/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Kliniken &amp; Chefärzte</span></a>
+       		            	
+			            	<div class="container dropright hidden-sm hidden-xs">
+			            		<div class="row contents">
+			            			
+					            			<div class="col-md-12 col-sm-12 col-xs-12 headline">
+					            				<h2>PVS-Leistungen</h2>
+					            			</div>
+			            				
+					            			<div class="col-md-6 col-sm-6 col-xs-6 subnavigation">
+								            	<ul>
+									                
+									                    
+									                        <li><a title="Privatabrechnung (PKV)" href="/pvs-leistungen/kliniken-chefaerzte/privatabrechnung-pkv/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Privatabrechnung (PKV)</span></a></li>
+									                    
+									                        <li><a title="Kassenabrechnung (GKV)" href="/pvs-leistungen/kliniken-chefaerzte/kassenabrechnung-gkv/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Kassenabrechnung (GKV)</span></a></li>
+									                    
+									                        <li><a title="Abrechnungsmanagement" href="/pvs-leistungen/kliniken-chefaerzte/abrechnungsmanagement/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Abrechnungsmanagement</span></a></li>
+									                    
+									                        <li><a title="Forderungsmanagement" href="/pvs-leistungen/kliniken-chefaerzte/forderungsmanagement/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Forderungsmanagement</span></a></li>
+									                    
+									                        <li><a title="Finanzmanagement" href="/pvs-leistungen/kliniken-chefaerzte/finanzmanagement/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Finanzmanagement</span></a></li>
+									                    
+									                        <li><a title="Management-Tools" href="/pvs-leistungen/kliniken-chefaerzte/management-tools/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Management-Tools</span></a></li>
+									                    
+									                        <li><a title="PVS dialog" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">PVS dialog</span></a></li>
+									                    
+									                
+								            	</ul>
+					            			</div>				            				
+			            				
+			            			
+			            			
+									
+										<div class="col-md-6 col-sm-6 col-xs-6 content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/img_arzt-im-krankenzimmer_teaser-high.jpg); background-repeat: no-repeat; background-position: left top; background-size: 100%;">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>So individuell wie jedes Krankenhaus, so individuell sind unsere maßgeschneiderten Abrechnungs­konzepte, denn wir sind Partner und Problemlöser.</h4></div>
+											</div>
+										</div>
+									
+			            		</div>
+			            	</div>
+			            
+				</li>
+	        
+	        		
+            	
+	            <li class="item item560">
+		            
+			            	<a title="MVZ &amp; Labore" href="/pvs-leistungen/mvz-labore/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">MVZ &amp; Labore</span></a>
+       		            	
+			            	<div class="container dropright hidden-sm hidden-xs">
+			            		<div class="row contents">
+			            			
+					            			<div class="col-md-12 col-sm-12 col-xs-12 headline">
+					            				<h2>PVS-Leistungen</h2>
+					            			</div>
+			            				
+					            			<div class="col-md-6 col-sm-6 col-xs-6 subnavigation">
+								            	<ul>
+									                
+									                    
+									                        <li><a title="MVZ" href="/pvs-leistungen/mvz-labore/mvz/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">MVZ</span></a></li>
+									                    
+									                        <li><a title="Labore" href="/pvs-leistungen/mvz-labore/labore/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Labore</span></a></li>
+									                    
+									                
+								            	</ul>
+					            			</div>				            				
+			            				
+			            			
+			            			
+									
+										<div class="col-md-6 col-sm-6 col-xs-6 content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/img_arzt-im-gespraech3_teaser-high.jpg); background-repeat: no-repeat; background-position: left top; background-size: 100%;">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Wir stellen uns auf Ihre Gegebenheiten vor Ort ein und sorgen für eine transparente Abrechnung aller beteiligten Ärzte.</h4></div>
+											</div>
+										</div>
+									
+			            		</div>
+			            	</div>
+			            
+				</li>
+	        
+	        		
+            	
+	            <li class="item item59">
+		            
+			            	<a title="Pflegeeinrichtungen" href="/pvs-leistungen/pflegeeinrichtungen/mit-uns-sparen-sie-zeit/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Pflegeeinrichtungen</span></a>
+       		            	
+			            	<div class="container dropright hidden-sm hidden-xs">
+			            		<div class="row contents">
+			            			
+					            			<div class="col-md-12 col-sm-12 col-xs-12 headline">
+					            				<h2>PVS-Leistungen</h2>
+					            			</div>
+			            				
+					            			<div class="col-md-6 col-sm-6 col-xs-6 subnavigation">
+								            	<ul>
+									                
+									                    
+									                        <li><a title="Mit uns sparen Sie Zeit" href="/pvs-leistungen/pflegeeinrichtungen/mit-uns-sparen-sie-zeit/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Mit uns sparen Sie Zeit</span></a></li>
+									                    
+									                
+								            	</ul>
+					            			</div>				            				
+			            				
+			            			
+			            			
+									
+										<div class="col-md-6 col-sm-6 col-xs-6 content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/img_mann-brille-blaues-hemd_teaser-high.jpg); background-repeat: no-repeat; background-position: left top; background-size: 100%;">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Wir sind die Experten, wenn es um die Abrechnung von Pflegeleistungen - wie Häusliche Krankenpflege, Pflegesachleistungen, Betreuungsleistungen, Verhinderungspflege, Beratungsbesuche - geht.</h4></div>
+											</div>
+										</div>
+									
+			            		</div>
+			            	</div>
+			            
+				</li>
+	        
+	        		
+            		<li class="divider" role="separator"></li>
+            	
+            	
+	            <li class="item item468">
+		            
+			            	<a title="Fortbildung" href="/pvs-leistungen/fortbildung/seminare-inkl-anmeldung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Fortbildung</span></a>
+       		            	
+			            	<div class="container dropright hidden-sm hidden-xs">
+			            		<div class="row contents">
+			            			
+					            			<div class="col-md-12 col-sm-12 col-xs-12 headline">
+					            				<h2>Seminare</h2>
+					            			</div>
+			            							            				
+					            			<div class="col-md-6 col-sm-6 col-xs-6 subnavigation seminars">
+						            			<ul>
+							            			
+							            				<li><strong>Typische Führungsfehler – Wie Mitarbeiter gehirngerecht führen? – Team Power III</strong><br><small>1. und 2.9.2017, 15 bis 20 und 10 bis 16 Uhr</small></li>
+													
+							            				<li><strong>Privatliquidation in der Psychiatrie und Psychotherapie</strong><br><small>06.09.2017, 15 bis 18:30 Uhr</small></li>
+													
+							            				<li><strong>Starke Worte – wirkungsvoll kommunizieren – Personal Power III</strong><br><small>6.9.2017, 14 bis 20 Uhr</small></li>
+													
+						            			</ul>
+						            			<div class="allseminars"><a href="/pvs-leistungen/fortbildung/seminare-inkl-anmeldung/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Alle Seminare anzeigen</span></a></div>
+					            			</div>				            				
+			            				
+			            			
+			            			
+									
+										<div class="col-md-6 col-sm-6 col-xs-6 content" style="background-image:url(/fileadmin/medien/redaktionelle_bilder/PVS_forum/img_Seminar_Hand_teaser_high.jpg); background-repeat: no-repeat; background-position: left top; background-size: 100%;">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Setzen Sie auf Qualität und profitieren Sie von unserem maßgeschneidertem Fortbildungsprogramm.</h4></div>
+											</div>
+										</div>
+									
+			            		</div>
+			            	</div>
+			            
+				</li>
+	        
+	        		
+            	
+	            <li class="item item480">
+		            
+							<a title="Praxisbörse" target="_blank" href="/pvs-leistungen/praxisboerse/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Praxisbörse</span></a>				            
+			            
+				</li>
+	        
+	        		
+            	
+            		<li class="divider" role="separator"></li>
+            	
+	            <li class="item item448">
+		            
+			            	<a title="Online-Kundenbereich PVS dialog" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/"><span class="icon-right-dir linkicon"></span> <span class="linklabel">Online-Kundenbereich PVS dialog</span></a>
+       		            	
+			            	<div class="container dropright hidden-sm hidden-xs">
+			            		<div class="row contents">
+			            			
+					            			<div class="col-md-12 col-sm-12 col-xs-12 headline">
+					            				<h2>PVS-Leistungen</h2>
+					            			</div>
+			            				
+					            			<div class="col-md-6 col-sm-6 col-xs-6 subnavigation">
+								            	<ul>
+									                
+									                    
+									                        <li><a title="Zugangsdaten anfordern" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/zugangsdaten-anfordern/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Zugangsdaten anfordern</span></a></li>
+									                    
+									                        <li><a title="Papierlose Dokumentation" href="/pvs-leistungen/online-kundenbereich-pvs-dialog/papierlose-dokumentation/">
+									                        <span class="icon-right-dir linkicon"></span> <span class="linklabel">Papierlose Dokumentation</span></a></li>
+									                    
+									                
+								            	</ul>
+					            			</div>				            				
+			            				
+			            			
+			            			
+									
+										<div class="col-md-6 col-sm-6 col-xs-6 content" style="background-image:url(/fileadmin/user_upload/img_dialog_teaser_high.jpg); background-repeat: no-repeat; background-position: left top; background-size: 100%;">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12 contentelements"><h4>Profitieren Sie von den Möglichkeiten, die Ihnen unser Online-Kundenbereich PVS dialog bietet. Mit nur einem Klick erhalten Sie alle wichtigen Informationen zu Ihrer Rechnungsabwicklung und sind immer auf dem neuesten Stand.</h4></div>
+											</div>
+										</div>
+									
+			            		</div>
+			            	</div>
+			            
+				</li>
+	        
+	    
+	</ul>
+
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-sm-8 col-xs-12 teasercol animated fadeInUp" id="teasermiddle">			
+					<div class="row">	
+							<div class="col-md-6 col-sm-6 col-xs-12 teasercol" id="teasermiddletopleft">
+								
+
+		<section class="brick hoverimage clearfix rasterfix rasterhover">
+			<article>
+				
+						<a href="/pvs-leistungen/niedergelassene-aerzte-praxen/pvs-medident/">
+							
+	
+		<figure>
+						<img src="/uploads/tx_cchoverimage/img_medident_teaserbreitneu_01.jpg" alt="KFO, MKG &amp; ZA"/>
+						
+							<figcaptionheadline>
+									<div class="rastercontent">
+										
+											<h3>KFO, MKG &amp; ZA</h3>
+										
+									</div>	
+							</figcaptionheadline>
+						
+						
+							
+							<figcaption>
+								<div class="rastercontent">		
+										
+											<h3>KFO, MKG &amp; ZA</h3>
+										
+										<p class="rastertext_small">Unsere Vorteilskonditionen</p>
+								</div>
+							</figcaption>
+												
+					</figure>	
+		
+	
+						</a>				
+					
+			</article></section>
+	
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12 teasercol" id="teasermiddletopright">
+								
+
+		<section class="brick hoverimage clearfix rasterfix rasterhover">
+			<article>
+				
+						<a href="/pvs-leistungen/kliniken-chefaerzte/management-tools/">
+							
+	
+		<figure>
+						<img src="/uploads/tx_cchoverimage/tablet-graphs.jpg" alt="Wichtige Management-Tools"/>
+						
+							<figcaptionheadline>
+									<div class="rastercontent">
+										
+											<h3>Wichtige Management-Tools</h3>
+										
+									</div>	
+							</figcaptionheadline>
+						
+						
+							
+							<figcaption>
+								<div class="rastercontent">		
+										
+											<h3>Wichtige Management-Tools</h3>
+										
+										<p class="rastertext_small">Mit Transparenz zu mehr Wirtschaftlichkeit!</p>
+								</div>
+							</figcaption>
+												
+					</figure>	
+		
+	
+						</a>				
+					
+			</article></section>
+		
+							</div>								
+					</div>
+				
+				
+					<div class="row">				
+						<div class="col-md-12 col-sm-12 col-xs-12 teasercol" id="teasermiddlebottom">
+							
+
+		
+				<div class="row highlightbox blue">
+					<div class="clearfix">
+						
+		
+				
+				<div class="pull-right"><img src="/uploads/tx_cchighlightbox/pfeile_blau_22x18px.png" alt="" class="img-responsive" /></div>
+				<div class="content-right">
+					
+						
+							<div class="content">
+								<p style="color: #fff; font-size: 18px; margin-bottom: 10px;" class="bodytext">PVS - Schnell, individuell, absolut korrekt &amp; rechtssicher</p>
+<p class="bodytext">Wir sind Ihr Spezialist für Privat- und Kassenab­rechnungen: Ob niederge­lassener Arzt, Chefarzt, Klinik, MVZ oder La­bor. Bei unseren Abrech­nungsexperten sind Sie in den besten Händen. Denn &quot;die Abrechnung im Gesundheits­wesen kommt von uns&quot; - von Ärzten für Ärzte, seit 1927.</p>
+							</div>
+					
+				</div>
+			
+	
+					</div>
+						
+				</div>
+					
+	   
+						</div>												
+					</div>		
+				</div>				
+				
+				<div class="col-md-3 col-sm-4 col-xs-12 teasercol animated fadeInUp" id="teaserright">
+					
+
+
+  <!-- <h4>Aktuelles:</h4>  -->
+  <div class="newsSlider">
+  <div class="newsSliderNavigation"></div>
+  
+  
+ 
+          
+ <a href="/unternehmen/pressemitteilungen/detail/article/pvs-holding-baut-standort-aus/" title="PVS holding baut Standort aus">
+          
+  <figure>
+    <img src="/typo3temp/_processed_/csm_teaser_grundsteinlegung_BER5661_78d31707b6.jpg" width="476" height="600"   alt="" >
+            
+    <figcaptionheadline>
+      <div class="rastercontent">
+          <h3>PVS holding baut Standort aus</h3>
+      </div>
+    </figcaptionheadline>
+            
+    <figcaption>
+      <div class="rastercontent">
+          <h3>PVS holding baut Standort aus</h3>
+          <p class="rastertext_small"><p>In einer Zeit von Individualität und den Bemühungen, viele unterschiedliche Kundenwünsche zu...</p></p>
+      </div>
+    </figcaption>
+  </figure>
+          
+  </a>
+          
+
+
+    
+ 
+          
+ <a href="/unternehmen/neuigkeiten/detail/article/bundesgesunndheitsminister-hermann-groehe-gratulierte-zum-90-jaehrigen-jubilaeum/" title="Bundesgesundheitsminister Hermann Gröhe gratulierte zum 90 jährigen Jubiläum">
+          
+  <figure>
+    <img src="/typo3temp/_processed_/csm_90_Jahre_PVS_groehe_f9f1b1dc91.jpg" width="476" height="600"   alt="" >
+            
+    <figcaptionheadline>
+      <div class="rastercontent">
+          <h3>Bundesgesundheitsminister Hermann Gröhe gratulierte zum 90 jährigen Jubiläum</h3>
+      </div>
+    </figcaptionheadline>
+            
+    <figcaption>
+      <div class="rastercontent">
+          <h3>Bundesgesundheitsminister Hermann Gröhe gratulierte zum 90 jährigen Jubiläum</h3>
+          <p class="rastertext_small"><p>Am 10. Mai feierte der PVS Rhein-Ruhr/Berlin-Brandenburg e.V. sein 90 jähriges Jubiläum mit einem...</p></p>
+      </div>
+    </figcaption>
+  </figure>
+          
+  </a>
+          
+
+
+    
+ 
+          
+ <a href="/unternehmen/kundenmagazin-pvs-einblick/" title="Die neue PVS Einblick ist da!">
+          
+  <figure>
+    <img src="/typo3temp/_processed_/csm_img_einblick_cover_web_0217_0ecfada216.jpg" width="424" height="600"   alt="" >
+            
+    <figcaptionheadline>
+      <div class="rastercontent">
+          <h3>Die neue PVS Einblick ist da!</h3>
+      </div>
+    </figcaptionheadline>
+            
+    <figcaption>
+      <div class="rastercontent">
+          <h3>Die neue PVS Einblick ist da!</h3>
+          <p class="rastertext_small"><p>Lesen Sie jetzt in der PVS Einblick:
+Titelthema: Timo Pritzel: Vom Bikeprofi zum...</p></p>
+      </div>
+    </figcaption>
+  </figure>
+          
+  </a>
+          
+
+
+    
+  </div>
+
+				</div>							
+			</div>
+
+	</div>
+
+						</div>
+					</div>
+	  		</div>				
+		<!-- End Body -->	
+		
+	  
+	    
+		<!-- Start Footer -->
+			<footer>
+				<!-- Start Footer Metanavigation -->
+					
+<div class="contact-widget">
+				<div class="contact-widget-trigger">
+					<h4 class="contact-widget-headline">Angebot anfordern</h4>
+				</div>
+				<div class="contact-widget-content">
+						<h5 class="contact-widget-subheadline">Sie haben Interesse an unserer Dienstleistung?</h5>
+						<p class="contact-widget-phone"><span class="glyphicon glyphicon-phone"></span> 0800 1025300</p>
+						<p class="contact-widget-description">Gerne erstellen wir Ihnen ein Angebot oder rufen Sie zurück.</p>
+						<a href="/kontakt/ihre-anfrage/#tab-4957-1" title="Angebot anfordern" class="btn btn-primary"><i class="icon-down-open-1 control-icon"></i> Angebot anfordern</a>
+				</div>
+			</div>
+			<div class="contact-widget-mobile">
+				<a class="btn-contact-phone" href="tel:08001025300" title="Anrufen"><span class="glyphicon glyphicon-phone"></span> <span class="phone-number">0800 1025300</span></a>
+			</div>
+
+				<!-- End Footer Metanavigation -->
+			  
+				<!-- Start Footer Location -->
+					<div id="footer-location">
+	<div class="container">
+		<div class="row">
+          
+			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+				<a title="PVS Holding" href="/gesellschaften/"><img class="img-footerlogo" src="/fileadmin/templates/images/pvs_holding_logo.jpg" alt=""></a>
+			</div>
+          
+            <div class="col-lg-6 col-md-8 col-sm-6 pvscompanies">
+				<div class="row logopvs">
+				
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<a href="http://www.pvs-rr.de/startseite/"><img class="img-footerlogo" src="/fileadmin/templates/images/pvs_rhein_ruhr.png" alt=""></a>
+					</div>
+	
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<a href="http://www.pvs-bbh.de/startseite/"><img class="img-footerlogo" src="/fileadmin/templates/images/pvs_berlin_brandenburg_hamburg.png" alt=""></a>
+					</div>
+					
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<a href="http://www.pvsbayern.de/startseite/"><img class="img-footerlogo" src="/fileadmin/templates/images/pvs_bayern.png" alt=""></a>
+					</div>
+					
+					<div class="col-md-2 col-sm-6 col-xs-12">
+						<a href="http://www.pvs-pria.de/startseite/"><img class="img-footerlogo" src="/fileadmin/templates/images/pvs_pria.png" alt=""></a>
+					</div>
+	
+				</div>
+			</div>
+            
+
+          
+    	    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-right pvstel">
+					<a href="tel:08001025300"><img class="img-footerlogo" src="/fileadmin/templates/images/pvs_hotline.png" alt="08001025300"></a>
+			</div>            
+			
+		</div>
+        
+	</div>
+</div>
+
+				<!-- End Footer Location -->
+		
+				<div id="footer-meta" class="container">
+					<div class="row">
+		              
+						<div class="col-md-8 col-sm-8 col-xs-12">
+							<a href="/kontakt/impressum/">Impressum</a> | <a href="/kontakt/nutzungsbedingungen/">Nutzungsbedingungen</a> | <a href="/kontakt/datenschutz/">Datenschutz</a> | <a href="/kontakt/bankverbindungen/">Bankverbindungen</a><br>
+							<a title="Webstatistik mit Piwik" href="/kontakt/datenschutz/#etracker">Webstatistik mit etracker </a><a href="https://www.etracker.de/privacy?et=KemcHV" target="_blank" title="Von der Datenspeicherung ausschließen">(von der Datenspeicherung ausschließen)</a>
+							<!--<a title="Rechtliche Hinweise" href="/kontakt/impressum/">Rechtliche Hinweise</a>-->
+						</div>
+						
+						<div class="col-md-4 col-sm-4 col-xs-12 clearfix">
+			                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 clearfix icons">
+							<a target="_blank" href="https://www.xing.com/companies/pvsholdinggmbh"><img class="pull-right img-responsive" src="/fileadmin/templates/images/xing_icon22.png" width="22" height="22" alt="" />
+							</a>&nbsp;
+							<a target="_blank" href="http://www.youtube.com/channel/UCMkcWNHD6GNCeknpQYPW2yA"><img class="pull-right img-responsive" src="/fileadmin/templates/images/youtube_icon22.png" width="22" height="22" alt="" /></a>
+			            </div>
+			          
+			                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 clearfix copyright">
+								<div class="pull-right">
+									&copy; 2017 PVS holding
+								</div>
+							</div>
+						</div>
+					</div>
+		            
+				</div>
+			</footer>
+		<!-- End Footer -->
+	</div>
+<!-- End Container -->
+
+<!-- Go To Top Link -->
+	<a href="#" class="back-to-top"><i class="icon-up-dir"></i></a>		
+	
+<!-- etracker -->
+	<!-- Copyright (c) 2000-2015 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+<!-- etracker tracklet 4.0 -->
+<script type="text/javascript">
+//var et_pagename = "";
+var et_areas = "IHREPVS";
+//var et_url = "";
+//var et_target = "";
+//var et_ilevel = 0;
+//var et_tval = "";
+//var et_cust = 0;
+//var et_tonr = "";
+//var et_tsale = 0;
+//var et_basket = "";
+//var et_lpage = "";
+//var et_trig = "";
+//var et_sub = "";
+//var et_se = "";
+//var et_tag = "";
+</script>
+<script id="_etLoader" type="text/javascript" charset="UTF-8" data-secure-code="KemcHV" src="//static.etracker.com/code/e.js"></script>
+<noscript><link rel="stylesheet" media="all" href="//www.etracker.de/cnt_css.php?et=KemcHV&amp;v=4.0&amp;java=n&amp;et_easy=0&amp;et_pagename=&amp;et_areas=&amp;et_ilevel=0&amp;et_target=,0,0,0&amp;et_lpage=0&amp;et_trig=0&amp;et_se=0&amp;et_cust=0&amp;et_basket=&amp;et_url=&amp;et_tag=&amp;et_sub=&amp;et_organisation=&amp;et_demographic=" /></noscript>
+<!-- etracker tracklet 4.0 end -->
+
+
+<!-- etracker -->
+
+<script src="/typo3temp/compressor/merged-414eec040f55a760e67c4e1f49a92ce5-1519c4468834057d69a34efe195a6edb.js?1500555635" type="text/javascript"></script>
+
+
+</body>
+</html>

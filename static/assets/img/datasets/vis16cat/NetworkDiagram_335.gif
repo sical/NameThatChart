@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ja" >
+
+
+
+
+
+<head>
+    
+    
+
+
+
+
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="NTTコミュニケーションズ,NTT Communications,NTT Com,NTTコム,NTT,電話,キャンペーン,イベント,OCN,ホスティング,インターネット,ニュース,ICT">
+<meta name="description" content="NTTコミュニケーションズ オフィシャルサイト。企業情報、採用情報や個人向けサービス・法人向けサービス・個人事業･中小法人向けサービス情報を掲載しています。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<title>NTTコミュニケーションズ　オフィシャルサイト</title>
+<meta name="title" content="NTTコミュニケーションズ　オフィシャルサイト" />
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/cmn/css/style.css">
+<link rel="stylesheet" media="screen and (max-width: 768px)" href="/etc/designs/nttcom/cmn/css/mq_tab.css">
+<link rel="stylesheet" media="screen and (max-width: 480px)" href="/etc/designs/nttcom/cmn/css/mq_mbl.css">
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/cmn/js/jquery.bxslider/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/cmn/css/breadcrumb.css"/>
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/cmn/js/colorbox/colorbox.css"/>
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/cmn/js/darktooltip/darktooltip.css">
+<link rel="stylesheet" media="print" type="text/css" href="/etc/designs/nttcom/cmn/css/print.css">
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/jquery.min.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/jquery.bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/jquery.sweet-scroll.min.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/common.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/breadcrumb.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/site_search.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/plugin_setting.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/darktooltip/jquery.darktooltip.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/cmn/css/top.css">
+    <script type="text/javascript" src="/etc/designs/nttcom/cmn/js/rss_notice.js"></script>
+    <script type="text/javascript" src="/etc/designs/nttcom/cmn/js/html_notice.js"></script>
+    <script type="text/javascript" src="/etc/designs/nttcom/cmn/js/jquery.matchHeight.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        if ( window.innerWidth <= 480 ) {
+            //横幅が480以下のときに
+            commonNs.txetRoundLength("#lower_section .inner_txt .txt p a", 30 , '...');
+        }
+    });
+    $(window).on('load resize', function(){
+        $('.adjustLine').matchHeight();
+    });
+    </script>
+    
+
+<link href="/etc/designs/default.css" rel="stylesheet" type="text/css"/>
+
+
+
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/eloqua.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/marketo.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/hq/jp/cmn/css/service_jp.css" media="all"/>
+
+
+
+
+<!-- google -->
+<meta name="google-site-verification" content="svSiVyEyXY6xODVl1duKj_VfETZc3wSLk9CyIPoBfVg" />
+<!-- /google -->
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/hq/jp/cmn/css/top20160401.css" media="all"/>
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/hq/jp/cmn/css/jp_top.css" media="all"/>
+<link rel="stylesheet" type="text/css" href="/etc/designs/nttcom/hq/jp/index/css/top_jp.css" media="all">
+
+<style type="text/css">
+<!--
+.AttentionWrap3 p, .AttentionWrap3 a {
+   color: #FFFFFF;
+}
+.AttentionWrap3 p:not(:last-child) {
+   margin-bottom:10px;
+}
+-->
+</style>
+
+</head>
+
+
+
+
+
+<body>
+    <div class="wrapper">
+        
+
+
+
+
+
+
+
+<header>
+    <div class="AttentionWrap">
+        <div class="Attention cf">
+        </div>
+    </div>
+    <div class="AttentionWrap3">
+        <div class="Attention cf">
+
+            <div class="parNotice parsys">
+</div>
+
+
+	    </div>
+    </div>
+    <div class="cf menuWrap">
+        <div class="Logo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h1>
+
+<a href="http://www.ntt.com/">
+    <img src="/content/dam/nttcom/cmn/img/lgo-ntt.png" alt="NTT Communications" class="logo-ntt f-l">
+</a>
+
+		</h1>
+
+
+</div>
+
+        <div id="menuArea" class="cf">
+            <ul>
+                <li class="langBt"><a href=""><img alt="Global Site" src="/content/dam/nttcom/cmn/img/icn-country-selector.png"></a></li>
+                <li class="searchBt"><a href=""><img alt="Search" src="/content/dam/nttcom/cmn/img/icn-search.png"></a></li>
+                <li class="menuBt"><a href=""><div>MENU</div></a></li>
+            </ul>
+        </div>
+        <div class="BreadCrumb"></div>
+
+    </div>
+</header>
+<div class="MenuHQJp">
+	<!-- global navi -->
+	<nav class="naviBox">
+		<div class="slideNavi index_n_top">
+			<div class="inner">
+				<div class="navLink">
+					<ul>
+						<li class="langBt"><a href=""><img src="/content/dam/nttcom/cmn/img/icn-country-selector.png" alt="Global Site"></a></li>
+						<li class="searchBt"><a href=""><img src="/content/dam/nttcom/cmn/img/icn-search.png" alt="Search"></a></li>
+						<li class="currentItem"><div>MENU</div></li>
+						<li class="closeBtn"><a href=""><img src="/content/dam/nttcom/cmn/img/btn-close-x.png" alt="Close"></a></li>
+					</ul>
+				</div>
+
+				<!-- navi open -->
+				<div class="menu scrollY-on">
+					<ul>
+						<li class="naviBox_menuItem">
+							<span class="naviBox_toggle-open"><img src="/content/dam/nttcom/cmn/img/icon_business.png" alt="法人のお客さま"><a href="/business.html">法人のお客さま</a></span>
+							<ul class="naviBox_toggleMenu disBlock">
+								<li><a href="/business/services.html">サービス</a></li>
+                                <li><a href="/business/solutions.html">ソリューション</a></li>
+								<li><a href="/business/case-studies.html">導入事例</a></li>
+								<li><a href="/business/campaign.html">キャンペーン</a></li>
+								<li><a href="/business/event.html">イベント／セミナー</a></li>
+							</ul>
+						</li>
+						<li class="naviBox_menuItem">
+							<span class="naviBox_toggle-open"><img src="/content/dam/nttcom/cmn/img/icon_personal.png" alt="個人のお客さま"><a href="http://506506.ntt.com/">個人のお客さま</a></span>
+							<ul class="naviBox_toggleMenu disBlock">
+								<li><a href="/personal-services-internet.html">インターネット接続</a></li>
+								<li><a href="/personal-services-mobile.html">モバイル</a></li>
+								<li><a href="/personal-services-option.html">オプション</a></li>
+								<li><a href="/personal-services-phone.html">電話</a></li>
+                            </ul>
+						</li>
+
+					</ul>
+					<ul class="mgt30 mgl40">
+						<li><a href="/about-us.html">企業情報</a><br><br></li>
+						<li><a href="/resources.html">リソースセンター</a><br><br></li>
+						<li><a href="http://support.ntt.com/">お客さまサポート</a><br><br></li>
+						<li><a href="/sitemap.html">サイトマップ</a></li>
+                    </ul>
+				</div>
+				<!-- /navi open -->
+
+			</div><!-- /.inner -->
+		</div>
+	</nav><!-- /global navi -->
+
+</div>
+
+<div class="SearchHQ">
+
+
+
+
+
+<!-- searchBox -->
+<div class="searchBox">
+    <div class="slideNavi">
+        <div class="inner">
+            <div class="cf">
+                <div class="navLink">
+                    <ul>
+                        <li class="langBt"><a href=""><img src="/content/dam/nttcom/cmn/img/icn-country-selector.png" alt="Global Site"></a></li>
+                        <li class="currentItem"><img src="/content/dam/nttcom/cmn/img/icn-search-white.png" alt="Search"></li>
+                        <li class="menuBt"><a href=""><div>メニュー</div></a></li>
+                        <li class="closeBtn"><a href=""><img src="/content/dam/nttcom/cmn/img/btn-close-x.png" alt="Close"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- search open -->
+            <div class="searchBox_itemWrap">
+                <form action="http://nttcommunications.search.goo.ne.jp/search.php" method="get" name="gs" id="gs">
+                    <fieldset>
+                        <input type="hidden" name="from" value="ntt-com">
+                        <input type="hidden" name="PT" value="ntt-com">
+                        <input type="hidden" name="IE" value="utf-8">
+                        
+                        <div id="header_search1">
+                            <input name="MT" type="text" class="searchInput" maxlength="256" placeholder="サイト内検索">
+                            <input id="sideSearchBtngoo" type="submit" value="検索">
+                            <div class="slideNavi_powered">
+							    <a href="http://www.goo.ne.jp/" target="_blank"><img src="/content/dam/nttcom/cmn/img/pgoo.png" alt="powered by goo"></a>
+							</div>
+                        </div>
+						<select name="SEL">
+						
+							<option value="all" selected="selected">検索結果の絞り込みを行う</option>
+						
+							<option value="all">サイト内全体から検索</option>
+						
+							<option value="506506">個人のお客さま</option>
+						
+							<option value="bizall">法人のお客さま</option>
+						
+							<option value="ocn">OCN</option>
+						
+							<option value="b-ocn">B-OCN</option>
+						
+							<option value="support">サポート情報</option>
+						
+							<option value="jirei">導入事例</option>
+						
+							<option value="spc">セールスパートナー</option>
+						
+							<option value="aboutus">企業情報</option>
+						
+							<option value="others">ニュースリリース</option>
+						
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- /search open -->
+        </div>
+    </div>
+</div>
+<!-- /searchBox -->
+</div>
+
+<div class="CLSelector">
+ <!-- languageBox -->
+ <div class="languageBox">
+  <div class="slideNavi">
+   <div class="inner">
+    <div class="navLink">
+     <ul>
+      <li class="currentItem"><img src="/content/dam/nttcom/cmn/img/icn-country-selector-white.png" alt="Global Site"></li>
+      <li class="searchBt"><a href=""><img src="/content/dam/nttcom/cmn/img/icn-search.png" alt="Search"></a></li>
+      <li class="menuBt"><a href=""><div>メニュー</div></a></li>
+      <li class="closeBtn"><a href=""><img src="/content/dam/nttcom/cmn/img/btn-close-x.png" alt="Close"></a></li>
+     </ul>
+    </div>
+    <div class="languageBox_itmeWrap scrollY-on">
+     <div class="selectLanguage">
+      <span class="ttl">Select Language : </span>
+      <a href="/en/index.html"><span class="langlist">English</span></a>
+      <span class="langlist">日本語</span>
+     </div>
+     
+					<div class="langInner">
+						<div class="cf">
+							<div class="leftArea">
+								<h3>南北アメリカ</h3>
+								<table class="lang">
+									<tr>
+										<th>ブラジル:</th>
+										<td>
+											<a href="http://www.br.ntt.com/en/index.html">English</a> / <a href="http://www.br.ntt.com/jp/index.html">日本語</a> / <a href="http://www.br.ntt.com/pt/index.html">Português do Brasil</a>
+										</td>
+									</tr>
+									<tr>
+										<th>アメリカ:</th>
+										<td>
+											<a href="http://www.us.ntt.com/en/index.html">English</a>
+										</td>
+									</tr>
+								</table>
+
+								<h3>ヨーロッパ、中東、アフリカ（EMEA）</h3>
+								<table class="lang">
+									<tr>
+										<th>
+											EMEA:<br>
+											<span>(ベルギー, フランス, ドイツ, オランダ, スペイン, アラブ首長国連邦, イギリス)</span>
+										</th>
+										<td>
+											<a href="http://www.eu.ntt.com/en/index.html">English</a> / <a href="http://www.eu.ntt.com/jp/index.html">日本語</a> / <a href="http://www.eu.ntt.com/es/index.html">Español</a> / <a href="http://www.eu.ntt.com/de/index.html">Deutsch</a> / <a href="http://www.eu.ntt.com/fr/index.html">Français</a>
+										</td>
+									</tr>
+									<tr>
+										<th>ロシア:</th>
+										<td>
+											<a href="http://www.ru.ntt.com/en/index.html">English</a> / <a href="http://www.ru.ntt.com/jp/index.html">日本語</a> / <a href="http://www.ru.ntt.com/ru/index.html">русский</a>
+										</td>
+									</tr>
+								</table>
+
+							</div>
+							<div class="rightArea">
+								<h3>アジアパシフィック</h3>
+
+								<table class="lang">
+									<tr>
+										<th>日本(法人のお客さま):</th>
+										<td>
+											<a href="http://www.ntt.com/en/business.html">English</a> / <a href="http://www.ntt.com/business.html">日本語</a>
+										</td>
+									</tr>
+									<tr>
+										<th>日本(個人のお客さま):</th>
+										<td>
+											<a href="http://www.ntt.com/en/personal.html">English</a> / <a href="http://www.ntt.com/personal.html">日本語</a>
+										</td>
+									</tr>
+									<tr>
+										<th>オーストラリア(NTT Com ICT Solutions):</th>
+										<td>
+											<a href="https://www.nttict.com/">English</a>
+										</td>
+									</tr>
+									<tr>
+										<th>中国本土:</th>
+										<td>
+											<a href="http://www.cn.ntt.com/en/index.html">English</a> / <a href="http://www.cn.ntt.com/jp/index.html">日本語</a> / <a href="http://www.cn.ntt.com/sc/index.html">簡體中文</a>
+										</td>
+									</tr>
+									<tr>
+										<th>香港/マカオ:</th>
+										<td>
+											<a href="http://www.hk.ntt.com/en/index.html">English</a> / <a href="http://www.hk.ntt.com/jp/index.html">日本語</a> / <a href="http://www.hk.ntt.com/tc/index.html">繁体中文</a> / <a href="http://www.hk.ntt.com/sc/index.html">簡體中文</a>
+										</td>
+									</tr>
+									<tr>
+										<th>インド:</th>
+										<td>
+											<a href="http://www.in.ntt.com/en/index.html">English</a> / <a href="http://www.in.ntt.com/jp/index.html">日本語</a>
+										</td>
+									</tr>
+									<tr>
+										<th>インドネシア:</th>
+										<td>
+											<a href="http://www.id.ntt.com/en/index.html">English</a>
+										</td>
+									</tr>
+									<tr>
+										<th>韓国:</th>
+										<td>
+											<a href="http://www.kr.ntt.com/en/index.html">English</a> / <a href="http://www.kr.ntt.com/jp/index.html">日本語</a> / <a href="http://www.kr.ntt.com/kr/index.html">한국어</a>
+										</td>
+									</tr>
+									<tr>
+										<th>マレーシア:</th>
+										<td>
+											<a href="http://www.my.ntt.com/en/index.html">English</a>
+										</td>
+									</tr>
+									<tr>
+										<th>フィリピン(DTSI):</th>
+										<td>
+											<a href="http://www.dtsigroup.com/">English</a>
+										</td>
+									</tr>
+									<tr>
+										<th>シンガポール:</th>
+										<td>
+											<a href="http://www.sg.ntt.com/en/index.html">English</a> / <a href="http://www.sg.ntt.com/jp/index.html">日本語</a>
+										</td>
+									</tr>
+									<tr>
+										<th>台湾:</th>
+										<td>
+											<a href="http://www.tw.ntt.com/en/index.html">English</a> / <a href="http://www.tw.ntt.com/jp/index.html">日本語</a> / <a href="http://www.tw.ntt.com/tc/index.html">繁体中文</a>
+										</td>
+									</tr>
+									<tr>
+										<th>タイ:</th>
+										<td>
+											<a href="http://www.th.ntt.com/en/index.html">English</a> / <a href="http://www.th.ntt.com/jp/index.html">日本語</a>
+										</td>
+									</tr>
+									<tr>
+										<th>ベトナム:</th>
+										<td>
+											<a href="http://www.vn.ntt.com/en/index.html">English</a> / <a href="http://www.vn.ntt.com/jp/index.html">日本語</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- /languageBox -->
+</div>
+
+
+
+
+        <main class="index">
+            <div class="sectioning">
+                <div class="sectioning_layout-outer">
+                    <div class="sectioning_layout-inner">
+
+                        <div class="upperWrap">
+                            <section class="upper_section cf">
+                                <div class="CarouselTopHQ">
+<script type="text/javascript">
+$(function() {
+ $("#main_slider").bxSlider({
+  speed: 300,
+  pause: 5000,
+  auto: true,
+  autoStart: true,
+  slideSelector: '.slide_item',
+  adaptiveHeight: true,
+  mode: 'fade',
+  touchEnabled: true
+ });
+});
+</script>
+<div class="slide_area">
+ <div id="main_slider">
+  <div class="slide_item slide_item-01">
+   <a href="/about-us/we-are-innovative/sdx" target="_self">
+    <img src="/content/dam/nttcom/hq/jp/index/img/sdx+m_pc.png" class="slide_item_desktop" title="SDx+M (Software Defined Everything + Management)" alt="SDx+M (Software Defined Everything + Management)">
+    <img src="/content/dam/nttcom/hq/jp/index/img/sdx+m_sp.png" class="slide_item_mobile" title="SDx+M (Software Defined Everything + Management)" alt="SDx+M (Software Defined Everything + Management)">
+    <div class="slide_item_inner">
+     <div class="inner_txtWrap">
+      <div class="inner_txt">
+       <p class="fs-18 fc-bk  middle center"></p>
+       <span class="fs-18 fc-bk  middle center"></span>
+      </div>
+     </div>
+    </div>
+   </a>
+  </div>
+  <div class="slide_item slide_item-02">
+   <a href="/business/case-studies/global/cloud/nissan.html" target="_self">
+    <img src="/content/dam/nttcom/hq/jp/index/img/cmn_pc_main_index_nissan.png" class="slide_item_desktop" title="" alt="">
+    <img src="/content/dam/nttcom/hq/jp/index/img/cmn_pc_main_index_nissan_mobv.png" class="slide_item_mobile" title="" alt="">
+    <div class="slide_item_inner">
+     <div class="inner_txtWrap">
+      <div class="inner_txt">
+       <p class="fs-18 fc-bk  middle center"></p>
+       <span class="fs-18 fc-bk  middle center"></span>
+      </div>
+     </div>
+    </div>
+   </a>
+  </div>
+  <div class="slide_item slide_item-03">
+   <a href="/business/lp/f1.html" target="_self">
+    <img src="/content/dam/nttcom/hq/jp/index/img/cmn_pc_main_index_maclaren_hondav3.png" class="slide_item_desktop" title="" alt="">
+    <img src="/content/dam/nttcom/hq/jp/index/img/cmn_pc_main_index_mclaren_honda_mobv3.png" class="slide_item_mobile" title="" alt="">
+    <div class="slide_item_inner">
+     <div class="inner_txtWrap">
+      <div class="inner_txt">
+       <p class="fs-18 fc-bk  middle center"></p>
+       <span class="fs-18 fc-bk  middle center"></span>
+      </div>
+     </div>
+    </div>
+   </a>
+  </div>
+ </div>
+</div>
+</div>
+
+                                <div class="nav_area allPd">
+                                    <div class="text parbase Txt">
+
+<div class="nav_warp"><div class="firstChild2 cf"><div class="nav_box_wrap"><div class="nav_box nav_box2" style="opacity: 1; vertical-align: bottom;" isrender="true"><a href="/personal.html"><div class="image_component b-center"><img src="/content/dam/nttcom/hq/jp/img/icon_business.png"></div>
+<p>個人の<br>
+お客さま</p>
+</a></div>
+<div class="nav_box nav_box2" style="opacity: 1; vertical-align: bottom;" isrender="true"><a href="/business.html"><div class="image_component b-center"><img src="/content/dam/nttcom/hq/jp/img/icon_personal.png"></div>
+<p>法人の<br>
+お客さま</p>
+</a></div>
+<div class="nav_box nav_box2" style="opacity: 1; vertical-align: bottom;" isrender="true"><a href="http://support.ntt.com/"><div class="image_component b-center"><img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_menu_support.png"></div>
+<p>工<span style="letter-spacing: -0.3em; font-size: inherit;">事・</span>故障<br>
+サポート</p>
+</a></div>
+<div class="nav_box nav_box2" style="opacity: 1; vertical-align: bottom;" isrender="true"><a href="/about-us.html"><div class="image_component b-center"><img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_menu_company.png"></div>
+<p>企業情報<br>
+<br>
+</p>
+</a></div>
+</div>
+</div>
+<div class="indexNewsWrap"><div class="ttlArea cf"><p>プレスリリース</p>
+<div class="link_component"><a href="/about-us/press-releases.html">一覧を見る</a></div>
+</div>
+<div class="newsList"><div class="news"><p class="date">2017年7月24日</p>
+<a href="/about-us/press-releases/news/article/2017/0724_2.html">日本のMVNOとして初めて、eSIMの実証実験を開始</a></div>
+<div class="news"><p class="date">2017年7月24日</p>
+<a href="/about-us/press-releases/news/article/2017/0724.html" adhocenable="false">働き方改革運動「テレワーク・デイ」で約800名のテレワークを実施</a></div>
+<div class="news"><p class="date">2017年7月21日</p>
+<a href="/about-us/press-releases/news/article/2017/0721.html">「IVIつながるものづくりアワード2017」にて「最優秀賞」を受賞</a></div>
+</div>
+<div class="ttlArea eventTtl cf"><p>セミナー・イベント情報</p>
+<div class="link_component"><a href="/business/event.html">一覧を見る</a></div>
+</div>
+<div class="newsList"><div class="news"><p class="date">2017年8月3日</p>
+<a href="/business/event.html#event_0803">Japan Enterprise Infrastructure Vision 2017</a></div>
+<div class="news"><p class="date">2017年7月26日～28日</p>
+<a href="/business/event.html#event_0728">第4回 ワークスタイル変革 EXPO</a></div>
+</div>
+</div>
+</div>
+
+</div>
+
+                                </div>
+                                <div class="HTML">
+
+
+
+
+
+</div>
+
+                            </section>
+                        </div>
+
+                        <div class="lowerWrap">
+                            <section id="lower_section">
+                                <div class="rows">
+                                    <div class="TopKeyVisualTxtLink">
+
+
+
+
+<div class="keyVisual">
+ <p class="car"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_ict_business_online.png" title="" alt=""></p>
+ <div class="detail-conts">
+  <div class="inner_conts">
+   <p><img src="/content/dam/nttcom/hq/jp/img/bg_black.png" title="" alt=""></p>
+   <div class="inner_txt">
+    <p class="icon"><img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_30_casestudy.png" title="" alt=""></p>
+    <h2 class="fs-14 fw-bold fc-wh"></h2>
+    <div class="txt">
+     <p>
+      <a href="/bizon" class="fc-wh">ICT BUSINESS ONLINE<br>
+<br>
+<br>
+<br>
+詳しくはこちら 》</a>
+     </p>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="detail-conts upper-layer">
+  <div class="inner_conts">
+   <p><img src="/content/dam/nttcom/hq/cmn/img/bg_black-alpha.png" alt=""></p>
+   <div class="inner_txt">
+    <div class="txt">
+     <p>
+      <a href="/bizon" class="fc-wh">詳しくはこちら 》
+</a>
+     </p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+                                    <div class="conpBox col_1">
+                                        <div class="TopIntroTxtLink TopIntroTxtLink01">
+
+
+
+
+<div class="detail-conts">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/hq/jp/img/bg_yellow.png" title="" alt=""></p>
+  <div class="inner_txt">
+   <p class="icon"><img src="" title="" alt=""></p>
+   <h2 class="fs-14 fw-bold fc-bk">                                     </h2>
+   <div class="txt">
+    <p>
+     <a href="/about-us/we-are-innovative/sdx" class="fc-bk"><p><b>SDx+M</b><br><br>柔軟で俊敏性の高いICT環境と、ICT環境全体の一元的・効率的な運用管理を実現する「SDx+M」ソリューションのご紹介</p></a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="detail-conts upper-layer">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/cmn/img/bg_yellow-alpha.png" alt=""></p>
+  <div class="inner_txt">
+   <div class="txt">
+    <p>
+     <a href="/about-us/we-are-innovative/sdx" class="fc-bk">詳しくはこちら
+</a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+                                    </div>
+                                    <div class="conpBox col_2">
+                                        <div class="TopIntroTxtLink TopIntroTxtLink02">
+
+
+
+
+<div class="detail-conts">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/hq/jp/img/bg_purple.png" title="" alt=""></p>
+  <div class="inner_txt">
+   <p class="icon"><img src="/content/dam/nttcom/cmn/img/cmn_ic_30_analystreports.png" title="" alt=""></p>
+   <h2 class="fs-14 fw-bold fc-wh">アナリストレポート</h2>
+   <div class="txt">
+    <p>
+     <a href="//info.us.ntt.com/Gartner-MQ-Network-Services-Global.html?LS=SM_CRC_GartnerMQ_LI_1Q17" target="_blank" class="fc-wh">グローバル通信事業者評価レポートで「リーダー」の評価を4年連続で獲得</a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="detail-conts upper-layer">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/cmn/img/bg_purple-alpha.png" alt=""></p>
+  <div class="inner_txt">
+   <div class="txt">
+    <p>
+     <a href="//info.us.ntt.com/Gartner-MQ-Network-Services-Global.html?LS=SM_CRC_GartnerMQ_LI_1Q17" target="_blank" class="fc-wh">詳しくはこちら
+</a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="PressLatestListTopHQ">
+
+
+
+
+
+
+<div class="pressReleases">
+    <div class="detail-conts">
+        <div class="inner_conts">
+            <p><img src="/content/dam/nttcom/cmn/img/bg_blue-large.png"></p>
+            <div class="inner_txt">
+                <p class="icon"><img src="/content/dam/nttcom/cmn/img/icon_news.png"></p>
+                <h2 class="fs-14 fw-bold fc-wh">ニュース</h2>
+                <div class="col_4-1_slider">
+                    <div id="bxslider1">                        <div class="slide fc-wh">
+                            <p class="date">2017年7月24日</p>
+                            <p><a href="http://www.ntt.com/about-us/press-releases/news/article/2017/0724_2.html">日本のMVNOとして初めて、eSIMの実証実験を開始</a></p>
+                        </div>                        <div class="slide fc-wh">
+                            <p class="date">2017年7月24日</p>
+                            <p><a href="http://www.ntt.com/about-us/press-releases/news/article/2017/0724.html">働き方改革運動「テレワーク・デイ」で約800名のテレワークを実施</a></p>
+                        </div>                        <div class="slide fc-wh">
+                            <p class="date">2017年7月21日</p>
+                            <p><a href="http://www.ntt.com/about-us/press-releases/news/article/2017/0721.html">「IVIつながるものづくりアワード2017」にて「最優秀賞」を受賞</a></p>
+                        </div>                        <div class="slide fc-wh">
+                            <p class="date">2017年7月19日</p>
+                            <p><a href="http://www.ntt.com/about-us/press-releases/news/article/2017/0719_2.html">サイバーセキュリティに関する情報分析など専門性の高い業務を支援する「アドバイザリーサポート」を提供開始</a></p>
+                        </div>                    </div>
+                </div>
+                <p class="newslist"><a href="/about-us/press-releases.html">ニュース一覧はこちら</a></p>														
+                <p class="rss"><a href="/index/rss.xml"><img src="/content/dam/nttcom/cmn/img/icn-rss.png"></a></p>    
+            </div>
+        </div>
+    </div>
+</div></div>
+
+                                    <div class="conpBox col_3">
+                                        <div class="TopIntroTxtLink03 TopIntroTxtLink">
+
+
+
+
+<div class="detail-conts">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/hq/jp/img/bg_purple.png" title="" alt=""></p>
+  <div class="inner_txt">
+   <p class="icon"><img src="/content/dam/nttcom/cmn/img/cmn_ic_30_news.png" title="" alt=""></p>
+   <h2 class="fs-14 fw-bold fc-wh">お知らせ</h2>
+   <div class="txt">
+    <p>
+     <a href="/about-us/information.html" class="fc-wh">お知らせ一覧はこちら
+</a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="detail-conts upper-layer">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/cmn/img/bg_purple-alpha.png" alt=""></p>
+  <div class="inner_txt">
+   <div class="txt">
+    <p>
+     <a href="/about-us/information.html" class="fc-wh">詳しく見る</a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+                                    </div>
+                                    <div class="conpBox col_4">
+                                        <div class="TopIntroTxtLink TopIntroTxtLink04">
+
+
+
+
+<div class="detail-conts">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/hq/jp/img/bg_yellow.png" title="" alt=""></p>
+  <div class="inner_txt">
+   <p class="icon"><img src="" title="" alt=""></p>
+   <h2 class="fs-14 fw-bold fc-bk"></h2>
+   <div class="txt">
+    <p>
+     <a href="/business/lp/navi_cloud.html" class="fc-bk"><p style="fonty-size:14px"><b>クラウドNAVI</b><br><br>
+クラウドサービスの市場動向や2017年度版クラウドの常識・非常識など、これからのIT戦略に役に立つ情報を掲載</p></a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="detail-conts upper-layer">
+ <div class="inner_conts">
+  <p><img src="/content/dam/nttcom/cmn/img/bg_yellow-alpha.png" alt=""></p>
+  <div class="inner_txt">
+   <div class="txt">
+    <p>
+     <a href="/business/lp/navi_cloud.html" class="fc-bk">詳しくはこちら</a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+                                    </div>
+                                </div>
+                                <div class="seeAllResoucesRows">
+                                    <div class="conpBox seeAllResouces">
+                                        <div class="TopIntroTxtLink05 TopIntroTxtLink">
+
+
+
+
+<div class="detail-conts">
+ <div class="inner_conts">
+  <p><img src="" title="" alt=""></p>
+  <div class="inner_txt">
+   <p class="icon"><img src="" title="" alt=""></p>
+   <h2 class="fs-14 fw-bold fc-nv"></h2>
+   <div class="txt">
+    <p>
+     <a class="fc-nv"></a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="detail-conts upper-layer">
+ <div class="inner_conts">
+  <p><img src="" alt=""></p>
+  <div class="inner_txt">
+   <div class="txt">
+    <p>
+     <a class="fc-nv"></a>
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div><!-- /.sectioning_layout-outer -->
+            </div><!-- /.sectioning -->
+
+            <div class="sectioning">
+                <div class="sectioning_layout-outer">
+                    <div class="sectioning_layout-inner">
+                        <div class="grid_contents groupSet">
+                            <div class="grid_cols grid-12">
+                                <div class="par parsys"><div class="HTML section">
+
+
+
+
+
+
+           <div class="HTML section">
+<div id="index_anchor_01" class="index_layout_01">
+  <section class="index_section_01">
+    <h2 class="index_h2_01"><a href="/business/case-studies.html">注目の導入事例</a></h2>
+    <div class="index_column_03 clearfix">
+      <section>
+        <a href="/business/case-studies/global/cloud/santen.html"><h3 class="index_h3_01 index_title_column_01">
+          <span class="index_img"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_logo01.gif" alt=""></span>
+          <span class="index_text">
+            <span class="index_icon_bl_01">business growth</span>
+            <span class="index_title"><span>参天製薬株式会社</span></span>
+          </span>
+        </h3></a>
+        <div class="index_height_01">
+          <p>クラウド、ネットワーク、サポートを1社に統合。世界共通のICT基盤と運用管理体制を実現</p>
+        </div>
+      </section>
+      <section>
+        <a href="/business/case-studies/global/network/hitachi.html"><h3 class="index_h3_01 index_title_column_01">
+          <span class="index_img"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_logo02.gif" alt=""></span>
+          <span class="index_text">
+            <span class="index_icon_yl_01">operational efficiency</span>
+            <span class="index_title"><span>株式会社 日立製作所</span></span>
+          </span>
+        </h3></a>
+        <div class="index_height_01">
+          <p>総合力を最大化するための統合ネットワークを構築。世界30カ国、30万人のグループ内連携を加速</p>
+        </div>
+      </section>
+      <section>
+        <a href="/business/case-studies/global/data-center/nvidia.html"><h3 class="index_h3_01 index_title_column_01">
+          <span class="index_img"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_logo03.gif" alt=""></span>
+          <span class="index_text">
+            <span class="index_icon_gr_01">cost reduction</span>
+            <span class="index_title"><span>Nvidia</span></span>
+          </span>
+        </h3></a>
+        <div class="index_height_01">
+          <p>グローバルICTソリューションでAPACハブ拠点とビジネス・コネクティビティを強化</p>
+        </div>
+      </section>
+      <section>
+        <a href="/business/case-studies/global/network/daiwahouse.html"><h3 class="index_h3_01 index_title_column_01">
+          <span class="index_img"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_logo04.gif" alt=""></span>
+          <span class="index_text">
+            <span class="index_icon_bl_01">business growth</span>
+            <span class="index_title"><span>大和ハウス工業株式会社</span></span>
+          </span>
+        </h3></a>
+        <div class="index_height_01">
+          <p>国内・海外の300拠点をシームレスにつなぐネットワーク構築でグローバル戦略を推進</p>
+        </div>
+      </section>
+      <section>
+        <a href="/business/case-studies/global/cloud/honda.html"><h3 class="index_h3_01 index_title_column_01">
+          <span class="index_img"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_logo05.gif" alt=""></span>
+          <span class="index_text">
+            <span class="index_icon_bl_01">business growth</span>
+            <span class="index_title"><span>本田技研工業株式会社</span></span>
+          </span>
+        </h3></a>
+        <div class="index_height_01">
+          <p>世界中のサプライヤーとホンダをつなぐ統合基盤。大容量の設計データもスムーズに送受信</p>
+        </div>
+      </section>
+      <section>
+        <a href="/business/case-studies/global/cloud/shiseido.html"><h3 class="index_h3_01 index_title_column_01">
+          <span class="index_img"><img src="/content/dam/nttcom/hq/jp/index/img/cmn_jp_dia_index_logo06.gif" alt=""></span>
+          <span class="index_text">
+            <span class="index_icon_bl_01">business growth</span>
+            <span class="index_title"><span>株式会社資生堂</span></span>
+          </span>
+        </h3></a>
+        <div class="index_height_01">
+          <p>ハイブリッドクラウドで働き方を変革し次世代のグローバルブランド戦略を加速</p>
+        </div>
+      </section>
+    </div>
+    <div class="index_btn_more01"><a href="/business/case-studies.html">続きを見る</a></div>							
+  </section>
+</div>
+</div>
+
+
+<div class="HTML section">
+	<div id="index_anchor_03" class="index_layout_01">
+		<h2 class="index_h2_01"><a href="/business/solutions.html">グローバルソリューション</a></h2>
+
+		<div class="grid_contents groupSet t-c">
+			<div class="h_nav_box globalSolution">
+				<div class="grid_cols grid-10 grid-12-tablet b-center f-n">
+
+					<div class="column_component colnum-4 f-n">
+						<div class="cc-colnum">
+							<a href="/business/solutions/ict-consulting.html">
+								<div class="image_component">
+									<img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_service-top_consulting.png" alt="コンサルティング">
+								</div>
+								<p>コンサルティング</p>
+							</a>
+						</div>
+						<div class="cc-colnum">
+							<a href="/business/solutions/enterprise-application-management.html">
+								<div class="image_component">
+									<img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_service-top_enterprise.png" alt="エンタープライズアプリケーション">
+								</div>
+								<p>エンタープライズ<br>アプリケーション</p>
+							</a>
+						</div>
+						<div class="cc-colnum">
+							<a href="/business/solutions/communication-and-collaboration.html">
+								<div class="image_component">
+									<img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_service-top_comm.png" alt="コミュニケーション＆コラボレーション">
+								</div>
+								<p>コミュニケーション＆<br>コラボレーション</p>
+							</a>
+						</div>
+						<div class="cc-colnum">
+							<a href="/business/solutions/cloud-based-ict-infrastructure.html">
+								<div class="image_component">
+									<img src="/content/dam/nttcom/cmn/img/cmn_ic_service-top_ict.png" alt="クラウドを活用したICT基盤">
+								</div>
+								<p>クラウドを活用したICT基盤</p>
+							</a>
+						</div>
+					</div>
+				</div><!--grid_cols-->
+			</div><!--h_nav_box-->
+			<div class="index_btn_more01"><a href="/business/solutions.html">続きを見る</a></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="HTML section">
+
+<div class="bottomLink cf">
+	<div class="linkBlock">
+		<ul>
+			<li><a class="arrow_yellow" href="/personal.html">個人のお客さま</a>
+				<ul>
+					<li><a class="arrow_gray" href="/personal/services/internet.html">インターネット接続</a></li>
+					<li><a class="arrow_gray" href="/personal/services/mobile.html">モバイル</a></li>
+					<li><a class="arrow_gray" href="/personal/services/option.html">オプションサービス</a></li>
+					<li><a class="arrow_gray" href="/personal/services/phone.html">電話</a></li>
+					<li><a class="arrow_gray" href="https://mypage.ocn.ne.jp/" target="_blank"><span class="newWin">OCNマイページ（会員サポート/お手続き）</span></a></li>
+					<li><a class="arrow_red" href="http://www.ocn.ne.jp/" target="_blank"><span class="newWin">OCNトップ</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="linkBlock">
+		<ul>
+			<li><a class="arrow_yellow" href="/business.html">法人のお客さま</a>
+				<ul>
+					<li><a class="arrow_gray" href="/business/navi/servicetop.html">サービス一覧</a></li>
+					<li><a class="arrow_gray" href="/business/solutions.html">ソリューション一覧</a></li>
+					<li><a class="arrow_gray" href="/business/needs.html">課題・ニーズから探す</a></li>
+					<li><a class="arrow_gray" href="/business/case-studies.html">導入事例</a></li>
+					<li><a class="arrow_gray" href="/business/campaign.html">キャンペーン</a></li>
+					<li><a class="arrow_gray" href="/business/event.html">セミナー・イベント</a></li>
+					<li><a class="arrow_blue" href="/business/services/network/internet-connect/ocn-business/service.html" target="_blank"><span class="newWin">法人向けOCNサービス</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="linkBlock">
+		<ul>
+			<li><a class="arrow_yellow" href="/about-us.html">企業情報</a>
+				<ul>
+					<li><a class="arrow_gray" href="/about-us/company-profile/company-information.html">会社概要</a></li>
+					<li><a class="arrow_gray" href="/about-us/company-profile/finance.html">経営情報</a></li>
+					<li><a class="arrow_gray" href="/about-us/csr.html">CSR（企業の社会的責任）</a></li>
+					<li><a class="arrow_gray" href="/about-us/recruit.html">採用情報</a></li>
+					<li><a class="arrow_gray" href="/about-us/disclosure.html">公開情報</a></li>
+					<li><a class="arrow_gray" href="/about-us/information.html">お知らせ</a></li>
+					<li><a class="arrow_gray" href="/rugby/">NTT Com ラグビー部 ShiningArcs</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="linkBlock">
+		<ul>
+			<li><a class="arrow_yellow" href="http://support.ntt.com/">工事・故障 サポート</a>
+				<ul>
+					<li><a class="arrow_gray" href="http://support.ntt.com/maintenance/new/">工事・故障情報一覧</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div><!-- /.bottomLink -->
+
+
+</div>
+
+       </div>
+
+</div>
+
+                            </div>
+                        </div>
+                    </div><!-- /.sectioning_layout-inner -->
+                </div><!-- /.sectioning_layout-outer -->
+            </div><!-- /.sectioning -->
+
+        </main>
+        <div class="ContactUsButtonHQJp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+        
+
+
+
+
+<div class="BackToTop">
+
+
+
+
+
+<div class="sub_backTo-top">
+ <p class="goPageTop">このページのトップへ</p>
+</div>
+</div>
+
+<footer>
+    <div class="footerInner">
+        <div class="SocialMediaHQ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="snsArea">
+	<ul class="sns cf">
+
+	
+
+        <li>
+            
+	            <a href="/about-us/hp/social/list.html#03">
+                
+            <img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_footer_facebook.png" title="facebook" alt="facebook">
+            </a>
+        </li>
+
+	
+
+        <li>
+            
+	            <a href="/about-us/hp/social/list.html#02">
+                
+            <img src="/content/dam/nttcom/hq/cmn/img/cmn_ic_footer_twitter.png" title="twitter" alt="twitter">
+            </a>
+        </li>
+
+	
+
+        <li>
+            
+	            <a href="/about-us/hp/social/list.html#01">
+                
+            <img src="/content/dam/nttcom/cmn/img/cmn_ic_footer_youtube.png" title="youtube" alt="youtube">
+            </a>
+        </li>
+
+	
+
+        <li>
+            
+	            <a href="https://www.linkedin.com/company/ntt-communications" target="_blank">
+                
+            <img src="/content/dam/nttcom/cmn/img/cmn_ic_footer_linkedin.png" title="Linkedin" alt="Linkedin">
+            </a>
+        </li>
+
+	
+
+	</ul>
+</div>
+</div>
+
+        <div class="linkArea">
+            <div class="par parsys"><div class="HTML section">
+
+
+
+
+
+
+           <div class="linkArea">
+	<ul class="link" style="max-width:840px">
+		<li><a title="" href="/sitemap.html">サイトマップ</a></li>
+		<li><a title="" href="/about-us/hp.html">サイトのご利用条件</a></li>
+		<li><a title="" href="/contact.html">お問い合わせ／FAQ</a></li>
+		<li><a title="" href="/lineup.html">サービス一覧</a></li>
+		<li><a title="" href="/about-us/hp/privacy.html">プライバシーポリシー</a></li>
+		<li><a title="" href="/about-us/hp/accessibility.html">ウェブアクセシビリティポリシー</a></li>
+	</ul>
+</div>
+       </div>
+
+</div>
+
+        </div>
+        <div class="langArea cf">
+            <div class="CountryLanguageCopyright">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="lang">Japan / 日本語</p>
+<p class="copyright"><a href="/copyright.html">&copy; NTT Communications Corporation All Rights Reserved.</a></p>
+</div>
+
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/gtm.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/ytm.js"></script>
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/visionalist.js"></script>
+
+
+
+<script type="text/javascript" src="/etc/designs/nttcom/cmn/js/ptengine.js"></script>
+<script>
+$(function(){	
+	//----- ナビゲーションのホバー
+	$('.h_nav_box a').on({
+		'mouseenter':function(){
+			if(commonNs.deviceMode != "pc")return;
+			var self = $(this);
+			$(this).parents('.h_nav_box').find('a').not(self).stop().fadeTo('fast',.3);
+		},
+		'mouseleave':function(){
+			if(commonNs.deviceMode != "pc")return;
+			var self = $(this);
+			$(this).parents('.h_nav_box').find('a').not(self).stop().fadeTo('fast',1);
+		}
+	});
+
+	$('.index_column_03 a').on({
+		'mouseenter':function(){
+			if(commonNs.deviceMode != "pc")return;
+			var self = $(this).closest('section');
+			$(this).parents('.index_column_03').find('section').not(self).stop().fadeTo('fast',.3);
+		},
+		'mouseleave':function(){
+			if(commonNs.deviceMode != "pc")return;
+			var self = $(this).closest('section');
+			$(this).parents('.index_column_03').find('section').not(self).stop().fadeTo('fast',1);
+		}
+	});
+
+
+});
+</script>
+</footer>
+
+    </div>
+
+
+    
+
+</body>
+
+</html>
+

@@ -1,67 +1,39 @@
 {% include 'nav.html' %}
 
-<!-- /. NAV SIDE  -->
-<div id="page-wrapper">
 
-    <h1 class="page-header" id="brand">
-        Describe this chart with your own words
-    </h1>
+<h1 class="page-header" id="brand">
+    Describe this chart with your own words
+</h1>
 
-    <div class="row">
-        <div id="pop" class="alert" style="display: none">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            Success, it is saved
-        </div>
-    </div>
-    <div id="page-inner">
-        <div class="row">
-
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-content" style="padding-bottom:5%">
-                        <img id="imgdisp" src=""/>
-                        <div class="row">
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+<div class="centerimg">
+    <img id="imgdisp" src=""/>
 
 
-                            <div id="fom">
-                                <input id="value" type="text" name="type" placeholder="What is this chart ?"
-                                       maxlength="50"/>
-                                <div id="btn">
-                                    <button id="skip" class="waves-effect waves-light btn grey">skip
-                                    </button>
-                                    <button id="save" class="waves-effect waves-light btn ">
-                                        save
-                                    </button>
-                                    <div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-                <!-- /. PAGE INNER  -->
+    <div id="fom">
+        <input id="value" type="text" name="type" placeholder="What is this chart ?"
+               maxlength="50"/>
+        <div id="btn">
+            <button id="skip" class="waves-effect waves-light btn grey">skip
+            </button>
+            <button id="save" class="waves-effect waves-light btn blue ">
+                save
+            </button>
+            <div>
             </div>
 
-            <!-- /. PAGE WRAPPER  -->
+
         </div>
     </div>
 </div>
-<!-- /. WRAPPER  -->
-<!-- JS Scripts-->
-<!-- jQuery Js -->
+
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 
 <!-- Bootstrap Js -->
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-<script async src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
 <script type="text/javascript">
     var started = true;

@@ -1,6 +1,8 @@
 import argparse
 import os
 import wget
+import threading
+import sys
 
 from imagetype import ImgType
 from PIL import Image
@@ -9,10 +11,9 @@ from PIL import Image
 def main(_):
     return 'ok'
 
-
 def getimgtypes():
     result = []
-    with open("vis10cat.txt") as file:
+    with open("vis16cat.txt") as file:
         for line in file:
             temp = str(line.rstrip()).split("\t")
             result.append(ImgType(temp[0], temp[1]))
@@ -43,10 +44,10 @@ def savethem(imgs):
         temp = img.url.split('.')
 
         ext = str(temp[len(temp) - 1])
-        q = os.path.join(os.getcwd(), "static/assets/img/datasets/vis10cat/" + img.type + "_" + str(i) + "." + ext)
+        q = os.path.join(os.getcwd(), "static/assets/img/datasets/vis16cat/" + img.type + "_" + str(i) + "." + ext)
         try:
             print('\x1b[7;33;40m' + str(i) + '\x1b[0m' + "_""Getting ....  .. ." + img.url + "\n")
-            wget.download(img.url, q)
+            vaschercher(img.url, q)
             print('\x1b[6;30;42m' + "Done ! " + '\x1b[0m' + "\n")
             i += 1
             img.path = q
@@ -55,6 +56,10 @@ def savethem(imgs):
             print('\x1b[6;30;41m' + str(e) + '\x1b[0m')
 
     return clear(result)
+
+
+
+
 
 
 if __name__ == '__main__':

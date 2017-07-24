@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>曲靖市工业和信息化委员会</title>
+<meta name="keywords" content="曲靖工信委，市工信委" />
+<meta name="description" content="曲靖市工业和信息化委员会" />
+<link href="Css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+	<div class="nav">
+		<div class="Top">
+			<div class="Logo"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1000" height="187">
+  <param name="movie" value="/top.swf" />
+  <param name="quality" value="high" />
+  <embed src="/top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1000" height="187"></embed>
+</object></div>
+			<div class="Menu">
+				<ol>政务<br />信息</ol>
+				<ul>
+					<li><a href="/Column/Regulations.html" target="_blank">政策法规</a></li>
+					<li><a href="/Column/government.html" target="_blank">政务公开</a></li>
+					<li><a href="/Column/Work.html" target="_blank">工作动态</a></li>
+					<li><a href="/Column/xyjj.html" target="_blank">县域经济</a></li>
+				</ul>
+				<ol>工信<br />专题</ol>
+				<ul>
+					<li><a href="/Column/special.html" target="_blank">工信工作</a></li>
+					<li><a href="/Column/events.html" target="_blank">主题活动</a></li>
+					<li><a href="/Column/qjgyjj.html" target="_blank">工业经济</a></li>
+<li><a href="http://www.qjetc.gov.cn/dmreport/dm_list.asp" target="_blank">电煤系统</a></li>
+				</ul>
+				
+			</div>
+			<div class="search">
+				<ol>
+					<script language="javascript" type="text/javascript"> 
+						var week; 
+						if(new Date().getDay()==0)week="星期日"; 
+						if(new Date().getDay()==1)week="星期一"; 
+						if(new Date().getDay()==2)week="星期二"; 
+						if(new Date().getDay()==3)week="星期三"; 
+						if(new Date().getDay()==4)week="星期四"; 
+						if(new Date().getDay()==5)week="星期五"; 
+						if(new Date().getDay()==6)week="星期六"; 
+						document.write(new Date().getFullYear()+"年"+(new Date().getMonth()+1)+"月"+new Date().getDate()+"日 "+week); 
+					</script> 
+				</ol>
+				<dir>
+					<form method="get" action="/Search.aspx" target="_blank">
+					<input class="search1" type="text" name="keytxt" style="vertical-align:middle;"  onFocus="if (this.value =='请输入关键字...'){ this.value=''}" value="请输入关键字..." /><input type="image" src="/Images/search.jpg"  style="vertical-align:middle;" />　　热门搜索：<a href="/Search.aspx?keytxt=经济运行" target="_blank">经济运行</a> <a href="/Search.aspx?keytxt=产业发展" target="_blank">产业发展</a> <a href="/Search.aspx?keytxt=科技创新" target="_blank">科技创新</a> <a href="/Search.aspx?keytxt=中小企业" target="_blank">中小企业</a> <a href="/Search.aspx?keytxt=招商引资" target="_blank">招商引资</a> <a href="/Search.aspx?keytxt=工业园区" target="_blank">工业园区</a> <a href="/Search.aspx?keytxt=信息化" target="_blank">信息化</a>
+					</form>
+				</dir>
+			</div>
+		</div> 
+		<div class="Con">
+			<div class="Con_1">
+				<ol>
+				  <script type="text/javascript">
+			    var focus_width = 381
+			    var focus_height = 312
+			    var text_height = 30
+			    var swf_height = focus_height + text_height
+
+			    var picss = "/ThumBnail/2017717151734723.jpg|/ThumBnail/201771217135721.jpg|/ThumBnail/20177411344382.jpg|/ThumBnail/201762192447412.jpg|/ThumBnail/201762192720537.jpg|";
+			    var linkss = "/Article/2346.html|/Article/2339.html|/Article/2324.html|/Article/2295.html|/Article/2294.html|";
+			    var textss = "千里献爱心  真情暖师生|尚德守法 共治共享食品安全|国家2016年度能耗“双控”及控制温室气体排放目标责任评价考核组到曲靖市抽查指导节能降碳工作|云南省工信委墙改办到曲靖调研指导墙改工作|曲靖市工业和信息化委员会召开“基层党建提升年”推进工作会|";
+			    var pics = picss.substring(0, picss.length - 1);
+			    var links = linkss.substring(0, linkss.length - 1);
+			    var texts = textss.substring(0, textss.length - 1);
+
+			    document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="' + focus_width + '" height="' + swf_height + '">');
+			    document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="pixviewer.swf"><param name="quality" value="high"><param name="bgcolor" value="#f5f5f5">');
+			    document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+			    document.write('<param name="FlashVars" value="pics=' + pics + '&links=' + links + '&texts=' + texts + '&borderwidth=' + focus_width + '&borderheight=' + focus_height + '&textheight=' + text_height + '">');
+			    document.write('<embed src="pixviewer.swf" wmode="opaque" FlashVars="pics=' + pics + '&links=' + links + '&texts=' + texts + '&borderwidth=' + focus_width + '&borderheight=' + focus_height + '&textheight=' + text_height + '" menu="false" bgcolor="#EFF7FE" quality="high" width="' + focus_width + '" height="' + focus_height + '" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+			    document.write('</object>');
+			 
+			</script>
+
+				</ol>
+				<div class="Con_1_1">
+					
+					<ul>
+						
+						  <li><a href="/Article/2359.html"  title="中共曲靖市工业和信息化委员会组织开展党委理论中心组学习" target="_blank">中共曲靖市工业和信息化委员会组织开展党委理论中心...</a></li>
+						
+						  <li><a href="/Article/2357.html"  title="市工信委主任沈学龄到曲靖车务段调研" target="_blank">市工信委主任沈学龄到曲靖车务段调研</a></li>
+						
+						  <li><a href="/Article/2356.html"  title="省工业控制系统信息安全检查组到曲靖检查" target="_blank">省工业控制系统信息安全检查组到曲靖检查</a></li>
+						
+						  <li><a href="/Article/2354.html"  title="无管办快速查处一起“黑广播”" target="_blank">无管办快速查处一起“黑广播”</a></li>
+						
+						  <li><a href="/Article/2350.html"  title="曲靖市节能公共服务平台建设项目验收" target="_blank">曲靖市节能公共服务平台建设项目验收</a></li>
+						
+						  <li><a href="/Article/2349.html"  title="省工业控制系统信息安全检查组到经开区企业进行现场抽查" target="_blank">省工业控制系统信息安全检查组到经开区企业进行现场...</a></li>
+						
+						  <li><a href="/Article/2348.html"  title="曲靖市节能公共服务平台管理操作培训会顺利召开" target="_blank">曲靖市节能公共服务平台管理操作培训会顺利召开</a></li>
+						
+						  <li><a href="/Article/2347.html"  title="省工信委到我市进行项目节能量审核" target="_blank">省工信委到我市进行项目节能量审核</a></li>
+						
+						  <li><a href="/Article/2346.html"  title="千里献爱心  真情暖师生" target="_blank">千里献爱心  真情暖师生</a></li>
+						
+						  <li><a href="/Article/2344.html"  title="曲靖市第二期新型工业化-精细化工专题培训班圆满结束" target="_blank">曲靖市第二期新型工业化-精细化工专题培训班圆满结...</a></li>
+						
+						  <li><a href="/Article/2340.html"  title="市委依法治市领导小组第三组到市工信委进行督查调研" target="_blank">市委依法治市领导小组第三组到市工信委进行督查调研</a></li>
+						
+					</ul>
+				</div>
+				<div class="Con_3_2">
+					<div>通知公告</div>
+					<ul>
+						
+						  <li><a href="/Article/2228.html"  title="云南省新型墙体材料产品认定公告（2017年第1号）" target="_blank">云南省新型墙体材料产品认定公告（20...</a></li>
+						
+						  <li><a href="/Article/2207.html"  title="云南省第二届“工业发展杰出贡献奖” 评选人选公示" target="_blank">云南省第二届“工业发展杰出贡献奖” ...</a></li>
+						
+						  <li><a href="/Article/2199.html"  title="曲靖市关于公布化解钢铁行业过剩产能打击“地条钢”举报电话的公告" target="_blank">曲靖市关于公布化解钢铁行业过剩产能打...</a></li>
+						
+						  <li><a href="/Article/2196.html"  title="曲靖市工业和信息化委关于对2017年曲靖供电局报审曲靖电网二级重要电力用户的批复" target="_blank">曲靖市工业和信息化委关于对2017年...</a></li>
+						
+						  <li><a href="/Article/2192.html"  title="曲靖市工业和信息化委关于开展2017年度曲靖市电子机械化工矿冶工程职称评审工作的通知" target="_blank">曲靖市工业和信息化委关于开展2017...</a></li>
+						
+						  <li><a href="/Article/2087.html"  title="曲靖市工业和信息化委关于开展2017年无线电台年检换证的通知" target="_blank">曲靖市工业和信息化委关于开展2017...</a></li>
+						
+						  <li><a href="/Article/1997.html"  title="云南省新型墙体材料产品认定公告（2016年第4号）" target="_blank">云南省新型墙体材料产品认定公告（20...</a></li>
+						
+						<p><a href="/Column/tzgg.html" target="_blank">更多>></a></p>
+					</ul>
+					<dir><img src="Images/Title2_bottom.jpg" /></dir>
+					<dl>
+					  <a href="/book/default.aspx?CID=2" target="_blank"><img src="Images/xx_1.jpg" border="0" /></a><a href="/Column/soft.html" target="_blank"><img style="padding-left:6px;" src="Images/bdxz_1.jpg" border="0" /></a>
+					</dl>
+				</div>
+		  	</div>
+		  	<div class="Con_2"><a href="/Column/sdfs.html"  target="_blank"><img src="/posters/2016317103936722.jpg" /></a></div>
+			<div class="Con_3">
+				<div class="Con_3_1">
+					<ol>
+						<dl style="width:276px;"><span>政策法规</span><a href="/Column/Regulations.html" target="_blank">更多>></a>&nbsp;&nbsp;
+						</dl>
+						<ul style="width:308px;">
+							
+							  <li><a href="/Article/2307.html"  title="《节能监察办法》" target="_blank">《节能监察办法》</a></li>
+							
+							  <li><a href="/Article/2235.html"  title="《中华人民共和国网络安全法》" target="_blank">《中华人民共和国网络安全法》</a></li>
+							
+							  <li><a href="/Article/2214.html"  title="云南省重大行政决策程序规定" target="_blank">云南省重大行政决策程序规定</a></li>
+							
+							  <li><a href="/Article/2213.html"  title="中华人民共和国民法总则" target="_blank">中华人民共和国民法总则</a></li>
+							
+							  <li><a href="/Article/2208.html"  title="曲靖市人民政府重大行政决策程序规定" target="_blank">曲靖市人民政府重大行政决策程序规定</a></li>
+							
+							  <li><a href="/Article/2170.html"  title="云南省重大行政执法决定法制审核办法" target="_blank">云南省重大行政执法决定法制审核办法</a></li>
+							
+							  <li><a href="/Article/1906.html"  title="《中华人民共和国无线电管理条例》" target="_blank">《中华人民共和国无线电管理条例》</a></li>
+							
+						</ul>
+					</ol>
+					<ol style="margin-left:10px;">
+						<dl style="width:276px;"><span>县域经济</span><a href="/Column/xyjj.html" target="_blank">更多>></a>&nbsp;&nbsp;
+						</dl>
+						<ul style="width:308px;">
+							
+							  <li><a href="/Article/2360.html"  title="罗平县工信局考察组莅临宣威考察太阳能产业发展情况" target="_blank">罗平县工信局考察组莅临宣威考察太阳能产业发展情...</a></li>
+							
+							  <li><a href="/Article/2353.html"  title="宣威市工信局召开上半年工业经济工作会议" target="_blank">宣威市工信局召开上半年工业经济工作会议</a></li>
+							
+							  <li><a href="/Article/2352.html"  title="曲靖唯一一家企业获得2017年国家资源节约循环利用重点工程中央预算内专项资金" target="_blank">曲靖唯一一家企业获得2017年国家资源节约循环...</a></li>
+							
+							  <li><a href="/Article/2351.html"  title="马龙对门梁子风电项目年发电23227万度" target="_blank">马龙对门梁子风电项目年发电23227万度</a></li>
+							
+							  <li><a href="/Article/2345.html"  title="曲靖市7月份重点项目现场观摩会在沾益举行" target="_blank">曲靖市7月份重点项目现场观摩会在沾益举行</a></li>
+							
+							  <li><a href="/Article/2319.html"  title="陆良县工信局等7部门认真开展庆“七一&#8226;喜迎十九大”纪念建党96周年集中党课教育活动" target="_blank">陆良县工信局等7部门认真开展庆“七一&#822...</a></li>
+							
+							  <li><a href="/Article/2314.html"  title="沾益召开2017年项目谋划包装、招商引资暨重点项目推进会" target="_blank">沾益召开2017年项目谋划包装、招商引资暨重点...</a></li>
+							
+						</ul>
+					</ol>
+					<ol style="margin-left:10px;">
+						<dl style="width:276px;"><span>工信工作</span><a href="/Column/special.html" target="_blank">更多>></a>&nbsp;&nbsp;
+						</dl>
+						<ul style="width:308px;">
+							
+							  <li><a href="/Article/2343.html"  title="曲靖市2017年1月—6月移动互联网基础设施建设任务完成情况" target="_blank">曲靖市2017年1月—6月移动互联网基础设施建...</a></li>
+							
+							  <li><a href="/Article/2320.html"  title="2017年1-5月曲靖市规模以上工业增加值增长8.5%" target="_blank">2017年1-5月曲靖市规模以上工业增加值增长...</a></li>
+							
+							  <li><a href="/Article/2297.html"  title="沾益工业园区高原特色农产品加工园2万吨米线生产加工项目签约入园" target="_blank">沾益工业园区高原特色农产品加工园2万吨米线生产...</a></li>
+							
+							  <li><a href="/Article/2296.html"  title="沾益区督察组到工业园区督察项目进展情况" target="_blank">沾益区督察组到工业园区督察项目进展情况</a></li>
+							
+							  <li><a href="/Article/2259.html"  title=""智慧曲靖”建设工作简报（第四期）" target="_blank">"智慧曲靖”建设工作简报（第四期）</a></li>
+							
+							  <li><a href="/Article/2246.html"  title="沾益工业园区联合多部门现场服务为企业排忧解难" target="_blank">沾益工业园区联合多部门现场服务为企业排忧解难</a></li>
+							
+							  <li><a href="/Article/2245.html"  title="两个新签约项目入驻沾益工业园区" target="_blank">两个新签约项目入驻沾益工业园区</a></li>
+							
+						</ul>
+					</ol>
+				</div>
+				
+			</div>
+			<div class="Con_4">
+				<dt><img src="Images/gyyq.jpg" /></dt>
+				<ul>
+					<div id="dcoo">
+					<div class="showbox">
+					<div id="dcoo1">
+					
+					<li><a href="/Article/338.html"  title="马龙园区概况" target="_blank"><img src="/ThumBnail/2014114101043649.jpg" />马龙园区概况</a></li>
+					
+					<li><a href="/Article/253.html"  title="会泽园区概况" target="_blank"><img src="/ThumBnail/2014714145116632.jpg" />会泽园区概况</a></li>
+					
+					<li><a href="/Article/234.html"  title="罗平园区概况" target="_blank"><img src="/ThumBnail/2014114102057628.jpg" />罗平园区概况</a></li>
+					
+					<li><a href="/Article/223.html"  title="经济开发区园区概况" target="_blank"><img src="/ThumBnail/2014114104410190.jpg" />经济开发区园区概况</a></li>
+					
+					<li><a href="/Article/208.html"  title="麒麟工业园区概况" target="_blank"><img src="/ThumBnail/201474105320491.jpg" />麒麟工业园区概况</a></li>
+					
+					<li><a href="/Article/207.html"  title="师宗园区概况" target="_blank"><img src="/ThumBnail/20147993030850.jpg" />师宗园区概况</a></li>
+					
+					<li><a href="/Article/189.html"  title="陆良园区概况" target="_blank"><img src="/ThumBnail/201473155736788.jpg" />陆良园区概况</a></li>
+					
+					</div>
+					<div id="dcoo2"></div>
+					</div>
+				</ul>
+				<script type="text/javascript" language="JavaScript">
+				//调用向左滚动
+				toleft("dcoo","dcoo1","dcoo2",30,"hehe123")
+				//调用向右滚动
+				
+				function $(id){return document.getElementById(id)}
+				//向左滚动函数，demo包含demo1与demo2,speed是滚动速度，flag一个网页内有多个时设置为不同的任意字符。
+				//by 柳永法(yongfa365)'Blog　www.yongfa365.com
+				function toleft(demo,demo1,demo2,speed,flag){
+				demo=$(demo);demo1=$(demo1);demo2=$(demo2)
+				demo2.innerHTML=demo1.innerHTML
+				function Marquee(){
+				if(demo2.offsetWidth-demo.scrollLeft<=0){
+				demo.scrollLeft-=demo1.offsetWidth
+				}
+				else{
+				demo.scrollLeft++
+				}
+				}
+				flag=setInterval(Marquee,speed)
+				demo.onmouseover=function(){clearInterval(flag);}
+				demo.onmouseout=function(){flag=setInterval(Marquee,speed);}
+				}
+				
+				</script>
+			</div>
+			<div class="Con_3">
+				<script> 
+function SetCwinHeight(obj) 
+{ 
+var cwin=obj; 
+if (document.getElementById) 
+{ 
+if (cwin && !window.opera) 
+{ 
+if (cwin.contentDocument && cwin.contentDocument.body.offsetHeight) 
+cwin.height = cwin.contentDocument.body.offsetHeight + 20; //FF NS 
+else if(cwin.Document && cwin.Document.body.scrollHeight) 
+cwin.height = cwin.Document.body.scrollHeight + 10;//IE 
+} 
+else 
+{ 
+if(cwin.contentWindow.document && cwin.contentWindow.document.body.scrollHeight) 
+cwin.height = cwin.contentWindow.document.body.scrollHeight;//Opera 
+} 
+} 
+} 
+</script> 
+				
+			</div>
+			
+			<div class="Con_6">
+				<dt>曲靖市政府部门网站导航、曲靖市工业网站导航</dt>
+				<ul>
+					
+					<li><a href="http://www.ceci123.cn/" target="_blank">中国节能信息网</a></li>
+					
+					<li><a href="http://qj.ynsmes.cn" target="_blank">曲靖市中小企业公共服务窗口平台</a></li>
+					
+					<li><a href="http://www.ljs.gov.cn/index.htm" target="_blank">丽江政务网</a></li>
+					
+					<li><a href="http://www.dhgxw.yn.gov.cn/" target="_blank">德宏傣族景颇族工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.gxw.baoshan.gov.cn/" target="_blank">保山市工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.dali.gov.cn/" target="_blank">大理州</a></li>
+					
+					<li><a href="http://www.smehh.hh.gov.cn/" target="_blank">红河州工信委</a></li>
+					
+					<li><a href="http://ztgxw.haozhou.com/" target="_blank">昭通市工业和信息化委员会</a></li>
+					
+					<li><a href="http://gxw.km.gov.cn/" target="_blank">昆明市工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.lcec.gov.cn/" target="_blank">临沧市工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.xsbnjw.gov.cn/" target="_blank">西双版纳傣族自治州工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.simao.gov.cn/" target="_blank">思茅网</a></li>
+					
+					<li><a href="http://www.wsec.gov.cn/" target="_blank">文山州工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.cxgy.gov.cn/" target="_blank">楚雄州工业和信息化委员会</a></li>
+					
+					<li><a href="http://www.qjup.cn/" target="_blank">市规划局</a></li>
+					
+					<li><a href="http://www.zjw.cn/" target="_blank">曲靖市珠江网</a></li>
+					
+					<li><a href="http://qj.xxgk.yn.gov.cn/" target="_blank">曲靖政府信息公开门户网</a></li>
+					
+					<li><a href="http://www.qj.gov.cn/" target="_blank">曲靖市政务网</a></li>
+					
+					<li><a href="http://www.qjfda.gov.cn/" target="_blank">市食品药品监督局</a></li>
+					
+					<li><a href="http://www.qjedu.com.cn/" target="_blank">市教育局</a></li>
+					
+					<li><a href="http://www.qjf.gov.cn/" target="_blank">市财政局</a></li>
+					
+					<li><a href="http://www.qjdj.gov.cn/" target="_blank">市组织部</a></li>
+					
+					<li><a href="http://www.qjtour.com/" target="_blank">市旅游局</a></li>
+					
+					<li><a href="http://qjeq.3322.org/" target="_blank">市地震局</a></li>
+					
+					<li><a href="http://www.qjjw.cn/" target="_blank">市监察局</a></li>
+					
+					<li><a href="http://www.qjsgaj.gov.cn/" target="_blank">市公安局</a></li>
+					
+					<li><a href="http://www.qjjtj.gov.cn/" target="_blank">市交通局</a></li>
+					
+					<li><a href="http://www.qjst.cn/" target="_blank">市科技局</a></li>
+					
+					<li><a href="http://www.qjtj.com/" target="_blank">市统计局</a></li>
+					
+					<li><a href="http://www.qjsn.cn/" target="_blank">曲靖市水泥工业协会</a></li>
+					
+					<li><a href="http://www.ynetc.gov.cn/" target="_blank">云南省工信委</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="Bot" >
+			<dt></dt>
+			<dd style="height:95px;">联系单位：曲靖市工业和信息化委员会 地址：曲靖市麒麟西路82号 邮编655000 E-mail:gxwzhc2@163.com登记号：滇ICP备09003657号<a href="//www.51.la/?19172980" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="//img.users.51.la/19172980.asp" style="border:none" /></a><br /><span style="color:red;">声明：本网站是 曲靖工业和信息化委员会唯一指定的政府上网网站，转载必须注明来源，违者必究。<br />本站所载相关企业信息经过层层审核但仍具有一定的时效性和变动性，请与实际情况为准，本站不对相关信息的有效性担责。</span></dd>
+		
+
+ <div style="text-align:center;"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/25/372/0000/60504362/CA253720000605043620002.js' type='text/javascript'%3E%3C/script%3E"));</script><a href="http://61.159.214.200:81/RecValidate/RecView.aspx?RecordID=53030203202035" target="_blank"><img src="/Images/ba.jpg" /></a><a href="http://www.yn.cyberpolice.cn/" target="_blank"><img src="/Images/g2.jpg" /></a>
+
+<div style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53030202000189" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/cyberwinphp/ico/beian_gov.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">滇公网安备 53030202000189号</p></a>
+		 	</div></div> 
+
+</html>

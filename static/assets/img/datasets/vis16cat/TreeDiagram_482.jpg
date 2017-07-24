@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+ "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<html lang="EN">
+
+<head>
+<title>EEE: Wiki Retired</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style>
+<!-- 
+    body {
+        font-size: 0.9em;
+        font-family: Verdana, sans-serif;
+    }
+
+    h2 {
+        color: #358;
+    }
+
+    ul li {
+        padding-top: 3px;
+    }
+
+    a { 
+        padding: 2px;
+        padding-left: 0px;
+        color: #358;
+    }
+
+    a:hover {
+        background-color: #fbedb5;
+    }
+
+-->
+</style>
+
+</head>
+
+<body> 
+
+<div>
+    <div style='margin-top: 10px; text-align: left;  margin-left: 20px;'>
+        <img src='/themes/default/images/eee-2014-logo.png' alt='EEE Logo' /><br />
+        <div style='margin-left: 20px;'>
+        <h2>The EEE Wiki was retired in December 2015</h2>
+        <strong>Here are some great alternatives:</strong>
+        <ul>
+            <li>For collaborative content creation &amp; curation: <a href="http://google.uci.edu/"><b>Google Sites</b></a></li>
+            <li>For collaborative document editing &amp; review: <a href="http://google.uci.edu/"><b>Google Drive</b></a></li>
+            <li>For content distribution: <a href="http://sites.uci.edu"><b>UCI Sites</b></a></li>
+        </ul>
+        <p>
+          All of these services are supported by the Office of Information Technology.
+        </p>
+        <p>
+          Questions? Please <a href="/contact">Contact Us</a>.
+        </p> 
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
