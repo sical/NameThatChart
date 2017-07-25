@@ -283,6 +283,7 @@ def main():
     print()
     if lvl is None:
         lvl = getlvl(request.environ["REMOTE_ADDR"])
+        print('aaaa')
     if lvl is None:
         return redirect("/raw")
 
