@@ -1,10 +1,8 @@
-.center {
-    top: 50%;
+
+.hcenter {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    transform: translate(-25%, -25%);
+    left: 45%;
+    transform: translate(-40%, 5%);
 
 }
 
@@ -26,6 +24,7 @@
     padding: 3%;
     background-color: orange;
 }
+
 #value {
     margin-bottom: 8%;
     margin-top: 12%;
@@ -243,6 +242,19 @@
     }
 }
 
+@media screen and (max-width: 1025px) and (min-width: 700px) and (max-height: 1370px) {
+
+    .center {
+        top: 50%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-40%, -20%);
+    }
+
+}
+
 @media screen and (max-width: 600px) and (min-width: 400px ) {
     .topnav a:not(:first-child) {
         display: none;
@@ -253,6 +265,13 @@
         width: 200px;
     }
 
+    #brand {
+        font-size: 24px;
+    }
+
+    .center{
+        margin-left: 8%;
+    }
     #main-title {
         font-family: 'Gloria Hallelujah', cursive;
         font-size: 40px;
@@ -526,4 +545,24 @@
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+
+@media only screen and (min-device-width: 1025px) {
+
+    .center {
+        top: 50%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-25%, -25%);
+
+    }
+
+    .hcenter {
+        position: fixed;
+        left: 55%;
+        transform: translate(-45%, 5%);
+
+    }
 }

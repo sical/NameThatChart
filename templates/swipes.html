@@ -1,6 +1,6 @@
 {% include 'nav.html' %}
 
-<div style="margin-top: -0%" class="header">
+<div style="margin-top: -0%" class="header hcenter">
     <h1 id="brand" class="page-header">
         Does this belongs in :
     </h1>
@@ -309,7 +309,7 @@
                     temp.css("background-image", 'url("' + img.path + '")');
                     temp.attr("value", img.idimage);
                     $("#" + i + "_txt").text(img.label);
-                    $("#brand").text("Does this belongs in " + cat[nb] + " category");
+                    $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
                     i++;
                 })
 

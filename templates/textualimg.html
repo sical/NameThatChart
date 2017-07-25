@@ -1,7 +1,7 @@
 {% include 'nav.html' %}
 
 
-<h1 class="page-header" id="brand">
+<h1 class="page-header hcenter" id="brand">
     Describe this chart with your own words
 </h1>
 
@@ -51,6 +51,7 @@
 <script type="text/javascript">
     var started = true;
     $(document).ready(function () {
+                document.getElementById("value").focus();
                 if (window.location.href.indexOf('quizz') !== -1) {
                     $("#imgdisp").attr("src", "static/assets/img/datasets/json/11.JPG");
                     $("#skip").hide();
@@ -85,13 +86,13 @@
         report("no_display")
     });
 
-        $("#ii").click(function (event) {
+    $("#ii").click(function (event) {
         event.preventDefault();
 
         report("Inappropriate_image")
     });
 
-        $("#hmc").click(function (event) {
+    $("#hmc").click(function (event) {
         event.preventDefault();
 
         report("miss_classification")
@@ -103,7 +104,7 @@
             processData: false,
             contentType: false,
             success: function (data) {
-              pop();
+                pop();
             }
         });
 
@@ -143,7 +144,7 @@
             var reg = /[\(,\)\\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
             text = text.replace(reg, "");
             form.append("name", text);
-                pop();
+            pop();
 
             $.ajax({
                 type: "POST",
