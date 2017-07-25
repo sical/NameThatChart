@@ -9,11 +9,28 @@
     <input id="sh" type="text" placeholder="Type Image ID or type">
 </div>
 
-
 <div id="fill">
 
 </div>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+            <h3>Modal Footer</h3>
+        </div>
+    </div>
+
+</div>
 
 <!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
@@ -24,6 +41,7 @@
 <script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
 <script type="text/javascript">
+    var info = [];
 
     $(document).ready(function () {
 
@@ -36,13 +54,14 @@
             contentType: false,
             data: form,
             success: function (data) {
-                var test_array = eval("[" + data + "]");
+                info = JSON.parse(JSON.parse(data));
+                console.log(info);
+                info.forEach(function (img) {
 
-                for (i = 0; i < test_array[0].length; i++) {
-                    $("#fill").append("<img class='idata' style='border: solid 1px' src=" + test_array[0][i] + ">")
+                    $("#fill").append("<img class='idata' value='" + img.id + "' src=" + img.path + ">")
 
 
-                }
+                });
             }
         })
 
@@ -66,14 +85,18 @@
                 contentType: false,
                 data: form,
                 success: function (data) {
-                    var test_array = eval("[" + data + "]");
-                    for (i = 0; i < test_array.length; i++) {
-                        $("#fill").append("<img class='idata' style='border: solid 1px' src=" + test_array[i] + ">")
+                    info = JSON.parse(data);
+                    console.log(info[0]);
+                    info.forEach(function (img) {
 
-                    }
+                        $("#fill").append("<img class='idata' value='" + img.id + "' src=" + img.path + ">")
+
+
+                    });
                 }
-            })
+            });
         }
+
         else {
             var idimage = $(this).val();
             var form = new FormData();
@@ -85,23 +108,67 @@
                 contentType: false,
                 data: form,
                 success: function (data) {
-                    var test_array = eval("[" + data + "]");
+                    info = JSON.parse(data);
+                    console.log(info[0]);
+                    info.forEach(function (img) {
 
-                    for (i = 0; i < test_array[0].length; i++) {
-                        $("#fill").append("<img class='idata' style='border: solid 1px' src=" + test_array[0][i] + ">")
+                        $("#fill").append("<img class='idata' value='" + img.id + "' src=" + img.path + ">")
 
 
-                    }
+                    });
                 }
             })
         }
-    });
+    })
+
+    ;
 
 
 </script>
 
-</div>
+<script async type="text/javascript">
+    var modal = document.getElementById('myModal');
 
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    /* $("#dispimg").onclick = function () {
+
+     };*/
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    $("body").on("click", ".idata", function () {
+        modal.style.display = "block";
+        console.log();
+        $(".modal-body").empty();
+        $(".modal-body").append("<img  class='imgmod' src="+$(this).attr('src')+"/>")
+
+
+    });
+</script>
+
+
+<div class="imginfo">
+    <h5>N°</h5>
+    <ul>
+        <li ></li>
+    </ul>
+</div>
 </body>
 
 </html>

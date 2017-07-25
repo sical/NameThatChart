@@ -883,7 +883,6 @@ def logaction():
 
 @app.route('/logswipes', methods=['POST'])
 def logswipes():
-
     idimage = request.form['idimg']
     idtype = request.form['idtype']
 
@@ -892,7 +891,6 @@ def logswipes():
 
     con = mysql.connect()
     cursor = con.cursor()
-
 
     q = "INSERT INTO swipe (iduser,`time`,`date`,idimage,idtype,`event`) VALUES (" + str(idu) + ",'" + str(
         timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'visible')"
@@ -987,12 +985,18 @@ def getimgbytype():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT imagepath FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
+        "SELECT imagepath,image.idimage FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
             action) + "%'")
     data = cursor.fetchall()
 
-    for i in range(0, len(data)):
-        result.append("static/" + str(data[i][0]))
+    result = '['
+
+    for row in data:
+        result += '{"path": "' + "static/" + str(row[0]) + '","id":' + str(row[1]) + '},'
+
+    result = result[:-1]
+    result += ']'
+    print(result)
 
     cursor.close()
     con.close()

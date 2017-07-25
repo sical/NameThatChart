@@ -157,7 +157,7 @@
             console.log(item.index());
 
             if (window.location.href.indexOf('quizz') !== -1) {
-                $("#brand").text("Does this belongs in " + cat[nb - 2] + " category");
+                $("#brand").text("Does this belongs in \"" + cat[nb - 2] + " \"category");
                 nb -= 1;
                 if (item.index() < 1 || item.index() > 3) {
                     note += 1
@@ -211,7 +211,7 @@
         onLike: function (item) {
             $("#brand").text("Does this belongs in " + cat[nb - 1] + " category");
             if (window.location.href.indexOf('quizz') !== -1) {
-                $("#brand").text("Does this belongs in " + cat[nb - 2] + " category");
+                $("#brand").text("Does this belongs in \"" + cat[nb - 2] + "\" category");
                 nb -= 1;
                 if (item.index() >= 1 && item.index() <= 3) {
                     note += 1
