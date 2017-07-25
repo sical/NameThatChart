@@ -171,7 +171,7 @@
                                 success: function (data) {
 
 
-                                    $("#imgdisp").attr("src", data);
+                                    $("#imgdisp").attr("src", "'" + data + "'");
                                 }
                             });
                         }
@@ -210,7 +210,6 @@
                     success: function (data) {
 
 
-                        $("#imgdisp").attr("src", data);
                     }
                 });
             }

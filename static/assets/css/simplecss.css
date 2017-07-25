@@ -40,9 +40,14 @@
 .idata {
     height: 150px;
     width: 300px;
-    background-color: #0b0b0b;
     border: solid 1px
 
+}
+
+.imginfo{
+    margin-left: 5%;
+    width: 40%;
+    display: inline-block;
 }
 
 #imgsel:hover {
@@ -648,6 +653,6 @@
 }
 
 .imgmod{
-    width: 60%;
-    height: 40%;
+    width: 50%;
+    height: 250%;
 }

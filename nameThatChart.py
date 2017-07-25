@@ -57,8 +57,8 @@ def vis10():
 @app.route("/tempdl")
 def tempdl():
     result = []
-    rd.getimgtypes("static/assets/img/datasets/vis16cat/")
-    imgs = pics.getimgs("static/assets/img/datasets/vis16cat/")
+    rd.getimgtypes("static/assets/img/datasets/downloadApi/vis16cat/")
+    imgs = pics.getimgs("static/assets/img/datasets/downloadApi/vis16cat/")
     for img in imgs:
         print(img)
         temp = img.split("_")
@@ -101,6 +101,7 @@ def downthumb():
 # fill database from "/static/assets/img/datasets/"
 @app.route('/maj/<dir>')
 def maj(dir):
+    pathdir = "assets/img/datasets/" + dir + "/"
     imgs = pics.getimgs("./static/assets/img/datasets/" + dir + "/")
     con = mysql.connect()
     cursor = con.cursor()
@@ -113,7 +114,7 @@ def maj(dir):
         temp = path.split('_')
 
         ext = str(temp[0])
-        idtype = gettype(ext)[0]
+        idtype = gettype(ext.replace(pathdir, ""))[0]
         if data is None:
             cursor.execute(
                 "INSERT INTO image (imagepath,`from`,idtype) VALUES ('" + path + "','" + dir + "'," + str(idtype) + ")")
@@ -125,6 +126,45 @@ def maj(dir):
 
 
 #     <------------------ Classic render template ------------------>
+@app.route("/getimginfotype", methods=['POST'])
+def getimginfotype():
+    idimg = request.form['idimg']
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute("SELECT count(idimage) AS nbtxt FROM textvote  WHERE idimage=" + str(
+        idimg) + " GROUP BY idimage")
+    nbtxt = cursor.fetchone()
+
+    cursor.execute("SELECT count(idimage) AS nbsel FROM selection  WHERE idimage=" + str(
+        idimg) + " GROUP BY idimage")
+
+    nbsel = cursor.fetchone()
+    cursor.execute("SELECT count(idimage) AS nbsw FROM swipe  WHERE idimage=" + str(
+        idimg) + " GROUP BY idimage")
+
+    nbswi = cursor.fetchone()
+    cursor.close()
+    con.close()
+
+    if nbtxt is None:
+        nbtxt = 0
+    else:
+        nbtxt = nbtxt[0]
+
+    if nbsel is None:
+        nbsel = 0
+    else:
+        nbsel = nbsel[0]
+    if nbswi is None:
+        nbswi = 0
+    else:
+        nbswi = nbswi[0]
+
+
+    return '{"text":"' + str(nbtxt) + '",' \
+                                      '"select":"' + str(nbsel) + '",' \
+                                                                  '"swipe":"' + str(nbswi) + '"}'
 
 
 # index

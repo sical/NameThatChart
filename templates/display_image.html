@@ -20,13 +20,13 @@
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
-            <h2>Modal Header</h2>
+            <h2 id="mh">Modal Header</h2>
         </div>
         <div class="modal-body">
 
         </div>
         <div class="modal-footer">
-            <h3>Modal Footer</h3>
+            <h3 id="mf">Modal Footer</h3>
         </div>
     </div>
 
@@ -38,7 +38,6 @@
 <!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
 
 <script type="text/javascript">
     var info = [];
@@ -58,7 +57,7 @@
                 console.log(info);
                 info.forEach(function (img) {
 
-                    $("#fill").append("<img class='idata' value='" + img.id + "' src=" + img.path + ">")
+                    $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
 
 
                 });
@@ -89,7 +88,7 @@
                     console.log(info[0]);
                     info.forEach(function (img) {
 
-                        $("#fill").append("<img class='idata' value='" + img.id + "' src=" + img.path + ">")
+                        $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
 
 
                     });
@@ -112,7 +111,7 @@
                     console.log(info[0]);
                     info.forEach(function (img) {
 
-                        $("#fill").append("<img class='idata' value='" + img.id + "' src=" + img.path + ">")
+                        $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
 
 
                     });
@@ -156,19 +155,30 @@
         modal.style.display = "block";
         console.log();
         $(".modal-body").empty();
-        $(".modal-body").append("<img  class='imgmod' src="+$(this).attr('src')+"/>")
+        $(".modal-body").append("<img  class='imgmod' src='" + $(this).attr('src') + "'/>");
+        $("#mh").text("Image N°" + $(this).attr('value'));
+
+        var form = new FormData();
+        form.append("idimg", "" + $(this).attr('value'));
+        $.ajax({
+            type: "POST",
+            url: "../getimginfotype",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                data = JSON.parse(data);
+                console.log(data);
+                $(".modal-body").append("<div class='imginfo'> <ul class='list-group'> <li class='list-group-item'>Textual <span class='badge'>" + data.text + "</span></li> <li class='list-group-item'>Selection<span class='badge'>" + data.select + "</span></li> <li class='list-group-item'>Swipes<span class='badge'>" + data.swipe + "</span></li> </ul> </div>");
+                $("#mf").text("Classified " + (parseInt(data.text) + parseInt(data.swipe) + parseInt(data.select)) + " times")
+            }
 
 
+        });
     });
 </script>
 
 
-<div class="imginfo">
-    <h5>N°</h5>
-    <ul>
-        <li ></li>
-    </ul>
-</div>
 </body>
 
 </html>
