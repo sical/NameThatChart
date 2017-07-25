@@ -144,9 +144,12 @@
 
         } else {
             fill();
+
+
         }
 
-    });
+    })
+    ;
 
     $("#tinderslide").jTinder({
 
@@ -166,14 +169,31 @@
                 nb = nb - 1;
                 var form = new FormData();
                 form.append("vote", false);
-                form.append("idimage", info[item.index()].idimage);
+                form.append("idimg", info[item.index()].idimage);
                 form.append("idtype", info[item.index()].idtype);
                 $.ajax({
                     type: "POST",
                     url: "../saveswipe",
                     processData: false,
                     contentType: false,
-                    data: form
+                    data: form,
+                    success: function () {
+                        if (item.index() - 1 >= 0) {
+
+                            var form = new FormData();
+                            form.append("idimage", info[item.index() - 1].idimage);
+                            form.append("idtype", info[item.index() - 1].idtype);
+                            $.ajax({
+
+                                type: "POST",
+                                url: "../logswipes",
+                                processData: false,
+                                contentType: false,
+                                data: form
+
+                            });
+                        }
+                    }
                 });
                 if (item.index() == 0) {
                     if (window.location.href.indexOf('main') !== -1) {
@@ -182,7 +202,7 @@
                         window.location = "../raw"
                     }
                     else {
-                        window.location = "simple"
+                        window.location = "swipes"
                     }
                 }
             }
@@ -207,12 +227,30 @@
                 form.append("idimage", info[item.index()].idimage);
                 form.append("idtype", info[item.index()].idtype);
                 $.ajax({
-                    type: "POST",
-                    url: "../saveswipe",
-                    processData: false,
-                    contentType: false,
-                    data: form
-                });
+                            type: "POST",
+                            url: "../saveswipe",
+                            processData: false,
+                            contentType: false,
+                            data: form,
+                            success: function () {
+                                if (item.index() - 1 >= 0) {
+
+                                    var form = new FormData();
+                                    form.append("idimg", info[item.index() - 1].idimage);
+                                    form.append("idtype", info[item.index() - 1].idtype);
+                                    $.ajax({
+
+                                        type: "POST",
+                                        url: "../logswipes",
+                                        processData: false,
+                                        contentType: false,
+                                        data: form
+
+                                    });
+                                }
+                            }
+                        }
+                );
 
                 if (item.index() == 0) {
                     if (window.location.href.indexOf('main') !== -1) {
@@ -221,7 +259,7 @@
                         window.location = "../raw"
                     }
                     else {
-                        window.location = "simple"
+                        window.location = "swipes"
                     }
                 }
             }
@@ -275,6 +313,18 @@
                     i++;
                 })
 
+                var form = new FormData();
+                form.append("idimg", info[4].idimage);
+                form.append("idtype", info[4].idtype);
+                $.ajax({
+
+                    type: "POST",
+                    url: "../logswipes",
+                    processData: false,
+                    contentType: false,
+                    data: form
+
+                });
             }
         });
     }

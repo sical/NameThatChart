@@ -12,6 +12,26 @@
     max-width: 800px;
 }
 
+#save {
+    background-color: lightgreen;
+    padding: 3%;
+}
+
+#skip {
+    background-color: lightcoral;
+    padding: 3%;
+}
+
+#report {
+    padding: 3%;
+    background-color: orange;
+}
+#value {
+    margin-bottom: 8%;
+    margin-top: 12%;
+    padding: 1%;
+}
+
 #main-title {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 66px;
@@ -215,6 +235,12 @@
         margin-bottom: 5%;
         border: solid 1px;
     }
+
+    #value {
+        max-width: 275px;
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
 }
 
 @media screen and (max-width: 600px) and (min-width: 400px ) {
@@ -275,6 +301,43 @@
         border: solid 1px;
     }
 
+    #value {
+        max-width: 340px;
+        margin-bottom: 7%;
+    }
+}
+
+/* The alert message box */
+.alert {
+    float: right;
+    padding: 20px;
+    background-color: lightgreen; /* Red */
+    color: white;
+    margin-bottom: 5px;
+    position: fixed;
+    width: 30%;
+    z-index: 300;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */

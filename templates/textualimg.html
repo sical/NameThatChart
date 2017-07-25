@@ -13,10 +13,21 @@
     <img id="imgdisp" src=""/>
 
 
-    <div id="fom">
-        <input id="value" type="text" name="type" placeholder="What is this chart ?"
+    <div id="fom" class="form-group" style="max-width: 500px;text-align: center">
+        <input id="value" type="text" class="form-control" name="type" placeholder="What is this chart ?"
                maxlength="50"/>
+
+
         <div id="btn">
+            <div class="dropup" style="display: inline">
+                <button class="btn btn-primary dropdown-toggle" id="report" type="button" data-toggle="dropdown">Report
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a id="nd">No display</a></li>
+                    <li><a id="ii">Inappropriate image</a></li>
+                    <li><a id="hmc">Huge miss-classification</a></li>
+                </ul>
+            </div>
             <button id="skip" class="waves-effect waves-light btn grey">skip
             </button>
             <button id="save" class="waves-effect waves-light btn blue ">
@@ -28,7 +39,9 @@
 
         </div>
     </div>
+
 </div>
+
 
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 
@@ -66,6 +79,38 @@
     );
 
 
+    $("#nd").click(function (event) {
+        event.preventDefault();
+
+        report("no_display")
+    });
+
+        $("#ii").click(function (event) {
+        event.preventDefault();
+
+        report("Inappropriate_image")
+    });
+
+        $("#hmc").click(function (event) {
+        event.preventDefault();
+
+        report("miss_classification")
+    });
+    function report(string) {
+        $.ajax({
+            type: "POST",
+            url: "../report/" + string,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+              pop();
+            }
+        });
+
+
+    }
+
+
     $("#save").click(function () {
 
         var text = $("#value").val();
@@ -93,15 +138,12 @@
         } else {
 
 
-            $("#pop").show();
-            $("#pop").delay(4300).fadeOut(500);
-
             var form = new FormData();
 
             var reg = /[\(,\)\\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
             text = text.replace(reg, "");
             form.append("name", text);
-
+                pop();
 
             $.ajax({
                 type: "POST",
@@ -205,6 +247,11 @@
             $("#save").click()
         }
     };
+
+    function pop() {
+        $("#pop").show();
+        $("#pop").delay(4300).fadeOut(500);
+    }
 </script>
 
 </body>

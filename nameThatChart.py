@@ -137,6 +137,7 @@ def hello_world():
 def simple():
     return render_template('simple/simpleswipes.html')
 
+
 @app.route('/simpleup')
 def simpleup():
     return render_template('simple/simpleuploadimg.html')
@@ -237,6 +238,20 @@ def savenote():
         con.commit()
         con.close()
 
+    return 'ok'
+
+
+@app.route("/report/<label>", methods=['POST'])
+def report(label):
+    usrid = getid(request.environ['REMOTE_ADDR'])
+    idimg = session.get("idimg")
+
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute(
+        "INSERT INTO report (idimage,iduser,label) VALUES (" + str(idimg) + "," + str(usrid) + ",'" + label + "')")
+    con.commit()
+    con.close()
     return 'ok'
 
 
@@ -772,7 +787,7 @@ def getselect():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT type.idtype,label FROM sql11185116.textvote INNER JOIN type ON type.idtype = textvote.idtype WHERE type.idtype IS NOT NULL GROUP BY type.idtype,label HAVING count(type.idtype) > 3 ORDER BY rand() LIMIT 1")
+        "SELECT type.idtype,label FROM sql11185116.textvote INNER JOIN type ON type.idtype = textvote.idtype WHERE type.idtype IS NOT NULL GROUP BY type.idtype,label HAVING count(type.idtype) > 5 ORDER BY rand() LIMIT 1")
     idtype = cursor.fetchone()
 
     cursor.execute(
@@ -866,6 +881,31 @@ def logaction():
     # <------------------ Unmapped Get ------------------>
 
 
+@app.route('/logswipes', methods=['POST'])
+def logswipes():
+
+    idimage = request.form['idimg']
+    idtype = request.form['idtype']
+
+    now, timestamp = gettimes()
+    idu = getid(request.environ['REMOTE_ADDR'])
+
+    con = mysql.connect()
+    cursor = con.cursor()
+
+
+    q = "INSERT INTO swipe (iduser,`time`,`date`,idimage,idtype,`event`) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'visible')"
+
+    print(q)
+
+    cursor.execute(q)
+    cursor.close()
+    con.commit()
+    con.close()
+    return 'ok'
+
+
 #     <------------------ Image tools ------------------>
 
 # Return Image path from given ID used in display_image
@@ -923,13 +963,14 @@ def saveswipe():
     vote = request.form["vote"]
     idtype = request.form["idtype"]
     iduser = getid(request.environ['REMOTE_ADDR'])
-
+    now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-
-    cursor.execute(
-        "INSERT INTO swipe (idimage,idtype,iduser,vote) VALUES (" + str(idimage) + "," + str(idtype) + "," + str(
-            iduser) + "," + str(to_bool(vote)) + ")")
+    q = "INSERT INTO swipe (idimage,idtype,iduser,vote,`time`,`date`,`event`) VALUES (" + str(idimage) + "," + str(
+        idtype) + "," + str(
+        iduser) + "," + str(to_bool(vote)) + ",'" + timestamp + "','" + now + "','swipe')"
+    print(q)
+    cursor.execute(q)
 
     cursor.close()
     con.commit()
