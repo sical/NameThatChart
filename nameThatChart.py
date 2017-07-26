@@ -16,7 +16,8 @@ from imagetype import ImgType
 import d3jsdownload as dl
 import imagePrep as pics
 import wget
-
+import itertools
+import operator
 import readerDL as rd
 
 app = Flask(__name__)
@@ -54,20 +55,12 @@ def vis10():
     return 'ok'
 
 
-@app.route("/tempdl")
-def tempdl():
-    result = []
-    rd.getimgtypes("static/assets/img/datasets/downloadApi/vis16cat/")
-    imgs = pics.getimgs("static/assets/img/datasets/downloadApi/vis16cat/")
-    for img in imgs:
-        print(img)
-        temp = img.split("_")
-        url = img.replace(str(os.getcwd()), "")
-        url = url.replace("static/", "")
-        result.append(ImgType(temp[0], ""))
-        result[len(result) - 1].path = url
+@app.route("/tempdl/<dir>/<filename>")
+def tempdl(dir, filename):
+    location = "static/assets/img/datasets/downloadApi/" + dir + "/"
+    nb = rd.getimgtypes(location, filename)
 
-    return 'ok'
+    return redirect("../maj/" + dir + "/" + str(nb))
 
 
 # get d3js html from bl.ock and save it
@@ -99,29 +92,43 @@ def downthumb():
 
 
 # fill database from "/static/assets/img/datasets/"
-@app.route('/maj/<dir>')
-def maj(dir):
-    pathdir = "assets/img/datasets/" + dir + "/"
-    imgs = pics.getimgs("./static/assets/img/datasets/" + dir + "/")
+@app.route('/maj/<dir>/<nb>')
+def maj(dir, nb):
+    pathdir = "assets/img/datasets/downloadApi/" + dir + "/"
+    imgs = pics.getimgs("./static/" + pathdir)
     con = mysql.connect()
     cursor = con.cursor()
-
+    y = 0
     for i in range(0, len(imgs)):
-        path = imgs[i].replace("./static/", "")
+        try:
+            temp = Image.open(imgs[i])
+            width, height = temp.size
+            if width < 400:
+                os.remove(img.path)
+            else:
+                path = imgs[i].replace("./static/", "")
+                temp = path.split('_')
+                ext = str(temp[0])
+                idtype = gettype(ext.replace(pathdir, ""))[0]
 
-        cursor.execute("SELECT * FROM image WHERE imagepath LIKE '" + path + "' LIMIT 1")
-        data = cursor.fetchone()
-        temp = path.split('_')
+                cursor.execute("SELECT * FROM image WHERE imagepath LIKE '" + path + "' LIMIT 1")
+                data = cursor.fetchone()
 
-        ext = str(temp[0])
-        idtype = gettype(ext.replace(pathdir, ""))[0]
-        if data is None:
-            cursor.execute(
-                "INSERT INTO image (imagepath,`from`,idtype) VALUES ('" + path + "','" + dir + "'," + str(idtype) + ")")
+                if data is None:
+                    cursor.execute(
+                        "INSERT INTO image (imagepath,`from`,idtype) VALUES ('" + path + "','" + dir + "'," + str(
+                            idtype) + ")")
+
+        except Exception as e:
+            print(e)
+            os.remove(imgs[i])
+            y += 1
 
     cursor.close()
     con.commit()
     con.close()
+    print('\x1b[6;30;42m' + "Done ! (" + str(len(imgs) - y) + "/" + str(len(imgs)) + ") saved out of the " + str(
+        nb) + " initial" '\x1b[0m' + "\n")
     return "ok"
 
 
@@ -133,15 +140,15 @@ def getimginfotype():
     cursor = con.cursor()
 
     cursor.execute("SELECT count(idimage) AS nbtxt FROM textvote  WHERE idimage=" + str(
-        idimg) + " GROUP BY idimage")
+        idimg) + " AND idtype IS NOT NULL GROUP BY idimage")
     nbtxt = cursor.fetchone()
 
     cursor.execute("SELECT count(idimage) AS nbsel FROM selection  WHERE idimage=" + str(
-        idimg) + " GROUP BY idimage")
+        idimg) + " AND idtype IS NOT NULL  GROUP BY idimage")
 
     nbsel = cursor.fetchone()
     cursor.execute("SELECT count(idimage) AS nbsw FROM swipe  WHERE idimage=" + str(
-        idimg) + " GROUP BY idimage")
+        idimg) + "  AND vote IS NOT NULL GROUP BY idimage")
 
     nbswi = cursor.fetchone()
     cursor.close()
@@ -161,13 +168,69 @@ def getimginfotype():
     else:
         nbswi = nbswi[0]
 
-
     return '{"text":"' + str(nbtxt) + '",' \
                                       '"select":"' + str(nbsel) + '",' \
                                                                   '"swipe":"' + str(nbswi) + '"}'
 
 
-# index
+@app.route('/topclass', methods=["POST"])
+def topclass():
+    idimg = request.form['idimg']
+
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute(
+        "SELECT count(idtype),idtype FROM   textvote WHERE idimage =  " + idimg + " AND idtype IS NOT NULL GROUP BY idtype ORDER BY idtype")
+    txt = cursor.fetchall()
+    cursor.execute(
+        "SELECT count(idtype),idtype  FROM selection WHERE idimage = " + idimg + " AND idtype IS NOT NULL GROUP BY idtype ORDER BY idtype")
+    sel = cursor.fetchall()
+    cursor.execute(
+        "SELECT count(idtype),idtype FROM swipe  WHERE idimage =  " + idimg + " AND vote = 1 GROUP BY swipe.idtype ORDER BY idtype")
+    swi = cursor.fetchall()
+
+    res = {}
+
+    for row in txt:
+        res[str(row[1])] = row[0]
+
+    for row in sel:
+        res[str(row[1])] += row[0]
+
+    for row in swi:
+        res[str(row[1])] += row[0]
+
+    value = sorted(res.values())[:5]
+    print(value)
+    print(res)
+    result = {}
+    for key in res:
+        print(value)
+        if res[key] in value:
+            result[key] = res[key]
+            test = True
+            for i in range(0, len(value)):
+                if value[i] == res[key] and test:
+                    value[i] = -36
+                    test = False
+
+    print(result.values())
+
+    cursor.close()
+    con.close()
+    final = '['
+
+    for key in result:
+        final += '{"name":"' + getlabel(key) + '",' \
+                                               '"value":"' + str(result[key]) + '"},'
+
+    final = final[:-1]
+    return final + ']'
+
+    # index
+
+
 @app.route('/')
 def hello_world():
     return render_template('index.html')
@@ -332,16 +395,13 @@ def mainraw():
 # main view with taskforce motivation handling
 @app.route('/main')
 def main():
-    print(str(session.get("task")) + " MOTIVATION")
-
     lvl = session.get("lvl")
-    print()
     if lvl is None:
         lvl = getlvl(request.environ["REMOTE_ADDR"])
         print('aaaa')
     if lvl is None:
         return redirect("/raw")
-
+    print(str(session.get("task")) + " MOTIVATION")
     if int(session.get("task")) > 80 and int(session.get("lvl")) > 0:
         session['task'] = str(int(session.get("task")) + getcost(0, int(session.get("lvl"))))
         return render_template('textualimg.html')
@@ -431,32 +491,14 @@ def getrandom2djson():
 # Mapping to save multiple (QCM) task
 @app.route('/savemultiple', methods=['POST'])
 def savemultiple():
-    name = request.form.get("name")
-    name = str(name.replace("\n", ""))
-    name = str(name.replace("_", " "))
-
-    url = request.form.get("url")
+    idimage = request.form.get("idimage")
+    idtype = request.form.get("idtype")
+    idu = getid(request.environ['REMOTE_ADDR'])
+    now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-
-    q1 = "SELECT idimage FROM image WHERE imagepath = '" + url.replace("/static/", "") + "'"
-    q2 = "SELECT idtype FROM type WHERE label = '" + name + "'"
-    cursor.execute(q1)
-    idm = cursor.fetchone()
-    cursor.execute(q2)
-    idt = cursor.fetchone()
-    idu = getid(request.environ['REMOTE_ADDR'])
-
-    cursor.execute("SELECT iduser FROM multiplevote WHERE iduser=" + str(idu) + " AND idimage =" + str(idm[0]) + "")
-    data = cursor.fetchone()
-
-    if data is None:
-        final = "INSERT INTO multiplevote (iduser,idimage,idtype) VALUES (" + str(idu) + "," + str(
-            idm[0]) + "," + str(
-            idt[0]) + ")"
-    else:
-        final = "UPDATE multiplevote SET idtype =" + str(idt[0]) + " WHERE iduser=" + str(
-            idu) + " AND idimage =" + str(idm[0])
+    final = "INSERT INTO multiple (idimage,idtype,iduser,`time`,`date`,`event`) VALUES (" + str(idimage) + "," + str(
+        idtype) + "," + str(idu) + ",'" + str(timestamp) + "','" + str(now) + "','chosen') "
     cursor.execute(final)
     cursor.close()
     con.commit()
@@ -805,19 +847,47 @@ def saveselect():
     iduser = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form['idtype']
     idimg = request.form['idimage']
-
+    now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-
-    cursor.execute(
-        "INSERT INTO selection (idimage,idtype,iduser) VALUES (" + str(idimg) + "," + str(idtype) + "," + str(
-            iduser) + ")")
+    q = "INSERT INTO selection (idimage,idtype,iduser,`time`,`date`,`event`) VALUES (" + str(idimg) + "," + str(
+        idtype) + "," + str(
+        iduser) + ",'" + str(timestamp) + "','" + str(now) + "','chosen')"
+    print(q)
+    cursor.execute(q)
 
     cursor.close()
     con.commit()
     con.close()
 
     return 'ok'
+
+
+@app.route('/getimgmul')
+def getimgmul():
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute(
+        "SELECT idimage,imagepath FROM image WHERE idimage IN (SELECT idimage FROM textvote GROUP BY idimage HAVING count(idtype) > 3) ORDER BY rand() LIMIT 1")
+    img = cursor.fetchone()
+
+    cursor.execute(
+        "SELECT DISTINCT label,type.idtype FROM type INNER JOIN textvote ON type.idtype=textvote.idtype WHERE idimage=" + str(
+            img[
+                0]) + " ORDER BY rand() LIMIT 4")
+
+    data = cursor.fetchall()
+    cursor.close()
+    con.close()
+    arr = ""
+    for row in data:
+        arr += '{"label":"' + str(row[0]) + '","idtype":"' + str(row[1]) + '"},'
+    arr = arr[:-1]
+
+    result = '{"image":{"id":"' + str(img[0]) + '","path":"' + img[1] + '"},' \
+                                                                        '"types":[' + arr + ']}'
+    return result
 
 
 # Get set of images to display in selection
@@ -944,6 +1014,29 @@ def logswipes():
     return 'ok'
 
 
+@app.route('/logsel', methods=['POST'])
+def logsel():
+    idimage = request.form['idimg']
+    idtype = request.form['idtype']
+
+    now, timestamp = gettimes()
+    idu = getid(request.environ['REMOTE_ADDR'])
+
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    q = "INSERT INTO selection (iduser,`time`,`date`,idimage,idtype,`event`) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'page loaded')"
+
+    print(q)
+
+    cursor.execute(q)
+    cursor.close()
+    con.commit()
+    con.close()
+    return 'ok'
+
+
 #     <------------------ Image tools ------------------>
 
 # Return Image path from given ID used in display_image
@@ -954,7 +1047,7 @@ def getimgbyid():
     con = mysql.connect()
     cursor = con.cursor()
 
-    cursor.execute("SELECT imagepath FROM image WHERE idimage =" + str(action))
+    cursor.execute("SELECT DISTINCT imagepath FROM image WHERE idimage =" + str(action))
     data = cursor.fetchall()
     for i in range(0, len(data)):
         result.append("static/" + str(data[i][0]))
@@ -1025,7 +1118,7 @@ def getimgbytype():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT imagepath,image.idimage FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
+        "SELECT DISTINCT imagepath,image.idimage FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
             action) + "%'")
     data = cursor.fetchall()
 
@@ -1155,6 +1248,15 @@ def getlvl(ip):
     session["task"] = data[2]
 
     return data[0]
+
+
+def getlabel(id):
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("SELECT label FROM type WHERE idtype = " + str(id))
+    data = cursor.fetchone()[0]
+
+    return data
 
 
 if __name__ == '__main__':

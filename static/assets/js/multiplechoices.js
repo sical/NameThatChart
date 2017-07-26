@@ -3,10 +3,12 @@
  */
 
 var note = 0;
-
+var info = {};
 $(document).ready(function () {
     console.log(window.location.href);
-    if (!window.location.href.indexOf('quizz') !== -1) {
+    if (window.location.href.indexOf('quizz') !== -1) {
+        $("#imgdisp").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg")
+    } else {
         getimg();
     }
 
@@ -16,10 +18,19 @@ $(document).ready(function () {
 function getimg() {
     $.ajax({
         type: "GET",
-        url: "./getimg",
+        url: "../getimgmul",
         success: function (data) {
-            console.log(data);
-            $("#disp").attr("src", "/static/" + data);
+            info = JSON.parse(data);
+            console.log(info);
+
+            var i = 0;
+            info.types.forEach(function (type) {
+                $('#' + i).text(type.label);
+                $('#' + i).attr("value", type.idtype);
+
+                i++;
+            });
+            $("#imgdisp").attr("src", "/static/" + info.image.path);
         }
     });
 }
@@ -32,21 +43,32 @@ $("#0").click(function (event) {
 
     } else {
         event.preventDefault();
-        var text = $("#0").text().split(' ').join('_');
-        console.log(text);
-        $.ajax({
-            type: "POST",
-            url: "./savemultiple",
-            data: {
-                'name': text,
-                'url': $("#disp").attr('src')
-            },
-            success: function (data) {
-                console.log(data)
-            }
-        });
+        var text = $("#0").val();
+        save(text)
+
     }
 });
+
+
+function save(idtype) {
+    var form = new FormData();
+
+    form.append("idimage", info.image.id);
+    form.append("idtype", idtype);
+
+    $.ajax({
+        type: "POST",
+        url: "../savemultiple",
+        processData: false,
+        contentType: false,
+        data: form,
+        success : function () {
+            getimg()
+        }
+
+
+    })
+}
 
 $("#1").click(function (event) {
     if (window.location.href.indexOf('quizz') !== -1) {
@@ -54,19 +76,8 @@ $("#1").click(function (event) {
 
     } else {
         event.preventDefault();
-        var text = $("#1").text().split(' ').join('_');
-        ;
-        $.ajax({
-            type: "POST",
-            url: "./savemultiple",
-            data: {
-                'name': text,
-                'url': $("#disp").attr('src')
-            },
-            success: function (data) {
-                console.log(data)
-            }
-        });
+        var text = $("#1").val();
+        save(text)
     }
 });
 
@@ -80,18 +91,8 @@ $("#2").click(function (event) {
     } else {
 
         event.preventDefault();
-        var text = $("#2").text().split(' ').join('_');
-        $.ajax({
-            type: "POST",
-            url: "./savemultiple",
-            data: {
-                'name': text,
-                'url': $("#disp").attr('src')
-            },
-            success: function (data) {
-                console.log(data)
-            }
-        });
+        var text = $("#2").val();
+        save(text)
     }
 });
 
@@ -102,20 +103,8 @@ $("#3").click(function (event) {
     } else {
 
         event.preventDefault();
-        var text = $("#3").text().split(' ').join('_');
-
-        $.ajax({
-            type: "POST",
-            url: "./savemultiple",
-            data: {
-                'name': text,
-                'url': $("#disp").attr('src')
-            },
-
-            success: function (data) {
-                console.log(data)
-            }
-        });
+        var text = $("#3").val();
+        save(text)
     }
 });
 

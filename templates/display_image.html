@@ -175,6 +175,26 @@
 
 
         });
+
+        $.ajax({
+            type: "POST",
+            url: "../topclass",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                info = JSON.parse(data);
+                console.log(info)
+                str = "<div class='imginfo'> <ul class='list-group'>";
+
+                info.forEach(function (row) {
+                   str+=" <li class='list-group-item'>" + row.name + " <span class='badge'>" + row.value + "</span></li>"
+                });
+                $(".modal-body").append(str+"</ul> </div></div>")
+            }
+
+
+        });
     });
 </script>
 

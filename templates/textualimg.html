@@ -28,9 +28,9 @@
                     <li><a id="hmc">Huge miss-classification</a></li>
                 </ul>
             </div>
-            <button id="skip" class="waves-effect waves-light btn grey">skip
+            <button id="skip" class="btn">skip
             </button>
-            <button id="save" class="waves-effect waves-light btn blue ">
+            <button id="save" class="btn">
                 save
             </button>
             <div>
@@ -141,7 +141,7 @@
 
             var form = new FormData();
 
-            var reg = /[\(,\)\\~\`\"\{\}\+\=\#\&\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
+            var reg = /[\(,\)\\~\`\"\{\}\+\=\#\\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
             text = text.replace(reg, "");
             form.append("name", text);
             pop();
@@ -171,7 +171,7 @@
                                 success: function (data) {
 
 
-                                    $("#imgdisp").attr("src", "'" + data + "'");
+                                    $("#imgdisp").attr("src", data);
                                 }
                             });
                         }

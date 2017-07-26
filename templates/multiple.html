@@ -1,60 +1,37 @@
 {% include 'nav.html' %}
 
-<!-- /. NAV SIDE  -->
-<div id="page-wrapper">
-    <div class="header hcenter">
-        <h1 class="page-header">
-            Name that chart
-            <small> Try it</small>
-        </h1>
+<h1 class="page-header hcenter" id="brand">
+    Choose the more fitting category
+</h1>
 
-    </div>
-    <div id="page-inner" height="150%">
 
-        <div class="row">
-
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-action" id="pres">
-                        <img id="disp"  src="static/assets/img/datasets/json/13_minard_map.jpg"/>
-                    </div>
-                    <div class="card-content" id="pres">
-                        <button style="margin: 25px;" id="0"
-                                class="waves-effect waves-light btn" name="Area chart">Area chart
-                        </button>
-                        <button style="margin: 25px;" id="1"
-                                class="waves-effect waves-light btn" name="Miller flow"> Miller's flow
-                        </button>
-                        <button style="margin: 25px;" id="2"
-                                class="waves-effect waves-light btn" name="Minard">Minard's map
-                        </button>
-                        <button style="margin: 25px;" id="3"
-                                class="waves-effect waves-light btn" name="flow datagram">flow datagram
-                        </button>
-                    </div>
-
-                </div>
-            </div>
+<div class="centerimg">
+    <img id="imgdisp" src=""/>
+    <div class="btnholder">
+        <div class="" style="display: inline" id="pres">
+            <button  style="margin: 1%" id="0"
+                    class="waves-effect waves-light btn" name="Area chart">Area chart
+            </button>
+            <button  style="margin: 1%" id="1"
+                    class="waves-effect waves-light btn" name="Miller flow"> Miller's flow
+            </button>
+        </div>
+        <div class="" style="display: inline" id="pres">
+            <button  style="margin: 1%" id="2"
+                    class="waves-effect waves-light btn" name="Minard">Minard's map
+            </button>
+            <button style="margin: 1%" id="3"
+                    class="waves-effect waves-light btn" name="flow datagram">flow datagram
+            </button>
         </div>
     </div>
-    <!-- /. PAGE INNER  -->
 </div>
 
-<!-- /. PAGE WRAPPER  -->
-</div>
-<!-- /. WRAPPER  -->
-<!-- JS Scripts-->
-<!-- jQuery Js -->
+
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 
 <!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
-
-<!-- Metis Menu Js -->
-<script src="{{ url_for('static', filename='assets/js/jquery.metisMenu.js') }}"></script>
-
 
 <script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
 

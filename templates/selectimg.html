@@ -21,8 +21,6 @@
 <!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
-
 <script type="text/javascript">
     var type;
     $(document).ready(function () {
@@ -93,17 +91,30 @@
             contentType: false,
             success: function (data) {
                 info = JSON.parse(data);
-                console.log(info.imgs);
                 $("#brand").append(info.name);
                 type = info.idtype;
                 info.imgs.forEach(function (img) {
-                    console.log('lalalala');
                     $("#fill").append("<img id='imgsel' value='" + img.id + "' src='static/" + img.path + "' />")
-                })
+                    var form = new FormData();
+                    form.append("idimg", img.id);
+                    form.append("idtype", type);
 
+                    $.ajax({
+                        type: "POST",
+                        url: "../logsel",
+                        processData: false,
+                        contentType: false,
+                        data: form
+
+
+                    })
+
+
+                });
             }
         });
     }
+
 
     function fillthem2() {
 
