@@ -79,6 +79,11 @@
     margin: 1%;
 }
 
+.btnvali {
+    background-color: #343d46;
+    color: #FFF;
+}
+
 .centerimg {
     top: 50%;
     position: fixed;

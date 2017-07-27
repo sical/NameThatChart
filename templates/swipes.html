@@ -102,11 +102,6 @@
 <!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 
-<!-- Bootstrap Js -->
-<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
-
 
 <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <!-- transform2d lib -->
@@ -126,11 +121,10 @@
     $(document).ready(function () {
 
         if (window.location.href.indexOf('quizz') !== -1) {
-            var path = ["static/assets/img/datasets/json/4_diagram_of_the_cause_of_mortality.png", "static/assets/img/datasets/textualsaved/136.jpg", "static/assets/img/datasets/textualsaved/123.jpg", "static/assets/img/datasets/textualsaved/178.jpg", "static/assets/img/datasets/textualsaved/170.jpg"];
-            cat = ["pie chart", "line chart", "scatter plot", "bar chart", "polar area diagram"];
+            var path = ["static/assets/img/datasets/downloadApi/vis16cat/BubbleChart_147.jpg", "static/assets/img/datasets/downloadApi/vis10cat/AreaGraph_16.gif", "static/assets/img/datasets/downloadApi/vis10cat/ParetoChart_499.png", "static/assets/img/datasets/downloadApi/vis10cat/RadarPlot_640.jpg", "static/assets/img/datasets/downloadApi/vis10cat/VennDiagram_1024.gif"];
+            cat = ["scatter plot", "Area chart", "Bar Chart", "Radar Chart", "Bubble Chart"];
 
             for (var i = 0; i < 5; i++) {
-                console.log(i + 1);
                 var temp = $('.pane' + (i + 1));
                 temp.css("width", "75%");
                 temp.css("height", "55%");
@@ -139,7 +133,7 @@
                 temp.css("border", "solid 1px");
                 temp.css("background-image", 'url("' + path[i] + '")');
                 $("#" + i + "_txt").text("");
-                $("#brand").text("Does this belongs in " + cat[4] + " category");
+                $("#brand").text("Does this belongs in \"" + cat[4] + "\" category");
             }
 
         } else {
@@ -159,10 +153,12 @@
             if (window.location.href.indexOf('quizz') !== -1) {
                 $("#brand").text("Does this belongs in \"" + cat[nb - 2] + " \" category");
                 nb -= 1;
-                if (item.index() < 1 || item.index() > 3) {
+                if (item.index() == 0 || item.index() == 2 || item.index() == 4 ) {
                     note += 1
-                }
+                } console.log(note);
+
                 if (item.index() == 0) {
+
                     done(note);
                 }
             } else {
@@ -213,7 +209,7 @@
             if (window.location.href.indexOf('quizz') !== -1) {
                 $("#brand").text("Does this belongs in \"" + cat[nb - 2] + "\" category");
                 nb -= 1;
-                if (item.index() >= 1 && item.index() <= 3) {
+                if (item.index() == 1 || item.index() == 3) {
                     note += 1
                 }
 

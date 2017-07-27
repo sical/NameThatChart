@@ -44,92 +44,9 @@
 <!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ url_for('static', filename='assets/js/morris/raphael-2.1.0.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/morris/morris.js') }}"></script>
-
-
-<script src="{{ url_for('static', filename='assets/js/easypiechart.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/easypiechart-data.js') }}"></script>
-
-<script src="{{ url_for('static', filename='assets/js/Lightweight-Chart/jquery.chart.js') }}"></script>
-
-<script src="{{ url_for('static',filename='assets/js/dataTables/jquery.dataTables.js') }}"></script>
 
 
 <script type="text/javascript">
-    $(document).ready(function () {
-
-        $.ajax({
-            type: "GET",
-            url: "../firstrow",
-
-            success: function (data) {
-                data = JSON.parse(data);
-                var i = 0;
-                var numbers = ['first', 'second', 'third', 'fourth'];
-
-                Morris.Donut({
-
-                    element: 'morris-donut-chart',
-                    data: [{
-                        label: data[0][1],
-                        value: data[0][2]
-                    }, {
-                        label: data[1][1],
-                        value: data[1][2]
-                    }, {
-                        label: data[2][1],
-                        value: data[2][2]
-                    },
-                        {
-                            label: data[3][1],
-                            value: data[3][2]
-                        }
-                    ],
-                    colors: [
-                        '#2a4d69', '#4b86b4',
-                        '#adcbe3', '#63ace5'
-                    ],
-                    resize: true
-                });
-
-
-            }
-        });
-
-
-        $.ajax({
-            type: "GET",
-            url: "../userstats",
-
-            success: function (data) {
-                data = JSON.parse(data);
-                var i = 1;
-                var tr = "";
-                var keys = ['id', 'posted', 'skipped', "submitted", 'averageSub', 'averageSkip'];
-                data.forEach(function (row) {
-                    i = i * -1;
-                    if (i < 0) {
-                        tr = "<tr class='gradeA even'>";
-                    } else {
-                        tr = "<tr class='gradeA odd'>";
-                    }
-                    for (var z = 0; z < keys.length; z++) {
-
-                        tr += "<td>" + row[keys[z]] + "</td>";
-                    }
-                    tr += "</tr>";
-                    $("#tbody").append(tr);
-                });
-
-
-            }
-        });
-
-
-    });
-
-    $('.donut-chart').cssCharts({type: "donut"}).trigger('show-donut-chart');
 
     $("#up").click(function () {
         var type = $("#dj").val();

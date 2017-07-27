@@ -1,0 +1,43 @@
+{% include 'nav.html' %}
+
+<h1 class="page-header hcenter" id="brand">
+    Choose the more fitting chart to describe
+</h1>
+
+
+<div id="fill" class="centerimg">
+
+</div>
+
+
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "GET",
+            url: "../gereverse",
+            processData: false,
+            contentType: false,
+            success: function () {
+
+            }
+
+
+        });
+
+    });
+
+
+</script>
+
+</div>
+
+</body>
+
+</html>

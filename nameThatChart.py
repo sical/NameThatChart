@@ -901,7 +901,7 @@ def getselect():
     idtype = cursor.fetchone()
 
     cursor.execute(
-        "SELECT imagepath,image.idimage FROM textvote INNER JOIN image ON image.idimage = textvote.idimage WHERE textvote.idtype = " + str(
+        "SELECT DISTINCT imagepath,image.idimage FROM textvote INNER JOIN image ON image.idimage = textvote.idimage WHERE textvote.idtype = " + str(
             idtype[0]) + " ORDER BY rand() LIMIT 6")
 
     imgs = cursor.fetchall()
@@ -1086,6 +1086,19 @@ def getfive():
     con.close()
     return result
 
+@app.route('/getreverse')
+def getreverse():
+    con = mysql.connect()
+    cursor = con.cursor()
+
+
+
+
+
+    cursor.close()
+    con.close()
+
+    return 'ok'
 
 # Save one swipe on swipes
 @app.route('/saveswipe', methods=['POST'])
