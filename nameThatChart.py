@@ -352,7 +352,27 @@ def report(label):
     con = mysql.connect()
     cursor = con.cursor()
     cursor.execute(
-        "INSERT INTO report (idimage,iduser,label) VALUES (" + str(idimg) + "," + str(usrid) + ",'" + label + "')")
+        "INSERT INTO report (idimage,iduser,label,`where`) VALUES (" + str(idimg) + "," + str(
+            usrid) + ",'" + label + "','textual')")
+    con.commit()
+    con.close()
+    return 'ok'
+
+
+@app.route("/report/<where>/<label>", methods=['POST'])
+def reportgene(label, where):
+    usrid = getid(request.environ['REMOTE_ADDR'])
+    idimgs = str(request.form.get('ids')).split(",")
+    print(idimgs)
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    for idimg in idimgs:
+        q = "INSERT INTO report (idimage,iduser,label,`where`) VALUES (" + str(idimg) + "," + str(
+            usrid) + ",'" + label + "','" + where + "')"
+        print(q)
+        cursor.execute(q)
+
     con.commit()
     con.close()
     return 'ok'
@@ -383,13 +403,17 @@ def hybrid():
 # main view with Random selection
 @app.route('/raw')
 def mainraw():
-    a = randint(0, 300)
+    a = randint(0, 500)
     if a < 100:
         return render_template('textualimg.html')
     elif a < 200:
         return render_template('selectimg.html')
-    else:
+    elif a < 300:
         return render_template('swipes.html')
+    elif a < 400:
+        return render_template("multiple.html")
+    else:
+        return render_template("reverse.html")
 
 
 # main view with taskforce motivation handling
@@ -407,10 +431,20 @@ def main():
         return render_template('textualimg.html')
     elif int(session.get("task")) > 50 and int(session.get("lvl")) > 0:
         session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
-        return render_template('selectimg.html')
+        rand = randint(0, 100)
+        if rand < 79:
+            return render_template('selectimg.html')
+        else:
+            return render_template('multiple.html')
     elif int(session.get("task")) > 50 and int(session.get("lvl")) == 0:
         session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
-        return render_template('selectimg.html')
+        rand = randint(0, 300)
+        if rand < 130:
+            return render_template('selectimg.html')
+        elif rand < 240:
+            return render_template('reverse.html')
+        else:
+            return render_template('multiple.html')
     else:
         session['task'] = str(int(session.get("task")) + getcost(2, int(session.get("lvl"))))
         return render_template('swipes.html')
@@ -432,6 +466,11 @@ def whatismyid():
 @app.route('/uploadimg')
 def uploadimg():
     return render_template('uploadimg.html')
+
+
+@app.route('/reverse')
+def reverse():
+    return render_template('reverse.html')
 
 
 # View of images selection UI
@@ -510,7 +549,8 @@ def savemultiple():
 @app.route('/savetext', methods=['POST'])
 def savetext():
     name = request.form["name"]
-
+    name = name.replace("'", "\\'")
+    print(name)
     now, timestamp = gettimes()
 
     con = mysql.connect()
@@ -1086,19 +1126,83 @@ def getfive():
     con.close()
     return result
 
+
 @app.route('/getreverse')
 def getreverse():
     con = mysql.connect()
     cursor = con.cursor()
 
+    cursor.execute(
+        "SELECT idtype FROM sql11185116.textvote GROUP BY idtype HAVING count(idtype) > 4 ORDER BY rand() LIMIT 1")
+    idt = cursor.fetchone()[0]
 
+    cursor.execute(
+        "SELECT image.idimage,imagepath,label FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON type.idtype = textvote.idtype WHERE textvote.idtype =" + str(
+            idt) + " ORDER BY rand() LIMIT 4")
+    data = cursor.fetchall()
+    res = ''
+    for row in data:
+        res += '{"idimage":' + str(row[0]) + ',"imagepath":"' + str(row[1]) + '"},'
 
-
-
+    res = res[:-1]
+    result = '{"idtype":"' + str(idt) + '",' \
+                                        '"label": "' + str(data[0][2]) + '",' \
+                                                                         '"images" : [' + res + ']'
+    result += '}'
     cursor.close()
     con.close()
 
+    return result
+
+
+@app.route("/logm/<table>", methods=['post'])
+def logm(table):
+    idu = getid(request.environ['REMOTE_ADDR'])
+    idtype = request.form["idtype"]
+    action = request.form["action"]
+    now, timestamp = gettimes()
+    idimgs = str(request.form.get('ids')).split(",")
+    print(idimgs)
+    queries = []
+
+    for image in idimgs:
+        queries.append(
+            "INSERT INTO `" + table + "` (iduser,idimage,idtype,`time`,`date`,`event`) VALUES(" + str(idu) + "," + str(
+                image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "')")
+
+    con = mysql.connect()
+    cursor = con.cursor()
+    for q in queries:
+        print(q)
+        cursor.execute(q)
+
+    cursor.close()
+    con.commit()
+    con.close()
     return 'ok'
+
+
+@app.route("/saverev", methods=['post'])
+def saverev():
+    idu = getid(request.environ['REMOTE_ADDR'])
+    idtype = request.form["idtype"]
+    image = request.form.get('image')
+    action = 'chosen'
+    now, timestamp = gettimes()
+
+    q = "INSERT INTO `reverse` (iduser,idimage,idtype,`time`,`date`,`event`) VALUES(" + str(idu) + "," + str(
+        image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "')"
+    print(q)
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute(q)
+
+    cursor.close()
+    con.commit()
+    con.close()
+    return 'ok'
+
 
 # Save one swipe on swipes
 @app.route('/saveswipe', methods=['POST'])
@@ -1108,8 +1212,10 @@ def saveswipe():
     idtype = request.form["idtype"]
     iduser = getid(request.environ['REMOTE_ADDR'])
     now, timestamp = gettimes()
+
     con = mysql.connect()
     cursor = con.cursor()
+
     q = "INSERT INTO swipe (idimage,idtype,iduser,vote,`time`,`date`,`event`) VALUES (" + str(idimage) + "," + str(
         idtype) + "," + str(
         iduser) + "," + str(to_bool(vote)) + ",'" + timestamp + "','" + now + "','swipe')"

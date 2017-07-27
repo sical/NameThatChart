@@ -13,17 +13,17 @@
 #save {
     background-color: #343d46;
     color: #FFF;
-    padding: 3%;
+    padding: 2%;
 }
 
 #skip {
     background-color: #4f5b66;
     color: #FFF;
-    padding: 3%;
+    padding: 2%;
 }
 
 #report {
-    padding: 3%;
+    padding: 2%;
     background-color: #65737e;
     color: #FFF;
 }
@@ -59,10 +59,10 @@
 }
 
 #imgsel:hover {
-    background: rgba(0, 0, 0, 0.6);
     border-styler: solid;
     border-color: #41a62a;
     border-width: 5px;
+    cursor: pointer;
 }
 
 .idata:hover {
@@ -84,6 +84,27 @@
     color: #FFF;
 }
 
+.imgtoch {
+    width: 40%;
+    height: 20%;
+    margin: 1%;
+    border: solid 2px;
+    max-width: 225px;
+    max-height: 275px;
+    margin-top: 10%;
+}
+
+.imgtoch:hover {
+    border-styler: solid;
+    border-color: #41a62a;
+    border-width: 5px;
+    cursor: pointer;
+}
+
+#containssel {
+    max-width: 500px;
+}
+
 .centerimg {
     top: 50%;
     position: fixed;
@@ -98,6 +119,7 @@
     max-height: 450px;
     width: 100%;
     height: 80%;
+    margin-top: 3%;
     border: solid 1px;
 }
 
@@ -254,6 +276,15 @@
         transform: translate(-50%, -20%);
     }
 
+    .centerswi {
+        top: 60%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
     .centerimg {
         top: 50%;
         position: fixed;
@@ -279,7 +310,7 @@
     }
 }
 
-@media screen and (max-width: 1025px) and (min-width: 700px) and (max-height: 1370px) {
+@media only screen and (min-device-width: 1025px) {
 
     .center {
         top: 50%;
@@ -287,8 +318,50 @@
         width: 100%;
         height: 100%;
         left: 50%;
+        transform: translate(-25%, -25%);
+
+    }
+
+    .centerswi {
+        top: 55%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 80%;
+        transform: translate(-50%, -20%);
+    }
+
+    .btnholder {
+        display: block;
+    }
+
+    .hcenter {
+        position: fixed;
+        left: 55%;
+        transform: translate(-45%, 5%);
+
+    }
+}
+
+@media screen and (max-width: 1025px) and (min-width: 700px) and (max-height: 1370px) {
+
+    .center {
+        top: 50%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
         transform: translate(-40%, -20%);
     }
+
+    .centerswi {
+        top: 55%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 59%;
+        transform: translate(-50%, -20%);
+    }
+
 
 }
 
@@ -309,6 +382,15 @@
         max-height: 200px;
     }
 
+    .centerswi {
+        top: 57%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
     .idata {
         height: 100px;
         width: 200px;
@@ -316,6 +398,15 @@
 
     #brand {
         font-size: 24px;
+    }
+
+    .center {
+        top: 57%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-50%, -20%);
     }
 
     .center {
@@ -429,6 +520,15 @@
         text-align: left;
         z-index: 260;
     }
+}
+
+.selec {
+    border: solid 8px green;
+
+}
+
+.unselec {
+    opacity: 0.5;
 }
 
 @media only screen and (max-device-width: 390px) {
@@ -600,30 +700,6 @@
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-}
-
-@media only screen and (min-device-width: 1025px) {
-
-    .center {
-        top: 50%;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 50%;
-        transform: translate(-25%, -25%);
-
-    }
-
-    .btnholder {
-        display: block;
-    }
-
-    .hcenter {
-        position: fixed;
-        left: 55%;
-        transform: translate(-45%, 5%);
-
-    }
 }
 
 /* -------------------------------------- MODAL --------------------------------------*/

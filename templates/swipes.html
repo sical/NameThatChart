@@ -1,15 +1,35 @@
 {% include 'nav.html' %}
-
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
 <div style="margin-top: -0%" class="header hcenter">
     <h1 id="brand" class="page-header">
         Does this belongs in :
     </h1>
 
+    <div id="btn">
+        <div class="dropup" style="display: inline">
+            <button class="btn btn-primary dropdown-toggle" id="report" type="button" data-toggle="dropdown">Report
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a id="nd">No display</a></li>
+                <li><a id="ii">Inappropriate image</a></li>
+                <li><a id="hmc">Huge miss-classification</a></li>
+            </ul>
+        </div>
+        <button id="skip" class="btn">skip
+        </button>
+
+
+    </div>
 </div>
 
-<div id="tinderslide" class="center">
-    <ul>
-        <li class="pane1"
+<div id="tinderslide" class="centerswi">
+
+
+    <ul class="ula">
+        <li class="pane1 lia"
             style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
     -webkit-box-shadow: 5px 5px 5px 0px #656565;
     -o-box-shadow: 5px 5px 5px 0px #656565;
@@ -25,7 +45,7 @@
             <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
                                                        aria-hidden="true"></i></div>
         </li>
-        <li class="pane2"
+        <li class="pane2 lia"
             style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
     -webkit-box-shadow: 5px 5px 5px 0px #656565;
     -o-box-shadow: 5px 5px 5px 0px #656565;
@@ -41,7 +61,7 @@
             <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
                                                        aria-hidden="true"></i></div>
         </li>
-        <li class="pane3"
+        <li class="pane3 lia"
             style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
     -webkit-box-shadow: 5px 5px 5px 0px #656565;
     -o-box-shadow: 5px 5px 5px 0px #656565;
@@ -57,7 +77,7 @@
             <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
                                                        aria-hidden="true"></i></div>
         </li>
-        <li class="pane4"
+        <li class="pane4 lia"
             style="-moz-box-shadow: 5px 5px 5px 0px #656565;-webkit-box-shadow: 5px 5px 5px 0px #656565;-o-box-shadow: 5px 5px 5px 0px #656565;box-shadow: 5px 5px 5px 0px #656565;filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);-moz-border-radius: 5px;webkit-border-radius: 5px;border-radius: 5px; background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 35">
             <div class="img"></div>
             <div id="4_txt" style="display: none"></div>
@@ -66,7 +86,7 @@
             <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
                                                        aria-hidden="true"></i></div>
         </li>
-        <li class="pane5" id="test5"
+        <li class="pane5 lia" id="test5"
             style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
                                         -webkit-box-shadow: 5px 5px 5px 0px #656565;
                                         -o-box-shadow: 5px 5px 5px 0px #656565;
@@ -89,26 +109,15 @@
                                                        aria-hidden="true"></i></div>
         </li>
     </ul>
-</div>
-</div>
-</div>
-<!-- /. PAGE INNER  -->
+
 </div>
 
-<!-- /. PAGE WRAPPER  -->
-</div>
-<!-- /. WRAPPER  -->
-
-<!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-
-
 <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
-<!-- transform2d lib -->
 <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.transform2d.js') }}"></script>
-
-<!-- jTinder lib -->
+<script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.jTinder.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
 
 <script type="text/javascript">
@@ -118,6 +127,14 @@
     var width = screen.width;
     var height = screen.height;
     var note = 0;
+
+
+    function getit() {
+        var res = [];
+        res.push(info[nb - 1].idimage)
+        return res
+    }
+
     $(document).ready(function () {
 
         if (window.location.href.indexOf('quizz') !== -1) {
@@ -153,9 +170,10 @@
             if (window.location.href.indexOf('quizz') !== -1) {
                 $("#brand").text("Does this belongs in \"" + cat[nb - 2] + " \" category");
                 nb -= 1;
-                if (item.index() == 0 || item.index() == 2 || item.index() == 4 ) {
+                if (item.index() == 0 || item.index() == 2 || item.index() == 4) {
                     note += 1
-                } console.log(note);
+                }
+                console.log(note);
 
                 if (item.index() == 0) {
 
@@ -167,6 +185,7 @@
                 form.append("vote", false);
                 form.append("idimg", info[item.index()].idimage);
                 form.append("idtype", info[item.index()].idtype);
+                $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
                 $.ajax({
                     type: "POST",
                     url: "../saveswipe",
@@ -205,7 +224,6 @@
         },
 
         onLike: function (item) {
-            $("#brand").text("Does this belongs in " + cat[nb - 1] + " category");
             if (window.location.href.indexOf('quizz') !== -1) {
                 $("#brand").text("Does this belongs in \"" + cat[nb - 2] + "\" category");
                 nb -= 1;
@@ -222,6 +240,7 @@
                 form.append("vote", true);
                 form.append("idimage", info[item.index()].idimage);
                 form.append("idtype", info[item.index()].idtype);
+                $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
                 $.ajax({
                             type: "POST",
                             url: "../saveswipe",
@@ -307,7 +326,7 @@
                     $("#" + i + "_txt").text(img.label);
                     $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
                     i++;
-                })
+                });
 
                 var form = new FormData();
                 form.append("idimg", info[4].idimage);
@@ -324,6 +343,36 @@
             }
         });
     }
+
+    $("#skip").click(function () {
+
+        var firm = new FormData();
+        firm.append("action", "skip");
+        firm.append("ids", info[nb - 1].idimage);
+        firm.append("idtype", info[nb - 1].idtype);
+        $.ajax({
+            type: "POST",
+            url: "../logm/swipe",
+            processData: false,
+            contentType: false,
+            data: firm
+        });
+
+
+        if (window.location.href.indexOf('hybrid') !== -1) {
+            window.location = "../hybrid"
+        } else {
+            if (window.location.href.indexOf('main') !== -1) {
+                window.location = "../main"
+            } else if (window.location.href.indexOf('raw') !== -1) {
+                window.location = "../raw"
+            }
+            else {
+                fill()
+            }
+        }
+    });
+
 </script>
 </body>
 

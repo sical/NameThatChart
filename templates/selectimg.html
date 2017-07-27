@@ -1,5 +1,8 @@
 ﻿{% include 'nav.html' %}
-
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
 <div style="margin-top: -0%" class="header hcenter">
     <h1 class="page-header" id="brand">
         Select the picture which best describe :
@@ -8,21 +11,32 @@
 </div>
 
 <div class="center" id="sel">
+    <div id="btn">
 
+        <div class="dropup" style="display: inline">
+            <button class="btn btn-primary dropdown-toggle" id="report" type="button" data-toggle="dropdown">Report
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a id="nd">No display</a></li>
+                <li><a id="ii">Inappropriate image</a></li>
+                <li><a id="hmc">Huge miss-classification</a></li>
+            </ul>
+        </div>
+        <button id="skip" class="btn">skip</button>
+
+    </div>
     <div id="fill">
 
     </div>
 </div>
 
-
-<!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-
-<!-- Bootstrap Js -->
+<script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
 <script type="text/javascript">
     var type;
+    var info;
     $(document).ready(function () {
         if (window.location.href.indexOf('quizz') !== -1) {
             fillthem2();
@@ -33,9 +47,13 @@
 
 
     $('body').on('click', 'img', function () {
+        $("img").each(function () {
+            $(this).addClass('unselec')
+        });
         $('.selec').removeClass('selec');
         $(this).addClass('selec');
-
+        $(this).removeClass('unselec');
+        pop();
         if (window.location.href.indexOf('quizz') !== -1) {
             var note = 0;
             if ($(this).attr("value") == 2) {
@@ -94,7 +112,7 @@
                 $("#brand").append(info.name);
                 type = info.idtype;
                 info.imgs.forEach(function (img) {
-                    $("#fill").append("<img id='imgsel' value='" + img.id + "' src='static/" + img.path + "' />")
+                    $("#fill").append("<img id='imgsel' value='" + img.id + "' src='static/" + img.path + "' />");
                     var form = new FormData();
                     form.append("idimg", img.id);
                     form.append("idtype", type);
@@ -128,6 +146,42 @@
         })
 
     }
+
+
+    $("#skip").click(function () {
+
+        var images = [];
+
+        info.imgs.forEach(function (row) {
+            images.push(row.id)
+        });
+
+        var firm = new FormData();
+        firm.append("action", "skip");
+        firm.append("ids", images);
+        firm.append("idtype", type);
+        $.ajax({
+            type: "POST",
+            url: "../logm/selection",
+            processData: false,
+            contentType: false,
+            data: firm
+        });
+
+
+        if (window.location.href.indexOf('hybrid') !== -1) {
+            window.location = "../hybrid"
+        } else {
+            if (window.location.href.indexOf('main') !== -1) {
+                window.location = "../main"
+            } else if (window.location.href.indexOf('raw') !== -1) {
+                window.location = "../raw"
+            }
+            else {
+                fillthem()
+            }
+        }
+    });
 </script>
 
 
