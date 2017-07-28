@@ -91,6 +91,33 @@ def downthumb():
     return '<h3> done to : ' + str(len(views)) + "visualizations  </h3>"
 
 
+@app.route('/indabase/<dir>')
+def indabase(dir):
+    pathdir = "assets/img/datasets/downloadApi/" + dir + "/"
+    imgs = pics.getimgs("./static/" + pathdir)
+    con = mysql.connect()
+    cursor = con.cursor()
+    y = 0
+    for i in range(0, len(imgs)):
+
+        path = imgs[i].replace("./static/", "")
+
+        cursor.execute("SELECT * FROM image WHERE imagepath LIKE '" + path + "' LIMIT 1")
+        data = cursor.fetchone()
+
+        if data is None:
+            cursor.execute(
+                "INSERT INTO image (imagepath,`from`) VALUES ('" + path + "','" + dir + "')")
+
+    cursor.close()
+    con.commit()
+    con.close()
+
+    print('\x1b[6;30;42m' + "Done ! " + str(len(imgs)) + ") saved " + '\x1b[0m' + "\n")
+
+    return "ok"
+
+
 # fill database from "/static/assets/img/datasets/"
 @app.route('/maj/<dir>/<nb>')
 def maj(dir, nb):
@@ -127,8 +154,10 @@ def maj(dir, nb):
     cursor.close()
     con.commit()
     con.close()
+
     print('\x1b[6;30;42m' + "Done ! (" + str(len(imgs) - y) + "/" + str(len(imgs)) + ") saved out of the " + str(
         nb) + " initial" '\x1b[0m' + "\n")
+
     return "ok"
 
 
