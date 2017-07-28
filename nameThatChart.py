@@ -4,7 +4,6 @@ import json
 import os
 import time
 from random import randint
-import vis10catDL as vdl
 
 from PIL import Image
 from flask import Flask, request, session, render_template
@@ -35,24 +34,6 @@ app.secret_key = binascii.hexlify(os.urandom(24))
 
 
 #     <------------------Admin unmap tools ------------------>
-
-# get vis10cat images
-@app.route('/vis10')
-def vis10():
-    imgs = vdl.getimgtypes()
-    con = mysql.connect()
-    cursor = con.cursor()
-
-    for img in imgs:
-        idtype = gettype(img.type)[0]
-        cursor.execute(
-            "INSERT INTO image (imagepath,`from`,idtype) VALUES ('" + img.path + "','vis10cat revision paper'," + str(
-                idtype) + ")")
-
-    cursor.close()
-    con.commit()
-    con.close()
-    return 'ok'
 
 
 @app.route("/tempdl/<dir>/<filename>")
