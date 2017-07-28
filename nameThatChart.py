@@ -669,13 +669,13 @@ def getfirstrow():
 def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT imagepath,idimage FROM image WHERE `from` NOT LIKE 'generated' ORDER BY rand() LIMIT 1")
+    cursor.execute("SELECT imagepath,idimage FROM image  ORDER BY rand() LIMIT 1")
     data = cursor.fetchone()
     cursor.close()
     con.close()
     session['idimg'] = data[1]
     print(data[0])
-    return "static/" + str(data[0])
+    return str(data[0])
 
 
 # Return User data to display into admin table
@@ -1119,7 +1119,7 @@ def getimgbyid():
     cursor.execute("SELECT DISTINCT imagepath FROM image WHERE idimage =" + str(action))
     data = cursor.fetchall()
     for i in range(0, len(data)):
-        result.append("static/" + str(data[i][0]))
+        result.append(str(data[i][0]))
 
     cursor.close()
     con.close()
@@ -1143,7 +1143,7 @@ def getfive():
         cursor.execute("SELECT label FROM type WHERE idtype =" + str(data[i][3]))
         temp = cursor.fetchone()[0]
         result += '{' \
-                  '"path" : "static/' + str(data[i][0]) + '",' \
+                  '"path" : "'+str(data[i][0]) + '",' \
                                                           '"label" : "' + temp + '",' \
                                                                                  '"idimage": ' + str(data[i][1]) + ',' \
                                                                                                                    '"idtype": ' + str(
@@ -1273,7 +1273,7 @@ def getimgbytype():
     result = '['
 
     for row in data:
-        result += '{"path": "' + "static/" + str(row[0]) + '","id":' + str(row[1]) + '},'
+        result += '{"path": "'+ str(row[0]) + '","id":' + str(row[1]) + '},'
 
     result = result[:-1]
     result += ']'
@@ -1408,6 +1408,6 @@ def getlabel(id):
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 80))
+    app.run(host='127.0.0.1', port=port)
     app.run()

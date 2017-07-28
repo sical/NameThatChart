@@ -112,7 +112,7 @@
                 $("#brand").append(info.name);
                 type = info.idtype;
                 info.imgs.forEach(function (img) {
-                    $("#fill").append("<img id='imgsel' value='" + img.id + "' src='static/" + img.path + "' />");
+                    $("#fill").append("<img id='imgsel' value='" + img.id + "' src='" + img.path + "' />");
                     var form = new FormData();
                     form.append("idimg", img.id);
                     form.append("idtype", type);
@@ -136,7 +136,7 @@
 
     function fillthem2() {
 
-        var imgues = ["static/assets/img/datasets/downloadApi/vis10cat/BarGraph_205.gif", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "static/assets/img/datasets/downloadApi/vis10cat/BarGraph_224.gif", "static/assets/img/datasets/quizz/3.png", "static/assets/img/datasets/downloadApi/vis10cat/BarGraph_91.gif"];
+        var imgues = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_205.gif", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_224.gif", "static/assets/img/datasets/quizz/3.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_91.gif"];
 
         $("#brand").append("Histogram");
         var i = 0;

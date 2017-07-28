@@ -71,12 +71,12 @@ def checkpath(path):
 
 def clear(path, size):
     imgs = getimgs(path)
-
+    print(str(len(imgs)))
     for img in imgs:
         try:
             a = Image.open(img)
             width, height = a.size
-            if width < size:
+            if width < size or height < size:
                 os.remove(img)
 
         except Exception as e:

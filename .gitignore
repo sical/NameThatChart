@@ -1,3 +1,9 @@
 .idea/
 /static/assets/css/custom-styles.css
 /templates/old/
+/static/assets/img/datasets/downloadApi/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

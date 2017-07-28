@@ -30,7 +30,7 @@ function getimg() {
 
                 i++;
             });
-            $("#imgdisp").attr("src", "/static/" + info.image.path);
+            $("#imgdisp").attr("src", info.image.path);
         }
     });
 }
