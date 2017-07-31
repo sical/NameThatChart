@@ -1388,6 +1388,22 @@ def getlabel(id):
     return data
 
 
+@app.route("/saveapp",methods=["POST"])
+def saveapp():
+    result = request.files['local']
+    print("aaaaaaaa")
+    con = mysql.connect()
+    cursor = con.cursor()
+
+
+    cursor.execute("SELECT label FROM type WHERE idtype = " + str(id))
+    data = cursor.fetchone()[0]
+
+    return data
+
+
+
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
