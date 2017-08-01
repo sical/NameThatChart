@@ -1390,9 +1390,6 @@ def getlabel(id):
 
 @app.route("/saveapp",methods=["POST"])
 def saveapp():
-    result = request.files['local']
-    print("aaaaaaaa")
-    data = cursor.fetchone()[0]
 
     return 'aaaaa'
 
