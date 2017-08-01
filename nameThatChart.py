@@ -1392,14 +1392,9 @@ def getlabel(id):
 def saveapp():
     result = request.files['local']
     print("aaaaaaaa")
-    con = mysql.connect()
-    cursor = con.cursor()
-
-
-    cursor.execute("SELECT label FROM type WHERE idtype = " + str(id))
     data = cursor.fetchone()[0]
 
-    return data
+    return 'aaaaa'
 
 
 
