@@ -20,7 +20,6 @@ $("#hmc").click(function (event) {
 });
 function report(string) {
     var temp = window.location.href.split("/");
-
     where = temp[temp.length - 1];
     var ids = getids();
     console.log(ids);
@@ -37,8 +36,6 @@ function report(string) {
             $("#skip").click()
         }
     });
-
-
 }
 
 function getids() {

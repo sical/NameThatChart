@@ -1,5 +1,4 @@
 {% include 'nav.html' %}
-
 <div class="header hcenter">
     <h1 id="brand" class="page-header">
         Administration
@@ -13,15 +12,12 @@
                 <h3>Upload</h3>
                 <div class="card-image blue waves-effect waves-dark" id="up">
                     <i class="fa fa-upload fa-5x "></i>
-
                 </div>
-
             </td>
             <td class="admcell">
                 <h3>Download</h3>
                 <div class="card-image blue waves-effect waves-dark" id="down">
                     <i class="fa fa-download fa-5x"></i>
-
                 </div>
                 <div class="onoffswitch">
                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="tp"
@@ -31,122 +27,13 @@
                         <span class="onoffswitch-switch"></span>
                     </label>
                 </div>
-
-
             </td>
         </tr>
     </table>
-
-
 </div>
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-
-<!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-
-
-<script type="text/javascript">
-
-    $("#up").click(function () {
-        var type = $("#dj").val();
-        console.log(type);
-        if (type == "on") {
-            window.location = "../upload"
-        } else {
-            window.location = "../uploadimg"
-        }
-    });
-
-    $("#down").click(function () {
-        var type = $("#tp").val();
-        if (type == "on") {
-            $.ajax({
-                type: "GET",
-                url: "../db2csv",
-                success: function (data) {
-                    var test_array = eval("[" + data + "]");
-                    var csvContent = "data:text/csv;charset=utf-8,LogID,UserID,UserIP,Timestamp,DateTime,Event,ImageID,Type\n";
-                    test_array.forEach(function (infoArray, index) {
-                        infoArray.forEach(function (dato) {
-                            dataString = dato.join();
-                            csvContent += index < infoArray.length ? dataString + "\n" : dataString;
-                        });
-                    });
-                    var encodedUri = encodeURI(csvContent);
-                    saveAs(encodedUri, "data.csv")
-                }
-            })
-
-        } else {
-            $.ajax({
-                type: "GET",
-                url: "../db2csv",
-                success: function (data) {
-                    var test_array = eval("[" + data + "]");
-                    var csvContent = "data:text/json;charset=utf-8,{classification : [\n";
-                    test_array.forEach(function (infoArray, index) {
-                        infoArray.forEach(function (dato) {
-
-                            csvContent += "\t{ LogID: " + dato[0] + " , " + " UserID : " + dato[1] + " , " + " UserIP : '" + dato[2] +
-                                    " ', " + " Timestamp : '" + dato[3] + "' , " + " DateTime : '" + dato[4] + " ', " + " Event :' " + dato[5] +
-                                    "' , " + " ImageID : " + dato[6] + " , " + " Type : " + dato[7] + " },\n"
-                        });
-                    });
-                    var res = setCharAt(csvContent, csvContent.length - 1, "");
-                    res = setCharAt(csvContent, csvContent.length - 1, "");
-                    res += " \n] }";
-                    var encodedUri = encodeURI(res);
-                    saveAs(encodedUri, "data.json")
-                }
-            })
-
-        }
-    });
-
-
-    function setCharAt(str, index, chr) {
-        if (index > str.length - 1) return str;
-        return str.substr(0, index) + chr + str.substr(index + 1);
-    }
-
-    function saveAs(uri, filename) {
-        var link = document.createElement('a');
-        if (typeof link.download === 'string') {
-            document.body.appendChild(link); // put the link into the body
-            link.download = filename;
-            link.href = uri;
-            link.click();
-            document.body.removeChild(link); // remove the link when done
-        } else {
-            location.replace(uri);
-        }
-    }
-
-    $('#tp').change(function () {
-
-        if ($(this).val() == 'on') {
-            $(this).val('off');
-        } else {
-            $(this).val('on');
-        }
-    });
-
-    $('#dj').change(function () {
-
-        if ($(this).val() == 'on') {
-            $(this).val('off');
-        } else {
-            $(this).val('on');
-        }
-    });
-
-</script>
-
-
-</div>
-
+<script async src="{{ url_for('static', filename='assets/js/admin.js') }}"></script>
 
 </body>
-
 </html>

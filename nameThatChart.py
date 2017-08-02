@@ -6,10 +6,9 @@ import time
 from random import randint
 import boto3
 from PIL import Image
-from flask import Flask, request, session, render_template
+from flask import Flask, request, session, render_template, Response
 from flask import redirect
 from flaskext.mysql import MySQL
-
 from imagetype import ImgType
 
 import d3jsdownload as dl
@@ -21,6 +20,8 @@ import readerDL as rd
 
 app = Flask(__name__)
 mysql = MySQL()
+os.environ['AWS_ACCESS_KEY_ID'] = "AKIAJUKQ5JQUGHCBQQTQ"
+os.environ['AWS_SECRET_ACCESS_KEY'] = "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"
 
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'sql11185116'
@@ -721,18 +722,21 @@ def saveupimg():
     ext = str(temp[len(temp) - 1])
 
     title = title.replace(" ", "_")
-    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "_" + title + "." + ext)
+
+    filename= str(nb) + "_" + title + "." + ext
+    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" +filename)
 
     wget.download(url, q)
-    q = q.replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
-    con = mysql.connect()
-    cursor = con.cursor()
-    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','json','" + title + "','" + cat + "')"
-    print(query)
-    cursor.execute(query)
-    con.commit()
-    cursor.close()
-    con.close()
+    s3_client = boto3.client('s3')
+    with open(q, "rb") as f:
+        s3_client.upload_fileobj(f,
+                                 'namethatchart-imagedataset', "upload/" + filename,
+                                 ExtraArgs={'ACL': 'public-read'})
+    url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/upload/" + filename
+
+
+    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','upload','" + title + "','" + cat + "')"
+    putdb(query)
 
     return 'ok'
 
@@ -746,8 +750,7 @@ def upjonimg():
         filestring += str(line)[2:][:-3]
 
     data = json.loads(filestring)
-    con = mysql.connect()
-    cursor = con.cursor()
+
     for obj in data:
         if "url" in obj:
 
@@ -755,31 +758,35 @@ def upjonimg():
 
             name = wget.detect_filename(obj['url'])
             temp = name.split('.')
-
+            filename = ""
             ext = str(temp[len(temp) - 1])
             if "title" in obj:
                 title = obj["title"].replace(" ", "_")
-                q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "_" + title + "." + ext)
+                filename = str(nb) + "_" + title + "." + ext
             else:
                 title = ""
-                q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + str(nb) + "." + ext)
-            wget.download(obj['url'], q)
-            q = q.replace("/home/theo/PycharmProjects/NameThatChart/static/", "")
+                filename = str(nb) + "." + ext
+
+            wget.download(obj['url'], os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename))
+
+            s3_client = boto3.client('s3')
+            with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename),"rb") as f:
+                s3_client.upload_fileobj(f,
+                                          'namethatchart-imagedataset', "upload/" + filename,
+                                          ExtraArgs={'ACL': 'public-read'})
+            url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/upload/" + filename
 
             if 'category' in obj:
                 if 'difficulty' in obj:
-                    query = "INSERT INTO image (imagepath,`from`,title,category,difficulty) VALUES ('" + q + "','json','" + title + "','" + \
+                    query = "INSERT INTO image (imagepath,`from`,title,category,difficulty) VALUES ('" + url + "','upload','" + title + "','" + \
                             obj['category'] + "','" + obj["difficulty"] + "')"
                 else:
-                    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','json','" + title + "','" + \
+                    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + \
                             obj['category'] + "')"
             else:
-                query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + q + "','json','" + title + "')"
+                query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + url + "','upload','" + title + "')"
 
-            cursor.execute(query)
-    con.commit()
-    cursor.close()
-    con.close()
+            putdb(query)
 
     return 'ok'
 
@@ -1124,10 +1131,10 @@ def getfive():
         cursor.execute("SELECT label FROM type WHERE idtype =" + str(data[i][3]))
         temp = cursor.fetchone()[0]
         result += '{' \
-                  '"path" : "'+str(data[i][0]) + '",' \
-                                                          '"label" : "' + temp + '",' \
-                                                                                 '"idimage": ' + str(data[i][1]) + ',' \
-                                                                                                                   '"idtype": ' + str(
+                  '"path" : "' + str(data[i][0]) + '",' \
+                                                   '"label" : "' + temp + '",' \
+                                                                          '"idimage": ' + str(data[i][1]) + ',' \
+                                                                                                            '"idtype": ' + str(
             data[i][3]) + '' \
                           '},'
     result = result[:-1]
@@ -1254,7 +1261,7 @@ def getimgbytype():
     result = '['
 
     for row in data:
-        result += '{"path": "'+ str(row[0]) + '","id":' + str(row[1]) + '},'
+        result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + '},'
 
     result = result[:-1]
     result += ']'
@@ -1389,33 +1396,97 @@ def getlabel(id):
     return data
 
 
-@app.route("/saveapp",methods=["POST"])
+@app.route("/saveapp", methods=["POST"])
 def saveapp():
-
     idu = getid(request.environ["REMOTE_ADDR"])
     file = request.files['local']
+
     s3_client = boto3.client('s3')
-    time,now =gettimes()
+
+    _, now = gettimes()
+
+    putdb(
+    "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/" + str(
+        idu) + "_" + str(now) + ".png','app')")
+
+
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/' + str(
+        idu) + "_" + str(now) + ".png"
+
+    idm=vachercherss("SELECT idimage FROM image WHERE imagepath LIKE '" + fileurl + "'")
+
+
+
+
+    # Upload the file to S3
+    s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/" + str(idu) + "_" + str(now) + ".png",
+                             ExtraArgs={'ACL': 'public-read'})
+
+    return "Image id is : " + str(
+        idm) + ". \n" + "Please keep this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
+
+
+@app.route("/datcsv")
+def dattcsv():
+    header = "task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath\n"
+    body = ""
+    db = []
+    db.append(vachercherm(
+        "SELECT concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
+    db.append(vachercherm(
+        "SELECT concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
+    db.append(vachercherm(
+        "SELECT concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
+    db.append(vachercherm(
+        "SELECT concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
+
+    for table in db:
+        for row in table:
+            for col in row:
+                body += str(col) + ","
+            body = body[:-1] + "\n"
+    return Response(header + body, mimetype="text/csv",
+                    headers={"Content-disposition": "attachment; filename=data.csv"})
+
+
+def vachercherm(query):
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("insert into image (imagepath,`from`) values ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/"+str(idu)+"_"+str(now)+".png','app')")
-    con.commit()
-
-    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/'+str(idu)+"_"+str(now)+".png"
-
-    cursor.execute("select idimage from image where imagepath like '"+fileurl+"'")
-
-    idm = cursor.fetchone()[0]
-
+    cursor.execute(query)
+    result = cursor.fetchall()
     cursor.close()
     con.close()
 
-    # Upload the file to S3
-    s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/"+str(idu)+"_"+str(now)+".png",ExtraArgs={'ACL': 'public-read'})
-
-    return "Image id is : " +str(idm) +". \n" + "Please keep this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
+    return result
 
 
+def vacherchers(query):
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute(query)
+    result = cursor.fetchone()
+    cursor.close()
+    con.close()
+
+    return result
+
+def putdb(query):
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute(query)
+    cursor.close()
+    con.commit()
+    con.close()
+
+def vachercherss(query):
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute(query)
+    result = cursor.fetchone()
+    cursor.close()
+    con.close()
+
+    return result[0]
 
 
 if __name__ == '__main__':

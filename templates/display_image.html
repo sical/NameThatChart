@@ -1,204 +1,29 @@
 {% include 'nav.html' %}
-
-<!-- /. NAV SIDE  -->
-
 <div class="page-header" id="brand" style="text-align: center">
     <h1 id="brand">
         Type wanted image id or category</h1>
     <br/>
     <input id="sh" type="text" placeholder="Type Image ID or type">
 </div>
-
-<div id="fill">
-
-</div>
-
-<!-- The Modal -->
+<div id="fill"></div>
 <div id="myModal" class="modal">
-
-    <!-- Modal content -->
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
             <h2 id="mh">Modal Header</h2>
         </div>
         <div class="modal-body">
-
         </div>
         <div class="modal-footer">
             <h3 id="mf">Modal Footer</h3>
         </div>
     </div>
-
 </div>
 
-<!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-
-<!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-
-<script type="text/javascript">
-    var info = [];
-
-    $(document).ready(function () {
-
-        var form = new FormData();
-        form.append("action", "_");
-        $.ajax({
-            type: "POST",
-            url: "../getimgbytype",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function (data) {
-                info = JSON.parse(JSON.parse(data));
-                console.log(info);
-                info.forEach(function (img) {
-
-                    $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
-
-
-                });
-            }
-        })
-
-
-    });
-
-
-    $("#sh").on('input', function () {
-
-        $("#fill").empty();
-        if (!isNaN(parseInt($(this).val()))) {
-            var idimage = $(this).val();
-            var form = new FormData();
-
-
-            form.append("action", "" + idimage);
-            $.ajax({
-                type: "POST",
-                url: "../getimgbyid",
-                processData: false,
-                contentType: false,
-                data: form,
-                success: function (data) {
-                    info = JSON.parse(data);
-                    console.log(info[0]);
-                    info.forEach(function (img) {
-
-                        $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
-
-
-                    });
-                }
-            });
-        }
-
-        else {
-            var idimage = $(this).val();
-            var form = new FormData();
-            form.append("action", "" + idimage);
-            $.ajax({
-                type: "POST",
-                url: "../getimgbytype",
-                processData: false,
-                contentType: false,
-                data: form,
-                success: function (data) {
-                    info = JSON.parse(data);
-                    console.log(info[0]);
-                    info.forEach(function (img) {
-
-                        $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
-
-
-                    });
-                }
-            })
-        }
-    })
-
-    ;
-
-
-</script>
-
-<script async type="text/javascript">
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    /* $("#dispimg").onclick = function () {
-
-     };*/
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-
-    $("body").on("click", ".idata", function () {
-        modal.style.display = "block";
-        console.log();
-        $(".modal-body").empty();
-        $(".modal-body").append("<img  class='imgmod' src='" + $(this).attr('src') + "'/>");
-        $("#mh").text("Image N°" + $(this).attr('value'));
-
-        var form = new FormData();
-        form.append("idimg", "" + $(this).attr('value'));
-        $.ajax({
-            type: "POST",
-            url: "../getimginfotype",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function (data) {
-                data = JSON.parse(data);
-                console.log(data);
-                $(".modal-body").append("<div class='imginfo'> <ul class='list-group'> <li class='list-group-item'>Textual <span class='badge'>" + data.text + "</span></li> <li class='list-group-item'>Selection<span class='badge'>" + data.select + "</span></li> <li class='list-group-item'>Swipes<span class='badge'>" + data.swipe + "</span></li> </ul> </div>");
-                $("#mf").text("Classified " + (parseInt(data.text) + parseInt(data.swipe) + parseInt(data.select)) + " times")
-            }
-
-
-        });
-
-        $.ajax({
-            type: "POST",
-            url: "../topclass",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function (data) {
-                info = JSON.parse(data);
-                console.log(info)
-                str = "<div class='imginfo'> <ul class='list-group'>";
-
-                info.forEach(function (row) {
-                   str+=" <li class='list-group-item'>" + row.name + " <span class='badge'>" + row.value + "</span></li>"
-                });
-                $(".modal-body").append(str+"</ul> </div></div>")
-            }
-
-
-        });
-    });
-</script>
-
+<script async src="{{ url_for('static', filename='assets/js/async_display.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/display.js') }}"></script>
 
 </body>
-
 </html>

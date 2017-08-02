@@ -1,17 +1,18 @@
 {% include 'nav.html' %}
 
-
-<!-- /. NAV SIDE  -->
-
 <div class="header hcenter">
     <h1 id="brand" class="page-header">
         Administration
         <small>Upload</small>
     </h1>
-
 </div>
 
-<div style="margin-left: 10%;text-align: center">
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+
+<div class="center" style="margin-left: 10%;text-align: center">
     <div>
         <h4>image Features form</h4>
         <div id="features">
@@ -32,120 +33,24 @@
             <button id="send"> Submit</button>
         </div>
     </div>
-    <h3>OR</h3><hr>
-    <div class="col col-6" id="drag" style="display: inline-block">
+    <h3>OR</h3>
+    <hr>
+    <div id="drag" style="display: inline-block">
         <h4>
             image Features Json
         </h4>
 
         <div id="uploade">
             <form>
-                <label for="imgInp" class="waves-effect waves-light btn" tabindex="0">Upload </label>
-                <input type='file' id="imgInp" name="imgInp"/>
+                <input class="btn" type='file' id="imgInp" name="imgInp"/>
             </form>
         </div>
     </div>
 </div>
-</div>
 
-<!-- jQuery Js -->
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-
-<!-- Bootstrap Js -->
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-<script src="{{ url_for('static', filename='assets/materialize/js/materialize.min.js') }}"></script>
-
-<script type="text/javascript">
-
-</script>
-
-<script type="text/javascript">
-    $("#send").click(function () {
-        var form = new FormData();
-        form.append("name", $("#name").val());
-        form.append("url", $("#url").val());
-        form.append("cat", $("#sel").val());
-
-        $.ajax({
-            type: "POST",
-            url: "../saveupimg",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function () {
-                window.location = "../admin"
-            }
-
-
-        });
-    });
-
-    $("#imgInp").change(function () {
-        console.log(this.files[0]);
-        upload(this.files[0]);
-    });
-
-    $(document).on('dragenter', '#drag', function () {
-        $(this).css('border', '3px dashed red');
-        return false;
-    });
-
-    $(document).on('dragover', '#drag', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).css('border', '3px dashed red');
-        return false;
-    });
-
-    $(document).on('dragleave', '#drag', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).css('border', '3px dashed green');
-        return false;
-    });
-
-    $(document).on('drop', '#drag', function (e) {
-        if (e.originalEvent.dataTransfer) {
-            if (e.originalEvent.dataTransfer.files.length) {
-                // Stop the propagation of the event
-                e.preventDefault();
-                e.stopPropagation();
-                $(this).css('border', '3px dashed green');
-                // Main function to upload
-                fileri = e.originalEvent.dataTransfer.files
-            }
-        }
-        else {
-            $(this).css('border', '3px dashed #BBBBBB');
-        }
-        return false;
-    });
-
-    function upload(f) {
-        console.log(f.name);
-        var form = new FormData();
-        form.append("local", f);
-        $.ajax({
-            type: "POST",
-            url: "../upjsonimg",
-            enctype: 'mulipart/form-data',
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function (data) {
-                if (data == 'ok') {
-                    window.location = "../admin"
-                }
-            }
-        });
-
-        return false;
-    }
-
-</script>
-
-</div>
+<script src="{{ url_for('static', filename='assets/js/uploadimg.js') }}"></script>
 
 </body>
 
