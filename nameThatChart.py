@@ -4,7 +4,7 @@ import json
 import os
 import time
 from random import randint
-
+import boto3
 from PIL import Image
 from flask import Flask, request, session, render_template
 from flask import redirect
@@ -1382,6 +1382,7 @@ def getlvl(ip):
 def getlabel(id):
     con = mysql.connect()
     cursor = con.cursor()
+
     cursor.execute("SELECT label FROM type WHERE idtype = " + str(id))
     data = cursor.fetchone()[0]
 
@@ -1391,9 +1392,28 @@ def getlabel(id):
 @app.route("/saveapp",methods=["POST"])
 def saveapp():
 
+    idu = getid(request.environ["REMOTE_ADDR"])
     file = request.files['local']
+    s3_client = boto3.client('s3')
+    time,now =gettimes()
+    con = mysql.connect()
+    cursor = con.cursor()
+    cursor.execute("insert into image (imagepath,`from`) values ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app"+str(idu)+"_"+str(now)+"','app')")
+    con.commit()
 
-    return str(file.filename)
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app'+str(idu)+"_"+str(now)
+
+    cursor.execute("select imageid from image where imagepath like '"+fileurl+"'")
+
+    idm = cursor.fetchone()[0]
+
+    cursor.close()
+    con.close()
+
+    # Upload the file to S3
+    s3_client.upload_file(file, 'namethatchart-imagedataset', "app/"+str(idu)+"_"+str(now))
+
+    return "Image id is : " +str(idm) +". \n" + "Please keepp this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
 
 
 
