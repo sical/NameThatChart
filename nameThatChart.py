@@ -1403,7 +1403,7 @@ def saveapp():
 
     fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app'+str(idu)+"_"+str(now)
 
-    cursor.execute("select imageid from image where imagepath like '"+fileurl+"'")
+    cursor.execute("select idimage from image where imagepath like '"+fileurl+"'")
 
     idm = cursor.fetchone()[0]
 
