@@ -1411,7 +1411,7 @@ def saveapp():
     con.close()
 
     # Upload the file to S3
-    s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/"+str(idu)+"_"+str(now)+".png",ExtraArgs = {acl: "public-read"})
+    s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/"+str(idu)+"_"+str(now)+".png",ExtraArgs={'ACL': 'public-read'})
 
     return "Image id is : " +str(idm) +". \n" + "Please keep this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
 
