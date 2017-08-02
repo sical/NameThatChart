@@ -1398,10 +1398,10 @@ def saveapp():
     time,now =gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("insert into image (imagepath,`from`) values ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app"+str(idu)+"_"+str(now)+"','app')")
+    cursor.execute("insert into image (imagepath,`from`) values ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/"+str(idu)+"_"+str(now)+".png','app')")
     con.commit()
 
-    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app'+str(idu)+"_"+str(now)
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/'+str(idu)+"_"+str(now)+".png"
 
     cursor.execute("select idimage from image where imagepath like '"+fileurl+"'")
 
@@ -1411,9 +1411,9 @@ def saveapp():
     con.close()
 
     # Upload the file to S3
-    s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/"+str(idu)+"_"+str(now))
+    s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/"+str(idu)+"_"+str(now)+".png")
 
-    return "Image id is : " +str(idm) +". \n" + "Please keepp this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
+    return "Image id is : " +str(idm) +". \n" + "Please keep this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
 
 
 
