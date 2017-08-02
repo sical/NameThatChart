@@ -1391,7 +1391,9 @@ def getlabel(id):
 @app.route("/saveapp",methods=["POST"])
 def saveapp():
 
-    return 'aaaaa'
+    file = request.files['local']
+
+    return str(file.filename)
 
 
 
