@@ -10,7 +10,19 @@ $(document).ready(function () {
         fillthem();
     }
 });
-$('body').on('click', 'img', function () {
+
+$('#fill').on('click', 'img', function () {
+    $("img").each(function () {
+        $(this).addClass('unselec')
+    });
+    $('.selec').removeClass('selec');
+    $(this).addClass('selec');
+    $(this).removeClass('unselec');
+});
+
+
+$('#save').click(function () {
+
     $("img").each(function () {
         $(this).addClass('unselec')
     });
@@ -18,6 +30,7 @@ $('body').on('click', 'img', function () {
     $(this).addClass('selec');
     $(this).removeClass('unselec');
     pop();
+
     if (window.location.href.indexOf('quizz') !== -1) {
         var note = 0;
         if ($(this).attr("value") == 2) {
@@ -31,7 +44,7 @@ $('body').on('click', 'img', function () {
             processData: false,
             contentType: false,
             data: form,
-            success: function (data) {
+            success: function () {
                 window.location = "../main"
             }
         })
@@ -45,7 +58,7 @@ $('body').on('click', 'img', function () {
             processData: false,
             contentType: false,
             data: form,
-            success: function (data) {
+            success: function () {
                 if (window.location.href.indexOf('main') !== -1) {
                     window.location = "../main"
                 } else if (window.location.href.indexOf('raw') !== -1) {
@@ -69,12 +82,13 @@ function fillthem() {
         contentType: false,
         success: function (data) {
             info = JSON.parse(data);
+
             $("#brand").append(info.name);
             type = info.idtype;
             info.imgs.forEach(function (img) {
-                $("#fill").append("<img id='imgsel' value='" + img.id + "' src='" + img.path + "' />");
+                $("#fill").append("<img class='imgsel' value='" + img.id + "' src='" + img.path + "' />");
                 var form = new FormData();
-                form.append("idimg", img.id);
+                form.append("idimg", img.id);9
                 form.append("idtype", type);
                 $.ajax({
                     type: "POST",
@@ -93,7 +107,7 @@ function fillthem2() {
     $("#brand").append("Histogram");
     var i = 0;
     imgues.forEach(function (img) {
-        $("#fill").append("<img id='imgsel' value='" + i + "' src=" + img + " />")
+        $("#fill").append("<img class='imgsel' value='" + i + "' src=" + img + " />")
     })
 }
 
@@ -123,6 +137,8 @@ $("#skip").click(function () {
             window.location = "../raw"
         }
         else {
+            $("#brand").text("Select the picture which best describe ");
+            $("#fill").empty();
             fillthem()
         }
     }

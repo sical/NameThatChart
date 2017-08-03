@@ -20,8 +20,6 @@ import readerDL as rd
 
 app = Flask(__name__)
 mysql = MySQL()
-os.environ['AWS_ACCESS_KEY_ID'] = "AKIAJUKQ5JQUGHCBQQTQ"
-os.environ['AWS_SECRET_ACCESS_KEY'] = "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"
 
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'sql11185116'
@@ -55,7 +53,7 @@ def gethemall():
         idt = gettype(view.description)[0]
         q = "INSERT INTO user_type VALUES (" + str(4) + "," + str(
             idt) + ",'" + view.getlocation() + "','" + view.name + "')"
-        cursor.execute(q)
+        ursor.execute(q)
         con.commit()
     cursor.close()
     con.close()
@@ -1154,7 +1152,7 @@ def getreverse():
     idt = cursor.fetchone()[0]
 
     cursor.execute(
-        "SELECT image.idimage,imagepath,label FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON type.idtype = textvote.idtype WHERE textvote.idtype =" + str(
+        "SELECT DISTINCT image.idimage,imagepath,label FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON type.idtype = textvote.idtype WHERE textvote.idtype =" + str(
             idt) + " ORDER BY rand() LIMIT 4")
     data = cursor.fetchall()
     res = ''

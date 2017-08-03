@@ -6,6 +6,30 @@
 
 }
 
+.centerimg{overflow-y: scroll;max-height: 75%; }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px greenyellow;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: orange;
+    -webkit-box-shadow: inset 0 0 6px blueviolet;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+        background: yellow;
+}
 #sel {
     max-width: 800px;
 }
@@ -58,7 +82,7 @@
     display: inline-block;
 }
 
-#imgsel:hover {
+.imgsel:hover {
     border-styler: solid;
     border-color: #41a62a;
     border-width: 5px;
@@ -70,12 +94,12 @@
     border: solid 3px
 }
 
-#imgsel {
+.imgsel {
     max-width: 275px;
     max-height: 225px;
     width: 100%;
     height: 80%;
-    border: solid 1px;
+    border: solid 2px;
     margin: 1%;
 }
 
@@ -85,8 +109,8 @@
 }
 
 .imgtoch {
-    width: 40%;
-    height: 20%;
+    width: 55%;
+    height: 28%;
     margin: 1%;
     border: solid 2px;
     max-width: 225px;
@@ -106,7 +130,7 @@
 }
 
 .centerimg {
-    top: 50%;
+    top: 40%;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -230,7 +254,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    #imgsel {
+    .imgsel {
         max-width: 155px;
         max-height: 100px;
         width: 100%;
@@ -286,7 +310,6 @@
     }
 
     .centerimg {
-        top: 50%;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -362,7 +385,6 @@
         transform: translate(-50%, -20%);
     }
 
-
 }
 
 @media screen and (max-width: 600px) and (min-width: 400px ) {
@@ -425,7 +447,7 @@
         display: block;
     }
 
-    #imgsel {
+    .imgsel {
         max-width: 175px;
         max-height: 120px;
         width: 100%;
@@ -444,10 +466,10 @@
     }
 
     .centerimg {
-        top: 50%;
+        top : 50%;
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: 60%;
         left: 50%;
         transform: translate(-45%, -25%);
     }
@@ -459,6 +481,9 @@
         height: 50%;
         margin-bottom: 5%;
         border: solid 1px;
+    }
+    .centerimg img {
+        height: 10%;
     }
 
     #value {
@@ -522,16 +547,19 @@
     }
 }
 
-.selec {
-    border: solid 8px green;
-
-}
-
-.unselec {
-    opacity: 0.5;
-}
-
 @media only screen and (max-device-width: 390px) {
+
+    .centerimg{overflow-y: scroll;max-height: 58%; }
+
+    .imgtoch {
+        width: 40%;
+        height: 15%;
+        margin: 1%;
+        border: solid 2px;
+        max-width: 225px;
+        max-height: 275px;
+        margin-top: 5%;
+    }
 
     #main-title {
         font-family: 'Gloria Hallelujah', cursive;
@@ -790,4 +818,12 @@
 .imgmod {
     width: 50%;
     height: 250%;
+}
+
+.selec {
+    border: solid 8px green;
+}
+
+.unselec {
+    opacity: 0.5;
 }
