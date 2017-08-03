@@ -13,7 +13,7 @@ $(document).ready(function () {
                 url: "../getnextimg",
                 processData: false,
                 success: function (data) {
-
+                    console.log("LAAAAAA "+data );
                     $("#imgdisp").attr("src", data);
                     furm = new FormData();
                     furm.append("action", "page loaded");
