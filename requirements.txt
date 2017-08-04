@@ -17,5 +17,7 @@ wget
 
 flask-mysql
 
+flask-compress
+flask-cache
 
 Pillow

@@ -5,12 +5,104 @@
         <small>Statistics</small>
     </h1>
 </div>
-<div class="center">
+<div class="center" style="overflow-x: scroll">
+    <table id="t1" class="table table-bordered table-responsive" style="max-width: 60%">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Textual</th>
+            <th>Selection</th>
+            <th>Swipes</th>
+            <th>Multiple</th>
+            <th>Reverse</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="im1">
+            <th>Images</th>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+        </tr>
+        <tr id="usr1">
+            <th>Users</th>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+        </tr>
+        <tr id="ski">
+            <th>Skipped</th>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+        </tr>
+        <tr id="clas">
+            <th>Top 4 Classes</th>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+            <td class="tof"></td>
+        </tr>
+
+        </tbody>
+    </table>
+
 
 </div>
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/admin.js') }}"></script>
+
+
+<script type="text/javascript">
+    var tasks = ["textvote", "selection", "swipe", "multiple", "reverse"];
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "../adminstats",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                var temp = JSON.parse(data);
+                console.log(temp);
+                var i = 0;
+                $("#im1").find(".tof").each(function () {
+                    $(this).text(temp[tasks[i]].image);
+                    i++;
+                });
+                i = 0;
+                $("#usr1").find(".tof").each(function () {
+                    $(this).text(temp[tasks[i]].user);
+                    i++;
+                });
+                i = 0
+                $("#ski").find(".tof").each(function () {
+                     $(this).text(temp[tasks[i]].skipped);
+                    i++;
+                });
+                i = 0;
+                $("#clas").find(".tof").each(function () {
+                    $(this).empty();
+                    $(this).append("<ul>");
+                    for (var u = 0; u < temp[tasks[i]].classes.length; u++) {
+                        $(this).append("<li>" + temp[tasks[i]].classes[u].cl + " <span class='badge' style='float:right'>" + temp[tasks[i]].classes[u].nb + "</span></li>")
+                    }
+                    i++;
+                    $(this).append("</ul>");
+                })
+            }
+        });
+    });
+
+
+</script>
 
 </body>
 </html>

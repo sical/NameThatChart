@@ -2,30 +2,15 @@
  * Created by theo on 8/2/17.
  */
 var started = true;
+var debut;
 $(document).ready(function () {
+        waitsetup();
         document.getElementById("value").focus();
         if (window.location.href.indexOf('quizz') !== -1) {
             $("#imgdisp").attr("src", "static/assets/img/datasets/json/3.JPG");
             $("#skip").hide();
         } else {
-            $.ajax({
-                type: "GET",
-                url: "../getnextimg",
-                processData: false,
-                success: function (data) {
-                    console.log("LAAAAAA "+data );
-                    $("#imgdisp").attr("src", data);
-                    furm = new FormData();
-                    furm.append("action", "page loaded");
-                    $.ajax({
-                        type: "POST",
-                        url: "../logaction",
-                        processData: false,
-                        contentType: false,
-                        data: furm
-                    });
-                }
-            });
+            waitandload();
         }
     }
 );
@@ -59,6 +44,9 @@ function report(string) {
 }
 
 $("#save").click(function () {
+
+    waitsetup();
+
     var text = $("#value").val();
     $("#value").val('');
     if (window.location.href.indexOf('quizz') !== -1) {
@@ -84,7 +72,7 @@ $("#save").click(function () {
     } else {
 
         var form = new FormData();
-        var reg = /[\(,\)\\~\`\"\{\}\+\=\#\\][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
+        var reg = /[\(,\)\\~\`\"\{\}\`\'\=\#][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
         text = text.replace(reg, "");
         form.append("name", text);
         pop();
@@ -97,6 +85,7 @@ $("#save").click(function () {
             contentType: false,
             data: form,
             success: function () {
+
                 if (window.location.href.indexOf('hybrid') !== -1) {
                     window.location = "../hybrid"
                 } else {
@@ -106,16 +95,11 @@ $("#save").click(function () {
                         window.location = "../raw"
                     }
                     else {
-                        $.ajax({
-                            type: "GET",
-                            url: "../getnextimg",
-                            processData: false,
-                            contentType: false,
-                            success: function (data) {
-                                $("#imgdisp").attr("src", data);
-                            }
-                        });
+                        waitandload();
+
                     }
+
+
                 }
             }
         });
@@ -123,7 +107,8 @@ $("#save").click(function () {
 });
 
 $("#skip").click(function () {
-    firm = new FormData();
+    waitsetup();
+    var firm = new FormData();
     firm.append("action", "skip");
     $.ajax({
         type: "POST",
@@ -141,17 +126,7 @@ $("#skip").click(function () {
             window.location = "../raw"
         }
         else {
-
-            $.ajax({
-                type: "GET",
-                url: "../getnextimg",
-                processData: false,
-                contentType: false,
-                success: function (data) {
-                    $("#imgdisp").attr("src", data);
-
-                }
-            });
+            waitandload();
         }
     }
 });
@@ -186,4 +161,45 @@ window.onkeydown = function (e) {
 function pop() {
     $("#pop").show();
     $("#pop").delay(4300).fadeOut(500);
+}
+
+function waitandload() {
+    $.ajax({
+
+        type: "GET",
+        url: "../getnextimg",
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            var fin = new Date();
+            if (fin.getTime() - debut.getTime() > 1500) {
+                $("#imgdisp").attr("src", data);
+            } else {
+                $("#imgdisp").attr("src", data);
+                setTimeout(function () {
+                    $("#imgdisp").css("opacity", "1");
+                    $("#load").css("visibility", "hidden");
+                }, (1500 - (fin.getTime() - debut.getTime())));
+            }
+            var furm = new FormData();
+            furm.append("action", "page loaded");
+            $.ajax({
+                type: "POST",
+                url: "../logaction",
+                processData: false,
+                contentType: false,
+                data: furm
+            });
+        }
+    });
+}
+function waitsetup() {
+    debut = new Date();
+    $("#load").css("visibility", "visible");
+    $("#imgdisp").css("opacity", "0");
+
+}
+
+function fill() {
+
 }

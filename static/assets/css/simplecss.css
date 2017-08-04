@@ -6,7 +6,18 @@
 
 }
 
-.centerimg{overflow-y: scroll;max-height: 75%; }
+#load {
+    position: absolute;
+    z-index: 2;
+    margin-left: -20%;
+    margin-top: 10%;
+    visibility: hidden;
+}
+
+.centerimg {
+    overflow-y: scroll;
+    max-height: 75%;
+}
 
 /* Let's get this party started */
 ::-webkit-scrollbar {
@@ -15,7 +26,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px greenyellow;
+    -webkit-box-shadow: inset 0 0 6px darkslategray;
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -24,12 +35,14 @@
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: orange;
-    -webkit-box-shadow: inset 0 0 6px blueviolet;
+    background: darkslategray;
+    -webkit-box-shadow: inset 0 0 6px darkslategray;
 }
+
 ::-webkit-scrollbar-thumb:window-inactive {
-        background: yellow;
+    background: darkslategray;
 }
+
 #sel {
     max-width: 800px;
 }
@@ -264,6 +277,12 @@
         z-index: -3;
     }
 
+    #load {
+        width: 33%;
+        height: 33%;
+        margin-left: -50%;
+    }
+
     .imginfo {
         margin-left: 5%;
         font-size: 10px;
@@ -397,6 +416,12 @@
         text-align: center
     }
 
+    #load {
+        width: 35%;
+        height: 35%;
+        margin-left: -50%;
+    }
+
     .imginfo {
         margin-left: 5%;
         font-size: 12px;
@@ -466,7 +491,7 @@
     }
 
     .centerimg {
-        top : 50%;
+        top: 50%;
         position: fixed;
         width: 100%;
         height: 60%;
@@ -482,6 +507,7 @@
         margin-bottom: 5%;
         border: solid 1px;
     }
+
     .centerimg img {
         height: 10%;
     }
@@ -549,7 +575,10 @@
 
 @media only screen and (max-device-width: 390px) {
 
-    .centerimg{overflow-y: scroll;max-height: 58%; }
+    .centerimg {
+        overflow-y: scroll;
+        max-height: 58%;
+    }
 
     .imgtoch {
         width: 40%;

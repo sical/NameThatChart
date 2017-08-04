@@ -19,20 +19,3 @@ $("#down").click(function () {
         /*JSON*/
     }
 });
-
-$('#tp').change(function () {
-
-    if ($(this).val() == 'on') {
-        $(this).val('off');
-    } else {
-        $(this).val('on');
-    }
-});
-$('#dj').change(function () {
-
-    if ($(this).val() == 'on') {
-        $(this).val('off');
-    } else {
-        $(this).val('on');
-    }
-});

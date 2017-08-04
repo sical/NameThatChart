@@ -10,12 +10,20 @@
 </div>
 
 <div class="center" id="sel">
-
-    <div id="fill"></div>
+        <img style="margin-left: 15%" id="load"
+         src="{{ url_for('static', filename='assets/img/aperture.gif') }}" alt="loading logo"/>
+    <div id="fill">
+            <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+            <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+            <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+            <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+            <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+            <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+    </div>
     {% include 'report.html' %}
 </div>
 
-<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/select.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 

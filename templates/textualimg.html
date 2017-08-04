@@ -9,7 +9,9 @@
     Success, it is saved
 </div>
 <div class="centerimg">
-    <img id="imgdisp" src=""/>
+    <img id="imgdisp" style="z-index:0" src="" alt="image to classify"/>
+    <img  id="load"
+         src="{{ url_for('static', filename='assets/img/aperture.gif') }}" alt="loading logo"/>
 
     <div id="fom" class="form-group" style="max-width: 500px;text-align: center">
         <input id="value" type="text" class="form-control" name="type" placeholder="What is this chart ?"
@@ -33,7 +35,7 @@
         </div>
     </div>
 </div>
-<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/textual.js') }}"></script>
 

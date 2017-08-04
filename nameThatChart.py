@@ -3,13 +3,17 @@ import datetime
 import json
 import os
 import time
-from random import randint
+
 import boto3
+from random import randint
 from PIL import Image
 from flask import Flask, request, session, render_template, Response
 from flask import redirect
 from flaskext.mysql import MySQL
 from imagetype import ImgType
+from flask_compress import Compress
+from flask_caching import Cache
+
 
 import d3jsdownload as dl
 import imagePrep as pics
@@ -21,12 +25,22 @@ import readerDL as rd
 app = Flask(__name__)
 mysql = MySQL()
 
+COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml', 'application/json', 'application/javascript']
+COMPRESS_LEVEL = 6
+COMPRESS_MIN_SIZE = 500
+
+
+
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'sql11185116'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'hULHvUiMJh'
 app.config['MYSQL_DATABASE_DB'] = 'sql11185116'
 app.config['MYSQL_DATABASE_HOST'] = 'sql11.freemysqlhosting.net'
+cache = Cache(config={'CACHE_TYPE': 'simple'})
+
 mysql.init_app(app)
+cache.init_app(app)
+Compress(app)
 
 # hash key
 app.secret_key = binascii.hexlify(os.urandom(24))
@@ -721,8 +735,8 @@ def saveupimg():
 
     title = title.replace(" ", "_")
 
-    filename= str(nb) + "_" + title + "." + ext
-    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" +filename)
+    filename = str(nb) + "_" + title + "." + ext
+    q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename)
 
     wget.download(url, q)
     s3_client = boto3.client('s3')
@@ -731,7 +745,6 @@ def saveupimg():
                                  'namethatchart-imagedataset', "upload/" + filename,
                                  ExtraArgs={'ACL': 'public-read'})
     url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/upload/" + filename
-
 
     query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','upload','" + title + "','" + cat + "')"
     putdb(query)
@@ -768,10 +781,10 @@ def upjonimg():
             wget.download(obj['url'], os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename))
 
             s3_client = boto3.client('s3')
-            with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename),"rb") as f:
+            with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename), "rb") as f:
                 s3_client.upload_fileobj(f,
-                                          'namethatchart-imagedataset', "upload/" + filename,
-                                          ExtraArgs={'ACL': 'public-read'})
+                                         'namethatchart-imagedataset', "upload/" + filename,
+                                         ExtraArgs={'ACL': 'public-read'})
             url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/upload/" + filename
 
             if 'category' in obj:
@@ -902,6 +915,7 @@ def saveselect():
     iduser = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form['idtype']
     idimg = request.form['idimage']
+
     now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
@@ -1170,7 +1184,7 @@ def getreverse():
     return result
 
 
-@app.route("/logm/<table>", methods=['post'])
+@app.route("/logm/<table>", methods=['POST'])
 def logm(table):
     idu = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form["idtype"]
@@ -1181,6 +1195,7 @@ def logm(table):
     queries = []
 
     for image in idimgs:
+        print("aaa "+str(image))
         queries.append(
             "INSERT INTO `" + table + "` (iduser,idimage,idtype,`time`,`date`,`event`) VALUES(" + str(idu) + "," + str(
                 image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "')")
@@ -1404,17 +1419,13 @@ def saveapp():
     _, now = gettimes()
 
     putdb(
-    "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/" + str(
-        idu) + "_" + str(now) + ".png','app')")
-
+        "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/" + str(
+            idu) + "_" + str(now) + ".png','app')")
 
     fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/' + str(
         idu) + "_" + str(now) + ".png"
 
-    idm=vachercherss("SELECT idimage FROM image WHERE imagepath LIKE '" + fileurl + "'")
-
-
-
+    idm = vachercherss("SELECT idimage FROM image WHERE imagepath LIKE '" + fileurl + "'")
 
     # Upload the file to S3
     s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/" + str(idu) + "_" + str(now) + ".png",
@@ -1468,6 +1479,7 @@ def vacherchers(query):
 
     return result
 
+
 def putdb(query):
     con = mysql.connect()
     cursor = con.cursor()
@@ -1475,6 +1487,7 @@ def putdb(query):
     cursor.close()
     con.commit()
     con.close()
+
 
 def vachercherss(query):
     con = mysql.connect()
@@ -1485,6 +1498,56 @@ def vachercherss(query):
     con.close()
 
     return result[0]
+
+
+@app.route("/adminstats")
+def adminstats():
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    tasks = ["textvote", "reverse", "selection", "swipe", "multiple"]
+    images = []
+    users = []
+    classes = []
+    skip = []
+    result = "{"
+
+    for table in tasks:
+        q = "SELECT count(nb) FROM (SELECT count(*) AS nb FROM " + table + " WHERE (event ='submitted' OR event ='chosen' OR event ='swipe')  GROUP BY idimage) AS t"
+        cursor.execute(q)
+        images.append(cursor.fetchone()[0])
+
+        cursor.execute(
+            "SELECT count(nb) FROM (SELECT count(*) AS nb FROM " + table + " WHERE (event ='submitted' OR event ='chosen' OR event ='swipe')  GROUP BY iduser) AS t")
+        users.append(cursor.fetchone()[0])
+
+        cursor.execute("SELECT count(*) AS nb FROM " + table + " WHERE event ='skip'")
+        skip.append(cursor.fetchone()[0])
+
+        cursor.execute(
+            "SELECT count(*) AS nb ,label FROM " + table + " INNER JOIN type ON " + table + ".idtype= type.idtype WHERE (event ='submitted' or event ='chosen' or event ='swipe')  GROUP BY type.idtype ORDER BY  nb DESC LIMIT 4;")
+        classes.append(cursor.fetchall())
+
+    cursor.close()
+    con.close()
+
+    for i in range(0, len(tasks)):
+        if tasks[i] == 'selection':
+            skip[i] = int(skip[i] / 6)
+        elif tasks[i] == 'reverse':
+            skip[i] = int(skip[i] / 4)
+        result += '"' + tasks[i] + '"' + ': {"image":"' + str(images[i]) + '","user":"' + str(
+            users[i]) + '","skipped":"' + str(skip[i]) + '","classes": [ '
+
+        for cl in classes[i]:
+            result += '{"cl": "' + cl[1] + '","nb":"' + str(cl[0]) + '"},'
+        result = result[:-1]
+        result += ']},'
+    result = result[:-1]
+    result += "}"
+    print(result)
+
+    return result
 
 
 if __name__ == '__main__':

@@ -3,16 +3,19 @@
  */
 var type;
 var info;
+var debut;
+
 $(document).ready(function () {
     if (window.location.href.indexOf('quizz') !== -1) {
         fillthem2();
     } else {
+        debut = new Date();
         fillthem();
     }
 });
 
 $('#fill').on('click', 'img', function () {
-    $("img").each(function () {
+    $(".cont").each(function () {
         $(this).addClass('unselec')
     });
     $('.selec').removeClass('selec');
@@ -22,55 +25,55 @@ $('#fill').on('click', 'img', function () {
 
 
 $('#save').click(function () {
+    var test = $('#fill').find(".selec").length;
+    console.log(test);
+    if (test == 0) {
 
-    $("img").each(function () {
-        $(this).addClass('unselec')
-    });
-    $('.selec').removeClass('selec');
-    $(this).addClass('selec');
-    $(this).removeClass('unselec');
-    pop();
-
-    if (window.location.href.indexOf('quizz') !== -1) {
-        var note = 0;
-        if ($(this).attr("value") == 2) {
-            note = 4
-        }
-        var form = new FormData();
-        form.append("note", note);
-        $.ajax({
-            type: "POST",
-            url: "../savenote",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function () {
-                window.location = "../main"
-            }
-        })
     } else {
-        var form = new FormData();
-        form.append("idimage", $(this).attr("value"));
-        form.append("idtype", type);
-        $.ajax({
-            type: "POST",
-            url: "../saveselect",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function () {
-                if (window.location.href.indexOf('main') !== -1) {
-                    window.location = "../main"
-                } else if (window.location.href.indexOf('raw') !== -1) {
-                    window.location = "../raw"
-                }
-                else {
-                    $("#fill").empty();
-                    $("#brand").text(" Select the picture which best describe : ");
-                    fillthem();
-                }
+        waitsetup();
+
+        pop();
+
+        if (window.location.href.indexOf('quizz') !== -1) {
+            var note = 0;
+            if ($(this).attr("value") == 2) {
+                note = 4
             }
-        })
+            var form = new FormData();
+            form.append("note", note);
+            $.ajax({
+                type: "POST",
+                url: "../savenote",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function () {
+                    window.location = "../main"
+                }
+            })
+        } else {
+            var form = new FormData();
+            form.append("idimage", $('.selec').attr("value"));
+            form.append("idtype", type);
+            $.ajax({
+                type: "POST",
+                url: "../saveselect",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function () {
+                    if (window.location.href.indexOf('main') !== -1) {
+                        window.location = "../main"
+                    } else if (window.location.href.indexOf('raw') !== -1) {
+                        window.location = "../raw"
+                    }
+                    else {
+                        $("#brand").text(" Select the picture which best describe : ");
+                        fillthem();
+                    }
+                }
+            })
+        }
     }
 });
 
@@ -82,22 +85,71 @@ function fillthem() {
         contentType: false,
         success: function (data) {
             info = JSON.parse(data);
-
             $("#brand").append(info.name);
             type = info.idtype;
-            info.imgs.forEach(function (img) {
-                $("#fill").append("<img class='imgsel' value='" + img.id + "' src='" + img.path + "' />");
+
+            var fin = new Date();
+
+            if (fin.getTime() - debut.getTime() > 1500) {
+                var images = info.imgs;
+                var image;
+                var ids = [];
+
+                $("#fill").find(".cont").each(function () {
+                    image = images.pop();
+                    ids.push(image.id);
+                    $(this).attr("value", image.id);
+                    $(this).attr("src", image.path);
+
+                });
+
                 var form = new FormData();
-                form.append("idimg", img.id);9
+                form.append("action", "visible");
+                form.append("ids", ids);
                 form.append("idtype", type);
                 $.ajax({
                     type: "POST",
-                    url: "../logsel",
+                    url: "../logm/selection",
                     processData: false,
                     contentType: false,
                     data: form
-                })
-            });
+                });
+                $(".cont").css("opacity", "1");
+                $("#load").css("visibility", "hidden");
+
+            } else {
+                var images = info.imgs;
+                var image;
+                var ids = [];
+
+                $("#fill").find(".cont").each(function () {
+                    image = images.pop();
+                    ids.push(image.id);
+                    $(this).attr("value", image.id);
+                    $(this).attr("src", image.path);
+                    console.log("lalala")
+
+                });
+
+                var form = new FormData();
+                console.log(info);
+                form.append("ids", ids);
+                form.append("action", "visible");
+                form.append("idtype", type);
+                $.ajax({
+                    type: "POST",
+                    url: "../logm/selection",
+                    processData: false,
+                    contentType: false,
+                    data: form
+                });
+                setTimeout(function () {
+                    $(".cont").css("opacity", "1");
+                    $("#load").css("visibility", "hidden");
+                }, (1500 - (fin.getTime() - debut.getTime())));
+            }
+
+
         }
     });
 }
@@ -107,11 +159,12 @@ function fillthem2() {
     $("#brand").append("Histogram");
     var i = 0;
     imgues.forEach(function (img) {
-        $("#fill").append("<img class='imgsel' value='" + i + "' src=" + img + " />")
+        $("#fill").append("<img class='imgsel cont' value='" + i + "' src=" + img + " />")
     })
 }
 
 $("#skip").click(function () {
+    waitsetup();
     var images = [];
     info.imgs.forEach(function (row) {
         images.push(row.id)
@@ -138,8 +191,15 @@ $("#skip").click(function () {
         }
         else {
             $("#brand").text("Select the picture which best describe ");
-            $("#fill").empty();
             fillthem()
         }
     }
 });
+
+function waitsetup() {
+    debut = new Date();
+    $(".cont").css("opacity", "0");
+    $("#load").css("visibility", "visible");
+
+
+}
