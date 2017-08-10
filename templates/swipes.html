@@ -20,10 +20,16 @@
         <button id="skip" class="btn">skip
         </button>
     </div>
+    <div style="z-index: 3000;width: 300px;position: fixed;top: 110%;">
+        <img id="load"
+             src="{{ url_for('static', filename='assets/img/aperture.gif') }}" alt="loading logo"/>
+    </div>
 </div>
+
 
 <div id="tinderslide" class="centerswi">
     <ul class="ula">
+
         <li class="pane1 lia"
             style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
     -webkit-box-shadow: 5px 5px 5px 0px #656565;
@@ -103,6 +109,7 @@
             <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
                                                        aria-hidden="true"></i></div>
         </li>
+
     </ul>
 </div>
 

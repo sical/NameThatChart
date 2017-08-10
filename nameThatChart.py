@@ -219,7 +219,10 @@ def topclass():
         res[str(row[1])] = row[0]
 
     for row in sel:
-        res[str(row[1])] += row[0]
+        if row is None:
+            pass
+        else :
+            res[str(row[1])] += row[0]
 
     for row in swi:
         res[str(row[1])] += row[0]
@@ -1112,14 +1115,17 @@ def logsel():
 @app.route('/getimgbyid', methods=['POST'])
 def getimgbyid():
     action = request.form['action']
-    result = []
+    result = '['
     con = mysql.connect()
     cursor = con.cursor()
-
-    cursor.execute("SELECT DISTINCT imagepath FROM image WHERE idimage =" + str(action))
+    cursor.execute("SELECT DISTINCT imagepath,idimage FROM image WHERE idimage =" + str(action))
     data = cursor.fetchall()
-    for i in range(0, len(data)):
-        result.append(str(data[i][0]))
+    for row in data:
+        result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + '},'
+
+    result = result[:-1]
+
+    result+= ']'
 
     cursor.close()
     con.close()
@@ -1435,7 +1441,7 @@ def saveapp():
         idm) + ". \n" + "Please keep this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
 
 
-@app.route("/datcsv")
+@app.route("/datcsv.csv")
 def dattcsv():
     header = "task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath\n"
     body = ""
@@ -1548,6 +1554,31 @@ def adminstats():
     print(result)
 
     return result
+
+
+@app.route("/getreports")
+def getreports():
+    con = mysql.connect()
+    cursor = con.cursor()
+    cols =["reports","user","task","bug","image","path"]
+    q ="SELECT idreport,iduser,`where`,label,image.idimage,imagepath FROM sql11185116.report inner join image on image.idimage = report.idimage;"
+    data = vachercherm(q)
+    res ='['
+    for row in data :
+        res+='{'
+        i=0
+        for col in row:
+            res+='"'+cols[i]+'":"'+str(col)+'",'
+            i+=1
+        res = res[:-1]
+        res+='},'
+    res = res[:-1]
+    res += ']'
+    cursor.close()
+    con.close()
+
+    return res
+
 
 
 if __name__ == '__main__':

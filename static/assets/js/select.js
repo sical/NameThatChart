@@ -9,7 +9,7 @@ $(document).ready(function () {
     if (window.location.href.indexOf('quizz') !== -1) {
         fillthem2();
     } else {
-        debut = new Date();
+       waitsetup();
         fillthem();
     }
 });
@@ -114,7 +114,7 @@ function fillthem() {
                     contentType: false,
                     data: form
                 });
-                $(".cont").css("opacity", "1");
+                $(".cont").css("visibility", "visible");
                 $("#load").css("visibility", "hidden");
 
             } else {
@@ -144,7 +144,7 @@ function fillthem() {
                     data: form
                 });
                 setTimeout(function () {
-                    $(".cont").css("opacity", "1");
+                    $(".cont").css("visibility", "visible");
                     $("#load").css("visibility", "hidden");
                 }, (1500 - (fin.getTime() - debut.getTime())));
             }
@@ -198,7 +198,7 @@ $("#skip").click(function () {
 
 function waitsetup() {
     debut = new Date();
-    $(".cont").css("opacity", "0");
+    $(".cont").css("visibility", "hidden");
     $("#load").css("visibility", "visible");
 
 

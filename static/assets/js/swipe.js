@@ -31,6 +31,7 @@ $(document).ready(function () {
             $("#brand").text("Does this belongs in \"" + cat[4] + "\" category");
         }
     } else {
+        $("#load").css("visibility", "visible");
         fill();
     }
 });
@@ -84,6 +85,7 @@ $("#tinderslide").jTinder({
                     window.location = "../raw"
                 }
                 else {
+                    $("#load").css("visibility", "visible");
                     window.location = "swipes"
                 }
             }
@@ -136,6 +138,7 @@ $("#tinderslide").jTinder({
                     window.location = "../raw"
                 }
                 else {
+                    $("#load").css("visibility", "visible");
                     window.location = "swipes"
                 }
             }
@@ -172,6 +175,7 @@ function fill() {
         success: function (data) {
             info = JSON.parse(data);
             var i = 1;
+            var fin = new Date();
             info.forEach(function (img) {
                 cat.push(img.label);
                 var temp = $('.pane' + i);
@@ -186,9 +190,11 @@ function fill() {
                 $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
                 i++;
             });
+
             var form = new FormData();
             form.append("idimg", info[4].idimage);
             form.append("idtype", info[4].idtype);
+            $("#load").css("visibility", "hidden");
             $.ajax({
 
                 type: "POST",
@@ -224,7 +230,14 @@ $("#skip").click(function () {
             window.location = "../raw"
         }
         else {
+            waitsetup();
             fill()
         }
     }
 });
+
+
+function waitsetup() {
+    debut = new Date();
+    $("#load").css("visibility", "visible");
+}

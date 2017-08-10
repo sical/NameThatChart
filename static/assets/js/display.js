@@ -35,6 +35,8 @@ $("#sh").on('input', function () {
             data: form,
             success: function (data) {
                 info = JSON.parse(data);
+                info = JSON.parse(info);
+                console.log(info);
                 info.forEach(function (img) {
                     $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
                 });

@@ -1,4 +1,9 @@
 {% include 'nav.html' %}
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/reverse.js') }}"></script>
+
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <div id="pop" class="alert" style="display: none">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     Success, it is saved
@@ -6,16 +11,19 @@
 <h1 class="page-header hcenter" id="brand">
     Choose the more fitting image to describe
 </h1>
+
+
 <div class="centerimg" style="margin-left: 8%">
+
     <div id="containssel">
 
     </div>
-
+    <div style="position: fixed;margin-bottom: 10%" class="lcenter"><img style="z-index: 400" id="load"
+                                      src="{{ url_for('static', filename='assets/img/aperture.gif') }}"
+                                      alt="loading logo"/></div>
     {% include 'report.html' %}
 </div>
-<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/reverse.js') }}"></script>
-<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
 
 </body>
 </html>

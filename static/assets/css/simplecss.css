@@ -3,8 +3,16 @@
     position: fixed;
     left: 45%;
     transform: translate(-40%, 5%);
-
 }
+
+.lcenter {
+    position: fixed;
+    left:15%;
+    transform: translate(-40%, 5%);
+    height: 200px;
+    margin-bottom: 10%;
+}
+
 
 #load {
     position: absolute;

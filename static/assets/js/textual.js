@@ -172,14 +172,16 @@ function waitandload() {
         contentType: false,
         success: function (data) {
             var fin = new Date();
-            if (fin.getTime() - debut.getTime() > 1500) {
+            if (fin.getTime() - debut.getTime() > 1000) {
                 $("#imgdisp").attr("src", data);
+                $("#imgdisp").css("opacity", "1");
+                $("#load").css("visibility", "hidden");
             } else {
                 $("#imgdisp").attr("src", data);
                 setTimeout(function () {
                     $("#imgdisp").css("opacity", "1");
                     $("#load").css("visibility", "hidden");
-                }, (1500 - (fin.getTime() - debut.getTime())));
+                }, (1000 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();
             furm.append("action", "page loaded");
@@ -197,7 +199,6 @@ function waitsetup() {
     debut = new Date();
     $("#load").css("visibility", "visible");
     $("#imgdisp").css("opacity", "0");
-
 }
 
 function fill() {
