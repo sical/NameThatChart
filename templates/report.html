@@ -1,6 +1,6 @@
-<div style="text-align: center;max-width: 500px;display: block;" id="btn">
+<div style="text-align: center;display: inline;" id="btn">
     <div class="dropup" style="display: inline">
-        <button class="btn btn-primary dropdown-toggle" id="report" type="button" data-toggle="dropdown">Report
+        <button style="height: 50px;padding: 6px 12px" class="btn btn-primary dropdown-toggle" id="report" type="button" data-toggle="dropdown">Report
             <span class="caret"></span></button>
         <ul class="dropdown-menu">
             <li><a id="nd">No display</a></li>
@@ -8,7 +8,7 @@
             <li><a id="hmc">Huge miss-classification</a></li>
         </ul>
     </div>
-    <button id="skip" class="btn">skip</button>
-    <button id="save" class="btn">save</button>
+    <button  style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
+    <button  style="height: 50px;padding: 6px 12px" id="save" class="btn">save</button>
 </div>
 <script async src="{{ url_for('static', filename='assets/js/report.js') }}"></script>

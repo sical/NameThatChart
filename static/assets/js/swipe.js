@@ -41,7 +41,7 @@ $("#tinderslide").jTinder({
     onDislike: function (item) {
 
         if (window.location.href.indexOf('quizz') !== -1) {
-            $("#brand").text("Does this belongs in \"" + cat[nb - 2] + " \" category");
+            $("#brand").text("Is this a \"" + cat[nb - 2] + " \" ?");
             nb -= 1;
             if (item.index() == 0 || item.index() == 2 || item.index() == 4) {
                 note += 1
@@ -56,7 +56,7 @@ $("#tinderslide").jTinder({
             form.append("vote", false);
             form.append("idimage", info[item.index()].idimage);
             form.append("idtype", info[item.index()].idtype);
-            $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
+            $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
             $.ajax({
                 type: "POST",
                 url: "../saveswipe",
@@ -93,7 +93,7 @@ $("#tinderslide").jTinder({
     },
     onLike: function (item) {
         if (window.location.href.indexOf('quizz') !== -1) {
-            $("#brand").text("Does this belongs in \"" + cat[nb - 2] + "\" category");
+            $("#brand").text("Is this a \"" + cat[nb - 2] + "\" ?");
             nb -= 1;
             if (item.index() == 1 || item.index() == 3) {
                 note += 1
@@ -107,7 +107,7 @@ $("#tinderslide").jTinder({
             form.append("vote", true);
             form.append("idimage", info[item.index()].idimage);
             form.append("idtype", info[item.index()].idtype);
-            $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
+            $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
             $.ajax({
                     type: "POST",
                     url: "../saveswipe",
@@ -187,7 +187,7 @@ function fill() {
                 temp.css("background-image", 'url("' + img.path + '")');
                 temp.attr("value", img.idimage);
                 $("#" + i + "_txt").text(img.label);
-                $("#brand").text("Does this belongs in \"" + cat[nb] + "\" category");
+                $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
                 i++;
             });
 

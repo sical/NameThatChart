@@ -5,7 +5,6 @@ var info;
 var images;
 
 
-
 $(document).ready(function () {
     waitsetup();
     fillit();
@@ -37,17 +36,16 @@ $('body').on('click', '#skip', function () {
             window.location = "../raw"
         }
         else {
-
+            waitsetup();
             fillit()
         }
     }
 });
 
 
-
-
 $('body').on('click', '#save', function () {
     waitsetup();
+    console.log("LUUUUUUUU");
     var img = $(".selec").attr("value");
     var form = new FormData();
     form.append("image", img);
@@ -77,6 +75,7 @@ $('body').on('click', '#save', function () {
 });
 
 function fillit() {
+    $("#containssel").empty();
     $.ajax({
         type: "GET",
         url: "../getreverse",
@@ -89,22 +88,21 @@ function fillit() {
             if (fin.getTime() - debut.getTime() > 1000) {
                 $("#brand").text("Choose the more fitting image to describe");
                 $("#brand").append(" the '" + info.label + "' category");
-                $("img").remove();
                 images.forEach(function (image) {
                     $("#containssel").append("<img  class='imgtoch' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
                 });
-                $(".btn").css("visibility", "visible");
-
+                $("#load").css("visibility", "hidden");
+                $("#containssel").css("visibility", "visible");
             } else {
                 setTimeout(function () {
                     $("#brand").text("Choose the more fitting image to describe");
                     $("#brand").append(" the '" + info.label + "' category");
-                    $("img").remove();
                     images.forEach(function (image) {
                         $("#containssel").append("<img  class='imgtoch' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
                     });
-                    $(".btn").css("visibility", "visible");
-
+                    console.log("LAAAAAAAAAAAAAAAAAAAAAAAAA");
+                    $("#load").css("visibility", "hidden");
+                    $("#containssel").css("visibility", "visible");
                 }, (1000 - (fin.getTime() - debut.getTime())));
 
             }
@@ -115,11 +113,11 @@ function fillit() {
 function waitsetup() {
     debut = new Date();
     $("#load").css("visibility", "visible");
-    $(".btn").css("visibility", "hidden");
+    $("#containssel").css("visibility", "hidden");
 }
 
 
-$('body').on('click', 'img', function () {
+$('body').on('click', '.imgtoch', function () {
     $("img").each(function () {
         $(this).addClass('unselec')
     });

@@ -5,25 +5,37 @@
     transform: translate(-40%, 5%);
 }
 
+.ula {
+    margin-top: -10%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding-top: 0px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .lcenter {
     position: fixed;
-    left:15%;
+    left: 15%;
     transform: translate(-40%, 5%);
     height: 200px;
     margin-bottom: 10%;
 }
 
-
 #load {
     position: absolute;
     z-index: 2;
-    margin-left: -20%;
-    margin-top: 10%;
+    margin-left: 25%;
+    margin-top: 25%;
     visibility: hidden;
 }
 
 .centerimg {
-    overflow-y: scroll;
     max-height: 75%;
 }
 
@@ -153,9 +165,16 @@
 .centerimg {
     top: 40%;
     position: fixed;
-    width: 100%;
     height: 100%;
-    left: 50%;
+    left: 47%;
+    transform: translate(-25%, -25%);
+}
+
+.centerr {
+    top: 45%;
+    position: fixed;
+    height: 100%;
+    left: 40%;
     transform: translate(-25%, -25%);
 }
 
@@ -328,12 +347,11 @@
     }
 
     .centerswi {
-        top: 60%;
         position: fixed;
         width: 100%;
         height: 100%;
         left: 50%;
-        transform: translate(-50%, -20%);
+        transform: translate(-300%, -20%);
     }
 
     .centerimg {
@@ -344,6 +362,14 @@
         transform: translate(-45%, -25%);
     }
 
+    .centerr {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-45%, -31%);
+    }
+
     #imgdisp {
         max-width: 500px;
         max-height: 275px;
@@ -351,6 +377,7 @@
         height: 50%;
         margin-bottom: 5%;
         border: solid 1px;
+        margin-left: 5%;
     }
 
     #value {
@@ -358,6 +385,7 @@
         margin-bottom: 4%;
         margin-top: 4%;
     }
+
 }
 
 @media only screen and (min-device-width: 1025px) {
@@ -367,8 +395,9 @@
         position: fixed;
         width: 100%;
         height: 100%;
-        left: 50%;
+        left: 47%;
         transform: translate(-25%, -25%);
+        margin-top: -3%;
 
     }
 
@@ -400,7 +429,14 @@
         position: fixed;
         width: 100%;
         height: 100%;
+        left: 47%;
         transform: translate(-40%, -20%);
+    }
+
+    #containssel {
+        width: 700px;
+        margin-top: 18%;
+        margin-left: -26%;
     }
 
     .centerswi {
@@ -412,6 +448,20 @@
         transform: translate(-50%, -20%);
     }
 
+    #load {
+        height: 16%;
+        margin-left: 38%;
+    }
+
+    .imgtoch {
+        width: 49%;
+        height: 15%;
+        margin: 1%;
+        border: solid 2px;
+        max-width: 232px;
+        max-height: 275px;
+        margin-top: 5%;
+    }
 }
 
 @media screen and (max-width: 600px) and (min-width: 400px ) {
@@ -425,9 +475,8 @@
     }
 
     #load {
-        width: 35%;
-        height: 35%;
-        margin-left: -50%;
+        height: 16%;
+        margin-left: 30%;
     }
 
     .imginfo {
@@ -507,6 +556,15 @@
         transform: translate(-45%, -25%);
     }
 
+    .centerr {
+        top: 50%;
+        position: fixed;
+        width: 100%;
+        height: 60%;
+        left: 50%;
+        transform: translate(-45%, -25%);
+    }
+
     #imgdisp {
         max-width: 500px;
         max-height: 275px;
@@ -514,6 +572,7 @@
         height: 50%;
         margin-bottom: 5%;
         border: solid 1px;
+        margin-left: 5%;
     }
 
     .centerimg img {
@@ -523,6 +582,16 @@
     #value {
         max-width: 340px;
         margin-bottom: 7%;
+    }
+
+    .imgtoch {
+        width: 40%;
+        height: 15%;
+        margin: 1%;
+        border: solid 2px;
+        max-width: 225px;
+        max-height: 255px;
+        margin-top: 5%;
     }
 }
 
@@ -583,7 +652,38 @@
 
 @media only screen and (max-device-width: 390px) {
 
+    #load {
+        height: 28%;
+        margin-left: 35%;
+    }
+
+    .up {
+        margin-top: -30%;
+    }
+
+    .centerswi {
+        top: 57%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    #sel {
+        margin-top: -8%;
+    }
+
+    .ula {
+        margin-top: -16%;
+    }
+
     .centerimg {
+        overflow-y: scroll;
+        max-height: 58%;
+    }
+
+    .centerr {
         overflow-y: scroll;
         max-height: 58%;
     }
@@ -594,7 +694,7 @@
         margin: 1%;
         border: solid 2px;
         max-width: 225px;
-        max-height: 275px;
+        max-height: 255px;
         margin-top: 5%;
     }
 
@@ -613,6 +713,7 @@
     #brand {
         width: 100%;
         font-size: 13px;
+        margin-top: 2%;
     }
 }
 

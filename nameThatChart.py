@@ -3,24 +3,18 @@ import datetime
 import json
 import os
 import time
+from random import randint
 
 import boto3
-from random import randint
+import wget
 from PIL import Image
 from flask import Flask, request, session, render_template, Response
 from flask import redirect
-from flaskext.mysql import MySQL
-from imagetype import ImgType
-from flask_compress import Compress
 from flask_caching import Cache
-
-
-import d3jsdownload as dl
-import imagePrep as pics
-import wget
-import itertools
-import operator
-import readerDL as rd
+from flask_compress import Compress
+from flaskext.mysql import MySQL
+import sys
+from datasetManager import imagePrep as pics
 
 app = Flask(__name__)
 mysql = MySQL()
@@ -48,7 +42,7 @@ app.secret_key = binascii.hexlify(os.urandom(24))
 
 #     <------------------Admin unmap tools ------------------>
 
-
+"""
 @app.route("/tempdl/<dir>/<filename>")
 def tempdl(dir, filename):
     location = "static/assets/img/datasets/downloadApi/" + dir + "/"
@@ -109,7 +103,7 @@ def indabase(dir):
 
     print('\x1b[6;30;42m' + "Done ! " + str(len(imgs)) + ") saved " + '\x1b[0m' + "\n")
 
-    return "ok"
+    return "ok" """
 
 
 # fill database from "/static/assets/img/datasets/"
