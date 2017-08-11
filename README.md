@@ -1,6 +1,6 @@
 # NameThatChart
 
-####website url : https://namethatchart.herokuapp.com
+### website url : https://namethatchart.herokuapp.com
 
 ## Using the dataset
 
