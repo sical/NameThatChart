@@ -4,7 +4,7 @@ import json
 import os
 import time
 from random import randint
-
+import base64
 import boto3
 import wget
 from PIL import Image
@@ -23,8 +23,6 @@ COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml', 'application/json', '
 COMPRESS_LEVEL = 6
 COMPRESS_MIN_SIZE = 500
 
-
-
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'sql11185116'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'hULHvUiMJh'
@@ -38,7 +36,6 @@ Compress(app)
 
 # hash key
 app.secret_key = binascii.hexlify(os.urandom(24))
-
 
 #     <------------------Admin unmap tools ------------------>
 
@@ -149,6 +146,15 @@ def maj(dir, nb):
     return "ok"
 
 
+@app.route('/generated/<hash>')
+def gen(hash):
+    hash = base64.b64decode(hash).decode("utf-8")
+    print(hash+" Hash")
+    vals = str(hash).split("/")
+    print(str(vals) +" Vals")
+    return render_template(str(vals[0]) + ".html", test=vals[1])
+
+
 #     <------------------ Classic render template ------------------>
 @app.route("/getimginfotype", methods=['POST'])
 def getimginfotype():
@@ -215,7 +221,7 @@ def topclass():
     for row in sel:
         if row is None:
             pass
-        else :
+        else:
             res[str(row[1])] += row[0]
 
     for row in swi:
@@ -254,41 +260,6 @@ def topclass():
 @app.route('/')
 def hello_world():
     return render_template('index.html')
-
-
-@app.route('/simple')
-def simple():
-    return render_template('simple/simpleswipes.html')
-
-
-@app.route('/simpleup')
-def simpleup():
-    return render_template('simple/simpleuploadimg.html')
-
-
-@app.route('/txtsimple')
-def txtsimple():
-    return render_template('simple/textualsimple.html')
-
-
-@app.route('/simpleadmin')
-def simpledmin():
-    return render_template('simple/simpleadmin.html')
-
-
-@app.route('/imgsimple')
-def imgsimple():
-    return render_template('simple/simpletextualimg.html')
-
-
-@app.route('/simpleselect')
-def simpleselect():
-    return render_template('simple/simpleselect.html')
-
-
-@app.route('/simpledisplay')
-def simpledisplay():
-    return render_template('simple/simpledisplay_image.html')
 
 
 # Nav bar (testing)
@@ -576,7 +547,7 @@ def savetext():
     con = mysql.connect()
     cursor = con.cursor()
 
-    idim = session.get('idimg')
+    idim = request.form["id"]
     idu = getid(request.environ['REMOTE_ADDR'])
     idt = gettype(name)[0]
 
@@ -664,9 +635,7 @@ def getnextimg():
     data = cursor.fetchone()
     cursor.close()
     con.close()
-    session['idimg'] = data[1]
-    print(data[0])
-    return str(data[0])
+    return json.dumps(data)
 
 
 # Return User data to display into admin table
@@ -1042,7 +1011,7 @@ def logaction():
     now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-    idim = session.get('idimg')
+    idim = request.form['id']
     idu = getid(request.environ['REMOTE_ADDR'])
 
     q = "INSERT INTO textvote (iduser,time,date,event,idimage) VALUES (" + str(idu) + ",'" + str(
@@ -1119,7 +1088,7 @@ def getimgbyid():
 
     result = result[:-1]
 
-    result+= ']'
+    result += ']'
 
     cursor.close()
     con.close()
@@ -1195,7 +1164,7 @@ def logm(table):
     queries = []
 
     for image in idimgs:
-        print("aaa "+str(image))
+        print("aaa " + str(image))
         queries.append(
             "INSERT INTO `" + table + "` (iduser,idimage,idtype,`time`,`date`,`event`) VALUES(" + str(idu) + "," + str(
                 image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "')")
@@ -1554,25 +1523,24 @@ def adminstats():
 def getreports():
     con = mysql.connect()
     cursor = con.cursor()
-    cols =["reports","user","task","bug","image","path"]
-    q ="SELECT idreport,iduser,`where`,label,image.idimage,imagepath FROM sql11185116.report inner join image on image.idimage = report.idimage;"
+    cols = ["reports", "user", "task", "bug", "image", "path"]
+    q = "SELECT idreport,iduser,`where`,label,image.idimage,imagepath FROM sql11185116.report INNER JOIN image ON image.idimage = report.idimage;"
     data = vachercherm(q)
-    res ='['
-    for row in data :
-        res+='{'
-        i=0
+    res = '['
+    for row in data:
+        res += '{'
+        i = 0
         for col in row:
-            res+='"'+cols[i]+'":"'+str(col)+'",'
-            i+=1
+            res += '"' + cols[i] + '":"' + str(col) + '",'
+            i += 1
         res = res[:-1]
-        res+='},'
+        res += '},'
     res = res[:-1]
     res += ']'
     cursor.close()
     con.close()
 
     return res
-
 
 
 if __name__ == '__main__':

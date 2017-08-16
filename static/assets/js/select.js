@@ -8,6 +8,7 @@ var debut;
 $(document).ready(function () {
     if (window.location.href.indexOf('quizz') !== -1) {
         fillthem2();
+        $("#gen").hide();
     } else {
        waitsetup();
         fillthem();
@@ -127,8 +128,6 @@ function fillthem() {
                     ids.push(image.id);
                     $(this).attr("value", image.id);
                     $(this).attr("src", image.path);
-                    console.log("lalala")
-
                 });
 
                 var form = new FormData();
@@ -155,6 +154,7 @@ function fillthem() {
 }
 
 function fillthem2() {
+    $("#fill").empty();
     var imgues = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_205.gif", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_224.gif", "static/assets/img/datasets/quizz/3.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_91.gif"];
     $("#brand").append("Histogram");
     var i = 0;

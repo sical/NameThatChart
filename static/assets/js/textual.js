@@ -3,12 +3,29 @@
  */
 var started = true;
 var debut;
+var id;
 $(document).ready(function () {
         waitsetup();
         document.getElementById("value").focus();
         if (window.location.href.indexOf('quizz') !== -1) {
-            $("#imgdisp").attr("src", "static/assets/img/datasets/json/3.JPG");
             $("#skip").hide();
+            $("#gen").hide();
+            var fin = new Date();
+            if (fin.getTime() - debut.getTime() > 1000) {
+                $("#imgdisp").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+                $("#imgdisp").css("opacity", "1");
+                $("#load").css("visibility", "hidden");
+            } else {
+                $("#imgdisp").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+                setTimeout(function () {
+                    $("#imgdisp").css("opacity", "1");
+                    $("#load").css("visibility", "hidden");
+                }, (1000 - (fin.getTime() - debut.getTime())));
+            }
+
+
+        } else if (window.location.href.indexOf('generated') !== -1) {
+            gen();
         } else {
             waitandload();
         }
@@ -75,17 +92,17 @@ $("#save").click(function () {
         var reg = /[\(,\)\\~\`\"\{\}\`\'\=\#][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
         text = text.replace(reg, "");
         form.append("name", text);
+        form.append("id", id);
         pop();
 
         $.ajax({
             type: "POST",
-            url: "./savetext",
+            url: "../savetext",
             enctype: 'mulipart/form-data',
             processData: false,
             contentType: false,
             data: form,
             success: function () {
-
                 if (window.location.href.indexOf('hybrid') !== -1) {
                     window.location = "../hybrid"
                 } else {
@@ -93,6 +110,8 @@ $("#save").click(function () {
                         window.location = "../main"
                     } else if (window.location.href.indexOf('raw') !== -1) {
                         window.location = "../raw"
+                    } else if (window.location.href.indexOf('generated') !== -1) {
+                        window.location = "../main"
                     }
                     else {
                         waitandload();
@@ -110,6 +129,7 @@ $("#skip").click(function () {
     waitsetup();
     var firm = new FormData();
     firm.append("action", "skip");
+    firm.append("id", id);
     $.ajax({
         type: "POST",
         url: "../logaction",
@@ -124,6 +144,8 @@ $("#skip").click(function () {
             window.location = "../main"
         } else if (window.location.href.indexOf('raw') !== -1) {
             window.location = "../raw"
+        } else if (window.location.href.indexOf('generated') !== -1) {
+            window.location = "../main"
         }
         else {
             waitandload();
@@ -137,8 +159,9 @@ $("#value").on('input', function () {
         if ($("#value").val() != undefined) {
             if ($("#value").val().length == 1 && started) {
                 started = false;
-                firm = new FormData();
+                var firm = new FormData();
                 firm.append("action", "started typing");
+                firm.append("id", id);
                 $.ajax({
                     type: "POST",
                     url: "../logaction",
@@ -172,12 +195,15 @@ function waitandload() {
         contentType: false,
         success: function (data) {
             var fin = new Date();
+            data = JSON.parse(data);
+            console.log(data);
+            id = data[1];
             if (fin.getTime() - debut.getTime() > 1000) {
-                $("#imgdisp").attr("src", data);
+                $("#imgdisp").attr("src", data[0]);
                 $("#imgdisp").css("opacity", "1");
                 $("#load").css("visibility", "hidden");
             } else {
-                $("#imgdisp").attr("src", data);
+                $("#imgdisp").attr("src", data[0]);
                 setTimeout(function () {
                     $("#imgdisp").css("opacity", "1");
                     $("#load").css("visibility", "hidden");
@@ -185,6 +211,7 @@ function waitandload() {
             }
             var furm = new FormData();
             furm.append("action", "page loaded");
+            furm.append("id", id);
             $.ajax({
                 type: "POST",
                 url: "../logaction",
@@ -201,6 +228,13 @@ function waitsetup() {
     $("#imgdisp").css("opacity", "0");
 }
 
-function fill() {
 
+$("#gen").click(function () {
+    hash();
+});
+
+function hash() {
+    var hash = $.base64.encode('textualimg/' + id);
+    base = "http://0.0.0.0:5000/generated/";
+    $("#gen").replaceWith("<input type='text' value='" + base + hash + "'/>")
 }
