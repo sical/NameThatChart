@@ -306,7 +306,7 @@ def temp():
 # View Textual D3js
 @app.route('/textual')
 def textual():
-    return render_template('textual.html')
+    return render_template('textualimg.html')
 
 
 # View of Swipes
@@ -430,7 +430,7 @@ def mainraw():
         return render_template('selectimg.html')
     elif a < 300:
         return render_template('swipes.html')
-    elif a < 400:
+    elif a < 330:
         return render_template("multiple.html")
     else:
         return render_template("reverse.html")
@@ -442,7 +442,6 @@ def main():
     lvl = session.get("lvl")
     if lvl is None:
         lvl = getlvl(request.environ["REMOTE_ADDR"])
-        print('aaaa')
     if lvl is None:
         return redirect("/raw")
     print(str(session.get("task")) + " MOTIVATION")
@@ -451,9 +450,11 @@ def main():
         return render_template('textualimg.html')
     elif int(session.get("task")) > 50 and int(session.get("lvl")) > 0:
         session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
-        rand = randint(0, 100)
-        if rand < 79:
+        rand = randint(0, 300)
+        if rand < 130:
             return render_template('selectimg.html')
+        elif rand < 290:
+            return render_template('reverse.html')
         else:
             return render_template('multiple.html')
     elif int(session.get("task")) > 50 and int(session.get("lvl")) == 0:
@@ -461,7 +462,7 @@ def main():
         rand = randint(0, 300)
         if rand < 130:
             return render_template('selectimg.html')
-        elif rand < 240:
+        elif rand < 290:
             return render_template('reverse.html')
         else:
             return render_template('multiple.html')
@@ -570,7 +571,6 @@ def savemultiple():
 def savetext():
     name = request.form["name"]
     name = name.replace("'", "\\'")
-    print(name)
     now, timestamp = gettimes()
 
     con = mysql.connect()
