@@ -1,0 +1,272 @@
+<style>
+
+    * {
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #img {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        border: solid 2px;
+        min-height: 160px;
+        min-width: 180px;
+    }
+
+    .main-head {
+        grid-area: header;
+        align-self: auto;
+        margin-top: -8%;
+    }
+
+    .content {
+        grid-area: content;
+        padding: 0;
+        text-align: center;
+
+    }
+
+    .main-nav {
+        grid-area: nav;
+        align-self: flex-start;
+        vertical-align: top;
+        padding: 0;
+    }
+
+    .main-footer {
+        grid-area: footer;
+        vertical-align: bottom;
+        padding: 0;
+        align-self: flex-end;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+        height: 100%
+    }
+
+    #title {
+        font-size: 1.3em;
+        display: block;
+    }
+
+    @media (min-width: 500px) {
+        .wrapper {
+            grid-template-columns: 100%;
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #title {
+            font-size: 1.5em;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .wrapper {
+            grid-template-columns: 100%;
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        title {
+            font-size: 1.75em;
+        }
+    }
+
+
+</style>
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
+<div class="wrapper">
+    <nav class="main-nav">
+        <div class="topnav" id="myTopnav">
+            <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
+                    class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
+            <a href="textualimg">Textual</a>
+            <a href="selectimg">Selection</a>
+            <a href="swipes">Swipes</a>
+            <a href="multiple">Multiple</a>
+            <a href="reverse">Reverse</a>
+            <a href="main">Main</a>
+            <a href="admin">Admin</a>
+            <a href="display_image">Dataset</a>
+            <a href="uploadimg"><i class="fa fa-upload fa-2x "></i></a>
+            <a href="datcsv.csv"><i class="fa fa-download fa-2x"></i></a>
+            <a class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </nav>
+    <header class="main-head">
+        <h1 id="title">
+            Describe this chart
+        </h1>
+    </header>
+
+
+    <div id="tinderslide" class="content">
+        <ul class="ula">
+
+            <li class="pane1 lia"
+                style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 20">
+                <div class="img"></div>
+                <div id="1_txt" style="display: none"></div>
+                <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                        aria-hidden="true"></i></div>
+                <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                           aria-hidden="true"></i></div>
+            </li>
+            <li class="pane2 lia"
+                style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 25">
+                <div class="img"></div>
+                <div id="2_txt" style="display: none"></div>
+                <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                        aria-hidden="true"></i></div>
+                <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                           aria-hidden="true"></i></div>
+            </li>
+            <li class="pane3 lia"
+                style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 30">
+                <div class="img"></div>
+                <div id="3_txt" style="display: none"></div>
+                <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                        aria-hidden="true"></i></div>
+                <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                           aria-hidden="true"></i></div>
+            </li>
+            <li class="pane4 lia"
+                style="-moz-box-shadow: 5px 5px 5px 0px #656565;-webkit-box-shadow: 5px 5px 5px 0px #656565;-o-box-shadow: 5px 5px 5px 0px #656565;box-shadow: 5px 5px 5px 0px #656565;filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);-moz-border-radius: 5px;webkit-border-radius: 5px;border-radius: 5px; background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 35">
+                <div class="img"></div>
+                <div id="4_txt" style="display: none"></div>
+                <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                        aria-hidden="true"></i></div>
+                <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                           aria-hidden="true"></i></div>
+            </li>
+            <li class="pane5 lia" id="test5"
+                style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+                                        -webkit-box-shadow: 5px 5px 5px 0px #656565;
+                                        -o-box-shadow: 5px 5px 5px 0px #656565;
+                                        box-shadow: 5px 5px 5px 0px #656565;
+                                        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+                                        -moz-border-radius: 5px;
+                                        -webkit-border-radius: 5px;
+                                        border-radius: 5px;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        position: absolute;
+                                        z-index: 40;
+                            ">
+                <div class="img"></div>
+                <div id="5_txt" style="display: none"></div>
+                <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                        aria-hidden="true"></i></div>
+                <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                           aria-hidden="true"></i></div>
+            </li>
+
+        </ul>
+
+
+    </div>
+    <footer class="main-footer">
+        <div style="margin: 0 auto;">
+            <div style="text-align: center;display: inline;" id="btn">
+                <div class="dropup" style="display: inline">
+                    <button style="height: 50px;padding: 6px 12px" class="btn btn-primary dropdown-toggle" id="report"
+                            type="button" data-toggle="dropdown">Report
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a id="nd">No display</a></li>
+                        <li><a id="ii">Inappropriate image</a></li>
+                        <li><a id="hmc">Huge miss-classification</a></li>
+                    </ul>
+                </div>
+                <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
+                <button style="height: 50px;padding: 6px 12px" id="save" class="btn">save</button>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.transform2d.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.jTinder.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/swipe.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
+

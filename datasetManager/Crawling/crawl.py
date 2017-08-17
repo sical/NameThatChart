@@ -1,4 +1,5 @@
 import codecs
+import argparse
 import itertools
 import json
 import os
@@ -15,35 +16,43 @@ from possibleview import View
 
 
 def main():
-    #merge("google")
-    getgoogle()
-    #getwiki()
+    # merge("google")
+    # getgoogle()
+    # getwiki()
+    if not os.path.isfile("cart.json") and FLAGS.d == "cart.json":
+        cartesian()
+
+    if FLAGS.w == "google":
+        getgoogle()
+    elif FLAGS.w == "block":
+        getblock()
+    elif FLAGS.w == "wikipedia":
+        getwiki()
+    if (FLAGS.merge):
+        merge(FLAGS.w)
+
 
 def getblock():
-    info, a = cartesian()
+    info = filetoarray()
     result = {}
     data = parsej()
 
-    for row in info:
-        if row[0] == "" and row[2] == "" and row[1] =="":
-            pass
-        else:
-            name = row[0] + " " + row[1] + " " + row[2]
-
-        for val in data:
-            if name.lower() in val.description.lower() and name not in result.keys():
-                result[name] = val.getcompleteurl()
-
-    for line in a:
+    for line in info:
+        print('\x1b[0;30;44m' + line + '\x1b[0m' + "\n", flush=True)
+        print("", flush=True)
         for val in data:
             if line.lower() in val.description.lower() and line not in result.keys():
                 result[line] = val.getcompleteurl()
+                print('\x1b[6;30;42m' + "Added ! " + '\x1b[0m' + "\n", flush=True)
+                print(" ", flush=True)
+        print("NEXT", flush=True)
 
-    print(result)
+    write_json("block", result)
 
 
 def merge(name):
-    js = getjsonfiles(os.path.join(os.getcwd(), "JsonCrawl"))
+
+    js = getjsonfiles(os.path.join(os.getcwd(),os.path.realpath("../dataset/JsonCrawl/" + name + '.json')))
 
     data = {}
     null = []
@@ -57,7 +66,7 @@ def merge(name):
                 info = json.load(data_file)
 
                 for key in info.keys():
-                    if not key in data:
+                    if key not in data:
                         if len(info[key]) == 0 and not key in null:
                             null.append(key)
                         elif len(info[key]) > 0:
@@ -77,12 +86,19 @@ def merge(name):
     write_json("FinalGoogle", data)
 
 
+def filetoarray():
+    result = []
+    with open(FLAGS.d, "r") as data_file:
+        result = json.load(data_file)
+    return result
+
+
 def getwiki():
-    info, a = cartesian()
+    info = filetoarray()
     wiki = {}
     nb = 0
-    total = len(a)
-    for row in a:
+    total = len(info)
+    for row in info:
         try:
             print('\x1b[0;30;44m' + row + '\x1b[0m' + "\n")
             print("")
@@ -112,52 +128,17 @@ def getwiki():
         except Exception as e:
             print(e)
 
-    nb = 0
-    total = len(info)
-    for row in info:
-        if row[0] == "" and row[2] == "" and row[1] !="":
-            name = row[1]
-        elif row[0] == "":
-            name = row[1] + " " + row[2]
-        elif row[2] == "":
-            name = row[0] + " " + row[1]
-        else:
-            name = row[0] + " " + row[1] + " " + row[2]
-
-        try:
-            ny = wikipedia.page(name)
-            if row.replace("_", " ").lower() in ny.url.lower():
-                wiki[row] = ny.url
-            silence = randint(5, 25)
-
-            print(" ")
-            print("sleeping for " + str(silence) + "seconds")
-            print("waiting ... ", end=" ", flush=True)
-            y = 10
-
-            for i in range(1, silence):
-                if (i / silence) * 100 >= y:
-                    print(str(y) + "% ...", end=" ", flush=True)
-                    y += 10
-                time.sleep(1)
-            print("100% ")
-            print('\x1b[6;30;42m' + "Done ! " + '\x1b[0m' + "\n")
-            print(" ")
-            print("---------------(" + str(nb + 1) + "/" + str(total) + ")---------------------")
-            nb += 1
-        except Exception as e:
-            print(e)
-            write_json("Wiki", wiki)
+    write_json("Wiki", wiki)
 
 
 def getgoogle():
-    info, a = cartesian()
+    info = filetoarray()
     temp = {}
     googleres = {}
     nb = 0
-    total = len(a)
+    total = len(info)
 
-    for row in a:
+    for row in info:
         urls = []
         print('\x1b[0;30;44m' + row + '\x1b[0m' + "\n")
         print("")
@@ -200,7 +181,16 @@ def getgoogle():
 
 
 def write_json(name, data):
-    with open(name + '.json', 'wb') as f:
+    path = os.path.join(os.getcwd(), os.path.realpath("../dataset/JsonCrawl/" + name + '.json'))
+    if os.path.exists(path):
+        jsons = getjsonfiles(os.getcwd())
+        i = 0
+        for row in jsons:
+            if name in row:
+                i += 1
+        name += "_" + str(i)
+        path = os.path.join(os.getcwd(), os.path.realpath("../dataset/JsonCrawl/" + name + '.json'))
+    with open(path, 'wb') as f:
         json.dump(data, codecs.getwriter('utf-8')(f), ensure_ascii=False)
 
 
@@ -233,21 +223,21 @@ def proof(name, urls):
 
 
 def parsej():
-    js = getjsonfiles("/home/theo/Documents/temp/api")
+    js = getjsonfiles(FLAGS.json_path)
     result = []
+    print("Parsing JSON ...")
     for file in js:
         with open(file) as data_file:
 
             data = json.load(data_file)
 
             for key in data['blocks'].keys():
-                if data['blocks'][key]['description'] is not None and data['blocks'][key][
-                    'description'] not in result:
+                if data['blocks'][key]['description'] is not None and data['blocks'][key]['description'] not in result:
                     result.append(View(data['blocks'][key]['userId'], data['blocks'][key]['description'],
-                                       key,
-                                       data['blocks'][key]['thumbnail']))
+                                       key, data['blocks'][key]['thumbnail']))
 
     print('\x1b[6;30;42m' + "Done ! " + str(len(result)) + " elements" + '\x1b[0m' + "\n")
+
     return result
 
 
@@ -278,17 +268,45 @@ def cartesian():
     a = ['domain specific', 'word tree', 'job voyager', 'Kagi Chart', 'Election map', 'spider', 'fan',
          'map of the market']
 
-    aside = ['Anscombe quartet', 'donut', 'upset', 'pie scatter', 'ring', 'Sparkline', 'Chernoff’s faces',
-         'Minard’s map',
-         'Sankey diagram', 'table highlight', 'Tukey boxplot', 'self-organized', 'hyperbolic tree', 'decision tree',
-         'word cloud', 'bump tree', 'cause/effect', 'hitory flow', 'Kohonen self-organized map', 'stream graph']
-
     data.append(prefix)
     data.append(term)
     data.append(suffix)
     result = list(itertools.product(*data))
-    return result, a
+    fin = []
+    for row in result:
+        if row[0] == "" and row[2] == "" and row[1] != "":
+            name = row[1]
+        elif row[0] == "":
+            name = row[1] + " " + row[2]
+        elif row[2] == "":
+            name = row[0] + " " + row[1]
+        else:
+            name = row[0] + " " + row[1] + " " + row[2]
+        fin.append(name)
+
+    with open("cart" + '.json', 'wb') as f:
+        json.dump(fin, codecs.getwriter('utf-8')(f), ensure_ascii=False)
+
+    return fin
+
+
+def getnames():
+    with open("../dataset/Actualdata/FinalGoogle.json", "r") as data_file:
+        data = json.load(data_file)
+        result = data.keys()
+        with open("names" + '.json', 'wb') as f:
+            json.dump(list(result), codecs.getwriter('utf-8')(f), ensure_ascii=False)
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--w', type=str, default='wikipedia',
+                        help='Select name to crawl')
+    parser.add_argument('--d', type=str, default='cart.json',
+                        help='Select name dataset')
+    parser.add_argument('--json_path', type=str, default="/home/theo/Documents/temp/api",
+                        help='Select name Json (block) location')
+    parser.add_argument('--merge', type=bool, default=False,
+                        help='Merge results from given name (see --w) ')
+    FLAGS, unparsed = parser.parse_known_args()
     main()

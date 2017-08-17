@@ -4,7 +4,7 @@
 
 ## Using the dataset
 
-if you want to download the dataset we use you can use our crawling tools located in the datasetManager direcory.
+if you want to download the data set we use you can use our crawling tools located in the datasetManager directory.
 
 This directory contains few tools :
     
@@ -17,7 +17,8 @@ This directory contains few tools :
     -   dataset
         -   Acutaldata contains the results of crawl.merge() consider this like final data
         -   jsonCrawl contains result of one crawling session this is partial information.
-        -   visCat contains the viscat datasets and we provide a tool to download them(vis10catDl.py). 
+        -   visCat contains the viscat datasets and we provide a tool to download them(vis10catDl.py slower than multidownload but easier to use). 
+    
     
     -   multidownload
         This module can read urls from a text file split this list to threads and download them.
@@ -25,5 +26,8 @@ This directory contains few tools :
         
 ## Install and use Chrome app
 
+In extention, this website have a chrome app extention which allow an user to capture a screen area and instantly upload it to our databse in oder to discover what others would name this chart.
+
+To install it, just drag and drop the app (NameThatChart-capture.crx located in the Chrome app folder) into chrome://extensions/. 
 
 ## Understand web app structure

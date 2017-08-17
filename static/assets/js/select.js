@@ -10,7 +10,7 @@ $(document).ready(function () {
         fillthem2();
         $("#gen").hide();
     } else {
-       waitsetup();
+        waitsetup();
         fillthem();
     }
 });
@@ -27,6 +27,7 @@ $('#fill').on('click', 'img', function () {
 
 $('#save').click(function () {
     var test = $('#fill').find(".selec").length;
+    $('#fill').find(".selec").removeClass("");
     console.log(test);
     if (test == 0) {
 
@@ -75,6 +76,11 @@ $('#save').click(function () {
                 }
             })
         }
+        $(".cont").each(function () {
+            $(this).removeClass('unselec')
+        });
+        $('#fill').find(".selec").removeClass("selec");
+
     }
 });
 
@@ -194,12 +200,15 @@ $("#skip").click(function () {
             fillthem()
         }
     }
+    $(".cont").each(function () {
+        $(this).removeClass('unselec')
+    });
+    $('#fill').find(".selec").removeClass("selec");
+
 });
 
 function waitsetup() {
     debut = new Date();
     $(".cont").css("visibility", "hidden");
     $("#load").css("visibility", "visible");
-
-
 }

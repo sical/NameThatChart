@@ -47,6 +47,7 @@ $("#sh").on('input', function () {
         idimage = $(this).val();
         form = new FormData();
         form.append("action", "" + idimage);
+
         $.ajax({
             type: "POST",
             url: "../getimgbytype",
@@ -55,6 +56,8 @@ $("#sh").on('input', function () {
             data: form,
             success: function (data) {
                 info = JSON.parse(data);
+                info = JSON.parse(info);
+
                 info.forEach(function (img) {
                     $("#fill").append("<img class='idata' value='" + img.id + "' src='" + img.path + "'>")
                 });

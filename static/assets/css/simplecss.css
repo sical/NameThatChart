@@ -6,7 +6,7 @@
 }
 
 .ula {
-    margin-top: -10%;
+    margin-top: -4%;
 }
 
 .footer {
@@ -464,7 +464,7 @@
     }
 }
 
-@media screen and (max-width: 600px) and (min-width: 400px ) {
+@media screen and (max-width: 1050px) and (min-width: 400px ) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -650,7 +650,7 @@
     }
 }
 
-@media only screen and (max-device-width: 390px) {
+@media only screen and (max-device-width: 400px) {
 
     #load {
         height: 28%;

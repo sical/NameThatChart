@@ -75,7 +75,7 @@ $('body').on('click', '#save', function () {
 });
 
 function fillit() {
-    $("#containssel").empty();
+    $("#fill").empty();
     $.ajax({
         type: "GET",
         url: "../getreverse",
@@ -89,20 +89,20 @@ function fillit() {
                 $("#brand").text("Choose the more fitting image to describe");
                 $("#brand").append(" the '" + info.label + "' category");
                 images.forEach(function (image) {
-                    $("#containssel").append("<img  class='imgtoch' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
+                    $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.imagepath + "'/>")
                 });
                 $("#load").css("visibility", "hidden");
-                $("#containssel").css("visibility", "visible");
+                $("#fill").css("visibility", "visible");
             } else {
                 setTimeout(function () {
                     $("#brand").text("Choose the more fitting image to describe");
                     $("#brand").append(" the '" + info.label + "' category");
                     images.forEach(function (image) {
-                        $("#containssel").append("<img  class='imgtoch' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
+                        $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
                     });
                     console.log("LAAAAAAAAAAAAAAAAAAAAAAAAA");
                     $("#load").css("visibility", "hidden");
-                    $("#containssel").css("visibility", "visible");
+                    $("#fill").css("visibility", "visible");
                 }, (1000 - (fin.getTime() - debut.getTime())));
 
             }
@@ -113,11 +113,11 @@ function fillit() {
 function waitsetup() {
     debut = new Date();
     $("#load").css("visibility", "visible");
-    $("#containssel").css("visibility", "hidden");
+    $("#fill").css("visibility", "hidden");
 }
 
 
-$('body').on('click', '.imgtoch', function () {
+$('body').on('click', 'img', function () {
     $("img").each(function () {
         $(this).addClass('unselec')
     });

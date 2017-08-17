@@ -1,0 +1,231 @@
+<style>
+
+    * {
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #img {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        border: solid 2px;
+        min-height: 80px;
+        justify-self: center;
+    }
+
+    .main-head {
+        grid-area: header;
+        align-self: auto;
+    }
+
+    .content {
+        grid-area: content;
+        padding: 0;
+        text-align: center;
+        height: max-content;
+    }
+
+    .main-nav {
+        grid-area: nav;
+        align-self: flex-start;
+        vertical-align: top;
+        padding: 0;
+    }
+
+    .main-footer {
+        grid-area: footer;
+        vertical-align: bottom;
+        padding: 0;
+        align-self: flex-end;
+        margin: 0 auto;
+    }
+
+    #fill {
+        display: grid;
+        margin: 0 auto;
+        height: 45%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+        height: 100%
+    }
+
+    #title {
+        font-size: 1em;
+    }
+
+    @media (min-width: 400px) {
+        .wrapper {
+            grid-template-columns: 100%;
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+        }
+
+        #fill {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            /*max-width: max-content;*/
+            height: 25%;
+        }
+
+        #title {
+            font-size: 1.5em;
+        }
+
+        #img {
+            display: inline-block;
+            width: auto;
+            max-height: 100%;
+            border: solid 2px;
+            min-height: 120px;
+        }
+
+    }
+
+    @media (min-width: 700px) {
+        .wrapper {
+            grid-template-columns: 100%;
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "footer footer  footer";
+        }
+
+        #fill {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            max-width: max-content;
+            max-height: 600px;
+        }
+
+        title {
+            font-size: 1.75em;
+        }
+
+        #img {
+            display: inline-block;
+            width: auto;
+            max-height: 100%;
+            border: solid 2px;
+            min-height: 200px;
+        }
+    }
+
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/reverse.js') }}"></script>
+
+<div class="wrapper">
+    <nav class="main-nav">
+        <div class="topnav" id="myTopnav">
+            <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
+                    class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
+            <a href="textualimg">Textual</a>
+            <a href="selectimg">Selection</a>
+            <a href="swipes">Swipes</a>
+            <a href="multiple">Multiple</a>
+            <a href="reverse">Reverse</a>
+            <a href="main">Main</a>
+            <a href="admin">Admin</a>
+            <a href="display_image">Dataset</a>
+            <a href="uploadimg"><i class="fa fa-upload fa-2x "></i></a>
+            <a href="datcsv.csv"><i class="fa fa-download fa-2x"></i></a>
+            <a class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </nav>
+    <header class="main-head">
+        <h1 id="title">
+            Describe this chart
+        </h1>
+    </header>
+
+    <article class="content">
+    <div id="fill" >
+
+    </div>
+
+    </article>
+
+    <footer class="main-footer">
+        <div style="margin: 0 auto;">
+            <div style="text-align: center;display: inline;" id="btn">
+                <div class="dropup" style="display: inline">
+                    <button style="height: 50px;padding: 6px 12px" class="btn btn-primary dropdown-toggle" id="report"
+                            type="button" data-toggle="dropdown">Report
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a id="nd">No display</a></li>
+                        <li><a id="ii">Inappropriate image</a></li>
+                        <li><a id="hmc">Huge miss-classification</a></li>
+                    </ul>
+                </div>
+                <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
+                <button style="height: 50px;padding: 6px 12px" id="save" class="btn">save</button>
+                <button style="height: 50px;padding: 6px 12px" id="gen" class="btn">get url</button>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script TYPE="text/javascript">
+
+
+    $("#gen").click(function () {
+        console.log("LAAAAAAAAA");
+        hash();
+    });
+
+    function hash() {
+        var hash = $.base64.encode('textualimg/' + 3000);
+        base = "http://0.0.0.0:5000/generated/";
+        $("#gen").hide();
+        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
+    }
+</script>

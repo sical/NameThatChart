@@ -5,11 +5,14 @@ var started = true;
 var debut;
 var id;
 $(document).ready(function () {
+
         waitsetup();
+
         document.getElementById("value").focus();
         if (window.location.href.indexOf('quizz') !== -1) {
-            $("#skip").hide();
+            $("#skip")
             $("#gen").hide();
+
             var fin = new Date();
             if (fin.getTime() - debut.getTime() > 1000) {
                 $("#imgdisp").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
@@ -61,7 +64,10 @@ function report(string) {
 }
 
 $("#save").click(function () {
-
+    if ($("#btn").find("input") != undefined) {
+        $("#btn").find("input").remove();
+        $("#gen").show();
+    }
     waitsetup();
 
     var text = $("#value").val();
@@ -126,6 +132,10 @@ $("#save").click(function () {
 });
 
 $("#skip").click(function () {
+    if ($("#btn").find("input") != undefined) {
+        $("#btn").find("input").remove();
+        $("#gen").show();
+    }
     waitsetup();
     var firm = new FormData();
     firm.append("action", "skip");
@@ -198,6 +208,8 @@ function waitandload() {
             data = JSON.parse(data);
             console.log(data);
             id = data[1];
+            window.history.pushState("", "", gethash());
+            console.log(gethash());
             if (fin.getTime() - debut.getTime() > 1000) {
                 $("#imgdisp").attr("src", data[0]);
                 $("#imgdisp").css("opacity", "1");
@@ -234,7 +246,12 @@ $("#gen").click(function () {
 });
 
 function hash() {
-    var hash = $.base64.encode('textualimg/' + id);
-    base = "http://0.0.0.0:5000/generated/";
-    $("#gen").replaceWith("<input type='text' value='" + base + hash + "'/>")
+    $("#gen").hide();
+    $("#btn").append("<input type='text' value='" + gethash() + "'/>")
+}
+
+function gethash(){
+     base = "http://0.0.0.0:5000/generated/";
+        var hash = $.base64.encode('textualimg/' + id);
+    return  base+ hash
 }

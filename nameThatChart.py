@@ -24,10 +24,12 @@ COMPRESS_LEVEL = 6
 COMPRESS_MIN_SIZE = 500
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'sql11185116'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'hULHvUiMJh'
-app.config['MYSQL_DATABASE_DB'] = 'sql11185116'
-app.config['MYSQL_DATABASE_HOST'] = 'sql11.freemysqlhosting.net'
+app.config['MYSQL_DATABASE_USER'] = os.environ['MYSQL_DATABASE_USER']
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MYSQL_DATABASE_PASSWORD']
+app.config['MYSQL_DATABASE_DB'] = os.environ['MYSQL_DATABASE_DB']
+app.config['MYSQL_DATABASE_HOST'] = os.environ['MYSQL_DATABASE_HOST']
+
+
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 mysql.init_app(app)
@@ -260,6 +262,14 @@ def topclass():
 @app.route('/')
 def hello_world():
     return render_template('index.html')
+
+@app.route('/gridtry')
+def gridtry():
+    return render_template('gridtry/gridtry.html')
+
+@app.route('/gridtry2')
+def sel2():
+    return render_template('gridtry/rtry.html')
 
 
 # Nav bar (testing)
@@ -701,7 +711,7 @@ def saveupimg():
 
     title = title.replace(" ", "_")
 
-    filename = str(nb) + "_" + title + "." + ext
+    filename = str(nb) +name.replace("."+ext,"")+ "_" + title + "." + ext
     q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename)
 
     wget.download(url, q)
@@ -710,9 +720,9 @@ def saveupimg():
         s3_client.upload_fileobj(f,
                                  'namethatchart-imagedataset', "upload/" + filename,
                                  ExtraArgs={'ACL': 'public-read'})
-    url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/upload/" + filename
+    url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + filename
 
-    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + q + "','upload','" + title + "','" + cat + "')"
+    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + cat + "')"
     putdb(query)
 
     return 'ok'
@@ -735,7 +745,6 @@ def upjonimg():
 
             name = wget.detect_filename(obj['url'])
             temp = name.split('.')
-            filename = ""
             ext = str(temp[len(temp) - 1])
             if "title" in obj:
                 title = obj["title"].replace(" ", "_")
@@ -751,7 +760,7 @@ def upjonimg():
                 s3_client.upload_fileobj(f,
                                          'namethatchart-imagedataset', "upload/" + filename,
                                          ExtraArgs={'ACL': 'public-read'})
-            url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/upload/" + filename
+            url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + filename
 
             if 'category' in obj:
                 if 'difficulty' in obj:
@@ -766,33 +775,6 @@ def upjonimg():
             putdb(query)
 
     return 'ok'
-
-
-# Export database into python array
-@app.route('/db2csv')
-def db2csv():
-    con = mysql.connect()
-    cursor = con.cursor()
-    cursor.execute(
-        "SELECT idtextvote,user.iduser,ipuser,time,date,event,image.idimage,label FROM textvote INNER JOIN image ON "
-        + "image.idimage = textvote.idimage INNER JOIN user ON textvote.iduser=user.iduser LEFT JOIN type ON textvote.idtype=type.idtype")
-    data = cursor.fetchall()
-    res = "["
-    for i in range(0, len(data)):
-        stra = "[ "
-        for y in range(0, len(data[0])):
-            stra += "'" + str(data[i][y]) + "'"
-            if y != len(data[0]) - 1:
-                stra += ","
-
-        stra += "]"
-        if i != len(data) - 1:
-            stra += ","
-        res += stra
-    res += " ]"
-    cursor.close()
-    con.close()
-    return res
 
 
 # Group user rows and make average of time
@@ -1388,10 +1370,10 @@ def saveapp():
     _, now = gettimes()
 
     putdb(
-        "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/" + str(
+        "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/app/" + str(
             idu) + "_" + str(now) + ".png','app')")
 
-    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/app/' + str(
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset /app/' + str(
         idu) + "_" + str(now) + ".png"
 
     idm = vachercherss("SELECT idimage FROM image WHERE imagepath LIKE '" + fileurl + "'")
@@ -1406,17 +1388,17 @@ def saveapp():
 
 @app.route("/datcsv.csv")
 def dattcsv():
-    header = "task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath\n"
+    header = "task,task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath\n"
     body = ""
     db = []
     db.append(vachercherm(
-        "SELECT concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
+        "SELECT 'textual'as task,concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
+        "SELECT 'reverse' as task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
+        "SELECT 'selection' as task,concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
+        "SELECT 'swipe' as task,concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
 
     for table in db:
         for row in table:

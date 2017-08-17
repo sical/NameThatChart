@@ -1,13 +1,14 @@
 import argparse
 import os
 import sys
+
 sys.path.append('../classes/')
 from imagetype import ImgType
 from dlthread import Downloader
 
 
-def main(_):
-    return 'ok'
+def main():
+    getimgtypes(FLAGS.output_dir, FLAGS.input_file)
 
 
 def chunks(l, n):
@@ -16,12 +17,13 @@ def chunks(l, n):
 
 def getimgtypes(path, filename):
     result = []
-    nb =0
-    with open(filename + ".txt") as file:
+    nb = 0
+    with open(filename) as file:
         for line in file:
-            nb+=1
+            nb += 1
             temp = str(line.rstrip()).split("\t")
             result.append(ImgType(temp[0], temp[1]))
+
     out = os.path.join(os.getcwd(), path)
 
     li = chunks(result, 5)
@@ -48,6 +50,10 @@ def getimgtypes(path, filename):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--input_file', type=str, default='vis10cat.txt',
+                        help='Select input file default : vis10cat.txt ')
+    parser.add_argument('--output_dir', type=str, default=str(os.getcwd()),
+                        help='Set ouput directory (default current)')
 
     FLAGS, unparsed = parser.parse_known_args()
     main()
