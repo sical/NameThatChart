@@ -124,6 +124,13 @@
         }
     }
 
+    #vald {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        min-height: 160px;
+        min-width: 180px;
+    }
 
 </style>
 
@@ -145,6 +152,7 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/select.js') }}"></script>
 
 <div class="wrapper">
     <nav class="main-nav">
@@ -153,32 +161,28 @@
     </nav>
     <header class="main-head">
         <h1 id="title">
-            Describe this chart
+            Select the picture which best describe
         </h1>
     </header>
 
     <article class="content">
+        <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
+             alt="loading logo"/>
+        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+             alt="loading logo"/>
         <div id="fill">
-            <img id="img" class="cont" style="z-index: 0; visibility: visible;"
-                 src="{{ url_for('static', filename='assets/img/datasets/downloadApi/MassData_government/whoQ12_3.png') }}"
-                 alt="" value="11015">
-            <img id="img" class="cont" style="z-index: 0; visibility: visible;"
-                 src="{{ url_for('static', filename='assets/img/datasets/downloadApi/MassData_government/whoQ12_3.png') }}"
-                 alt="" value="11015">
-            <img id="img" class="cont" style="z-index: 0; visibility: visible;"
-                 src="{{ url_for('static', filename='assets/img/datasets/downloadApi/MassData_government/whoQ12_3.png') }}"
-                 alt="" value="11015">
-            <img id="img" class="cont" style="z-index: 0; visibility: visible;"
-                 src="{{ url_for('static', filename='assets/img/datasets/downloadApi/MassData_government/whoQ12_3.png') }}"
-                 alt="" value="11015">
-            <img id="img" class="cont" style="z-index: 0; visibility: visible;"
-                 src="{{ url_for('static', filename='assets/img/datasets/downloadApi/MassData_government/whoQ12_3.png') }}"
-                 alt="" value="11015">
-            <img id="img" class="cont" style="z-index: 0; visibility: visible;"
-                 src="{{ url_for('static', filename='assets/img/datasets/downloadApi/MassData_government/whoQ12_3.png') }}"
-                 alt="" value="11015">
-
-
+            <img id="img" class="cont" style="z-index: 0;"
+                 alt="">
+            <img id="img" class="cont" style="z-index: 0"
+                 alt="">
+            <img id="img" class="cont" style="z-index: 0;"
+                 alt="">
+            <img id="img" class="cont" style="z-index: 0;"
+                 alt="">
+            <img id="img" class="cont" style="z-index: 0;"
+                 alt="">
+            <img id="img" class="cont" style="z-index: 0;"
+                 alt="">
         </div>
 
 
@@ -188,19 +192,3 @@
         {% include 'footer.html' %}
     </footer>
 </div>
-
-<script TYPE="text/javascript">
-
-
-    $("#gen").click(function () {
-        console.log("LAAAAAAAAA");
-        hash();
-    });
-
-    function hash() {
-        var hash = $.base64.encode('textualimg/' + 3000);
-        base = "http://0.0.0.0:5000/generated/";
-        $("#gen").hide();
-        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
-</script>

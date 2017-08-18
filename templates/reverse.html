@@ -157,11 +157,15 @@
     </nav>
     <header class="main-head">
         <h1 id="title">
-            Describe this chart
+            Choose the more fitting image to describe
         </h1>
     </header>
 
     <article class="content">
+        <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
+             alt="loading logo"/>
+        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+             alt="loading logo"/>
         <div id="fill">
 
         </div>
@@ -172,19 +176,3 @@
         {% include 'footer.html' %}
     </footer>
 </div>
-
-<script TYPE="text/javascript">
-
-
-    $("#gen").click(function () {
-        console.log("LAAAAAAAAA");
-        hash();
-    });
-
-    function hash() {
-        var hash = $.base64.encode('textualimg/' + 3000);
-        base = "http://0.0.0.0:5000/generated/";
-        $("#gen").hide();
-        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
-</script>

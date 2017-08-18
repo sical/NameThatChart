@@ -28,11 +28,7 @@
 }
 
 #load {
-    position: absolute;
-    z-index: 2;
-    margin-left: 25%;
-    margin-top: 25%;
-    visibility: hidden;
+    z-index: 500;
 }
 
 .centerimg {
@@ -304,12 +300,6 @@
         z-index: -3;
     }
 
-    #load {
-        width: 33%;
-        height: 33%;
-        margin-left: -50%;
-    }
-
     .imginfo {
         margin-left: 5%;
         font-size: 10px;
@@ -448,10 +438,6 @@
         transform: translate(-50%, -20%);
     }
 
-    #load {
-        height: 16%;
-        margin-left: 38%;
-    }
 
     .imgtoch {
         width: 49%;
@@ -474,10 +460,6 @@
         text-align: center
     }
 
-    #load {
-        height: 16%;
-        margin-left: 30%;
-    }
 
     .imginfo {
         margin-left: 5%;
@@ -629,7 +611,7 @@
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .topnav.responsive {
         position: relative;
         z-index: 250;
@@ -652,14 +634,6 @@
 
 @media only screen and (max-device-width: 400px) {
 
-    #load {
-        height: 28%;
-        margin-left: 35%;
-    }
-
-    .up {
-        margin-top: -30%;
-    }
 
     .centerswi {
         top: 57%;

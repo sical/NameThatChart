@@ -26,6 +26,15 @@
         min-width: 180px;
     }
 
+    #vald {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        min-height: 160px;
+        min-width: 180px;
+    }
+
+
     .main-head {
         grid-area: header;
         align-self: auto;
@@ -113,7 +122,7 @@
 <body>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-
+<input type="hidden" value="{{ test }}" id="id"/>
 <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
@@ -131,9 +140,11 @@
     </header>
 
     <article class="content">
-        <img id="img"
-             src=""/>
-
+        <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
+             alt="loading logo"/>
+        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+             alt="loading logo"/>
+        <img id="img" src=""/>
     </article>
 
     <footer class="main-footer">
@@ -153,60 +164,8 @@
                 </div>
                 <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
                 <button style="height: 50px;padding: 6px 12px" id="save" class="btn">save</button>
-                <button style="height: 50px;padding: 6px 12px" id="gen" class="btn">get url</button>
             </div>
         </div>
     </footer>
 </div>
 
-<script TYPE="text/javascript">
-
-
-    $("#gen").click(function () {
-        hash();
-    });
-
-    function hash() {
-        var hash = $.base64.encode('textualimg/' + 3000);
-        base = "http://0.0.0.0:5000/generated/";
-        $("#gen").hide();
-        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
-</script>
-
-<script>
-    function gen() {
-
-        var form = new FormData();
-        form.append("action", {{ test }});
-        $.ajax({
-
-            type: "POST",
-            url: "../getimgbyid",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function (data) {
-                var fin = new Date();
-                data = JSON.parse(data);
-                data = JSON.parse(data);
-                id = data[0].id;
-                console.log(data[0].path);
-                if (fin.getTime() - debut.getTime() > 1000) {
-
-                    $("#img").attr("src", data[0].path);
-                    $("#img").css("opacity", "1");
-                    $("#load").css("visibility", "hidden");
-                } else {
-
-                    $("#img").attr("src", data[0].path);
-                    setTimeout(function () {
-                        $("#img").css("opacity", "1");
-                        $("#load").css("visibility", "hidden");
-                    }, (1000 - (fin.getTime() - debut.getTime())));
-                }
-
-            }
-        });
-    }
-</script>

@@ -6,30 +6,28 @@ var debut;
 var id;
 var baseu;
 var where;
+
 $(document).ready(function () {
 
-        waitsetup();
+        waitsetup(false);
         where = window.location.pathname;
         baseu = window.location.href.replace(where, "") + "/";
         document.getElementById("tofill").focus();
-        if (window.location.href.indexOf('quizz') !== -1) {
-            $("#gen").hide();
-
+        if (where.indexOf('quizz') !== -1) {
             var fin = new Date();
-            if (fin.getTime() - debut.getTime() > 1000) {
+            if (fin.getTime() - debut.getTime() > 3000) {
                 $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
-                $("#img").css("opacity", "1");
-                $("#load").css("visibility", "hidden");
+                $("#img").css("display", "inline-block");
+                $("#load").css("display", "none");
             } else {
                 $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
                 setTimeout(function () {
-                    $("#img").css("opacity", "1");
-                    $("#load").css("visibility", "hidden");
-                }, (1000 - (fin.getTime() - debut.getTime())));
+                    $("#img").css("display", "inline-block");
+                    $("#load").css("display", "none");
+                }, (3000 - (fin.getTime() - debut.getTime())));
             }
 
-
-        } else if (window.location.href.indexOf('generated') !== -1) {
+        } else if (where.indexOf('generated') !== -1) {
             gen();
         } else {
             waitandload();
@@ -68,13 +66,12 @@ function report(string) {
 $('body').on('click', '#save', function () {
     if ($("#btn").find("input") != undefined) {
         $("#btn").find("input").remove();
-        $("#gen").show();
     }
-    waitsetup();
+    waitsetup(true);
 
     var text = $("#tofill").val();
     $("#tofill").val('');
-    if (window.location.href.indexOf('quizz') !== -1) {
+    if (where.indexOf('quizz') !== -1) {
         if (text == 'tree map' || text == 'treemap') {
             note = 4
         }
@@ -101,7 +98,6 @@ $('body').on('click', '#save', function () {
         text = text.replace(reg, "");
         form.append("name", text);
         form.append("id", id);
-        pop();
 
         $.ajax({
             type: "POST",
@@ -119,6 +115,7 @@ $('body').on('click', '#save', function () {
                     } else if (where.indexOf('raw') !== -1) {
                         window.location = baseu + "raw"
                     } else if (where.indexOf('generated') !== -1) {
+                        waitandload();
                         window.location = baseu + "main"
                     }
                     else {
@@ -136,9 +133,8 @@ $('body').on('click', '#save', function () {
 $('body').on('click', '#skip', function () {
     if ($("#btn").find("input") != undefined) {
         $("#btn").find("input").remove();
-        $("#gen").show();
     }
-    waitsetup();
+    waitsetup(false);
     var firm = new FormData();
     firm.append("action", "skip");
     firm.append("id", id);
@@ -193,11 +189,6 @@ window.onkeydown = function (e) {
     }
 };
 
-function pop() {
-    $("#pop").show();
-    $("#pop").delay(4300).fadeOut(500);
-}
-
 function waitandload() {
     $.ajax({
 
@@ -212,16 +203,16 @@ function waitandload() {
             id = data[1];
             window.history.pushState("", "", gethash());
             console.log(gethash());
-            if (fin.getTime() - debut.getTime() > 1000) {
+            if (fin.getTime() - debut.getTime() > 3200) {
                 $("#img").attr("src", data[0]);
-                $("#img").css("opacity", "1");
-                $("#load").css("visibility", "hidden");
+                $("#img").css("display", "inline-block");
+                $("#load").css("display", "none");
             } else {
                 $("#img").attr("src", data[0]);
                 setTimeout(function () {
-                    $("#img").css("opacity", "1");
-                    $("#load").css("visibility", "hidden");
-                }, (1000 - (fin.getTime() - debut.getTime())));
+                    $("#img").css("display", "inline-block");
+                    $("#load").css("display", "none");
+                }, (3200 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();
             furm.append("action", "page loaded");
@@ -236,24 +227,60 @@ function waitandload() {
         }
     });
 }
-function waitsetup() {
+function waitsetup(test) {
     debut = new Date();
-    $("#load").css("visibility", "visible");
-    $("#img").css("opacity", "0");
+    if (test) {
+        $("#img").css("display", "none");
+        $("#vald").css("display", "inline-block");
+        setTimeout(function () {
+            $("#load").css("display", "inline-block");
+            $("#vald").css("display", "none");
+        }, (1800));
+    } else {
+        $("#img").css("display", "none");
+        $("#load").css("display", "inline-block");
+    }
+
 }
 
-
-$("#gen").click(function () {
-    hash();
-});
-
-function hash() {
-    $("#gen").hide();
-    $("#btn").append("<input type='text' value='" + gethash() + "'/>")
-}
 
 function gethash() {
-    base = baseu + "generated/";
+    var base = baseu + "generated/";
     var hash = $.base64.encode('textualimg/' + id);
     return base + hash
+}
+
+function gen() {
+
+    var form = new FormData();
+    form.append("action", $("#id").val());
+    $.ajax({
+
+        type: "POST",
+        url: "../getimgbyid",
+        processData: false,
+        contentType: false,
+        data: form,
+        success: function (data) {
+            var fin = new Date();
+            data = JSON.parse(data);
+            data = JSON.parse(data);
+            id = data[0].id;
+            console.log(data[0].path);
+            if (fin.getTime() - debut.getTime() > 3000) {
+
+                $("#img").attr("src", data[0].path);
+                $("#img").css("display", "inline-block");
+                $("#load").css("display", "none");
+            } else {
+
+                $("#img").attr("src", data[0].path);
+                setTimeout(function () {
+                    $("#img").css("display", "inline-block");
+                    $("#load").css("display", "none");
+                }, (3000 - (fin.getTime() - debut.getTime())));
+            }
+
+        }
+    });
 }

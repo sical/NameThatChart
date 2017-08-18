@@ -109,6 +109,14 @@
         color: lightgreen;
     }
 
+    #vald {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        min-height: 160px;
+        min-width: 180px;
+    }
+
 </style>
 
 <!DOCTYPE html>
@@ -140,6 +148,10 @@
     </header>
 
     <article class="content">
+        <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
+             alt="loading logo"/>
+        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+             alt="loading logo"/>
         <img id="img" src=""/>
     </article>
 

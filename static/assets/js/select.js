@@ -4,18 +4,23 @@
 var type;
 var info;
 var debut;
+var baseu;
+var where;
+
 
 $(document).ready(function () {
-    if (window.location.href.indexOf('quizz') !== -1) {
+    where = window.location.pathname;
+    baseu = window.location.href.replace(where, "") + "/";
+    if (where.indexOf('quizz') !== -1) {
         fillthem2();
         $("#gen").hide();
     } else {
-        waitsetup();
+        waitsetup(false);
         fillthem();
     }
 });
 
-$('#fill').on('click', 'img', function () {
+$('body').on('click', '#img', function () {
     $(".cont").each(function () {
         $(this).addClass('unselec')
     });
@@ -24,19 +29,13 @@ $('#fill').on('click', 'img', function () {
     $(this).removeClass('unselec');
 });
 
-
-$('#save').click(function () {
+$('body').on('click', '#save', function () {
     var test = $('#fill').find(".selec").length;
-    $('#fill').find(".selec").removeClass("");
-    console.log(test);
     if (test == 0) {
 
     } else {
-        waitsetup();
-
-        pop();
-
-        if (window.location.href.indexOf('quizz') !== -1) {
+        waitsetup(true);
+        if (where.indexOf('quizz') !== -1) {
             var note = 0;
             if ($(this).attr("value") == 2) {
                 note = 4
@@ -45,12 +44,12 @@ $('#save').click(function () {
             form.append("note", note);
             $.ajax({
                 type: "POST",
-                url: "../savenote",
+                url: baseu + "savenote",
                 processData: false,
                 contentType: false,
                 data: form,
                 success: function () {
-                    window.location = "../main"
+                    window.location = baseu + "main"
                 }
             })
         } else {
@@ -59,18 +58,18 @@ $('#save').click(function () {
             form.append("idtype", type);
             $.ajax({
                 type: "POST",
-                url: "../saveselect",
+                url: baseu + "saveselect",
                 processData: false,
                 contentType: false,
                 data: form,
                 success: function () {
-                    if (window.location.href.indexOf('main') !== -1) {
-                        window.location = "../main"
-                    } else if (window.location.href.indexOf('raw') !== -1) {
-                        window.location = "../raw"
+                    if (where.indexOf('main') !== -1) {
+                        window.location = baseu + "main"
+                    } else if (where.indexOf('raw') !== -1) {
+                        window.location = baseu + "raw"
                     }
                     else {
-                        $("#brand").text(" Select the picture which best describe : ");
+                        $("#title").text(" Select the picture which best describe : ");
                         fillthem();
                     }
                 }
@@ -87,17 +86,20 @@ $('#save').click(function () {
 function fillthem() {
     $.ajax({
         type: "GET",
-        url: "../getselect",
+        url: baseu + "getselect",
         processData: false,
         contentType: false,
         success: function (data) {
+
             info = JSON.parse(data);
-            $("#brand").append(info.name);
+            $("#title").append(info.name);
             type = info.idtype;
 
             var fin = new Date();
-
-            if (fin.getTime() - debut.getTime() > 1500) {
+            console.log(debut.getTime() + " debut");
+            console.log(fin.getTime() + " fin");
+            console.log(fin.getTime() - debut.getTime() + " diff");
+            if (fin.getTime() - debut.getTime() > 5000) {
                 var images = info.imgs;
                 var image;
                 var ids = [];
@@ -116,13 +118,13 @@ function fillthem() {
                 form.append("idtype", type);
                 $.ajax({
                     type: "POST",
-                    url: "../logm/selection",
+                    url: baseu + "logm/selection",
                     processData: false,
                     contentType: false,
                     data: form
                 });
-                $(".cont").css("visibility", "visible");
-                $("#load").css("visibility", "hidden");
+                $(".cont").css("display", "inline-block");
+                $("#load").css("display", "none");
 
             } else {
                 var images = info.imgs;
@@ -143,15 +145,16 @@ function fillthem() {
                 form.append("idtype", type);
                 $.ajax({
                     type: "POST",
-                    url: "../logm/selection",
+                    url: baseu + "logm/selection",
                     processData: false,
                     contentType: false,
                     data: form
                 });
                 setTimeout(function () {
-                    $(".cont").css("visibility", "visible");
-                    $("#load").css("visibility", "hidden");
-                }, (1500 - (fin.getTime() - debut.getTime())));
+                    console.log("AAAAAAAAAuUuUUu");
+                    $(".cont").css("display", "inline-block");
+                    $("#load").css("display", "none");
+                }, (5000 - (fin.getTime() - debut.getTime())));
             }
 
 
@@ -162,15 +165,15 @@ function fillthem() {
 function fillthem2() {
     $("#fill").empty();
     var imgues = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_205.gif", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_224.gif", "static/assets/img/datasets/quizz/3.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_91.gif"];
-    $("#brand").append("Histogram");
+    $("#title").append("Histogram");
     var i = 0;
     imgues.forEach(function (img) {
         $("#fill").append("<img class='imgsel cont' value='" + i + "' src=" + img + " />")
     })
 }
 
-$("#skip").click(function () {
-    waitsetup();
+$('body').on('click', '#skip', function () {
+    waitsetup(false);
     var images = [];
     info.imgs.forEach(function (row) {
         images.push(row.id)
@@ -182,21 +185,21 @@ $("#skip").click(function () {
     firm.append("idtype", type);
     $.ajax({
         type: "POST",
-        url: "../logm/selection",
+        url: baseu + "logm/selection",
         processData: false,
         contentType: false,
         data: firm
     });
-    if (window.location.href.indexOf('hybrid') !== -1) {
-        window.location = "../hybrid"
+    if (where.indexOf('hybrid') !== -1) {
+        window.location = baseu + "hybrid"
     } else {
-        if (window.location.href.indexOf('main') !== -1) {
-            window.location = "../main"
-        } else if (window.location.href.indexOf('raw') !== -1) {
-            window.location = "../raw"
+        if (where.indexOf('main') !== -1) {
+            window.location = baseu + "main"
+        } else if (where.indexOf('raw') !== -1) {
+            window.location = baseu + "raw"
         }
         else {
-            $("#brand").text("Select the picture which best describe ");
+            $("#title").text("Select the picture which best describe ");
             fillthem()
         }
     }
@@ -207,8 +210,18 @@ $("#skip").click(function () {
 
 });
 
-function waitsetup() {
+function waitsetup(test) {
     debut = new Date();
-    $(".cont").css("visibility", "hidden");
-    $("#load").css("visibility", "visible");
+    console.log(debut.getTime());
+    if (test) {
+        $(".cont").css("display", "none");
+        $("#vald").css("display", "inline-block");
+        setTimeout(function () {
+            $("#load").css("display", "inline-block");
+            $("#vald").css("display", "none");
+        }, (1800));
+    } else {
+        $(".cont").css("display", "none");
+        $("#load").css("display", "inline-block");
+    }
 }

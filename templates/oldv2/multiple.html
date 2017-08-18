@@ -3,18 +3,22 @@
     Choose the more fitting category
 </h1>
 <div class="centerimg">
+    <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
+         alt="loading logo"/>
+    <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+         alt="loading logo"/>
     <img id="imgdisp" src=""/>
     <div class="btnholder">
         <div class="" style="display: inline" id="pres">
-            <button  style="margin: 1%" id="0"
+            <button style="margin: 1%" id="0"
                     class="btnvali btn" name="Area chart">Area chart
             </button>
-            <button  style="margin: 1%" id="1"
+            <button style="margin: 1%" id="1"
                     class="btnvali btn" name="Miller flow"> Miller's flow
             </button>
         </div>
         <div class="" style="display: inline" id="pres">
-            <button  style="margin: 1%" id="2"
+            <button style="margin: 1%" id="2"
                     class="btnvali btn" name="Minard">Minard's map
             </button>
             <button style="margin: 1%" id="3"
