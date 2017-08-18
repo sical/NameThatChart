@@ -1,0 +1,66 @@
+{% include 'nav.html' %}
+
+<h1 class="page-header hcenter" id="brand">
+    Describe this chart
+</h1>
+
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+<div class="centerimg">
+    <img class="up" id="load"
+         src="{{ url_for('static', filename='assets/img/loading.gif') }}" alt="loading logo"/>
+    <img id="imgdisp" style="z-index:0" src="" alt="image to classify"/>
+
+
+    <div id="fom" class="form-group" style="max-width: 500px;text-align: center">
+        <input id="value" type="text" class="form-control" name="type" placeholder="What is this chart ?"
+               maxlength="50"/>
+    </div>
+</div>
+<div class="footer ">
+    {% include 'report.html' %}
+</div>
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/textual.js') }}"></script>
+<script>
+    function gen() {
+
+        var form = new FormData();
+        form.append("action", {{ test }});
+        $.ajax({
+
+            type: "POST",
+            url: "../getimgbyid",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                var fin = new Date();
+                data = JSON.parse(data);
+                data = JSON.parse(data);
+                console.log(data);
+                id = data[0].id;
+                console.log(data[0].path);
+                if (fin.getTime() - debut.getTime() > 1000) {
+                    $("#imgdisp").attr("src", data[0].path);
+                    $("#imgdisp").css("opacity", "1");
+                    $("#load").css("visibility", "hidden");
+                } else {
+                    $("#imgdisp").attr("src", data[0].path);
+                    setTimeout(function () {
+                        $("#imgdisp").css("opacity", "1");
+                        $("#load").css("visibility", "hidden");
+                    }, (1000 - (fin.getTime() - debut.getTime())));
+                }
+
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{% include 'nav.html' %}
+<div class="header hcenter">
+    <h1 id="brand" class="page-header">
+        Administration
+        <small>Statistics</small>
+    </h1>
+    <button class="btn" id="reports" value="0"> Display reports</button>
+</div>
+
+<div class="center" style="overflow:auto;height:60%;padding: 10px 10px 10px 20px;display: block;margin-bottom: 10%">
+    <table id="t1" class="table table-bordered table-responsive" style="max-width: 60%;overflow:auto;min-height:60%">
+        <thead>
+        <tr id="head">
+            <th></th>
+            <th>Textual</th>
+            <th>Selection</th>
+            <th>Swipes</th>
+            <th>Multiple</th>
+            <th>Reverse</th>
+        </tr>
+        </thead>
+        <tbody id="tabcont">
+
+        </tbody>
+    </table>
+
+
+</div>
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/admin.js') }}"></script>
+
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

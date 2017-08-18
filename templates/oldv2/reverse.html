@@ -1,0 +1,31 @@
+{% include 'nav.html' %}
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/reverse.js') }}"></script>
+
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+<h1 class="page-header hcenter" id="brand">
+    Choose the more fitting image to describe
+</h1>
+
+
+<div class="centerr" style="margin-left: 8%">
+
+    <div id="containssel">
+
+    </div>
+    <div style="position: fixed;margin-bottom: 10%;top:25%" class="lcenter">
+        <img style="z-index: 400;width: auto" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}" alt="loading logo"/>
+    </div>
+
+</div>
+<div class="footer">
+    {% include 'report.html' %}
+</div>
+
+</body>
+</html>

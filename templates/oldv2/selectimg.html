@@ -1,0 +1,33 @@
+﻿{% include 'nav.html' %}
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+<div style="margin-top: -0%" class="header hcenter">
+    <h1 class="page-header" id="brand">
+        Select the picture which best describe :
+    </h1>
+</div>
+
+<div class="center" id="sel" style="text-align: left">
+    <img id="load"
+         src="{{ url_for('static', filename='assets/img/loading.gif') }}" alt="loading logo"/>
+    <div id="fill" style="max-height: 700px;margin-bottom: 10px;margin-top: -3%">
+        <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+        <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+        <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+        <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+        <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+        <img class="cont imgsel" style="z-index:0" src="" alt=""/>
+    </div>
+
+</div>
+<div class="footer">
+    {% include 'report.html' %}
+</div>
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/select.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>

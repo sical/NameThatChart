@@ -1,31 +1,186 @@
-{% include 'nav.html' %}
-<h1 class="page-header hcenter" id="brand">
-    Choose the more fitting category
-</h1>
-<div class="centerimg">
-    <img id="imgdisp" src=""/>
-    <div class="btnholder">
-        <div class="" style="display: inline" id="pres">
-            <button  style="margin: 1%" id="0"
-                    class="btnvali btn" name="Area chart">Area chart
-            </button>
-            <button  style="margin: 1%" id="1"
-                    class="btnvali btn" name="Miller flow"> Miller's flow
-            </button>
-        </div>
-        <div class="" style="display: inline" id="pres">
-            <button  style="margin: 1%" id="2"
-                    class="btnvali btn" name="Minard">Minard's map
-            </button>
-            <button style="margin: 1%" id="3"
-                    class="btnvali btn" name="flow datagram">flow datagram
-            </button>
-        </div>
-    </div>
-</div>
+<style>
+
+    * {
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #img {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        border: solid 2px;
+        min-height: 160px;
+        min-width: 180px;
+    }
+
+    .main-head {
+        grid-area: header;
+        align-self: auto;
+
+    }
+
+    .content {
+        grid-area: content;
+        padding: 0;
+        text-align: center;
+    }
+
+    .but {
+        grid-area: but;
+        padding: 0;
+        text-align: center;
+    }
+
+    .main-nav {
+        grid-area: nav;
+        align-self: flex-start;
+        vertical-align: top;
+        padding: 0;
+    }
+
+    .main-footer {
+        grid-area: footer;
+        vertical-align: bottom;
+        padding: 0;
+        align-self: flex-end;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
+        height: 100%
+    }
+
+    #title {
+        font-size: 1.3em;
+    }
+
+    @media (min-width: 500px) {
+        .wrapper {
+            grid-template-columns: 100%;
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #title {
+            font-size: 1.5em;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .wrapper {
+            grid-template-columns: 100%;
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        title {
+            font-size: 1.75em;
+        }
+    }
+
+    .u {
+        color: #ac2925;
+    }
+
+    .s {
+        color: lightgreen;
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 <script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
+<div class="wrapper">
+    <nav class="main-nav">
+        {% include 'navbar.html' %}
+    </nav>
+    <header class="main-head">
+        <h1 id="title">
+            Choose the more fitting category
+        </h1>
+    </header>
 
-</body>
-</html>
+    <article class="content">
+        <img id="img" src=""/>
+    </article>
+
+    <div class="but">
+        <div class="btnholder" style="display: inline-block">
+            <div style="display: inline" id="pres">
+                <button style="margin: 1%" id="0"
+                        class="btnvali btn">Area chart
+                </button>
+                <button style="margin: 1%" id="1"
+                        class="btnvali btn"> Miller's flow
+                </button>
+            </div>
+            <div class="" style="display: inline" id="pres">
+                <button style="margin: 1%" id="2"
+                        class="btnvali btn">Minard's map
+                </button>
+                <button style="margin: 1%" id="3"
+                        class="btnvali btn">flow datagram
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        {% include 'footer.html' %}
+    </footer>
+</div>
+
+<script TYPE="text/javascript">
+
+
+    $("#gen").click(function () {
+        console.log("LAAAAAAAAA");
+        hash();
+    });
+
+    function hash() {
+        var hash = $.base64.encode('textualimg/' + 3000);
+        base = "http://0.0.0.0:5000/generated/";
+        $("#gen").hide();
+        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
+    }
+</script>

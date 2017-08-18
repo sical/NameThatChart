@@ -1,0 +1,57 @@
+{% include 'nav.html' %}
+
+<div class="header hcenter">
+    <h1 id="brand" class="page-header">
+        Administration
+        <small>Upload</small>
+    </h1>
+</div>
+
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+
+<div class="center" style="margin-left: 10%;text-align: center">
+    <div>
+        <h4>image Features form</h4>
+        <div id="features">
+            <form id="form" style="margin-bottom:76px ">
+                Type of visualization :
+                <input type="text" name="name" id="name"
+                       placeholder="Title of the visualization"><br/>
+                Url of the picture : <input type="text" name="url" id="url"
+                                            placeholder="URL of the picture">
+                <select name="cat" id="sel">
+                    <option>None</option>
+                    <option>Standard</option>
+                    <option>Complex</option>
+                    <option>Historical</option>
+                </select>
+            </form>
+
+            <button id="send"> Submit</button>
+        </div>
+    </div>
+    <h3>OR</h3>
+    <hr>
+    <div id="drag" style="display: inline-block">
+        <h4>
+            image Features Json
+        </h4>
+
+        <div id="uploade">
+            <form>
+                <input class="btn" type='file' id="imgInp" name="imgInp"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/uploadimg.js') }}"></script>
+
+</body>
+
+</html>

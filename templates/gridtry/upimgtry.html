@@ -121,11 +121,37 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 <div class="wrapper">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
+        <div class="topnav" id="myTopnav">
+            <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
+                    class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
+            <a href="textualimg">Textual</a>
+            <a href="selectimg">Selection</a>
+            <a href="swipes">Swipes</a>
+            <a href="multiple">Multiple</a>
+            <a href="reverse">Reverse</a>
+            <a href="main">Main</a>
+            <a href="admin">Admin</a>
+            <a href="display_image">Dataset</a>
+            <a href="uploadimg"><i class="fa fa-upload fa-2x "></i></a>
+            <a href="datcsv.csv"><i class="fa fa-download fa-2x"></i></a>
+            <a class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
     </nav>
     <header class="main-head">
         <h1 id="brand" class="page-header">

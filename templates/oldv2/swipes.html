@@ -1,0 +1,130 @@
+{% include 'nav.html' %}
+<div id="pop" class="alert" style="display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Success, it is saved
+</div>
+<div style="margin-top: -0%" class="header hcenter">
+    <h1 id="brand" class="page-header">
+        Is this a :
+    </h1>
+
+    <div style="z-index: 3000;width: 300px;position: fixed;top: 110%;">
+        <img id="load"
+             src="{{ url_for('static', filename='assets/img/loading.gif') }}" alt="loading logo"/>
+    </div>
+</div>
+
+
+<div id="tinderslide" class="centerswi">
+    <ul class="ula">
+
+        <li class="pane1 lia"
+            style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 20">
+            <div class="img"></div>
+            <div id="1_txt" style="display: none"></div>
+            <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                    aria-hidden="true"></i></div>
+            <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                       aria-hidden="true"></i></div>
+        </li>
+        <li class="pane2 lia"
+            style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 25">
+            <div class="img"></div>
+            <div id="2_txt" style="display: none"></div>
+            <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                    aria-hidden="true"></i></div>
+            <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                       aria-hidden="true"></i></div>
+        </li>
+        <li class="pane3 lia"
+            style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 30">
+            <div class="img"></div>
+            <div id="3_txt" style="display: none"></div>
+            <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                    aria-hidden="true"></i></div>
+            <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                       aria-hidden="true"></i></div>
+        </li>
+        <li class="pane4 lia"
+            style="-moz-box-shadow: 5px 5px 5px 0px #656565;-webkit-box-shadow: 5px 5px 5px 0px #656565;-o-box-shadow: 5px 5px 5px 0px #656565;box-shadow: 5px 5px 5px 0px #656565;filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);-moz-border-radius: 5px;webkit-border-radius: 5px;border-radius: 5px; background-position:center;background-repeat: no-repeat;background-size:contain;position: absolute;z-index: 35">
+            <div class="img"></div>
+            <div id="4_txt" style="display: none"></div>
+            <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                    aria-hidden="true"></i></div>
+            <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                       aria-hidden="true"></i></div>
+        </li>
+        <li class="pane5 lia" id="test5"
+            style="     -moz-box-shadow: 5px 5px 5px 0px #656565;
+                                        -webkit-box-shadow: 5px 5px 5px 0px #656565;
+                                        -o-box-shadow: 5px 5px 5px 0px #656565;
+                                        box-shadow: 5px 5px 5px 0px #656565;
+                                        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+                                        -moz-border-radius: 5px;
+                                        -webkit-border-radius: 5px;
+                                        border-radius: 5px;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        position: absolute;
+                                        z-index: 40;
+                            ">
+            <div class="img"></div>
+            <div id="5_txt" style="display: none"></div>
+            <div class="like" style="opacity: 0"><i class="fa fa-thumbs-up fa-5x green-text"
+                                                    aria-hidden="true"></i></div>
+            <div class="dislike" style="opacity: 0"><i class="fa fa-thumbs-down fa-5x red-text"
+                                                       aria-hidden="true"></i></div>
+        </li>
+
+    </ul>
+
+
+</div>
+<div class="footer">
+    <div class="dropup" style="display: inline-block">
+        <button style="height: 50px;padding: 6px 12px" class="btn btn-primary dropdown-toggle" id="report" type="button"
+                data-toggle="dropdown">Report
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a id="nd">No display</a></li>
+            <li><a id="ii">Inappropriate image</a></li>
+            <li><a id="hmc">Huge miss-classification</a></li>
+        </ul>
+    </div>
+    <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip
+    </button>
+</div>
+
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.transform2d.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.jTinder.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/swipe.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
+

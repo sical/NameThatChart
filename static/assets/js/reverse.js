@@ -3,9 +3,10 @@
  */
 var info;
 var images;
-
+var baseu;
 
 $(document).ready(function () {
+    baseu = window.location.href.replace(window.location.pathname,"") +"/";
     waitsetup();
     fillit();
 });

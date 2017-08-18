@@ -22,7 +22,6 @@ function report(string) {
     var temp = window.location.href.split("/");
     where = temp[temp.length - 1];
     var ids = getids();
-    console.log(ids);
     var form = new FormData();
     form.append("ids", ids);
     $.ajax({

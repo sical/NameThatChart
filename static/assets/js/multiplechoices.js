@@ -3,11 +3,12 @@
  */
 var note = 0;
 var info = {};
+var id;
 
 $(document).ready(function () {
     console.log(window.location.href);
     if (window.location.href.indexOf('quizz') !== -1) {
-        $("#imgdisp").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg")
+        $("#img").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg")
     } else {
         getimg();
     }
@@ -26,18 +27,49 @@ function getimg() {
                 temp.attr("value", type.idtype);
                 i++;
             });
-            $("#imgdisp").attr("src", info.image.path);
+            id = info.image.id;
+            $("#img").attr("src", info.image.path);
         }
     });
 }
 
-$("#0").click(function (event) {
+$('body').on('click', '.btnvali', function () {
+    $(".btnvali").each(function () {
+        $(this).addClass('u');
+        $(this).css("color", "#FFF");
+        $(this).css("background-color", "#65737e")
+    });
+    $('.s').removeClass('s');
+    $(this).addClass('s');
+    $(this).css("color", "lightgreen");
+    $(this).css("background-color", "#343d46;");
+    $(this).removeClass('u');
+});
+
+$('body').on('click', '#save', function () {
+    var text = $(".s").val();
     if (window.location.href.indexOf('quizz') !== -1) {
-        done();
+        done(text);
     } else {
-        event.preventDefault();
-        var text = $("#0").val();
         save(text)
+    }
+});
+
+$('body').on('click', '#skip', function () {
+    if (window.location.href.indexOf('quizz') !== -1) {
+        done("");
+    } else {
+        var firm = new FormData();
+        firm.append("action", "skip");
+        firm.append("id", id);
+        $.ajax({
+            type: "POST",
+            url: "../logmultiple",
+            processData: false,
+            contentType: false,
+            data: firm
+        });
+        getimg();
     }
 });
 
@@ -57,41 +89,12 @@ function save(idtype) {
     })
 }
 
-$("#1").click(function (event) {
-    if (window.location.href.indexOf('quizz') !== -1) {
-        done();
-    } else {
-        event.preventDefault();
-        var text = $("#1").val();
-        save(text)
-    }
-});
 
-$("#2").click(function (event) {
-    console.log(window.location.href);
-    if (window.location.href.indexOf('quizz') !== -1) {
-        note = 5;
-        done();
-    } else {
-        event.preventDefault();
-        var text = $("#2").val();
-        save(text)
+function done(text) {
+    if (text == "Minard's map") {
+        note += 5;
     }
-});
-
-$("#3").click(function (event) {
-    if (window.location.href.indexOf('quizz') !== -1) {
-        done();
-    } else {
-        event.preventDefault();
-        var text = $("#3").val();
-        save(text)
-    }
-});
-
-function done() {
     var form = new FormData();
-    console.log(note);
     form.append("note", note);
     $.ajax({
         type: "POST",
@@ -99,7 +102,7 @@ function done() {
         processData: false,
         contentType: false,
         data: form,
-        success: function (data) {
+        success: function () {
             window.location = "../quizz"
         }
     })

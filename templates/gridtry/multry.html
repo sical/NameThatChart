@@ -38,6 +38,12 @@
         text-align: center;
     }
 
+    .but {
+        grid-area: but;
+        padding: 0;
+        text-align: center;
+    }
+
     .main-nav {
         grid-area: nav;
         align-self: flex-start;
@@ -56,7 +62,7 @@
     .wrapper {
         display: grid;
         grid-gap: 10px;
-        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
         height: 100%
     }
 
@@ -67,7 +73,7 @@
     @media (min-width: 500px) {
         .wrapper {
             grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
         }
 
         nav ul {
@@ -83,7 +89,7 @@
     @media (min-width: 700px) {
         .wrapper {
             grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
+            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
         }
 
         nav ul {
@@ -95,6 +101,13 @@
         }
     }
 
+    .u {
+        color: #ac2925;
+    }
+
+    .s {
+        color: lightgreen;
+    }
 
 </style>
 
@@ -113,33 +126,71 @@
 <body>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-
-<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
-<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/textual.js') }}"></script>
-
+<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
 <div class="wrapper">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
+        <div class="topnav" id="myTopnav">
+            <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
+                    class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
+            <a href="textualimg">Textual</a>
+            <a href="selectimg">Selection</a>
+            <a href="swipes">Swipes</a>
+            <a href="multiple">Multiple</a>
+            <a href="reverse">Reverse</a>
+            <a href="main">Main</a>
+            <a href="admin">Admin</a>
+            <a href="display_image">Dataset</a>
+            <a href="uploadimg"><i class="fa fa-upload fa-2x "></i></a>
+            <a href="datcsv.csv"><i class="fa fa-download fa-2x"></i></a>
+            <a class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
 
     </nav>
     <header class="main-head">
         <h1 id="title">
-            Describe this chart
+            Choose the more fitting category
         </h1>
     </header>
 
     <article class="content">
-        <img id="img"
-             src=""/>
-
+        <img id="img" src=""/>
     </article>
+
+    <div class="but">
+        <div class="btnholder" style="display: inline-block">
+            <div style="display: inline" id="pres">
+                <button style="margin: 1%" id="0"
+                        class="btnvali btn" >Area chart
+                </button>
+                <button style="margin: 1%" id="1"
+                        class="btnvali btn" > Miller's flow
+                </button>
+            </div>
+            <div class="" style="display: inline" id="pres">
+                <button style="margin: 1%" id="2"
+                        class="btnvali btn">Minard's map
+                </button>
+                <button style="margin: 1%" id="3"
+                        class="btnvali btn" >flow datagram
+                </button>
+            </div>
+        </div>
+    </div>
 
     <footer class="main-footer">
         <div style="margin: 0 auto;">
-            <input id="tofill" type="text" class="form-control" name="type" placeholder="What is this chart ?"
-                   maxlength="50" style="max-width: 500px;text-align: left;display: inline-block;margin-bottom: 3%"/>
             <div style="text-align: center;display: inline;" id="btn">
                 <div class="dropup" style="display: inline">
                     <button style="height: 50px;padding: 6px 12px" class="btn btn-primary dropdown-toggle" id="report"
@@ -153,7 +204,6 @@
                 </div>
                 <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
                 <button style="height: 50px;padding: 6px 12px" id="save" class="btn">save</button>
-                <button style="height: 50px;padding: 6px 12px" id="gen" class="btn">get url</button>
             </div>
         </div>
     </footer>
@@ -163,6 +213,7 @@
 
 
     $("#gen").click(function () {
+        console.log("LAAAAAAAAA");
         hash();
     });
 
@@ -171,42 +222,5 @@
         base = "http://0.0.0.0:5000/generated/";
         $("#gen").hide();
         $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
-</script>
-
-<script>
-    function gen() {
-
-        var form = new FormData();
-        form.append("action", {{ test }});
-        $.ajax({
-
-            type: "POST",
-            url: "../getimgbyid",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function (data) {
-                var fin = new Date();
-                data = JSON.parse(data);
-                data = JSON.parse(data);
-                id = data[0].id;
-                console.log(data[0].path);
-                if (fin.getTime() - debut.getTime() > 1000) {
-
-                    $("#img").attr("src", data[0].path);
-                    $("#img").css("opacity", "1");
-                    $("#load").css("visibility", "hidden");
-                } else {
-
-                    $("#img").attr("src", data[0].path);
-                    setTimeout(function () {
-                        $("#img").css("opacity", "1");
-                        $("#load").css("visibility", "hidden");
-                    }, (1000 - (fin.getTime() - debut.getTime())));
-                }
-
-            }
-        });
     }
 </script>

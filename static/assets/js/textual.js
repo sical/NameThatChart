@@ -4,24 +4,26 @@
 var started = true;
 var debut;
 var id;
+var baseu;
+var where;
 $(document).ready(function () {
 
         waitsetup();
-
-        document.getElementById("value").focus();
+        where = window.location.pathname;
+        baseu = window.location.href.replace(where, "") + "/";
+        document.getElementById("tofill").focus();
         if (window.location.href.indexOf('quizz') !== -1) {
-            $("#skip")
             $("#gen").hide();
 
             var fin = new Date();
             if (fin.getTime() - debut.getTime() > 1000) {
-                $("#imgdisp").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
-                $("#imgdisp").css("opacity", "1");
+                $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+                $("#img").css("opacity", "1");
                 $("#load").css("visibility", "hidden");
             } else {
-                $("#imgdisp").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+                $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
                 setTimeout(function () {
-                    $("#imgdisp").css("opacity", "1");
+                    $("#img").css("opacity", "1");
                     $("#load").css("visibility", "hidden");
                 }, (1000 - (fin.getTime() - debut.getTime())));
             }
@@ -53,7 +55,7 @@ $("#hmc").click(function (event) {
 function report(string) {
     $.ajax({
         type: "POST",
-        url: "../report/" + string,
+        url: baseu + "report/" + string,
         processData: false,
         contentType: false,
         success: function (data) {
@@ -63,15 +65,15 @@ function report(string) {
     });
 }
 
-$("#save").click(function () {
+$('body').on('click', '#save', function () {
     if ($("#btn").find("input") != undefined) {
         $("#btn").find("input").remove();
         $("#gen").show();
     }
     waitsetup();
 
-    var text = $("#value").val();
-    $("#value").val('');
+    var text = $("#tofill").val();
+    $("#tofill").val('');
     if (window.location.href.indexOf('quizz') !== -1) {
         if (text == 'tree map' || text == 'treemap') {
             note = 4
@@ -84,12 +86,12 @@ $("#save").click(function () {
         form.append("note", note);
         $.ajax({
             type: "POST",
-            url: "../savenote",
+            url: baseu + "savenote",
             processData: false,
             contentType: false,
             data: form,
-            success: function (data) {
-                window.location = "../quizz"
+            success: function () {
+                window.location = baseu + "quizz"
             }
         })
     } else {
@@ -103,21 +105,21 @@ $("#save").click(function () {
 
         $.ajax({
             type: "POST",
-            url: "../savetext",
+            url: baseu + "savetext",
             enctype: 'mulipart/form-data',
             processData: false,
             contentType: false,
             data: form,
             success: function () {
-                if (window.location.href.indexOf('hybrid') !== -1) {
-                    window.location = "../hybrid"
+                if (where.indexOf('hybrid') !== -1) {
+                    window.location = baseu + "hybrid"
                 } else {
-                    if (window.location.href.indexOf('main') !== -1) {
-                        window.location = "../main"
-                    } else if (window.location.href.indexOf('raw') !== -1) {
-                        window.location = "../raw"
-                    } else if (window.location.href.indexOf('generated') !== -1) {
-                        window.location = "../main"
+                    if (where.indexOf('main') !== -1) {
+                        window.location = baseu + "main"
+                    } else if (where.indexOf('raw') !== -1) {
+                        window.location = baseu + "raw"
+                    } else if (where.indexOf('generated') !== -1) {
+                        window.location = baseu + "main"
                     }
                     else {
                         waitandload();
@@ -131,7 +133,7 @@ $("#save").click(function () {
     }
 });
 
-$("#skip").click(function () {
+$('body').on('click', '#skip', function () {
     if ($("#btn").find("input") != undefined) {
         $("#btn").find("input").remove();
         $("#gen").show();
@@ -147,15 +149,15 @@ $("#skip").click(function () {
         contentType: false,
         data: firm
     });
-    if (window.location.href.indexOf('hybrid') !== -1) {
-        window.location = "../hybrid"
+    if (where.indexOf('hybrid') !== -1) {
+        window.location = baseu + "hybrid"
     } else {
-        if (window.location.href.indexOf('main') !== -1) {
-            window.location = "../main"
-        } else if (window.location.href.indexOf('raw') !== -1) {
-            window.location = "../raw"
-        } else if (window.location.href.indexOf('generated') !== -1) {
-            window.location = "../main"
+        if (where.indexOf('main') !== -1) {
+            window.location = baseu + "main"
+        } else if (where.indexOf('raw') !== -1) {
+            window.location = baseu + "raw"
+        } else if (where.indexOf('generated') !== -1) {
+            window.location = baseu + "main"
         }
         else {
             waitandload();
@@ -163,18 +165,18 @@ $("#skip").click(function () {
     }
 });
 
-$("#value").on('input', function () {
-    if (window.location.href.indexOf('quizz') !== -1) {
+$('body').on('input', '#tofill', function () {
+    if (where.indexOf('quizz') !== -1) {
     } else {
-        if ($("#value").val() != undefined) {
-            if ($("#value").val().length == 1 && started) {
+        if ($("#tofill").val() != undefined) {
+            if ($("#tofill").val().length == 1 && started) {
                 started = false;
                 var firm = new FormData();
                 firm.append("action", "started typing");
                 firm.append("id", id);
                 $.ajax({
                     type: "POST",
-                    url: "../logaction",
+                    url: baseu + "logaction",
                     processData: false,
                     contentType: false,
                     data: firm
@@ -200,7 +202,7 @@ function waitandload() {
     $.ajax({
 
         type: "GET",
-        url: "../getnextimg",
+        url: baseu + "getnextimg",
         processData: false,
         contentType: false,
         success: function (data) {
@@ -211,13 +213,13 @@ function waitandload() {
             window.history.pushState("", "", gethash());
             console.log(gethash());
             if (fin.getTime() - debut.getTime() > 1000) {
-                $("#imgdisp").attr("src", data[0]);
-                $("#imgdisp").css("opacity", "1");
+                $("#img").attr("src", data[0]);
+                $("#img").css("opacity", "1");
                 $("#load").css("visibility", "hidden");
             } else {
-                $("#imgdisp").attr("src", data[0]);
+                $("#img").attr("src", data[0]);
                 setTimeout(function () {
-                    $("#imgdisp").css("opacity", "1");
+                    $("#img").css("opacity", "1");
                     $("#load").css("visibility", "hidden");
                 }, (1000 - (fin.getTime() - debut.getTime())));
             }
@@ -226,7 +228,7 @@ function waitandload() {
             furm.append("id", id);
             $.ajax({
                 type: "POST",
-                url: "../logaction",
+                url: baseu + "logaction",
                 processData: false,
                 contentType: false,
                 data: furm
@@ -237,7 +239,7 @@ function waitandload() {
 function waitsetup() {
     debut = new Date();
     $("#load").css("visibility", "visible");
-    $("#imgdisp").css("opacity", "0");
+    $("#img").css("opacity", "0");
 }
 
 
@@ -250,8 +252,8 @@ function hash() {
     $("#btn").append("<input type='text' value='" + gethash() + "'/>")
 }
 
-function gethash(){
-     base = "http://0.0.0.0:5000/generated/";
-        var hash = $.base64.encode('textualimg/' + id);
-    return  base+ hash
+function gethash() {
+    base = baseu + "generated/";
+    var hash = $.base64.encode('textualimg/' + id);
+    return base + hash
 }

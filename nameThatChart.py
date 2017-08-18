@@ -29,7 +29,6 @@ app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MYSQL_DATABASE_PASSWORD']
 app.config['MYSQL_DATABASE_DB'] = os.environ['MYSQL_DATABASE_DB']
 app.config['MYSQL_DATABASE_HOST'] = os.environ['MYSQL_DATABASE_HOST']
 
-
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 mysql.init_app(app)
@@ -151,9 +150,9 @@ def maj(dir, nb):
 @app.route('/generated/<hash>')
 def gen(hash):
     hash = base64.b64decode(hash).decode("utf-8")
-    print(hash+" Hash")
+    print(hash + " Hash")
     vals = str(hash).split("/")
-    print(str(vals) +" Vals")
+    print(str(vals) + " Vals")
     return render_template(str(vals[0]) + ".html", test=vals[1])
 
 
@@ -263,9 +262,11 @@ def topclass():
 def hello_world():
     return render_template('index.html')
 
+
 @app.route('/gridtry')
 def gridtry():
-    return render_template('gridtry/gridtry.html')
+    return render_template('gridtry/admintry.html')
+
 
 @app.route('/gridtry2')
 def sel2():
@@ -711,7 +712,7 @@ def saveupimg():
 
     title = title.replace(" ", "_")
 
-    filename = str(nb) +name.replace("."+ext,"")+ "_" + title + "." + ext
+    filename = str(nb) + name.replace("." + ext, "") + "_" + title + "." + ext
     q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename)
 
     wget.download(url, q)
@@ -1005,7 +1006,25 @@ def logaction():
     con.close()
     return 'ok'
 
-    # <------------------ Unmapped Get ------------------>
+@app.route('/logmultiple', methods=['POST'])
+def logmultiple():
+    action = request.form['action']
+    now, timestamp = gettimes()
+    con = mysql.connect()
+    cursor = con.cursor()
+    idim = request.form['id']
+    idu = getid(request.environ['REMOTE_ADDR'])
+
+    q = "INSERT INTO multiple (iduser,time,date,event,idimage) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ")"
+
+    cursor.execute(q)
+    con.commit()
+    cursor.close()
+    con.close()
+    return 'ok'
+
+        # <------------------ Unmapped Get ------------------>
 
 
 @app.route('/logswipes', methods=['POST'])
@@ -1392,13 +1411,13 @@ def dattcsv():
     body = ""
     db = []
     db.append(vachercherm(
-        "SELECT 'textual'as task,concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
+        "SELECT 'textual'AS task,concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'reverse' as task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
+        "SELECT 'reverse' AS task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'selection' as task,concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
+        "SELECT 'selection' AS task,concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'swipe' as task,concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
+        "SELECT 'swipe' AS task,concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
 
     for table in db:
         for row in table:
