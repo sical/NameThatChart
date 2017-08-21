@@ -18,7 +18,7 @@ var image = (done) => {
 
 function dataURLtoBlob(dataurl) {
     var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
-            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
     while (n--) {
         u8arr[n] = bstr.charCodeAt(n);
     }
@@ -87,27 +87,29 @@ var capture = (force) => {
 var filename = () => {
     var pad = (n) => ((n = n + '') && (n.length >= 2 ? n : '0' + n));
     var timestamp = ((now) =>
-        [pad(now.getFullYear()), pad(now.getMonth() + 1), pad(now.getDate())].join('-')
-        + ' - ' +
-        [pad(now.getHours()), pad(now.getMinutes()), pad(now.getSeconds())].join('-'))(new Date());
+    [pad(now.getFullYear()), pad(now.getMonth() + 1), pad(now.getDate())].join('-')
+    + ' - ' +
+    [pad(now.getHours()), pad(now.getMinutes()), pad(now.getSeconds())].join('-'))(new Date());
     return 'Screenshot Capture - ' + timestamp + '.png'
 };
 
 
 var save = (image) => {
-    $("body").append("<div id='myModal' class='modal'><div class='modal-content'> <div class='modal-header'><span class='close'>&times;</span> <h2 id='mh'>Modal Header</h2> </div> <div class='modal-body'> </div> <div class='modal-footer'> <h3 id='mf'>Modal Footer</h3> </div> </div> </div>");
-    $("#myModal").show();
-    $(".modal-body").append("<img id='img' src='"+chrome.runtime.getURL('/images/loading.gif')+"'/>");
-    var modal = document.getElementById('myModal');
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
+    $("body").append("<div id='modolal33'><div id='modolal33-content'> <div id='modolal33-header'><span id='modolal33-close'>&times;</span> <h2 id='modolal33-mh'>Name That Chart app</h2> </div> <div id='modolal33-body'> </div> <div id='modolal33-footer'> <h3 id='modolal33-mf'>Keep your image id to trace it</h3> </div> </div> </div>");
+    $("#modolal33").show();
 
+    var modal = document.getElementById('modolal33');
+    var span = document.getElementById("modolal33-close");
+    $("#modolal33-body").empty();
+    $("#modolal33-body").append("<img id='img' src='" + chrome.runtime.getURL('/images/loading.gif') + "'/>");
     span.onclick = function () {
         modal.style.display = "none";
+        $("#modolal33-body")
     };
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            $("#modolal33-body")
         }
     };
     var form = new FormData();
@@ -116,7 +118,7 @@ var save = (image) => {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://namethatchart.herokuapp.com/saveapp",
+        "url": "http://localhost:5000/saveapp",
         "method": "POST",
         "processData": false,
         "contentType": false,
@@ -126,9 +128,8 @@ var save = (image) => {
 
 
     $.ajax(settings).done(function (response) {
-        alert(response);
         $("#img").hide();
-        $(".modal-body").append(response);
+        $("#modolal33-body").append(response);
     });
 };
 
@@ -142,7 +143,7 @@ window.addEventListener('resize', ((timeout) => () => {
 
 chrome.runtime.onMessage.addListener((req, sender, res) => {
     if (req.message === 'init') {
-        res({}) ;// prevent re-injecting
+        res({});// prevent re-injecting
 
         if (!jcrop) {
             image(() => init(() => {

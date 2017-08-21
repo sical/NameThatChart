@@ -1383,17 +1383,17 @@ def getlabel(id):
 def saveapp():
     idu = getid(request.environ["REMOTE_ADDR"])
     file = request.files['local']
-    print(file)
+    print(file.filename)
     s3_client = boto3.client('s3')
 
     _, now = gettimes()
 
-    putdb(
-        "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/app/" + str(
-            idu[0]) + "_" + str(now) + ".png','app')")
-
-    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset /app/' + str(
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/app/' + str(
         idu) + "_" + str(now) + ".png"
+
+
+    putdb("INSERT INTO image (imagepath,`from`) VALUES ('"+fileurl+"','app')")
+
 
     idm = vachercherss("SELECT idimage FROM image WHERE imagepath LIKE '" + fileurl + "'")
 
@@ -1401,8 +1401,8 @@ def saveapp():
     s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "app/" + str(idu) + "_" + str(now) + ".png",
                              ExtraArgs={'ACL': 'public-read'})
 
-    return "Image id is : " + str(
-        idm) + ". \n" + "Please keep this number in order to find this image at : https://namethatchart.herokuapp.com/display_image"
+    return "<strong>Your image id is : " + str(
+        idm) + ". \n</strong></br></br>" + "Please keep this number in order to find this image at : <a href='https://namethatchart.herokuapp.com/display_image'>Our dataset display</a>"
 
 
 @app.route("/datcsv.csv")

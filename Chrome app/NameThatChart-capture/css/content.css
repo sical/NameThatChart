@@ -25,7 +25,7 @@ img#fake-image {
     z-index: 2147483647 !important;
 }
 
-.modal {
+#modolal33 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -41,7 +41,7 @@ img#fake-image {
 }
 
 /* Modal Content */
-.modal-content {
+#modolal33-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -79,33 +79,33 @@ img#fake-image {
 }
 
 /* The Close Button */
-.close {
+#modolal33-close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#modolal33-close:hover,
+#modolal33-close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.modal-header {
+#modolal33-header {
     padding: 2px 16px;
     background-color: #343d46;
     color: white;
 }
 
-.modal-body {
+#modolal33-body {
     padding: 2px 16px;
     min-width: min-content;
     text-align: center;
 }
 
-.modal-footer {
+#modolal33-footer {
     padding: 2px 16px;
     background-color: #343d46;
     color: white;
