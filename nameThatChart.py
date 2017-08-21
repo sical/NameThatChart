@@ -1390,7 +1390,7 @@ def saveapp():
 
     putdb(
         "INSERT INTO image (imagepath,`from`) VALUES ('https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/app/" + str(
-            idu) + "_" + str(now) + ".png','app')")
+            idu[0]) + "_" + str(now) + ".png','app')")
 
     fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset /app/' + str(
         idu) + "_" + str(now) + ".png"

@@ -129,8 +129,6 @@ var save = (image) => {
         alert(response);
         $("#img").hide();
         $(".modal-body").append(response);
-
-
     });
 };
 
