@@ -123,7 +123,7 @@ function fillthem() {
                     contentType: false,
                     data: form
                 });
-                $(".cont").css("display", "inline-block");
+                $(".cont").css("display", "inline");
                 $("#load").css("display", "none");
 
             } else {
@@ -151,8 +151,7 @@ function fillthem() {
                     data: form
                 });
                 setTimeout(function () {
-                    console.log("AAAAAAAAAuUuUUu");
-                    $(".cont").css("display", "inline-block");
+                    $(".cont").css("display", "inline");
                     $("#load").css("display", "none");
                 }, (5000 - (fin.getTime() - debut.getTime())));
             }

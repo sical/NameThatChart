@@ -1383,7 +1383,7 @@ def getlabel(id):
 def saveapp():
     idu = getid(request.environ["REMOTE_ADDR"])
     file = request.files['local']
-
+    print(file)
     s3_client = boto3.client('s3')
 
     _, now = gettimes()

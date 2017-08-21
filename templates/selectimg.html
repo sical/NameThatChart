@@ -18,7 +18,7 @@
     }
 
     #img {
-        display: inline-block;
+        /* display: inline-block;*/
         width: auto;
         max-height: 100%;
         border: solid 2px;
@@ -57,6 +57,11 @@
         margin: 0 auto;
         height: 55%;
         grid-template-columns: 1fr 1fr;
+        margin: 0 auto; /*center aligned*/
+        padding: 0;
+        grid-gap:10px;
+        font-size: 0; /* Remember to change it back to normal font size if have captions */
+        list-style: none;
 
     }
 
@@ -132,6 +137,12 @@
         min-width: 180px;
     }
 
+    .rig_cell {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
 </style>
 
 <!DOCTYPE html>
@@ -171,18 +182,30 @@
         <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
              alt="loading logo"/>
         <div id="fill">
-            <img id="img" class="cont" style="z-index: 0;"
-                 alt="">
-            <img id="img" class="cont" style="z-index: 0"
-                 alt="">
-            <img id="img" class="cont" style="z-index: 0;"
-                 alt="">
-            <img id="img" class="cont" style="z-index: 0;"
-                 alt="">
-            <img id="img" class="cont" style="z-index: 0;"
-                 alt="">
-            <img id="img" class="cont" style="z-index: 0;"
-                 alt="">
+            <div class="rig_cell">
+                <img id="img" class="cont" style="z-index: 0;"
+                     alt="">
+            </div>
+            <div class="rig_cell">
+                <img id="img" class="cont" style="z-index: 0;"
+                     alt="">
+            </div>
+            <div class="rig_cell">
+                <img id="img" class="cont" style="z-index: 0;"
+                     alt="">
+            </div>
+            <div class="rig_cell">
+                <img id="img" class="cont" style="z-index: 0;"
+                     alt="">
+            </div>
+            <div class="rig_cell">
+                <img id="img" class="cont" style="z-index: 0;"
+                     alt="">
+            </div>
+            <div class="rig_cell">
+                <img id="img" class="cont" style="z-index: 0;"
+                     alt="">
+            </div>
         </div>
 
 

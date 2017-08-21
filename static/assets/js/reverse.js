@@ -95,7 +95,7 @@ function fillit() {
                     $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.imagepath + "'/>")
                 });
                 $("#load").css("display", "none");
-                $("#fill").css("display", "inline-block");
+                $("#fill").css("display", "grid");
             } else {
                 setTimeout(function () {
                     $("#title").text("Choose the more fitting image to describe");
@@ -104,7 +104,7 @@ function fillit() {
                         $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
                     });
                     $("#load").css("display", "none");
-                    $("#fill").css("display", "inline-block");
+                    $("#fill").css("display", "grid");
                 }, (3000 - (fin.getTime() - debut.getTime())));
 
             }
