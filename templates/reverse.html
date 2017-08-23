@@ -147,10 +147,9 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/reverse.js') }}"></script>
-
+<input type="hidden" value="{{ test }}" id="id"/>
 <div class="wrapper">
     <nav class="main-nav">
         {% include 'navbar.html' %}

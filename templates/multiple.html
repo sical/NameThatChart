@@ -134,9 +134,14 @@
 <body>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-<script src="{{ url_for('static', filename='assets/js/jquery-1.10.2.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/report.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
+<input type="hidden" value="{{ test }}" id="id"/>
+
 <div class="wrapper">
     <nav class="main-nav">
         {% include 'navbar.html' %}
@@ -180,19 +185,5 @@
         {% include 'footer.html' %}
     </footer>
 </div>
-
-<script TYPE="text/javascript">
-
-
-    $("#gen").click(function () {
-        console.log("LAAAAAAAAA");
-        hash();
-    });
-
-    function hash() {
-        var hash = $.base64.encode('textualimg/' + 3000);
-        base = "http://0.0.0.0:5000/generated/";
-        $("#gen").hide();
-        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
-</script>
+</body>
+</html>

@@ -11,13 +11,9 @@ $(document).ready(function () {
 
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "") + "/";
-    console.log(baseu + "quizz");
-
     waitsetup(false);
-
     document.getElementById("tofill").focus();
     if (where.indexOf('quizz') !== -1) {
-        console.log("LAAAAAAAAAAAAAAAAAA");
         var fin = new Date();
         if (fin.getTime() - debut.getTime() > 3000) {
             $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
@@ -38,20 +34,6 @@ $(document).ready(function () {
     }
 });
 
-$("#nd").click(function (event) {
-    event.preventDefault();
-    report("no_display")
-});
-
-$("#ii").click(function (event) {
-    event.preventDefault();
-    report("Inappropriate_image")
-});
-
-$("#hmc").click(function (event) {
-    event.preventDefault();
-    report("miss_classification")
-});
 
 function report(string) {
     $.ajax({
@@ -59,8 +41,7 @@ function report(string) {
         url: baseu + "report/" + string,
         processData: false,
         contentType: false,
-        success: function (data) {
-            pop();
+        success: function () {
             $("#skip").click()
         }
     });
@@ -74,7 +55,6 @@ $('body').on('click', '#save', function () {
 
     var text = $("#tofill").val();
     $("#tofill").val('');
-    console.log(where.indexOf('quizz') );
     if (where.indexOf('quizz') !== -1) {
         if (text == 'tree map' || text == 'treemap') {
             note = 4
@@ -207,16 +187,16 @@ function waitandload() {
         success: function (data) {
             var fin = new Date();
             data = JSON.parse(data);
-            console.log(data);
             id = data[1];
             window.history.pushState("", "", gethash());
-            console.log(gethash());
             if (fin.getTime() - debut.getTime() > 3200) {
                 $("#img").attr("src", data[0]);
+                $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
                 $("#load").css("display", "none");
             } else {
                 $("#img").attr("src", data[0]);
+                $("#img").attr("value", id);
                 setTimeout(function () {
                     $("#img").css("display", "inline-block");
                     $("#load").css("display", "none");
@@ -258,6 +238,7 @@ function gethash() {
     return base + hash
 }
 
+
 function gen() {
 
     var form = new FormData();
@@ -265,7 +246,7 @@ function gen() {
     $.ajax({
 
         type: "POST",
-        url: "../getimgbyid",
+        url: baseu + "getimgbyid",
         processData: false,
         contentType: false,
         data: form,
@@ -273,16 +254,17 @@ function gen() {
             var fin = new Date();
             data = JSON.parse(data);
             data = JSON.parse(data);
-            id = data[0].id;
-            console.log(data[0].path);
+            id = data[0].idimage;
             if (fin.getTime() - debut.getTime() > 3000) {
 
                 $("#img").attr("src", data[0].path);
+                $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
                 $("#load").css("display", "none");
             } else {
 
                 $("#img").attr("src", data[0].path);
+                $("#img").attr("value", id);
                 setTimeout(function () {
                     $("#img").css("display", "inline-block");
                     $("#load").css("display", "none");

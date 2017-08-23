@@ -5,13 +5,19 @@ var info;
 var images;
 var baseu;
 var where;
-
+var type;
 
 $(document).ready(function () {
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "") + "/";
-    waitsetup(false);
-    fillit();
+    if (where.indexOf('generated') !== -1) {
+        waitsetup(false);
+        gen();
+    } else {
+        waitsetup(false);
+        fillit();
+    }
+
 });
 
 $('body').on('click', '#skip', function () {
@@ -52,7 +58,7 @@ $('body').on('click', '#save', function () {
     var img = $(".selec").attr("value");
     var form = new FormData();
     form.append("image", img);
-    form.append("idtype", info.idtype);
+    form.append("idtype", type);
     pop();
     $.ajax({
         type: "POST",
@@ -85,14 +91,17 @@ function fillit() {
         processData: false,
         contentType: false,
         success: function (data) {
+
             info = JSON.parse(data);
+            window.history.pushState("", "", gethash());
             images = eval(info.images);
+            type = info.idtype;
             var fin = new Date();
             if (fin.getTime() - debut.getTime() > 3000) {
                 $("#title").text("Choose the more fitting image to describe");
                 $("#title").append(" the '" + info.label + "' category");
                 images.forEach(function (image) {
-                    $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.imagepath + "'/>")
+                    $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
                 });
                 $("#load").css("display", "none");
                 $("#fill").css("display", "grid");
@@ -101,7 +110,7 @@ function fillit() {
                     $("#title").text("Choose the more fitting image to describe");
                     $("#title").append(" the '" + info.label + "' category");
                     images.forEach(function (image) {
-                        $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.imagepath + "'/>")
+                        $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
                     });
                     $("#load").css("display", "none");
                     $("#fill").css("display", "grid");
@@ -114,8 +123,6 @@ function fillit() {
 
 function waitsetup(test) {
     debut = new Date();
-
-
     if (test) {
         $("#fill").css("display", "none");
         $("#vald").css("display", "inline-block");
@@ -129,7 +136,6 @@ function waitsetup(test) {
     }
 }
 
-
 $('body').on('click', 'img', function () {
     $("img").each(function () {
         $(this).addClass('unselec')
@@ -139,3 +145,75 @@ $('body').on('click', 'img', function () {
     $(this).removeClass('unselec');
 });
 
+function gethash() {
+
+    var str = "";
+    info.images.forEach(function (row) {
+        str += row.idimage + "-";
+    });
+    str = str.substr(0, str.length - 1);
+    str += "-|" + info.idtype + "|" + info.label;
+
+    var base = baseu + "generated/";
+    var hash = $.base64.encode('reverse/' + id);
+    return base + hash
+}
+
+
+function gen() {
+    $("#fill").empty();
+    var form = new FormData();
+    var temp = $("#id").val();
+
+    temp = temp.split("-");
+
+    var types = temp.pop();
+
+    types = types.split("|");
+
+    var tempstr = "";
+    temp.forEach(function (row) {
+        tempstr += row + " or idimage= "
+    });
+    type = types[1];
+    tempstr = tempstr.substr(0, tempstr.length - 14);
+
+    form.append("action", tempstr);
+
+    $.ajax({
+        type: "POST",
+        url: baseu + "getimgbyid",
+        processData: false,
+        contentType: false,
+        data: form,
+        success: function (data) {
+            info = JSON.parse(data);
+            info = JSON.parse(info);
+            images = info;
+            type = types[1];
+            var fin = new Date();
+            if (fin.getTime() - debut.getTime() > 3000) {
+
+                $("#title").text("Choose the more fitting image to describe");
+                $("#title").append(" the '" + types[2] + "' category");
+
+                images.forEach(function (image) {
+                    $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
+                });
+                $("#load").css("display", "none");
+                $("#fill").css("display", "grid");
+            } else {
+                setTimeout(function () {
+                    $("#title").text("Choose the more fitting image to describe");
+                    $("#title").append(" the '" + types[2] + "' category");
+                    images.forEach(function (image) {
+                        $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
+                    });
+                    $("#load").css("display", "none");
+                    $("#fill").css("display", "grid");
+                }, (3000 - (fin.getTime() - debut.getTime())));
+
+            }
+        }
+    });
+}

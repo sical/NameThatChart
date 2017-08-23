@@ -21,7 +21,6 @@ function getit() {
 $(document).ready(function () {
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "") + "/";
-
     if (where.indexOf('quizz') !== -1) {
         var path = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis16cat/BubbleChart_147.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/AreaGraph_16.gif", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/ParetoChart_499.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/RadarPlot_640.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/VennDiagram_1024.gif"];
         cat = ["Saving .... ", "scatter plot", "Area chart", "Bar Chart", "Radar Chart", "Bubble Chart"];
@@ -37,11 +36,16 @@ $(document).ready(function () {
             $("#" + i + "_txt").text("");
         }
         $("#title").text("Does this belongs in \"" + cat[4] + "\" category");
+    }
+    else if (where.indexOf('generated') !== -1) {
+        waitsetup();
+        gen();
     } else {
         waitsetup();
         fill();
     }
-});
+})
+;
 
 $("#tinderslide").jTinder({
     number: nb,
@@ -109,7 +113,7 @@ $("#tinderslide").jTinder({
 
                         setTimeout(function () {
                                 $("#vald").css("display", "none");
-                                window.location = "swipes"
+                                window.location = baseu + "swipes"
                             }
                             ,
                             (1700)
@@ -182,7 +186,7 @@ $("#tinderslide").jTinder({
 
                     setTimeout(function () {
                             $("#vald").css("display", "none");
-                            window.location = "swipes"
+                            window.location = baseu + "swipes"
                         }
                         ,
                         (1700)
@@ -226,12 +230,10 @@ $("#yes").click(function () {
     if (s) {
         $(".pane" + nb).fadeOut(500);
         setTimeout(function () {
-            $(".pane" + nb+1).css("display", "none");
+            $(".pane" + nb + 1).css("display", "none");
         }, 500);
         tempg.onLike($(".pane" + nb));
         tempg.number = nb;
-        console.log(nb);
-        console.log(tempg.number);
     } else {
         vote(true)
     }
@@ -242,7 +244,7 @@ $("#no").click(function () {
     if (s) {
         $(".pane" + nb).fadeOut(500);
         setTimeout(function () {
-            $(".pane" + nb+1).css("display", "none");
+            $(".pane" + nb + 1).css("display", "none");
         }, 500);
 
         tempg.onDislike($(".pane" + nb));
@@ -256,6 +258,7 @@ $("#no").click(function () {
 });
 
 function fill() {
+
     $.ajax({
         type: "GET",
         url: baseu + "getfive",
@@ -263,6 +266,7 @@ function fill() {
         contentType: false,
         success: function (data) {
             info = JSON.parse(data);
+            window.history.pushState("", "", gethash());
             var i = 1;
             var fin = new Date();
             if (fin.getTime() - debut.getTime() > 1700) {
@@ -364,7 +368,6 @@ function vote(vote) {
                         form.append("idimg", info[nb - 1].idimage);
                         form.append("idtype", info[nb - 1].idtype);
                         $.ajax({
-
                             type: "POST",
                             url: baseu + "logswipes",
                             processData: false,
@@ -385,7 +388,6 @@ function vote(vote) {
                 var vlad = document.getElementById("vald");
                 vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
                 $("#vald").css("display", "inline-block");
-
 
                 setTimeout(function () {
                         $("#vald").css("display", "none");
@@ -423,8 +425,48 @@ $("#skip").click(function () {
             window.location = baseu + "raw"
         }
         else {
-            waitsetup();
-            fill()
+            nb = nb - 1;
+            $("#title").text("Is this a \"" + cat[nb] + "\" ?");
+
+
+            if (nb == 0) {
+                if (where.indexOf('main') !== -1) {
+                    window.location = baseu + "main"
+                } else if (where.indexOf('raw') !== -1) {
+                    window.location = baseu + "raw"
+                }
+                else {
+                    var vlad = document.getElementById("vald");
+                    vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
+                    $("#vald").css("display", "inline-block");
+
+                    setTimeout(function () {
+                            $("#vald").css("display", "none");
+                            window.location = baseu + "swipes"
+                        }
+                        ,
+                        (1700)
+                    );
+
+                }
+            } else {
+                if (s) {
+                    console.log("LAAAAAAAAAAAAAAAAAAAA" + nb);
+
+                    $(".pane" + (nb + 1)).fadeOut(500);
+                    setTimeout(function () {
+                        $(".pane" + nb + 1).css("display", "none");
+                    }, 500);
+                    tempg.number = nb;
+                    console.log(tempg.number);
+
+                } else {
+                    $(".pane" + (nb + 1)).fadeOut(500);
+                    setTimeout(function () {
+                        $(".pane" + nb + 1).css("display", "none");
+                    }, 500);
+                }
+            }
         }
     }
 });
@@ -432,4 +474,112 @@ $("#skip").click(function () {
 function waitsetup() {
     debut = new Date();
     $("#load").css("display", "inline-block");
+}
+
+function gethash() {
+    var str = "";
+    info.forEach(function (row) {
+        str += row.idimage + "_" + row.label + "_" + row.idtype + "-";
+    });
+    str = str.substr(0, str.length - 1);
+    var base = baseu + "generated/";
+    var hash = $.base64.encode('swipes/' + str);
+    return base + hash
+
+}
+
+
+function gen() {
+    var form = new FormData();
+    var temp = $("#id").val();
+    temp = temp.split("-");
+    var infotemp = [];
+
+    temp.forEach(function (row) {
+        infotemp.push(row.split("_"))
+    });
+
+    var tempstr = "";
+    infotemp.forEach(function (row) {
+        tempstr += row[0] + " or idimage= "
+    });
+    tempstr = tempstr.substr(0, tempstr.length - 13);
+    console.log(tempstr);
+
+    form.append("action", tempstr);
+    $.ajax({
+        type: "POST",
+        url: baseu + "getimgbyid",
+        processData: false,
+        contentType: false,
+        data: form,
+        success: function (data) {
+            console.log(data);
+            info = JSON.parse(data);
+            info = JSON.parse(info);
+            var i = 0;
+            infotemp.forEach(function (row) {
+                info[i]['label'] = row[1];
+                info[i]['idtype'] = row[2];
+                i++
+            });
+
+            var i = 1;
+            var fin = new Date();
+            if (fin.getTime() - debut.getTime() > 1700) {
+                info.forEach(function (img) {
+                    cat.push(img.label);
+                    var temp = $('.pane' + i);
+                    temp.css("width", "75%");
+                    temp.css("height", "55%");
+                    temp.css("max-width", "800px");
+                    temp.css("background-color", "#FFF");
+                    temp.css("border", "solid 1px");
+                    temp.css("background-image", 'url("' + img.path + '")');
+                    temp.attr("value", img.idimage);
+                    $("#" + i + "_txt").text(img.label);
+                    $("#title").text("Is this a \"" + cat[nb] + "\" ?");
+                    i++;
+                });
+                $("#load").css("display", "none");
+            } else {
+                setTimeout(function () {
+                        info.forEach(function (img) {
+                            cat.push(img.label);
+                            var temp = $('.pane' + i);
+                            temp.css("width", "75%");
+                            temp.css("height", "55%");
+                            temp.css("max-width", "800px");
+                            temp.css("background-color", "#FFF");
+                            temp.css("border", "solid 1px");
+                            temp.css("background-image", 'url("' + img.path + '")');
+                            temp.attr("value", img.idimage);
+                            $("#" + i + "_txt").text(img.label);
+                            $("#title").text("Is this a \"" + cat[nb] + "\" ?");
+                            i++;
+                        });
+                        $("#load").css("display", "none");
+                    }
+                    ,
+                    (1700 - (fin.getTime() - debut.getTime()))
+                );
+            }
+
+            var form = new FormData();
+            console.log(info);
+            form.append("idimg", info[4].idimage);
+            form.append("idtype", info[4].idtype);
+
+            $.ajax({
+
+                type: "POST",
+                url: baseu + "logswipes",
+                processData: false,
+                contentType: false,
+                data: form
+
+            });
+        }
+    })
+    ;
 }

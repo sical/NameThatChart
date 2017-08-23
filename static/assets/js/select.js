@@ -6,7 +6,7 @@ var info;
 var debut;
 var baseu;
 var where;
-
+var ids;
 
 $(document).ready(function () {
     where = window.location.pathname;
@@ -16,6 +16,9 @@ $(document).ready(function () {
         fillthem2();
 
 
+    } else if (where.indexOf('generated') !== -1) {
+        waitsetup();
+        gen();
     } else {
         waitsetup(false);
         fillthem();
@@ -92,6 +95,7 @@ function fillthem() {
     if (where.indexOf('quizz') !== -1) {
 
     } else {
+        var images;
         $.ajax({
             type: "GET",
             url: baseu + "getselect",
@@ -100,6 +104,7 @@ function fillthem() {
             success: function (data) {
 
                 info = JSON.parse(data);
+                window.history.pushState("", "", gethash());
                 $("#title").append(info.name);
                 type = info.idtype;
 
@@ -108,14 +113,14 @@ function fillthem() {
                 console.log(fin.getTime() + " fin");
                 console.log(fin.getTime() - debut.getTime() + " diff");
                 if (fin.getTime() - debut.getTime() > 5000) {
-                    var images = info.imgs;
+                    images = info.imgs;
                     var image;
-                    var ids = [];
+                    ids = [];
 
                     $("#fill").find(".cont").each(function () {
                         image = images.pop();
-                        ids.push(image.id);
-                        $(this).attr("value", image.id);
+                        ids.push(image.idimage);
+                        $(this).attr("value", image.idimage);
                         $(this).attr("src", image.path);
 
                     });
@@ -135,14 +140,14 @@ function fillthem() {
                     $("#load").css("display", "none");
 
                 } else {
-                    var images = info.imgs;
+                    images = info.imgs;
                     var image;
-                    var ids = [];
+                    ids = [];
 
                     $("#fill").find(".cont").each(function () {
                         image = images.pop();
-                        ids.push(image.id);
-                        $(this).attr("value", image.id);
+                        ids.push(image.idimage);
+                        $(this).attr("value", image.idimage);
                         $(this).attr("src", image.path);
                     });
 
@@ -190,14 +195,10 @@ function fillthem2() {
 $('body').on('click', '#skip', function () {
 
     waitsetup(false);
-    var images = [];
-    info.imgs.forEach(function (row) {
-        images.push(row.id)
-    });
 
     var firm = new FormData();
     firm.append("action", "skip");
-    firm.append("ids", images);
+    firm.append("ids", ids);
     firm.append("idtype", type);
     $.ajax({
         type: "POST",
@@ -228,7 +229,6 @@ $('body').on('click', '#skip', function () {
 
 function waitsetup(test) {
     debut = new Date();
-    console.log(debut.getTime());
     if (test) {
         $(".cont").css("display", "none");
         $("#vald").css("display", "inline-block");
@@ -239,5 +239,121 @@ function waitsetup(test) {
     } else {
         $(".cont").css("display", "none");
         $("#load").css("display", "inline-block");
+    }
+}
+
+function gethash() {
+    console.log(info);
+    var str = "";
+    info.imgs.forEach(function (row) {
+        str += row.idimage + "-";
+    });
+    str = str.substr(0, str.length - 1);
+    str += "-|" + info.idtype + "|" + info.name;
+    var base = baseu + "generated/";
+    var hash = $.base64.encode('selectimg/' + str);
+    return base + hash
+
+}
+
+function gen() {
+    if (where.indexOf('quizz') !== -1) {
+
+    } else {
+        var images;
+        var form = new FormData();
+        var temp = $("#id").val();
+
+        temp = temp.split("-");
+        var types = temp.pop();
+
+        types = types.split("|");
+
+        var tempstr = "";
+        temp.forEach(function (row) {
+            tempstr += row + " or idimage= "
+        });
+
+        type=types[1];
+        tempstr = tempstr.substr(0, tempstr.length - 13);
+        console.log(tempstr);
+        form.append("action", tempstr);
+
+
+        $.ajax({
+            type: "POST",
+            url: baseu + "getimgbyid",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                console.log(data);
+                info = JSON.parse(data);
+                info = JSON.parse(info);
+
+                $("#title").append(types[2]);
+
+                var fin = new Date();
+                if (fin.getTime() - debut.getTime() > 5000) {
+                    images = info;
+                    console.log(images);
+                    var image;
+                    ids = [];
+
+                    $("#fill").find(".cont").each(function () {
+                        image = images.pop();
+                        ids.push(image.idimage);
+                        $(this).attr("value", image.idimage);
+                        $(this).attr("src", image.path);
+
+                    });
+
+                    var form = new FormData();
+                    form.append("action", "visible");
+                    form.append("ids", ids);
+                    form.append("idtype", types[1]);
+                    $.ajax({
+                        type: "POST",
+                        url: baseu + "logm/selection",
+                        processData: false,
+                        contentType: false,
+                        data: form
+                    });
+                    $(".cont").css("display", "inline");
+                    $("#load").css("display", "none");
+
+                } else {
+                    images = info;
+                    var image;
+                    ids = [];
+                    console.log(info);
+                    $("#fill").find(".cont").each(function () {
+                        image = images.pop();
+                        ids.push(image.idimage);
+                        $(this).attr("value", image.idimage);
+                        $(this).attr("src", image.path);
+                    });
+
+                    var form = new FormData();
+                    form.append("ids", ids);
+                    form.append("action", "visible");
+                    form.append("idtype", types[1]);
+                    $.ajax({
+                        type: "POST",
+                        url: baseu + "logm/selection",
+                        processData: false,
+                        contentType: false,
+                        data: form
+                    });
+                    setTimeout(function () {
+                        $(".cont").css("display", "inline");
+                        $("#load").css("display", "none");
+                    }, (5000 - (fin.getTime() - debut.getTime())));
+                }
+
+
+            }
+
+        });
     }
 }

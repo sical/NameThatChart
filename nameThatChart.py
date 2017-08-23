@@ -561,6 +561,7 @@ def savemultiple():
     cursor = con.cursor()
     final = "INSERT INTO multiple (idimage,idtype,iduser,`time`,`date`,`event`) VALUES (" + str(idimage) + "," + str(
         idtype) + "," + str(idu) + ",'" + str(timestamp) + "','" + str(now) + "','chosen') "
+    print(final)
     cursor.execute(final)
     cursor.close()
     con.commit()
@@ -776,53 +777,64 @@ def upjonimg():
         s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "upload/" + str(idu) + "_" + str(now) + "." + ext,
                                  ExtraArgs={'ACL': 'public-read'})
     else:
+        if ext != 'json':
+            return 'Must be a picture or json file', 403
+        try:
+            filestring = ""
+            for line in file:
+                filestring += str(line)[2:][:-3]
 
-        filestring = ""
-        for line in file:
-            filestring += str(line)[2:][:-3]
+            data = json.loads(filestring)
 
-        data = json.loads(filestring)
+            print(len(data))
+            for obj in data:
+                if "url" in obj:
 
-        for obj in data:
-            if "url" in obj:
-
-                nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
-
-                name = wget.detect_filename(obj['url'])
-                temp = name.split('.')
-                ext = str(temp[len(temp) - 1])
-                if "title" in obj:
-                    title = obj["title"].replace(" ", "_")
-                    filename = str(nb) + "_" + title + "." + ext
-                else:
-                    title = ""
-                    filename = str(nb) + "." + ext
-
-                wget.download(obj['url'], os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename))
-
-                s3_client = boto3.client('s3')
-                with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename), "rb") as f:
-                    _, now = gettimes()
-                    s3_client.upload_fileobj(f, 'namethatchart-imagedataset',
-                                             "upload/" + str(idu) + "_" + str(now) + "." + ext,
-                                             ExtraArgs={'ACL': 'public-read'})
-
-                url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + str(idu) + "_" + str(
-                    now) + "." + ext
-
-                if 'category' in obj:
-                    if 'difficulty' in obj:
-                        query = "INSERT INTO image (imagepath,`from`,title,category,difficulty) VALUES ('" + url + "','upload','" + title + "','" + \
-                                obj['category'] + "','" + obj["difficulty"] + "')"
+                    nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+                    print(obj)
+                    name = wget.detect_filename(obj['url'])
+                    temp = name.split('.')
+                    ext = str(temp[len(temp) - 1])
+                    if "title" in obj:
+                        title = obj["title"].replace(" ", "_")
+                        filename = str(nb) + "_" + title + "." + ext
                     else:
-                        query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + \
-                                obj['category'] + "')"
+                        title = ""
+                        filename = str(nb) + "." + ext
+
+                    wget.download(obj['url'], os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename))
+
+                    s3_client = boto3.client('s3')
+                    with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename), "rb") as f:
+                        _, now = gettimes()
+                        s3_client.upload_fileobj(f, 'namethatchart-imagedataset',
+                                                 "upload/" + str(idu) + "_" + str(now) + "." + ext,
+                                                 ExtraArgs={'ACL': 'public-read'})
+
+                    url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + str(
+                        idu) + "_" + str(
+                        now) + "." + ext
+
+                    if 'category' in obj:
+                        if 'difficulty' in obj:
+                            query = "INSERT INTO image (imagepath,`from`,title,category,difficulty) VALUES ('" + url + "','upload','" + title + "','" + \
+                                    obj['category'] + "','" + obj["difficulty"] + "')"
+                        else:
+                            query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + \
+                                    obj['category'] + "')"
+                    else:
+                        query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + url + "','upload','" + title + "')"
+
+                    putdb(query)
                 else:
-                    query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + url + "','upload','" + title + "')"
-
-                putdb(query)
-
-    return 'ok'
+                    return 'invalid json', 400
+        except Exception as e:
+            if 'timeout' in str(e):
+                return 'connexion timeout', 502
+            elif 'string indices must be integers' in str(e):
+                return 'invalid url', 403
+            return 'invalid jsons', 400
+    return 'Uploaded', 200
 
 
 # Group user rows and make average of time
@@ -978,7 +990,7 @@ def getselect():
                                                                       '"imgs": ['
 
     for row in imgs:
-        result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + '},'
+        result += '{"path": "' + str(row[0]) + '","idimage":' + str(row[1]) + '},'
 
     result = result[:-1]
     result += ']' \
@@ -1133,7 +1145,7 @@ def getimgbyid():
     cursor.execute("SELECT DISTINCT imagepath,idimage FROM image WHERE idimage =" + str(action))
     data = cursor.fetchall()
     for row in data:
-        result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + '},'
+        result += '{"path": "' + str(row[0]) + '","idimage":' + str(row[1]) + '},'
 
     result = result[:-1]
 
@@ -1189,7 +1201,7 @@ def getreverse():
     data = cursor.fetchall()
     res = ''
     for row in data:
-        res += '{"idimage":' + str(row[0]) + ',"imagepath":"' + str(row[1]) + '"},'
+        res += '{"idimage":' + str(row[0]) + ',"path":"' + str(row[1]) + '"},'
 
     res = res[:-1]
     result = '{"idtype":"' + str(idt) + '",' \
