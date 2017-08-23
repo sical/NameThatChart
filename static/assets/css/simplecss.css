@@ -307,6 +307,11 @@
         max-height: 125px;
     }
 
+    #vald {
+        max-height: 160px;
+        max-width: 220px;
+    }
+
     .imgmod {
         display: none;
     }
@@ -438,7 +443,6 @@
         transform: translate(-50%, -20%);
     }
 
-
     .imgtoch {
         width: 49%;
         height: 15%;
@@ -460,6 +464,10 @@
         text-align: center
     }
 
+    #vald {
+        max-height: 220px;
+        max-width: 280px;
+    }
 
     .imginfo {
         margin-left: 5%;
@@ -633,7 +641,6 @@
 }
 
 @media only screen and (max-device-width: 400px) {
-
 
     .centerswi {
         top: 57%;

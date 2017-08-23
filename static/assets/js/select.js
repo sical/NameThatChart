@@ -12,8 +12,10 @@ $(document).ready(function () {
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "") + "/";
     if (where.indexOf('quizz') !== -1) {
+        waitsetup(false);
         fillthem2();
-        $("#gen").hide();
+
+
     } else {
         waitsetup(false);
         fillthem();
@@ -49,7 +51,10 @@ $('body').on('click', '#save', function () {
                 contentType: false,
                 data: form,
                 success: function () {
-                    window.location = baseu + "main"
+                    setTimeout(function () {
+                        $("#vald").css("display", "none");
+                        window.location = baseu + "main"
+                    }, (1700));
                 }
             })
         } else {
@@ -84,94 +89,106 @@ $('body').on('click', '#save', function () {
 });
 
 function fillthem() {
-    $.ajax({
-        type: "GET",
-        url: baseu + "getselect",
-        processData: false,
-        contentType: false,
-        success: function (data) {
+    if (where.indexOf('quizz') !== -1) {
 
-            info = JSON.parse(data);
-            $("#title").append(info.name);
-            type = info.idtype;
+    } else {
+        $.ajax({
+            type: "GET",
+            url: baseu + "getselect",
+            processData: false,
+            contentType: false,
+            success: function (data) {
 
-            var fin = new Date();
-            console.log(debut.getTime() + " debut");
-            console.log(fin.getTime() + " fin");
-            console.log(fin.getTime() - debut.getTime() + " diff");
-            if (fin.getTime() - debut.getTime() > 5000) {
-                var images = info.imgs;
-                var image;
-                var ids = [];
+                info = JSON.parse(data);
+                $("#title").append(info.name);
+                type = info.idtype;
 
-                $("#fill").find(".cont").each(function () {
-                    image = images.pop();
-                    ids.push(image.id);
-                    $(this).attr("value", image.id);
-                    $(this).attr("src", image.path);
+                var fin = new Date();
+                console.log(debut.getTime() + " debut");
+                console.log(fin.getTime() + " fin");
+                console.log(fin.getTime() - debut.getTime() + " diff");
+                if (fin.getTime() - debut.getTime() > 5000) {
+                    var images = info.imgs;
+                    var image;
+                    var ids = [];
 
-                });
+                    $("#fill").find(".cont").each(function () {
+                        image = images.pop();
+                        ids.push(image.id);
+                        $(this).attr("value", image.id);
+                        $(this).attr("src", image.path);
 
-                var form = new FormData();
-                form.append("action", "visible");
-                form.append("ids", ids);
-                form.append("idtype", type);
-                $.ajax({
-                    type: "POST",
-                    url: baseu + "logm/selection",
-                    processData: false,
-                    contentType: false,
-                    data: form
-                });
-                $(".cont").css("display", "inline");
-                $("#load").css("display", "none");
+                    });
 
-            } else {
-                var images = info.imgs;
-                var image;
-                var ids = [];
-
-                $("#fill").find(".cont").each(function () {
-                    image = images.pop();
-                    ids.push(image.id);
-                    $(this).attr("value", image.id);
-                    $(this).attr("src", image.path);
-                });
-
-                var form = new FormData();
-                console.log(info);
-                form.append("ids", ids);
-                form.append("action", "visible");
-                form.append("idtype", type);
-                $.ajax({
-                    type: "POST",
-                    url: baseu + "logm/selection",
-                    processData: false,
-                    contentType: false,
-                    data: form
-                });
-                setTimeout(function () {
+                    var form = new FormData();
+                    form.append("action", "visible");
+                    form.append("ids", ids);
+                    form.append("idtype", type);
+                    $.ajax({
+                        type: "POST",
+                        url: baseu + "logm/selection",
+                        processData: false,
+                        contentType: false,
+                        data: form
+                    });
                     $(".cont").css("display", "inline");
                     $("#load").css("display", "none");
-                }, (5000 - (fin.getTime() - debut.getTime())));
+
+                } else {
+                    var images = info.imgs;
+                    var image;
+                    var ids = [];
+
+                    $("#fill").find(".cont").each(function () {
+                        image = images.pop();
+                        ids.push(image.id);
+                        $(this).attr("value", image.id);
+                        $(this).attr("src", image.path);
+                    });
+
+                    var form = new FormData();
+                    console.log(info);
+                    form.append("ids", ids);
+                    form.append("action", "visible");
+                    form.append("idtype", type);
+                    $.ajax({
+                        type: "POST",
+                        url: baseu + "logm/selection",
+                        processData: false,
+                        contentType: false,
+                        data: form
+                    });
+                    setTimeout(function () {
+                        $(".cont").css("display", "inline");
+                        $("#load").css("display", "none");
+                    }, (5000 - (fin.getTime() - debut.getTime())));
+                }
+
+
             }
 
-
-        }
-    });
+        });
+    }
 }
 
 function fillthem2() {
-    $("#fill").empty();
     var imgues = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_205.gif", "static/assets/img/datasets/quizz/1.png", "static/assets/img/datasets/quizz/0.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_224.gif", "static/assets/img/datasets/quizz/3.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/BarGraph_91.gif"];
-    $("#title").append("Histogram");
+    $("#title").append("'Histogram'");
     var i = 0;
-    imgues.forEach(function (img) {
-        $("#fill").append("<img class='imgsel cont' value='" + i + "' src=" + img + " />")
-    })
+    $("#fill").find(".cont").each(function () {
+        $(this).attr("value", i);
+        $(this).attr("src", imgues[i]);
+        i++
+    });
+
+    setTimeout(function () {
+        $(".cont").css("display", "inline-block");
+        $("#load").css("display", "none");
+    }, (1800));
 }
 
 $('body').on('click', '#skip', function () {
+
     waitsetup(false);
     var images = [];
     info.imgs.forEach(function (row) {

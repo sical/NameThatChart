@@ -99,6 +99,15 @@
         padding-bottom: 20px;
     }
 
+    #vald {
+        display: inline-block;
+        width: auto;
+        max-height: 100%;
+        min-height: 160px;
+        min-width: 180px;
+    }
+
+
 </style>
 
 <!DOCTYPE html>
@@ -111,6 +120,7 @@
     <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/dropzone.css') }}" rel="stylesheet"/>
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
 </head>
 <body>
@@ -119,10 +129,9 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script src="{{ url_for('static', filename='assets/js/dropzone.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/uploadimg.js') }}"></script>
+
 <div class="wrapper">
     <nav class="main-nav">
         {% include 'navbar.html' %}
@@ -136,54 +145,51 @@
 
     <article class="content">
         <div>
-            <h4 style=" margin-bottom: 5%;">Upload using form</h4>
+            <h4 style=" margin-bottom: 5%;">Upload using URL</h4>
             <div id="features">
-                <form id="form" style="margin-bottom:76px ">
-                    <table style="display: inline-block">
-                        <tr>
-                            <td id="td">Type of visualization</td>
-                            <td id="td"><input type="text" class="form-control" name="name" id="name"
-                                               placeholder="Title of the visualization"></td>
-                        </tr>
-                        <tr>
-                            <td id="td"> Url of the picture</td>
-                            <td id="td"><input type="text" class="form-control" name="url" id="url"
-                                               placeholder="URL of the picture"></td>
-                        </tr>
-                        <tr>
-                            <td id="td">difficulty</td>
-                            <td id="td">
-                                <select name="cat" id="sel" class="selectpicker" multiple data-max-options="1">
-                                    <option>Standard</option>
-                                    <option>Complex</option>
-                                    <option>Historical</option>
-                                </select>
+
+                <table style="display: inline-block">
+                    <tr>
+                        <form id="form" action="/saveupimg" method="post" style="margin-bottom:76px ">
+                            <td id="td">Url of the picture
+                                <input type="text" class="form-control" name="url" id="url"
+                                       placeholder="URL of the picture">
                             </td>
-                        </tr>
-                        <tr>
                             <td id="td" colspan="2">
                                 <button class="btn" id="send"> Submit</button>
                             </td>
-                        </tr>
-                    </table>
+                        </form>
 
-                </form>
+                    </tr>
+                </table>
 
             </div>
+            <img class="up" style="display: none" id="vald"
+                 src="{{ url_for('static', filename='assets/img/source.gif') }}"
+                 alt="validation logo"/>
         </div>
-        <div style="margin-top: -5%">
+        <div>
             <h3>OR</h3>
             <hr>
         </div>
-        <div id="drag" style="display: inline-block">
+        <div style="display: inline-block">
             <h4 style=" margin-bottom: 5%;">
-                Upload Using a Json file
+                Upload Using a Json file OR a picture
             </h4>
+            <div>
+                Json files must match one of the following content: ( <a id="demo" href="/demo.json"> click here to see
+                it</a> )
+                <form action="/upjsonimg" method="post" class=" dz-file-preview dz-image-preview dz-preview dropzone needsclick dz-clickable" id="demo-upload">
 
-            <div id="uploade">
-                <form>
-                    <input class="btn" type='file' id="imgInp" name="imgInp"/>
+                    <div class="dz-message needsclick">
+                        Drop here or click to upload. <strong>JSON</strong> or <strong>Pictures</strong> (only .png .
+                        jpeg and .svg images allowed)
+                        <br>
+                        <span class="note needsclick">(Files will be uploaded without any delay)</span>
+                    </div>
+
                 </form>
+
             </div>
         </div>
 
@@ -197,14 +203,4 @@
 <script TYPE="text/javascript">
 
 
-    $("#gen").click(function () {
-        hash();
-    });
-
-    function hash() {
-        var hash = $.base64.encode('textualimg/' + 3000);
-        base = "http://0.0.0.0:5000/generated/";
-        $("#gen").hide();
-        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
 </script>

@@ -118,7 +118,7 @@ var save = (image) => {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://localhost:5000/saveapp",
+        "url": "https://namethatchart.herokuapp.com/saveapp",
         "method": "POST",
         "processData": false,
         "contentType": false,

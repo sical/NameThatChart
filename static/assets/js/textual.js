@@ -9,31 +9,34 @@ var where;
 
 $(document).ready(function () {
 
-        waitsetup(false);
-        where = window.location.pathname;
-        baseu = window.location.href.replace(where, "") + "/";
-        document.getElementById("tofill").focus();
-        if (where.indexOf('quizz') !== -1) {
-            var fin = new Date();
-            if (fin.getTime() - debut.getTime() > 3000) {
-                $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+    where = window.location.pathname;
+    baseu = window.location.href.replace(where, "") + "/";
+    console.log(baseu + "quizz");
+
+    waitsetup(false);
+
+    document.getElementById("tofill").focus();
+    if (where.indexOf('quizz') !== -1) {
+        console.log("LAAAAAAAAAAAAAAAAAA");
+        var fin = new Date();
+        if (fin.getTime() - debut.getTime() > 3000) {
+            $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+            $("#img").css("display", "inline-block");
+            $("#load").css("display", "none");
+        } else {
+            $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
+            setTimeout(function () {
                 $("#img").css("display", "inline-block");
                 $("#load").css("display", "none");
-            } else {
-                $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
-                setTimeout(function () {
-                    $("#img").css("display", "inline-block");
-                    $("#load").css("display", "none");
-                }, (3000 - (fin.getTime() - debut.getTime())));
-            }
-
-        } else if (where.indexOf('generated') !== -1) {
-            gen();
-        } else {
-            waitandload();
+            }, (3000 - (fin.getTime() - debut.getTime())));
         }
+
+    } else if (where.indexOf('generated') !== -1) {
+        gen();
+    } else {
+        waitandload();
     }
-);
+});
 
 $("#nd").click(function (event) {
     event.preventDefault();
@@ -71,6 +74,7 @@ $('body').on('click', '#save', function () {
 
     var text = $("#tofill").val();
     $("#tofill").val('');
+    console.log(where.indexOf('quizz') );
     if (where.indexOf('quizz') !== -1) {
         if (text == 'tree map' || text == 'treemap') {
             note = 4
@@ -88,7 +92,11 @@ $('body').on('click', '#save', function () {
             contentType: false,
             data: form,
             success: function () {
-                window.location = baseu + "quizz"
+                setTimeout(function () {
+                    $("#vald").css("display", "none");
+                    window.location = baseu + "quizz"
+                }, (1700));
+
             }
         })
     } else {

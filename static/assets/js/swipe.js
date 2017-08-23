@@ -1,7 +1,8 @@
 /**
  * Created by theo on 8/2/17.
  */
-var cat = ["reaching ..."];
+
+var cat = ["Saving  ..."];
 var nb = 5;
 var info = [];
 var width = screen.width;
@@ -9,7 +10,8 @@ var height = screen.height;
 var note = 0;
 var baseu;
 var where;
-
+var tempg;
+var s = false;
 function getit() {
     var res = [];
     res.push(info[nb - 1].idimage);
@@ -22,7 +24,7 @@ $(document).ready(function () {
 
     if (where.indexOf('quizz') !== -1) {
         var path = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis16cat/BubbleChart_147.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/AreaGraph_16.gif", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/ParetoChart_499.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/RadarPlot_640.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/VennDiagram_1024.gif"];
-        cat = ["scatter plot", "Area chart", "Bar Chart", "Radar Chart", "Bubble Chart"];
+        cat = ["Saving .... ", "scatter plot", "Area chart", "Bar Chart", "Radar Chart", "Bubble Chart"];
 
         for (var i = 0; i < 5; i++) {
             var temp = $('.pane' + (i + 1));
@@ -33,8 +35,8 @@ $(document).ready(function () {
             temp.css("border", "solid 1px");
             temp.css("background-image", 'url("' + path[i] + '")');
             $("#" + i + "_txt").text("");
-            $("#brand").text("Does this belongs in \"" + cat[4] + "\" category");
         }
+        $("#title").text("Does this belongs in \"" + cat[4] + "\" category");
     } else {
         waitsetup();
         fill();
@@ -42,84 +44,107 @@ $(document).ready(function () {
 });
 
 $("#tinderslide").jTinder({
-
+    number: nb,
     onDislike: function (item) {
+        tempg = this;
+        console.log("DIF" + nb + "     " + tempg.number);
+        s = true;
+        console.log(nb + " DEBUT");
+        console.log(this.number);
+        if (item.index() > nb - 1) {
+            item.prevObject.remove(item.index());
 
-        if (where.indexOf('quizz') !== -1) {
-            $("#brand").text("Is this a \"" + cat[nb - 2] + " \" ?");
-            nb -= 1;
-            if (item.index() == 0 || item.index() == 2 || item.index() == 4) {
-                note += 1
-            }
-            if (item.index() == 0) {
+            tempg.number = nb;
 
-                done(note);
-            }
         } else {
-            nb = nb - 1;
-            var form = new FormData();
-            form.append("vote", false);
-            form.append("idimage", info[item.index()].idimage);
-            form.append("idtype", info[item.index()].idtype);
-            $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
-            $.ajax({
-                type: "POST",
-                url: baseu + "saveswipe",
-                processData: false,
-                contentType: false,
-                data: form,
-                success: function () {
-                    if (item.index() - 1 >= 0) {
-                        var form = new FormData();
-                        form.append("idimg", info[item.index() - 1].idimage);
-                        form.append("idtype", info[item.index() - 1].idtype);
-                        $.ajax({
-                            type: "POST",
-                            url: baseu + "logswipes",
-                            processData: false,
-                            contentType: false,
-                            data: form
-                        });
-                    }
-                }
-            });
-            if (item.index() == 0) {
-                if (where.indexOf('main') !== -1) {
-                    window.location = baseu + "main"
-                } else if (where.indexOf('raw') !== -1) {
-                    window.location = baseu + "raw"
-                }
-                else {
-                    $("#vald").css("display", "inline-block");
 
-                    setTimeout(function () {
-                            $("#vlad").css("display", "none");
-                            window.location = "swipes"
+            if (where.indexOf('quizz') !== -1) {
+                $("#title").text("Is this a \"" + cat[nb - 1] + " \" ?");
+                if (nb == 1 || nb == 3 || nb == 5) {
+                    note += 1
+                }
+                if (nb == 1) {
+                    $("#vald").css("display", "inline-block");
+                    done(note);
+                }
+
+            } else {
+                nb = nb - 1;
+                var form = new FormData();
+                form.append("vote", false);
+                form.append("idimage", info[nb - 1].idimage);
+                form.append("idtype", info[nb - 1].idtype);
+                $("#title").text("Is this a \"" + cat[nb] + "\" ?");
+                $.ajax({
+                    type: "POST",
+                    url: baseu + "saveswipe",
+                    processData: false,
+                    contentType: false,
+                    data: form,
+                    success: function () {
+                        if (nb > 0) {
+                            var form = new FormData();
+                            form.append("idimg", info[nb - 1].idimage);
+                            form.append("idtype", info[nb - 1].idtype);
+                            $.ajax({
+                                type: "POST",
+                                url: baseu + "logswipes",
+                                processData: false,
+                                contentType: false,
+                                data: form
+                            });
                         }
-                        ,
-                        (1700)
-                    );
+                    }
+                });
+                if (item.index() == 0) {
+                    if (where.indexOf('main') !== -1) {
+                        window.location = baseu + "main"
+                    } else if (where.indexOf('raw') !== -1) {
+                        window.location = baseu + "raw"
+                    }
+                    else {
+                        var vlad = document.getElementById("vald");
+                        vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
+                        $("#vald").css("display", "inline-block");
+
+                        setTimeout(function () {
+                                $("#vald").css("display", "none");
+                                window.location = "swipes"
+                            }
+                            ,
+                            (1700)
+                        );
+                    }
                 }
             }
         }
+        console.log(nb + " FIN");
     },
     onLike: function (item) {
+        tempg = this;
+
+        console.log("DIF" + nb + "     " + tempg.number);
+        s = true;
+        console.log(nb + " DEBUT");
         if (where.indexOf('quizz') !== -1) {
-            $("#brand").text("Is this a \"" + cat[nb - 2] + "\" ?");
-            nb -= 1;
+            $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
+
             if (item.index() == 1 || item.index() == 3) {
                 note += 1
             }
+            nb -= 1;
             if (item.index() == 0) {
+                $("#vald").css("display", "inline-block");
                 done(note);
             }
         } else {
-            nb = nb - 1;
+
             var form = new FormData();
             form.append("vote", true);
-            form.append("idimage", info[item.index()].idimage);
-            form.append("idtype", info[item.index()].idtype);
-            $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
+            form.append("idimage", info[nb - 1].idimage);
+            form.append("idtype", info[nb - 1].idtype);
+            $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
+            nb = nb - 1;
             $.ajax({
                     type: "POST",
                     url: baseu + "saveswipe",
@@ -127,10 +152,10 @@ $("#tinderslide").jTinder({
                     contentType: false,
                     data: form,
                     success: function () {
-                        if (item.index() - 1 >= 0) {
+                        if (nb > 0) {
                             var form = new FormData();
-                            form.append("idimg", info[item.index() - 1].idimage);
-                            form.append("idtype", info[item.index() - 1].idtype);
+                            form.append("idimg", info[nb - 1].idimage);
+                            form.append("idtype", info[nb - 1].idtype);
                             $.ajax({
 
                                 type: "POST",
@@ -143,16 +168,20 @@ $("#tinderslide").jTinder({
                     }
                 }
             );
-            if (item.index() == 0) {
+            if (nb == 0) {
                 if (where.indexOf('main') !== -1) {
                     window.location = baseu + "main"
                 } else if (where.indexOf('raw') !== -1) {
                     window.location = baseu + "raw"
                 }
                 else {
+                    var vlad = document.getElementById("vald");
+                    vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
                     $("#vald").css("display", "inline-block");
+
+
                     setTimeout(function () {
-                            $("#vlad").css("display", "none");
+                            $("#vald").css("display", "none");
                             window.location = "swipes"
                         }
                         ,
@@ -162,13 +191,16 @@ $("#tinderslide").jTinder({
                 }
             }
         }
-    },
+        console.log(nb + " FIN");
+    }
+    ,
     animationRevertSpeed: 200,
     animationSpeed: 400,
     threshold: 1,
     likeSelector: '.like',
-    dislikeSelector: '.dislike'
-});
+    dislikeSelector: '.dislike',
+})
+;
 
 function done(val) {
     var form = new FormData();
@@ -179,11 +211,49 @@ function done(val) {
         processData: false,
         contentType: false,
         data: form,
-        success: function (data) {
-            window.location = baseu + "quizz"
+        success: function () {
+            setTimeout(function () {
+                $("#vald").css("display", "none");
+                window.location = baseu + "quizz"
+            }, (1700));
+
         }
     })
 }
+
+
+$("#yes").click(function () {
+    if (s) {
+        $(".pane" + nb).fadeOut(500);
+        setTimeout(function () {
+            $(".pane" + nb+1).css("display", "none");
+        }, 500);
+        tempg.onLike($(".pane" + nb));
+        tempg.number = nb;
+        console.log(nb);
+        console.log(tempg.number);
+    } else {
+        vote(true)
+    }
+
+});
+
+$("#no").click(function () {
+    if (s) {
+        $(".pane" + nb).fadeOut(500);
+        setTimeout(function () {
+            $(".pane" + nb+1).css("display", "none");
+        }, 500);
+
+        tempg.onDislike($(".pane" + nb));
+        tempg.number = nb;
+        console.log(tempg.number);
+
+    } else {
+        vote(false);
+    }
+
+});
 
 function fill() {
     $.ajax({
@@ -207,7 +277,7 @@ function fill() {
                     temp.css("background-image", 'url("' + img.path + '")');
                     temp.attr("value", img.idimage);
                     $("#" + i + "_txt").text(img.label);
-                    $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
+                    $("#title").text("Is this a \"" + cat[nb] + "\" ?");
                     i++;
                 });
                 $("#load").css("display", "none");
@@ -224,7 +294,7 @@ function fill() {
                             temp.css("background-image", 'url("' + img.path + '")');
                             temp.attr("value", img.idimage);
                             $("#" + i + "_txt").text(img.label);
-                            $("#brand").text("Is this a \"" + cat[nb] + "\" ?");
+                            $("#title").text("Is this a \"" + cat[nb] + "\" ?");
                             i++;
                         });
                         $("#load").css("display", "none");
@@ -250,6 +320,85 @@ function fill() {
         }
     })
     ;
+}
+
+function vote(vote) {
+    console.log(tempg);
+    console.log(nb + " DEBUT");
+    console.log();
+    var temp = $('.pane' + nb);
+    temp.fadeOut(500);
+    setTimeout(function () {
+        temp.hide();
+        console.log(nb + " VOTE");
+        $(".pane" + nb + 1).css("display", "none");
+        temp.css("z-index", "-4");
+    }, 500);
+
+    if (where.indexOf('quizz') !== -1) {
+        $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
+        if (nb == 2 || nb == 4) {
+            note += 1
+        }
+        nb -= 1;
+        if (nb == 0) {
+            done(note);
+        }
+    } else {
+        var form = new FormData();
+        form.append("vote", vote);
+        form.append("idimage", info[nb - 1].idimage);
+        form.append("idtype", info[nb - 1].idtype);
+        $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
+        nb = nb - 1;
+        $.ajax({
+                type: "POST",
+                url: baseu + "saveswipe",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function () {
+                    if (nb > 0) {
+                        var form = new FormData();
+
+                        form.append("idimg", info[nb - 1].idimage);
+                        form.append("idtype", info[nb - 1].idtype);
+                        $.ajax({
+
+                            type: "POST",
+                            url: baseu + "logswipes",
+                            processData: false,
+                            contentType: false,
+                            data: form
+                        });
+                    }
+                }
+            }
+        );
+        if (nb == 0) {
+            if (where.indexOf('main') !== -1) {
+                window.location = baseu + "main"
+            } else if (where.indexOf('raw') !== -1) {
+                window.location = baseu + "raw"
+            }
+            else {
+                var vlad = document.getElementById("vald");
+                vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
+                $("#vald").css("display", "inline-block");
+
+
+                setTimeout(function () {
+                        $("#vald").css("display", "none");
+                        window.location = "swipes"
+                    }
+                    ,
+                    (1700)
+                );
+
+            }
+        }
+    }
+    console.log(nb + " FIN");
 }
 
 $("#skip").click(function () {
@@ -279,7 +428,6 @@ $("#skip").click(function () {
         }
     }
 });
-
 
 function waitsetup() {
     debut = new Date();

@@ -11,9 +11,17 @@ var debut;
 $(document).ready(function () {
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "");
+    console.log(where.indexOf('quizz'));
     waitsetup(false);
     if (where.indexOf('quizz') !== -1) {
-        $("#img").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg")
+        var fin = new Date();
+
+        $("#img").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg");
+        setTimeout(function () {
+            $("#img").css("display", "inline-block");
+            $(".but").css("display", "inline-block");
+            $("#load").css("display", "none");
+        }, (3200 - (fin.getTime() - debut.getTime())));
     } else {
         getimg();
     }
@@ -147,7 +155,11 @@ function done(text) {
         contentType: false,
         data: form,
         success: function () {
-            window.location = baseu + "/quizz"
+
+            setTimeout(function () {
+                $("#vald").css("display", "none");
+                window.location = baseu + "/quizz"
+            }, (1700));
         }
     })
 }

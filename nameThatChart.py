@@ -8,7 +8,7 @@ import base64
 import boto3
 import wget
 from PIL import Image
-from flask import Flask, request, session, render_template, Response
+from flask import Flask, request, session, render_template, Response, jsonify
 from flask import redirect
 from flask_caching import Cache
 from flask_compress import Compress
@@ -102,6 +102,21 @@ def indabase(dir):
     print('\x1b[6;30;42m' + "Done ! " + str(len(imgs)) + ") saved " + '\x1b[0m' + "\n")
 
     return "ok" """
+
+
+@app.route('/demo.json')
+def demojson():
+    res = ""
+    with open(os.path.join(os.getcwd(), "static/assets/json/demo.json"), "r") as f:
+        for line in f:
+            res += str(line.rstrip())
+
+    response = app.response_class(
+        response=json.dumps(res).replace("\\", "")[:-1][1:],
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 
 # fill database from "/static/assets/img/datasets/"
@@ -315,6 +330,11 @@ def quizz():
     else:
         session['page'] += 1
     nb = session.get("page")
+    if nb >= len(temp):
+        session['page'] = 0
+        session['note'] = 0
+        session['id'] = getid(request.environ["REMOTE_ADDR"])
+        nb = 0
 
     return render_template(temp[nb] + ".html")
 
@@ -700,80 +720,107 @@ def getskip():
 # Save upload of image (admin) with FORM
 @app.route('/saveupimg', methods=['POST'])
 def saveupimg():
-    title = request.form['name']
     url = request.form['url']
-    cat = request.form['cat']
-    nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+
+    _, now = gettimes()
+    idu = getid(request.environ["REMOTE_ADDR"])
 
     name = wget.detect_filename(url)
     temp = name.split('.')
 
     ext = str(temp[len(temp) - 1])
 
-    title = title.replace(" ", "_")
+    filename = str(idu) + "_" + str(now) + name.replace("." + ext, "") + "." + ext
 
-    filename = str(nb) + name.replace("." + ext, "") + "_" + title + "." + ext
     q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename)
 
     wget.download(url, q)
     s3_client = boto3.client('s3')
     with open(q, "rb") as f:
         s3_client.upload_fileobj(f,
-                                 'namethatchart-imagedataset', "upload/" + filename,
+                                 'namethatchart-imagedataset', "upload/" + str(idu) + "_" + str(now) + "." + ext,
                                  ExtraArgs={'ACL': 'public-read'})
-    url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + filename
 
-    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + cat + "')"
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/' + str(
+        idu) + "_" + str(now) + "." + ext
+
+    query = "INSERT INTO image (imagepath,`from`) VALUES ('" + fileurl + "','upload')"
     putdb(query)
 
-    return 'ok'
+    return redirect("/uploadimg?m=dGV4dHV")
 
 
 # Save upload of image (admin) with JSON
 @app.route("/upjsonimg", methods=['POST'])
 def upjonimg():
-    file = request.files['local']
-    filestring = ""
-    for line in file:
-        filestring += str(line)[2:][:-3]
+    images = ["png", "jpeg", "jpg", "svg"]
 
-    data = json.loads(filestring)
+    file = request.files['file']
+    tempu = file.filename
 
-    for obj in data:
-        if "url" in obj:
+    tempr = tempu.split('.')
 
-            nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+    ext = str(tempr[len(tempr) - 1]).lower()
+    _, now = gettimes()
+    idu = getid(request.environ["REMOTE_ADDR"])
+    fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/' + str(
+        idu) + "_" + str(now)
 
-            name = wget.detect_filename(obj['url'])
-            temp = name.split('.')
-            ext = str(temp[len(temp) - 1])
-            if "title" in obj:
-                title = obj["title"].replace(" ", "_")
-                filename = str(nb) + "_" + title + "." + ext
-            else:
-                title = ""
-                filename = str(nb) + "." + ext
+    s3_client = boto3.client('s3')
 
-            wget.download(obj['url'], os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename))
+    if ext in images:
 
-            s3_client = boto3.client('s3')
-            with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename), "rb") as f:
-                s3_client.upload_fileobj(f,
-                                         'namethatchart-imagedataset', "upload/" + filename,
-                                         ExtraArgs={'ACL': 'public-read'})
-            url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + filename
+        putdb("INSERT INTO image (imagepath,`from`) VALUES ('" + fileurl + "." + ext + "','app')")
 
-            if 'category' in obj:
-                if 'difficulty' in obj:
-                    query = "INSERT INTO image (imagepath,`from`,title,category,difficulty) VALUES ('" + url + "','upload','" + title + "','" + \
-                            obj['category'] + "','" + obj["difficulty"] + "')"
+        # Upload the file to S3
+        s3_client.upload_fileobj(file, 'namethatchart-imagedataset', "upload/" + str(idu) + "_" + str(now) + "." + ext,
+                                 ExtraArgs={'ACL': 'public-read'})
+    else:
+
+        filestring = ""
+        for line in file:
+            filestring += str(line)[2:][:-3]
+
+        data = json.loads(filestring)
+
+        for obj in data:
+            if "url" in obj:
+
+                nb = len(pics.getimgs("./static/assets/img/datasets/json/")) + 2
+
+                name = wget.detect_filename(obj['url'])
+                temp = name.split('.')
+                ext = str(temp[len(temp) - 1])
+                if "title" in obj:
+                    title = obj["title"].replace(" ", "_")
+                    filename = str(nb) + "_" + title + "." + ext
                 else:
-                    query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + \
-                            obj['category'] + "')"
-            else:
-                query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + url + "','upload','" + title + "')"
+                    title = ""
+                    filename = str(nb) + "." + ext
 
-            putdb(query)
+                wget.download(obj['url'], os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename))
+
+                s3_client = boto3.client('s3')
+                with open(os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename), "rb") as f:
+                    _, now = gettimes()
+                    s3_client.upload_fileobj(f, 'namethatchart-imagedataset',
+                                             "upload/" + str(idu) + "_" + str(now) + "." + ext,
+                                             ExtraArgs={'ACL': 'public-read'})
+
+                url = "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/upload/" + str(idu) + "_" + str(
+                    now) + "." + ext
+
+                if 'category' in obj:
+                    if 'difficulty' in obj:
+                        query = "INSERT INTO image (imagepath,`from`,title,category,difficulty) VALUES ('" + url + "','upload','" + title + "','" + \
+                                obj['category'] + "','" + obj["difficulty"] + "')"
+                    else:
+                        query = "INSERT INTO image (imagepath,`from`,title,category) VALUES ('" + url + "','upload','" + title + "','" + \
+                                obj['category'] + "')"
+                else:
+                    query = "INSERT INTO image (imagepath,`from`,title) VALUES ('" + url + "','upload','" + title + "')"
+
+                putdb(query)
 
     return 'ok'
 
@@ -1006,6 +1053,7 @@ def logaction():
     con.close()
     return 'ok'
 
+
 @app.route('/logmultiple', methods=['POST'])
 def logmultiple():
     action = request.form['action']
@@ -1024,7 +1072,7 @@ def logmultiple():
     con.close()
     return 'ok'
 
-        # <------------------ Unmapped Get ------------------>
+    # <------------------ Unmapped Get ------------------>
 
 
 @app.route('/logswipes', methods=['POST'])
@@ -1383,7 +1431,6 @@ def getlabel(id):
 def saveapp():
     idu = getid(request.environ["REMOTE_ADDR"])
     file = request.files['local']
-    print(file.filename)
     s3_client = boto3.client('s3')
 
     _, now = gettimes()
@@ -1391,9 +1438,7 @@ def saveapp():
     fileurl = 'https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/app/' + str(
         idu) + "_" + str(now) + ".png"
 
-
-    putdb("INSERT INTO image (imagepath,`from`) VALUES ('"+fileurl+"','app')")
-
+    putdb("INSERT INTO image (imagepath,`from`) VALUES ('" + fileurl + "','app')")
 
     idm = vachercherss("SELECT idimage FROM image WHERE imagepath LIKE '" + fileurl + "'")
 
