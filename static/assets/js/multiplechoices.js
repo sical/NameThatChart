@@ -14,6 +14,7 @@ $(document).ready(function () {
     baseu = window.location.href.replace(where, "") + "/";
     waitsetup(false);
     if (where.indexOf('quizz') !== -1) {
+        $("#report").hide();
         var fin = new Date();
 
         $("#img").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg");
@@ -35,7 +36,6 @@ function getimg() {
         url: baseu + "getimgmul",
         success: function (data) {
             info = JSON.parse(data);
-            console.log(info);
             id = info.image.id;
             window.history.pushState("", "", gethash());
             var i = 0;
@@ -49,11 +49,13 @@ function getimg() {
                 });
                 id = info.image.id;
                 $("#img").attr("src", info.image.path);
+                $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
                 $(".but").css("display", "inline-block");
                 $("#load").css("display", "none");
 
             } else {
+                id = info.image.id;
                 $("#img").attr("src", info.image.path);
                 info.types.forEach(function (type) {
                     temp = $('#' + i).text(type.label);
@@ -62,6 +64,7 @@ function getimg() {
                 });
 
                 $("#img").attr("src", info.image.path);
+                $("#img").attr("value", id);
                 setTimeout(function () {
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
@@ -83,7 +86,7 @@ $('body').on('click', '.btnvali', function () {
     $('.s').removeClass('s');
     $(this).addClass('s');
     $(this).css("color", "lightgreen");
-    $(this).css("background-color", "#343d46;");
+    $(this).css("background-color", "#343d46");
     $(this).removeClass('u');
 });
 
@@ -111,6 +114,7 @@ function clear() {
 $('body').on('click', '#skip', function () {
     clear();
     waitsetup(false);
+
     if (where.indexOf('quizz') !== -1) {
         done("");
     } else {
@@ -161,7 +165,7 @@ function done(text) {
 
             setTimeout(function () {
                 $("#vald").css("display", "none");
-                window.location = baseu + "/quizz"
+                window.location = baseu + "quizz"
             }, (1700));
         }
     })
@@ -188,7 +192,6 @@ function waitsetup(test) {
 
 function gethash() {
     var temp = "";
-    console.log(info);
     info.types.forEach(function (type) {
         temp += type.idtype + "%" + type.label + "|"
     });
@@ -204,16 +207,15 @@ function gen() {
     var tempu = $("#id").val();
 
     tempu = tempu.split("!");
-    console.log(tempu);
     var img = tempu[0];
-    id=img
+    id = img;
     tempu.splice(0, 1);
-    console.log(tempu);
+
     var tempt = tempu[0].split("|");
     tempt.forEach(function (row) {
         types.push(row.split("%"))
     });
-    console.log(types);
+
     types.pop();
     form.append("action", img);
 
@@ -226,27 +228,25 @@ function gen() {
         success: function (data) {
             info = JSON.parse(data);
             info = JSON.parse(info)[0];
-            console.log(info);
             var i = 0;
             var temp;
             var fin = new Date();
             if (fin.getTime() - debut.getTime() > 2200) {
-                console.log(types);
                 types.forEach(function (type) {
-                    console.log(type.label);
                     temp = $('#' + i).text(type[1]);
                     temp.attr("value", type[0]);
                     i++;
                 });
 
                 $("#img").attr("src", info.path);
+                $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
                 $(".but").css("display", "inline-block");
                 $("#load").css("display", "none");
 
             } else {
+                $("#img").attr("value", id);
                 $("#img").attr("src", info.path);
-                console.log(types);
                 types.forEach(function (type) {
                     temp = $('#' + i).text(type[1]);
                     temp.attr("value", type[0]);

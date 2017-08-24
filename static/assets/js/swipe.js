@@ -24,7 +24,7 @@ $(document).ready(function () {
     if (where.indexOf('quizz') !== -1) {
         var path = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis16cat/BubbleChart_147.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/AreaGraph_16.gif", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/ParetoChart_499.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/RadarPlot_640.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/VennDiagram_1024.gif"];
         cat = ["Saving .... ", "scatter plot", "Area chart", "Bar Chart", "Radar Chart", "Bubble Chart"];
-
+        $("#report").hide();
         for (var i = 0; i < 5; i++) {
             var temp = $('.pane' + (i + 1));
             temp.css("width", "75%");
@@ -51,10 +51,7 @@ $("#tinderslide").jTinder({
     number: nb,
     onDislike: function (item) {
         tempg = this;
-        console.log("DIF" + nb + "     " + tempg.number);
         s = true;
-        console.log(nb + " DEBUT");
-        console.log(this.number);
         if (item.index() > nb - 1) {
             item.prevObject.remove(item.index());
 
@@ -122,14 +119,10 @@ $("#tinderslide").jTinder({
                 }
             }
         }
-        console.log(nb + " FIN");
     },
     onLike: function (item) {
         tempg = this;
-
-        console.log("DIF" + nb + "     " + tempg.number);
         s = true;
-        console.log(nb + " DEBUT");
         if (where.indexOf('quizz') !== -1) {
             $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
 
@@ -195,7 +188,6 @@ $("#tinderslide").jTinder({
                 }
             }
         }
-        console.log(nb + " FIN");
     }
     ,
     animationRevertSpeed: 200,
@@ -249,7 +241,6 @@ $("#no").click(function () {
 
         tempg.onDislike($(".pane" + nb));
         tempg.number = nb;
-        console.log(tempg.number);
 
     } else {
         vote(false);
@@ -327,14 +318,10 @@ function fill() {
 }
 
 function vote(vote) {
-    console.log(tempg);
-    console.log(nb + " DEBUT");
-    console.log();
     var temp = $('.pane' + nb);
     temp.fadeOut(500);
     setTimeout(function () {
         temp.hide();
-        console.log(nb + " VOTE");
         $(".pane" + nb + 1).css("display", "none");
         temp.css("z-index", "-4");
     }, 500);
@@ -400,71 +387,104 @@ function vote(vote) {
             }
         }
     }
-    console.log(nb + " FIN");
 }
 
 $("#skip").click(function () {
+    if (where.indexOf('quizz') !== -1) {
+        nb--;
+        if (nb == 0) {
+             var vlad = document.getElementById("vald");
+            $(".pane" + (nb + 1)).fadeOut(500);
+            setTimeout(function () {
+                $(".pane" + nb + 1).css("display", "none");
+            }, 500);
 
-    var firm = new FormData();
-    firm.append("action", "skip");
-    firm.append("ids", info[nb - 1].idimage);
-    firm.append("idtype", info[nb - 1].idtype);
-    $.ajax({
-        type: "POST",
-        url: baseu + "logm/swipe",
-        processData: false,
-        contentType: false,
-        data: firm
-    });
-    if (where.indexOf('hybrid') !== -1) {
-        window.location = baseu + "hybrid"
-    } else {
-        if (where.indexOf('main') !== -1) {
-            window.location = baseu + "main"
-        } else if (where.indexOf('raw') !== -1) {
-            window.location = baseu + "raw"
-        }
-        else {
-            nb = nb - 1;
-            $("#title").text("Is this a \"" + cat[nb] + "\" ?");
+            vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
+            $("#vald").css("display", "inline-block");
 
-
-            if (nb == 0) {
-                if (where.indexOf('main') !== -1) {
-                    window.location = baseu + "main"
-                } else if (where.indexOf('raw') !== -1) {
-                    window.location = baseu + "raw"
+            setTimeout(function () {
+                    $("#vald").css("display", "none");
+                    done(note)
                 }
-                else {
-                    var vlad = document.getElementById("vald");
-                    vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
-                    $("#vald").css("display", "inline-block");
+                ,
+                (1700)
+            );
 
-                    setTimeout(function () {
-                            $("#vald").css("display", "none");
-                            window.location = baseu + "swipes"
-                        }
-                        ,
-                        (1700)
-                    );
 
-                }
+        } else {
+            if (s) {
+                $(".pane" + (nb + 1)).fadeOut(500);
+                setTimeout(function () {
+                    $(".pane" + nb + 1).css("display", "none");
+                }, 500);
+                tempg.number = nb;
+
             } else {
-                if (s) {
-                    console.log("LAAAAAAAAAAAAAAAAAAAA" + nb);
+                $(".pane" + (nb + 1)).fadeOut(500);
+                setTimeout(function () {
+                    $(".pane" + nb + 1).css("display", "none");
+                }, 500);
+            }
+        }
+    } else {
+        var firm = new FormData();
+        firm.append("action", "skip");
+        firm.append("ids", info[nb - 1].idimage);
+        firm.append("idtype", info[nb - 1].idtype);
+        $.ajax({
+            type: "POST",
+            url: baseu + "logm/swipe",
+            processData: false,
+            contentType: false,
+            data: firm
+        });
+        if (where.indexOf('hybrid') !== -1) {
+            window.location = baseu + "hybrid"
+        } else {
+            if (where.indexOf('main') !== -1) {
+                window.location = baseu + "main"
+            } else if (where.indexOf('raw') !== -1) {
+                window.location = baseu + "raw"
+            }
+            else {
+                nb = nb - 1;
+                $("#title").text("Is this a \"" + cat[nb] + "\" ?");
 
-                    $(".pane" + (nb + 1)).fadeOut(500);
-                    setTimeout(function () {
-                        $(".pane" + nb + 1).css("display", "none");
-                    }, 500);
-                    tempg.number = nb;
-                    console.log(tempg.number);
 
+                if (nb == 0) {
+                    if (where.indexOf('main') !== -1) {
+                        window.location = baseu + "main"
+                    } else if (where.indexOf('raw') !== -1) {
+                        window.location = baseu + "raw"
+                    }
+                    else {
+                        var vlad = document.getElementById("vald");
+                        vlad.src = vald.src.replace(/\?.*$/, "") + "?x=" + Math.random();
+                        $("#vald").css("display", "inline-block");
+
+                        setTimeout(function () {
+                                $("#vald").css("display", "none");
+                                window.location = baseu + "swipes"
+                            }
+                            ,
+                            (1700)
+                        );
+
+                    }
                 } else {
-                    $(".pane" + (nb + 1)).fadeOut(500);
-                    setTimeout(function () {
-                        $(".pane" + nb + 1).css("display", "none");
-                    }, 500);
+                    if (s) {
+                        $(".pane" + (nb + 1)).fadeOut(500);
+                        setTimeout(function () {
+                            $(".pane" + nb + 1).css("display", "none");
+                        }, 500);
+                        tempg.number = nb;
+
+                    } else {
+                        $(".pane" + (nb + 1)).fadeOut(500);
+                        setTimeout(function () {
+                            $(".pane" + nb + 1).css("display", "none");
+                        }, 500);
+                    }
                 }
             }
         }
@@ -504,7 +524,6 @@ function gen() {
         tempstr += row[0] + " or idimage= "
     });
     tempstr = tempstr.substr(0, tempstr.length - 13);
-    console.log(tempstr);
 
     form.append("action", tempstr);
     $.ajax({
@@ -514,7 +533,6 @@ function gen() {
         contentType: false,
         data: form,
         success: function (data) {
-            console.log(data);
             info = JSON.parse(data);
             info = JSON.parse(info);
             var i = 0;
@@ -566,7 +584,6 @@ function gen() {
             }
 
             var form = new FormData();
-            console.log(info);
             form.append("idimg", info[4].idimage);
             form.append("idtype", info[4].idtype);
 

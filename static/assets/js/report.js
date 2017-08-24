@@ -18,15 +18,14 @@ $('body').on('click', '#hmc', function () {
 
     report("miss_classification")
 });
+
 function report(string) {
     var ids = getids();
     var form = new FormData();
     form.append("ids", ids);
 
     if (where.indexOf("generated") != -1) {
-        console.log("LAAAAAAAAAAAAA");
         var temp = where.split("/");
-        console.log(temp);
         where = "/" + $.base64.decode(temp[2]).split("/")[0]
     }
     $.ajax({
@@ -43,8 +42,6 @@ function report(string) {
 
 function getids() {
     result = [];
-
-
     $("body").find("img").each(function () {
         if ($(this).attr("value") != undefined) {
             result.push($(this).attr("value"))
@@ -54,6 +51,5 @@ function getids() {
     if (result.length == 0) {
         result = getit();
     }
-    console.log(result);
     return result
 }

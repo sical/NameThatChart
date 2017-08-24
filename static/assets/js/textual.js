@@ -14,6 +14,7 @@ $(document).ready(function () {
     waitsetup(false);
     document.getElementById("tofill").focus();
     if (where.indexOf('quizz') !== -1) {
+        $("#report").hide();
         var fin = new Date();
         if (fin.getTime() - debut.getTime() > 3000) {
             $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
@@ -219,10 +220,12 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $("#img").css("display", "none");
+        $("#vald").attr("src",'/static/assets/img/source.gif');
         $("#vald").css("display", "inline-block");
         setTimeout(function () {
             $("#load").css("display", "inline-block");
             $("#vald").css("display", "none");
+            $("#vald").attr("src", "");
         }, (1800));
     } else {
         $("#img").css("display", "none");
@@ -254,6 +257,7 @@ function gen() {
             var fin = new Date();
             data = JSON.parse(data);
             data = JSON.parse(data);
+            console.log(data);
             id = data[0].idimage;
             if (fin.getTime() - debut.getTime() > 3000) {
 

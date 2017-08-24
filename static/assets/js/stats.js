@@ -5,11 +5,9 @@ var tasks = ["textvote", "selection", "swipe", "multiple", "reverse"];
 var headerR = ["ID", "User", "Task", "Bug", "IDimage", "ImageLink"];
 var headerT = ["", "Textual", "Selection", "Swipes", "Multiple", "Reverse"];
 $(document).ready(function () {
-
-
     filltasks();
+    fillbasic()
 });
-
 
 $("#reports").click(function () {
     if ($(this).attr("value") == 0) {
@@ -22,8 +20,6 @@ $("#reports").click(function () {
             $(this).text(headerR[i]);
             i++;
         })
-
-
     } else {
         $(this).text("Display Reports");
         $(this).attr("value", 0);
@@ -53,7 +49,6 @@ function filltasks() {
         contentType: false,
         success: function (data) {
             var temp = JSON.parse(data);
-            console.log(temp);
             var i = 0;
             $("#im1").find(".tof").each(function () {
                 $(this).text(temp[tasks[i]].image);
@@ -91,7 +86,6 @@ function fillreports() {
         contentType: false,
         success: function (data) {
             var temp = JSON.parse(data);
-            console.log(temp);
             var tof = $("tbody");
             var str = "";
             temp.forEach(function (row) {
@@ -111,5 +105,19 @@ function fillreports() {
         }
     });
 
+}
+
+function fillbasic() {
+    $.ajax({
+        type: "GET",
+        url: "../getbasicstats",
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            var info =JSON.parse(data);
+            $("#basic").html("Total  of <strong>"+info.users + " users </strong>  have sorted  <strong>"+info.saves +" times  </strong> some of the <strong>"+info.images + " images </strong>  available  into <strong>"+info.types +" categories  </strong>")
+        }
+
+    });
 }
 

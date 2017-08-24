@@ -17,15 +17,6 @@
         padding: 0;
     }
 
-    #img {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        border: solid 2px;
-        min-height: 160px;
-        min-width: 180px;
-    }
-
     .main-head {
         grid-area: header;
         align-self: auto;
@@ -36,7 +27,7 @@
         grid-area: content;
         padding: 0;
         text-align: center;
-        overflow-y: scroll;
+        overflow-y: hidden;
         max-height: min-content;
     }
 
@@ -120,41 +111,16 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.base64.min.js') }}"></script>
 <script async src="{{ url_for('static', filename='assets/js/stats.js') }}"></script>
 
-
 <div class="wrapper">
     <nav class="main-nav">
-        <div class="topnav" id="myTopnav">
-            <a class="navbar-brand waves-effect waves-dark" href="/"><strong> <i
-                    class="large material-icons" id="icon">insert_chart</i>NameThatChart</strong></a>
-            <a href="textualimg">Textual</a>
-            <a href="selectimg">Selection</a>
-            <a href="swipes">Swipes</a>
-            <a href="multiple">Multiple</a>
-            <a href="reverse">Reverse</a>
-            <a href="main">Main</a>
-            <a href="admin">Admin</a>
-            <a href="display_image">Dataset</a>
-            <a href="uploadimg"><i class="fa fa-upload fa-2x "></i></a>
-            <a href="datcsv.csv"><i class="fa fa-download fa-2x"></i></a>
-            <a class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
-        <script type="text/javascript">
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
-
+        {% include 'navbar.html' %}
     </nav>
     <header class="main-head">
         <h1 id="brand" class="page-header">
             Administration
             <small>Statistics</small>
         </h1>
+        <p id="basic"> </p>
     </header>
 
     <article class="content">
@@ -181,19 +147,5 @@
         <button class="btn" id="reports" value="0"> Display reports</button>
     </footer>
 </div>
-
-<script TYPE="text/javascript">
-
-
-    $("#gen").click(function () {
-        console.log("LAAAAAAAAA");
-        hash();
-    });
-
-    function hash() {
-        var hash = $.base64.encode('textualimg/' + 3000);
-        base = "http://0.0.0.0:5000/generated/";
-        $("#gen").hide();
-        $("#btn").append("<input style='max-width: 500px;text-align: left;display: inline-block' class='form-control' type='text' value='" + base + hash + "'/>")
-    }
-</script>
+</body>
+</html>

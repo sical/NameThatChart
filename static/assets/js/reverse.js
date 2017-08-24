@@ -59,7 +59,6 @@ $('body').on('click', '#save', function () {
     var form = new FormData();
     form.append("image", img);
     form.append("idtype", type);
-    pop();
     $.ajax({
         type: "POST",
         url: baseu + "saverev",
@@ -76,6 +75,7 @@ $('body').on('click', '#save', function () {
                     window.location = baseu + "raw"
                 }
                 else {
+                    debut = new Date();
                     fillit()
                 }
             }
@@ -151,11 +151,12 @@ function gethash() {
     info.images.forEach(function (row) {
         str += row.idimage + "-";
     });
+
     str = str.substr(0, str.length - 1);
     str += "-|" + info.idtype + "|" + info.label;
 
     var base = baseu + "generated/";
-    var hash = $.base64.encode('reverse/' + id);
+    var hash = $.base64.encode('reverse/' + str);
     return base + hash
 }
 
@@ -164,7 +165,6 @@ function gen() {
     $("#fill").empty();
     var form = new FormData();
     var temp = $("#id").val();
-
     temp = temp.split("-");
 
     var types = temp.pop();
@@ -176,8 +176,7 @@ function gen() {
         tempstr += row + " or idimage= "
     });
     type = types[1];
-    tempstr = tempstr.substr(0, tempstr.length - 14);
-
+    tempstr = tempstr.substr(0, tempstr.length - 13);
     form.append("action", tempstr);
 
     $.ajax({
@@ -211,7 +210,7 @@ function gen() {
                     });
                     $("#load").css("display", "none");
                     $("#fill").css("display", "grid");
-                }, (3000 - (fin.getTime() - debut.getTime())));
+                }, (2200 - (fin.getTime() - debut.getTime())));
 
             }
         }

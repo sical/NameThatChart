@@ -134,7 +134,7 @@
                     var pageY = (typeof ev.pageY == 'undefined') ? ev.originalEvent.changedTouches[0].pageY : ev.pageY;
                     var deltaX = parseInt(pageX) - parseInt(xStart);
                     var deltaY = parseInt(pageY) - parseInt(yStart);
-                    console.log(number);
+                    /*console.log(number);*/
                     number = number = nb-1;
                     posX = deltaX + lastPosX;
                     posY = deltaY + lastPosY;
@@ -146,7 +146,7 @@
                                 if ($that.settings.onLike) {
                                     $that.settings.onLike(panes.eq(number));
                                     $that.settings.number --;
-                                    console.log($that.settings.number)
+                                   // console.log($that.settings.number)
                                 }
                                 $that.next();
                             });
@@ -156,7 +156,7 @@
                                 if ($that.settings.onDislike) {
                                     $that.settings.onDislike(panes.eq(number));
                                     $that.settings.number --;
-                                    console.log($that.settings.number)
+                                   // console.log($that.settings.number)
                                 }
                                 $that.next();
                             });

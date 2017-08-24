@@ -12,6 +12,7 @@ $(document).ready(function () {
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "") + "/";
     if (where.indexOf('quizz') !== -1) {
+        $("#report").hide();
         waitsetup(false);
         fillthem2();
 
@@ -109,9 +110,6 @@ function fillthem() {
                 type = info.idtype;
 
                 var fin = new Date();
-                console.log(debut.getTime() + " debut");
-                console.log(fin.getTime() + " fin");
-                console.log(fin.getTime() - debut.getTime() + " diff");
                 if (fin.getTime() - debut.getTime() > 5000) {
                     images = info.imgs;
                     var image;
@@ -152,7 +150,6 @@ function fillthem() {
                     });
 
                     var form = new FormData();
-                    console.log(info);
                     form.append("ids", ids);
                     form.append("action", "visible");
                     form.append("idtype", type);
@@ -166,7 +163,7 @@ function fillthem() {
                     setTimeout(function () {
                         $(".cont").css("display", "inline");
                         $("#load").css("display", "none");
-                    }, (5000 - (fin.getTime() - debut.getTime())));
+                    }, (2500 - (fin.getTime() - debut.getTime())));
                 }
 
 
@@ -194,37 +191,56 @@ function fillthem2() {
 
 $('body').on('click', '#skip', function () {
 
+
     waitsetup(false);
+    if (where.indexOf('quizz') !== -1) {
+        var note = 0;
 
-    var firm = new FormData();
-    firm.append("action", "skip");
-    firm.append("ids", ids);
-    firm.append("idtype", type);
-    $.ajax({
-        type: "POST",
-        url: baseu + "logm/selection",
-        processData: false,
-        contentType: false,
-        data: firm
-    });
-    if (where.indexOf('hybrid') !== -1) {
-        window.location = baseu + "hybrid"
+        var form = new FormData();
+        form.append("note", note);
+        $.ajax({
+            type: "POST",
+            url: baseu + "savenote",
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function () {
+                setTimeout(function () {
+                    $("#vald").css("display", "none");
+                    window.location = baseu + "main"
+                }, (1700));
+            }
+        })
     } else {
-        if (where.indexOf('main') !== -1) {
-            window.location = baseu + "main"
-        } else if (where.indexOf('raw') !== -1) {
-            window.location = baseu + "raw"
+        var firm = new FormData();
+        firm.append("action", "skip");
+        firm.append("ids", ids);
+        firm.append("idtype", type);
+        $.ajax({
+            type: "POST",
+            url: baseu + "logm/selection",
+            processData: false,
+            contentType: false,
+            data: firm
+        });
+        if (where.indexOf('hybrid') !== -1) {
+            window.location = baseu + "hybrid"
+        } else {
+            if (where.indexOf('main') !== -1) {
+                window.location = baseu + "main"
+            } else if (where.indexOf('raw') !== -1) {
+                window.location = baseu + "raw"
+            }
+            else {
+                $("#title").text("Select the picture which best describe ");
+                fillthem()
+            }
         }
-        else {
-            $("#title").text("Select the picture which best describe ");
-            fillthem()
-        }
+        $(".cont").each(function () {
+            $(this).removeClass('unselec')
+        });
+        $('#fill').find(".selec").removeClass("selec");
     }
-    $(".cont").each(function () {
-        $(this).removeClass('unselec')
-    });
-    $('#fill').find(".selec").removeClass("selec");
-
 });
 
 function waitsetup(test) {
@@ -243,7 +259,6 @@ function waitsetup(test) {
 }
 
 function gethash() {
-    console.log(info);
     var str = "";
     info.imgs.forEach(function (row) {
         str += row.idimage + "-";
@@ -274,9 +289,8 @@ function gen() {
             tempstr += row + " or idimage= "
         });
 
-        type=types[1];
+        type = types[1];
         tempstr = tempstr.substr(0, tempstr.length - 13);
-        console.log(tempstr);
         form.append("action", tempstr);
 
 
@@ -287,7 +301,6 @@ function gen() {
             contentType: false,
             data: form,
             success: function (data) {
-                console.log(data);
                 info = JSON.parse(data);
                 info = JSON.parse(info);
 
@@ -296,7 +309,6 @@ function gen() {
                 var fin = new Date();
                 if (fin.getTime() - debut.getTime() > 5000) {
                     images = info;
-                    console.log(images);
                     var image;
                     ids = [];
 
@@ -326,7 +338,6 @@ function gen() {
                     images = info;
                     var image;
                     ids = [];
-                    console.log(info);
                     $("#fill").find(".cont").each(function () {
                         image = images.pop();
                         ids.push(image.idimage);
@@ -348,7 +359,7 @@ function gen() {
                     setTimeout(function () {
                         $(".cont").css("display", "inline");
                         $("#load").css("display", "none");
-                    }, (5000 - (fin.getTime() - debut.getTime())));
+                    }, (2500 - (fin.getTime() - debut.getTime())));
                 }
 
 
