@@ -1,22 +1,5 @@
 <style>
 
-    * {
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
     #img {
         /* display: inline-block;*/
         width: auto;
@@ -24,32 +7,6 @@
         border: solid 2px;
         min-height: 80px;
         justify-self: center;
-    }
-
-    .main-head {
-        grid-area: header;
-        align-self: auto;
-    }
-
-    .content {
-        grid-area: content;
-        padding: 0;
-        text-align: center;
-    }
-
-    .main-nav {
-        grid-area: nav;
-        align-self: flex-start;
-        vertical-align: top;
-        padding: 0;
-    }
-
-    .main-footer {
-        grid-area: footer;
-        vertical-align: bottom;
-        padding: 0;
-        align-self: flex-end;
-        margin: 0 auto;
     }
 
     #fill {
@@ -65,32 +22,14 @@
 
     }
 
-    .wrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        height: 100%
-    }
-
-    #title {
-        font-size: 1em;
-    }
 
     @media (min-width: 400px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        }
 
         #fill {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             max-width: max-content;
             max-height: 65%;
-        }
-
-        #title {
-            font-size: 1.5em;
         }
 
         #img {
@@ -104,10 +43,7 @@
     }
 
     @media (min-width: 700px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "footer footer  footer";
-        }
+
 
         #fill {
             grid-template-columns: 1fr 1fr;
@@ -115,11 +51,6 @@
             max-width: max-content;
             max-height: 600px;
         }
-
-        title {
-            font-size: 1.75em;
-        }
-
         #img {
             display: inline-block;
             width: auto;
@@ -128,21 +59,6 @@
             min-height: 100px;
         }
     }
-
-    #vald {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        min-height: 160px;
-        min-width: 180px;
-    }
-
-    .rig_cell {
-        display: block;
-        position: relative;
-        overflow: hidden;
-    }
-
 </style>
 
 <!DOCTYPE html>
@@ -151,7 +67,6 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Name That Chart</title>
-
     <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
@@ -181,31 +96,31 @@
     <article class="content">
         <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
-        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+        <img class="up" style="display: none" id="vald" src=""
              alt="loading logo"/>
         <div id="fill">
             <div class="rig_cell">
-                <img id="img" class="cont" style="z-index: 0;"
+                <img  style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
         </div>
@@ -217,3 +132,5 @@
         {% include 'footer.html' %}
     </footer>
 </div>
+</body>
+</html>

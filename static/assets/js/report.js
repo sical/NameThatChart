@@ -23,6 +23,7 @@ function report(string) {
     var ids = getids();
     var form = new FormData();
     form.append("ids", ids);
+    form.append("url", window.location.href);
 
     if (where.indexOf("generated") != -1) {
         var temp = where.split("/");

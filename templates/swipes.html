@@ -1,111 +1,4 @@
-<style>
 
-    * {
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    #img {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        border: solid 2px;
-        min-height: 160px;
-        min-width: 180px;
-    }
-
-    .main-head {
-        grid-area: header;
-        align-self: auto;
-        margin-top: -8%;
-    }
-
-    .content {
-        grid-area: content;
-        padding: 0;
-        text-align: center;
-    }
-
-    .main-nav {
-        grid-area: nav;
-        align-self: flex-start;
-        vertical-align: top;
-        padding: 0;
-    }
-
-    .main-footer {
-        grid-area: footer;
-        vertical-align: bottom;
-        padding: 0;
-        align-self: flex-end;
-        margin: 0 auto;
-    }
-
-    .wrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        height: 100%
-    }
-
-    #title {
-        font-size: 1.3em;
-        display: block;
-    }
-
-    @media (min-width: 500px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #title {
-            font-size: 1.5em;
-        }
-    }
-
-    @media (min-width: 700px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        }
-
-        nav ul {
-            flex-direction: column;
-        }
-
-        title {
-            font-size: 1.75em;
-        }
-    }
-
-    #vald {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        min-height: 160px;
-        min-width: 180px;
-    }
-
-</style>
-<!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
@@ -127,7 +20,7 @@
     <nav class="main-nav">
         {% include 'navbar.html' %}
     </nav>
-    <header class="main-head">
+    <header style="margin-top: -8%" class="main-head">
         <h1 id="title">
             Describe this chart
         </h1>
@@ -141,7 +34,7 @@
                  alt="loading logo"/>
 
             <img class="up" style="display: none" id="vald"
-                 src="{{ url_for('static', filename='assets/img/source.gif') }}"
+                 src=""
                  alt="loading logo"/>
         </div>
         <ul class="ula">

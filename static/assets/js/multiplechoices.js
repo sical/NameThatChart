@@ -72,6 +72,17 @@ function getimg() {
                 }, (2200 - (fin.getTime() - debut.getTime())));
             }
 
+            var furm = new FormData();
+            furm.append("action", "page loaded");
+            furm.append("id", id);
+            furm.append("url", window.location.href);
+            $.ajax({
+                type: "POST",
+                url: baseu + "logmultiple",
+                processData: false,
+                contentType: false,
+                data: furm
+            });
 
         }
     });
@@ -121,6 +132,7 @@ $('body').on('click', '#skip', function () {
         var firm = new FormData();
         firm.append("action", "skip");
         firm.append("id", id);
+        firm.append("url", window.location.href);
         $.ajax({
             type: "POST",
             url: baseu + "logmultiple",
@@ -136,6 +148,7 @@ function save(idtype) {
     var form = new FormData();
     form.append("idimage", id);
     form.append("idtype", idtype);
+    form.append("url", window.location.href);
     $.ajax({
         type: "POST",
         url: baseu + "savemultiple",
@@ -164,6 +177,7 @@ function done(text) {
         success: function () {
 
             setTimeout(function () {
+                $("#vald").attr("src", '');
                 $("#vald").css("display", "none");
                 window.location = baseu + "quizz"
             }, (1700));
@@ -176,9 +190,11 @@ function waitsetup(test) {
     if (test) {
         $("#img").css("display", "none");
         $(".but").css("display", "none");
+        $("#vald").attr("src", '/static/assets/img/source.gif');
         $("#vald").css("display", "inline-block");
         setTimeout(function () {
             $("#load").css("display", "inline-block");
+            $("#vald").attr("src", '');
             $("#vald").css("display", "none");
         }, (1800));
     } else {
@@ -259,7 +275,17 @@ function gen() {
                     $("#load").css("display", "none");
                 }, (2200 - (fin.getTime() - debut.getTime())));
             }
-
+            var furm = new FormData();
+            furm.append("action", "page loaded");
+            furm.append("id", id);
+            furm.append("url", window.location.href);
+            $.ajax({
+                type: "POST",
+                url: baseu + "logmultiple",
+                processData: false,
+                contentType: false,
+                data: furm
+            });
 
         }
     });

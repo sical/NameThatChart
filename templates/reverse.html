@@ -1,20 +1,8 @@
 <style>
 
-    * {
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    #img:hover {
+        opacity: 0.9;
+        border: solid limegreen 5px;
     }
 
     #img {
@@ -26,33 +14,6 @@
         justify-self: center;
     }
 
-    .main-head {
-        grid-area: header;
-        align-self: auto;
-    }
-
-    .content {
-        grid-area: content;
-        padding: 0;
-        text-align: center;
-        height: max-content;
-    }
-
-    .main-nav {
-        grid-area: nav;
-        align-self: flex-start;
-        vertical-align: top;
-        padding: 0;
-    }
-
-    .main-footer {
-        grid-area: footer;
-        vertical-align: bottom;
-        padding: 0;
-        align-self: flex-end;
-        margin: 0 auto;
-    }
-
     #fill {
         display: grid;
         margin: 0 auto;
@@ -62,32 +23,11 @@
 
     }
 
-    .wrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        height: 100%
-    }
-
-    #title {
-        font-size: 1em;
-    }
-
     @media (min-width: 400px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        }
 
         #fill {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            /*max-width: max-content;*/
-            height: 25%;
-        }
-
-        #title {
-            font-size: 1.5em;
         }
 
         #img {
@@ -101,16 +41,11 @@
     }
 
     @media (min-width: 700px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "footer footer  footer";
-        }
 
         #fill {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             max-width: max-content;
-            max-height: 600px;
         }
 
         title {
@@ -125,7 +60,6 @@
             min-height: 200px;
         }
     }
-
 
 </style>
 
@@ -163,7 +97,7 @@
     <article class="content">
         <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
-        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+        <img class="up" style="display: none;opacity: 1" id="vald" src=""
              alt="loading logo"/>
         <div id="fill">
 
@@ -175,3 +109,6 @@
         {% include 'footer.html' %}
     </footer>
 </div>
+
+</body>
+</html>

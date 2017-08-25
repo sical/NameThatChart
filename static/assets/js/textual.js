@@ -87,7 +87,7 @@ $('body').on('click', '#save', function () {
         text = text.replace(reg, "");
         form.append("name", text);
         form.append("id", id);
-
+        form.append("url", window.location.href);
         $.ajax({
             type: "POST",
             url: baseu + "savetext",
@@ -127,9 +127,10 @@ $('body').on('click', '#skip', function () {
     var firm = new FormData();
     firm.append("action", "skip");
     firm.append("id", id);
+    firm.append("url", window.location.href);
     $.ajax({
         type: "POST",
-        url: "../logaction",
+        url: baseu +"logaction",
         processData: false,
         contentType: false,
         data: firm
@@ -159,6 +160,7 @@ $('body').on('input', '#tofill', function () {
                 var firm = new FormData();
                 firm.append("action", "started typing");
                 firm.append("id", id);
+                firm.append("url", window.location.href);
                 $.ajax({
                     type: "POST",
                     url: baseu + "logaction",
@@ -206,6 +208,7 @@ function waitandload() {
             var furm = new FormData();
             furm.append("action", "page loaded");
             furm.append("id", id);
+            furm.append("url", window.location.href);
             $.ajax({
                 type: "POST",
                 url: baseu + "logaction",
@@ -257,7 +260,6 @@ function gen() {
             var fin = new Date();
             data = JSON.parse(data);
             data = JSON.parse(data);
-            console.log(data);
             id = data[0].idimage;
             if (fin.getTime() - debut.getTime() > 3000) {
 

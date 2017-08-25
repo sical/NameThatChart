@@ -32,6 +32,10 @@ function filltasks() {
 
     var temp = "<tr id='im1'><th>Unique Images</th><td class='tof'></td><td class='tof'></td><td class='tof'></td><td class='tof'></td><td class='tof'></td></tr><tr id='usr1'><th>Unique Users</th><td class='tof'></td><td class='tof'></td><td class='tof'></td><td class='tof'></td><td class='tof'></td></tr><tr id='ski'><th>Number of images Skipped</th><td class='tof'></td><td class='tof'></td><td class='tof'></td><td class='tof'></td><td class='tof'></td></tr><tr id='clas'><th>Most common Classes</th><td class='tof'></td><td class='tof'></td> <td class='tof'></td><td class='tof'></td><td class='tof'></td></tr>";
 
+    if ($("#hre") != undefined) {
+        $("#hre").remove()
+    }
+
     $('#tabcont').empty();
     $("#tabcont").append(temp);
 
@@ -86,20 +90,27 @@ function fillreports() {
         contentType: false,
         success: function (data) {
             var temp = JSON.parse(data);
+            $("#head").append("<th id='hre'>Url</th>");
             var tof = $("tbody");
             var str = "";
             temp.forEach(function (row) {
                 str = "<tr>";
                 $.each(row, function (key, value) {
-                    if (key != 'path') {
+                    if (key != 'path' && key != 'url') {
                         str += "<td>" + value + "</td>"
-                    } else {
+                    } else if (key == 'path') {
                         str += "<td><a href='" + value + "'>See the picture</a></td>"
+
+                    } else {
+                        if (value.length > 15) {
+                            str += "<td><a href='" + value + "'>See the page</a></td>"
+                        }else {
+                              str += "<td>No URL recorded</td>"
+                        }
                     }
                 });
                 str += "</tr>";
                 tof.append(str);
-                srt = ""
             })
 
         }
@@ -114,8 +125,8 @@ function fillbasic() {
         processData: false,
         contentType: false,
         success: function (data) {
-            var info =JSON.parse(data);
-            $("#basic").html("Total  of <strong>"+info.users + " users </strong>  have sorted  <strong>"+info.saves +" times  </strong> some of the <strong>"+info.images + " images </strong>  available  into <strong>"+info.types +" categories  </strong>")
+            var info = JSON.parse(data);
+            $("#basic").html("Total  of <strong>" + info.users + " users </strong>  have sorted  <strong>" + info.saves + " times  </strong> some of the <strong>" + info.images + " images </strong>  available  into <strong>" + info.types + " categories  </strong>")
         }
 
     });

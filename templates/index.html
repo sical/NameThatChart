@@ -1,21 +1,37 @@
-﻿{% include 'nav.html' %}
+﻿<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name That Chart</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-<div style="text-align: left" class="header center">
-    <h1 id="main-title" class="page-header">
-        Name That Chart
-    </h1>
-</div>
-<div class="center ">
-    <div style="max-width: 800px;text-align: center">
-        <a style="margin: 15%" href="/quizz" class="init">Get Started</a>
-        <p><strong>Help us now ! </strong></p>
-    </div>
-</div>
 <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
-<script>
-    $("#go").click(function () {
-        window.location = "/quizz"
-    })
-</script>
+<div class="wrapper">
+    <nav class="main-nav">
+        {% include 'navbar.html' %}
+    </nav>
+    <header class="main-head">
+        <h1 id="main-title" class="page-header">
+            Name That Chart
+        </h1>
+    </header>
+    <article class="content">
+        <div>
+            <a style="margin: 15%" href="/quizz" class="init">Get Started</a>
+            <p><strong>Help us now ! </strong></p>
+        </div>
+    </article>
+
+</div>
+
 </body>
 </html>

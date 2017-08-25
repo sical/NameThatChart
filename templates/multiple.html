@@ -1,85 +1,28 @@
 <style>
 
-    * {
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    #img {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        border: solid 2px;
-        min-height: 160px;
-        min-width: 180px;
-        max-width: 80%;
-    }
-
-    .main-head {
-        grid-area: header;
-        align-self: auto;
-
-    }
-
-    .content {
-        grid-area: content;
-        padding: 0;
-        text-align: center;
-    }
-
     .but {
         grid-area: but;
         padding: 0;
         text-align: center;
     }
 
-    .main-nav {
-        grid-area: nav;
-        align-self: flex-start;
-        vertical-align: top;
-        padding: 0;
-    }
-
-    .main-footer {
-        grid-area: footer;
-        vertical-align: bottom;
-        padding: 0;
-        align-self: flex-end;
+    .grid {
+        max-width: 1024px;
         margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
     }
 
-    .wrapper {
+    .grid {
         display: grid;
         grid-gap: 10px;
         grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
         height: 100%
     }
 
-    #title {
-        font-size: 1.3em;
-    }
-
     @media (min-width: 500px) {
-        .wrapper {
+        .grid {
             grid-template-columns: 100%;
             grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-between;
         }
 
         #title {
@@ -88,17 +31,9 @@
     }
 
     @media (min-width: 700px) {
-        .wrapper {
+        .grid {
             grid-template-columns: 100%;
             grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "but but but" "footer footer  footer";
-        }
-
-        nav ul {
-            flex-direction: column;
-        }
-
-        title {
-            font-size: 1.75em;
         }
     }
 
@@ -108,14 +43,6 @@
 
     .s {
         color: lightgreen;
-    }
-
-    #vald {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        min-height: 160px;
-        min-width: 180px;
     }
 
 </style>
@@ -143,7 +70,7 @@
 <script src="{{ url_for('static', filename='assets/js/multiplechoices.js') }}"></script>
 <input type="hidden" value="{{ test }}" id="id"/>
 
-<div class="wrapper">
+<div class="grid">
     <nav class="main-nav">
         {% include 'navbar.html' %}
     </nav>
@@ -156,7 +83,7 @@
     <article class="content">
         <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
-        <img class="up" style="display: none" id="vald" src="{{ url_for('static', filename='assets/img/source.gif') }}"
+        <img class="up" style="display: none" id="vald" src=""
              alt="loading logo"/>
         <img id="img" src=""/>
     </article>

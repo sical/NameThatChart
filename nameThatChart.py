@@ -49,22 +49,6 @@ def hello_world():
     return render_template('index.html')
 
 
-@app.route('/gridtry')
-def gridtry():
-    return render_template('gridtry/admintry.html')
-
-
-@app.route('/gridtry2')
-def sel2():
-    return render_template('gridtry/rtry.html')
-
-
-# Nav bar (testing)
-@app.route('/nav')
-def na():
-    return render_template('nav.html')
-
-
 # View Qcm
 @app.route('/multiple')
 def temp():
@@ -93,12 +77,6 @@ def textualimg():
 @app.route('/admin')
 def admin():
     return render_template('admin.html')
-
-
-# View to upload D3JS Files
-@app.route('/upload')
-def upload():
-    return render_template('upload.html')
 
 
 # Display user id from IP
@@ -252,12 +230,14 @@ def savenote():
 def savemultiple():
     idimage = request.form.get("idimage")
     idtype = request.form.get("idtype")
+    url = request.form.get("url")
     idu = getid(request.environ['REMOTE_ADDR'])
     now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-    final = "INSERT INTO multiple (idimage,idtype,iduser,`time`,`date`,`event`) VALUES (" + str(idimage) + "," + str(
-        idtype) + "," + str(idu) + ",'" + str(timestamp) + "','" + str(now) + "','chosen') "
+    final = "INSERT INTO multiple (idimage,idtype,iduser,`time`,`date`,`event`,url) VALUES (" + str(
+        idimage) + "," + str(
+        idtype) + "," + str(idu) + ",'" + str(timestamp) + "','" + str(now) + "','chosen','" + url + "') "
     print(final)
     cursor.execute(final)
     cursor.close()
@@ -276,12 +256,13 @@ def savetext():
     con = mysql.connect()
     cursor = con.cursor()
 
+    url = request.form.get("url")
     idim = request.form["id"]
     idu = getid(request.environ['REMOTE_ADDR'])
     idt = gettype(name)[0]
 
-    query = "INSERT INTO textvote (iduser,time,date,event,idtype,idimage) VALUES(" + str(idu) + ",'" + str(
-        timestamp) + "','" + str(now) + "','" + "submitted" + "'," + str(idt) + "," + str(idim) + ")"
+    query = "INSERT INTO textvote (iduser,time,date,event,idtype,idimage,url) VALUES(" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + "submitted" + "'," + str(idt) + "," + str(idim) + ",'" + url + "')"
 
     cursor.execute(query)
     con.commit()
@@ -297,11 +278,12 @@ def saverev():
     idu = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form["idtype"]
     image = request.form.get('image')
+    url = request.form.get("url")
     action = 'chosen'
     now, timestamp = gettimes()
 
-    q = "INSERT INTO `reverse` (iduser,idimage,idtype,`time`,`date`,`event`) VALUES(" + str(idu) + "," + str(
-        image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "')"
+    q = "INSERT INTO `reverse` (iduser,idimage,idtype,`time`,`date`,`event`,url) VALUES(" + str(idu) + "," + str(
+        image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "','" + url + "')"
     print(q)
     con = mysql.connect()
     cursor = con.cursor()
@@ -320,13 +302,14 @@ def saveselect():
     iduser = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form['idtype']
     idimg = request.form['idimage']
+    url = request.form.get("url")
 
     now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
-    q = "INSERT INTO selection (idimage,idtype,iduser,`time`,`date`,`event`) VALUES (" + str(idimg) + "," + str(
+    q = "INSERT INTO selection (idimage,idtype,iduser,`time`,`date`,`event`,url) VALUES (" + str(idimg) + "," + str(
         idtype) + "," + str(
-        iduser) + ",'" + str(timestamp) + "','" + str(now) + "','chosen')"
+        iduser) + ",'" + str(timestamp) + "','" + str(now) + "','chosen','" + url + "')"
     print(q)
     cursor.execute(q)
 
@@ -343,15 +326,16 @@ def saveswipe():
     idimage = request.form["idimage"]
     vote = request.form["vote"]
     idtype = request.form["idtype"]
+    url = request.form.get("url")
     iduser = getid(request.environ['REMOTE_ADDR'])
     now, timestamp = gettimes()
 
     con = mysql.connect()
     cursor = con.cursor()
 
-    q = "INSERT INTO swipe (idimage,idtype,iduser,vote,`time`,`date`,`event`) VALUES (" + str(idimage) + "," + str(
+    q = "INSERT INTO swipe (idimage,idtype,iduser,vote,`time`,`date`,`event`,url) VALUES (" + str(idimage) + "," + str(
         idtype) + "," + str(
-        iduser) + "," + str(to_bool(vote)) + ",'" + timestamp + "','" + now + "','swipe')"
+        iduser) + "," + str(to_bool(vote)) + ",'" + timestamp + "','" + now + "','swipe','" + url + "')"
     print(q)
     cursor.execute(q)
 
@@ -382,13 +366,14 @@ def report(label):
 def reportgene(label, where):
     usrid = getid(request.environ['REMOTE_ADDR'])
     idimgs = str(request.form.get('ids')).split(",")
+    url = request.form.get('url')
     print(idimgs)
     con = mysql.connect()
     cursor = con.cursor()
 
     for idimg in idimgs:
-        q = "INSERT INTO report (idimage,iduser,label,`where`) VALUES (" + str(idimg) + "," + str(
-            usrid) + ",'" + label + "','" + where + "')"
+        q = "INSERT INTO report (idimage,iduser,label,`where`,url) VALUES (" + str(idimg) + "," + str(
+            usrid) + ",'" + label + "','" + where + "','" + url + "')"
         print(q)
         cursor.execute(q)
 
@@ -406,8 +391,12 @@ def reportgene(label, where):
 def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT imagepath,idimage FROM image  ORDER BY rand() LIMIT 1")
+    cursor.execute("SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote) LIMIT 1")
     data = cursor.fetchone()
+    if data is None:
+        cursor.execute(
+            "select distinct imagepath, image.idimage from textvote inner join image on image.idimage=textvote.idimage group by idimage order by count(*) LIMIT 1")
+        data = cursor.fetchone()
     cursor.close()
     con.close()
     return json.dumps(data)
@@ -541,10 +530,11 @@ def logaction():
     con = mysql.connect()
     cursor = con.cursor()
     idim = request.form['id']
+    url = request.form['url']
     idu = getid(request.environ['REMOTE_ADDR'])
 
-    q = "INSERT INTO textvote (iduser,time,date,event,idimage) VALUES (" + str(idu) + ",'" + str(
-        timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ")"
+    q = "INSERT INTO textvote (iduser,time,date,event,idimage,url) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ",'" + url + "')"
 
     cursor.execute(q)
     con.commit()
@@ -556,14 +546,15 @@ def logaction():
 @app.route('/logmultiple', methods=['POST'])
 def logmultiple():
     action = request.form['action']
+    url = request.form['url']
     now, timestamp = gettimes()
     con = mysql.connect()
     cursor = con.cursor()
     idim = request.form['id']
     idu = getid(request.environ['REMOTE_ADDR'])
 
-    q = "INSERT INTO multiple (iduser,time,date,event,idimage) VALUES (" + str(idu) + ",'" + str(
-        timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ")"
+    q = "INSERT INTO multiple (iduser,time,date,event,idimage,url) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ",'" + url + "')"
 
     cursor.execute(q)
     con.commit()
@@ -576,15 +567,15 @@ def logmultiple():
 def logswipes():
     idimage = request.form['idimg']
     idtype = request.form['idtype']
-
+    url = request.form['url']
     now, timestamp = gettimes()
     idu = getid(request.environ['REMOTE_ADDR'])
 
     con = mysql.connect()
     cursor = con.cursor()
 
-    q = "INSERT INTO swipe (iduser,`time`,`date`,idimage,idtype,`event`) VALUES (" + str(idu) + ",'" + str(
-        timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'visible')"
+    q = "INSERT INTO swipe (iduser,`time`,`date`,idimage,idtype,`event`,url) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'visible','" + url + "')"
 
     cursor.execute(q)
     cursor.close()
@@ -597,15 +588,15 @@ def logswipes():
 def logsel():
     idimage = request.form['idimg']
     idtype = request.form['idtype']
-
+    url = request.form['url']
     now, timestamp = gettimes()
     idu = getid(request.environ['REMOTE_ADDR'])
 
     con = mysql.connect()
     cursor = con.cursor()
 
-    q = "INSERT INTO selection (iduser,`time`,`date`,idimage,idtype,`event`) VALUES (" + str(idu) + ",'" + str(
-        timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'page loaded')"
+    q = "INSERT INTO selection (iduser,`time`,`date`,idimage,idtype,`event`,url) VALUES (" + str(idu) + ",'" + str(
+        timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'page loaded','" + url + "')"
 
     print(q)
 
@@ -621,6 +612,7 @@ def logm(table):
     idu = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form["idtype"]
     action = request.form["action"]
+    url = request.form['url']
     now, timestamp = gettimes()
     idimgs = str(request.form.get('ids')).split(",")
     print(idimgs)
@@ -629,8 +621,10 @@ def logm(table):
     for image in idimgs:
         print("aaa " + str(image))
         queries.append(
-            "INSERT INTO `" + table + "` (iduser,idimage,idtype,`time`,`date`,`event`) VALUES(" + str(idu) + "," + str(
-                image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(now) + "','" + action + "')")
+            "INSERT INTO `" + table + "` (iduser,idimage,idtype,`time`,`date`,`event`,url) VALUES(" + str(
+                idu) + "," + str(
+                image) + "," + str(idtype) + ",'" + str(timestamp) + "','" + str(
+                now) + "','" + action + "','" + url + "')")
 
     con = mysql.connect()
     cursor = con.cursor()
@@ -700,8 +694,8 @@ def adminstats():
 def getreports():
     con = mysql.connect()
     cursor = con.cursor()
-    cols = ["reports", "user", "task", "bug", "image", "path"]
-    q = "SELECT idreport,iduser,`where`,label,image.idimage,imagepath FROM sql11185116.report INNER JOIN image ON image.idimage = report.idimage;"
+    cols = ["reports", "user", "task", "bug", "image", "path", "url"]
+    q = "SELECT idreport,iduser,`where`,label,image.idimage,imagepath,url FROM sql11185116.report INNER JOIN image ON image.idimage = report.idimage"
     data = vachercherm(q)
     res = '['
     for row in data:
@@ -936,17 +930,17 @@ def saveapp():
 #     <------------------- Dataset download ------------------>
 @app.route("/datcsv.csv")
 def dattcsv():
-    header = "task,task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath\n"
+    header = "task,task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath,url\n"
     body = ""
     db = []
     db.append(vachercherm(
-        "SELECT 'textual'AS task,concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
+        "SELECT 'textual'AS task,concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath,url FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'reverse' AS task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
+        "SELECT 'reverse' AS task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath,url FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'selection' AS task,concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
+        "SELECT 'selection' AS task,concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath,url FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'swipe' AS task,concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
+        "SELECT 'swipe' AS task,concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath,url FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
 
     for table in db:
         for row in table:
@@ -1075,6 +1069,7 @@ def upjonimg():
                 return 'invalid url', 403
             return 'invalid jsons', 400
     return 'Uploaded', 200
+
 
 @app.route('/demo.json')
 def demojson():
@@ -1653,6 +1648,12 @@ def getnext():
     cursor.close()
     con.close()
     return data[0]
+
+
+# View to upload D3JS Files
+@app.route('/upload')
+def upload():
+    return render_template('upload.html')
 
 
 if __name__ == '__main__':

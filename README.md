@@ -28,6 +28,7 @@ This directory contains few tools :
 
 In extention, this website have a chrome app extention which allow an user to capture a screen area and instantly upload it to our databse in oder to discover what others would name this chart.
 
-To install it, just drag and drop the app (NameThatChart-capture.crx located in the Chrome app folder) into chrome://extensions/. 
+To install it, just drag and drop the app (NameThatChart-capture.crx located in the "Chrome app" folder) into chrome://extensions/. 
 
 ## Understand web app structure
+

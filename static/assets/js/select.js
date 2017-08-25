@@ -26,12 +26,14 @@ $(document).ready(function () {
     }
 });
 
-$('body').on('click', '#img', function () {
+$('body').on('click', '.cont', function () {
     $(".cont").each(function () {
-        $(this).addClass('unselec')
+        $(this).addClass('unselec');
+        $(this).css('border', 'solid 2px')
     });
     $('.selec').removeClass('selec');
     $(this).addClass('selec');
+    $(this).css('border', 'solid limegreen 5px');
     $(this).removeClass('unselec');
 });
 
@@ -56,6 +58,7 @@ $('body').on('click', '#save', function () {
                 data: form,
                 success: function () {
                     setTimeout(function () {
+                        $("#vald").attr("src", '');
                         $("#vald").css("display", "none");
                         window.location = baseu + "main"
                     }, (1700));
@@ -65,6 +68,7 @@ $('body').on('click', '#save', function () {
             var form = new FormData();
             form.append("idimage", $('.selec').attr("value"));
             form.append("idtype", type);
+            form.append("url", window.location.href);
             $.ajax({
                 type: "POST",
                 url: baseu + "saveselect",
@@ -93,6 +97,7 @@ $('body').on('click', '#save', function () {
 });
 
 function fillthem() {
+    clearsel();
     if (where.indexOf('quizz') !== -1) {
 
     } else {
@@ -127,6 +132,8 @@ function fillthem() {
                     form.append("action", "visible");
                     form.append("ids", ids);
                     form.append("idtype", type);
+                    form.append("url", window.location.href);
+
                     $.ajax({
                         type: "POST",
                         url: baseu + "logm/selection",
@@ -153,6 +160,7 @@ function fillthem() {
                     form.append("ids", ids);
                     form.append("action", "visible");
                     form.append("idtype", type);
+                    form.append("url", window.location.href);
                     $.ajax({
                         type: "POST",
                         url: baseu + "logm/selection",
@@ -216,6 +224,7 @@ $('body').on('click', '#skip', function () {
         firm.append("action", "skip");
         firm.append("ids", ids);
         firm.append("idtype", type);
+        firm.append("url", window.location.href);
         $.ajax({
             type: "POST",
             url: baseu + "logm/selection",
@@ -247,15 +256,26 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $(".cont").css("display", "none");
+        $("#vald").attr("src", '/static/assets/img/source.gif');
         $("#vald").css("display", "inline-block");
         setTimeout(function () {
             $("#load").css("display", "inline-block");
+            $("#vald").attr("src", '');
             $("#vald").css("display", "none");
         }, (1800));
     } else {
         $(".cont").css("display", "none");
         $("#load").css("display", "inline-block");
     }
+}
+
+function clearsel(){
+        $(".cont").each(function () {
+            $(this).removeClass('unselec');
+            $(this).removeClass('selec');
+            $(this).css('border', 'solid 2px');
+            $(this).css('opactity', '1');
+    });
 }
 
 function gethash() {
@@ -324,6 +344,7 @@ function gen() {
                     form.append("action", "visible");
                     form.append("ids", ids);
                     form.append("idtype", types[1]);
+                    form.append("url", window.location.href);
                     $.ajax({
                         type: "POST",
                         url: baseu + "logm/selection",
@@ -349,6 +370,7 @@ function gen() {
                     form.append("ids", ids);
                     form.append("action", "visible");
                     form.append("idtype", types[1]);
+                    form.append("url", window.location.href);
                     $.ajax({
                         type: "POST",
                         url: baseu + "logm/selection",

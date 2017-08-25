@@ -30,6 +30,8 @@ $('body').on('click', '#skip', function () {
     firm.append("action", "skip");
     firm.append("ids", imgs);
     firm.append("idtype", info.idtype);
+    firm.append("url", window.location.href);
+
     $.ajax({
         type: "POST",
         url: baseu + "logm/reverse",
@@ -59,6 +61,7 @@ $('body').on('click', '#save', function () {
     var form = new FormData();
     form.append("image", img);
     form.append("idtype", type);
+    form.append("url", window.location.href);
     $.ajax({
         type: "POST",
         url: baseu + "saverev",
@@ -84,6 +87,7 @@ $('body').on('click', '#save', function () {
 });
 
 function fillit() {
+    clearsel();
     $("#fill").empty();
     $.ajax({
         type: "GET",
@@ -101,7 +105,7 @@ function fillit() {
                 $("#title").text("Choose the more fitting image to describe");
                 $("#title").append(" the '" + info.label + "' category");
                 images.forEach(function (image) {
-                    $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
+                    $("#fill").append("<img  class='dcont' id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
                 });
                 $("#load").css("display", "none");
                 $("#fill").css("display", "grid");
@@ -110,7 +114,7 @@ function fillit() {
                     $("#title").text("Choose the more fitting image to describe");
                     $("#title").append(" the '" + info.label + "' category");
                     images.forEach(function (image) {
-                        $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
+                        $("#fill").append("<img  class='dcont' id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
                     });
                     $("#load").css("display", "none");
                     $("#fill").css("display", "grid");
@@ -125,9 +129,11 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $("#fill").css("display", "none");
+        $("#vald").attr("src", '/static/assets/img/source.gif');
         $("#vald").css("display", "inline-block");
         setTimeout(function () {
             $("#load").css("display", "inline-block");
+            $("#vald").attr("src", '');
             $("#vald").css("display", "none");
         }, (1800));
     } else {
@@ -136,15 +142,26 @@ function waitsetup(test) {
     }
 }
 
-$('body').on('click', 'img', function () {
-    $("img").each(function () {
-        $(this).addClass('unselec')
+$('body').on('click', '.dcont', function () {
+    $(".dcont").each(function () {
+        $(this).addClass('unselec');
+        $(this).css('border','solid 2px')
     });
     $('.selec').removeClass('selec');
     $(this).addClass('selec');
+    $(this).css('border','solid limegreen 5px');
     $(this).removeClass('unselec');
 });
 
+
+function clearsel(){
+        $(".dcont").each(function () {
+            $(this).removeClass('unselec');
+            $(this).removeClass('selec');
+            $(this).css('border', 'solid 2px');
+            $(this).css('opactity', '1');
+    });
+}
 function gethash() {
 
     var str = "";
@@ -197,7 +214,7 @@ function gen() {
                 $("#title").append(" the '" + types[2] + "' category");
 
                 images.forEach(function (image) {
-                    $("#fill").append("<img id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
+                    $("#fill").append("<img class='dcont' id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
                 });
                 $("#load").css("display", "none");
                 $("#fill").css("display", "grid");
@@ -206,7 +223,7 @@ function gen() {
                     $("#title").text("Choose the more fitting image to describe");
                     $("#title").append(" the '" + types[2] + "' category");
                     images.forEach(function (image) {
-                        $("#fill").append("<img  id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
+                        $("#fill").append("<img class='dcont' id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
                     });
                     $("#load").css("display", "none");
                     $("#fill").css("display", "grid");

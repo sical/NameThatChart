@@ -1,112 +1,7 @@
 <style>
-
-    * {
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    #img {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        border: solid 2px;
-        min-height: 160px;
-        min-width: 180px;
-    }
-
-    .main-head {
-        grid-area: header;
-        align-self: auto;
-
-    }
-
-    .content {
-        grid-area: content;
-        padding: 0;
-        text-align: center;
-    }
-
-    .main-nav {
-        grid-area: nav;
-        align-self: flex-start;
-        vertical-align: top;
-        padding: 0;
-    }
-
-    .main-footer {
-        grid-area: footer;
-        vertical-align: bottom;
-        padding: 0;
-        align-self: flex-end;
-        margin: 0 auto;
-    }
-
-    .wrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        height: 100%
-    }
-
-    #title {
-        font-size: 1.3em;
-    }
-
-    @media (min-width: 500px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #title {
-            font-size: 1.5em;
-        }
-    }
-
-    @media (min-width: 700px) {
-        .wrapper {
-            grid-template-columns: 100%;
-            grid-template-areas: "nav nav nav" "header header  header" "content   content content " "content   content content " "content   content content " "content   content content " "content   content content " "footer footer  footer";
-        }
-
-        nav ul {
-            flex-direction: column;
-        }
-
-        title {
-            font-size: 1.75em;
-        }
-    }
-
     #td {
         padding-bottom: 20px;
     }
-
-    #vald {
-        display: inline-block;
-        width: auto;
-        max-height: 100%;
-        min-height: 160px;
-        min-width: 180px;
-    }
-
 
 </style>
 
@@ -116,7 +11,6 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Name That Chart</title>
-
     <link href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='assets/css/simplecss.css') }}" rel="stylesheet"/>
@@ -150,8 +44,8 @@
 
                 <table style="display: inline-block">
 
-                        <form id="form" action="/saveupimg" method="post" style="margin-bottom:76px ">
-                            <tr>
+                    <form id="form" action="/saveupimg" method="post" style="margin-bottom:76px ">
+                        <tr>
                             <td id="td">
                                 <input type="text" class="form-control" name="url" id="url"
                                        placeholder="URL of the picture">
@@ -159,8 +53,8 @@
                             <td id="td" colspan="2">
                                 <button class="btn" id="send"> Submit</button>
                             </td>
-                            </tr>
-                        </form>
+                        </tr>
+                    </form>
 
 
                 </table>
@@ -181,7 +75,9 @@
             <div>
                 Json files must match one of the following content: ( <a id="demo" href="/demo.json"> click here to see
                 it</a> )
-                <form action="/upjsonimg" method="post" class=" dz-file-preview dz-image-preview dz-preview dropzone needsclick dz-clickable" id="demo-upload">
+                <form action="/upjsonimg" method="post"
+                      class=" dz-file-preview dz-image-preview dz-preview dropzone needsclick dz-clickable"
+                      id="demo-upload">
 
                     <div class="dz-message needsclick">
                         Drop here or click to upload. <strong>JSON</strong> or <strong>Pictures</strong> (only .png .
@@ -201,8 +97,5 @@
 
     </footer>
 </div>
-
-<script TYPE="text/javascript">
-
-
-</script>
+</body>
+</html>
