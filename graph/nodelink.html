@@ -19,15 +19,23 @@
 
 // Source https://bl.ocks.org/mbostock/4062045
 
+// TODO
+// Add image http://bl.ocks.org/eesur/be2abfb3155a38be4de4
+// Timeline if needed http://bl.ocks.org/tomshanley/1f063667610f2092b78c990d8c35fb4d
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
-var r = d3.scale.linear().domain([0, 10])
-        .range([0, 10]);
+var r = d3.scaleLinear()
+        .range([5, 50]);
 
+// Images http://bl.ocks.org/eesur/be2abfb3155a38be4de4
+
+
+// http://vallandingham.me/force-playground/
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
     .force("charge", d3.forceManyBody())
@@ -35,6 +43,12 @@ var simulation = d3.forceSimulation()
 
 d3.json("data.json", function(error, graph) {
   if (error) throw error;
+
+  console.log(graph)
+
+  r.domain(d3.extent(graph.nodes, function(d) {
+    return d.id;
+  }))
 
   var link = svg.append("g")
       .attr("class", "links")
@@ -48,7 +62,7 @@ d3.json("data.json", function(error, graph) {
     .selectAll("circle")
     .data(graph.nodes)
     .enter().append("circle")
-      .attr("r", 5)
+      .attr("r", function(d) { return r(d.id); })
       .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
