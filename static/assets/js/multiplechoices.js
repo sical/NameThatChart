@@ -12,6 +12,8 @@ var types = [];
 $(document).ready(function () {
     where = window.location.pathname;
     baseu = window.location.href.replace(where, "") + "/";
+
+
     waitsetup(false);
     if (where.indexOf('quizz') !== -1) {
         $("#report").hide();
@@ -20,6 +22,8 @@ $(document).ready(function () {
         $("#img").attr("src", "static/assets/img/datasets/json/2_minard_map.jpg");
         setTimeout(function () {
             $("#img").css("display", "inline-block");
+            $("#title").css("display", "inline-block");
+
             $(".but").css("display", "inline-block");
             $("#load").css("display", "none");
         }, (3200 - (fin.getTime() - debut.getTime())));
@@ -52,7 +56,9 @@ function getimg() {
                 $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
                 $(".but").css("display", "inline-block");
+                $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
+                $("#upl").css("display", "none");
 
             } else {
                 id = info.image.id;
@@ -68,7 +74,9 @@ function getimg() {
                 setTimeout(function () {
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
-                    $("#load").css("display", "none");
+                    $("#title").css("display", "inline-block");
+
+                    $("#upl").css("display", "none");
                 }, (2200 - (fin.getTime() - debut.getTime())));
             }
 
@@ -163,8 +171,11 @@ function save(idtype) {
 
 
 function done(text) {
-    if (text == "Minard's map") {
+    console.log(text);
+    if (text == "2") {
         note += 5;
+    }else{
+        note=0
     }
     var form = new FormData();
     form.append("note", note);
@@ -177,8 +188,7 @@ function done(text) {
         success: function () {
 
             setTimeout(function () {
-                $("#vald").attr("src", '');
-                $("#vald").css("display", "none");
+                $("#upl").css("display", "none");
                 window.location = baseu + "quizz"
             }, (1700));
         }
@@ -188,18 +198,15 @@ function done(text) {
 function waitsetup(test) {
     debut = new Date();
     if (test) {
+        $("#title").css("display", "none");
         $("#img").css("display", "none");
         $(".but").css("display", "none");
-        $("#vald").attr("src", '/static/assets/img/source.gif');
-        $("#vald").css("display", "inline-block");
-        setTimeout(function () {
-            $("#load").css("display", "inline-block");
-            $("#vald").attr("src", '');
-            $("#vald").css("display", "none");
-        }, (1800));
+        $("#upl").css("display", "inline-block");
+        $("#load").css("display", "inline-block");
     } else {
         $("#img").css("display", "none");
         $(".but").css("display", "none");
+        $("#title").css("display", "none");
         $("#load").css("display", "inline-block");
     }
 
@@ -257,12 +264,14 @@ function gen() {
                 $("#img").attr("src", info.path);
                 $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
+                $("#title").css("display", "inline-block");
                 $(".but").css("display", "inline-block");
                 $("#load").css("display", "none");
 
             } else {
                 $("#img").attr("value", id);
                 $("#img").attr("src", info.path);
+
                 types.forEach(function (type) {
                     temp = $('#' + i).text(type[1]);
                     temp.attr("value", type[0]);
@@ -270,6 +279,8 @@ function gen() {
                 });
                 $("#img").attr("src", info.path);
                 setTimeout(function () {
+                    $("#title").css("display", "inline-block");
+
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
                     $("#load").css("display", "none");

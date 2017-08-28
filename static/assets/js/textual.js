@@ -36,86 +36,85 @@ $(document).ready(function () {
 });
 
 
-function report(string) {
-    $.ajax({
-        type: "POST",
-        url: baseu + "report/" + string,
-        processData: false,
-        contentType: false,
-        success: function () {
-            $("#skip").click()
-        }
-    });
-}
-
 $('body').on('click', '#save', function () {
-    if ($("#btn").find("input") != undefined) {
-        $("#btn").find("input").remove();
-    }
-    waitsetup(true);
-
-    var text = $("#tofill").val();
-    $("#tofill").val('');
-    if (where.indexOf('quizz') !== -1) {
-        if (text == 'tree map' || text == 'treemap') {
-            note = 4
-        }
-        else {
-            note = 0
+    if ($("#tofill").val().length > 3) {
+        if ($("#btn").find("input") != undefined) {
+            $("#btn").find("input").remove();
         }
 
-        var form = new FormData();
-        form.append("note", note);
-        $.ajax({
-            type: "POST",
-            url: baseu + "savenote",
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function () {
-                setTimeout(function () {
-                    $("#vald").css("display", "none");
-                    window.location = baseu + "quizz"
-                }, (1700));
+        waitsetup(true);
 
+        var text = $("#tofill").val();
+        $("#tofill").val('');
+        if (where.indexOf('quizz') !== -1) {
+            if (text == 'tree map' || text == 'treemap') {
+                note = 4
             }
-        })
-    } else {
+            else {
+                note = 0
+            }
 
-        var form = new FormData();
-        var reg = /[\(,\)\\~\`\"\{\}\`\'\=\#][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
-        text = text.replace(reg, "");
-        form.append("name", text);
-        form.append("id", id);
-        form.append("url", window.location.href);
-        $.ajax({
-            type: "POST",
-            url: baseu + "savetext",
-            enctype: 'mulipart/form-data',
-            processData: false,
-            contentType: false,
-            data: form,
-            success: function () {
-                if (where.indexOf('hybrid') !== -1) {
-                    window.location = baseu + "hybrid"
-                } else {
-                    if (where.indexOf('main') !== -1) {
-                        window.location = baseu + "main"
-                    } else if (where.indexOf('raw') !== -1) {
-                        window.location = baseu + "raw"
-                    } else if (where.indexOf('generated') !== -1) {
-                        waitandload();
-                        window.location = baseu + "main"
-                    }
-                    else {
-                        waitandload();
-
-                    }
-
+            var form = new FormData();
+            form.append("note", note);
+            $.ajax({
+                type: "POST",
+                url: baseu + "savenote",
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function () {
+                    setTimeout(function () {
+                        $("#vald").css("display", "none");
+                        window.location = baseu + "quizz"
+                    }, (1700));
 
                 }
-            }
-        });
+            })
+        } else {
+
+            var form = new FormData();
+            var reg = /[\(,\)\\~\`\"\{\}\`\'\=\#][^²;:\\\/£$*¤µ¨%§!?.&\n\r><@]*/ig;
+            text = text.replace(reg, "");
+            form.append("name", text);
+            form.append("id", id);
+            form.append("url", window.location.href);
+            $.ajax({
+                type: "POST",
+                url: baseu + "savetext",
+                enctype: 'mulipart/form-data',
+                processData: false,
+                contentType: false,
+                data: form,
+                success: function () {
+                    if (where.indexOf('hybrid') !== -1) {
+                        window.location = baseu + "hybrid"
+                    } else {
+                        if (where.indexOf('main') !== -1) {
+                            window.location = baseu + "main"
+                        } else if (where.indexOf('raw') !== -1) {
+                            window.location = baseu + "raw"
+                        } else if (where.indexOf('generated') !== -1) {
+                            waitandload();
+                            var fin = new Date();
+                            if (fin.getTime() - debut.getTime() > 3200) {
+                                window.location = baseu + "textualimg"
+                            } else {
+                                setTimeout(function () {
+                                    window.location = baseu + "textualimg";
+                                }, (3000 - (fin.getTime() - debut.getTime())));
+                            }
+
+                        }
+                        else {
+                            waitandload();
+
+                        }
+
+
+                    }
+                }
+            });
+        }
     }
 });
 
@@ -130,7 +129,7 @@ $('body').on('click', '#skip', function () {
     firm.append("url", window.location.href);
     $.ajax({
         type: "POST",
-        url: baseu +"logaction",
+        url: baseu + "logaction",
         processData: false,
         contentType: false,
         data: firm
@@ -143,8 +142,9 @@ $('body').on('click', '#skip', function () {
         } else if (where.indexOf('raw') !== -1) {
             window.location = baseu + "raw"
         } else if (where.indexOf('generated') !== -1) {
-            window.location = baseu + "main"
+            window.location = baseu + "textualimg"
         }
+
         else {
             waitandload();
         }
@@ -196,13 +196,17 @@ function waitandload() {
                 $("#img").attr("src", data[0]);
                 $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
+                $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
+                $("#upl").css("display", "none");
             } else {
                 $("#img").attr("src", data[0]);
                 $("#img").attr("value", id);
                 setTimeout(function () {
+                    $("#title").css("display", "inline-block");
                     $("#img").css("display", "inline-block");
                     $("#load").css("display", "none");
+                    $("#upl").css("display", "none");
                 }, (3200 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();
@@ -223,15 +227,12 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $("#img").css("display", "none");
-        $("#vald").attr("src",'/static/assets/img/source.gif');
-        $("#vald").css("display", "inline-block");
-        setTimeout(function () {
-            $("#load").css("display", "inline-block");
-            $("#vald").css("display", "none");
-            $("#vald").attr("src", "");
-        }, (1800));
+        $("#upl").css("display", "inline");
+        $("#load").css("display", "inline-block");
+        $("#title").css("display", "none");
     } else {
         $("#img").css("display", "none");
+        $("#title").css("display", "none");
         $("#load").css("display", "inline-block");
     }
 
@@ -266,6 +267,8 @@ function gen() {
                 $("#img").attr("src", data[0].path);
                 $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
+                $("#title").css("display", "inline-block");
+
                 $("#load").css("display", "none");
             } else {
 
@@ -273,6 +276,7 @@ function gen() {
                 $("#img").attr("value", id);
                 setTimeout(function () {
                     $("#img").css("display", "inline-block");
+                    $("#title").css("display", "inline-block");
                     $("#load").css("display", "none");
                 }, (3000 - (fin.getTime() - debut.getTime())));
             }

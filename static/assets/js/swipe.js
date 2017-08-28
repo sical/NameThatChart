@@ -35,7 +35,7 @@ $(document).ready(function () {
             temp.css("background-image", 'url("' + path[i] + '")');
             $("#" + i + "_txt").text("");
         }
-        $("#title").text("Does this belongs in \"" + cat[4] + "\" category");
+        $("#title").text("Does this belongs in \"" + cat[5] + "\" category");
     }
     else if (where.indexOf('generated') !== -1) {
         waitsetup();
@@ -65,19 +65,20 @@ $("#tinderslide").jTinder({
                     note += 1
                 }
                 if (nb == 1) {
-                    $("#vald").attr("src", '/static/assets/img/source.gif');
-                    $("#vald").css("display", "inline-block");
+                    $("#upl").css("display", "inline-block");
+                    $("#load").css("display", "inline-block");
                     done(note);
                 }
 
             } else {
-                nb = nb - 1;
+
                 var form = new FormData();
                 form.append("vote", false);
                 form.append("idimage", info[nb - 1].idimage);
                 form.append("idtype", info[nb - 1].idtype);
                 form.append("url", window.location.href);
-                $("#title").text("Is this a \"" + cat[nb] + "\" ?");
+                $("#title").text("Is this a \"" + cat[nb-1] + "\" ?");
+                nb = nb - 1;
                 $.ajax({
                     type: "POST",
                     url: baseu + "saveswipe",
@@ -100,24 +101,27 @@ $("#tinderslide").jTinder({
                         }
                     }
                 });
-                if (item.index() == 0) {
+                if (nb == 0) {
                     if (where.indexOf('main') !== -1) {
                         window.location = baseu + "main"
                     } else if (where.indexOf('raw') !== -1) {
                         window.location = baseu + "raw"
                     }
                     else {
-                        $("#vald").attr("src", '/static/assets/img/source.gif');
-                        $("#vald").css("display", "inline-block");
+                        $("#upl").css("display", "inline-block");
+                        $("#load").css("display", "inline-block");
+                        $("#title").css("display", "none");
+
 
                         setTimeout(function () {
-                                $("#vald").attr("src", '');
-                                $("#vald").css("display", "none");
+                                $("#upl").css("display", "none");
+                                $("#load").css("display", "none");
                                 window.location = baseu + "swipes"
                             }
                             ,
                             (1700)
                         );
+
                     }
                 }
             }
@@ -134,8 +138,10 @@ $("#tinderslide").jTinder({
             }
             nb -= 1;
             if (item.index() == 0) {
-                $("#vald").attr("src", '/static/assets/img/source.gif');
-                $("#vald").css("display", "inline-block");
+                $("#title").css("display", "none");
+
+                $("#upl").css("display", "inline-block");
+                $("#load").css("display", "inline-block");
                 done(note);
             }
         } else {
@@ -178,13 +184,14 @@ $("#tinderslide").jTinder({
                     window.location = baseu + "raw"
                 }
                 else {
-                    $("#vald").attr("src", '/static/assets/img/source.gif');
-                    $("#vald").css("display", "inline-block");
+                    $("#upl").css("display", "inline-block");
+                    $("#load").css("display", "inline-block");
+                    $("#title").css("display", "none");
 
 
                     setTimeout(function () {
-                            $("#vald").attr("src", '');
-                            $("#vald").css("display", "none");
+                            $("#upl").css("display", "none");
+                            $("#load").css("display", "none");
                             window.location = baseu + "swipes"
                         }
                         ,
@@ -215,7 +222,8 @@ function done(val) {
         data: form,
         success: function () {
             setTimeout(function () {
-                $("#vald").css("display", "none");
+                $("#upl").css("display", "none");
+                $("#load").css("display", "none");
                 window.location = baseu + "quizz"
             }, (1700));
 
@@ -282,6 +290,8 @@ function fill() {
                     i++;
                 });
                 $("#load").css("display", "none");
+                $("#title").css("display", "inline-block");
+
             } else {
                 setTimeout(function () {
                         info.forEach(function (img) {
@@ -299,6 +309,8 @@ function fill() {
                             i++;
                         });
                         $("#load").css("display", "none");
+                        $("#title").css("display", "inline-block");
+
                     }
                     ,
                     (1700 - (fin.getTime() - debut.getTime()))
@@ -380,12 +392,13 @@ function vote(vote) {
                 window.location = baseu + "raw"
             }
             else {
-                $("#vald").attr("src", '/static/assets/img/source.gif');
-                $("#vald").css("display", "inline-block");
+                $("#upl").css("display", "inline-block");
+                $("#load").css("display", "inline-block");
+                $("#title").css("display", "none");
 
                 setTimeout(function () {
-                        $("#vald").attr("src", '');
-                        $("#vald").css("display", "none");
+                        $("#upl").css("display", "none");
+                        $("#load").css("display", "none");
                         window.location = baseu + "swipes"
                     }
                     ,
@@ -406,12 +419,13 @@ $("#skip").click(function () {
                 $(".pane" + nb + 1).css("display", "none");
             }, 500);
 
-            $("#vald").attr("src", '/static/assets/img/source.gif');
-            $("#vald").css("display", "inline-block");
+            $("#upl").css("display", "inline-block");
+            $("#load").css("display", "inline-block");
+            $("#title").css("display", "none");
 
             setTimeout(function () {
-                    $("#vald").attr("src", '');
-                    $("#vald").css("display", "none");
+                    $("#upl").css("display", "none");
+                    $("#load").css("display", "none");
                     done(note)
                 }
                 ,
@@ -458,12 +472,13 @@ $("#skip").click(function () {
                 window.location = baseu + "raw"
             }
             else {
-                $("#vald").attr("src", '/static/assets/img/source.gif');
-                $("#vald").css("display", "inline-block");
+                $("#upl").css("display", "inline-block");
+                $("#load").css("display", "inline-block");
+                $("#title").css("display", "inline-block");
 
                 setTimeout(function () {
-                        $("#vald").attr("src", '');
-                        $("#vald").css("display", "none");
+                        $("#upl").css("display", "none");
+                        $("#load").css("display", "none");
                         window.location = baseu + "swipes"
                     }
                     ,
@@ -494,6 +509,8 @@ $("#skip").click(function () {
 function waitsetup() {
     debut = new Date();
     $("#load").css("display", "inline-block");
+    $("#title").css("display", "none");
+
 }
 
 function gethash() {
@@ -513,6 +530,7 @@ function gen() {
     var form = new FormData();
     var temp = $("#id").val();
     temp = temp.split("-");
+    console.log(temp);
     var infotemp = [];
 
     temp.forEach(function (row) {
@@ -523,8 +541,7 @@ function gen() {
     infotemp.forEach(function (row) {
         tempstr += row[0] + " or idimage= "
     });
-    tempstr = tempstr.substr(0, tempstr.length - 13);
-
+    tempstr = tempstr.substr(0, tempstr.length - 12);
     form.append("action", tempstr);
     $.ajax({
         type: "POST",
@@ -541,7 +558,7 @@ function gen() {
                 info[i]['idtype'] = row[2];
                 i++
             });
-
+            console.log(info);
             var i = 1;
             var fin = new Date();
             if (fin.getTime() - debut.getTime() > 1700) {
@@ -560,6 +577,8 @@ function gen() {
                     i++;
                 });
                 $("#load").css("display", "none");
+                $("#title").css("display", "inline-block");
+
             } else {
                 setTimeout(function () {
                         info.forEach(function (img) {
@@ -577,6 +596,8 @@ function gen() {
                             i++;
                         });
                         $("#load").css("display", "none");
+                        $("#title").css("display", "inline-block");
+
                     }
                     ,
                     (1700 - (fin.getTime() - debut.getTime()))
@@ -590,7 +611,7 @@ function gen() {
             $.ajax({
 
                 type: "POST",
-                url: baseu + "loghc",
+                url: baseu + "logswipes",
                 processData: false,
                 contentType: false,
                 data: form

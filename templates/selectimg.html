@@ -6,6 +6,7 @@
         max-height: 100%;
         border: solid 2px;
         min-height: 80px;
+        min-width: unset;
         justify-self: center;
     }
 
@@ -16,12 +17,11 @@
         grid-template-columns: 1fr 1fr;
         margin: 0 auto; /*center aligned*/
         padding: 0;
-        grid-gap:10px;
+        grid-gap: 10px;
         font-size: 0; /* Remember to change it back to normal font size if have captions */
         list-style: none;
 
     }
-
 
     @media (min-width: 400px) {
 
@@ -44,13 +44,13 @@
 
     @media (min-width: 700px) {
 
-
         #fill {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             max-width: max-content;
             max-height: 600px;
         }
+
         #img {
             display: inline-block;
             width: auto;
@@ -94,35 +94,37 @@
     </header>
 
     <article class="content">
+
         <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
-        <img class="up" style="display: none" id="vald" src=""
-             alt="loading logo"/>
+        <h2 style="display: none" id="upl">Submitted ! ... loading next graphic</h2>
         <div id="fill">
+
             <div class="rig_cell">
-                <img  style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 70px; min-width: unset;" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
+                <img style="min-height: 70px; min-width: unset;" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
+                <img style="  min-width: unset;min-height: 70px " id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
+                <img style="  min-width: unset;min-height: 70px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
+                <img style=" min-width: unset;min-height: 70px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
             <div class="rig_cell">
-                <img style="min-height: 90px" id="img" class="cont" style="z-index: 0;"
+                <img style=" min-width: unset;min-height: 70px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
+
         </div>
 
 

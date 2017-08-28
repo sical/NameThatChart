@@ -58,8 +58,7 @@ $('body').on('click', '#save', function () {
                 data: form,
                 success: function () {
                     setTimeout(function () {
-                        $("#vald").attr("src", '');
-                        $("#vald").css("display", "none");
+                        $("#upl").css("display", "none");
                         window.location = baseu + "main"
                     }, (1700));
                 }
@@ -115,7 +114,7 @@ function fillthem() {
                 type = info.idtype;
 
                 var fin = new Date();
-                if (fin.getTime() - debut.getTime() > 5000) {
+                if (fin.getTime() - debut.getTime() > 2500) {
                     images = info.imgs;
                     var image;
                     ids = [];
@@ -142,7 +141,10 @@ function fillthem() {
                         data: form
                     });
                     $(".cont").css("display", "inline");
+                    $("#title").css("display", "inline-block");
+                    $("#btn").css("display", "inline-block");
                     $("#load").css("display", "none");
+
 
                 } else {
                     images = info.imgs;
@@ -170,7 +172,10 @@ function fillthem() {
                     });
                     setTimeout(function () {
                         $(".cont").css("display", "inline");
+                        $("#title").css("display", "inline-block");
+                        $("#btn").css("display", "inline-block");
                         $("#load").css("display", "none");
+                        $("#upl").css("display", "none");
                     }, (2500 - (fin.getTime() - debut.getTime())));
                 }
 
@@ -193,6 +198,8 @@ function fillthem2() {
 
     setTimeout(function () {
         $(".cont").css("display", "inline-block");
+        $("#title").css("display", "inline-block");
+        $("#btn").css("display", "inline-block");
         $("#load").css("display", "none");
     }, (1800));
 }
@@ -214,7 +221,7 @@ $('body').on('click', '#skip', function () {
             data: form,
             success: function () {
                 setTimeout(function () {
-                    $("#vald").css("display", "none");
+                    $("#upl").css("display", "none");
                     window.location = baseu + "main"
                 }, (1700));
             }
@@ -256,25 +263,26 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $(".cont").css("display", "none");
-        $("#vald").attr("src", '/static/assets/img/source.gif');
-        $("#vald").css("display", "inline-block");
-        setTimeout(function () {
-            $("#load").css("display", "inline-block");
-            $("#vald").attr("src", '');
-            $("#vald").css("display", "none");
-        }, (1800));
+        $("#upl").css("display", "inline-block");
+        $("#load").css("display", "inline-block");
+        $("#title").css("display", "none");
+        $("#btn").css("display", "none");
+
     } else {
         $(".cont").css("display", "none");
         $("#load").css("display", "inline-block");
+        $("#title").css("display", "none");
+        $("#btn").css("display", "none");
+
     }
 }
 
-function clearsel(){
-        $(".cont").each(function () {
-            $(this).removeClass('unselec');
-            $(this).removeClass('selec');
-            $(this).css('border', 'solid 2px');
-            $(this).css('opactity', '1');
+function clearsel() {
+    $(".cont").each(function () {
+        $(this).removeClass('unselec');
+        $(this).removeClass('selec');
+        $(this).css('border', 'solid 2px');
+        $(this).css('opactity', '1');
     });
 }
 
@@ -353,6 +361,8 @@ function gen() {
                         data: form
                     });
                     $(".cont").css("display", "inline");
+                    $("#title").css("display", "inline-block");
+                    $("#btn").css("display", "inline-block");
                     $("#load").css("display", "none");
 
                 } else {
@@ -380,6 +390,8 @@ function gen() {
                     });
                     setTimeout(function () {
                         $(".cont").css("display", "inline");
+                        $("#title").css("display", "inline-block");
+                        $("#btn").css("display", "inline-block");
                         $("#load").css("display", "none");
                     }, (2500 - (fin.getTime() - debut.getTime())));
                 }

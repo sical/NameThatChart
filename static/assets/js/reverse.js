@@ -79,6 +79,7 @@ $('body').on('click', '#save', function () {
                 }
                 else {
                     debut = new Date();
+
                     fillit()
                 }
             }
@@ -105,19 +106,25 @@ function fillit() {
                 $("#title").text("Choose the more fitting image to describe");
                 $("#title").append(" the '" + info.label + "' category");
                 images.forEach(function (image) {
-                    $("#fill").append("<img  class='dcont' id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
+                    $("#fill").append("<img  style='min-width: unset;min-height: unset' class='dcont' id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
                 });
                 $("#load").css("display", "none");
+                $("#upl").css("display", "none");
                 $("#fill").css("display", "grid");
+                $("#title").css("display", "inline-block");
+
             } else {
                 setTimeout(function () {
                     $("#title").text("Choose the more fitting image to describe");
                     $("#title").append(" the '" + info.label + "' category");
                     images.forEach(function (image) {
-                        $("#fill").append("<img  class='dcont' id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
+                        $("#fill").append("<img style='min-width: unset;min-height: unset' class='dcont' id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
                     });
                     $("#load").css("display", "none");
+                    $("#upl").css("display", "none");
                     $("#fill").css("display", "grid");
+                    $("#title").css("display", "inline-block");
+
                 }, (3000 - (fin.getTime() - debut.getTime())));
 
             }
@@ -129,37 +136,35 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $("#fill").css("display", "none");
-        $("#vald").attr("src", '/static/assets/img/source.gif');
-        $("#vald").css("display", "inline-block");
-        setTimeout(function () {
-            $("#load").css("display", "inline-block");
-            $("#vald").attr("src", '');
-            $("#vald").css("display", "none");
-        }, (1800));
+        $("#upl").css("display", "inline-block");
+        $("#load").css("display", "inline-block");
+        $("#title").css("display", "none");
+
     } else {
         $("#load").css("display", "inline-block");
         $("#fill").css("display", "none");
+        $("#title").css("display", "none");
     }
 }
 
 $('body').on('click', '.dcont', function () {
     $(".dcont").each(function () {
         $(this).addClass('unselec');
-        $(this).css('border','solid 2px')
+        $(this).css('border', 'solid 2px')
     });
     $('.selec').removeClass('selec');
     $(this).addClass('selec');
-    $(this).css('border','solid limegreen 5px');
+    $(this).css('border', 'solid limegreen 5px');
     $(this).removeClass('unselec');
 });
 
 
-function clearsel(){
-        $(".dcont").each(function () {
-            $(this).removeClass('unselec');
-            $(this).removeClass('selec');
-            $(this).css('border', 'solid 2px');
-            $(this).css('opactity', '1');
+function clearsel() {
+    $(".dcont").each(function () {
+        $(this).removeClass('unselec');
+        $(this).removeClass('selec');
+        $(this).css('border', 'solid 2px');
+        $(this).css('opactity', '1');
     });
 }
 function gethash() {
@@ -214,19 +219,23 @@ function gen() {
                 $("#title").append(" the '" + types[2] + "' category");
 
                 images.forEach(function (image) {
-                    $("#fill").append("<img class='dcont' id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
+                    $("#fill").append("<img style='min-width: unset;min-height: unset' class='dcont' id='img'  value='" + image.idimage + "' src='" + image.path + "'/>")
                 });
                 $("#load").css("display", "none");
+                $("#title").css("display", "inline-block");
+
                 $("#fill").css("display", "grid");
             } else {
                 setTimeout(function () {
                     $("#title").text("Choose the more fitting image to describe");
                     $("#title").append(" the '" + types[2] + "' category");
                     images.forEach(function (image) {
-                        $("#fill").append("<img class='dcont' id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
+                        $("#fill").append("<img style='min-width: unset;min-height: unset' class='dcont' id='img' value='" + image.idimage + "' src='" + image.path + "'/>")
                     });
                     $("#load").css("display", "none");
                     $("#fill").css("display", "grid");
+                    $("#title").css("display", "inline-block");
+
                 }, (2200 - (fin.getTime() - debut.getTime())));
 
             }

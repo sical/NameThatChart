@@ -1,25 +1,13 @@
 /**
  * Created by theo on 7/27/17.
  */
-$('body').on('click', '#nd', function () {
-    event.preventDefault();
 
-    report("no_display")
+$('body').on('click', '#report', function () {
+    report();
 });
 
-$('body').on('click', '#ii', function () {
-    event.preventDefault();
 
-    report("Inappropriate_image")
-});
-
-$('body').on('click', '#hmc', function () {
-    event.preventDefault();
-
-    report("miss_classification")
-});
-
-function report(string) {
+function report() {
     var ids = getids();
     var form = new FormData();
     form.append("ids", ids);
@@ -31,7 +19,7 @@ function report(string) {
     }
     $.ajax({
         type: "POST",
-        url: "../report" + where + "/" + string,
+        url:  baseu +"report" + where ,
         processData: false,
         contentType: false,
         data: form,

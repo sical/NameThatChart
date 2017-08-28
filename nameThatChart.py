@@ -14,6 +14,7 @@ from flask_caching import Cache
 from flask_compress import Compress
 from flaskext.mysql import MySQL
 import sys
+from datetime import timedelta
 from datasetManager import imagePrep as pics
 
 #     <------------------Server configuration ------------------>
@@ -42,6 +43,50 @@ cache.init_app(app)
 Compress(app)
 
 
+@app.before_request
+def make_session_permanent():
+    session.permanent = False
+    app.permanent_session_lifetime = timedelta(minutes=10)
+
+
+#     <------------------ Temp ------------------>
+
+
+
+@app.route('/image2json')
+def image2json():
+    con = mysql.connect()
+    cursor = con.cursor()
+    ids = []
+    cursor.execute(
+        "SELECT DISTINCT imagepath,image.idimage,label FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype")
+    data = cursor.fetchall()
+
+    result = '['
+
+    for row in data:
+
+        if row[1] not in ids:
+            result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + ',"Type":"' + str(row[2]) + '"},'
+            ids.append(row[1])
+
+    cursor.execute(
+        "SELECT DISTINCT idimage,imagepath FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote)")
+
+    data = cursor.fetchall()
+    for row in data:
+        result += '{"path": "' + str(row[1]) + '","id":' + str(row[0]) + '},'
+
+    result = result[:-1]
+    result += ']'
+    print(result)
+
+    cursor.close()
+    con.close()
+
+    return result
+
+
 #     <------------------ Classic render template ------------------>
 
 @app.route('/')
@@ -51,7 +96,7 @@ def hello_world():
 
 # View Qcm
 @app.route('/multiple')
-def temp():
+def multiple():
     return render_template('multiple.html')
 
 
@@ -132,7 +177,7 @@ def quizz():
         session['note'] = 0
         session['id'] = getid(request.environ["REMOTE_ADDR"])
         nb = 0
-
+    print(session['note'])
     return render_template(temp[nb] + ".html")
 
 
@@ -238,11 +283,12 @@ def savemultiple():
     final = "INSERT INTO multiple (idimage,idtype,iduser,`time`,`date`,`event`,url) VALUES (" + str(
         idimage) + "," + str(
         idtype) + "," + str(idu) + ",'" + str(timestamp) + "','" + str(now) + "','chosen','" + url + "') "
-    print(final)
+
     cursor.execute(final)
     cursor.close()
     con.commit()
     con.close()
+    checkandup(idtype, idimage, 12)
     return 'ok'
 
 
@@ -270,7 +316,31 @@ def savetext():
     cursor.close()
     con.close()
 
+    checkandup(idt, idim, 40)
+
     return 'ok'
+
+
+def checkandup(idtype, idimage, pts):
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    query = "SELECT * FROM result WHERE idtype=" + str(idtype) + " AND idimage=" + str(idimage)
+    cursor.execute(query)
+    data = cursor.fetchone()
+
+    if data is None:
+        query = "INSERT INTO result (idtype,idimage,score) VALUES (" + str(idtype) + "," + str(idimage) + "," + str(
+            pts) + ")"
+    else:
+        query = "UPDATE result SET score = score+" + str(pts) + " WHERE idtype=" + str(idtype) + " AND idimage=" + str(
+            idimage)
+
+    cursor.execute(query)
+
+    cursor.close()
+    con.commit()
+    con.close()
 
 
 @app.route("/saverev", methods=['post'])
@@ -293,6 +363,7 @@ def saverev():
     cursor.close()
     con.commit()
     con.close()
+    checkandup(idtype, image, 10)
     return 'ok'
 
 
@@ -316,7 +387,7 @@ def saveselect():
     cursor.close()
     con.commit()
     con.close()
-
+    checkandup(idtype, idimg, 20)
     return 'ok'
 
 
@@ -342,28 +413,17 @@ def saveswipe():
     cursor.close()
     con.commit()
     con.close()
+    if str(vote) == 'true':
+        checkandup(idtype, idimage, 5)
+    else:
+        checkandup(idtype, idimage, -15)
     return 'ok'
 
 
 #     <------------------ Reports saving ------------------>
 
-@app.route("/report/<label>", methods=['POST'])
-def report(label):
-    usrid = getid(request.environ['REMOTE_ADDR'])
-    idimg = session.get("idimg")
-
-    con = mysql.connect()
-    cursor = con.cursor()
-    cursor.execute(
-        "INSERT INTO report (idimage,iduser,label,`where`) VALUES (" + str(idimg) + "," + str(
-            usrid) + ",'" + label + "','textual')")
-    con.commit()
-    con.close()
-    return 'ok'
-
-
-@app.route("/report/<where>/<label>", methods=['POST'])
-def reportgene(label, where):
+@app.route("/report/<where>", methods=['POST'])
+def reportgene(where):
     usrid = getid(request.environ['REMOTE_ADDR'])
     idimgs = str(request.form.get('ids')).split(",")
     url = request.form.get('url')
@@ -373,7 +433,7 @@ def reportgene(label, where):
 
     for idimg in idimgs:
         q = "INSERT INTO report (idimage,iduser,label,`where`,url) VALUES (" + str(idimg) + "," + str(
-            usrid) + ",'" + label + "','" + where + "','" + url + "')"
+            usrid) + ",'not a data graphics','" + where + "','" + url + "')"
         print(q)
         cursor.execute(q)
 
@@ -391,11 +451,12 @@ def reportgene(label, where):
 def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
-    cursor.execute("SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote) LIMIT 1")
+    cursor.execute(
+        "SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote) LIMIT 1")
     data = cursor.fetchone()
     if data is None:
         cursor.execute(
-            "select distinct imagepath, image.idimage from textvote inner join image on image.idimage=textvote.idimage group by idimage order by count(*) LIMIT 1")
+            "SELECT DISTINCT imagepath, image.idimage FROM textvote INNER JOIN image ON image.idimage=textvote.idimage GROUP BY idimage ORDER BY count(*) LIMIT 1")
         data = cursor.fetchone()
     cursor.close()
     con.close()
@@ -408,19 +469,19 @@ def getimgmul():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT idimage,imagepath FROM image WHERE idimage IN (SELECT idimage FROM textvote GROUP BY idimage HAVING count(idtype) > 3) ORDER BY rand() LIMIT 1")
+        "SELECT DISTINCT image.idimage,imagepath FROM result,image WHERE image.idimage= result.idimage AND image.idimage IN (SELECT idimage FROM result GROUP BY image.idimage HAVING count(idtype) > 3) ORDER BY rand() LIMIT 1")
     img = cursor.fetchone()
-
     cursor.execute(
-        "SELECT DISTINCT label,type.idtype FROM type INNER JOIN textvote ON type.idtype=textvote.idtype WHERE idimage=" + str(
-            img[
-                0]) + " ORDER BY rand() LIMIT 4")
+        "SELECT DISTINCT label,type.idtype FROM type INNER JOIN result ON type.idtype=result.idtype WHERE idimage=" + str(
+            img[0]) + " ORDER BY rand() LIMIT 4")
 
     data = cursor.fetchall()
+    print(data)
     cursor.close()
     con.close()
     arr = ""
     for row in data:
+        print(row)
         arr += '{"label":"' + str(row[0]) + '","idtype":"' + str(row[1]) + '"},'
     arr = arr[:-1]
 
@@ -436,11 +497,11 @@ def getselect():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT type.idtype,label FROM sql11185116.textvote INNER JOIN type ON type.idtype = textvote.idtype WHERE type.idtype IS NOT NULL GROUP BY type.idtype,label HAVING count(type.idtype) > 5 ORDER BY rand() LIMIT 1")
+        "SELECT type.idtype,label FROM result INNER JOIN type ON type.idtype = result.idtype WHERE type.idtype IS NOT NULL GROUP BY type.idtype,label HAVING count(idimage) > 5 ORDER BY rand() LIMIT 1")
     idtype = cursor.fetchone()
 
     cursor.execute(
-        "SELECT DISTINCT imagepath,image.idimage FROM textvote INNER JOIN image ON image.idimage = textvote.idimage WHERE textvote.idtype = " + str(
+        "SELECT DISTINCT imagepath,image.idimage FROM result INNER JOIN image ON image.idimage = result.idimage WHERE result.idtype = " + str(
             idtype[0]) + " ORDER BY rand() LIMIT 6")
 
     imgs = cursor.fetchall()
@@ -468,27 +529,20 @@ def getfive():
     con = mysql.connect()
     cursor = con.cursor()
 
-    cursor.execute("SELECT imagepath,idimage,max(number),idtype  "
-                   "FROM (SELECT image.idimage,imagepath ,count(selection.idtype) AS number,selection.idtype FROM selection INNER JOIN image ON image.idimage = selection.idimage "
-                   "GROUP BY image.idimage, selection.idtype) AS temp GROUP BY idimage ORDER BY rand() LIMIT 5")
+    cursor.execute(
+        "SELECT  DISTINCT image.idimage,imagepath,label,type.idtype FROM result INNER JOIN image ON image.idimage=result.idimage INNER JOIN type ON type.idtype= result.idtype  WHERE score >= 70 ORDER BY rand() LIMIT 5")
     data = cursor.fetchall()
 
     result = "[ "
 
-    for i in range(0, len(data)):
-        cursor.execute("SELECT label FROM type WHERE idtype =" + str(data[i][3]))
-        temp = cursor.fetchone()[0]
-        result += '{' \
-                  '"path" : "' + str(data[i][0]) + '",' \
-                                                   '"label" : "' + temp + '",' \
-                                                                          '"idimage": ' + str(data[i][1]) + ',' \
-                                                                                                            '"idtype": ' + str(
-            data[i][3]) + '' \
-                          '},'
+    for row in data:
+        result += '{"path" : "' + str(row[1]) + '","label" : "' + row[2] + '","idimage":' + str(
+            row[0]) + ',"idtype": ' + str(row[3]) + '},'
     result = result[:-1]
     result += " ]"
     cursor.close()
     con.close()
+    print(result)
     return result
 
 
@@ -498,21 +552,23 @@ def getreverse():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT idtype FROM sql11185116.textvote GROUP BY idtype HAVING count(idtype) > 4 ORDER BY rand() LIMIT 1")
-    idt = cursor.fetchone()[0]
+        "SELECT type.idtype,label FROM result INNER JOIN type ON type.idtype = result.idtype WHERE type.idtype IS NOT NULL GROUP BY type.idtype,label HAVING count(idimage) > 3 ORDER BY rand() LIMIT 1")
+    idt = cursor.fetchone()
 
     cursor.execute(
-        "SELECT DISTINCT image.idimage,imagepath,label FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON type.idtype = textvote.idtype WHERE textvote.idtype =" + str(
-            idt) + " ORDER BY rand() LIMIT 4")
+        "SELECT DISTINCT image.idimage,imagepath FROM result INNER JOIN image ON image.idimage = result.idimage WHERE result.idtype = " + str(
+            idt[0]) + " ORDER BY rand() LIMIT 4")
     data = cursor.fetchall()
     res = ''
+
     for row in data:
         res += '{"idimage":' + str(row[0]) + ',"path":"' + str(row[1]) + '"},'
 
     res = res[:-1]
-    result = '{"idtype":"' + str(idt) + '",' \
-                                        '"label": "' + str(data[0][2]) + '",' \
-                                                                         '"images" : [' + res + ']'
+    print(res)
+    result = '{"idtype":"' + str(idt[0]) + '",' \
+                                           '"label": "' + str(idt[1]) + '",' \
+                                                                        '"images" : [' + res + ']'
     result += '}'
     cursor.close()
     con.close()
@@ -1089,28 +1145,24 @@ def demojson():
 # <------------------ Classic methods ------------------>
 
 def getid(ip):
-    con = mysql.connect()
-    cursor = con.cursor()
-    cursor.execute("SELECT ipuser FROM user WHERE ipuser ='" + ip + "'")
-    data = cursor.fetchone()
-
-    if data is None:
-
+    if "first" not in session:
+        con = mysql.connect()
+        cursor = con.cursor()
         cursor.execute("INSERT INTO user (ipuser) VALUES ('" + ip + "')")
         cursor.close()
         con.commit()
         cursor = con.cursor()
-        cursor.execute("SELECT iduser FROM user WHERE ipuser ='" + ip + "'")
-        data = cursor.fetchone()
+        cursor.execute("SELECT max(iduser) FROM user WHERE ipuser ='" + ip + "'")
+        data = cursor.fetchone()[0]
         cursor.close()
         con.close()
+        session["first"] = False
+        session["id"] = data
+
         return data
     else:
-        query = "SELECT iduser FROM user WHERE ipuser ='" + ip + "'"
-        cursor.execute(query)
-        data = cursor.fetchone()
-        con.close()
-        return data[0]
+        print(session["id"])
+        return session["id"]
 
 
 def gettype(typename):
