@@ -213,7 +213,7 @@ function gen() {
             images = info;
             type = types[1];
             var fin = new Date();
-            if (fin.getTime() - debut.getTime() > 3000) {
+            if (fin.getTime() - debut.getTime() > 1800) {
 
                 $("#title").text("Choose the more fitting image to describe");
                 $("#title").append(" the '" + types[2] + "' category");
@@ -236,7 +236,7 @@ function gen() {
                     $("#fill").css("display", "grid");
                     $("#title").css("display", "inline-block");
 
-                }, (2200 - (fin.getTime() - debut.getTime())));
+                }, (1800 - (fin.getTime() - debut.getTime())));
 
             }
         }

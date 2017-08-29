@@ -218,7 +218,9 @@ def main():
             return render_template('reverse.html')
         else:
             return render_template('multiple.html')
-    elif int(session.get("task")) > 50 and int(session.get("lvl")) == 0:
+    elif int(session.get("task")) > 70 and int(session.get("lvl")) == 0:
+        return render_template('textualimg.html')
+    elif int(session.get("task")) > 40 and int(session.get("lvl")) == 0:
         session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
         rand = randint(0, 300)
         if rand < 130:
@@ -452,7 +454,7 @@ def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
     cursor.execute(
-        "SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote) LIMIT 1")
+        "SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote)  ORDER BY rand() LIMIT 1")
     data = cursor.fetchone()
     if data is None:
         cursor.execute(
@@ -530,7 +532,7 @@ def getfive():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT  DISTINCT image.idimage,imagepath,label,type.idtype FROM result INNER JOIN image ON image.idimage=result.idimage INNER JOIN type ON type.idtype= result.idtype  WHERE score >= 70 ORDER BY rand() LIMIT 5")
+        "SELECT  DISTINCT image.idimage,imagepath,label,type.idtype FROM result INNER JOIN image ON image.idimage=result.idimage INNER JOIN type ON type.idtype= result.idtype  WHERE score > 20 ORDER BY rand() LIMIT 5")
     data = cursor.fetchall()
 
     result = "[ "
@@ -1205,7 +1207,7 @@ def getcost(task, lvl):
             cost = -5
         else:
             cost = + 60
-    elif lvl == 2:
+    elif lvl == 1:
         if task == 0:
             cost = -15
         elif task == 1:
@@ -1214,11 +1216,11 @@ def getcost(task, lvl):
             cost = + 40
     else:
         if task == 0:
-            cost = -50
+            cost = -25
         elif task == 1:
-            cost = -20
+            cost = -15
         else:
-            cost = +9
+            cost = +45
     print(str(cost) + "COUT")
     return cost
 

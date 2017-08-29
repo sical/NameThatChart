@@ -45,7 +45,7 @@ function getimg() {
             var i = 0;
             var temp;
             var fin = new Date();
-            if (fin.getTime() - debut.getTime() > 2200) {
+            if (fin.getTime() - debut.getTime() > 1800) {
                 info.types.forEach(function (type) {
                     temp = $('#' + i).text(type.label);
                     temp.attr("value", type.idtype);
@@ -75,9 +75,9 @@ function getimg() {
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
                     $("#title").css("display", "inline-block");
-
+                    $("#load").css("display", "none");
                     $("#upl").css("display", "none");
-                }, (2200 - (fin.getTime() - debut.getTime())));
+                }, (1800 - (fin.getTime() - debut.getTime())));
             }
 
             var furm = new FormData();
@@ -174,8 +174,8 @@ function done(text) {
     console.log(text);
     if (text == "2") {
         note += 5;
-    }else{
-        note=0
+    } else {
+        note = 0
     }
     var form = new FormData();
     form.append("note", note);
@@ -254,7 +254,7 @@ function gen() {
             var i = 0;
             var temp;
             var fin = new Date();
-            if (fin.getTime() - debut.getTime() > 2200) {
+            if (fin.getTime() - debut.getTime() > 1800) {
                 types.forEach(function (type) {
                     temp = $('#' + i).text(type[1]);
                     temp.attr("value", type[0]);
@@ -284,7 +284,7 @@ function gen() {
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
                     $("#load").css("display", "none");
-                }, (2200 - (fin.getTime() - debut.getTime())));
+                }, (1800 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();
             furm.append("action", "page loaded");
