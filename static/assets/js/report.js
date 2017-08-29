@@ -19,7 +19,7 @@ function report() {
     }
     $.ajax({
         type: "POST",
-        url:  baseu +"report" + where ,
+        url: baseu + "report" + where,
         processData: false,
         contentType: false,
         data: form,
@@ -28,6 +28,25 @@ function report() {
         }
     });
 }
+
+$('body').on('click', '#nvb', function () {
+    console.log($(".topnav").val());
+    if($(".topnav").val()  == undefined) {
+            $(".main-nav").load(baseu + "navbar");
+                $("#nvb").text("Hide Nav Bar")
+    }else {
+         $(".main-nav").empty();
+        $("#nvb").text("Show Nav Bar")
+    }
+
+    $.ajax({
+        type: "GET",
+        url: baseu + "putiton",
+        processData: false,
+        contentType: false,
+    });
+});
+
 
 function getids() {
     result = [];

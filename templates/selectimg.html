@@ -84,7 +84,9 @@
 
 <div class="wrapper">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
+        {% if session.haha %}
+            {% include 'navbar.html' %}
+        {% endif %}
 
     </nav>
     <header class="main-head">

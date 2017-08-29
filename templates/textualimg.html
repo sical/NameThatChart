@@ -21,8 +21,10 @@
 
 <div class="wrapper">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
 
+        {% if session.haha %}
+            {% include 'navbar.html' %}
+        {% endif %}
     </nav>
     <header class="main-head">
         <h1 id="title">
@@ -33,7 +35,7 @@
     <article class="content">
         <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
-        <h2  style="display: none" id="upl">Submitted ! ... loading next graphic</h2>
+        <h2 style="display: none" id="upl">Submitted ! ... loading next graphic</h2>
 
         <img id="img" src=""/>
     </article>
@@ -43,8 +45,17 @@
             <input id="tofill" type="text" class="form-control" name="type" placeholder="What is this chart ?"
                    maxlength="50" style="max-width: 500px;text-align: left;display: inline-block;margin-bottom: 3%"/>
             <div style="text-align: center;display: inline;" id="btn">
+                {% if session.haha %}
+                    <button style="height: 50px;padding: 6px 12px;margin-right: 10px" class="btn" id="nvb"
+                            type="button" value="1">Hide Nav Bar
+                {% else %}
+                    <button style="height: 50px;padding: 6px 12px;margin-right: 10px" class="btn" id="nvb"
+                            type="button" value="0">Show Nav bar
+
+                {% endif %}
                 <button style="height: 50px;padding: 6px 12px" class="btn" id="report"
-                        type="button">Not a Chart </button>
+                        type="button">Not a Chart
+                </button>
                 <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
                 <button style="height: 50px;padding: 6px 12px" id="save" class="btn">Submit</button>
             </div>

@@ -1,7 +1,16 @@
 <div style="margin: 0 auto;">
     <div style="text-align: center;display: inline;" id="btn">
-            <button style="height: 50px;padding: 6px 12px" class="btn" id="report"
-                    type="button">Not a Chart</button>
+        {% if session.haha %}
+            <button style="height: 50px;padding: 6px 12px" class="btn" id="nvb"
+                    type="button" value="1">Hide Nav Bar</button>
+        {% else %}
+            <button style="height: 50px;padding: 6px 12px" class="btn" id="nvb"
+                    type="button" value="0">Show Nav bar</button>
+
+        {% endif %}
+        <button style="height: 50px;padding: 6px 12px" class="btn" id="report"
+                type="button">Not a Chart
+        </button>
         <button style="height: 50px;padding: 6px 12px" id="skip" class="btn">skip</button>
         <button style="height: 50px;padding: 6px 12px" id="save" class="btn">save</button>
     </div>

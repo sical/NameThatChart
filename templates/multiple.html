@@ -72,7 +72,9 @@
 
 <div class="grid">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
+        {% if session.haha %}
+            {% include 'navbar.html' %}
+        {% endif %}
     </nav>
     <header class="main-head">
         <h1 id="title">
@@ -98,10 +100,10 @@
                 </button>
             </div>
             <div class="" style="display: inline" id="pres">
-                <button  value="2" style="margin: 1%" id="2"
+                <button value="2" style="margin: 1%" id="2"
                         class="btnvali btn">Minard's map
                 </button>
-                <button value="3"  style="margin: 1%" id="3"
+                <button value="3" style="margin: 1%" id="3"
                         class="btnvali btn">flow datagram
                 </button>
             </div>

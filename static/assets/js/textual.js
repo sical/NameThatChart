@@ -16,16 +16,19 @@ $(document).ready(function () {
     if (where.indexOf('quizz') !== -1) {
         $("#report").hide();
         var fin = new Date();
-        if (fin.getTime() - debut.getTime() > 3000) {
+        if (fin.getTime() - debut.getTime() > 1800) {
             $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
             $("#img").css("display", "inline-block");
             $("#load").css("display", "none");
+            $("#title").css("display", "inline-block");
+
         } else {
             $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
             setTimeout(function () {
                 $("#img").css("display", "inline-block");
+                $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
-            }, (3000 - (fin.getTime() - debut.getTime())));
+            }, (1800 - (fin.getTime() - debut.getTime())));
         }
 
     } else if (where.indexOf('generated') !== -1) {

@@ -26,7 +26,7 @@ $(document).ready(function () {
 
             $(".but").css("display", "inline-block");
             $("#load").css("display", "none");
-        }, (3200 - (fin.getTime() - debut.getTime())));
+        }, (1800 - (fin.getTime() - debut.getTime())));
     } else if (where.indexOf('generated') !== -1) {
         gen();
     } else {

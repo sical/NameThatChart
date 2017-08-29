@@ -83,7 +83,9 @@
 <input type="hidden" value="{{ test }}" id="id"/>
 <div class="wrapper">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
+        {% if session.haha %}
+            {% include 'navbar.html' %}
+        {% endif %}
     </nav>
     <header class="main-head">
         <h1 id="title">

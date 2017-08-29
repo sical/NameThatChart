@@ -2,7 +2,7 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64 ,os
 
 headers = {
     # Request headers
-    "Ocp-Apim-Subscription-Key": '{str(os.environ["BING"])}',
+    "Ocp-Apim-Subscription-Key": '{'+str(os.environ["BING"])+'}',
 }
 
 params = urllib.parse.urlencode({
@@ -12,16 +12,26 @@ params = urllib.parse.urlencode({
     'offset': '0',
     'mkt': 'en-us',
     'safeSearch': 'Strict',
-    'size':'Large',
+    'size': 'Large'
 })
 
 try:
-    conn = http.client.HTTPSConnection('bingapis.azure-api.net')
+    conn = http.client.HTTPSConnection('api.cognitive.microsoft.com')
 
-    conn.request("GET", "/api/v5/news/search?%s" % params, "{body}", headers)
+    conn.request("GET", "https://api.cognitive.microsoft.com/bing/v7.0/images/search" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
     conn.close()
 except Exception as e:
-    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+    print(e)
+
+
+
+"""
+--- TITLE WITHIN QUIZZ
+--- internal server error score
+
+
+
+"""

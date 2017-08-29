@@ -47,10 +47,25 @@ Compress(app)
 def make_session_permanent():
     session.permanent = False
     app.permanent_session_lifetime = timedelta(minutes=10)
+    if session.get("haha") is None:
+        session["haha"] = False
 
 
-#     <------------------ Temp ------------------>
+# <------------------ Temp ------------------>
 
+
+@app.route('/putiton')
+def putiton():
+    if str(session.get("haha")) == 'True':
+        session["haha"] = False
+    else:
+        session["haha"] = True
+    return 'ok'
+
+
+@app.route('/navbar')
+def navbar():
+    return render_template("navbar.html")
 
 
 @app.route('/image2json')
@@ -115,6 +130,7 @@ def swipes():
 # View of textual with images
 @app.route('/textualimg')
 def textualimg():
+    session['haha'] = True
     return render_template('textualimg.html')
 
 
@@ -200,11 +216,12 @@ def mainraw():
 # main view with taskforce motivation handling
 @app.route('/main')
 def main():
-    lvl = session.get("lvl")
-    if lvl is None:
+    if session.get("lvl") is None:
         lvl = getlvl(request.environ["REMOTE_ADDR"])
-    if lvl is None:
+    if session.get("lvl") is None:
         return redirect("/raw")
+    else:
+        lvl = session.get("lvl")
     print(str(session.get("task")) + " MOTIVATION")
     if int(session.get("task")) > 80 and int(session.get("lvl")) > 0:
         session['task'] = str(int(session.get("task")) + getcost(0, int(session.get("lvl"))))
@@ -1023,7 +1040,7 @@ def saveupimg():
 
     ext = str(temp[len(temp) - 1])
 
-    filename = str(idu) + "_" + str(now) + name.replace("." + ext, "") + "." + ext
+    filename = str(idu) + "_" + str(now) + "." + ext
 
     q = os.path.join(os.getcwd(), "static/assets/img/datasets/json/" + filename)
 
