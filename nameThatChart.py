@@ -46,7 +46,7 @@ Compress(application)
 @application.before_request
 def make_session_permanent():
     session.permanent = False
-    app.permanent_session_lifetime = timedelta(minutes=10)
+    application.permanent_session_lifetime = timedelta(minutes=10)
     if session.get("haha") is None:
         session["haha"] = False
 
@@ -1153,7 +1153,7 @@ def demojson():
         for line in f:
             res += str(line.rstrip())
 
-    response = app.response_class(
+    response = application.response_class(
         response=json.dumps(res).replace("\\", "")[:-1][1:],
         status=200,
         mimetype='application/json'
