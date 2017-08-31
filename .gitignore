@@ -9,3 +9,4 @@
 !.elasticbeanstalk/*.global.yml
 
 *.pyc
+/image.json

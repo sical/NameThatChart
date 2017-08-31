@@ -79,7 +79,8 @@ def result():
     result = '['
 
     for row in data:
-            result += '{"idres": "' + str(row[0]) + '","idimage":' + str(row[1]) + ',"imagepath":"' + str(row[2]) + '","idtype": "' + str(row[3]) + '","label":' + str(row[4]) + ',"Score":"' + str(row[5]) + '"},'
+        result += '{"idres": "' + str(row[0]) + '","idimage":' + str(row[1]) + ',"imagepath":"' + str(
+            row[2]) + '","idtype": "' + str(row[3]) + '","label":' + str(row[4]) + ',"Score":"' + str(row[5]) + '"},'
 
     result = result[:-1]
     result += ']'
@@ -91,9 +92,39 @@ def result():
     return result
 
 
+@application.route('/image2db')
+def image2db():
+    con = mysql.connect()
+    cursor = con.cursor()
+    with open("image.json") as data_file:
+
+        data = json.load(data_file)
+
+        for row in data:
+            print(row['path'])
+            str=""
+            if "vis16cat" in row["path"]:
+                str="vis16cat"
+            elif "vis10cat" in row["path"]:
+                str="vis10cat"
+            elif "MassData" in row["path"]:
+                str= "MassData"
+            elif "upload" in row["path"]:
+                str="upload"
+            elif "app" in row["path"]:
+                str="app"
+            print("--------"+str)
+            cursor.execute("insert into image (imagepath,`from`) values ('"+row['path']+"','"+str+"')")
+
+
+    con.commit()
+    cursor.close()
+    con.close()
+
+    return 'ok'
+
 
 @application.route('/image2json')
-
 def image2json():
     con = mysql.connect()
     cursor = con.cursor()
@@ -405,7 +436,7 @@ def savenote():
         cursor = con.cursor()
 
         cursor.execute(
-            " UPDATE  `user` SET lvl ='" + str(lvl) + "', taskforce ='0' WHERE iduser =" + str(session.get('id')))
+            " UPDATE  `user` SET lvl ='" + str(lvl) + "' WHERE iduser =" + str(session.get('id')))
         cursor.close()
 
         session["lvl"] = str(lvl)
@@ -1139,7 +1170,7 @@ def dattcsv():
     db.append(vachercherm(
         "SELECT 'reverse' AS task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath,url FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
     db.append(vachercherm(
-        "SELECT 'selection' AS task,concat('selection_',idselection),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath,url FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
+        "SELECT 'selection' AS task,concat('selection_',idselect),iduser,time,date,event,selection.idtype,label,image.idimage,imagepath,url FROM selection INNER JOIN image ON selection.idimage = image.idimage INNER JOIN type ON selection.idtype = type.idtype"))
     db.append(vachercherm(
         "SELECT 'swipe' AS task,concat('swipe_',idswipe),iduser,time,date,event,swipe.idtype,label,image.idimage,imagepath,url FROM swipe INNER JOIN image ON swipe.idimage = image.idimage INNER JOIN type ON swipe.idtype = type.idtype"))
 
@@ -1856,4 +1887,3 @@ def upload():
 if __name__ == '__main__':
     application.debug = True
     application.run()
-

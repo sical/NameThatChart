@@ -1,7 +1,7 @@
 /**
  * Created by theo on 8/18/17.
  */
-var tasks = ["textvote", "selection", "swipe", "multiple", "reverse"];
+var tasks = ["textual", "selection", "swipe", "multiple", "reverse"];
 var headerR = ["ID", "User", "Task", "Bug", "IDimage", "ImageLink"];
 var headerT = ["", "Textual", "Selection", "Swipes", "Multiple", "Reverse"];
 $(document).ready(function () {
