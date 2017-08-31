@@ -645,7 +645,7 @@ def getimgmul():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT DISTINCT image.idimage,imagepath FROM result,image WHERE image.idimage= result.idimage AND image.idimage IN (SELECT idimage FROM result GROUP BY image.idimage HAVING count(idtype) > 3) ORDER BY rand() LIMIT 1")
+        "SELECT DISTINCT image.idimage,imagepath FROM result,image WHERE image.idimage= result.idimage AND image.idimage IN (SELECT idimage FROM result GROUP BY idimage HAVING count(idtype) > 3) ORDER BY rand() LIMIT 1")
     img = cursor.fetchone()
     cursor.execute(
         "SELECT DISTINCT label,type.idtype FROM type INNER JOIN result ON type.idtype=result.idtype WHERE idimage=" + str(
