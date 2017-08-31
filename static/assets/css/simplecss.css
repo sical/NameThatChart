@@ -29,6 +29,8 @@
 
 #load {
     z-index: 500;
+    height: 70px;
+    width: auto;
 }
 
 .centerimg {
