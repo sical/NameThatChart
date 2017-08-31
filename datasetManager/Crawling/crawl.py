@@ -16,9 +16,6 @@ from possibleview import View
 
 
 def main():
-    # merge("google")
-    # getgoogle()
-    # getwiki()
     if not os.path.isfile("cart.json") and FLAGS.d == "cart.json":
         cartesian()
 
@@ -51,8 +48,7 @@ def getblock():
 
 
 def merge(name):
-
-    js = getjsonfiles(os.path.join(os.getcwd(),os.path.realpath("../dataset/JsonCrawl/" + name + '.json')))
+    js = getjsonfiles(os.path.join(os.getcwd(), os.path.realpath("../dataset/JsonCrawl/")))
 
     data = {}
     null = []
@@ -77,13 +73,13 @@ def merge(name):
                         elif len(info[key]) > 0:
                             for url in info[key]:
                                 if not url in data[key]:
-                                    data[key].append(url)
+                                    print(data[key])
+                                    data[key]=url
         for row in null:
             if row.lower in info:
                 null.remove(row)
 
-    print(null)
-    write_json("FinalGoogle", data)
+    write_json("final" + name, data)
 
 
 def filetoarray():

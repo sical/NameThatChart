@@ -20,6 +20,7 @@ function getit() {
 
 $(document).ready(function () {
     where = window.location.pathname;
+    console.log(where)
     baseu = window.location.href.replace(where, "") + "/";
     if (where.indexOf('quizz') !== -1) {
         var path = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis16cat/BubbleChart_147.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/AreaGraph_16.gif", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/ParetoChart_499.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/RadarPlot_640.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/VennDiagram_1024.gif"];
@@ -77,7 +78,7 @@ $("#tinderslide").jTinder({
                 form.append("idimage", info[nb - 1].idimage);
                 form.append("idtype", info[nb - 1].idtype);
                 form.append("url", window.location.href);
-                $("#title").text("Is this a \"" + cat[nb-1] + "\" ?");
+                $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
                 nb = nb - 1;
                 $.ajax({
                     type: "POST",
@@ -111,7 +112,6 @@ $("#tinderslide").jTinder({
                         $("#upl").css("display", "inline-block");
                         $("#load").css("display", "inline-block");
                         $("#title").css("display", "none");
-
 
                         setTimeout(function () {
                                 $("#upl").css("display", "none");
@@ -291,6 +291,7 @@ function fill() {
                 });
                 $("#load").css("display", "none");
                 $("#title").css("display", "inline-block");
+                $("#lodt").css("display", "none");
 
             } else {
                 setTimeout(function () {
@@ -310,6 +311,7 @@ function fill() {
                         });
                         $("#load").css("display", "none");
                         $("#title").css("display", "inline-block");
+                        $("#lodt").css("display", "none");
 
                     }
                     ,
@@ -510,6 +512,7 @@ function waitsetup() {
     debut = new Date();
     $("#load").css("display", "inline-block");
     $("#title").css("display", "none");
+    $("#lodt").css("display", "inline-block");
 
 }
 

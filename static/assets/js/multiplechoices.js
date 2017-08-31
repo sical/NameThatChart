@@ -26,6 +26,7 @@ $(document).ready(function () {
 
             $(".but").css("display", "inline-block");
             $("#load").css("display", "none");
+            $("#lodt").css("display", "none");
         }, (1800 - (fin.getTime() - debut.getTime())));
     } else if (where.indexOf('generated') !== -1) {
         gen();
@@ -59,6 +60,7 @@ function getimg() {
                 $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
                 $("#upl").css("display", "none");
+                $("#lodt").css("display", "none");
 
             } else {
                 id = info.image.id;
@@ -77,6 +79,7 @@ function getimg() {
                     $("#title").css("display", "inline-block");
                     $("#load").css("display", "none");
                     $("#upl").css("display", "none");
+                    $("#lodt").css("display", "none");
                 }, (1800 - (fin.getTime() - debut.getTime())));
             }
 
@@ -131,26 +134,34 @@ function clear() {
 }
 
 $('body').on('click', '#skip', function () {
-    clear();
-    waitsetup(false);
+        clear();
+        waitsetup(false);
 
-    if (where.indexOf('quizz') !== -1) {
-        done("");
-    } else {
-        var firm = new FormData();
-        firm.append("action", "skip");
-        firm.append("id", id);
-        firm.append("url", window.location.href);
-        $.ajax({
-            type: "POST",
-            url: baseu + "logmultiple",
-            processData: false,
-            contentType: false,
-            data: firm
-        });
-        getimg();
+        if (where.indexOf('quizz') !== -1) {
+            done("");
+        } else {
+            var firm = new FormData();
+            firm.append("action", "skip");
+            firm.append("id", id);
+            firm.append("url", window.location.href);
+            $.ajax({
+                type: "POST",
+                url: baseu + "logmultiple",
+                processData: false,
+                contentType: false,
+                data: firm
+            });
+            if (where.indexOf('main') !== -1) {
+                window.location = baseu + "main"
+            } else if (where.indexOf('raw') !== -1) {
+                window.location = baseu + "raw"
+            }
+            else {
+                fillthem()
+            }
+        }
     }
-});
+);
 
 function save(idtype) {
     var form = new FormData();
@@ -189,6 +200,7 @@ function done(text) {
 
             setTimeout(function () {
                 $("#upl").css("display", "none");
+                $("#lodt").css("display", "none");
                 window.location = baseu + "quizz"
             }, (1700));
         }
@@ -208,6 +220,7 @@ function waitsetup(test) {
         $(".but").css("display", "none");
         $("#title").css("display", "none");
         $("#load").css("display", "inline-block");
+        $("#lodt").css("display", "inline-block");
     }
 
 }
@@ -267,6 +280,7 @@ function gen() {
                 $("#title").css("display", "inline-block");
                 $(".but").css("display", "inline-block");
                 $("#load").css("display", "none");
+                $("#lodt").css("display", "none");
 
             } else {
                 $("#img").attr("value", id);
@@ -284,6 +298,7 @@ function gen() {
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
                     $("#load").css("display", "none");
+                    $("#lodt").css("display", "none");
                 }, (1800 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();

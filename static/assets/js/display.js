@@ -111,6 +111,11 @@ $("#sh").on('input', function () {
     }
 });
 
+$('#clear').click(function () {
+    $("#sh").val('');
+    $("#fill").empty();
+    $("#res").text('');
+});
 
 function dispoutofid() {
     var modal = document.getElementById('myModal');

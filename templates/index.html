@@ -17,7 +17,9 @@
 <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
 <div class="wrapper">
     <nav class="main-nav">
-        {% include 'navbar.html' %}
+        {% if session.haha %}
+            {% include 'navbar.html' %}
+        {% endif %}
     </nav>
     <header class="main-head">
         <h1 id="main-title" class="page-header">

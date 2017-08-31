@@ -100,6 +100,7 @@
         <img class="up" style="display: none" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
         <h2 style="display: none" id="upl">Submitted ! ... loading next graphic</h2>
+        <h2 style="display: none" id="lodt">Loading next image..</h2>
         <div id="fill">
 
             <div class="rig_cell">
@@ -126,13 +127,12 @@
                 <img style=" min-width: unset;min-height: 70px" id="img" class="cont" style="z-index: 0;"
                      alt="">
             </div>
-
         </div>
 
 
     </article>
 
-    <footer class="main-footer">
+    <footer class="main-footer" style="z-index: 300">
         {% include 'footer.html' %}
     </footer>
 </div>

@@ -54,6 +54,8 @@ def make_session_permanent():
 # <------------------ Temp ------------------>
 
 
+
+
 @app.route('/putiton')
 def putiton():
     if str(session.get("haha")) == 'True':
@@ -68,13 +70,36 @@ def navbar():
     return render_template("navbar.html")
 
 
+@app.route('/result')
+def result():
+    con = mysql.connect()
+    cursor = con.cursor()
+
+    cursor.execute(
+        "SELECT idres,image.idimage,imagepath,type.idtype,label,score FROM result INNER JOIN type ON type.idtype= result.idtype INNER JOIN image ON image.idimage= result.idimage")
+    data = cursor.fetchall()
+    result = '['
+
+    for row in data:
+            result += '{"idres": "' + str(row[0]) + '","idimage":' + str(row[1]) + ',"imagepath":"' + str(row[2]) + '","idtype": "' + str(row[3]) + '","label":' + str(row[4]) + ',"Score":"' + str(row[5]) + '"},'
+
+    result = result[:-1]
+    result += ']'
+    print(result)
+
+    cursor.close()
+    con.close()
+
+    return result
+
+
 @app.route('/image2json')
 def image2json():
     con = mysql.connect()
     cursor = con.cursor()
     ids = []
     cursor.execute(
-        "SELECT DISTINCT imagepath,image.idimage,label FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype")
+        "SELECT DISTINCT imagepath,image.idimage,label FROM image INNER  JOIN textual ON image.idimage= textual.idimage INNER JOIN type  ON type.idtype= textual.idtype")
     data = cursor.fetchall()
 
     result = '['
@@ -86,7 +111,7 @@ def image2json():
             ids.append(row[1])
 
     cursor.execute(
-        "SELECT DISTINCT idimage,imagepath FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote)")
+        "SELECT DISTINCT idimage,imagepath FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textual)")
 
     data = cursor.fetchall()
     for row in data:
@@ -130,8 +155,41 @@ def swipes():
 # View of textual with images
 @app.route('/textualimg')
 def textualimg():
-    session['haha'] = True
     return render_template('textualimg.html')
+
+
+# View of textual with images
+@app.route('/show/textualimg')
+def showtextualimg():
+    session["haha"] = True
+    return render_template('textualimg.html')
+
+
+@app.route('/show/reverse')
+def showreverse():
+    session["haha"] = True
+    return render_template('reverse.html')
+
+
+# View of images selection UI
+@app.route('/show/selectimg')
+def showselectimg():
+    session["haha"] = True
+    return render_template('selectimg.html')
+
+
+# View Qcm
+@app.route('/show/multiple')
+def showmultiple():
+    session["haha"] = True
+    return render_template('multiple.html')
+
+
+# View of Swipes
+@app.route('/show/swipes')
+def showswipes():
+    session["haha"] = True
+    return render_template('swipes.html')
 
 
 # View of admin tools
@@ -197,6 +255,28 @@ def quizz():
     return render_template(temp[nb] + ".html")
 
 
+# Get started quizz
+@app.route('/show/quizz')
+def showquizz():
+    session["haha"] = True
+    temp = ['swipes', 'textualimg', 'multiple', 'selectimg']
+
+    if session.get("page") is None:
+        session['page'] = 0
+        session['note'] = 0
+        session['id'] = getid(request.environ["REMOTE_ADDR"])
+    else:
+        session['page'] += 1
+    nb = session.get("page")
+    if nb >= len(temp):
+        session['page'] = 0
+        session['note'] = 0
+        session['id'] = getid(request.environ["REMOTE_ADDR"])
+        nb = 0
+    print(session['note'])
+    return render_template(temp[nb] + ".html")
+
+
 # main view with Random selection
 @app.route('/raw')
 def mainraw():
@@ -216,6 +296,43 @@ def mainraw():
 # main view with taskforce motivation handling
 @app.route('/main')
 def main():
+    if session.get("lvl") is None:
+        return redirect("/raw")
+    else:
+        lvl = session.get("lvl")
+    print(str(session.get("task")) + " MOTIVATION")
+    if int(session.get("task")) > 80 and int(session.get("lvl")) > 0:
+        session['task'] = str(int(session.get("task")) + getcost(0, int(session.get("lvl"))))
+        return render_template('textualimg.html')
+    elif int(session.get("task")) > 50 and int(session.get("lvl")) > 0:
+        session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
+        rand = randint(0, 300)
+        if rand < 130:
+            return render_template('selectimg.html')
+        elif rand < 290:
+            return render_template('reverse.html')
+        else:
+            return render_template('multiple.html')
+    elif int(session.get("task")) > 70 and int(session.get("lvl")) == 0:
+        return render_template('textualimg.html')
+    elif int(session.get("task")) > 40 and int(session.get("lvl")) == 0:
+        session['task'] = str(int(session.get("task")) + getcost(1, int(session.get("lvl"))))
+        rand = randint(0, 300)
+        if rand < 130:
+            return render_template('selectimg.html')
+        elif rand < 290:
+            return render_template('reverse.html')
+        else:
+            return render_template('multiple.html')
+    else:
+        session['task'] = str(int(session.get("task")) + getcost(2, int(session.get("lvl"))))
+        return render_template('swipes.html')
+
+
+# main view with taskforce motivation handling
+@app.route('/show/main')
+def showmain():
+    session["haha"] = True
     if session.get("lvl") is None:
         lvl = getlvl(request.environ["REMOTE_ADDR"])
     if session.get("lvl") is None:
@@ -253,6 +370,16 @@ def main():
 
 @app.route('/generated/<hash>')
 def gen(hash):
+    hash = base64.b64decode(hash).decode("utf-8")
+    print(hash + " Hash")
+    vals = str(hash).split("/")
+    print(str(vals) + " Vals")
+    return render_template(str(vals[0]) + ".html", test=vals[1])
+
+
+@app.route('/show/generated/<hash>')
+def showgen(hash):
+    session["haha"] = True
     hash = base64.b64decode(hash).decode("utf-8")
     print(hash + " Hash")
     vals = str(hash).split("/")
@@ -326,7 +453,7 @@ def savetext():
     idu = getid(request.environ['REMOTE_ADDR'])
     idt = gettype(name)[0]
 
-    query = "INSERT INTO textvote (iduser,time,date,event,idtype,idimage,url) VALUES(" + str(idu) + ",'" + str(
+    query = "INSERT INTO textual (iduser,time,date,event,idtype,idimage,url) VALUES(" + str(idu) + ",'" + str(
         timestamp) + "','" + str(now) + "','" + "submitted" + "'," + str(idt) + "," + str(idim) + ",'" + url + "')"
 
     cursor.execute(query)
@@ -464,18 +591,17 @@ def reportgene(where):
 #     <------------------ Tasks get ------------------>
 
 
-
 # Mapping to get image to display in Textualimg
 @app.route('/getnextimg')
 def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
     cursor.execute(
-        "SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textvote)  ORDER BY rand() LIMIT 1")
+        "SELECT imagepath,idimage FROM image WHERE idimage NOT IN (SELECT DISTINCT (idimage) FROM textual)  ORDER BY rand() LIMIT 1")
     data = cursor.fetchone()
     if data is None:
         cursor.execute(
-            "SELECT DISTINCT imagepath, image.idimage FROM textvote INNER JOIN image ON image.idimage=textvote.idimage GROUP BY idimage ORDER BY count(*) LIMIT 1")
+            "SELECT DISTINCT imagepath, image.idimage FROM textual INNER JOIN image ON image.idimage=textual.idimage GROUP BY idimage ORDER BY count(*) LIMIT 1")
         data = cursor.fetchone()
     cursor.close()
     con.close()
@@ -608,7 +734,7 @@ def logaction():
     url = request.form['url']
     idu = getid(request.environ['REMOTE_ADDR'])
 
-    q = "INSERT INTO textvote (iduser,time,date,event,idimage,url) VALUES (" + str(idu) + ",'" + str(
+    q = "INSERT INTO textual (iduser,time,date,event,idimage,url) VALUES (" + str(idu) + ",'" + str(
         timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ",'" + url + "')"
 
     cursor.execute(q)
@@ -720,7 +846,7 @@ def adminstats():
     con = mysql.connect()
     cursor = con.cursor()
 
-    tasks = ["textvote", "reverse", "selection", "swipe", "multiple"]
+    tasks = ["textual", "reverse", "selection", "swipe", "multiple"]
     images = []
     users = []
     classes = []
@@ -770,7 +896,7 @@ def getreports():
     con = mysql.connect()
     cursor = con.cursor()
     cols = ["reports", "user", "task", "bug", "image", "path", "url"]
-    q = "SELECT idreport,iduser,`where`,label,image.idimage,imagepath,url FROM sql11185116.report INNER JOIN image ON image.idimage = report.idimage"
+    q = "SELECT idreport,iduser,`where`,label,image.idimage,imagepath,url FROM report INNER JOIN image ON image.idimage = report.idimage"
     data = vachercherm(q)
     res = '['
     for row in data:
@@ -798,7 +924,7 @@ def basicstats():
     qi = "SELECT count(*) FROM image"
     qt = "SELECT count(*) FROM type"
 
-    total = "SELECT nb1 +nb2 + nb3 +nb4 +nb5 AS nb  FROM(SELECT count(*) AS nb1 FROM textvote WHERE event ='submitted') AS t1,(SELECT count(*) AS nb2 FROM selection WHERE event ='chosen')AS t2,(SELECT count(*) AS nb3 FROM swipe WHERE event ='swipe') AS t3,(SELECT count(*) AS nb4 FROM reverse WHERE event ='chosen')AS t4,(SELECT count(*) AS nb5 FROM multiple WHERE event ='chosen') AS t5"
+    total = "SELECT nb1 +nb2 + nb3 +nb4 +nb5 AS nb  FROM(SELECT count(*) AS nb1 FROM textual WHERE event ='submitted') AS t1,(SELECT count(*) AS nb2 FROM selection WHERE event ='chosen')AS t2,(SELECT count(*) AS nb3 FROM swipe WHERE event ='swipe') AS t3,(SELECT count(*) AS nb4 FROM reverse WHERE event ='chosen')AS t4,(SELECT count(*) AS nb5 FROM multiple WHERE event ='chosen') AS t5"
 
     cursor.execute(qu)
     users = cursor.fetchone()[0]
@@ -829,7 +955,7 @@ def getimginfotype():
     con = mysql.connect()
     cursor = con.cursor()
 
-    cursor.execute("SELECT count(idimage) AS nbtxt FROM textvote  WHERE idimage=" + str(
+    cursor.execute("SELECT count(idimage) AS nbtxt FROM textual  WHERE idimage=" + str(
         idimg) + " AND idtype IS NOT NULL GROUP BY idimage")
     nbtxt = cursor.fetchone()
 
@@ -872,7 +998,7 @@ def topclass():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT count(idtype),idtype FROM   textvote WHERE idimage =  " + idimg + " AND idtype IS NOT NULL GROUP BY idtype ORDER BY idtype")
+        "SELECT count(idtype),idtype FROM   textual WHERE idimage =  " + idimg + " AND idtype IS NOT NULL GROUP BY idtype ORDER BY idtype")
     txt = cursor.fetchall()
     cursor.execute(
         "SELECT count(idtype),idtype  FROM selection WHERE idimage = " + idimg + " AND idtype IS NOT NULL GROUP BY idtype ORDER BY idtype")
@@ -959,7 +1085,7 @@ def getimgbytype():
     cursor = con.cursor()
 
     cursor.execute(
-        "SELECT DISTINCT imagepath,image.idimage FROM image INNER  JOIN textvote ON image.idimage= textvote.idimage INNER JOIN type  ON type.idtype= textvote.idtype WHERE label LIKE '%" + str(
+        "SELECT DISTINCT imagepath,image.idimage FROM image INNER  JOIN textual ON image.idimage= textual.idimage INNER JOIN type  ON type.idtype= textual.idtype WHERE label LIKE '%" + str(
             action) + "%'")
     data = cursor.fetchall()
 
@@ -1009,7 +1135,7 @@ def dattcsv():
     body = ""
     db = []
     db.append(vachercherm(
-        "SELECT 'textual'AS task,concat('textual_',idtextvote),iduser,time,date,event,textvote.idtype,label,image.idimage,imagepath,url FROM textvote INNER JOIN image ON textvote.idimage = image.idimage INNER JOIN type ON textvote.idtype = type.idtype"))
+        "SELECT 'textual'AS task,concat('textual_',idtextual),iduser,time,date,event,textual.idtype,label,image.idimage,imagepath,url FROM textual INNER JOIN image ON textual.idimage = image.idimage INNER JOIN type ON textual.idtype = type.idtype"))
     db.append(vachercherm(
         "SELECT 'reverse' AS task, concat('reverse_',idreverse),iduser,time,date,event,reverse.idtype,label,image.idimage,imagepath,url FROM reverse INNER JOIN image ON reverse.idimage = image.idimage INNER JOIN type ON reverse.idtype = type.idtype"))
     db.append(vachercherm(
@@ -1496,23 +1622,23 @@ def getskip():
     con = mysql.connect()
     cursor = con.cursor()
     cursor.execute(
-        "SELECT count(user.iduser),event,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='skip'GROUP BY user.iduser ORDER BY posted DESC,iduser ASC")
+        "SELECT count(user.iduser),event,user.iduser,posted FROM textual INNER JOIN user ON user.iduser = textual.iduser WHERE event='skip'GROUP BY user.iduser ORDER BY posted DESC,iduser ASC")
     skip = cursor.fetchall()
 
     cursor.execute(
-        "SELECT count(user.iduser),event,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='submitted' GROUP BY user.iduser ORDER BY posted DESC,iduser ASC")
+        "SELECT count(user.iduser),event,user.iduser,posted FROM textual INNER JOIN user ON user.iduser = textual.iduser WHERE event='submitted' GROUP BY user.iduser ORDER BY posted DESC,iduser ASC")
     sub = cursor.fetchall()
 
     cursor.execute(
-        "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='page loaded' ORDER BY posted DESC,iduser,idimage ASC")
+        "SELECT idimage,date,user.iduser,posted FROM textual INNER JOIN user ON user.iduser = textual.iduser WHERE event='page loaded' ORDER BY posted DESC,iduser,idimage ASC")
     pl = cursor.fetchall()
 
     cursor.execute(
-        "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='skip' ORDER BY posted DESC,iduser,idimage ASC")
+        "SELECT idimage,date,user.iduser,posted FROM textual INNER JOIN user ON user.iduser = textual.iduser WHERE event='skip' ORDER BY posted DESC,iduser,idimage ASC")
     skipd = cursor.fetchall()
 
     cursor.execute(
-        "SELECT idimage,date,user.iduser,posted FROM textvote INNER JOIN user ON user.iduser = textvote.iduser WHERE event='submitted' ORDER BY posted DESC,iduser,idimage ASC")
+        "SELECT idimage,date,user.iduser,posted FROM textual INNER JOIN user ON user.iduser = textual.iduser WHERE event='submitted' ORDER BY posted DESC,iduser,idimage ASC")
     subd = cursor.fetchall()
     a, b = getavg(pl, skipd, subd)
     res = []
@@ -1544,7 +1670,7 @@ def getfirstrow():
     con = mysql.connect()
     cursor = con.cursor()
     cursor.execute(
-        "SELECT type.idtype,label,count(type.idtype) AS nb FROM type,textvote WHERE type.idtype = textvote.idtype GROUP BY type.idtype, label ORDER BY  nb  DESC LIMIT 4;")
+        "SELECT type.idtype,label,count(type.idtype) AS nb FROM type,textual WHERE type.idtype = textual.idtype GROUP BY type.idtype, label ORDER BY  nb  DESC LIMIT 4;")
     data = cursor.fetchall()
     cursor.close()
     con.close()
