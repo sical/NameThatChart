@@ -143,6 +143,7 @@ function waitsetup(test) {
     } else {
         $("#load").css("display", "inline-block");
         $("#fill").css("display", "none");
+        $("#upl").css("display", "inline-block");
         $("#title").css("display", "none");
     }
 }
@@ -223,6 +224,7 @@ function gen() {
                 });
                 $("#load").css("display", "none");
                 $("#title").css("display", "inline-block");
+                $("#upl").css("display", "none");
 
                 $("#fill").css("display", "grid");
             } else {
@@ -234,6 +236,7 @@ function gen() {
                     });
                     $("#load").css("display", "none");
                     $("#fill").css("display", "grid");
+                    $("#upl").css("display", "none");
                     $("#title").css("display", "inline-block");
 
                 }, (1800 - (fin.getTime() - debut.getTime())));

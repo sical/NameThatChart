@@ -712,7 +712,7 @@ def getfive():
     result = "[ "
 
     for row in data:
-        result += '{"path" : "' + str(row[1]) + '","label" : "' + row[2] + '","idimage":' + str(
+        result += '{"path" : "' + str(row[1]) + '","label" : "' + row[2] + '","id":' + str(
             row[0]) + ',"idtype": ' + str(row[3]) + '},'
     result = result[:-1]
     result += " ]"
@@ -767,7 +767,7 @@ def logaction():
 
     q = "INSERT INTO textual (iduser,time,date,event,idimage,url) VALUES (" + str(idu) + ",'" + str(
         timestamp) + "','" + str(now) + "','" + action + "'," + str(idim) + ",'" + url + "')"
-
+    print(q)
     cursor.execute(q)
     con.commit()
     cursor.close()
@@ -808,7 +808,7 @@ def logswipes():
 
     q = "INSERT INTO swipe (iduser,`time`,`date`,idimage,idtype,`event`,url) VALUES (" + str(idu) + ",'" + str(
         timestamp) + "','" + str(now) + "','" + str(idimage) + "'," + str(idtype) + ",'visible','" + url + "')"
-
+    print(q)
     cursor.execute(q)
     cursor.close()
     con.commit()

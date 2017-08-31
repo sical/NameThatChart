@@ -14,13 +14,13 @@ var tempg;
 var s = false;
 function getit() {
     var res = [];
-    res.push(info[nb - 1].idimage);
+    res.push(info[nb - 1].id);
     return res
 }
 
 $(document).ready(function () {
     where = window.location.pathname;
-    console.log(where)
+    console.log(where);
     baseu = window.location.href.replace(where, "") + "/";
     if (where.indexOf('quizz') !== -1) {
         var path = ["https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis16cat/BubbleChart_147.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/AreaGraph_16.gif", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/ParetoChart_499.png", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/RadarPlot_640.jpg", "https://s3.eu-central-1.amazonaws.com/namethatchart-imagedataset/downloadApi/vis10cat/VennDiagram_1024.gif"];
@@ -75,7 +75,7 @@ $("#tinderslide").jTinder({
 
                 var form = new FormData();
                 form.append("vote", false);
-                form.append("idimage", info[nb - 1].idimage);
+                form.append("idimage", info[nb - 1].id);
                 form.append("idtype", info[nb - 1].idtype);
                 form.append("url", window.location.href);
                 $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
@@ -89,7 +89,7 @@ $("#tinderslide").jTinder({
                     success: function () {
                         if (nb > 0) {
                             var form = new FormData();
-                            form.append("idimg", info[nb - 1].idimage);
+                            form.append("idimg", info[nb - 1].id);
                             form.append("idtype", info[nb - 1].idtype);
                             form.append("url", window.location.href);
                             $.ajax({
@@ -148,7 +148,7 @@ $("#tinderslide").jTinder({
 
             var form = new FormData();
             form.append("vote", true);
-            form.append("idimage", info[nb - 1].idimage);
+            form.append("idimage", info[nb - 1].id);
             form.append("idtype", info[nb - 1].idtype);
             form.append("url", window.location.href);
             $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
@@ -162,7 +162,7 @@ $("#tinderslide").jTinder({
                     success: function () {
                         if (nb > 0) {
                             var form = new FormData();
-                            form.append("idimg", info[nb - 1].idimage);
+                            form.append("idimg", info[nb - 1].id);
                             form.append("idtype", info[nb - 1].idtype);
                             form.append("url", window.location.href);
 
@@ -284,14 +284,14 @@ function fill() {
                     temp.css("background-color", "#FFF");
                     temp.css("border", "solid 1px");
                     temp.css("background-image", 'url("' + img.path + '")');
-                    temp.attr("value", img.idimage);
+                    temp.attr("value", img.id);
                     $("#" + i + "_txt").text(img.label);
                     $("#title").text("Is this a \"" + cat[nb] + "\" ?");
                     i++;
                 });
                 $("#load").css("display", "none");
+                $("#upl").css("display", "none");
                 $("#title").css("display", "inline-block");
-                $("#lodt").css("display", "none");
 
             } else {
                 setTimeout(function () {
@@ -304,14 +304,14 @@ function fill() {
                             temp.css("background-color", "#FFF");
                             temp.css("border", "solid 1px");
                             temp.css("background-image", 'url("' + img.path + '")');
-                            temp.attr("value", img.idimage);
+                            temp.attr("value", img.id);
                             $("#" + i + "_txt").text(img.label);
                             $("#title").text("Is this a \"" + cat[nb] + "\" ?");
                             i++;
                         });
                         $("#load").css("display", "none");
+                        $("#upl").css("display", "none");
                         $("#title").css("display", "inline-block");
-                        $("#lodt").css("display", "none");
 
                     }
                     ,
@@ -320,7 +320,7 @@ function fill() {
             }
 
             var form = new FormData();
-            form.append("idimg", info[4].idimage);
+            form.append("idimg", info[4].id);
             form.append("idtype", info[4].idtype);
             form.append("url", window.location.href);
             $.ajax({
@@ -358,7 +358,7 @@ function vote(vote) {
     } else {
         var form = new FormData();
         form.append("vote", vote);
-        form.append("idimage", info[nb - 1].idimage);
+        form.append("idimage", info[nb - 1].id);
         form.append("idtype", info[nb - 1].idtype);
         form.append("url", window.location.href);
         $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
@@ -373,7 +373,7 @@ function vote(vote) {
                     if (nb > 0) {
                         var form = new FormData();
 
-                        form.append("idimg", info[nb - 1].idimage);
+                        form.append("idimg", info[nb - 1].id);
                         form.append("idtype", info[nb - 1].idtype);
                         form.append("url", window.location.href);
                         $.ajax({
@@ -453,7 +453,7 @@ $("#skip").click(function () {
     } else {
         var firm = new FormData();
         firm.append("action", "skip");
-        firm.append("ids", info[nb - 1].idimage);
+        firm.append("ids", info[nb - 1].id);
         firm.append("idtype", info[nb - 1].idtype);
         firm.append("url", window.location.href);
         $.ajax({
@@ -511,15 +511,15 @@ $("#skip").click(function () {
 function waitsetup() {
     debut = new Date();
     $("#load").css("display", "inline-block");
+    $("#upl").css("display", "inline-block");
     $("#title").css("display", "none");
-    $("#lodt").css("display", "inline-block");
 
 }
 
 function gethash() {
     var str = "";
     info.forEach(function (row) {
-        str += row.idimage + "_" + row.label + "_" + row.idtype + "-";
+        str += row.id + "_" + row.label + "_" + row.idtype + "-";
     });
     str = str.substr(0, str.length - 1);
     var base = baseu + "generated/";
@@ -527,7 +527,6 @@ function gethash() {
     return base + hash
 
 }
-
 
 function gen() {
     var form = new FormData();
@@ -574,7 +573,7 @@ function gen() {
                     temp.css("background-color", "#FFF");
                     temp.css("border", "solid 1px");
                     temp.css("background-image", 'url("' + img.path + '")');
-                    temp.attr("value", img.idimage);
+                    temp.attr("value", img.id);
                     $("#" + i + "_txt").text(img.label);
                     $("#title").text("Is this a \"" + cat[nb] + "\" ?");
                     i++;
@@ -593,7 +592,7 @@ function gen() {
                             temp.css("background-color", "#FFF");
                             temp.css("border", "solid 1px");
                             temp.css("background-image", 'url("' + img.path + '")');
-                            temp.attr("value", img.idimage);
+                            temp.attr("value", img.id);
                             $("#" + i + "_txt").text(img.label);
                             $("#title").text("Is this a \"" + cat[nb] + "\" ?");
                             i++;
@@ -608,7 +607,7 @@ function gen() {
             }
 
             var form = new FormData();
-            form.append("idimg", info[4].idimage);
+            form.append("idimg", info[4].id);
             form.append("idtype", info[4].idtype);
             form.append("url", window.location.href);
             $.ajax({

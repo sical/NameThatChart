@@ -22,7 +22,6 @@ $(document).ready(function () {
             $("#img").css("display", "inline-block");
             $("#load").css("display", "none");
             $("#title").css("display", "inline-block");
-            $("#lodt").css("display", "none");
 
         } else {
             $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
@@ -30,17 +29,14 @@ $(document).ready(function () {
                 $("#img").css("display", "inline-block");
                 $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
-                $("#lodt").css("display", "none");
             }, (1800 - (fin.getTime() - debut.getTime())));
         }
-
     } else if (where.indexOf('generated') !== -1) {
         gen();
     } else {
         waitandload();
     }
 });
-
 
 $('body').on('click', '#save', function () {
     if ($("#tofill").val().length >= 3) {
@@ -106,14 +102,11 @@ $('body').on('click', '#save', function () {
                                     window.location = baseu + "textualimg";
                                 }, (3000 - (fin.getTime() - debut.getTime())));
                             }
-
                         }
                         else {
                             waitandload();
 
                         }
-
-
                     }
                 }
             });
@@ -140,16 +133,16 @@ $('body').on('click', '#skip', function () {
     if (where.indexOf('hybrid') !== -1) {
         window.location = baseu + "hybrid"
     } else if (where.indexOf('main') !== -1) {
-            window.location = baseu + "main"
-        } else if (where.indexOf('raw') !== -1) {
-            window.location = baseu + "raw"
-        } else if (where.indexOf('generated') !== -1) {
-            window.location = baseu + "textualimg"
-        }
+        window.location = baseu + "main"
+    } else if (where.indexOf('raw') !== -1) {
+        window.location = baseu + "raw"
+    } else if (where.indexOf('generated') !== -1) {
+        window.location = baseu + "textualimg"
+    }
 
-        else {
-            waitandload();
-        }
+    else {
+        waitandload();
+    }
 });
 
 $('body').on('input', '#tofill', function () {
@@ -200,7 +193,6 @@ function waitandload() {
                 $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
                 $("#upl").css("display", "none");
-                $("#lodt").css("display", "none");
             } else {
                 $("#img").attr("src", data[0]);
                 $("#img").attr("value", id);
@@ -209,7 +201,6 @@ function waitandload() {
                     $("#img").css("display", "inline-block");
                     $("#load").css("display", "none");
                     $("#upl").css("display", "none");
-                    $("#lodt").css("display", "none");
                 }, (3200 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();
@@ -234,10 +225,10 @@ function waitsetup(test) {
         $("#load").css("display", "inline-block");
         $("#title").css("display", "none");
     } else {
+        $("#upl").css("display", "inline");
         $("#img").css("display", "none");
         $("#title").css("display", "none");
         $("#load").css("display", "inline-block");
-        $("#lodt").css("display", "inline-block");
     }
 
 }
@@ -265,15 +256,16 @@ function gen() {
             var fin = new Date();
             data = JSON.parse(data);
             data = JSON.parse(data);
-            id = data[0].idimage;
+            id = data[0].id;
             if (fin.getTime() - debut.getTime() > 1800) {
 
                 $("#img").attr("src", data[0].path);
                 $("#img").attr("value", id);
                 $("#img").css("display", "inline-block");
                 $("#title").css("display", "inline-block");
-                $("#lodt").css("display", "none");
                 $("#load").css("display", "none");
+                $("#upl").css("display", "none");
+
             } else {
 
                 $("#img").attr("src", data[0].path);
@@ -282,7 +274,8 @@ function gen() {
                     $("#img").css("display", "inline-block");
                     $("#title").css("display", "inline-block");
                     $("#load").css("display", "none");
-                    $("#lodt").css("display", "none");
+                    $("#upl").css("display", "none");
+
                 }, (1800 - (fin.getTime() - debut.getTime())));
             }
         }

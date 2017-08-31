@@ -210,7 +210,6 @@ function done(text) {
 
             setTimeout(function () {
                 $("#upl").css("display", "none");
-                $("#lodt").css("display", "none");
                 window.location = baseu + "quizz"
             }, (1700));
         }
@@ -230,7 +229,7 @@ function waitsetup(test) {
         $(".but").css("display", "none");
         $("#title").css("display", "none");
         $("#load").css("display", "inline-block");
-        $("#lodt").css("display", "inline-block");
+        $("#upl").css("display", "inline-block");
     }
 
 }
@@ -290,7 +289,7 @@ function gen() {
                 $("#title").css("display", "inline-block");
                 $(".but").css("display", "inline-block");
                 $("#load").css("display", "none");
-                $("#lodt").css("display", "none");
+                $("#upl").css("display", "none");
 
             } else {
                 $("#img").attr("value", id);
@@ -308,7 +307,7 @@ function gen() {
                     $("#img").css("display", "inline-block");
                     $(".but").css("display", "inline-block");
                     $("#load").css("display", "none");
-                    $("#lodt").css("display", "none");
+                    $("#upl").css("display", "none");
                 }, (1800 - (fin.getTime() - debut.getTime())));
             }
             var furm = new FormData();
