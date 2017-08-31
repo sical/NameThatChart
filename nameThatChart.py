@@ -18,11 +18,11 @@ from datetime import timedelta
 from datasetManager import imagePrep as pics
 
 #     <------------------Server configuration ------------------>
-app = Flask(__name__)
+application = Flask(__name__)
 mysql = MySQL()
 
 # hash key
-app.secret_key = binascii.hexlify(os.urandom(24))
+application.secret_key = binascii.hexlify(os.urandom(24))
 
 # GZIP
 COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml', 'application/json', 'application/javascript']
@@ -30,23 +30,23 @@ COMPRESS_LEVEL = 6
 COMPRESS_MIN_SIZE = 500
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = os.environ['MYSQL_DATABASE_USER']
-app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MYSQL_DATABASE_PASSWORD']
-app.config['MYSQL_DATABASE_DB'] = os.environ['MYSQL_DATABASE_DB']
-app.config['MYSQL_DATABASE_HOST'] = os.environ['MYSQL_DATABASE_HOST']
+application.config['MYSQL_DATABASE_USER'] = os.environ['MYSQL_DATABASE_USER']
+application.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MYSQL_DATABASE_PASSWORD']
+application.config['MYSQL_DATABASE_DB'] = os.environ['MYSQL_DATABASE_DB']
+application.config['MYSQL_DATABASE_HOST'] = os.environ['MYSQL_DATABASE_HOST']
 
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 # init
-mysql.init_app(app)
-cache.init_app(app)
-Compress(app)
+mysql.init_app(application)
+cache.init_app(application)
+Compress(application)
 
 
-@app.before_request
+@application.before_request
 def make_session_permanent():
     session.permanent = False
-    app.permanent_session_lifetime = timedelta(minutes=10)
+    application.permanent_session_lifetime = timedelta(minutes=10)
     if session.get("haha") is None:
         session["haha"] = False
 
@@ -54,9 +54,7 @@ def make_session_permanent():
 # <------------------ Temp ------------------>
 
 
-
-
-@app.route('/putiton')
+@application.route('/putiton')
 def putiton():
     if str(session.get("haha")) == 'True':
         session["haha"] = False
@@ -65,12 +63,12 @@ def putiton():
     return 'ok'
 
 
-@app.route('/navbar')
+@application.route('/navbar')
 def navbar():
     return render_template("navbar.html")
 
 
-@app.route('/result')
+@application.route('/result')
 def result():
     con = mysql.connect()
     cursor = con.cursor()
@@ -93,7 +91,9 @@ def result():
     return result
 
 
-@app.route('/image2json')
+
+@application.route('/image2json')
+
 def image2json():
     con = mysql.connect()
     cursor = con.cursor()
@@ -129,105 +129,105 @@ def image2json():
 
 #     <------------------ Classic render template ------------------>
 
-@app.route('/')
+@application.route('/')
 def hello_world():
     return render_template('index.html')
 
 
 # View Qcm
-@app.route('/multiple')
+@application.route('/multiple')
 def multiple():
     return render_template('multiple.html')
 
 
 # View Textual D3js
-@app.route('/textual')
+@application.route('/textual')
 def textual():
     return render_template('textualimg.html')
 
 
 # View of Swipes
-@app.route('/swipes')
+@application.route('/swipes')
 def swipes():
     return render_template('swipes.html')
 
 
 # View of textual with images
-@app.route('/textualimg')
+@application.route('/textualimg')
 def textualimg():
     return render_template('textualimg.html')
 
 
 # View of textual with images
-@app.route('/show/textualimg')
+@application.route('/show/textualimg')
 def showtextualimg():
     session["haha"] = True
     return render_template('textualimg.html')
 
 
-@app.route('/show/reverse')
+@application.route('/show/reverse')
 def showreverse():
     session["haha"] = True
     return render_template('reverse.html')
 
 
 # View of images selection UI
-@app.route('/show/selectimg')
+@application.route('/show/selectimg')
 def showselectimg():
     session["haha"] = True
     return render_template('selectimg.html')
 
 
 # View Qcm
-@app.route('/show/multiple')
+@application.route('/show/multiple')
 def showmultiple():
     session["haha"] = True
     return render_template('multiple.html')
 
 
 # View of Swipes
-@app.route('/show/swipes')
+@application.route('/show/swipes')
 def showswipes():
     session["haha"] = True
     return render_template('swipes.html')
 
 
 # View of admin tools
-@app.route('/admin')
+@application.route('/admin')
 def admin():
     return render_template('admin.html')
 
 
 # Display user id from IP
-@app.route('/whatismyid')
+@application.route('/whatismyid')
 def whatismyid():
     return str(getid(request.environ["REMOTE_ADDR"]))
 
 
 # View to upload images into database
-@app.route('/uploadimg')
+@application.route('/uploadimg')
 def uploadimg():
     return render_template('uploadimg.html')
 
 
-@app.route('/reverse')
+@application.route('/reverse')
 def reverse():
     return render_template('reverse.html')
 
 
 # View of images selection UI
-@app.route('/selectimg')
+@application.route('/selectimg')
 def selectimg():
     return render_template('selectimg.html')
 
 
 # View of database of image display / selection
-@app.route('/display_image')
+@application.route('/display_image')
 def display_image():
     return render_template('display_image.html')
 
 
-@app.route('/display_image/<id>')
+@application.route('/display_image/<id>')
 def display_imageid(id):
     return render_template('display_image.html', test=id)
 
@@ -235,7 +235,7 @@ def display_imageid(id):
 #     <------------------ Complex render template ------------------>
 
 # Get started quizz
-@app.route('/quizz')
+@application.route('/quizz')
 def quizz():
     temp = ['swipes', 'textualimg', 'multiple', 'selectimg']
 
@@ -256,7 +256,7 @@ def quizz():
 
 
 # Get started quizz
-@app.route('/show/quizz')
+@application.route('/show/quizz')
 def showquizz():
     session["haha"] = True
     temp = ['swipes', 'textualimg', 'multiple', 'selectimg']
@@ -278,7 +278,7 @@ def showquizz():
 
 
 # main view with Random selection
-@app.route('/raw')
+@application.route('/raw')
 def mainraw():
     a = randint(0, 500)
     if a < 100:
@@ -294,7 +294,7 @@ def mainraw():
 
 
 # main view with taskforce motivation handling
-@app.route('/main')
+@application.route('/main')
 def main():
     if session.get("lvl") is None:
         return redirect("/raw")
@@ -330,7 +330,7 @@ def main():
 
 
 # main view with taskforce motivation handling
-@app.route('/show/main')
+@application.route('/show/main')
 def showmain():
     session["haha"] = True
     if session.get("lvl") is None:
@@ -368,7 +368,7 @@ def showmain():
         return render_template('swipes.html')
 
 
-@app.route('/generated/<hash>')
+@application.route('/generated/<hash>')
 def gen(hash):
     hash = base64.b64decode(hash).decode("utf-8")
     print(hash + " Hash")
@@ -377,7 +377,7 @@ def gen(hash):
     return render_template(str(vals[0]) + ".html", test=vals[1])
 
 
-@app.route('/show/generated/<hash>')
+@application.route('/show/generated/<hash>')
 def showgen(hash):
     session["haha"] = True
     hash = base64.b64decode(hash).decode("utf-8")
@@ -390,7 +390,7 @@ def showgen(hash):
 #     <------------------ Task saving ------------------>
 
 # Quizz note saving
-@app.route('/savenote', methods=['POST'])
+@application.route('/savenote', methods=['POST'])
 def savenote():
     session['note'] = int(request.form["note"]) + int(session.get("note"))
     if (session['page'] == 3):
@@ -417,7 +417,7 @@ def savenote():
 
 
 # Mapping to save multiple (QCM) task
-@app.route('/savemultiple', methods=['POST'])
+@application.route('/savemultiple', methods=['POST'])
 def savemultiple():
     idimage = request.form.get("idimage")
     idtype = request.form.get("idtype")
@@ -439,7 +439,7 @@ def savemultiple():
 
 
 # Mapping to save Textual task
-@app.route('/savetext', methods=['POST'])
+@application.route('/savetext', methods=['POST'])
 def savetext():
     name = request.form["name"]
     name = name.replace("'", "\\'")
@@ -489,7 +489,7 @@ def checkandup(idtype, idimage, pts):
     con.close()
 
 
-@app.route("/saverev", methods=['post'])
+@application.route("/saverev", methods=['post'])
 def saverev():
     idu = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form["idtype"]
@@ -514,7 +514,7 @@ def saverev():
 
 
 # Save user choice into selection
-@app.route('/saveselect', methods=['POST'])
+@application.route('/saveselect', methods=['POST'])
 def saveselect():
     iduser = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form['idtype']
@@ -538,7 +538,7 @@ def saveselect():
 
 
 # Save one swipe on swipes
-@app.route('/saveswipe', methods=['POST'])
+@application.route('/saveswipe', methods=['POST'])
 def saveswipe():
     idimage = request.form["idimage"]
     vote = request.form["vote"]
@@ -568,7 +568,7 @@ def saveswipe():
 
 #     <------------------ Reports saving ------------------>
 
-@app.route("/report/<where>", methods=['POST'])
+@application.route("/report/<where>", methods=['POST'])
 def reportgene(where):
     usrid = getid(request.environ['REMOTE_ADDR'])
     idimgs = str(request.form.get('ids')).split(",")
@@ -592,7 +592,7 @@ def reportgene(where):
 
 
 # Mapping to get image to display in Textualimg
-@app.route('/getnextimg')
+@application.route('/getnextimg')
 def getnextimg():
     con = mysql.connect()
     cursor = con.cursor()
@@ -608,7 +608,7 @@ def getnextimg():
     return json.dumps(data)
 
 
-@app.route('/getimgmul')
+@application.route('/getimgmul')
 def getimgmul():
     con = mysql.connect()
     cursor = con.cursor()
@@ -636,7 +636,7 @@ def getimgmul():
 
 
 # Get set of images to display in selection
-@app.route('/getselect')
+@application.route('/getselect')
 def getselect():
     con = mysql.connect()
     cursor = con.cursor()
@@ -669,7 +669,7 @@ def getselect():
 
 
 # Get set of 5 images & types to fill swipes
-@app.route('/getfive', )
+@application.route('/getfive', )
 def getfive():
     con = mysql.connect()
     cursor = con.cursor()
@@ -691,7 +691,7 @@ def getfive():
     return result
 
 
-@app.route('/getreverse')
+@application.route('/getreverse')
 def getreverse():
     con = mysql.connect()
     cursor = con.cursor()
@@ -724,7 +724,7 @@ def getreverse():
 # <------------------ logging tools ------------------>
 
 # Log Textual user actions ( Page loaded , started typing etc ...)
-@app.route('/logaction', methods=['POST'])
+@application.route('/logaction', methods=['POST'])
 def logaction():
     action = request.form['action']
     now, timestamp = gettimes()
@@ -744,7 +744,7 @@ def logaction():
     return 'ok'
 
 
-@app.route('/logmultiple', methods=['POST'])
+@application.route('/logmultiple', methods=['POST'])
 def logmultiple():
     action = request.form['action']
     url = request.form['url']
@@ -764,7 +764,7 @@ def logmultiple():
     return 'ok'
 
 
-@app.route('/logswipes', methods=['POST'])
+@application.route('/logswipes', methods=['POST'])
 def logswipes():
     idimage = request.form['idimg']
     idtype = request.form['idtype']
@@ -785,7 +785,7 @@ def logswipes():
     return 'ok'
 
 
-@app.route('/logsel', methods=['POST'])
+@application.route('/logsel', methods=['POST'])
 def logsel():
     idimage = request.form['idimg']
     idtype = request.form['idtype']
@@ -808,7 +808,7 @@ def logsel():
     return 'ok'
 
 
-@app.route("/logm/<table>", methods=['POST'])
+@application.route("/logm/<table>", methods=['POST'])
 def logm(table):
     idu = getid(request.environ['REMOTE_ADDR'])
     idtype = request.form["idtype"]
@@ -841,7 +841,7 @@ def logm(table):
 
 #     <------------------ Admin stats ------------------>
 
-@app.route("/adminstats")
+@application.route("/adminstats")
 def adminstats():
     con = mysql.connect()
     cursor = con.cursor()
@@ -891,7 +891,7 @@ def adminstats():
     return result
 
 
-@app.route("/getreports")
+@application.route("/getreports")
 def getreports():
     con = mysql.connect()
     cursor = con.cursor()
@@ -915,7 +915,7 @@ def getreports():
     return res
 
 
-@app.route("/getbasicstats")
+@application.route("/getbasicstats")
 def basicstats():
     con = mysql.connect()
     cursor = con.cursor()
@@ -949,7 +949,7 @@ def basicstats():
 
 
 # Display single image tasks in display_image
-@app.route("/getimginfotype", methods=['POST'])
+@application.route("/getimginfotype", methods=['POST'])
 def getimginfotype():
     idimg = request.form['idimg']
     con = mysql.connect()
@@ -990,7 +990,7 @@ def getimginfotype():
 
 
 # display to class of a single image Display_image
-@app.route('/topclass', methods=["POST"])
+@application.route('/topclass', methods=["POST"])
 def topclass():
     idimg = request.form['idimg']
 
@@ -1056,7 +1056,7 @@ def topclass():
 
 
 # Return Image path from given ID used in display_image
-@app.route('/getimgbyid', methods=['POST'])
+@application.route('/getimgbyid', methods=['POST'])
 def getimgbyid():
     action = request.form['action']
     result = '['
@@ -1077,7 +1077,7 @@ def getimgbyid():
 
 
 # Get image from given type with SQL match (LIKE %%) used in display_image
-@app.route('/getimgbytype', methods=['POST'])
+@application.route('/getimgbytype', methods=['POST'])
 def getimgbytype():
     action = request.form['action']
     result = []
@@ -1104,7 +1104,7 @@ def getimgbytype():
 
 
 #     <------------------- Chrome app saving ------------------>
-@app.route("/saveapp", methods=["POST"])
+@application.route("/saveapp", methods=["POST"])
 def saveapp():
     idu = getid(request.environ["REMOTE_ADDR"])
     file = request.files['local']
@@ -1129,7 +1129,7 @@ def saveapp():
 
 
 #     <------------------- Dataset download ------------------>
-@app.route("/datcsv.csv")
+@application.route("/datcsv.csv")
 def dattcsv():
     header = "task,task_id,iduser,timestamp,date,event,idtype,label,idimg,imagepath,url\n"
     body = ""
@@ -1154,7 +1154,7 @@ def dattcsv():
 
 #     <------------------- Image / JSON upload & JSON demo ------------------>
 # Save upload of image (admin) with FORM
-@app.route('/saveupimg', methods=['POST'])
+@application.route('/saveupimg', methods=['POST'])
 def saveupimg():
     url = request.form['url']
 
@@ -1187,7 +1187,7 @@ def saveupimg():
 
 
 # Save upload of image (admin) with JSON
-@app.route("/upjsonimg", methods=['POST'])
+@application.route("/upjsonimg", methods=['POST'])
 def upjonimg():
     images = ["png", "jpeg", "jpg", "svg"]
 
@@ -1272,14 +1272,14 @@ def upjonimg():
     return 'Uploaded', 200
 
 
-@app.route('/demo.json')
+@application.route('/demo.json')
 def demojson():
     res = ""
     with open(os.path.join(os.getcwd(), "static/assets/json/demo.json"), "r") as f:
         for line in f:
             res += str(line.rstrip())
 
-    response = app.response_class(
+    response = application.response_class(
         response=json.dumps(res).replace("\\", "")[:-1][1:],
         status=200,
         mimetype='application/json'
@@ -1437,25 +1437,25 @@ def vachercherss(query):
 
 
 # Preview of user D3JS integration
-@app.route('/preview')
+@application.route('/preview')
 def preview():
     return render_template('preview.html')
 
 
 # Mapping of d3js files to display them into textual
-@app.route('/textual/<chart>')
+@application.route('/textual/<chart>')
 def generic(chart):
     return render_template(chart)
 
 
 # Mapping of d3js files to display them into preview
-@app.route('/preview/<chart>')
+@application.route('/preview/<chart>')
 def genericprev(chart):
     return render_template("preview/" + chart + '.html')
 
 
 # View of textual ( both d3js & images)
-@app.route('/hybrid')
+@application.route('/hybrid')
 def hybrid():
     a = randint(0, 100)
     if a > 50:
@@ -1483,7 +1483,7 @@ def getposted(id):
 
 
 # fill database from "/static/assets/img/datasets/"
-@app.route('/maj/<dir>/<nb>')
+@application.route('/maj/<dir>/<nb>')
 def maj(dir, nb):
     pathdir = "assets/img/datasets/downloadApi/" + dir + "/"
     imgs = pics.getimgs("./static/" + pathdir)
@@ -1526,7 +1526,7 @@ def maj(dir, nb):
 
 
 # Save Generated Chart from Textual (D3JS)
-@app.route('/saveimg', methods=['POST'])
+@application.route('/saveimg', methods=['POST'])
 def saveimg():
     result = request.files['local']
     img = Image.open(result)
@@ -1551,7 +1551,7 @@ def saveimg():
 
 
 """  ADMIN TOOLS
-@app.route("/tempdl/<dir>/<filename>")
+@application.route("/tempdl/<dir>/<filename>")
 def tempdl(dir, filename):
     location = "static/assets/img/datasets/downloadApi/" + dir + "/"
     nb = rd.getimgtypes(location, filename)
@@ -1560,7 +1560,7 @@ def tempdl(dir, filename):
 
 
 # get d3js html from bl.ock and save it
-@app.route('/gethemall')
+@application.route('/gethemall')
 def gethemall():
     views = dl.parsej()
     con = mysql.connect()
@@ -1577,7 +1577,7 @@ def gethemall():
 
 
 # download thumbnails and save them
-@app.route('/downthumb')
+@application.route('/downthumb')
 def downthumb():
     views = dl.getthumb()
     # for view in views:
@@ -1587,7 +1587,7 @@ def downthumb():
     return '<h3> done to : ' + str(len(views)) + "visualizations  </h3>"
 
 
-@app.route('/indabase/<dir>')
+@application.route('/indabase/<dir>')
 def indabase(dir):
     pathdir = "assets/img/datasets/downloadApi/" + dir + "/"
     imgs = pics.getimgs("./static/" + pathdir)
@@ -1617,7 +1617,7 @@ def indabase(dir):
 
 
 # Return User data to display into admin table
-@app.route('/userstats')
+@application.route('/userstats')
 def getskip():
     con = mysql.connect()
     cursor = con.cursor()
@@ -1665,7 +1665,7 @@ def getskip():
 
 
 # admin textual stat (pie chart)
-@app.route('/firstrow')
+@application.route('/firstrow')
 def getfirstrow():
     con = mysql.connect()
     cursor = con.cursor()
@@ -1678,7 +1678,7 @@ def getfirstrow():
 
 
 # Save early information of a preview
-@app.route('/presaveviz', methods=['POST'])
+@application.route('/presaveviz', methods=['POST'])
 def presaveviz():
     file = request.files['local']
     name = request.form['type']
@@ -1700,7 +1700,7 @@ def presaveviz():
 
 
 # Actual saving of a preview
-@app.route('/savepreview')
+@application.route('/savepreview')
 def savepreview():
     name = session.get('filename') + ".html"
     os.rename(os.path.join(os.getcwd(), "templates/preview/" + name), os.path.join(os.getcwd(), "templates/" + name))
@@ -1720,7 +1720,7 @@ def savepreview():
 
 
 # Return filename stored in session (upload D3JS)
-@app.route('/getinfo')
+@application.route('/getinfo')
 def getinf():
     return session.get('filename')
 
@@ -1808,13 +1808,13 @@ def getavg(page, skip, sub):
 #     <------------------ Dataset generator ------------------>
 
 # get data like {"a": 45}
-@app.route('/1data')
+@application.route('/1data')
 def getrandomintjson():
     return getrandomdataint()
 
 
 # get data like {'val1':5 'val2':45}
-@app.route('/2data')
+@application.route('/2data')
 def getrandom2djson():
     nbclasse = randint(3, 180)
     result = {'res': []}
@@ -1829,7 +1829,7 @@ def getrandom2djson():
 # <------------------ Textual tools ------------------>
 
 # Get HTML D3JS file to load into textual
-@app.route('/getnext')
+@application.route('/getnext')
 def getnext():
     con = mysql.connect()
     cursor = con.cursor()
@@ -1848,12 +1848,12 @@ def getnext():
 
 
 # View to upload D3JS Files
-@app.route('/upload')
+@application.route('/upload')
 def upload():
     return render_template('upload.html')
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
-    app.run()
+    application.debug = True
+    application.run()
+
