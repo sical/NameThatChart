@@ -21,6 +21,7 @@ $(document).ready(function () {
             $("#img").attr("src", "/static/assets/img/datasets/quizz/3.JPG");
             $("#img").css("display", "inline-block");
             $("#load").css("display", "none");
+            $("#upl").css("display", "none");
             $("#title").css("display", "inline-block");
 
         } else {
@@ -29,6 +30,7 @@ $(document).ready(function () {
                 $("#img").css("display", "inline-block");
                 $("#title").css("display", "inline-block");
                 $("#load").css("display", "none");
+                $("#upl").css("display", "none");
             }, (1800 - (fin.getTime() - debut.getTime())));
         }
     } else if (where.indexOf('generated') !== -1) {
