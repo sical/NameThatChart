@@ -1096,7 +1096,7 @@ def getimgbyid():
     cursor.execute("SELECT DISTINCT imagepath,idimage FROM image WHERE idimage =" + str(action))
     data = cursor.fetchall()
     for row in data:
-        result += '{"path": "' + str(row[0]) + '","idimage":' + str(row[1]) + '},'
+        result += '{"path": "' + str(row[0]) + '","id":' + str(row[1]) + '},'
 
     result = result[:-1]
 

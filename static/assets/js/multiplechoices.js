@@ -153,6 +153,7 @@ $('body').on('click', '#skip', function () {
             });
             if (where.indexOf('main') !== -1) {
                 window.location = baseu + "main"
+
             } else if (where.indexOf('raw') !== -1) {
                 window.location = baseu + "raw"
             }
@@ -175,7 +176,16 @@ function save(idtype) {
         contentType: false,
         data: form,
         success: function () {
-            getimg()
+            if (where.indexOf('main') !== -1) {
+                window.location = baseu + "main"
+
+            } else if (where.indexOf('raw') !== -1) {
+                window.location = baseu + "raw"
+            } else if (where.indexOf('generated') !== -1) {
+                window.location = baseu + "main"
+            } else {
+                getimg()
+            }
         }
     })
 }
