@@ -19,6 +19,8 @@
     <nav class="main-nav">
         {% if session.haha %}
             {% include 'navbar.html' %}
+        {% else %}
+            {% include 'analytics.html' %}
         {% endif %}
     </nav>
     <header style="margin-top: -8%" class="main-head">

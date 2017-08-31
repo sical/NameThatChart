@@ -85,6 +85,8 @@
     <nav class="main-nav">
         {% if session.haha %}
             {% include 'navbar.html' %}
+        {% else %}
+            {% include 'analytics.html' %}
         {% endif %}
     </nav>
     <header class="main-head">
@@ -94,7 +96,8 @@
     </header>
 
     <article class="content">
-        <img class="up" style="display: none;margin-bottom: 5px" id="load" src="{{ url_for('static', filename='assets/img/loading.gif') }}"
+        <img class="up" style="display: none;margin-bottom: 5px" id="load"
+             src="{{ url_for('static', filename='assets/img/loading.gif') }}"
              alt="loading logo"/>
         <br/>
         <h2 style="display: none" id="upl">Loading next graphics ...</h2>
