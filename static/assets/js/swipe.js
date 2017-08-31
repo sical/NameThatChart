@@ -36,7 +36,7 @@ $(document).ready(function () {
             temp.css("background-image", 'url("' + path[i] + '")');
             $("#" + i + "_txt").text("");
         }
-        $("#title").text("Does this belongs in \"" + cat[5] + "\" category");
+        $("#title").text("is this a \"" + cat[5] + "\" category");
     }
     else if (where.indexOf('generated') !== -1) {
         waitsetup();
@@ -68,6 +68,7 @@ $("#tinderslide").jTinder({
                 if (nb == 1) {
                     $("#upl").css("display", "inline-block");
                     $("#load").css("display", "inline-block");
+                    $("#title").css("display", "none");
                     done(note);
                 }
 
@@ -103,6 +104,7 @@ $("#tinderslide").jTinder({
                     }
                 });
                 if (nb == 0) {
+                    $("#title").css("display", "none");
                     if (where.indexOf('main') !== -1) {
                         window.location = baseu + "main"
                     } else if (where.indexOf('raw') !== -1) {
@@ -178,6 +180,7 @@ $("#tinderslide").jTinder({
                 }
             );
             if (nb == 0) {
+                $("#title").css("display", "none");
                 if (where.indexOf('main') !== -1) {
                     window.location = baseu + "main"
                 } else if (where.indexOf('raw') !== -1) {
@@ -353,6 +356,7 @@ function vote(vote) {
         }
         nb -= 1;
         if (nb == 0) {
+            $("#title").css("display", "none");
             done(note);
         }
     } else {
@@ -388,6 +392,7 @@ function vote(vote) {
             }
         );
         if (nb == 0) {
+            $("#title").css("display", "none");
             if (where.indexOf('main') !== -1) {
                 window.location = baseu + "main"
             } else if (where.indexOf('raw') !== -1) {

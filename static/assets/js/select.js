@@ -144,6 +144,7 @@ function fillthem() {
                     $("#title").css("display", "inline-block");
                     $("#btn").css("display", "inline-block");
                     $("#load").css("display", "none");
+                    $("#upl").css("display", "none");
 
                 } else {
                     images = info.imgs;
@@ -200,6 +201,7 @@ function fillthem2() {
         $("#title").css("display", "inline-block");
         $("#btn").css("display", "inline-block");
         $("#load").css("display", "none");
+        $("#upl").css("display", "none");
     }, (1800));
 }
 
@@ -364,6 +366,7 @@ function gen() {
                     $("#title").css("display", "inline-block");
                     $("#btn").css("display", "inline-block");
                     $("#load").css("display", "none");
+                    $("#upl").css("display", "none");
 
                 } else {
                     images = info;
@@ -393,6 +396,7 @@ function gen() {
                         $("#title").css("display", "inline-block");
                         $("#btn").css("display", "inline-block");
                         $("#load").css("display", "none");
+                        $("#upl").css("display", "none");
                     }, (2500 - (fin.getTime() - debut.getTime())));
                 }
 

@@ -223,11 +223,11 @@ function waitsetup(test) {
     debut = new Date();
     if (test) {
         $("#img").css("display", "none");
-        $("#upl").css("display", "inline");
+        $("#upl").css("display", "inline-block");
         $("#load").css("display", "inline-block");
         $("#title").css("display", "none");
     } else {
-        $("#upl").css("display", "inline");
+        $("#upl").css("display", "inline-block");
         $("#img").css("display", "none");
         $("#title").css("display", "none");
         $("#load").css("display", "inline-block");
