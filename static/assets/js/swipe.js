@@ -36,7 +36,7 @@ $(document).ready(function () {
             temp.css("background-image", 'url("' + path[i] + '")');
             $("#" + i + "_txt").text("");
         }
-        $("#title").text("is this a \"" + cat[5] + "\" category");
+        $("#title").text("is this a \"" + cat[5] + "\" ?");
     }
     else if (where.indexOf('generated') !== -1) {
         waitsetup();
