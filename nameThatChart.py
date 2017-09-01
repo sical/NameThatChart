@@ -17,6 +17,9 @@ import sys
 from datetime import timedelta
 from datasetManager import imagePrep as pics
 
+sys.stdout = sys.__stdout__
+sys.stderr = sys.__stderr__
+
 #     <------------------Server configuration ------------------>
 application = Flask(__name__)
 mysql = MySQL()
@@ -1188,6 +1191,8 @@ def dattcsv():
 @application.route('/saveupimg', methods=['POST'])
 def saveupimg():
     url = request.form['url']
+    sys.stdout = sys.__stdout__
+    sys.stderr = sys.__stderr__
 
     _, now = gettimes()
     idu = getid(request.environ["REMOTE_ADDR"])
