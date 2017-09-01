@@ -1,6 +1,6 @@
 # NameThatChart
 
-### website url : https://namethatchart.herokuapp.com
+### website url : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/
 
 ## Using the dataset
 
@@ -32,3 +32,19 @@ To install it, just drag and drop the app (NameThatChart-capture.crx located in 
 
 ## Understand web app structure
 
+### Quizz and task attribution
+
+Once an user click on the start button from : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/ , he begins first, a small test to determine his knowledge.
+
+This test, ask the user to complete few tasks. Each task answered right gives the user some points. those points allows us to estimate the user capacity and display adapted content.
+
+To increase the accuracy of this process, the test use images ambiguous for common users like a "pareto chart" which can easily be mistaken for bar chart
+or historical data visualization like Minard's map only known by experts.
+
+This test class users into 3 categories :
+
+- The "expert" this user can be trusted and might have more patience completing complexes tasks. In result, he will see more textual tasks and less swipes
+
+-  The "average" this user will do a little of everything to keep him entertained, and still gives us valuable informations.
+
+- The "basic" this will user might lack in domain knowledge to be dealing with complex graphs, however, he can still helps, he will more likely do swipes and selections.
