@@ -28,20 +28,27 @@ This directory contains few tools :
         
           args: [ {name: "--input_file", type: str, default: 'vis10cat.txt', utility: select file where url are stored },
                   {name: "--output_dir", type: str, default: 'curent dir', utility: select directory to store ouput images},
-                  {name: "--type", type: str, default: 'txt', utility: select type of given input file from : {"txt","json"}}
+                  {name: "--type", type: str, default: 'txt', utility: select type of given input file from : {"txt","json"}} ]
     
     - Azure    
-        This script can be use to ask the azure congnition api to get url of images from a json file.
+        This script can be used to ask the azure congnitive search api to get url of images from a json file.
           args: [ {name: "--input_file", type: str, default: 'names.json', utility: select file where names are stored },
-                  {name: "--output_file", type: str, default: 'imagesFromNames.json', utility: select the output file name and location be carefull it overwrites },
+                  {name: "--output_file", type: str, default: 'imagesFromNames.json', utility: select the output file name and location be carefull it overwrites } ]
+    
         
+    - Chart names
+        This dir contains 2 json files with  data visualization names:
+             -cart.json contains names of a cartesian product from common chart suffix / prefix.
+             
+             -names.json contains the names of specifics graphs.
+   
         
-    Once you have gathered all json file you want you can : take the urls and feed them to readerDL to download and name them.
+    Once you have gathered all data you want, you can : take it and feed them to readerDL.py to download and name them.
    
         
 ## Install and use Chrome app
 
-In extention, this website have a chrome app extention which allow an user to capture a screen area and instantly upload it to our databse in oder to discover what others would name this chart.
+In extension, this website have a chrome app extension which allow an user to capture a screen area and instantly upload it to our database in oder to discover how other users would have name this chart.
 
 To install it, just drag and drop the app (NameThatChart-capture.crx located in the "Chrome app" folder) into chrome://extensions/ . 
 
@@ -49,7 +56,7 @@ To install it, just drag and drop the app (NameThatChart-capture.crx located in 
 
 ### Quizz and task attribution
 
-Once an user click on the start button from : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/ , he begins first, a small test to determine his knowledge.
+Once an user click on the start button from : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/ , he begins a small test to determine his knowledge.
 
 This test, ask the user to complete few tasks. Each task answered right gives the user some points. those points allows us to estimate the user capacity and display adapted content.
 
@@ -146,6 +153,6 @@ the said page must contain some of the elements down bellow :
 
 - to get global stats in JSON : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/getbasicstats
 
-- to get stats stats in JSON : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/adminstats
+- to get tasks stats in JSON : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/adminstats
 
 
