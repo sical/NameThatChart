@@ -79,7 +79,7 @@ the said page must contain some of the elements down bellow :
 
 - The main-nav must be filled with :
 
-``` html
+``` django
         {% if session.show %}
             {% include 'navbar.html' %}
         {% else %}
@@ -92,7 +92,7 @@ the said page must contain some of the elements down bellow :
 
 - the footer must be filled with 
 
-``` html
+``` django
     {% include 'footer.html' %}
 ```
 
