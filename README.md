@@ -4,7 +4,7 @@
 
 ## Using the dataset
 
-if you want to download the data set we use you can use our crawling tools located in the datasetManager directory.
+If you want to download the data set we use, you can use our crawling tools located in the <a href="https://github.com/sical/NameThatChart/tree/master/datasetManager">datasetManager</a> directory.
 
 This directory contains few tools :
     
@@ -36,14 +36,14 @@ This directory contains few tools :
                   {name: "--output_file", type: str, default: 'imagesFromNames.json', utility: select the output file name and location be carefull it overwrites },
         
         
-    Once you have gathered all json file you want you can : take the urls and feed them to readerDL to name download and name them.
+    Once you have gathered all json file you want you can : take the urls and feed them to readerDL to download and name them.
    
         
 ## Install and use Chrome app
 
 In extention, this website have a chrome app extention which allow an user to capture a screen area and instantly upload it to our databse in oder to discover what others would name this chart.
 
-To install it, just drag and drop the app (NameThatChart-capture.crx located in the "Chrome app" folder) into chrome://extensions/. 
+To install it, just drag and drop the app (NameThatChart-capture.crx located in the "Chrome app" folder) into chrome://extensions/ . 
 
 ## Understand web app structure
 
@@ -120,7 +120,7 @@ the said page must contain some of the elements down bellow :
 
 ```
 
-- any image of chart (<img> must have the attribute value = imageid) in order to have report working
+- any image of chart (``` <img> ```must have the attribute value = imageid) in order to have report working
  
 - the Js loading this page must have a gethash, gen, skip, save function
 
