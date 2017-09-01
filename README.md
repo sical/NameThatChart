@@ -111,7 +111,7 @@ the said page must contain some of the elements down bellow :
 
 - The main redirect should be handled ( look at other pages (js) )
  
-- add this page to /main algorithm .
+- add this page to /main algorithm.
 
 
 

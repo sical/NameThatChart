@@ -57,6 +57,22 @@ def make_session_permanent():
 # <------------------ Temp ------------------>
 
 
+@application.route("/getusers")
+def getusers():
+
+
+
+    data = vachercherm("select * from user")
+    result = '['
+    for row in data:
+        result += '{"iduser": "' + str(row[0]) + '","ipuser":' + str(row[1]) + ',"lvl":"' + str(
+            row[2]) + '"},'
+
+
+    result = result[:-1]
+    result += ']'
+    return result
+
 @application.route('/putiton')
 def putiton():
     if str(session.get("show")) == 'True':
