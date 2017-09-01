@@ -1,27 +1,29 @@
-import http.client, urllib.request, urllib.parse, urllib.error, base64 ,os
+import os
+import json
+import codecs
 
-headers = {
-    # Request headers
-    "Ocp-Apim-Subscription-Key": '{'+str(os.environ["BING"])+'}',
-}
-"""
-params = urllib.parse.urlencode({
-    # Request parameters
-    'q': 'microsoft',
-    'count': '10',
-    'offset': '0',
-    'mkt': 'en-us',
-    'safeSearch': 'Strict',
-    'size': 'Large'
-})"""
+from py_ms_cognitive import PyMsCognitiveImageSearch
 
-try:
-    conn = http.client.HTTPSConnection('api.cognitive.microsoft.com')
+def gotit(search_term):
+    urls= []
 
-    conn.request("GET", "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=canard", "{body}", headers)
-    response = conn.getresponse()
-    data = response.read()
-    print(data)
-    conn.close()
-except Exception as e:
-    print(e)
+    search_service = PyMsCognitiveImageSearch(str(os.environ["BING"]), search_term,custom_params={"mkt": "en-US",'safeSearch': 'Strict', 'size': 'Large'})
+    result = search_service.search(limit=70, format='json') #1-70
+
+
+
+    for images in result:
+        urls.append(images.content_url)
+
+    return urls
+
+
+with open("names.json") as data_file:
+    data = json.load(data_file)
+res = {}
+for n in data:
+    print(n)
+    res[n]= gotit(n+" data visualization")
+
+with open("NamesBing.json", 'wb') as f:
+    json.dump(res, codecs.getwriter('utf-8')(f), ensure_ascii=False)
