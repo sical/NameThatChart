@@ -50,8 +50,8 @@ Compress(application)
 def make_session_permanent():
     session.permanent = False
     application.permanent_session_lifetime = timedelta(minutes=10)
-    if session.get("haha") is None:
-        session["haha"] = False
+    if session.get("show") is None:
+        session["show"] = False
 
 
 # <------------------ Temp ------------------>
@@ -59,10 +59,10 @@ def make_session_permanent():
 
 @application.route('/putiton')
 def putiton():
-    if str(session.get("haha")) == 'True':
-        session["haha"] = False
+    if str(session.get("show")) == 'True':
+        session["show"] = False
     else:
-        session["haha"] = True
+        session["show"] = True
     return 'ok'
 
 

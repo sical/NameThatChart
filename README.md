@@ -55,7 +55,7 @@ You can see bellow the points distribution:
 
 |  tasks | Selection | Multiple | Swipes         | Textual |
 |--------|-----------|----------|----------------|---------|
-| points | 4         | 5        | 2 (per images) | 4       |
+| points | 4         | 5        | 2 (per Chart) | 4       |
 
 
 
@@ -69,5 +69,50 @@ For a total of 23 points an user is :
 - and "Basic" bellow 8 points.
 
 
+### Adding a new task
+
+To add a new task, you must, first of all include the said page using specific css specified in  html style tag (increase perfs)
+
+the said page must contain some of the elements down bellow :
+
+- Grid blocks (classes "wrapper","main-nav","main-head","content","main-footer") 
+
+- The main-nav must be filled with :
+
+``` html
+        {% if session.show %}
+            {% include 'navbar.html' %}
+        {% else %}
+            {% include 'analytics.html' %}
+        {% endif %}
+```
+
+- The tittle should have id="title"
 
 
+- the footer must be filled with 
+
+``` html
+    {% include 'footer.html' %}
+```
+
+- This page should be in the nav bars ( links down bellow)
+
+- This page must be map inside namethatchart.py
+``` python
+
+@application.route('/YourPage')
+
+```
+
+- any image of chart (<img> must have the attribute value = imageid) in order to have report working
+ 
+- the Js loading this page must have a gethash, gen, skip, save function
+
+- The main redirect should be handled ( look at other pages (js) )
+ 
+- add this page to /main algorithm .
+
+
+
+ > nav bars : https://github.com/sical/NameThatChart/blob/master/templates/navbar.html and https://github.com/sical/NameThatChart/blob/master/templates/nav.html
