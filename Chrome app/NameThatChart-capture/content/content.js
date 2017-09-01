@@ -118,7 +118,7 @@ var save = (image) => {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://namethatchart.herokuapp.com/saveapp",
+        "url": "http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/saveapp",
         "method": "POST",
         "processData": false,
         "contentType": false,
