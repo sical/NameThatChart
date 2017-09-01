@@ -48,3 +48,26 @@ This test class users into 3 categories :
 -  The "average" this user will do a little of everything to keep him entertained, and still gives us valuable informations.
 
 - The "basic" this will user might lack in domain knowledge to be dealing with complex graphs, however, he can still helps, he will more likely do swipes and selections.
+
+You can see bellow the points distribution:
+
+
+
+|  tasks | Selection | Multiple | Swipes         | Textual |
+|--------|-----------|----------|----------------|---------|
+| points | 4         | 5        | 2 (per images) | 4       |
+
+
+
+
+For a total of 23 points an user is : 
+
+- an "Expert" for a grade higher than 18
+
+- an "Average" from 18 points to 8
+
+- and "Basic" bellow 8 points.
+
+
+
+

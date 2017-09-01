@@ -431,9 +431,9 @@ def savenote():
 
         note = session['note']
         lvl = 0
-        if note > 11:
+        if note > 18:
             lvl = 2
-        elif note > 5:
+        elif note > 8:
             lvl = 1
         con = mysql.connect()
         cursor = con.cursor()

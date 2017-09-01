@@ -1,7 +1,7 @@
 /**
  * Created by theo on 7/4/17.
  */
-var note = 0;
+var note;
 var info;
 var id;
 var baseu;
@@ -194,7 +194,7 @@ function save(idtype) {
 function done(text) {
     console.log(text);
     if (text == "2") {
-        note += 5;
+        note = 5;
     } else {
         note = 0
     }

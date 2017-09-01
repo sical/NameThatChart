@@ -63,7 +63,7 @@ $("#tinderslide").jTinder({
             if (where.indexOf('quizz') !== -1) {
                 $("#title").text("Is this a \"" + cat[nb - 1] + " \" ?");
                 if (nb == 1 || nb == 3 || nb == 5) {
-                    note += 1
+                    note += 2
                 }
                 if (nb == 1) {
                     $("#upl").css("display", "inline-block");
@@ -136,7 +136,7 @@ $("#tinderslide").jTinder({
             $("#title").text("Is this a \"" + cat[nb - 1] + "\" ?");
 
             if (item.index() == 1 || item.index() == 3) {
-                note += 1
+                note += 2
             }
             nb -= 1;
             if (item.index() == 0) {
