@@ -9,19 +9,34 @@ if you want to download the data set we use you can use our crawling tools locat
 This directory contains few tools :
     
     -   Crawling (crawl.py)
-            This module allows an user to crawl google / wikipedia and bl.ock to get urls of the given names
-        
+            This module allows an user to crawl google / wikipedia and bl.ock to get urls of the given names.
+            
+                args: {name: "--w", type: str, default: 'wikipedia', utility: select website to crawl from {'wikipedia','block','google'} }
+                
+                
     -   Crawling.d3js (d3jsdownload.py)
-            This file can download all thumbnails / html files with meta data (name authors etc ..) from json files
+            This file can download all thumbnails / html files with meta data (name authors etc ..) from json files.
      
-    -   dataset
-        -   Acutaldata contains the results of crawl.merge() consider this like final data
+    -   Dataset
+        -   Acutaldata contains the results of crawl.merge() consider this like final data.
         -   jsonCrawl contains result of one crawling session this is partial information.
         -   visCat contains the viscat datasets and we provide a tool to download them(vis10catDl.py slower than multidownload but easier to use). 
     
     
-    -   multidownload
+    -   Multidownload (ReaderDL.py)
         This module can read urls from a text file split this list to threads and download them.
+        
+          args: [ {name: "--input_file", type: str, default: 'vis10cat.txt', utility: select file where url are stored },
+                  {name: "--output_dir", type: str, default: 'curent dir', utility: select directory to store ouput images},
+                  {name: "--type", type: str, default: 'txt', utility: select type of given input file from : {"txt","json"}}
+    
+    - Azure    
+        This script can be use to ask the azure congnition api to get url of images from a json file.
+          args: [ {name: "--input_file", type: str, default: 'names.json', utility: select file where names are stored },
+                  {name: "--output_file", type: str, default: 'imagesFromNames.json', utility: select the output file name and location be carefull it overwrites },
+        
+        
+    Once you have gathered all json file you want you can : take the urls and feed them to readerDL to name download and name them.
    
         
 ## Install and use Chrome app
@@ -116,3 +131,21 @@ the said page must contain some of the elements down bellow :
 
 
  > nav bars : https://github.com/sical/NameThatChart/blob/master/templates/navbar.html and https://github.com/sical/NameThatChart/blob/master/templates/nav.html
+
+
+### Usefull links 
+
+
+- To get all images class and their score : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/result
+
+- to get raw images and where did we acquire them : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/image2json
+
+- to get tasks logs in csv : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/datcsv.csv
+
+- to get all reports in JSON : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/getreports
+
+- to get global stats in JSON : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/getbasicstats
+
+- to get stats stats in JSON : http://namethat-env.cfuws7rm8t.eu-west-1.elasticbeanstalk.com/adminstats
+
+

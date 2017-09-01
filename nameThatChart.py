@@ -65,7 +65,7 @@ def getusers():
     data = vachercherm("select * from user")
     result = '['
     for row in data:
-        result += '{"iduser": "' + str(row[0]) + '","ipuser":' + str(row[1]) + ',"lvl":"' + str(
+        result += '{"iduser": "' + str(row[0]) + '","ipuser":"' + str(row[1]) + '","lvl":"' + str(
             row[2]) + '"},'
 
 
