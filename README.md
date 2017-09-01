@@ -92,7 +92,7 @@ the said page must contain some of the elements down bellow :
 
 - the footer must be filled with 
 
-``` html
+``` django
     {% include 'footer.html' %}
 ```
 
